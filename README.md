@@ -30,10 +30,23 @@ U+200F (RLM) وحده                             →  لا يعمل في Canva 
 
 ## التثبيت
 
+من GitHub مباشرة:
+
+```bash
+claude plugin marketplace add dropazaabal-design/arabic-design
+claude plugin install arabic-design@arabic-design
+```
+
+أو من نسخة محلّية:
+
 ```bash
 git clone https://github.com/dropazaabal-design/arabic-design
-claude plugin install ./arabic-design
+cd arabic-design
+claude plugin marketplace add ./          # الشرطة المائلة ضرورية
+claude plugin install arabic-design@arabic-design
 ```
+
+للتحقّق: `claude plugin details arabic-design@arabic-design` — يجب أن يعرض أربع مهارات.
 
 يتطلّب Node ≥ 18 وموصّل Canva MCP متصلًا. بلا اعتماديات خارجية.
 

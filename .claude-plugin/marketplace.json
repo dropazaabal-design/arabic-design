@@ -1,0 +1,14 @@
+{
+  "name": "arabic-design",
+  "owner": {
+    "name": "dropazaabal-design"
+  },
+  "plugins": [
+    {
+      "name": "arabic-design",
+      "source": "./",
+      "description": "تصحيح التصاميم العربية في Canva: الاتجاه والـBiDi، الترقيم، الأرقام، التنضيد، الخطوط، انعكاس التخطيط، إعادة ملاءمة الصناديق، جودة النص، الوصولية والتصدير."
+    }
+  ],
+  "description": "إضافة واحدة لتصحيح التصاميم العربية في Canva عبر موصّل Canva MCP."
+}

@@ -3,5 +3,17 @@
   "version": "0.1.0",
   "description": "يصحّح التصاميم العربية في Canva عبر موصّل Canva MCP: الاتجاه والـBiDi، الترقيم، الأرقام، التنضيد، الخطوط، انعكاس التخطيط، إعادة ملاءمة الصناديق، جودة النص، الوصولية والتصدير.",
   "license": "MIT",
-  "keywords": ["arabic", "rtl", "bidi", "canva", "typography", "i18n", "localization"]
+  "keywords": [
+    "arabic",
+    "rtl",
+    "bidi",
+    "canva",
+    "typography",
+    "i18n",
+    "localization"
+  ],
+  "author": {
+    "name": "dropazaabal-design"
+  },
+  "homepage": "https://github.com/dropazaabal-design/arabic-design"
 }
