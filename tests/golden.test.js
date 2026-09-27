@@ -1304,3 +1304,156 @@ test('lexicon: the gate thresholds sit above the corpus\'s own typos', () => {
   assert.equal(spelling.suggest('غانبارو').status, 'unknown');
   assert.equal(spelling.suggest('المبتدي').status, 'ambiguous');
 });
+
+// ===========================================================================
+// compose — a concept becomes a page Canva's importer accepts
+// ===========================================================================
+
+const compose = require('../lib/compose');
+const patterns = require('../lib/patterns');
+
+const SPEC = {
+  title: 'الجمال في التفصيل',
+  size: { width: 1080, height: 1350 },
+  palette: { bg: '#0B1F2A', ink: '#F5EFE0', body: '#D8CEB8', muted: '#BDB49F', accent: '#C9A227' },
+  fonts: { display: 'Tajawal', body: 'Amiri' },
+  pattern: { kind: 'girih', opacity: 0.14 },
+  blocks: [
+    { role: 'eyebrow', text: 'سلسلة الإتقان' },
+    { role: 'title', text: 'الجمالُ\nفي التفصيل' },
+    { role: 'body', text: 'التصميمُ العربيُّ لا يُترجَم, بل يُبنى من حروفه.' },
+    { role: 'cards', items: [{ num: '01', label: 'الحرف المتّصل' }, { num: '02', label: 'الفراغ الحيّ' }] },
+    { role: 'footer', start: '2026', end: 'استوديو أزابال' },
+  ],
+};
+
+test('compose: the page passes its own import lint', () => {
+  const { html } = compose.compose(SPEC);
+  assert.deepEqual(compose.lintForImport(html), []);
+});
+
+test('compose: the page stays small enough for the importer', () => {
+  const { html } = compose.compose(SPEC);
+  assert.ok(Buffer.byteLength(html) < compose.MAX_PAGE_BYTES);
+});
+
+test('compose: fonts are linked, never embedded', () => {
+  const { html } = compose.compose(SPEC);
+  assert.ok(html.includes('fonts.googleapis.com'));
+  assert.ok(!html.includes('@font-face'));
+  assert.ok(!html.includes('data:font'));
+});
+
+test('compose: the pattern is one published asset, not a tiled background', () => {
+  const { html, assets } = compose.compose(SPEC, { assetUrls: { 'pattern.svg': 'https://x/pattern.svg' } });
+  assert.equal(assets.length, 1);
+  assert.equal(assets[0].name, 'pattern.svg');
+  assert.ok(html.includes('background-size:cover'));
+  assert.ok(!/background-repeat\s*:\s*repeat/.test(html));
+});
+
+test('compose: copy is spell-checked and bidi-wrapped before it is drawn', () => {
+  const { html } = compose.compose({
+    ...SPEC,
+    blocks: [{ role: 'body', text: 'زوروا www.example.com, شكراً' }],
+  });
+  assert.ok(html.includes(RLE));
+  assert.ok(html.includes(LRI + 'www.example.com' + PDI));
+  assert.ok(html.includes('شكرًا'));   // spelling ran
+  assert.ok(html.includes('،'));       // Arabic punctuation ran
+});
+
+test('compose: numerals are unified when asked', () => {
+  const { html } = compose.compose(SPEC, { numerals: 'arabic-indic' });
+  assert.ok(html.includes('٠١'));
+  assert.ok(html.includes('٢٠٢٦'));
+});
+
+test('compose: the type scale never goes below the Arabic minimum', () => {
+  const scale = compose.typeScale(400, 'نص');
+  for (const key of ['eyebrow', 'body', 'num', 'label', 'footer']) {
+    assert.ok(scale[key] >= typography.MIN_ARABIC_FONT_SIZE, `${key}=${scale[key]}`);
+  }
+});
+
+test('compose: harakat in the copy raise the line height', () => {
+  assert.equal(compose.typeScale(1350, 'مَرْحَبًا').lead, typography.LINE_HEIGHT_HARAKAT);
+  assert.equal(compose.typeScale(1350, 'مرحبا').lead, typography.LINE_HEIGHT_DEFAULT);
+});
+
+test('compose: a failing palette is caught before anything is drawn', () => {
+  const issues = compose.checkPalette(
+    { bg: '#FFFFFF', ink: '#EEEEEE', accent: '#DDDDDD' },
+    compose.typeScale(1350, '')
+  );
+  assert.ok(issues.some((i) => i.rule === 'palette-contrast'));
+});
+
+test('compose: a sound palette raises nothing', () => {
+  assert.deepEqual(compose.compose(SPEC).issues, []);
+});
+
+// --- the lint encodes what the real importer actually rejected -------------
+
+test('lint: an embedded font is refused — it is what made the 845KB page fail', () => {
+  const html = '<html dir="rtl"><style>@font-face{src:url(data:font/ttf;base64,AA)}</style>'
+    + '<div data-document-role="page"></div></html>';
+  assert.ok(compose.lintForImport(html).some((p) => p.rule === 'embedded-font'));
+});
+
+test('lint: a tiled background is refused — it came back as 200 rectangles', () => {
+  const html = '<html dir="rtl"><style>.p{background-repeat:repeat}</style>'
+    + '<div data-document-role="page"></div></html>';
+  assert.ok(compose.lintForImport(html).some((p) => p.rule === 'tiled-background'));
+});
+
+test('lint: a page with no page role is refused', () => {
+  assert.ok(compose.lintForImport('<html dir="rtl"><body></body></html>')
+    .some((p) => p.rule === 'no-page-role'));
+});
+
+test('lint: an oversized page is refused with its measured size', () => {
+  const html = `<html dir="rtl"><div data-document-role="page">${'x'.repeat(200000)}</div></html>`;
+  const hit = compose.lintForImport(html).find((p) => p.rule === 'page-too-large');
+  assert.ok(hit.bytes > compose.MAX_PAGE_BYTES);
+});
+
+// --- publishing -----------------------------------------------------------
+
+test('publish: the target is a plain raw.githubusercontent URL, no proxy', () => {
+  const t = compose.publishTarget({ owner: 'me', repo: 'pub', html: '<a>', assets: [] });
+  assert.match(t.page.url, /^https:\/\/raw\.githubusercontent\.com\/me\/pub\/main\/p\/[a-z0-9]+\/index\.html$/);
+});
+
+test('publish: the path carries a content hash, so a new page is a new URL', () => {
+  const a = compose.publishTarget({ owner: 'me', repo: 'pub', html: '<a>' });
+  const b = compose.publishTarget({ owner: 'me', repo: 'pub', html: '<b>' });
+  assert.notEqual(a.page.url, b.page.url);
+  assert.equal(a.page.url, compose.publishTarget({ owner: 'me', repo: 'pub', html: '<a>' }).page.url);
+});
+
+test('publish: assets sit beside the page and get their own URLs', () => {
+  const t = compose.publishTarget({
+    owner: 'me', repo: 'pub', html: '<a>', assets: [{ name: 'pattern.svg', content: '<svg/>' }],
+  });
+  assert.equal(t.assets[0].path, `${t.dir}/pattern.svg`);
+  assert.ok(t.assets[0].url.endsWith('/pattern.svg'));
+});
+
+// --- patterns -------------------------------------------------------------
+
+test('patterns: each one is a single full-canvas SVG', () => {
+  for (const kind of Object.keys(patterns.PATTERNS)) {
+    const svg = patterns.pattern(kind, 1080, 1350, {});
+    assert.match(svg, /^<svg[^>]*width="1080"[^>]*height="1350"/, kind);
+    assert.ok(svg.endsWith('</svg>'), kind);
+  }
+});
+
+test('patterns: an unknown pattern is an error, not an empty page', () => {
+  assert.throws(() => patterns.pattern('nope', 100, 100), /unknown pattern/);
+});
+
+test('patterns: the pattern takes the palette accent, so it belongs to the design', () => {
+  assert.ok(patterns.girih(200, 200, { stroke: '#FF0000' }).includes('#FF0000'));
+});
