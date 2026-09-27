@@ -96,7 +96,7 @@ node lib/cli.js payload.json --numerals=arabic-indic
 ## الاختبارات
 
 ```bash
-npm test     # node --test — 102 اختبارًا، بلا مكتبات
+npm test     # node --test — 111 اختبارًا، بلا مكتبات
 ```
 
 اختبارات ذهبية: كل تحويل مثبَّت بمُدخل ومُخرَج متوقّع بالضبط. تغطّي نصًا عربيًا

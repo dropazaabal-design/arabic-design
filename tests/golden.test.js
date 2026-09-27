@@ -644,3 +644,111 @@ test('pipeline: spelling, numerals and bidi compose without fighting', () => {
   assert.ok(bidi.controlsBalanced(out));
   assert.equal(bidi.fixText(out).text, out);
 });
+
+// ===========================================================================
+// cli — the bridge the skills actually call
+// ===========================================================================
+
+const { analyze, batchByPage } = require('../lib/cli');
+
+/** One fixed page holding one element, with the style fields a test cares about. */
+const onePage = (element, page = {}) => ({
+  pages: [{ index: 1, width: 1080, height: 1080, elements: [element], ...page }],
+});
+
+test('cli: the text chain runs spelling, then numerals, then tatweel, then bidi', () => {
+  const res = analyze(
+    onePage({ locator_id: 'L1', text: 'شكراً, زوروا www.example.com عام 2024' }),
+    { numerals: 'arabic-indic' }
+  );
+  const op = res.auto.find((a) => a.op.type === 'replace_text').op;
+  assert.equal(
+    op.text,
+    RLE + 'شكرًا، زوروا ' + LRI + 'www.example.com' + PDI + ' عام ٢٠٢٤' + PDF
+  );
+});
+
+test('cli: a responsive page gets find_and_replace_text, never replace_text', () => {
+  const res = analyze(
+    onePage({ locator_id: 'L1', text: 'مرحبا بالعالم' }, { is_responsive: true })
+  );
+  const op = res.auto[0].op;
+  assert.equal(op.type, 'find_and_replace_text');
+  assert.equal(op.find_text, 'مرحبا بالعالم');
+  assert.equal(op.replace_text, RLE + 'مرحبا بالعالم' + PDF);
+});
+
+test('cli: a responsive page cannot take format_text, so it is blocked', () => {
+  const res = analyze(
+    onePage(
+      { locator_id: 'L1', text: 'مرحبا', style: { font_style: 'italic', letter_spacing: 0 } },
+      { is_responsive: true }
+    )
+  );
+  assert.ok(!res.auto.some((a) => a.op.type === 'format_text'));
+  assert.equal(res.blocked[0].op.type, 'format_text');
+});
+
+test('cli: a page that is not editable queues nothing at all', () => {
+  const res = analyze(
+    onePage(
+      { locator_id: 'L1', text: 'مرحبا', style: { font_style: 'italic', letter_spacing: 0 } },
+      { is_editable: false }
+    )
+  );
+  assert.equal(res.auto.length, 0);
+  assert.ok(res.blocked.length > 0);
+  assert.ok(res.blocked.every((b) => /is_editable/.test(b.reason)));
+});
+
+test('cli: overflow is judged against the line height this pass is about to set', () => {
+  // Fits at 1.1, overflows once the Arabic minimum of 1.6 is applied.
+  const element = {
+    locator_id: 'L1', text: 'سطر أول\nسطر ثان\nسطر ثالث\nسطر رابع',
+    left: 0, top: 0, width: 400, height: 150,
+    style: { font_size: 24, line_height: 1.1, letter_spacing: 0 },
+  };
+  assert.equal(
+    detect.estimateOverflow({ text: element.text, fontSize: 24, width: 400, height: 150, lineHeight: 1.1 }).overflows,
+    false
+  );
+  const res = analyze(onePage(element));
+  assert.ok(res.auto.some((a) => /فيض/.test(a.reason)));
+});
+
+test('cli: a Latin-only element produces no text operation', () => {
+  const res = analyze(onePage({ locator_id: 'L1', text: 'Hello, world' }));
+  assert.equal(res.auto.length, 0);
+  assert.equal(res.preview.length, 0);
+});
+
+test('cli: an already-fixed design is a no-op on the second pass', () => {
+  const design = onePage({ locator_id: 'L1', text: 'مرحبا Claude، عام ٢٠٢٤', style: { letter_spacing: 0 } });
+  const first = analyze(design, { numerals: 'arabic-indic' });
+  const fixed = onePage(
+    { locator_id: 'L1', text: first.auto[0].op.text, style: { letter_spacing: 0 } }
+  );
+  assert.equal(analyze(fixed, { numerals: 'arabic-indic' }).auto.length, 0);
+});
+
+test('cli: operations are batched one entry per page', () => {
+  const batches = batchByPage([
+    { page: 1, op: { type: 'replace_text' } },
+    { page: 2, op: { type: 'replace_text' } },
+    { page: 1, op: { type: 'format_text' } },
+  ]);
+  assert.deepEqual(batches.map((b) => [b.page_index, b.operations.length]), [[1, 2], [2, 1]]);
+});
+
+test('cli: every queued operation is one Canva accepts on that page', () => {
+  const res = analyze(
+    onePage({
+      locator_id: 'L1', text: 'انشاء موقع, بسرعه', left: 0, top: 0, width: 300, height: 60,
+      style: { font_style: 'italic', line_height: 1.0, font_size: 9, letter_spacing: 0 },
+    }),
+    { numerals: 'arabic-indic' }
+  );
+  const allowed = new Set(['replace_text', 'find_and_replace_text', 'format_text', 'resize_element']);
+  for (const entry of res.auto) assert.ok(allowed.has(entry.op.type), entry.op.type);
+  for (const entry of res.auto) assert.equal(entry.op.locator_id, 'L1');
+});
