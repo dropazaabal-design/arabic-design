@@ -1070,3 +1070,7 @@ test('from-read: its output feeds plan() directly', () => {
   const res = plan(payload);
   assert.equal(res.auto.find((a) => a.op.type === 'replace_text').op.text, RLE + 'مرحبا، بالعالم' + PDF);
 });
+
+test('from-read: an unrecognised shape yields no pages rather than junk', () => {
+  assert.deepEqual(fromRead.convert({ someOtherShape: { blocks: [{ id: 'x', content: 'مرحبا' }] } }), { pages: [] });
+});
