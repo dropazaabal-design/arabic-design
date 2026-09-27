@@ -1491,3 +1491,10 @@ test('compose: no line height anywhere falls under the display minimum', () => {
     assert.ok(Number(value) >= 1.18, `line-height ${value}`);
   }
 });
+
+test('compose: body line breaks are authored, never left to measurement', () => {
+  // Canva lays out in one font then substitutes its own; a line that fitted
+  // during layout overflowed after substitution and ran off the canvas.
+  const { html } = compose.compose({ ...SPEC, blocks: [{ role: 'body', text: 'سطر أول\nسطر ثان' }] });
+  assert.ok(html.includes('<br>'));
+});
