@@ -689,12 +689,23 @@ test('spelling: مَن before a noun is flagged as the preposition, and never re
   assert.equal(hits[0].suggestion, 'من');
 });
 
-test('spelling: letter substitutions are honestly out of reach, not silently missed', () => {
-  for (const word of ['الخقيقة', 'يعزج', 'جانزته']) {
-    assert.deepEqual(spelling.check(word), [], word);
+test('spelling: the lexicon reaches letter substitutions the old rules could not', () => {
+  assert.equal(spelling.autofix('الخقيقة').text, 'الحقيقة');
+  for (const word of ['يعزج', 'جانزته']) {
+    const hit = spelling.check(word).find((f) => f.rule === 'spelling-ambiguous');
+    assert.ok(hit, word);
   }
-  assert.equal(spelling.PROOFREADING_NOTE.rule, 'proofreading-human');
-  assert.match(spelling.PROOFREADING_NOTE.message, /معجم/);
+  assert.ok(spelling.check('يعزج')[0].candidates.some((c) => c.startsWith('يزعج')));
+  assert.ok(spelling.check('جانزته')[0].candidates.some((c) => c.startsWith('جائزته')));
+});
+
+test('spelling: clitics do not turn ordinary prose into findings', () => {
+  const prose = [
+    'نحن نقدم لكم أفضل الخدمات في مجال التصميم والطباعة بجودة عالية وسعر مناسب',
+    'تعلم كيف تبني عادات يومية تدوم معك مدى الحياة وتغير مسار عملك',
+    'احجز مقعدك الآن واستفد من الخصم المحدود قبل انتهاء العرض',
+  ];
+  for (const line of prose) assert.deepEqual(spelling.check(line), [], line);
 });
 
 test('spelling: every fix is idempotent', () => {
@@ -916,7 +927,11 @@ test('folding: a real design stops repeating font-unknown fourteen times', () =>
 // reflow — pass two, on measured geometry
 // ===========================================================================
 
-const measured = (elements) => ({ pages: [{ index: 1, width: 1080, height: 1350, elements }] });
+// Canva returns elements in draw order; from-read turns that into z. Fixtures
+// get the same treatment unless they set z themselves.
+const measured = (elements) => ({
+  pages: [{ index: 1, width: 1080, height: 1350, elements: elements.map((e, i) => ({ z: i, ...e })) }],
+});
 
 test('reflow: a measured overlap is reported with a suggestion, never queued', () => {
   const res = reflow(measured([
@@ -1017,6 +1032,7 @@ test('from-read: a read-design response becomes a payload', () => {
     left: 100, top: 96, width: 880, height: 214,
     text: 'العنوان',
     style: { font_family: 'YAFdJrN-O4g,0', font_size: 64, line_height: 1.2, text_align: 'start' },
+    z: 0,
   });
 });
 
@@ -1073,4 +1089,218 @@ test('from-read: its output feeds plan() directly', () => {
 
 test('from-read: an unrecognised shape yields no pages rather than junk', () => {
   assert.deepEqual(fromRead.convert({ someOtherShape: { blocks: [{ id: 'x', content: 'مرحبا' }] } }), { pages: [] });
+});
+
+// ===========================================================================
+// layering — a highlight bar and a veil are the same rectangles
+// ===========================================================================
+
+const bar = { locator_id: 'bar', left: 90, top: 200, width: 500, height: 60 };
+const heading = { locator_id: 'head', text: 'العنوان', left: 100, top: 190, width: 480, height: 90 };
+
+test('layering: a shape drawn behind text is a highlight, and stays silent', () => {
+  assert.deepEqual(detect.findOverlaps([{ ...bar, z: 0 }, { ...heading, z: 1 }]), []);
+});
+
+test('layering: the same shape drawn in front of the text is a veil', () => {
+  const issues = detect.findOverlaps([{ ...heading, z: 0 }, { ...bar, z: 1 }]);
+  assert.equal(issues.length, 1);
+  assert.equal(issues[0].kind, 'occlusion');
+  assert.equal(issues[0].occludedText, 'head');
+  assert.equal(issues[0].veil, 'bar');
+});
+
+test('layering: a veil is answered with layer_element, never a smaller font', () => {
+  const res = reflow({ pages: [{ index: 1, elements: [{ ...heading, z: 0 }, { ...bar, z: 1 }] }] });
+  assert.deepEqual(res.findings[0].suggestion, {
+    type: 'layer_element', locator_id: 'head', position: 'front',
+  });
+  assert.ok(!res.findings.some((f) => f.suggestion && f.suggestion.type === 'format_text'));
+});
+
+test('layering: two crossing texts are reported whatever the draw order', () => {
+  const pair = [
+    { locator_id: 'a', text: 'أول', left: 0, top: 0, width: 200, height: 100 },
+    { locator_id: 'b', text: 'ثان', left: 0, top: 50, width: 200, height: 100 },
+  ];
+  assert.equal(detect.findOverlaps(pair.map((e, i) => ({ ...e, z: i }))).length, 1);
+  assert.equal(detect.findOverlaps(pair.map((e, i) => ({ ...e, z: 1 - i }))).length, 1);
+});
+
+test('layering: with no z the detector keeps reporting, and says why', () => {
+  assert.equal(detect.findOverlaps([bar, heading]).length, 1);
+  const res = reflow({ pages: [{ index: 1, elements: [bar, heading] }] });
+  assert.ok(res.findings.some((f) => f.rule === 'layer-order-unknown'));
+});
+
+test('layering: from-read derives z from the order Canva returned', () => {
+  const { pages } = fromRead.convert({
+    pages: [{
+      page_id: 'PB1', index: 1,
+      children: [{ locatorId: 'back' }, { locatorId: 'middle' }, { locatorId: 'front' }],
+    }],
+  });
+  assert.deepEqual(pages[0].elements.map((e) => [e.locator_id, e.z]), [['back', 0], ['middle', 1], ['front', 2]]);
+});
+
+// ===========================================================================
+// latin orphans — a heading whose Arabic half was dropped
+// ===========================================================================
+
+const heading18 = (text) => ({ locator_id: text, text, style: { font_size: 48, color: '#111111' } });
+
+test('latin-orphan: the four truncated headings are found, the complete one is not', () => {
+  const issues = detect.findLatinOrphans([
+    heading18('إيكيغاي (Ikigai)'),
+    heading18('(Kaizen)'), heading18('(Shoshin)'),
+    heading18('(Ganbaru)'), heading18('(Gaman)'),
+  ]);
+  assert.deepEqual(issues.map((i) => i.found), ['(Kaizen)', '(Shoshin)', '(Ganbaru)', '(Gaman)']);
+  assert.ok(issues.every((i) => i.severity === 'error'));
+});
+
+test('latin-orphan: with no bilingual sibling it is a question, not a verdict', () => {
+  const issues = detect.findLatinOrphans([
+    { locator_id: 'a', text: 'العنوان الأول', style: { font_size: 48 } },
+    { locator_id: 'b', text: 'النص الثاني', style: { font_size: 20 } },
+    { locator_id: 'c', text: 'Kaizen', style: { font_size: 48 } },
+  ]);
+  assert.equal(issues.length, 1);
+  assert.equal(issues[0].severity, 'warning');
+});
+
+test('latin-orphan: an all-Latin design reports nothing', () => {
+  assert.deepEqual(detect.findLatinOrphans([
+    heading18('Kaizen'), heading18('Shoshin'), heading18('Ganbaru'),
+  ]), []);
+});
+
+test('latin-orphan: URLs, emails, tags, versions and filenames are not orphans', () => {
+  const arabic = [
+    { locator_id: 'x1', text: 'العنوان الأول' }, { locator_id: 'x2', text: 'العنوان الثاني' },
+    { locator_id: 'x3', text: 'العنوان الثالث' }, { locator_id: 'x4', text: 'العنوان الرابع' },
+    { locator_id: 'x5', text: 'العنوان الخامس' }, { locator_id: 'x6', text: 'العنوان السادس' },
+  ];
+  for (const technical of ['https://example.com', 'www.example.com', 'ali@example.com', '#hashtag', '@handle', 'v2.1.0', 'logo.png']) {
+    assert.deepEqual(detect.findLatinOrphans([...arabic, { locator_id: 't', text: technical }]), [], technical);
+  }
+});
+
+test('latin-orphan: a single Latin letter is not a heading', () => {
+  const arabic = Array.from({ length: 5 }, (_, i) => ({ locator_id: `a${i}`, text: `العنوان ${i}` }));
+  assert.deepEqual(detect.findLatinOrphans([...arabic, { locator_id: 'b', text: 'A' }]), []);
+});
+
+test('latin-orphan: plan() surfaces them in the manual report', () => {
+  const res = plan({ pages: [{ index: 1, elements: [
+    { locator_id: 'a', text: 'إيكيغاي (Ikigai)', style: { font_size: 48, color: '#111111', letter_spacing: 0 } },
+    { locator_id: 'b', text: '(Kaizen)', style: { font_size: 48, color: '#111111', letter_spacing: 0 } },
+    { locator_id: 'c', text: 'العنوان', style: { font_size: 20, letter_spacing: 0 } },
+  ] }] });
+  const hit = res.manual.find((f) => f.rule === 'latin-orphan');
+  assert.equal(hit.found, '(Kaizen)');
+  assert.equal(hit.severity, 'error');
+});
+
+// ===========================================================================
+// lexicon spelling — single-edit correction behind a gate
+// ===========================================================================
+
+// Every row of the second design's error table. The split is not arbitrary:
+// a word the corpus does not know can be corrected; a word it knows perfectly
+// well, used in the wrong place, cannot be — not by any lexicon.
+
+test('lexicon: a dotting error one edit from a common word is corrected', () => {
+  assert.equal(spelling.autofix('أستيقط').text, 'أستيقظ');
+  assert.equal(spelling.autofix('بدفيقة').text, 'بدقيقة');
+});
+
+test('lexicon: the writer\'s own hamza survives the correction', () => {
+  assert.equal(spelling.autofix('أستيقط').text, 'أستيقظ');   // not استيقظ
+  assert.equal(spelling.autofix('استيقط').text, 'استيقظ');   // not أستيقظ
+});
+
+test('lexicon: harakat are carried onto the corrected word', () => {
+  assert.equal(spelling.autofix('بَدفيقة').text, 'بَدقيقة');
+});
+
+test('lexicon: a near-tie is never applied — المعتدي outranks المبتدئ', () => {
+  const res = spelling.autofix('المبتدي');
+  assert.equal(res.text, 'المبتدي');
+  const hit = res.changes.find((c) => c.rule === 'spelling-ambiguous');
+  assert.ok(hit.candidates.some((c) => c.startsWith('المبتدئ')));
+});
+
+test('lexicon: a candidate too rare to trust is offered, not applied', () => {
+  const res = spelling.autofix('تتقته');
+  assert.equal(res.text, 'تتقته');
+  assert.ok(res.changes[0].candidates.some((c) => c.startsWith('تتقنه')));
+});
+
+test('lexicon: short words have too many neighbours to auto-correct', () => {
+  for (const word of ['فعم', 'فع']) {
+    const res = spelling.autofix(word);
+    assert.equal(res.text, word, word);
+    assert.equal(res.changes[0].rule, 'spelling-ambiguous');
+  }
+});
+
+test('lexicon: a real word used wrongly is beyond any lexicon, and is left alone', () => {
+  // غدد (glands) for غدًا, الملا for الملل, الحقيقة for الحقيقية, بأتي for يأتي.
+  // Each is a correctly spelled Arabic word; only meaning separates them.
+  for (const word of ['غدد', 'الملا', 'الحقيقة', 'بأتي', 'أحم']) {
+    const res = spelling.autofix(word);
+    assert.equal(res.text, word, word);
+    assert.deepEqual(res.changes, [], word);
+  }
+});
+
+test('lexicon: transliterated names pass through untouched', () => {
+  for (const name of ['كايزن', 'شوشين', 'غانبارو', 'غامان', 'إيكيغاي']) {
+    const res = spelling.autofix(name);
+    assert.equal(res.text, name, name);
+    assert.ok(!res.changes.some((c) => c.rule === 'spelling'), name);
+  }
+});
+
+test('lexicon: a name with no near neighbour is not even mentioned', () => {
+  for (const name of ['غانبارو', 'إيكيغاي']) {
+    assert.deepEqual(spelling.check(name), [], name);
+  }
+});
+
+test('lexicon: ordinary Arabic prose is left entirely alone', () => {
+  const prose = 'نحن نقدم لكم أفضل الخدمات في مجال التصميم والطباعة بجودة عالية وسعر مناسب';
+  assert.equal(spelling.autofix(prose).text, prose);
+  assert.deepEqual(spelling.check(prose), []);
+});
+
+test('lexicon: correction is idempotent', () => {
+  for (const word of ['أستيقط', 'بدفيقة', 'المبتدي', 'كايزن', 'بَدفيقة']) {
+    const once = spelling.autofix(word).text;
+    assert.equal(spelling.autofix(once).text, once, word);
+  }
+});
+
+test('lexicon: only a dotting swap or an adjacent transposition may auto-apply', () => {
+  assert.ok(spelling.isTypoEdit('استيقط', 'استيقظ'));   // ط/ظ — same skeleton
+  assert.ok(spelling.isTypoEdit('فعم', 'فمع'));         // adjacent swap
+  assert.ok(!spelling.isTypoEdit('كايزن', 'كاين'));     // a deletion
+  assert.ok(!spelling.isTypoEdit('غامان', 'بامان'));    // غ/ب share no skeleton
+  assert.ok(!spelling.isTypoEdit('فعم', 'نعم'));        // ف/ن share no skeleton
+});
+
+test('lexicon: normalisation folds the variants that carry no information', () => {
+  assert.equal(spelling.normalizeWord('إِلَى'), 'الي');
+  assert.equal(spelling.normalizeWord('مَدْرَسَةٌ'), 'مدرسه');
+  assert.equal(spelling.normalizeWord('مـــدرسة'), 'مدرسه');
+  assert.notEqual(spelling.normalizeWord('المبتدي'), spelling.normalizeWord('المبتدئ'));
+});
+
+test('lexicon: the gate thresholds sit above the corpus\'s own typos', () => {
+  assert.ok(spelling.KNOWN_MIN > spelling.CUTOFF);
+  assert.equal(spelling.suggest('أستيقط').status, 'auto');
+  assert.equal(spelling.suggest('مدرسة').status, 'known');
+  assert.equal(spelling.suggest('غانبارو').status, 'unknown');
+  assert.equal(spelling.suggest('المبتدي').status, 'ambiguous');
 });
