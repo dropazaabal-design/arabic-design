@@ -364,7 +364,7 @@ test('numerals: currency is located and its placement judged', () => {
 
 test('typography: letter spacing on Arabic is a manual finding, not an auto fix', () => {
   const res = typography.checkElement({ text: 'مرحبا', style: { letter_spacing: 2 } });
-  assert.equal(res.auto.length, 0);
+  assert.ok(res.auto.every((o) => !('letter_spacing' in o.formatting)));
   assert.ok(res.manual.some((f) => f.rule === 'letter-spacing'));
 });
 
@@ -387,7 +387,7 @@ test('typography: italic on a Latin element is left alone', () => {
 
 test('typography: uppercase transform is reported as manual — no API for it', () => {
   const res = typography.checkElement({ text: 'مرحبا', style: { text_transform: 'uppercase' } });
-  assert.equal(res.auto.length, 0);
+  assert.ok(res.auto.every((o) => !('text_transform' in o.formatting)));
   assert.ok(res.manual.some((f) => f.rule === 'text-transform'));
 });
 
@@ -494,26 +494,82 @@ test('detect: two fonts in one design are fine', () => {
   assert.equal(issues.length, 0);
 });
 
-test('detect: Arabic is narrower than Latin but taller', () => {
-  const ar = detect.estimateTextWidth('مرحبا بالعالم', 20);
-  const en = detect.estimateTextWidth('hello worldxx', 20);
-  assert.ok(ar < en);
+test('geometry: crossing rectangles are an overlap', () => {
+  const issues = detect.findOverlaps([
+    { locator_id: 'title', text: 'العنوان', left: 100, top: 96, width: 880, height: 214 },
+    { locator_id: 'sub', text: 'الفرعي', left: 100, top: 225, width: 880, height: 120 },
+  ]);
+  assert.equal(issues.length, 1);
+  assert.equal(issues[0].rule, 'overlap');
+  assert.deepEqual(issues[0].elements, ['title', 'sub']);
 });
 
-test('detect: overflow is estimated against the box', () => {
-  const res = detect.estimateOverflow({
-    text: 'نص طويل جدا يتجاوز عرض الصندوق المتاح بكل تأكيد ولا يتسع أبدا',
-    fontSize: 40, width: 100, height: 50, lineHeight: 1.6,
-  });
-  assert.equal(res.overflows, true);
-  assert.equal(res.confidence, 'estimate');
+test('geometry: rectangles that only touch are not an overlap', () => {
+  assert.deepEqual(detect.findOverlaps([
+    { locator_id: 'a', text: 'أ', left: 0, top: 0, width: 100, height: 100 },
+    { locator_id: 'b', text: 'ب', left: 0, top: 100, width: 100, height: 100 },
+  ]), []);
 });
 
-test('detect: a comfortable box does not overflow', () => {
-  const res = detect.estimateOverflow({
-    text: 'مرحبا', fontSize: 16, width: 400, height: 200, lineHeight: 1.6,
-  });
-  assert.equal(res.overflows, false);
+test('geometry: separated rectangles are not an overlap', () => {
+  assert.deepEqual(detect.findOverlaps([
+    { locator_id: 'a', text: 'أ', left: 0, top: 0, width: 100, height: 100 },
+    { locator_id: 'b', text: 'ب', left: 0, top: 400, width: 100, height: 100 },
+  ]), []);
+});
+
+test('geometry: a text inside its card is containment, not overlap', () => {
+  assert.deepEqual(detect.findOverlaps([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 200 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 160 },
+  ]), []);
+});
+
+test('geometry: two decorations crossing each other are not reported', () => {
+  assert.deepEqual(detect.findOverlaps([
+    { locator_id: 'sh1', left: 0, top: 0, width: 100, height: 100 },
+    { locator_id: 'sh2', left: 50, top: 50, width: 100, height: 100 },
+  ]), []);
+});
+
+test('geometry: text grown past its card is an escape, with the amount', () => {
+  const issues = detect.findEscapes([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 120 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 128.17 },
+  ]);
+  assert.equal(issues.length, 1);
+  assert.equal(issues[0].rule, 'container-escape');
+  assert.equal(issues[0].container, 'card');
+  assert.deepEqual(issues[0].past, { bottom: 28.17 });
+});
+
+test('geometry: text still inside its card is no escape', () => {
+  assert.deepEqual(detect.findEscapes([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 200 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 160 },
+  ]), []);
+});
+
+test('geometry: text with no container around it is no escape', () => {
+  assert.deepEqual(detect.findEscapes([
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 160 },
+    { locator_id: 'far', left: 900, top: 900, width: 50, height: 50 },
+  ]), []);
+});
+
+test('geometry: the smallest holding rectangle is the container', () => {
+  const issues = detect.findEscapes([
+    { locator_id: 'page-bg', left: 0, top: 0, width: 1080, height: 1350 },
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 120 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 128.17 },
+  ]);
+  assert.equal(issues[0].container, 'card');
+});
+
+test('geometry: the estimator is gone — nothing guesses a layout any more', () => {
+  for (const name of ['estimateOverflow', 'estimateTextWidth', 'refitFontSize']) {
+    assert.equal(detect[name], undefined, name);
+  }
 });
 
 test('detect: contrast ratio follows WCAG', () => {
@@ -569,31 +625,12 @@ test('detect: reading order is judged from element positions', () => {
 // ===========================================================================
 
 test('spelling: tanween placed after the alef is corrected', () => {
-  const res = spelling.check('شكراً جزيلاً');
-  assert.ok(res.some((f) => f.rule === 'tanween-order'));
   assert.equal(spelling.autofix('شكراً').text, 'شكرًا');
 });
 
-test('spelling: Persian yeh inside Arabic text is caught', () => {
-  assert.ok(spelling.check('العربی').some((f) => f.rule === 'persian-yeh'));
+test('spelling: Persian yeh and keheh inside Arabic text are corrected', () => {
   assert.equal(spelling.autofix('العربی').text, 'العربي');
-});
-
-test('spelling: Persian keheh inside Arabic text is caught', () => {
   assert.equal(spelling.autofix('کتاب').text, 'كتاب');
-});
-
-test('spelling: common hamza mistakes are caught', () => {
-  assert.ok(spelling.check('انشاء الموقع').some((f) => f.rule === 'hamza'));
-  assert.equal(spelling.autofix('انشاء الموقع').text, 'إنشاء الموقع');
-});
-
-test('spelling: ta marbuta written as ha is caught on known words', () => {
-  assert.equal(spelling.autofix('الحياه جميله').text, 'الحياة جميلة');
-});
-
-test('spelling: alef maqsura written as ya is caught on known words', () => {
-  assert.equal(spelling.autofix('الي اللقاء').text, 'إلى اللقاء');
 });
 
 test('spelling: a space before punctuation is removed', () => {
@@ -612,9 +649,60 @@ test('spelling: clean text produces no findings', () => {
   assert.deepEqual(spelling.check('مرحبا بالعالم الجميل'), []);
 });
 
-test('spelling: autofix is idempotent', () => {
-  const once = spelling.autofix('شكراً  جزيلا ، الي اللقاء').text;
-  assert.equal(spelling.autofix(once).text, once);
+// --- the ten errors found in a real design ------------------------------
+
+test('spelling: fabricated harakat are stripped', () => {
+  assert.equal(spelling.autofix('استفَزازاتٌ').text, 'استفزازات');
+  assert.equal(spelling.autofix('ينتقدَك').text, 'ينتقدك');
+});
+
+test('spelling: a fatha on a final ya means alef maqsura', () => {
+  assert.equal(spelling.autofix('أقويَ').text, 'أقوى');
+});
+
+test('spelling: a spurious tanween is removed but its shadda is only flagged', () => {
+  const res = spelling.autofix('يجادّلٌ');
+  assert.equal(res.text, 'يجادّل');
+  assert.ok(res.changes.some((c) => c.rule === 'shadda-suspect'));
+});
+
+test('spelling: a haraka left on a letter-substitution error is still stripped', () => {
+  assert.equal(spelling.autofix('يستفرُك').text, 'يستفرك');
+});
+
+test('spelling: deliberate vocalisation on the opening letter is left alone', () => {
+  for (const word of ['يُقلّل', 'مَن', 'مِن', 'يقلّل', 'مدرّس', 'خاصّة']) {
+    assert.equal(spelling.autofix(word).text, word, word);
+  }
+});
+
+test('spelling: fully vocalised text is never stripped', () => {
+  const ayah = 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ';
+  assert.equal(spelling.autofix(ayah).text, ayah);
+});
+
+test('spelling: مَن before a noun is flagged as the preposition, and never rewritten', () => {
+  const res = spelling.autofix('مَن يُقلّل مَن إنجازك');
+  assert.equal(res.text, 'مَن يُقلّل مَن إنجازك');
+  const hits = res.changes.filter((c) => c.rule === 'man-vs-min');
+  assert.equal(hits.length, 1);
+  assert.equal(hits[0].suggestion, 'من');
+});
+
+test('spelling: letter substitutions are honestly out of reach, not silently missed', () => {
+  for (const word of ['الخقيقة', 'يعزج', 'جانزته']) {
+    assert.deepEqual(spelling.check(word), [], word);
+  }
+  assert.equal(spelling.PROOFREADING_NOTE.rule, 'proofreading-human');
+  assert.match(spelling.PROOFREADING_NOTE.message, /معجم/);
+});
+
+test('spelling: every fix is idempotent', () => {
+  const samples = ['استفَزازاتٌ', 'أقويَ', 'يجادّلٌ', 'شكراً  جزيلا ، العربی', 'ونقدُّ اعتراف'];
+  for (const s of samples) {
+    const once = spelling.autofix(s).text;
+    assert.equal(spelling.autofix(once).text, once, s);
+  }
 });
 
 test('spelling: register mixing across a design is reported', () => {
@@ -649,7 +737,8 @@ test('pipeline: spelling, numerals and bidi compose without fighting', () => {
 // cli — the bridge the skills actually call
 // ===========================================================================
 
-const { analyze, batchByPage } = require('../lib/cli');
+const { plan, reflow, foldNoise, batchByPage } = require('../lib/cli');
+const fromRead = require('../lib/from-read');
 
 /** One fixed page holding one element, with the style fields a test cares about. */
 const onePage = (element, page = {}) => ({
@@ -657,7 +746,7 @@ const onePage = (element, page = {}) => ({
 });
 
 test('cli: the text chain runs spelling, then numerals, then tatweel, then bidi', () => {
-  const res = analyze(
+  const res = plan(
     onePage({ locator_id: 'L1', text: 'شكراً, زوروا www.example.com عام 2024' }),
     { numerals: 'arabic-indic' }
   );
@@ -669,7 +758,7 @@ test('cli: the text chain runs spelling, then numerals, then tatweel, then bidi'
 });
 
 test('cli: a responsive page gets find_and_replace_text, never replace_text', () => {
-  const res = analyze(
+  const res = plan(
     onePage({ locator_id: 'L1', text: 'مرحبا بالعالم' }, { is_responsive: true })
   );
   const op = res.auto[0].op;
@@ -679,7 +768,7 @@ test('cli: a responsive page gets find_and_replace_text, never replace_text', ()
 });
 
 test('cli: a responsive page cannot take format_text, so it is blocked', () => {
-  const res = analyze(
+  const res = plan(
     onePage(
       { locator_id: 'L1', text: 'مرحبا', style: { font_style: 'italic', letter_spacing: 0 } },
       { is_responsive: true }
@@ -690,7 +779,7 @@ test('cli: a responsive page cannot take format_text, so it is blocked', () => {
 });
 
 test('cli: a page that is not editable queues nothing at all', () => {
-  const res = analyze(
+  const res = plan(
     onePage(
       { locator_id: 'L1', text: 'مرحبا', style: { font_style: 'italic', letter_spacing: 0 } },
       { is_editable: false }
@@ -701,34 +790,19 @@ test('cli: a page that is not editable queues nothing at all', () => {
   assert.ok(res.blocked.every((b) => /is_editable/.test(b.reason)));
 });
 
-test('cli: overflow is judged against the line height this pass is about to set', () => {
-  // Fits at 1.1, overflows once the Arabic minimum of 1.6 is applied.
-  const element = {
-    locator_id: 'L1', text: 'سطر أول\nسطر ثان\nسطر ثالث\nسطر رابع',
-    left: 0, top: 0, width: 400, height: 150,
-    style: { font_size: 24, line_height: 1.1, letter_spacing: 0 },
-  };
-  assert.equal(
-    detect.estimateOverflow({ text: element.text, fontSize: 24, width: 400, height: 150, lineHeight: 1.1 }).overflows,
-    false
-  );
-  const res = analyze(onePage(element));
-  assert.ok(res.auto.some((a) => /فيض/.test(a.reason)));
-});
-
 test('cli: a Latin-only element produces no text operation', () => {
-  const res = analyze(onePage({ locator_id: 'L1', text: 'Hello, world' }));
+  const res = plan(onePage({ locator_id: 'L1', text: 'Hello, world' }));
   assert.equal(res.auto.length, 0);
   assert.equal(res.preview.length, 0);
 });
 
 test('cli: an already-fixed design is a no-op on the second pass', () => {
   const design = onePage({ locator_id: 'L1', text: 'مرحبا Claude، عام ٢٠٢٤', style: { letter_spacing: 0 } });
-  const first = analyze(design, { numerals: 'arabic-indic' });
+  const first = plan(design, { numerals: 'arabic-indic' });
   const fixed = onePage(
-    { locator_id: 'L1', text: first.auto[0].op.text, style: { letter_spacing: 0 } }
+    { locator_id: 'L1', text: first.auto[0].op.text, style: { letter_spacing: 0, text_align: 'end' } }
   );
-  assert.equal(analyze(fixed, { numerals: 'arabic-indic' }).auto.length, 0);
+  assert.equal(plan(fixed, { numerals: 'arabic-indic' }).auto.length, 0);
 });
 
 test('cli: operations are batched one entry per page', () => {
@@ -741,7 +815,7 @@ test('cli: operations are batched one entry per page', () => {
 });
 
 test('cli: every queued operation is one Canva accepts on that page', () => {
-  const res = analyze(
+  const res = plan(
     onePage({
       locator_id: 'L1', text: 'انشاء موقع, بسرعه', left: 0, top: 0, width: 300, height: 60,
       style: { font_style: 'italic', line_height: 1.0, font_size: 9, letter_spacing: 0 },
@@ -751,4 +825,248 @@ test('cli: every queued operation is one Canva accepts on that page', () => {
   const allowed = new Set(['replace_text', 'find_and_replace_text', 'format_text', 'resize_element']);
   for (const entry of res.auto) assert.ok(allowed.has(entry.op.type), entry.op.type);
   for (const entry of res.auto) assert.equal(entry.op.locator_id, 'L1');
+});
+
+// ===========================================================================
+// alignment
+// ===========================================================================
+
+test('align: Arabic gets text_align end — "start" resolves left against the box', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { text_align: 'start', letter_spacing: 0 } });
+  assert.equal(res.auto.find((o) => o.formatting.text_align).formatting.text_align, 'end');
+});
+
+test('align: a deliberately centred box is left centred', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { text_align: 'center', letter_spacing: 0 } });
+  assert.ok(!res.auto.some((o) => 'text_align' in o.formatting));
+});
+
+test('align: already end means no operation', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { text_align: 'end', letter_spacing: 0 } });
+  assert.ok(!res.auto.some((o) => 'text_align' in o.formatting));
+});
+
+test('align: unknown alignment is set, because Canva defaults to start', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { letter_spacing: 0 } });
+  assert.equal(res.auto.find((o) => o.formatting.text_align).formatting.text_align, 'end');
+});
+
+test('align: the rule can be switched off', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { letter_spacing: 0 } }, { align: false });
+  assert.ok(!res.auto.some((o) => 'text_align' in o.formatting));
+});
+
+test('align: Latin text is never realigned', () => {
+  assert.deepEqual(typography.checkElement({ text: 'Hello', style: { text_align: 'start' } }).auto, []);
+});
+
+// ===========================================================================
+// report folding
+// ===========================================================================
+
+test('folding: a finding on nearly every element becomes one design note', () => {
+  const manual = Array.from({ length: 14 }, (_, i) => ({
+    rule: 'font-unknown', severity: 'info', locator_id: `L${i}`, message: 'لا اسم خط',
+  }));
+  const res = foldNoise(manual, 14);
+  assert.equal(res.manual.length, 0);
+  assert.equal(res.design.length, 1);
+  assert.equal(res.design[0].count, 14);
+  assert.equal(res.design[0].scope, 'design');
+});
+
+test('folding: a finding on a minority of elements stays per-element', () => {
+  const manual = [
+    { rule: 'contrast', severity: 'error', locator_id: 'L1', message: 'x' },
+    { rule: 'contrast', severity: 'error', locator_id: 'L2', message: 'x' },
+  ];
+  const res = foldNoise(manual, 14);
+  assert.equal(res.manual.length, 2);
+  assert.deepEqual(res.design, []);
+});
+
+test('folding: a tiny design never folds — two of two is not a pattern', () => {
+  const manual = [
+    { rule: 'font-unknown', severity: 'info', locator_id: 'L1', message: 'x' },
+    { rule: 'font-unknown', severity: 'info', locator_id: 'L2', message: 'x' },
+  ];
+  assert.deepEqual(foldNoise(manual, 2).design, []);
+});
+
+test('folding: the loud rule folds and the rare one survives beside it', () => {
+  const manual = [
+    ...Array.from({ length: 10 }, (_, i) => ({ rule: 'harakat-clipping', severity: 'warning', locator_id: `L${i}`, message: 'x' })),
+    { rule: 'contrast', severity: 'error', locator_id: 'L11', message: 'y' },
+  ];
+  const res = foldNoise(manual, 11);
+  assert.deepEqual(res.manual.map((f) => f.rule), ['contrast']);
+  assert.deepEqual(res.design.map((f) => f.rule), ['harakat-clipping']);
+});
+
+test('folding: a real design stops repeating font-unknown fourteen times', () => {
+  const elements = Array.from({ length: 14 }, (_, i) => ({
+    locator_id: `L${i}`, text: `النص رقم ${i}`, style: { letter_spacing: 0, line_height: 1.6 },
+  }));
+  const res = plan({ pages: [{ index: 1, width: 1080, height: 1350, elements }] });
+  assert.equal(res.manual.filter((f) => f.rule === 'font-unknown').length, 0);
+  assert.equal(res.design.filter((f) => f.rule === 'font-unknown').length, 1);
+});
+
+// ===========================================================================
+// reflow — pass two, on measured geometry
+// ===========================================================================
+
+const measured = (elements) => ({ pages: [{ index: 1, width: 1080, height: 1350, elements }] });
+
+test('reflow: a measured overlap is reported with a suggestion, never queued', () => {
+  const res = reflow(measured([
+    { locator_id: 'title', text: 'العنوان', left: 100, top: 96, width: 880, height: 214 },
+    { locator_id: 'sub', text: 'الفرعي', left: 100, top: 225, width: 880, height: 120 },
+  ]));
+  assert.equal(res.summary.overlaps, 1);
+  assert.equal(res.auto.length, 0);
+  assert.equal(res.findings[0].suggestion.type, 'position_element');
+  assert.equal(res.findings[0].suggestion.locator_id, 'sub');
+});
+
+test('reflow: a text grown out of its card is moved up when there is slack', () => {
+  const res = reflow(measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 200 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 60, width: 360, height: 160 },
+  ]));
+  assert.equal(res.summary.escapes, 1);
+  assert.deepEqual(res.auto[0].op, { type: 'position_element', locator_id: 'txt', left: 20, top: 40 });
+});
+
+test('reflow: with no slack the point size scales by the measured ratio', () => {
+  const res = reflow(measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 120 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 0, width: 360, height: 160, style: { font_size: 40 } },
+  ]));
+  assert.equal(res.auto[0].op.type, 'format_text');
+  assert.equal(res.auto[0].op.formatting.font_size, 30); // 40 × 120/160
+});
+
+test('reflow: the Arabic minimum floors the scaling — no 9px rescue', () => {
+  const res = reflow(measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 40 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 0, width: 360, height: 400, style: { font_size: 40 } },
+  ]));
+  assert.equal(res.auto.length, 0);
+  assert.equal(res.findings[0].rule, 'container-escape');
+});
+
+test('reflow: a box wider than its card is narrowed', () => {
+  const res = reflow(measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 300 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 500, height: 100 },
+  ]));
+  assert.equal(res.auto[0].op.type, 'resize_element');
+  assert.equal(res.auto[0].op.width, 360);
+});
+
+test('reflow: a clean measured page yields nothing', () => {
+  const res = reflow(measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 300 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 20, width: 360, height: 100 },
+  ]));
+  assert.deepEqual(res.findings, []);
+  assert.deepEqual(res.auto, []);
+});
+
+test('reflow: a responsive page reports but queues nothing', () => {
+  const design = measured([
+    { locator_id: 'card', left: 0, top: 0, width: 400, height: 120 },
+    { locator_id: 'txt', text: 'نص', left: 20, top: 60, width: 360, height: 160 },
+  ]);
+  design.pages[0].is_responsive = true;
+  const res = reflow(design);
+  assert.equal(res.findings.length, 1);
+  assert.equal(res.auto.length, 0);
+});
+
+test('reflow: pass one no longer touches geometry at all', () => {
+  const res = plan(measured([
+    { locator_id: 'txt', text: 'نص عربي طويل جدا', left: 0, top: 0, width: 10, height: 10, style: { letter_spacing: 0, font_size: 40 } },
+  ]));
+  assert.ok(!res.auto.some((a) => a.op.type === 'resize_element'));
+  assert.ok(!JSON.stringify(res).includes('estimate'));
+});
+
+// ===========================================================================
+// from-read — the hand-copying step, gone
+// ===========================================================================
+
+test('from-read: a read-design response becomes a payload', () => {
+  const { pages } = fromRead.convert({
+    document: {
+      pages: [{
+        page_id: 'PB1', index: 1, type: 'fixed', width: 1080, height: 1350,
+        children: [{
+          locatorId: 'PB1-LB1', type: 'text',
+          bounds: { left: 100, top: 96, width: 880, height: 214 },
+          textRegions: [{ text: 'العنوان', formatting: { fontRef: 'YAFdJrN-O4g,0', fontSize: 64, lineHeight: 1.2, textAlign: 'start' } }],
+        }],
+      }],
+    },
+  });
+  assert.equal(pages.length, 1);
+  assert.equal(pages[0].is_responsive, false);
+  assert.deepEqual(pages[0].elements[0], {
+    locator_id: 'PB1-LB1', type: 'text',
+    left: 100, top: 96, width: 880, height: 214,
+    text: 'العنوان',
+    style: { font_family: 'YAFdJrN-O4g,0', font_size: 64, line_height: 1.2, text_align: 'start' },
+  });
+});
+
+test('from-read: an opaque fontRef resolves when the response carries a font table', () => {
+  const { pages } = fromRead.convert({
+    fonts: [{ ref: 'YAFdJrN-O4g,0', name: 'Cairo' }],
+    pages: [{
+      page_id: 'PB1', index: 1, type: 'fixed',
+      children: [{ locatorId: 'PB1-LB1', text: 'نص', formatting: { fontRef: 'YAFdJrN-O4g,0' } }],
+    }],
+  });
+  assert.equal(pages[0].elements[0].style.font_family, 'Cairo');
+});
+
+test('from-read: a responsive page is marked as one', () => {
+  const { pages } = fromRead.convert({
+    pages: [{ page_id: 'PB2', index: 2, type: 'responsive', children: [] }],
+  });
+  assert.equal(pages[0].is_responsive, true);
+});
+
+test('from-read: a field Canva did not return stays absent, never guessed', () => {
+  const { pages } = fromRead.convert({
+    pages: [{ page_id: 'PB1', index: 1, children: [{ locatorId: 'L1', text: 'نص', formatting: { fontSize: 20 } }] }],
+  });
+  const { style } = pages[0].elements[0];
+  assert.deepEqual(Object.keys(style), ['font_size']);
+  assert.ok(!('letter_spacing' in style));
+});
+
+test('from-read: an element is collected once, however deep it nests', () => {
+  const { pages } = fromRead.convert({
+    pages: [{
+      page_id: 'PB1', index: 1,
+      children: [{ type: 'group', children: [{ type: 'group', children: [{ locatorId: 'L1', text: 'نص' }] }] }],
+    }],
+  });
+  assert.equal(pages[0].elements.filter((e) => e.locator_id === 'L1').length, 1);
+});
+
+test('from-read: its output feeds plan() directly', () => {
+  const payload = fromRead.convert({
+    pages: [{
+      page_id: 'PB1', index: 1, type: 'fixed', width: 1080, height: 1350,
+      children: [{
+        locatorId: 'L1', type: 'text', bounds: { left: 0, top: 0, width: 400, height: 100 },
+        textRegions: [{ text: 'مرحبا, بالعالم', formatting: { fontSize: 24, letterSpacing: 0, lineHeight: 1.6 } }],
+      }],
+    }],
+  });
+  const res = plan(payload);
+  assert.equal(res.auto.find((a) => a.op.type === 'replace_text').op.text, RLE + 'مرحبا، بالعالم' + PDF);
 });
