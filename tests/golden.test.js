@@ -1344,12 +1344,28 @@ test('compose: fonts are linked, never embedded', () => {
   assert.ok(!html.includes('data:font'));
 });
 
-test('compose: the pattern is one published asset, not a tiled background', () => {
-  const { html, assets } = compose.compose(SPEC, { assetUrls: { 'pattern.svg': 'https://x/pattern.svg' } });
-  assert.equal(assets.length, 1);
-  assert.equal(assets[0].name, 'pattern.svg');
+test('compose: the pattern is one inlined image, not a tiled background', () => {
+  const { html } = compose.compose(SPEC);
+  // raw.githubusercontent serves every file as text/plain, and a browser will
+  // not draw an SVG served that way — the first live import came back with no
+  // pattern at all. A data URI has no content type to get wrong.
+  assert.ok(html.includes('data:image/svg+xml,'));
   assert.ok(html.includes('background-size:cover'));
   assert.ok(!/background-repeat\s*:\s*repeat/.test(html));
+  assert.ok(!html.includes('pattern.svg'));
+});
+
+test('compose: the inlined pattern still leaves the page well under the ceiling', () => {
+  const { html } = compose.compose(SPEC);
+  assert.ok(Buffer.byteLength(html) < compose.MAX_PAGE_BYTES, Buffer.byteLength(html));
+});
+
+test('compose: the paragraph width is in pixels, not ch', () => {
+  // ch resolves against whichever font is loaded when the importer lays the
+  // page out; with the webfont still pending it ran off the canvas.
+  const { html } = compose.compose(SPEC);
+  assert.ok(/max-width:\d+px/.test(html));
+  assert.ok(!html.includes('19ch'));
 });
 
 test('compose: copy is spell-checked and bidi-wrapped before it is drawn', () => {
@@ -1456,4 +1472,22 @@ test('patterns: an unknown pattern is an error, not an empty page', () => {
 
 test('patterns: the pattern takes the palette accent, so it belongs to the design', () => {
   assert.ok(patterns.girih(200, 200, { stroke: '#FF0000' }).includes('#FF0000'));
+});
+
+test('compose: every text rule carries an explicit line height', () => {
+  // The footer once inherited `normal`, came back at 1.17, and clipped its own
+  // descenders — the composer breaking the rule the rest of the plugin enforces.
+  const { html } = compose.compose(SPEC);
+  const css = html.slice(html.indexOf('<style>'), html.indexOf('</style>'));
+  for (const rule of ['.eyebrow', 'h1', 'p', '.num', '.lbl', 'footer']) {
+    const block = css.slice(css.indexOf(`${rule}{`));
+    assert.match(block.slice(0, block.indexOf('}')), /line-height:/, rule);
+  }
+});
+
+test('compose: no line height anywhere falls under the display minimum', () => {
+  const { html } = compose.compose(SPEC);
+  for (const [, value] of html.matchAll(/line-height:([\d.]+)/g)) {
+    assert.ok(Number(value) >= 1.18, `line-height ${value}`);
+  }
 });
