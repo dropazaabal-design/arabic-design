@@ -1498,3 +1498,71 @@ test('compose: body line breaks are authored, never left to measurement', () => 
   const { html } = compose.compose({ ...SPEC, blocks: [{ role: 'body', text: 'سطر أول\nسطر ثان' }] });
   assert.ok(html.includes('<br>'));
 });
+
+test('bidi: a social handle keeps its @ — the sigil belongs to the name', () => {
+  // Left outside the isolate, "@kitabwbs" rendered as "kitabwbs@" with the @
+  // stranded at the opposite edge of the line.
+  assert.equal(
+    fix('تابعنا @kitabwbs اليوم'),
+    RLE + 'تابعنا ' + LRI + '@kitabwbs' + PDI + ' اليوم' + PDF
+  );
+});
+
+test('bidi: a hashtag keeps its # too', () => {
+  assert.equal(fix('وسم #design هنا'), RLE + 'وسم ' + LRI + '#design' + PDI + ' هنا' + PDF);
+});
+
+test('bidi: an email is still matched whole, not split at the @', () => {
+  assert.equal(
+    fix('راسلنا ali@example.com شكرا'),
+    RLE + 'راسلنا ' + LRI + 'ali@example.com' + PDI + ' شكرا' + PDF
+  );
+});
+
+test('spelling: conservative mode reports the judgement calls and applies none', () => {
+  // تفصيلٌ was typed with that tanween on purpose. Authored copy is not found copy.
+  const res = spelling.autofix('تفصيلٌ بسيط', { conservative: true });
+  assert.equal(res.text, 'تفصيلٌ بسيط');
+  assert.ok(res.changes.some((c) => c.rule === 'fabricated-harakat' && c.reportOnly));
+});
+
+test('spelling: conservative mode still applies what is wrong under every reading', () => {
+  assert.equal(spelling.autofix('شكراً العربی', { conservative: true }).text, 'شكرًا العربي');
+});
+
+test('spelling: conservative mode never auto-corrects a word', () => {
+  assert.equal(spelling.autofix('أستيقط', { conservative: true }).text, 'أستيقط');
+  assert.equal(spelling.autofix('أستيقط').text, 'أستيقظ');
+});
+
+test('compose: authored copy keeps the vocalisation its author chose', () => {
+  const { html, notes } = compose.compose({ ...SPEC, blocks: [{ role: 'body', text: 'تفصيلٌ بسيط' }] });
+  assert.ok(html.includes('تفصيلٌ'));
+  assert.ok(notes.some((n) => n.rule === 'fabricated-harakat'));
+});
+
+test('compose: a Latin-only line inside an Arabic page is isolated', () => {
+  // fixText leaves it alone — correct for a standalone Latin design, wrong
+  // inside an RTL page, where "@kitabwbs" came out as "kitabwbs@".
+  const { text } = compose.prepareCopy('@kitabwbs · www.kitabwbs.com');
+  assert.ok(text.startsWith(LRI));
+  assert.ok(text.endsWith(PDI));
+});
+
+test('compose: an Arabic line is wrapped RTL, not isolated LTR', () => {
+  const { text } = compose.prepareCopy('مرحبا بالعالم');
+  assert.equal(text, RLE + 'مرحبا بالعالم' + PDF);
+});
+
+test('icons: each one is a self-contained SVG in the palette colour', () => {
+  for (const name of Object.keys(patterns.ICONS)) {
+    const svg = patterns.icon(name, { stroke: '#059669' });
+    assert.match(svg, /^<svg[^>]*viewBox="0 0 64 64"/, name);
+    assert.ok(svg.includes('#059669'), name);
+    assert.ok(svg.endsWith('</svg>'), name);
+  }
+});
+
+test('icons: an unknown icon is an error, not a blank square', () => {
+  assert.throws(() => patterns.icon('nope'), /unknown icon/);
+});
