@@ -1,16 +1,20 @@
 {
   "name": "arabic-design",
-  "version": "0.1.0",
-  "description": "يصحّح التصاميم العربية في Canva عبر موصّل Canva MCP: الاتجاه والـBiDi، الترقيم، الأرقام، التنضيد، الخطوط، انعكاس التخطيط، إعادة ملاءمة الصناديق، جودة النص، الوصولية والتصدير.",
+  "version": "0.2.0",
+  "description": "أداة صانع المحتوى العربي على فيسبوك مع Canva: تخطيط المنشور والكابشن، وتوليد تصميم عالي الجرافيك قابل للتحرير وفيديو MP4 للريل، وتصحيح الاتجاه والترقيم والأرقام والتنضيد والخطوط والتخطيط.",
   "license": "MIT",
   "keywords": [
     "arabic",
-    "rtl",
     "bidi",
     "canva",
-    "typography",
+    "captions",
+    "content-creator",
+    "facebook",
     "i18n",
-    "localization"
+    "localization",
+    "reels",
+    "rtl",
+    "typography"
   ],
   "author": {
     "name": "dropazaabal-design"

@@ -1735,3 +1735,122 @@ test('make: copy notes reach the caller so the author can settle them', () => {
   assert.ok(res.notes.some((n) => n.rule === 'fabricated-harakat'));
   assert.ok(res.ok, 'a reported judgement call is not a failure');
 });
+
+// ===========================================================================
+// copy — the words around the design
+// ===========================================================================
+
+const copyLib = require('../lib/copy');
+
+test('copy: a clean human caption raises no tells and no bait', () => {
+  const human = 'التربية لا تظهر في الكلام الكبير.. بل في تفاصيل صغيرة.\n'
+    + 'ما التصرّف الذي يكشف لك أن الشخص تربّى جيدًا؟ 👇';
+  const r = copyLib.lintCopy(human, { surface: 'caption' });
+  assert.deepEqual(r.tells, []);
+  assert.deepEqual(r.bait, []);
+});
+
+test('copy: the Arabic generator tells are caught', () => {
+  const ai = 'في عالمنا المتسارع، لا شكّ أنّ التنظيم يلعب دورًا محوريًا. دعونا نتعمّق في سرّ النجاح.';
+  const found = copyLib.lintCopy(ai).tells.map((t) => t.found);
+  for (const phrase of ['في عالمنا المتسارع', 'لا شكّ أنّ', 'دعونا نتعمّق', 'يلعب دورًا محوريًا', 'سرّ النجاح']) {
+    assert.ok(found.some((f) => f.includes(phrase.split(' ')[0])), phrase);
+  }
+});
+
+test('copy: literal translations of English clichés are caught', () => {
+  for (const [text, phrase] of [
+    ['هذه الأداة تغيير قواعد اللعبة', 'game-changer'],
+    ['ارتقِ بعملك إلى مستوى آخر', 'next level'],
+    ['هل تساءلت يومًا لماذا؟', 'wondered'],
+  ]) {
+    assert.ok(copyLib.lintCopy(text).tells.length > 0, phrase);
+  }
+});
+
+test('copy: each kind of Facebook engagement bait is named', () => {
+  const cases = {
+    'comment-bait': 'اكتب نعم إذا وافقت',
+    'share-bait': 'شارك إن كنت توافق',
+    'tag-bait': 'منشن صديقك الذي يحتاج هذا',
+    'react-bait': 'اضغط لايك إذا أعجبك',
+  };
+  for (const [kind, text] of Object.entries(cases)) {
+    const r = copyLib.lintCopy(text);
+    assert.ok(r.bait.some((b) => b.rule === kind), `${kind}: ${text}`);
+    assert.ok(r.bait.every((b) => b.severity === 'error'), kind);
+  }
+});
+
+test('copy: a real open question is not bait', () => {
+  const r = copyLib.lintCopy('ما التصرّف الصغير الذي يكشف لك أن الشخص تربّى جيدًا؟ أضفه 👇');
+  assert.deepEqual(r.bait, []);
+  assert.deepEqual(r.warnings, []);
+});
+
+test('copy: asking for a number is a warning, not a refusal', () => {
+  const r = copyLib.lintCopy('أيّ قاعدة أصعب عليك؟ اكتب رقمها 👇');
+  assert.deepEqual(r.bait, []);
+  assert.equal(r.warnings[0].rule, 'number-answer');
+});
+
+test('copy: a hook that runs past the fold is flagged with its length', () => {
+  const long = 'هذا سطر أول طويل جدًا '.repeat(8);
+  const w = copyLib.lintCopy(long, { surface: 'caption' }).warnings.find((x) => x.rule === 'hook-past-fold');
+  assert.ok(w.chars > copyLib.FOLD_CHARS);
+});
+
+test('copy: more hashtags than Facebook needs is a note, not an error', () => {
+  const r = copyLib.lintCopy('نص\n#أ #ب #ج #د #هـ #و', { surface: 'caption' });
+  const w = r.warnings.find((x) => x.rule === 'hashtag-count');
+  assert.equal(w.count, 6);
+  assert.equal(w.severity, 'info');
+});
+
+test('spine: a bare topic word on frame one is a label, not a hook', () => {
+  assert.ok(copyLib.checkSpine({ title: 'الأخلاق', items: [{}, {}, {}], question: 'x؟' })
+    .some((i) => i.rule === 'hook-is-a-label'));
+  assert.deepEqual(copyLib.checkSpine({ title: '٦ تصرّفات صغيرة', items: [{}, {}, {}], question: 'x؟' }), []);
+});
+
+test('spine: a sequence with no ask at the end is flagged', () => {
+  assert.ok(copyLib.checkSpine({ title: '٥ قواعد', items: [{}, {}, {}] })
+    .some((i) => i.rule === 'no-ask'));
+});
+
+test('spine: more than ten points should be two posts', () => {
+  assert.ok(copyLib.checkSpine({ title: '١٢ خطأ', items: Array(12).fill({}), question: 'x؟' })
+    .some((i) => i.rule === 'too-many-points'));
+});
+
+test('caption: built from the same outline as the design, so they cannot drift', () => {
+  const text = copyLib.caption({ ...OUTLINE, hashtags: ['أخلاق', '#وعي', 'تطوير الذات', 'زائد'] });
+  assert.ok(text.startsWith('التربية لا تظهر'));
+  assert.ok(text.includes('١. تشكر على أبسط خدمة'));
+  assert.ok(text.includes('#أخلاق #وعي #تطوير_الذات'));
+  assert.ok(!text.includes('#زائد'), 'capped at three tags');
+});
+
+test('caption: carries no bidi control characters — it is pasted, not imported', () => {
+  const text = copyLib.caption(OUTLINE);
+  assert.ok(!bidi.hasBidiControls(text));
+});
+
+test('make: returns a caption and the copy checks alongside the design', () => {
+  const res = make(OUTLINE, { format: 'reel', reel: true });
+  assert.equal(typeof res.caption, 'string');
+  assert.ok(res.caption.length > 0);
+  assert.ok(Array.isArray(res.copy.spine));
+  assert.ok(Array.isArray(res.copy.tells));
+});
+
+test('make: engagement bait stops the build — it costs reach', () => {
+  const res = make({ ...OUTLINE, question: 'اكتب نعم إذا وافقت 👇' }, { format: 'post' });
+  assert.equal(res.ok, false);
+  assert.ok(res.copy.bait.some((b) => b.rule === 'comment-bait'));
+});
+
+test('make: the same warning on a frame and in the caption is reported once', () => {
+  const res = make({ ...OUTLINE, question: 'أيّ تصرّف تمارسه؟ اكتب رقمه 👇' }, { format: 'post' });
+  assert.equal(res.copy.warnings.filter((w) => w.rule === 'number-answer').length, 1);
+});
