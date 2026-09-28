@@ -1566,3 +1566,87 @@ test('icons: each one is a self-contained SVG in the palette colour', () => {
 test('icons: an unknown icon is an error, not a blank square', () => {
   assert.throws(() => patterns.icon('nope'), /unknown icon/);
 });
+
+// ===========================================================================
+// recipes — variety that is generated, not imported
+// ===========================================================================
+
+const recipes = require('../lib/recipes');
+
+const OUTLINE = {
+  kicker: 'سلسلة الوعي',
+  title: '٦ تصرّفات صغيرة\nتكشف أنك تربّيت جيدًا',
+  lead: 'التربية لا تظهر في الكلام الكبير،\nبل في تفاصيل صغيرة.',
+  iconName: 'tree',
+  items: [
+    { title: 'تشكر على أبسط خدمة', body: 'كلمة شكر للنادل والسائق\nتقول عنك أكثر من ألقابك.' },
+    { title: 'تنتظر حتى ينهي المتحدّث', body: 'المقاطعة تكشف العجلة،\nوالإنصات يكشف الاحترام.' },
+    { title: 'لا تنظر في شاشة غيرك', body: 'ما يخصّ الناس ليس لعينيك،\nولو كان مكشوفًا.' },
+    { title: 'تحفظ السرّ دون أن يُطلب', body: 'الأمانة أن تكتم ما سمعته،\nحتى لو لم يُطلب منك.' },
+  ],
+  closing: 'الأخلاق لا تُقاس بالمواقف الكبرى،\nبل بما تفعله حين لا ينتبه أحد.',
+  question: 'ما التصرّف الذي يكشف لك\nأن الشخص تربّى جيدًا؟ 👇',
+  brand: '@kitabwbs · www.kitabwbs.com',
+};
+
+test('recipes: every shipped palette passes contrast at every text size', () => {
+  // A palette that fails contrast is not a style choice, it is a defect. None
+  // of them ships without proving it first.
+  for (const [name, palette] of Object.entries(recipes.PALETTES)) {
+    for (const format of Object.values(recipes.FORMATS)) {
+      const scale = compose.typeScale(format.height, 'نص');
+      const issues = compose.checkPalette(palette, scale)
+        .filter((i) => i.severity === 'error');
+      assert.deepEqual(issues, [], `${name} @ ${format.height}`);
+    }
+  }
+});
+
+test('recipes: every layout composes into a page that passes the import lint', () => {
+  for (const layout of Object.keys(recipes.LAYOUTS)) {
+    const spec = recipes.recipe({ format: 'post', palette: 'paper', pairing: 'civic', layout }, OUTLINE);
+    const { html, issues } = compose.compose(spec);
+    assert.deepEqual(compose.lintForImport(html), [], layout);
+    assert.deepEqual(issues.filter((i) => i.severity === 'error'), [], layout);
+  }
+});
+
+test('recipes: every palette × pairing × pattern combination composes clean', () => {
+  for (const palette of Object.keys(recipes.PALETTES)) {
+    for (const pairing of Object.keys(recipes.PAIRINGS)) {
+      for (const pattern of recipes.PATTERNS) {
+        const spec = recipes.recipe({ format: 'reel', palette, pairing, pattern, layout: 'list' }, OUTLINE);
+        const { html } = compose.compose(spec);
+        assert.deepEqual(compose.lintForImport(html), [], `${palette}/${pairing}/${pattern}`);
+      }
+    }
+  }
+});
+
+test('recipes: a reel is a cover, the points split across frames, and a closing', () => {
+  const spec = recipes.reel({ format: 'reel', palette: 'paper', pairing: 'civic' }, OUTLINE, { perPage: 3 });
+  assert.deepEqual(spec.pages.map((p) => p.label), ['الغلاف', 'النقاط 1–3', 'النقاط 4–4', 'الخاتمة']);
+  const { html, pages } = compose.compose(spec);
+  assert.equal(pages, 4);
+  assert.deepEqual(compose.lintForImport(html), []);
+});
+
+test('recipes: numbering runs on across the frames, it does not restart', () => {
+  const spec = recipes.reel({ format: 'reel', palette: 'paper' }, OUTLINE, { perPage: 2 });
+  const nums = spec.pages
+    .flatMap((p) => p.blocks)
+    .filter((b) => b.role === 'list')
+    .flatMap((b) => b.items.map((i) => i.num));
+  assert.deepEqual(nums, ['١', '٢', '٣', '٤']);
+});
+
+test('recipes: the same outline re-cuts into a different design without touching the copy', () => {
+  const a = recipes.recipe({ format: 'post', palette: 'midnight', pairing: 'editorial', layout: 'quote' }, OUTLINE);
+  const b = recipes.recipe({ format: 'post', palette: 'mint', pairing: 'kufic', layout: 'list' }, OUTLINE);
+  assert.notDeepEqual(a.palette, b.palette);
+  assert.notDeepEqual(a.blocks.map((x) => x.role), b.blocks.map((x) => x.role));
+});
+
+test('recipes: the library is big enough to stop repeating itself', () => {
+  assert.ok(recipes.combinations() >= 1000, recipes.combinations());
+});
