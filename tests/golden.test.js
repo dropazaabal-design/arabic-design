@@ -1650,3 +1650,19 @@ test('recipes: the same outline re-cuts into a different design without touching
 test('recipes: the library is big enough to stop repeating itself', () => {
   assert.ok(recipes.combinations() >= 1000, recipes.combinations());
 });
+
+test('compose: only the page with a top bar loses its padding', () => {
+  // The CSS is written once for every page, so keying the bleed off "any page
+  // has a bar" stripped the padding from the frames that do not, and their copy
+  // sat on the top edge.
+  const { html } = compose.compose({
+    ...SPEC,
+    pages: [
+      { label: 'أ', blocks: [{ role: 'topbar', height: 200 }, { role: 'title', text: 'عنوان' }] },
+      { label: 'ب', blocks: [{ role: 'title', text: 'عنوان' }] },
+    ],
+  });
+  assert.ok(html.includes('class="page has-bar"'));
+  assert.ok(html.includes('class="page"'));
+  assert.ok(html.includes('.page.has-bar{padding:0 0'));
+});
