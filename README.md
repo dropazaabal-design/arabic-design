@@ -120,7 +120,19 @@ lib/recipes.js      ١٢٠٠ تركيبة: لوحات × خطوط × أنماط 
 tools/              إعادة بناء المعجم من المصدر
 ```
 
-دورة التمريرتين — **قِس ولا تخمّن**:
+**التوليد بأمر واحد** — مخطّط نصّي ← صفحة جاهزة للنشر:
+
+```bash
+node lib/cli.js make outline.json --reel --format=reel \
+  --palette=midnight --pairing=kufic --pattern=girih --repo=owner/name
+```
+
+ثم النشر على raw.githubusercontent والاستيراد إلى Canva، و`export-design` بـmp4
+للريل. خمسة إطارات = ٢٥ ثانية.
+
+---
+
+دورة التمريرتين للتصحيح — **قِس ولا تخمّن**:
 
 ```bash
 node lib/from-read.js read.json > payload.json
@@ -143,7 +155,7 @@ node lib/cli.js reflow measured.json                        # تقاطع وخر�
 ## الاختبارات
 
 ```bash
-npm test     # node --test — 218 اختبارًا، بلا مكتبات
+npm test     # node --test — 228 اختبارًا، بلا مكتبات
 ```
 
 اختبارات ذهبية: كل تحويل مثبَّت بمُدخل ومُخرَج متوقّع بالضبط. تغطّي نصًا عربيًا

@@ -1666,3 +1666,72 @@ test('compose: only the page with a top bar loses its padding', () => {
   assert.ok(html.includes('class="page"'));
   assert.ok(html.includes('.page.has-bar{padding:0 0'));
 });
+
+// ===========================================================================
+// make — the one call that turns an outline into a publishable page
+// ===========================================================================
+
+const { make, checkOutline } = require('../lib/cli');
+
+test('make: an outline becomes a page that passes its own lint', () => {
+  const res = make(OUTLINE, { format: 'post', palette: 'paper', pairing: 'civic', layout: 'list' });
+  assert.equal(res.ok, true);
+  assert.deepEqual(res.lint, []);
+  assert.equal(res.pages, 1);
+  assert.ok(res.bytes > 0);
+});
+
+test('make: --reel splits the same outline into cover, points and closing', () => {
+  const res = make(OUTLINE, { reel: true, format: 'reel', palette: 'midnight', perPage: 2 });
+  assert.equal(res.ok, true);
+  assert.equal(res.pages, 4);           // cover + 2 point frames + closing
+  assert.equal(res.look.layout, 'reel');
+});
+
+test('make: the chosen look is reported back, so a design can be reproduced', () => {
+  const res = make(OUTLINE, { format: 'square', palette: 'sand', pairing: 'editorial', pattern: 'zellij', layout: 'quote' });
+  assert.deepEqual(res.look, {
+    format: 'square', palette: 'sand', pairing: 'editorial', pattern: 'zellij', layout: 'quote',
+  });
+});
+
+test('make: a repo turns into the exact URL Canva will fetch', () => {
+  const res = make(OUTLINE, { format: 'post', repo: 'me/pub', branch: 'main' });
+  assert.match(res.publish.url, /^https:\/\/raw\.githubusercontent\.com\/me\/pub\/main\/p\/[a-z0-9]+\/index\.html$/);
+  assert.ok(res.publish.path.endsWith('/index.html'));
+});
+
+test('make: with no repo there is no publish target, and that is not an error', () => {
+  const res = make(OUTLINE, { format: 'post' });
+  assert.equal(res.publish, null);
+  assert.equal(res.ok, true);
+});
+
+test('make: a broken outline is refused in words, not a stack trace', () => {
+  const res = make({ items: [{ body: 'x' }], iconName: 'dragon' }, { layout: 'list' });
+  assert.equal(res.ok, false);
+  assert.ok(res.problems.some((p) => p.includes('title')));
+  assert.ok(res.problems.some((p) => p.includes('dragon')));
+});
+
+test('make: an unknown palette is named with the ones that exist', () => {
+  const problems = checkOutline({ title: 'x', items: [{ title: 'y' }], palette: 'neon' }, 'list');
+  assert.ok(problems.some((p) => p.includes('neon') && p.includes('midnight')));
+});
+
+test('make: the same outline and look give the same URL every time', () => {
+  const look = { format: 'reel', palette: 'ink', repo: 'me/pub' };
+  assert.equal(make(OUTLINE, look).publish.url, make(OUTLINE, look).publish.url);
+});
+
+test('make: a different look gives a different URL, so nothing is overwritten', () => {
+  const a = make(OUTLINE, { format: 'reel', palette: 'ink', repo: 'me/pub' });
+  const b = make(OUTLINE, { format: 'reel', palette: 'sea', repo: 'me/pub' });
+  assert.notEqual(a.publish.url, b.publish.url);
+});
+
+test('make: copy notes reach the caller so the author can settle them', () => {
+  const res = make({ ...OUTLINE, closing: 'تفصيلٌ بسيط يكشف الكثير.' }, { format: 'post' });
+  assert.ok(res.notes.some((n) => n.rule === 'fabricated-harakat'));
+  assert.ok(res.ok, 'a reported judgement call is not a failure');
+});
