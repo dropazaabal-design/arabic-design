@@ -1854,3 +1854,130 @@ test('make: the same warning on a frame and in the caption is reported once', ()
   const res = make({ ...OUTLINE, question: 'أيّ تصرّف تمارسه؟ اكتب رقمه 👇' }, { format: 'post' });
   assert.equal(res.copy.warnings.filter((w) => w.rule === 'number-answer').length, 1);
 });
+
+// ===========================================================================
+// outline — the post as the creator writes it
+// ===========================================================================
+
+const outlineLib = require('../lib/outline');
+
+// Verbatim from the creator's own message in this project.
+const POST_B = `🌿 6 تصرّفات صغيرة.. تكشف أنك تربّيت جيداً
+الهوك: التربية لا تظهر في الكلام الكبير، بل في ستّ تفاصيل صغيرة لا ينتبه لها إلا الراقي.
+
+1. تشكر على أبسط خدمة: كلمة "شكراً" للنادل والسائق وعامل النظافة، تقول عنك أكثر من كل ألقابك.
+2. تنتظر حتى ينهي المتحدّث كلامه: المقاطعة تكشف العجلة، والإنصات حتى النهاية يكشف الاحترام.
+3. لا تنظر في شاشة غيرك: ما يخصّ الناس ليس لعينيك، ولو كان أمامك مكشوفاً.
+الأخلاق لا تُقاس بالمواقف الكبرى، بل بما تفعله حين تظنّ أن لا أحد ينتبه لها.
+السؤال: ما التصرّف الصغير الذي يكشف لك أن الشخص تربّى جيداً؟ أضفه 👇
+الكابشن:
+التربية لا تظهر في الكلام الكبير.. بل في تفاصيل صغيرة.
+#أخلاق #وعي #تطوير_الذات`;
+
+test('outline: the creator\'s own post parses into every part', () => {
+  const o = outlineLib.parseOutline(POST_B);
+  assert.equal(o.title, '🌿 6 تصرّفات صغيرة.. تكشف أنك تربّيت جيداً');
+  assert.match(o.lead, /^التربية لا تظهر/);
+  assert.equal(o.items.length, 3);
+  assert.deepEqual(o.items[0], {
+    title: 'تشكر على أبسط خدمة',
+    body: 'كلمة "شكراً" للنادل والسائق وعامل النظافة، تقول عنك أكثر من كل ألقابك.',
+  });
+  assert.match(o.closing, /^الأخلاق لا تُقاس/);
+  assert.match(o.question, /أضفه 👇$/);
+  assert.deepEqual(o.hashtags, ['أخلاق', 'وعي', 'تطوير_الذات']);
+});
+
+test('outline: the caption section is kept aside, never drawn on the design', () => {
+  const o = outlineLib.parseOutline(POST_B);
+  assert.match(o.captionText, /^التربية لا تظهر في الكلام الكبير\.\./);
+  assert.ok(!o.items.some((i) => i.title.includes('الكابشن')));
+});
+
+test('outline: a title that starts with a number is not mistaken for a point', () => {
+  // «9 قواعد للهيبة» has no mark after the digit — it is a title, and nearly
+  // every one of this creator's titles starts with a number.
+  const o = outlineLib.parseOutline('9 قواعد للهيبة والكاريزما\n\n1. التقدير الداخلي: الهيبة تبدأ من احترامك.');
+  assert.equal(o.title, '9 قواعد للهيبة والكاريزما');
+  assert.equal(o.items.length, 1);
+});
+
+test('outline: Arabic-Indic numbering and bullets both read as points', () => {
+  const o = outlineLib.parseOutline('العنوان: عنوان\n١. أول: شرح\n٢) ثان: شرح\n• ثالث: شرح');
+  assert.deepEqual(o.items.map((i) => i.title), ['أول', 'ثان', 'ثالث']);
+});
+
+test('outline: a line it cannot place is reported, never silently dropped', () => {
+  const o = outlineLib.parseOutline('عنوان\nمقدمة\n1. نقطة: شرح\nخاتمة\nسطر زائد لا مكان له');
+  assert.deepEqual(o.unparsed, ['سطر زائد لا مكان له']);
+});
+
+test('breaks: a title breaks where the creator paused, at «..»', () => {
+  const o = outlineLib.withBreaks(outlineLib.parseOutline(POST_B));
+  assert.equal(o.title, '🌿 6 تصرّفات صغيرة..\nتكشف أنك تربّيت جيداً');
+});
+
+test('breaks: a long line breaks at the comma nearest its middle', () => {
+  assert.equal(
+    outlineLib.breakLine('كلمة "شكراً" للنادل والسائق وعامل النظافة، تقول عنك أكثر من كل ألقابك.'),
+    'كلمة "شكراً" للنادل والسائق وعامل النظافة،\nتقول عنك أكثر من كل ألقابك.'
+  );
+});
+
+test('breaks: a hand-broken line and a short line are left exactly as written', () => {
+  assert.equal(outlineLib.breakLine('سطر\nمكسور يدويًا بالفعل وطويل جدًا جدًا جدًا'), 'سطر\nمكسور يدويًا بالفعل وطويل جدًا جدًا جدًا');
+  assert.equal(outlineLib.breakLine('قصير'), 'قصير');
+});
+
+test('make: plain text in, a finished page out — no JSON to write', () => {
+  const res = make(outlineLib.withBreaks(outlineLib.parseOutline(POST_B)), { reel: true, format: 'reel' });
+  assert.equal(res.ok, true);
+  assert.equal(res.pages, 3);            // cover + one frame of three points + closing
+  assert.ok(res.html.includes('جيدًا'), 'tanween order corrected on the way');
+});
+
+test('caption: the creator\'s own caption is used as written, every tag kept', () => {
+  const o = outlineLib.parseOutline(`${POST_B} #رابع #خامس`);
+  const text = copyLib.caption(o);
+  assert.ok(text.startsWith('التربية لا تظهر في الكلام الكبير.. بل في تفاصيل صغيرة.'));
+  assert.ok(!text.includes('📌'), 'no skeleton lines added to a written caption');
+  assert.ok(text.endsWith('#أخلاق #وعي #تطوير_الذات #رابع #خامس'));
+  // Five is too many for Facebook, and the lint says so — the words stay theirs.
+  assert.ok(copyLib.lintCopy(text, { surface: 'caption' }).warnings.some((w) => w.rule === 'hashtag-count'));
+});
+
+// ===========================================================================
+// studio — the same library, bundled for the browser
+// ===========================================================================
+
+const fs = require('fs');
+const studio = require('../tools/build-studio');
+
+function studioEngine() {
+  const vm = require('vm');
+  const context = { window: {}, TextEncoder };
+  vm.createContext(context);
+  vm.runInContext(studio.bundle(), context);
+  return context.window.ArabicDesign;
+}
+
+test('studio: the committed engine is built from the current library', () => {
+  assert.equal(fs.readFileSync(studio.OUT, 'utf8'), studio.bundle(),
+    'studio/engine.js is stale — run: node tools/build-studio.js');
+});
+
+test('studio: the browser engine draws exactly what make draws', () => {
+  const engine = studioEngine();
+  for (const choice of [
+    { reel: true, format: 'reel', palette: 'ink', pattern: 'girih' },
+    { format: 'post', palette: 'paper', pairing: 'classic', layout: 'list' },
+  ]) {
+    const node = make(outlineLib.withBreaks(outlineLib.parseOutline(POST_B)), choice);
+    const browser = engine.make(engine.withBreaks(engine.parseOutline(POST_B)), choice);
+    assert.ok(node.ok && node.html.length > 1000, 'a real page, not two identical refusals');
+    assert.equal(browser.html, node.html);
+    assert.equal(browser.pages, node.pages);
+    assert.equal(browser.caption, node.caption);
+    assert.equal(browser.bytes, node.bytes);
+  }
+});
