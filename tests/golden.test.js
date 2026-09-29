@@ -1533,7 +1533,11 @@ test('compose: every text rule carries an explicit line height', () => {
   const { html } = compose.compose(SPEC);
   const css = html.slice(html.indexOf('<style>'), html.indexOf('</style>'));
   for (const rule of ['.eyebrow', 'h1', 'p', '.num', '.lbl', 'footer']) {
-    const block = css.slice(css.indexOf(`${rule}{`));
+    // Anchored at a rule boundary: a plain indexOf for "p{" found ".step{"
+    // once the steps layout landed, and checked the wrong rule.
+    const at = css.search(new RegExp(`(^|[}\\n])${rule.replace('.', '\\.')}\\{`, 'm'));
+    assert.ok(at >= 0, `${rule} missing`);
+    const block = css.slice(at);
     assert.match(block.slice(0, block.indexOf('}')), /line-height:/, rule);
   }
 });
@@ -2234,4 +2238,111 @@ test('taste: the seed profile holds only the creator\'s own recorded words', () 
   const seed = taste.load(taste.profilePath());
   assert.ok(seed.preferences.length >= 3);
   for (const pref of seed.preferences) assert.ok(pref.evidence.trim().length > 0);
+});
+
+// ===========================================================================
+// steps — the flat infographic layout
+// ===========================================================================
+
+const STEPS_CONTENT = {
+  kicker: 'كتاب وبس',
+  kickerSub: 'إضافة الوعي قبل استهلاك الوقت',
+  title: 'كيف تُنجز مهامك اليومية\nفي نصف الوقت؟',
+  lead: 'لا تعمل أكثر… أنجِز المهمة بتركيز.',
+  note: 'جرّبها ليومين.',
+  items: [
+    { num: '01', iconName: 'checklist', color: '#2E7BC5', title: 'اكتب قائمة مهامك', body: 'حدِّد أهم ثلاث مهام.' },
+    { num: '02', iconName: 'timer', color: '#2E7BC5', title: 'طبّق قاعدة 25 دقيقة', body: 'ركِّز على مهمة واحدة.' },
+    { num: '03', iconName: 'hand', color: '#E63946', title: 'قُل «لا»', body: 'اعتذر بأدب.' },
+  ],
+  closing: 'أولويات واضحة + تركيز عميق',
+  question: 'ما أول مهمة ستبدأ بها؟',
+  brand: '@kitabwbs',
+};
+
+const stepsSpec = (extra = {}) => ({
+  title: 'خطوات',
+  size: { width: 1080, height: 1350 },
+  palette: recipes.PALETTES.focus,
+  fonts: recipes.PAIRINGS.modern,
+  pattern: { kind: 'none' },
+  blocks: recipes.LAYOUTS.steps(STEPS_CONTENT, recipes.PALETTES.focus),
+  ...extra,
+});
+
+test('steps: flat rows parted by a rule — no card, no shadow', () => {
+  const { html } = compose.compose(stepsSpec({ divider: '#D2D4D7' }));
+  assert.match(html, /\.step\{[^}]*border-top:1px solid #D2D4D7/);
+  assert.match(html, /\.step:first-child\{border-top:0/);
+  // The brief that drove this layout says no shadows; .item (the card list)
+  // has one, so the two must not share a rule.
+  const stepBlock = html.match(/\.step\{[^}]*\}/)[0];
+  assert.ok(!/box-shadow/.test(stepBlock), stepBlock);
+  assert.ok(!/border-radius/.test(stepBlock), stepBlock);
+});
+
+test('steps: the number keeps its own colour, and the icon takes it too', () => {
+  const { html } = compose.compose(stepsSpec());
+  assert.match(html, /<div class="step-num" style="color:#2E7BC5">01<\/div>/);
+  assert.match(html, /<div class="step-num" style="color:#E63946">03<\/div>/);
+  assert.equal((html.match(/class="step-icon"/g) || []).length, 3);
+  assert.match(html, /stroke="#E63946"/);
+});
+
+test('steps: the copy still goes through the checks on its way in', () => {
+  const built = compose.compose(stepsSpec(), { numerals: 'arabic-indic' });
+  assert.match(built.html, /٢٥/, 'numerals convert inside a step body');
+  assert.ok(!/<script/i.test(built.html));
+});
+
+test('palette focus: every colour it sets on text passes at the size it is used', () => {
+  const { issues } = compose.compose(stepsSpec({
+    sizes: { stepNum: 38, stepTitle: 24, stepBody: 18, title: 44, body: 25, eyebrow: 26 },
+  }));
+  assert.deepEqual(issues, []);
+});
+
+test('palette focus: its blue and red are large-text colours, never body colours', () => {
+  const p = recipes.PALETTES.focus;
+  for (const color of [p.accent, p.alert]) {
+    const big = detect.checkContrast({ color, background: p.bg, fontSize: 38, fontWeight: 700 });
+    const small = detect.checkContrast({ color, background: p.bg, fontSize: 18, fontWeight: 400 });
+    assert.equal(big.pass, true, `${color} at 38px bold`);
+    assert.equal(small.pass, false, `${color} at 18px — must never be body copy`);
+  }
+  // The brief's own green measured 2.42:1, under even the large-text floor.
+  assert.equal(detect.checkContrast({ color: '#10B981', background: p.bg, fontSize: 38, fontWeight: 700 }).pass, false);
+  assert.equal(detect.checkContrast({ color: p.success, background: p.bg, fontSize: 38, fontWeight: 700 }).pass, true);
+});
+
+test('compose: an explicit margin replaces the computed one, safe areas adding to it', () => {
+  const { html } = compose.compose(stepsSpec({ pad: 80, safeArea: { top: 20, bottom: 40 } }));
+  assert.match(html, /padding:100px 80px 120px/);
+});
+
+test('compose: the colour-check square is the page background, in the corner', () => {
+  const { html } = compose.compose(stepsSpec({ checkSquare: '#F8FAFC' }));
+  assert.match(html, /\.check\{position:absolute;left:0;bottom:0;width:10px;height:10px;background:#F8FAFC\}/);
+  assert.match(html, /<div class="check"><\/div>/);
+  assert.ok(!compose.compose(stepsSpec()).html.includes('class="check"'));
+});
+
+test('compose: a brand lockup keeps its own edge when the head is centred', () => {
+  const { html } = compose.compose(stepsSpec({ titleAlign: 'center', eyebrowAlign: 'start' }));
+  assert.match(html, /\.head\{position:relative;text-align:center\}/);
+  assert.match(html, /\.eyebrow\{[^}]*text-align:start\}/);
+});
+
+test('icons: every name the steps layout uses draws a real SVG', () => {
+  for (const name of ['checklist', 'timer', 'arrow', 'plane', 'review', 'hand']) {
+    const svg = patterns.icon(name, { stroke: '#2E7BC5', size: 42 });
+    assert.match(svg, /^<svg [^>]*width="42"/);
+    assert.match(svg, /stroke="#2E7BC5"/);
+    assert.ok(svg.includes('<path') || svg.includes('<circle'), name);
+    // Every drawn coordinate inside the 64×64 box — one outside it clips.
+    const geometry = [...svg.matchAll(/(?:\sd="([^"]+)"|c[xy]="([\d.]+)"|\sr="([\d.]+)")/g)]
+      .flatMap((m) => (m[1] || m[2] || m[3]).match(/[\d.]+/g) || []);
+    assert.ok(geometry.length > 3, name);
+    for (const n of geometry.map(Number)) assert.ok(n >= 0 && n <= 64, `${name}: ${n}`);
+  }
 });
