@@ -74,7 +74,7 @@ edit-design(transaction_id, finalize: "cancel")
 
 | الصفحة | العنصر | المشكلة | العملية |
 |---|---|---|---|
-| 1 | PB1-LB1 | فقرة عربية بلا اتجاه RTL | `replace_text` |
+| 1 | PB1-LB1 | نقطة آخر السطر في الطرف الخطأ | `find_and_replace_text` (مرساة RLM) |
 | 1 | PB1-LB1 | ميل اصطناعي على نص عربي | `format_text: font_style` |
 
 شغّل `/arabic-fix` لتطبيقها. ستُعرض عليك معاينة قبل الحفظ.

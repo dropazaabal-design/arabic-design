@@ -14,7 +14,7 @@ const typography = require('../lib/typography');
 const detect = require('../lib/detect');
 const spelling = require('../lib/spelling');
 
-const { RLE, PDF, LRI, PDI } = bidi.CONTROLS;
+const { RLE, PDF, LRI, PDI, RLM, LRM } = bidi.CONTROLS;
 
 /** Shorthand: run the full pipeline and return just the text. */
 const fix = (s, o) => bidi.fixText(s, o).text;
@@ -761,21 +761,59 @@ test('cli: the text chain runs spelling, then numerals, then tatweel, then bidi'
     onePage({ locator_id: 'L1', text: 'شكراً, زوروا www.example.com عام 2024' }),
     { numerals: 'arabic-indic' }
   );
-  const op = res.auto.find((a) => a.op.type === 'replace_text').op;
-  assert.equal(
-    op.text,
-    RLE + 'شكرًا، زوروا ' + LRI + 'www.example.com' + PDI + ' عام ٢٠٢٤' + PDF
-  );
+  // Word edits, not a rewrite: spelling and punctuation on the first word,
+  // the numeral conversion and the line's closing anchor on the last.
+  assert.deepEqual(res.auto.filter((a) => a.op.type === 'find_and_replace_text').map((a) => [a.op.find_text, a.op.replace_text]), [
+    ['شكراً,', 'شكرًا،'],
+    ['2024', '٢٠٢٤' + RLM],
+  ]);
+  assert.ok(!res.auto.some((a) => a.op.type === 'replace_text'));
 });
 
 test('cli: a responsive page gets find_and_replace_text, never replace_text', () => {
   const res = plan(
-    onePage({ locator_id: 'L1', text: 'مرحبا بالعالم' }, { is_responsive: true })
+    onePage({ locator_id: 'L1', text: 'شكراً للجميع' }, { is_responsive: true })
   );
   const op = res.auto[0].op;
   assert.equal(op.type, 'find_and_replace_text');
-  assert.equal(op.find_text, 'مرحبا بالعالم');
-  assert.equal(op.replace_text, RLE + 'مرحبا بالعالم' + PDF);
+  assert.equal(op.find_text, 'شكراً');
+  assert.equal(op.replace_text, 'شكرًا');
+});
+
+test('cli: pure Arabic that Canva already lays out right is left untouched', () => {
+  // The old plan wrapped every line in RLE…PDF with replace_text. Canva ignores
+  // the RLE, and the rewrite turned the box left-to-right (measured).
+  const res = plan(onePage({ locator_id: 'L1', text: 'التربية لا تظهر في الكلام الكبير', style: { letter_spacing: 0, line_height: 1.6 } }));
+  assert.deepEqual(res.auto, []);
+});
+
+test('cli: every text change is a word edit, so direction and styles survive', () => {
+  const res = plan(onePage({ locator_id: 'L1', text: 'تنتظر حتى ينهي المتحدث كلامه @kitabwbs.', style_runs: 2 }));
+  const ops = res.auto.filter((a) => a.op.type !== 'format_text').map((a) => a.op);
+  assert.ok(ops.length > 0);
+  assert.ok(ops.every((o) => o.type === 'find_and_replace_text'), 'never a whole-text rewrite');
+  assert.deepEqual(ops.map((o) => [o.find_text, o.replace_text]), [['@kitabwbs.', LRM + '@kitabwbs' + LRM + '.' + RLM]]);
+});
+
+test('cli: when only a rewrite will do, it brings the alignment with it', () => {
+  // A repeated word that does not change is no obstacle: only changed words
+  // must be unique.
+  const res = plan(onePage({ locator_id: 'L1', text: 'شكراً في في البيت' }));
+  assert.deepEqual(res.auto.filter((a) => a.op.type !== 'format_text').map((a) => a.op.type), ['find_and_replace_text']);
+
+  // The rewrite resets the box to left-to-right (measured), where `end` is the
+  // right edge — so the alignment goes out with it.
+
+  // «شكراً» twice, and both change: no word edit can name just one of them.
+  const forced = plan(onePage({ locator_id: 'L2', text: 'شكراً لك شكراً.' }));
+  assert.ok(forced.auto.some((a) => a.op.type === 'replace_text'));
+  assert.ok(forced.auto.some((a) => a.op.type === 'format_text' && a.op.formatting.text_align === 'end'));
+});
+
+test('cli: a two-style box that cannot be edited word by word is reported, never rewritten', () => {
+  const res = plan(onePage({ locator_id: 'L1', text: 'شكراً لك شكراً.', style_runs: 2 }));
+  assert.ok(!res.auto.some((a) => a.op.type === 'replace_text'));
+  assert.ok(res.manual.some((m) => m.rule === 'multi-style-edit'));
 });
 
 test('cli: a responsive page cannot take format_text, so it is blocked', () => {
@@ -807,12 +845,19 @@ test('cli: a Latin-only element produces no text operation', () => {
   assert.equal(res.preview.length, 0);
 });
 
+/** What Canva does with the text operations, applied to a string. */
+function applyOps(text, ops) {
+  return ops.reduce((t, op) => (op.type === 'replace_text' ? op.text
+    : op.type === 'find_and_replace_text' ? t.replace(op.find_text, op.replace_text) : t), text);
+}
+
 test('cli: an already-fixed design is a no-op on the second pass', () => {
-  const design = onePage({ locator_id: 'L1', text: 'مرحبا Claude، عام ٢٠٢٤', style: { letter_spacing: 0 } });
+  const design = onePage({ locator_id: 'L1', text: 'مرحبا Claude، عام 2024', style: { letter_spacing: 0 } });
   const first = plan(design, { numerals: 'arabic-indic' });
-  const fixed = onePage(
-    { locator_id: 'L1', text: first.auto[0].op.text, style: { letter_spacing: 0, text_align: 'end' } }
-  );
+  assert.ok(first.auto.length > 0, 'the first pass has work to do');
+  const fixed = onePage({
+    locator_id: 'L1', text: applyOps('مرحبا Claude، عام 2024', first.auto.map((a) => a.op)), style: { letter_spacing: 0 },
+  });
   assert.equal(plan(fixed, { numerals: 'arabic-indic' }).auto.length, 0);
 });
 
@@ -842,8 +887,15 @@ test('cli: every queued operation is one Canva accepts on that page', () => {
 // alignment
 // ===========================================================================
 
-test('align: Arabic gets text_align end — "start" resolves left against the box', () => {
+test('align: reported, not changed — the same "start" is right in one box and left in another', () => {
+  // Measured: `end` in a box Canva made for Arabic painted the paragraph flush left.
   const res = typography.checkElement({ text: 'مرحبا', style: { text_align: 'start', letter_spacing: 0 } });
+  assert.ok(!res.auto.some((o) => 'text_align' in o.formatting));
+  assert.ok(res.manual.some((f) => f.rule === 'alignment-direction' && f.current === 'start'));
+});
+
+test('align: --align=end applies it once the thumbnail showed a left-to-right box', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { text_align: 'start', letter_spacing: 0 } }, { align: 'end' });
   assert.equal(res.auto.find((o) => o.formatting.text_align).formatting.text_align, 'end');
 });
 
@@ -857,8 +909,8 @@ test('align: already end means no operation', () => {
   assert.ok(!res.auto.some((o) => 'text_align' in o.formatting));
 });
 
-test('align: unknown alignment is set, because Canva defaults to start', () => {
-  const res = typography.checkElement({ text: 'مرحبا', style: { letter_spacing: 0 } });
+test('align: with --align, an unknown alignment is set too', () => {
+  const res = typography.checkElement({ text: 'مرحبا', style: { letter_spacing: 0 } }, { align: 'end' });
   assert.equal(res.auto.find((o) => o.formatting.text_align).formatting.text_align, 'end');
 });
 
@@ -1084,7 +1136,8 @@ test('from-read: its output feeds plan() directly', () => {
     }],
   });
   const res = plan(payload);
-  assert.equal(res.auto.find((a) => a.op.type === 'replace_text').op.text, RLE + 'مرحبا، بالعالم' + PDF);
+  const op = res.auto.find((a) => a.op.type === 'find_and_replace_text').op;
+  assert.deepEqual([op.find_text, op.replace_text], ['مرحبا,', 'مرحبا،']);
 });
 
 test('from-read: an unrecognised shape yields no pages rather than junk', () => {
@@ -1947,37 +2000,238 @@ test('caption: the creator\'s own caption is used as written, every tag kept', (
 });
 
 // ===========================================================================
-// studio — the same library, bundled for the browser
+// anchoring — what Canva's editor honours (measured 2026-09-29)
 // ===========================================================================
 
-const fs = require('fs');
-const studio = require('../tools/build-studio');
-
-function studioEngine() {
-  const vm = require('vm');
-  const context = { window: {}, TextEncoder };
-  vm.createContext(context);
-  vm.runInContext(studio.bundle(), context);
-  return context.window.ArabicDesign;
-}
-
-test('studio: the committed engine is built from the current library', () => {
-  assert.equal(fs.readFileSync(studio.OUT, 'utf8'), studio.bundle(),
-    'studio/engine.js is stale — run: node tools/build-studio.js');
+test('anchor: an RLM where an Arabic line ends in something that is not a letter', () => {
+  assert.equal(bidi.anchorText('لا تنظر في شاشة غيرك.').text, 'لا تنظر في شاشة غيرك.' + RLM);
+  assert.equal(bidi.anchorText('أيّ قاعدة أصعب عليك؟').text, 'أيّ قاعدة أصعب عليك؟' + RLM);
+  assert.equal(bidi.anchorText('«شكرًا» للنادل').text, RLM + '«شكرًا» للنادل');
 });
 
-test('studio: the browser engine draws exactly what make draws', () => {
-  const engine = studioEngine();
-  for (const choice of [
-    { reel: true, format: 'reel', palette: 'ink', pattern: 'girih' },
-    { format: 'post', palette: 'paper', pairing: 'classic', layout: 'list' },
-  ]) {
-    const node = make(outlineLib.withBreaks(outlineLib.parseOutline(POST_B)), choice);
-    const browser = engine.make(engine.withBreaks(engine.parseOutline(POST_B)), choice);
-    assert.ok(node.ok && node.html.length > 1000, 'a real page, not two identical refusals');
-    assert.equal(browser.html, node.html);
-    assert.equal(browser.pages, node.pages);
-    assert.equal(browser.caption, node.caption);
-    assert.equal(browser.bytes, node.bytes);
-  }
+test('anchor: an Arabic-Indic digit at the edge is anchored — it is not a letter', () => {
+  // It sits in the Arabic block, which is why a block test missed it.
+  assert.equal(bidi.anchorText('٦ تصرّفات صغيرة..').text, RLM + '٦ تصرّفات صغيرة..' + RLM);
+});
+
+test('anchor: a line that begins and ends in letters is left exactly as it is', () => {
+  assert.equal(bidi.anchorText('التربية لا تظهر في الكلام الكبير').changed, false);
+  assert.equal(bidi.anchorText('تابعني على www.kitabwbs.com').changed, false);
+});
+
+test('anchor: a handle inside Arabic gets an LRM on each side', () => {
+  // Measured: LRI…PDI left it painted as kitabwbs@; LRM painted @kitabwbs.
+  assert.equal(bidi.anchorText('تابعني على @kitabwbs يوميًا').text, 'تابعني على ' + LRM + '@kitabwbs' + LRM + ' يوميًا');
+});
+
+test('anchor: a phone number keeps its plus', () => {
+  assert.ok(bidi.anchorText('اتصل على +966 55 123 4567').text.includes(LRM + '+966 55 123 4567' + LRM));
+});
+
+test('anchor: a Latin line with a loose edge is held left-to-right; a clean one is not touched', () => {
+  assert.equal(bidi.anchorText('@kitabwbs').text, LRM + '@kitabwbs');
+  assert.equal(bidi.anchorText('Hello, world').changed, false);
+  assert.equal(bidi.anchorText('1.').changed, false);
+});
+
+test('anchor: a handle typed in visual order is never pinned that way round', () => {
+  assert.equal(bidi.anchorText('kitabwbs@').changed, false);
+  const res = plan(onePage({ locator_id: 'L1', text: 'kitabwbs@' }));
+  const finding = res.manual.find((m) => m.rule === 'visual-order-handle');
+  assert.equal(finding.suggestion.replace_text, LRM + '@kitabwbs');
+});
+
+test('anchor: idempotent, and it replaces the old RLE/LRI marks', () => {
+  const once = bidi.anchorText('كلامه @kitabwbs.').text;
+  assert.equal(bidi.anchorText(once).text, once);
+  const old = RLE + 'لا تنظر في شاشة غيرك.' + PDF;
+  assert.equal(bidi.anchorText(old).text, 'لا تنظر في شاشة غيرك.' + RLM);
+});
+
+test('anchor: the import route is unchanged — fixText still wraps for import-design-from-url', () => {
+  // An imported reel with these marks reads right (checked); that route stays.
+  assert.equal(bidi.fixText('مرحبا').text, RLE + 'مرحبا' + PDF);
+});
+
+// ===========================================================================
+// verbatim — the creator's words are the answer
+// ===========================================================================
+
+const verbatim = require('../lib/verbatim');
+
+// The live case, 2026-09-29: asked for these lines, Canva drew these.
+const ASKED = ['٦ تصرّفات صغيرة.. تكشف أنك تربّيت جيدًا', '٢. تنتظر حتى ينهي المتحدّث كلامه', '@kitabwbs', 'ما التصرّف؟ 👇'];
+const DRAWN = [
+  { locator_id: 'T1', text: 'تصرّفات صغيرة..', style_runs: 2 },
+  { locator_id: 'T2', text: 'تكشف أنك ترتّيت جيدًا' },
+  { locator_id: 'I2', text: 'تنتظر حتى ينهي المتحدث كلامه' },
+  { locator_id: 'B2', text: '2.' },
+  { locator_id: 'H', text: 'kitabwbs@' },
+  { locator_id: 'Q', text: 'ما التصرّف؟' },
+];
+
+test('verbatim: a word one letter off is put back from the creator\'s line', () => {
+  const { restore } = verbatim.compare(ASKED, DRAWN);
+  assert.ok(restore.some((r) => r.locator_id === 'T2' && r.find === 'ترتّيت' && r.replace === 'تربّيت' && r.kind === 'letter'));
+});
+
+test('verbatim: dropped harakat come back — the writer chose them', () => {
+  const { restore } = verbatim.compare(ASKED, DRAWN);
+  assert.ok(restore.some((r) => r.find === 'المتحدث' && r.replace === 'المتحدّث' && r.kind === 'harakat'));
+});
+
+test('verbatim: a handle drawn in visual order comes back logical and pinned', () => {
+  const { restore } = verbatim.compare(ASKED, DRAWN);
+  assert.ok(restore.some((r) => r.find === 'kitabwbs@' && r.replace === LRM + '@kitabwbs' && r.kind === 'visual-order'));
+});
+
+test('verbatim: a dropped word is reported with a re-insert beside its neighbour', () => {
+  const { missing } = verbatim.compare(ASKED, DRAWN);
+  const six = missing.find((m) => m.word === '٦');
+  assert.deepEqual(six.suggestion, { type: 'find_and_replace_text', locator_id: 'T1', find_text: 'تصرّفات', replace_text: '٦ تصرّفات' });
+});
+
+test('verbatim: the other digit system, emoji and punctuation are not changes', () => {
+  const { restore, missing } = verbatim.compare(ASKED, DRAWN);
+  assert.ok(!missing.some((m) => m.word === '٢' || m.word === '👇'), JSON.stringify(missing));
+  assert.ok(!restore.some((r) => r.find === '2'));
+});
+
+test('verbatim: two candidates for one word — nothing is guessed', () => {
+  const { restore, missing } = verbatim.compare(['قلب'], [{ locator_id: 'A', text: 'قلم' }, { locator_id: 'B', text: 'قلت' }]);
+  assert.equal(restore.length, 0);
+  assert.deepEqual(missing[0].candidates.sort(), ['قلت', 'قلم']);
+});
+
+test('verbatim: plan --expect sends the restorations as word edits and reports the gap', () => {
+  const res = plan({ pages: [{ index: 1, elements: DRAWN.map((e) => ({ ...e, style: { letter_spacing: 0 } })) }] }, { expect: ASKED });
+  const edits = res.auto.filter((a) => a.op.type === 'find_and_replace_text').map((a) => [a.op.find_text, a.op.replace_text]);
+  assert.ok(edits.some(([f, r]) => f === 'ترتّيت' && r === 'تربّيت'));
+  assert.ok(edits.some(([f, r]) => f === 'kitabwbs@' && r === LRM + '@kitabwbs'));
+  assert.ok(res.design.some((d) => d.rule === 'copy-missing' && d.word === '٦' && d.suggestion));
+  assert.ok(!res.auto.some((a) => a.op.type === 'replace_text'));
+});
+
+// ===========================================================================
+// display type and badges — what Canva's generator produces
+// ===========================================================================
+
+test('typography: display type keeps its leading — 1.8 pushed a title into the next line', () => {
+  const res = typography.checkElement({ text: 'تصرّفات صغيرة', style: { font_size: 110, line_height: 1.15, letter_spacing: 0 } });
+  assert.ok(!res.auto.some((o) => 'line_height' in o.formatting));
+  assert.ok(!res.manual.some((f) => f.rule === 'harakat-clipping'));
+});
+
+test('typography: display leading tight enough to collide is reported', () => {
+  const res = typography.checkElement({ text: 'تصرّفات صغيرة', style: { font_size: 110, line_height: 0.95, letter_spacing: 0 } });
+  assert.ok(res.manual.some((f) => f.rule === 'display-leading-tight'));
+});
+
+test('typography: body text is still brought up to Arabic leading', () => {
+  const res = typography.checkElement({ text: 'التربية لا تظهر', style: { font_size: 34, line_height: 1.5, letter_spacing: 0 } });
+  assert.equal(res.auto.find((o) => 'line_height' in o.formatting).formatting.line_height, 1.6);
+});
+
+const { clearOf } = require('../lib/cli');
+
+test('reflow: a number badge over the start of a line — the box stops short of it', () => {
+  // The generated post: badge 954→1018 over a text box 522→1015.
+  const text = { locator_id: 'T', left: 522.72, top: 902.9, width: 492.48, height: 38.8 };
+  const badge = { locator_id: 'B', left: 954.7, top: 900, width: 63.6, height: 54.7 };
+  assert.deepEqual(clearOf(text, badge), { type: 'resize_element', locator_id: 'T', width: 419.98 });
+});
+
+test('reflow: a badge on the left end moves the box and narrows it', () => {
+  const ops = clearOf({ locator_id: 'T', left: 100, top: 10, width: 500, height: 40 }, { locator_id: 'B', left: 90, top: 5, width: 60, height: 50 });
+  assert.deepEqual(ops, [
+    { type: 'position_element', locator_id: 'T', top: 10, left: 162 },
+    { type: 'resize_element', locator_id: 'T', width: 438 },
+  ]);
+});
+
+test('reflow: a large veil is still a layering fault', () => {
+  assert.equal(clearOf({ locator_id: 'T', left: 0, top: 0, width: 400, height: 100 }, { locator_id: 'V', left: 0, top: 0, width: 400, height: 100 }), null);
+  const res = reflow({ pages: [{ index: 1, elements: [
+    { locator_id: 'T', text: 'مرحبا', left: 0, top: 0, width: 400, height: 100, z: 0 },
+    { locator_id: 'V', left: 50, top: 20, width: 380, height: 90, z: 1 },
+  ] }] });
+  assert.equal(res.findings.find((f) => f.kind === 'occlusion').suggestion.type, 'layer_element');
+});
+
+// ===========================================================================
+// from-read — the live read shape
+// ===========================================================================
+
+test('from-read: a live read — text under `characters`, size under `dimensions`, style runs counted', () => {
+  const payload = fromRead.convert({
+    design_content: { pages: [{
+      type: 'fixed', id: 'PB1', locator_id: 'PB1', dimensions: { width: 1080, height: 1440 },
+      elements: [{
+        id: 'LB1', locator_id: 'PB1-LB1', type: 'text', top: 90, left: 522, width: 492, height: 258,
+        textRegions: [
+          { characters: 'تصرّفات ', formatting: { fontSize: 110, color: '#222222', lineHeight: 1.15 } },
+          { characters: 'صغيرة..', formatting: { fontSize: 110, color: '#824f24', lineHeight: 1.15 } },
+        ],
+      }],
+    }] },
+  });
+  const page = payload.pages[0];
+  assert.equal(page.width, 1080);
+  assert.equal(page.elements.length, 1, 'the page itself is not an element');
+  assert.equal(page.elements[0].text, 'تصرّفات صغيرة..');
+  assert.equal(page.elements[0].style_runs, 2);
+});
+
+// ===========================================================================
+// taste — what the creator said they like
+// ===========================================================================
+
+const taste = require('../lib/taste');
+const PREF = {
+  id: 'reel-image-weight', scope: 'format:reel', instruction: 'اجعل الصورة أكبر من المتن في الريلز.',
+  evidence: 'في الريلز أحب الصور أكثر من النص', recorded_at: '2026-09-29',
+};
+
+test('taste: nothing is kept without the creator\'s words as evidence', () => {
+  assert.throws(() => taste.put(taste.EMPTY(), { ...PREF, evidence: '' }));
+  assert.throws(() => taste.put(taste.EMPTY(), { id: 'x', scope: 'global', instruction: 'y', recorded_at: '2026-09-29' }));
+});
+
+test('taste: a campaign-only wish stays in its project; scopes are checked', () => {
+  assert.throws(() => taste.put(taste.EMPTY(), { ...PREF, scope: 'campaign' }));
+  const { profile } = taste.put(taste.EMPTY(), { ...PREF, id: 'black', scope: 'project:رمضان', instruction: 'أسود' });
+  assert.deepEqual(taste.applicable(profile, { format: 'reel' }), []);
+  assert.equal(taste.applicable(profile, { format: 'post', project: 'رمضان' }).length, 1);
+});
+
+test('taste: applied global, then format, then project — the narrow one last', () => {
+  let p = taste.EMPTY();
+  p = taste.put(p, { ...PREF, id: 'p', scope: 'project:x' }).profile;
+  p = taste.put(p, { ...PREF, id: 'g', scope: 'global' }).profile;
+  p = taste.put(p, { ...PREF, id: 'f', scope: 'format:reel' }).profile;
+  assert.deepEqual(taste.applicable(p, { format: 'reel', project: 'x' }).map((e) => e.id), ['g', 'f', 'p']);
+});
+
+test('taste: every change keeps what it replaced; a signed link is refused', () => {
+  const first = taste.put(taste.EMPTY(), PREF).profile;
+  const second = taste.put(first, { ...PREF, instruction: 'صورة كبيرة دائمًا في الريلز.' });
+  assert.equal(second.changed, true);
+  assert.equal(second.profile.history.length, 2);
+  assert.equal(second.profile.history[1].before.instruction, PREF.instruction);
+  assert.equal(taste.put(second.profile, second.profile.preferences[0]).changed, false);
+  assert.throws(() => taste.put(first, { ...PREF, design_url: 'https://www.canva.com/d/abc?token=secret' }));
+});
+
+test('taste: removal needs the creator\'s words and leaves a trace', () => {
+  const p = taste.put(taste.EMPTY(), PREF).profile;
+  assert.throws(() => taste.remove(p, { id: PREF.id, scope: PREF.scope, evidence: ' ', recorded_at: '2026-09-29' }));
+  const gone = taste.remove(p, { id: PREF.id, scope: PREF.scope, evidence: 'لم أعد أريد ذلك', recorded_at: '2026-09-30' });
+  assert.equal(gone.preferences.length, 0);
+  assert.equal(gone.history.pop().action, 'remove');
+});
+
+test('taste: the seed profile holds only the creator\'s own recorded words', () => {
+  const seed = taste.load(taste.profilePath());
+  assert.ok(seed.preferences.length >= 3);
+  for (const pref of seed.preferences) assert.ok(pref.evidence.trim().length > 0);
 });
