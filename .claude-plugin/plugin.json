@@ -1,7 +1,25 @@
 {
   "name": "arabic-design",
-  "version": "0.1.0",
-  "description": "يصحّح التصاميم العربية في Canva عبر موصّل Canva MCP: الاتجاه والـBiDi، الترقيم، الأرقام، التنضيد، الخطوط، انعكاس التخطيط، إعادة ملاءمة الصناديق، جودة النص، الوصولية والتصدير.",
+  "version": "0.3.0",
+  "description": "مدير تصميم عربي داخل Canva لصانع المحتوى على فيسبوك: Claude يصمّم المنشور والكاروسيل والريل والإعلان بجرافيك عالٍ، وبوّابة عربية تعيد نصّ صاحبه وتصحّح الاتجاه والترقيم والأرقام والتنضيد كلمةً بكلمة، وذاكرة تحفظ ذوقه.",
   "license": "MIT",
-  "keywords": ["arabic", "rtl", "bidi", "canva", "typography", "i18n", "localization"]
+  "keywords": [
+    "arabic",
+    "art-direction",
+    "bidi",
+    "canva",
+    "captions",
+    "content-creator",
+    "facebook",
+    "i18n",
+    "localization",
+    "reels",
+    "rtl",
+    "taste-memory",
+    "typography"
+  ],
+  "author": {
+    "name": "dropazaabal-design"
+  },
+  "homepage": "https://github.com/dropazaabal-design/arabic-design"
 }

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "preferences": [
+    {
+      "id": "canva-deliverable",
+      "scope": "global",
+      "instruction": "ينفّذ المساعد التصميم بالذكاء الاصطناعي داخل Canva ويقدّم مشروع Canva؛ لا يستبدله بموقع أو مكتبة قوالب مستقلة.",
+      "evidence": "اريد اداة تصمم على CANVA بوسطة AI أنت وليس هكذا",
+      "recorded_at": "2026-09-29"
+    },
+    {
+      "id": "graphic-quality",
+      "scope": "global",
+      "instruction": "اجعل جودة الجرافيك والفكرة البصرية والتكوين أولوية، دون افتراض أسلوب أو لون محدد لم يعتمده المستخدم.",
+      "evidence": "أهم عالية جرافيك",
+      "recorded_at": "2026-09-29"
+    },
+    {
+      "id": "feedback-learning",
+      "scope": "global",
+      "instruction": "احفظ تفضيلات التصميم الواضحة المستفادة من ملاحظات المستخدم وطبّقها لاحقًا بنطاقها؛ لا تدّعِ تدريب النموذج أو اعتماد اختيارات لم يؤكدها.",
+      "evidence": "في عدة مهارات مع وقت تتعلم من مستخدم أنت",
+      "recorded_at": "2026-09-29"
+    }
+  ],
+  "history": [
+    {
+      "action": "put",
+      "recorded_at": "2026-09-29",
+      "before": null,
+      "after": {
+        "id": "canva-deliverable",
+        "scope": "global",
+        "instruction": "ينفّذ المساعد التصميم بالذكاء الاصطناعي داخل Canva ويقدّم مشروع Canva؛ لا يستبدله بموقع أو مكتبة قوالب مستقلة.",
+        "evidence": "اريد اداة تصمم على CANVA بوسطة AI أنت وليس هكذا",
+        "recorded_at": "2026-09-29"
+      }
+    },
+    {
+      "action": "put",
+      "recorded_at": "2026-09-29",
+      "before": null,
+      "after": {
+        "id": "graphic-quality",
+        "scope": "global",
+        "instruction": "اجعل جودة الجرافيك والفكرة البصرية والتكوين أولوية، دون افتراض أسلوب أو لون محدد لم يعتمده المستخدم.",
+        "evidence": "أهم عالية جرافيك",
+        "recorded_at": "2026-09-29"
+      }
+    },
+    {
+      "action": "put",
+      "recorded_at": "2026-09-29",
+      "before": null,
+      "after": {
+        "id": "feedback-learning",
+        "scope": "global",
+        "instruction": "احفظ تفضيلات التصميم الواضحة المستفادة من ملاحظات المستخدم وطبّقها لاحقًا بنطاقها؛ لا تدّعِ تدريب النموذج أو اعتماد اختيارات لم يؤكدها.",
+        "evidence": "في عدة مهارات مع وقت تتعلم من مستخدم أنت",
+        "recorded_at": "2026-09-29"
+      }
+    }
+  ]
+}
