@@ -1,0 +1,1168 @@
+{
+  "templates": [
+    {
+      "id": "cover",
+      "label": "غلاف",
+      "description": "عنوان جذّاب يفتتح الكاروسيل",
+      "hideBrandBadge": false,
+      "fields": [
+        {
+          "key": "kicker",
+          "label": "الشارة",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "العنوان الرئيسي",
+          "type": "textarea"
+        },
+        {
+          "key": "subtitle",
+          "label": "العنوان الفرعي",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "listicle",
+      "label": "قائمة خطوات",
+      "description": "خطوات أو نقاط مرقّمة",
+      "hideBrandBadge": false,
+      "fields": [
+        {
+          "key": "title",
+          "label": "العنوان",
+          "type": "textarea"
+        },
+        {
+          "key": "items",
+          "label": "العناصر",
+          "type": "list"
+        },
+        {
+          "key": "start",
+          "label": "يبدأ الترقيم من",
+          "type": "number",
+          "hint": "لمتابعة الترقيم عبر أكثر من شريحة"
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "label": "اقتباس",
+      "description": "اقتباس مؤثر مع اسم قائله",
+      "hideBrandBadge": false,
+      "fields": [
+        {
+          "key": "quote",
+          "label": "نص الاقتباس",
+          "type": "textarea"
+        },
+        {
+          "key": "author",
+          "label": "القائل",
+          "type": "text"
+        },
+        {
+          "key": "role",
+          "label": "الصفة",
+          "type": "text"
+        },
+        {
+          "key": "photo",
+          "label": "صورة القائل",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "label": "قبل / بعد",
+      "description": "مقارنة بين حالتين في عمودين",
+      "hideBrandBadge": false,
+      "fields": [
+        {
+          "key": "title",
+          "label": "العنوان",
+          "type": "textarea"
+        },
+        {
+          "key": "beforeLabel",
+          "label": "عنوان العمود الأول",
+          "type": "text"
+        },
+        {
+          "key": "before",
+          "label": "عناصر العمود الأول",
+          "type": "list"
+        },
+        {
+          "key": "afterLabel",
+          "label": "عنوان العمود الثاني",
+          "type": "text"
+        },
+        {
+          "key": "after",
+          "label": "عناصر العمود الثاني",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "خاتمة",
+      "description": "دعوة للحفظ والمتابعة وحساباتك",
+      "hideBrandBadge": true,
+      "fields": [
+        {
+          "key": "title",
+          "label": "العنوان",
+          "type": "textarea"
+        },
+        {
+          "key": "subtitle",
+          "label": "العنوان الفرعي",
+          "type": "textarea"
+        },
+        {
+          "key": "save",
+          "label": "زر الحفظ",
+          "type": "text"
+        },
+        {
+          "key": "share",
+          "label": "زر المشاركة",
+          "type": "text"
+        },
+        {
+          "key": "follow",
+          "label": "زر المتابعة",
+          "type": "text"
+        },
+        {
+          "key": "socials",
+          "label": "الحسابات والروابط",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "label": "منشور مفرد",
+      "description": "خطّاف ← محتوى ← دعوة في صورة واحدة",
+      "hideBrandBadge": false,
+      "fields": [
+        {
+          "key": "hook",
+          "label": "الخطّاف",
+          "type": "textarea",
+          "hint": "أول ما يقرؤه المتابع: سؤال أو رقم أو وعد واضح"
+        },
+        {
+          "key": "points",
+          "label": "المحتوى",
+          "type": "list"
+        },
+        {
+          "key": "cta",
+          "label": "الدعوة للإجراء",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "id": "cairo",
+      "label": "Cairo"
+    },
+    {
+      "id": "tajawal",
+      "label": "Tajawal"
+    },
+    {
+      "id": "almarai",
+      "label": "Almarai"
+    },
+    {
+      "id": "readex",
+      "label": "Readex Pro"
+    }
+  ],
+  "palettes": [
+    {
+      "id": "midnight",
+      "name": "ليل",
+      "colors": {
+        "bg": "#0B1220",
+        "surface": "#16213A",
+        "text": "#F5F7FB",
+        "muted": "#A3B1C9",
+        "accent": "#F5B83D",
+        "onAccent": "#1A1204"
+      }
+    },
+    {
+      "id": "sand",
+      "name": "رمل",
+      "colors": {
+        "bg": "#F6EFE4",
+        "surface": "#EADCC8",
+        "text": "#2A1F14",
+        "muted": "#6A5642",
+        "accent": "#B4461E",
+        "onAccent": "#FFFFFF"
+      }
+    },
+    {
+      "id": "emerald",
+      "name": "زمرّد",
+      "colors": {
+        "bg": "#0E3B2E",
+        "surface": "#155443",
+        "text": "#EFFAF4",
+        "muted": "#A9D8C2",
+        "accent": "#F2C14E",
+        "onAccent": "#1B1403"
+      }
+    },
+    {
+      "id": "ink",
+      "name": "حبر",
+      "colors": {
+        "bg": "#FFFFFF",
+        "surface": "#F2F3F7",
+        "text": "#121826",
+        "muted": "#5B6474",
+        "accent": "#4338CA",
+        "onAccent": "#FFFFFF"
+      }
+    },
+    {
+      "id": "violet",
+      "name": "بنفسج",
+      "colors": {
+        "bg": "#1E1038",
+        "surface": "#2E1B54",
+        "text": "#F7F2FF",
+        "muted": "#C3B5E3",
+        "accent": "#FF8FB1",
+        "onAccent": "#2A0B19"
+      }
+    },
+    {
+      "id": "coral",
+      "name": "مرجان",
+      "colors": {
+        "bg": "#FFF4EE",
+        "surface": "#FFE4D6",
+        "text": "#2B1210",
+        "muted": "#7A4A40",
+        "accent": "#C9362E",
+        "onAccent": "#FFFFFF"
+      }
+    },
+    {
+      "id": "agency-navy",
+      "name": "مؤسسي داكن",
+      "colors": {
+        "bg": "#0B1F3A",
+        "surface": "#132B4D",
+        "text": "#F1F5F9",
+        "muted": "#A9B8CE",
+        "accent": "#10B981",
+        "onAccent": "#0B1F3A"
+      }
+    },
+    {
+      "id": "agency-light",
+      "name": "مؤسسي فاتح",
+      "colors": {
+        "bg": "#FFFFFF",
+        "surface": "#EEF3F8",
+        "text": "#0B1F3A",
+        "muted": "#4A5B73",
+        "accent": "#047857",
+        "onAccent": "#FFFFFF"
+      }
+    }
+  ],
+  "formats": [
+    {
+      "id": "portrait",
+      "label": "عمودي",
+      "ratio": "4:5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "square",
+      "label": "مربع",
+      "ratio": "1:1",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "id": "story",
+      "label": "قصة",
+      "ratio": "9:16",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "numerals": [
+    "arab",
+    "latn"
+  ],
+  "institutional": {
+    "palettes": [
+      "agency-navy",
+      "agency-light"
+    ],
+    "font": "tajawal",
+    "plugins": {
+      "pagination": {
+        "enabled": true
+      },
+      "watermark": {
+        "enabled": true,
+        "showLogo": true,
+        "showBadge": true
+      }
+    }
+  },
+  "plugins": [
+    {
+      "id": "pagination",
+      "label": "الترقيم وشريط التقدّم",
+      "defaults": {
+        "enabled": true,
+        "style": "words",
+        "showBar": true,
+        "showCounter": true
+      }
+    },
+    {
+      "id": "swipe",
+      "label": "دعوة السحب والإجراء",
+      "defaults": {
+        "enabled": true,
+        "text": "اسحب لليسار",
+        "lastText": "احفظ البوست 📌",
+        "showArrow": true
+      }
+    },
+    {
+      "id": "watermark",
+      "label": "العلامة والهوية",
+      "defaults": {
+        "enabled": true,
+        "showLogo": true,
+        "showBadge": true
+      }
+    }
+  ],
+  "studio": {
+    "compositions": [
+      {
+        "id": "hero",
+        "label": "غلاف",
+        "type": "cover",
+        "description": "عنوان جذّاب يفتتح الكاروسيل، مع رسم اختياري",
+        "variants": {
+          "type": "طباعي",
+          "art": "مع رسم"
+        },
+        "capacity": {
+          "titleChars": 60,
+          "subtitleChars": 140
+        },
+        "tags": [
+          "غلاف",
+          "عنوان",
+          "افتتاح",
+          "خطاف"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "الشارة",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان الرئيسي",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "العنوان الفرعي",
+            "type": "textarea"
+          },
+          {
+            "key": "art",
+            "label": "الرسم",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "id": "list",
+        "label": "قائمة",
+        "type": "list",
+        "description": "خطوات أو نقاط مرقّمة، مع رسم لكل بند في التوزيع المصوّر",
+        "variants": {
+          "cards": "بطاقات",
+          "grid": "عمودان",
+          "illustrated": "مصوّرة"
+        },
+        "capacity": {
+          "items": 6,
+          "itemChars": 70,
+          "titleChars": 50
+        },
+        "tags": [
+          "قائمة",
+          "خطوات",
+          "نصائح",
+          "عادات",
+          "نقاط"
+        ],
+        "fields": [
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "items",
+            "label": "البنود",
+            "type": "list",
+            "required": true
+          },
+          {
+            "key": "start",
+            "label": "يبدأ الترقيم من",
+            "type": "number"
+          },
+          {
+            "key": "itemArt",
+            "label": "رسوم البنود",
+            "type": "assets"
+          }
+        ]
+      },
+      {
+        "id": "post",
+        "label": "منشور مفرد",
+        "type": "post",
+        "description": "صفحة واحدة تحمل القصة كاملة: خطّاف ← محتوى ← دعوة",
+        "variants": {
+          "stack": "نقاط",
+          "grid": "عمودان",
+          "illustrated": "مصوّرة",
+          "art": "مع رسم"
+        },
+        "capacity": {
+          "items": 6,
+          "itemChars": 60,
+          "titleChars": 60
+        },
+        "tags": [
+          "منشور",
+          "بوست",
+          "خطاف",
+          "نقاط",
+          "دعوة"
+        ],
+        "fields": [
+          {
+            "key": "hook",
+            "label": "الخطّاف",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "points",
+            "label": "المحتوى",
+            "type": "list"
+          },
+          {
+            "key": "cta",
+            "label": "الدعوة للإجراء",
+            "type": "text"
+          },
+          {
+            "key": "art",
+            "label": "الرسم",
+            "type": "asset"
+          },
+          {
+            "key": "itemArt",
+            "label": "رسوم النقاط",
+            "type": "assets"
+          }
+        ]
+      },
+      {
+        "id": "comparison",
+        "label": "مقارنة",
+        "type": "comparison",
+        "description": "مقارنة بين حالتين: عمودان، أو صفّان للمحتوى الكثيف",
+        "variants": {
+          "columns": "عمودان",
+          "rows": "صفّان"
+        },
+        "capacity": {
+          "items": 4,
+          "itemChars": 40,
+          "titleChars": 40
+        },
+        "tags": [
+          "مقارنة",
+          "قبل وبعد",
+          "ميزان",
+          "فرق",
+          "خيارين"
+        ],
+        "fields": [
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "beforeLabel",
+            "label": "عنوان الجهة الأولى",
+            "type": "text"
+          },
+          {
+            "key": "before",
+            "label": "بنود الجهة الأولى",
+            "type": "list"
+          },
+          {
+            "key": "afterLabel",
+            "label": "عنوان الجهة الثانية",
+            "type": "text"
+          },
+          {
+            "key": "after",
+            "label": "بنود الجهة الثانية",
+            "type": "list"
+          }
+        ]
+      },
+      {
+        "id": "quote",
+        "label": "اقتباس",
+        "type": "quote",
+        "description": "اقتباس مؤثر مع اسم قائله وصورته",
+        "variants": {
+          "bar": "خط جانبي"
+        },
+        "capacity": {
+          "quoteChars": 160
+        },
+        "tags": [
+          "اقتباس",
+          "حكمة",
+          "قول",
+          "شهادة"
+        ],
+        "fields": [
+          {
+            "key": "quote",
+            "label": "نص الاقتباس",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "author",
+            "label": "القائل",
+            "type": "text"
+          },
+          {
+            "key": "role",
+            "label": "الصفة",
+            "type": "text"
+          },
+          {
+            "key": "photo",
+            "label": "صورة القائل",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "id": "statement",
+        "label": "جملة طباعية",
+        "type": "typographic",
+        "description": "تصميم طباعي: جملة واحدة كبيرة تحمل الفكرة",
+        "variants": {
+          "block": "كتلة لونية"
+        },
+        "capacity": {
+          "titleChars": 70
+        },
+        "tags": [
+          "طباعي",
+          "جملة",
+          "رسالة",
+          "سؤال",
+          "رقم"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "الجملة",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "سطر داعم",
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "id": "collage",
+        "label": "كولاج تحريري",
+        "type": "collage",
+        "description": "قصاصات متراكبة بزوايا مائلة مع عنوان تحريري",
+        "variants": {
+          "top": "الكولاج أعلى",
+          "bottom": "الكولاج أسفل"
+        },
+        "capacity": {
+          "titleChars": 50,
+          "art": 4
+        },
+        "tags": [
+          "كولاج",
+          "تحريري",
+          "قصاصات",
+          "مجلة",
+          "ذكريات",
+          "كتب"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "الشارة",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "سطر داعم",
+            "type": "textarea"
+          },
+          {
+            "key": "art",
+            "label": "القصاصات",
+            "type": "assets"
+          }
+        ]
+      },
+      {
+        "id": "numbered",
+        "label": "رقم كبير",
+        "type": "numbered",
+        "description": "رقم أو معلومة رقمية كبيرة مع سطر يشرحها: مشهد ريل أو بند يستحق صفحة",
+        "variants": {
+          "type": "طباعي",
+          "center": "وسط",
+          "art": "مع رسم"
+        },
+        "capacity": {
+          "titleChars": 70,
+          "subtitleChars": 110
+        },
+        "tags": [
+          "رقم",
+          "خطوة",
+          "إحصائية",
+          "ريل",
+          "مشهد",
+          "بند"
+        ],
+        "fields": [
+          {
+            "key": "number",
+            "label": "الرقم",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "title",
+            "label": "الجملة",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "سطر داعم",
+            "type": "textarea"
+          },
+          {
+            "key": "art",
+            "label": "الرسم",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "id": "stat",
+        "label": "رقم ودليل",
+        "type": "stat",
+        "description": "رقم أو نسبة كبيرة مع معناها ومصدرها: صفحة الدليل",
+        "variants": {
+          "type": "طباعي",
+          "center": "وسط"
+        },
+        "capacity": {
+          "titleChars": 90,
+          "sourceChars": 80
+        },
+        "tags": [
+          "إحصائية",
+          "دليل",
+          "نسبة",
+          "رقم",
+          "دراسة",
+          "مصدر"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "figure",
+            "label": "الرقم",
+            "type": "text",
+            "required": true
+          },
+          {
+            "key": "title",
+            "label": "معناه",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "source",
+            "label": "المصدر",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "framework",
+        "label": "إطار عمل",
+        "type": "framework",
+        "description": "إطار عمل: أجزاء مسمّاة لكل منها شرح قصير، في شبكة أو سلسلة",
+        "variants": {
+          "grid": "شبكة",
+          "chain": "سلسلة"
+        },
+        "capacity": {
+          "items": 6,
+          "itemChars": 30,
+          "detailChars": 70,
+          "titleChars": 50
+        },
+        "tags": [
+          "إطار",
+          "نموذج",
+          "مراحل",
+          "أركان",
+          "منهج",
+          "خطوات"
+        ],
+        "fields": [
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "parts",
+            "label": "الأجزاء",
+            "type": "list",
+            "required": true
+          },
+          {
+            "key": "details",
+            "label": "شرح كل جزء",
+            "type": "list"
+          }
+        ]
+      },
+      {
+        "id": "opener",
+        "label": "غلاف برقم",
+        "type": "cover",
+        "description": "غلاف يبدأ برقم كبير (عدد ما في الكاروسيل) ثم العنوان ثم سطر داعم",
+        "variants": {
+          "type": "طباعي",
+          "center": "وسط"
+        },
+        "capacity": {
+          "titleChars": 60,
+          "subtitleChars": 90
+        },
+        "tags": [
+          "غلاف",
+          "رقم",
+          "عدد",
+          "قوانين",
+          "قواعد",
+          "أسباب",
+          "خطاف"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "figure",
+            "label": "الرقم",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "سطر داعم",
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "id": "concept",
+        "label": "فكرة",
+        "type": "concept",
+        "description": "فكرة واحدة في صفحة: عنوان وسطور قصيرة، بستة توزيعات (نص، إطار، خلاصة مظلّلة، لوح، فاصل، رقم)",
+        "variants": {
+          "plain": "نص",
+          "box": "إطار",
+          "callout": "خلاصة مظلّلة",
+          "panel": "لوح",
+          "rule": "فاصل",
+          "figure": "رقم"
+        },
+        "capacity": {
+          "titleChars": 50,
+          "bodyChars": 160,
+          "takeawayChars": 50
+        },
+        "tags": [
+          "فكرة",
+          "قانون",
+          "قاعدة",
+          "مبدأ",
+          "تعريف",
+          "شرح",
+          "مقدمة",
+          "خلاصة",
+          "سؤال"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "figure",
+            "label": "الرقم",
+            "type": "text"
+          },
+          {
+            "key": "body",
+            "label": "السطور",
+            "type": "textarea"
+          },
+          {
+            "key": "takeaway",
+            "label": "الخلاصة",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "flow",
+        "label": "مسار",
+        "type": "flow",
+        "description": "من حالة إلى حالة: مربعات رفيعة متتالية يصل بينها سهم، والأخيرة مظلّلة أو العناوين مظلّلة",
+        "variants": {
+          "fill": "النتيجة مظلّلة",
+          "mark": "العناوين مظلّلة"
+        },
+        "capacity": {
+          "items": 3,
+          "itemChars": 30,
+          "detailChars": 50,
+          "titleChars": 40
+        },
+        "tags": [
+          "مسار",
+          "من إلى",
+          "تحول",
+          "قبل وبعد",
+          "سبب ونتيجة",
+          "خطوات",
+          "تدفق"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "steps",
+            "label": "المراحل",
+            "type": "list",
+            "required": true
+          },
+          {
+            "key": "details",
+            "label": "سطر كل مرحلة",
+            "type": "list"
+          }
+        ]
+      },
+      {
+        "id": "actions",
+        "label": "خاتمة بأزرار",
+        "type": "outro",
+        "description": "خاتمة بجملة تُحفظ وسطر داعم ثم صفّا إجراء بعرض الصفحة: احفظ وشارك",
+        "variants": {
+          "center": "وسط"
+        },
+        "capacity": {
+          "titleChars": 50,
+          "subtitleChars": 70
+        },
+        "tags": [
+          "خاتمة",
+          "دعوة",
+          "حفظ",
+          "مشاركة",
+          "خلاصة"
+        ],
+        "fields": [
+          {
+            "key": "kicker",
+            "label": "تمهيد",
+            "type": "text"
+          },
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "سطر داعم",
+            "type": "textarea"
+          },
+          {
+            "key": "save",
+            "label": "زر الحفظ",
+            "type": "text"
+          },
+          {
+            "key": "share",
+            "label": "زر المشاركة",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "outro",
+        "label": "خاتمة",
+        "type": "outro",
+        "description": "دعوة للحفظ والمتابعة مع هويتك وحساباتك",
+        "variants": {
+          "center": "وسط"
+        },
+        "capacity": {
+          "titleChars": 50
+        },
+        "tags": [
+          "خاتمة",
+          "دعوة",
+          "متابعة",
+          "حفظ"
+        ],
+        "fields": [
+          {
+            "key": "title",
+            "label": "العنوان",
+            "type": "textarea",
+            "required": true
+          },
+          {
+            "key": "subtitle",
+            "label": "العنوان الفرعي",
+            "type": "textarea"
+          },
+          {
+            "key": "save",
+            "label": "زر الحفظ",
+            "type": "text"
+          },
+          {
+            "key": "share",
+            "label": "زر المشاركة",
+            "type": "text"
+          },
+          {
+            "key": "follow",
+            "label": "زر المتابعة",
+            "type": "text"
+          },
+          {
+            "key": "socials",
+            "label": "الحسابات والروابط",
+            "type": "list"
+          }
+        ]
+      }
+    ],
+    "themeTokens": [
+      "bg",
+      "surface",
+      "text",
+      "muted",
+      "accent",
+      "onAccent"
+    ],
+    "patchActions": [
+      "replace_text",
+      "move",
+      "resize",
+      "update_style",
+      "replace_asset",
+      "delete",
+      "lock",
+      "layer",
+      "hide"
+    ],
+    "preferenceKeys": {
+      "font.heading": {
+        "label": "خط العناوين",
+        "values": [
+          "cairo",
+          "tajawal",
+          "almarai",
+          "readex"
+        ]
+      },
+      "font.body": {
+        "label": "خط النص",
+        "values": [
+          "cairo",
+          "tajawal",
+          "almarai",
+          "readex"
+        ]
+      },
+      "palette": {
+        "label": "لوحة الألوان"
+      },
+      "color.accent": {
+        "label": "لون التمييز"
+      },
+      "color.bg": {
+        "label": "لون الخلفية"
+      },
+      "text.density": {
+        "label": "كثافة النص",
+        "values": [
+          "short",
+          "medium",
+          "dense"
+        ]
+      },
+      "text.size": {
+        "label": "حجم الخط",
+        "values": [
+          "larger",
+          "default",
+          "smaller"
+        ]
+      },
+      "text.tone": {
+        "label": "نبرة الكتابة"
+      },
+      "numerals": {
+        "label": "الأرقام",
+        "values": [
+          "arab",
+          "latn"
+        ]
+      },
+      "format": {
+        "label": "المقاس",
+        "values": [
+          "portrait",
+          "square",
+          "story"
+        ]
+      },
+      "art.style": {
+        "label": "أسلوب الرسوم"
+      },
+      "art.amount": {
+        "label": "كمية الرسوم",
+        "values": [
+          "none",
+          "light",
+          "rich"
+        ]
+      },
+      "avoid": {
+        "label": "تجنّب"
+      }
+    }
+  }
+}
