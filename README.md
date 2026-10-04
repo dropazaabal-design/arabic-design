@@ -9,6 +9,22 @@
 
 ---
 
+## الإضافتان في هذا المستودع
+
+هذا المستودع سوق (marketplace) يحمل إضافتين تتقاسمان همَّ العربية وتختلفان في
+المهمّة:
+
+| الإضافة | المهمّة | متى تختارها |
+|---|---|---|
+| `arabic-design` | **بوّابة العربية على Canva**: يصمّم Claude داخل Canva، ثم تُصحَّح عربيّته كلمةً بكلمة — نصّ صاحبه، والاتجاه، والترقيم، والأرقام، والتنضيد، والانعكاس — بمعاينة وموافقة صريحة. | عندك تصميم في Canva، أو تريد Canva محرّرًا ومُسلَّمًا. |
+| `arabic-carousel` | **استوديو يبني**: من فكرة أو نصّ إلى منشور مفرد أو كاروسيل أو ريل ٩:١٦، شرائحه عناصر مستقلّة قابلة للتحرير، تُعاد ملاءمتها بلا نصّ غير مقروء، ويُسلَّم محرّرًا يعمل بلا إنترنت (PNG، ZIP، PDF، فيديو) أو تصميمًا في Canva. | تريد التصميم مبنيًّا من الصفر، أو تسليمًا بلا إنترنت. |
+
+أسماء مهاراتهما لا تتعارض: سبع في الأولى وستّ في الثانية. وبقيّة هذا الملف عن
+`arabic-design`؛ دليل `arabic-carousel` في
+[`plugins/arabic-carousel/GUIDE.md`](plugins/arabic-carousel/GUIDE.md).
+
+---
+
 ## ثلاث أفكار محوريّة
 
 ### ١. Claude يصمّم في Canva، والإضافة بوّابة العربية
@@ -57,7 +73,8 @@ find_and_replace_text            →  يحفظ الاتجاه والتنسيق  
 
 ```bash
 claude plugin marketplace add dropazaabal-design/arabic-design
-claude plugin install arabic-design@arabic-design
+claude plugin install arabic-design@arabic-design      # بوّابة العربية على Canva
+claude plugin install arabic-carousel@arabic-design    # استوديو الكاروسيل والريل
 ```
 
 أو من نسخة محلّية:
@@ -67,15 +84,23 @@ git clone https://github.com/dropazaabal-design/arabic-design
 cd arabic-design
 claude plugin marketplace add ./          # الشرطة المائلة ضرورية
 claude plugin install arabic-design@arabic-design
+claude plugin install arabic-carousel@arabic-design
 ```
 
-للتحقّق: `claude plugin details arabic-design@arabic-design` — يجب أن يعرض سبع مهارات.
+كلٌّ منهما تُثبَّت وحدها؛ وليست إحداهما شرطًا للأخرى. للتحقّق:
+`claude plugin details arabic-design@arabic-design` — سبع مهارات، و
+`claude plugin details arabic-carousel@arabic-design` — ستّ.
 
 يتطلّب Node ≥ 18 وموصّل Canva MCP متصلًا. بلا اعتماديات خارجية.
+و`arabic-carousel` تُعلن خادم MCP محلّيًا خاصًّا بها (`baseera-canva`) في
+`plugins/arabic-carousel/.mcp.json`، يعمل بـNode على سكربتاتها المرفقة؛ وطريق
+Connect API فيه وحده يقرأ `CANVA_ACCESS_TOKEN` إن أردته.
 
 ---
 
 ## المهارات
+
+### `arabic-design` — بوّابة العربية
 
 | المهارة | ماذا تفعل |
 |---|---|
@@ -90,6 +115,21 @@ claude plugin install arabic-design@arabic-design
 المسار لصانع المحتوى: اكتب منشورك كما تكتبه ← `/arabic-create`. وللتصحيح:
 `/arabic-audit` لترى الحال، ثم `/arabic-fix`، ثم `/arabic-mirror` إن كان
 التخطيط اتجاهيًا. وكل ملاحظة واضحة على النتيجة تُحفظ بـ`/arabic-memory`.
+
+### `arabic-carousel` — الاستوديو
+
+| المهارة | ماذا تفعل |
+|---|---|
+| `/arabic-carousel` | **مدير التصميم والاستوديو**: فكرة أو نصّ أو مرجع ← منشور أو كاروسيل أو ستوري، محرّرًا بلا إنترنت أو تصميمًا في Canva. يعيد استعمال مكتبة صاحبه وأصوله وذوقه قبل أن يولّد جديدًا. |
+| `/carousel-director` | من **الموضوع وحده**: يستنتج الجمهور والزاوية والنبرة وعدد الشرائح، ويكتبها كلّها، ويسلّم ملفًّا من ثلاثة عشر جزءًا — بما فيه برومبت توليد لكل شريحة. |
+| `/canva-arabic` | ينقل التصميم إلى حساب Canva الحقيقي عناصرَ مستقلّة ويحرّره فيه، على الطريق الذي يدعمه Canva فعلًا هذه الجلسة، ثم يقرأ النتيجة ويفحص كل حرف. |
+| `/arabic-reels` | يخطّط الريل مشهدًا مشهدًا — خطّاف، وزمن من مقدار النصّ — ويبنيه مشاهدَ قابلة للتحرير، بحالة صادقة للحركة والصوت والفيديو. |
+| `/arabic-proofing` | يكتب العربية ويدقّقها، ويتحقّق أنّ ما وُضع في التصميم أو أعاد كتابته أداة أو قرأه OCR لا يزال مطابقًا حرفًا بحرف. |
+| `/creator-memory` | ذاكرة الحسابات والهويّات والجمهور والنبرة، تفصل الحقيقة عن الاستنتاج، ولا تجعل تعديلًا واحدًا قاعدة. |
+
+أدواتها سكربتات Node مرفقة (`studio.mjs`، `canva.mjs`) بلا تثبيت، و«الاستوديو»
+في مهاراتها يعني
+`node plugins/arabic-carousel/skills/arabic-carousel/scripts/studio.mjs`.
 
 ---
 
@@ -201,7 +241,8 @@ npm test     # node --test — 288 اختبارًا، بلا مكتبات
 ## الإسناد
 
 مدير التصميم وصيغه وذاكرة الذوق من حزم صاحب المشروع نفسه، مكيّفة لهذا الموصل.
-المعجم من FrequencyWords (MIT). فكرة الخطّاف حسب الهدف وهيكل الإطارات من
+و`arabic-carousel` إضافته هو كما كتبها في مشروع `baseera`، أُضيفت كما هي لا
+مدموجة. المعجم من FrequencyWords (MIT). فكرة الخطّاف حسب الهدف وهيكل الإطارات من
 instagram-skills (MIT) — بلا نصّ ولا كود منقول. ما قُيِّم ولم يُدمَج، ولماذا:
 [`NOTICE.md`](NOTICE.md).
 
