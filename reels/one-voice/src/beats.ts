@@ -22,5 +22,5 @@ export const B = {
   room: segStart('s9'), greyFrom: segAt('s9', 0.08), greyTo: segAt('s9', 0.4), partner: segAt('s9', 0.62), stand: segAt('s9', 0.86),
   bar: segStart('s10'), drop: segAt('s10', 0.35),
   // 7 — the door
-  door: segStart('s11'), open: segAt('s11', 0.3), s11end: segEnd('s11'),
+  door: segStart('s11'), open: segAt('s11', 0.3), s11end: segEnd('s11'), sign: segStart('s12'),
 };

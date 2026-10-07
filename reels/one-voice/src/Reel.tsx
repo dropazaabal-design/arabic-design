@@ -425,7 +425,7 @@ const Texts: React.FC = () => (
   <AbsoluteFill>
     <Title text={`الذكي يتمرّد…\nالمبدع يطالب…\n{${C.amber}|والعادي يسكت}`} from={0} to={F.s2 - 2} size={100} pop />
     <Caption text="تجربة سولومون آش، 1951" from={B.board} to={F.s3 - 2} top={250} size={54} color={C.muted} />
-    <Pill text="لوحدهم: أقل من 1% خطأ" x={540} y={1500} bg={C.green} from={B.aloneAns + 6} to={F.s3 - 2} size={50} w={700} />
+    <Pill text="لوحدهم: أقل من 1% خطأ" x={540} y={1500} bg={C.green} from={B.alone + 4} to={F.s3 - 2} size={50} w={700} />
     <Title text={`{${C.amber}|3 من كل 4} وافقوا`} from={B.stat} to={F.s4 + 2} size={108} />
     <Title text={`مو غباء…\n{${C.red}|ضغط}`} from={F.s4} to={F.s5 + 2} size={118} />
     <Pill text="الذكي: ليش؟" x={540} y={1090} bg={C.blue} from={B.askDraw + 14} to={B.alt} size={54} w={520} />
@@ -433,7 +433,7 @@ const Texts: React.FC = () => (
     <Title text={`صوت {${C.green}|واحد}`} from={B.partner - 2} to={F.s7 + 2} size={120} />
     <Pill text="من الثلث… إلى 5%" x={540} y={460} bg={C.violet} from={B.bar + 4} to={F.s7} size={54} w={560} />
     <Title text={`صوتك\n{${C.amber}|يفتح الباب}`} from={B.door} to={F.end + 2} size={120} />
-    <Pill text="كتاب وبس" x={540} y={1550} bg="rgba(27,31,51,0.75)" from={F.end - sec(1.6)} to={F.end + 10} size={44} w={300} />
+    <Pill text="كتاب وبس" x={540} y={1550} bg="rgba(27,31,51,0.75)" from={B.sign - 3} to={F.end + 10} size={44} w={300} />
   </AbsoluteFill>
 );
 

@@ -1,0 +1,10 @@
+{
+  "source": "ElevenLabs_Hassan_Mort_Arabic_pvc_sp100_s99_sb99_v4.mp3",
+  "note": "The recording reads the narration and also the on-screen labels; only the narration lines (and the closing «كتاب وبس») are kept. Times in seconds, cut in pauses found with silencedetect or, where none, at the quietest 10 ms frame.",
+  "dropped": ["0.00–6.18 الذكي يتمرد، المبدع يطالب، والعادي يسكت (hook label)", "14.44–17.78 تجربة سلمون آش 1951", "24.28–26.81 لوحدهم أقل من 1% خطأ", "32.62–34.56 ثلاثة من كل أربعة وافقوا", "37.62–39.72 مو غباء، ضغط", "44.62–47.38 الذكي، ليش؟ المبدع، بديل", "53.80–56.45 صوت واحد من الثلث إلى 5%", "58.70–60.25 صوتك يفتح الباب"],
+  "cuts": {
+    "s1": [6.20, 12.30], "s2": [12.70, 14.00], "s3": [17.88, 21.25], "s4": [21.50, 24.02],
+    "s5": [26.81, 29.22], "s6": [29.47, 32.48], "s7": [34.56, 37.62], "s8": [39.72, 44.37],
+    "s9": [47.38, 50.50], "s10": [50.70, 53.62], "s11": [56.45, 58.70], "s12": [60.25, 61.46]
+  }
+}

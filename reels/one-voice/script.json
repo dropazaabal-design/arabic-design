@@ -1,35 +1,128 @@
 {
   "title": "الذكي يتمرّد، المبدع يطالب، والعادي ينسجم ويسكت",
   "register": "عامية عربية بيضاء",
-  "voice": "kitabwbs_nadeem — see ../voices/nadeem/profile.json (direction A, post: tempo 1.1, pause cap 0.4 s, then the basira_youth_edu chain)",
+  "voice": "ElevenLabs — «Hassan Mort - Arabic» (professional voice clone), recording supplied by the account owner (audio/hassan/), cut into lines by tools/split-voice.py with audio/hassan/cuts.json. Earlier render used kitabwbs_nadeem (see ../voices/nadeem).",
   "sources": [
     "Asch, S. E. (1951). Effects of group pressure upon the modification and distortion of judgments. Swarthmore College: control error rate under 1%; about one third of critical responses conformed; about 3 in 4 participants conformed at least once.",
     "Asch, S. E. (1955/1956). Opinions and social pressure; Studies of independence and conformity: with one dissenting partner giving the correct answer, conformity fell to about 5%."
   ],
   "segments": [
-    { "id": "s1",  "scene": 1, "text": "يقولون: الذكي يتمرّد، والمبدع يطالب… والعادي ينسجم ويسكت." },
-    { "id": "s2",  "scene": 1, "text": "ليش العادي يسكت؟" },
-    { "id": "s3",  "scene": 2, "text": "في تجربة مشهورة، طلاب قارنوا طول خطوط." },
-    { "id": "s4",  "scene": 2, "text": "لوحدهم… ما أحد غلط تقريبًا." },
-    { "id": "s5",  "scene": 3, "text": "بس لما الكل حولهم قال جواب غلط…" },
-    { "id": "s6",  "scene": 3, "text": "ثلاثة من كل أربعة وافقوهم… ولو مرة." },
-    { "id": "s7",  "scene": 4, "text": "يعني السكوت مو غباء… هو ضغط." },
-    { "id": "s8",  "scene": 5, "text": "الذكي يتمرّد بسؤال: ليش؟ والمبدع يطالب ببديل." },
-    { "id": "s9",  "scene": 6, "text": "والمفاجأة؟ لما واحد بس قال الجواب الصح…" },
-    { "id": "s10", "scene": 6, "text": "الموافقة على الغلط نزلت لحوالي خمسة بالمية." },
-    { "id": "s11", "scene": 7, "text": "صوتك… يفتح الباب للي حولك." }
+    {
+      "id": "s1",
+      "scene": 1,
+      "text": "يقولون: الذكي يتمرّد، والمبدع يطالب… والعادي ينسجم ويسكت."
+    },
+    {
+      "id": "s2",
+      "scene": 1,
+      "text": "ليش العادي يسكت؟"
+    },
+    {
+      "id": "s3",
+      "scene": 2,
+      "text": "في تجربة مشهورة، طلاب قارنوا طول خطوط."
+    },
+    {
+      "id": "s4",
+      "scene": 2,
+      "text": "لوحدهم… ما أحد غلط تقريبًا."
+    },
+    {
+      "id": "s5",
+      "scene": 3,
+      "text": "بس لما الكل حولهم قال جواب غلط…"
+    },
+    {
+      "id": "s6",
+      "scene": 3,
+      "text": "ثلاثة من كل أربعة وافقوهم… ولو مرة."
+    },
+    {
+      "id": "s7",
+      "scene": 4,
+      "text": "يعني السكوت مو غباء… هو ضغط."
+    },
+    {
+      "id": "s8",
+      "scene": 5,
+      "text": "الذكي يتمرّد بسؤال: ليش؟ والمبدع يطالب ببديل."
+    },
+    {
+      "id": "s9",
+      "scene": 6,
+      "text": "والمفاجأة؟ لما واحد بس قال الجواب الصح…"
+    },
+    {
+      "id": "s10",
+      "scene": 6,
+      "text": "الموافقة على الغلط نزلت لحوالي خمسة بالمية."
+    },
+    {
+      "id": "s11",
+      "scene": 7,
+      "text": "صوتك… يفتح الباب للي حولك."
+    },
+    {
+      "id": "s12",
+      "scene": 7,
+      "text": "كتاب وبس"
+    }
   ],
   "onScreen": [
-    { "scene": 1, "role": "title", "text": "الذكي يتمرّد… المبدع يطالب… والعادي يسكت" },
-    { "scene": 2, "role": "source", "text": "تجربة سولومون آش، 1951" },
-    { "scene": 2, "role": "label", "text": "لوحدهم: أقل من 1% خطأ" },
-    { "scene": 3, "role": "title", "text": "3 من كل 4 وافقوا" },
-    { "scene": 4, "role": "title", "text": "مو غباء… ضغط" },
-    { "scene": 5, "role": "label", "text": "الذكي: ليش؟" },
-    { "scene": 5, "role": "label", "text": "المبدع: بديل" },
-    { "scene": 6, "role": "title", "text": "صوت واحد" },
-    { "scene": 6, "role": "label", "text": "من الثلث… إلى 5%" },
-    { "scene": 7, "role": "title", "text": "صوتك يفتح الباب" },
-    { "scene": 7, "role": "signature", "text": "كتاب وبس" }
+    {
+      "scene": 1,
+      "role": "title",
+      "text": "الذكي يتمرّد… المبدع يطالب… والعادي يسكت"
+    },
+    {
+      "scene": 2,
+      "role": "source",
+      "text": "تجربة سولومون آش، 1951"
+    },
+    {
+      "scene": 2,
+      "role": "label",
+      "text": "لوحدهم: أقل من 1% خطأ"
+    },
+    {
+      "scene": 3,
+      "role": "title",
+      "text": "3 من كل 4 وافقوا"
+    },
+    {
+      "scene": 4,
+      "role": "title",
+      "text": "مو غباء… ضغط"
+    },
+    {
+      "scene": 5,
+      "role": "label",
+      "text": "الذكي: ليش؟"
+    },
+    {
+      "scene": 5,
+      "role": "label",
+      "text": "المبدع: بديل"
+    },
+    {
+      "scene": 6,
+      "role": "title",
+      "text": "صوت واحد"
+    },
+    {
+      "scene": 6,
+      "role": "label",
+      "text": "من الثلث… إلى 5%"
+    },
+    {
+      "scene": 7,
+      "role": "title",
+      "text": "صوتك يفتح الباب"
+    },
+    {
+      "scene": 7,
+      "role": "signature",
+      "text": "كتاب وبس"
+    }
   ]
 }
