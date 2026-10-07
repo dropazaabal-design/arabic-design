@@ -1,0 +1,156 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 44.966,
+  "durationInFrames": 1349,
+  "measured": true,
+  "segments": [
+    {
+      "id": "s1",
+      "scene": 1,
+      "start": 0.25,
+      "duration": 4.285,
+      "measured": true,
+      "file": "voice/s1.wav"
+    },
+    {
+      "id": "s2",
+      "scene": 2,
+      "start": 4.755,
+      "duration": 5.311,
+      "measured": true,
+      "file": "voice/s2.wav"
+    },
+    {
+      "id": "s3",
+      "scene": 3,
+      "start": 10.286,
+      "duration": 2.315,
+      "measured": true,
+      "file": "voice/s3.wav"
+    },
+    {
+      "id": "s4",
+      "scene": 3,
+      "start": 12.751,
+      "duration": 3.164,
+      "measured": true,
+      "file": "voice/s4.wav"
+    },
+    {
+      "id": "s5",
+      "scene": 4,
+      "start": 16.135,
+      "duration": 2.133,
+      "measured": true,
+      "file": "voice/s5.wav"
+    },
+    {
+      "id": "s6",
+      "scene": 4,
+      "start": 18.418,
+      "duration": 2.866,
+      "measured": true,
+      "file": "voice/s6.wav"
+    },
+    {
+      "id": "s7",
+      "scene": 4,
+      "start": 21.434,
+      "duration": 3.678,
+      "measured": true,
+      "file": "voice/s7.wav"
+    },
+    {
+      "id": "s8",
+      "scene": 5,
+      "start": 25.332,
+      "duration": 3.329,
+      "measured": true,
+      "file": "voice/s8.wav"
+    },
+    {
+      "id": "s9",
+      "scene": 6,
+      "start": 28.881,
+      "duration": 3.148,
+      "measured": true,
+      "file": "voice/s9.wav"
+    },
+    {
+      "id": "s10",
+      "scene": 7,
+      "start": 32.249,
+      "duration": 3.578,
+      "measured": true,
+      "file": "voice/s10.wav"
+    },
+    {
+      "id": "s11",
+      "scene": 8,
+      "start": 36.047,
+      "duration": 2.688,
+      "measured": true,
+      "file": "voice/s11.wav"
+    },
+    {
+      "id": "s12",
+      "scene": 8,
+      "start": 38.886,
+      "duration": 4.48,
+      "measured": true,
+      "file": "voice/s12.wav"
+    }
+  ],
+  "scenes": [
+    {
+      "n": 1,
+      "start": 0,
+      "end": 4.505,
+      "seconds": 4.505
+    },
+    {
+      "n": 2,
+      "start": 4.505,
+      "end": 10.036,
+      "seconds": 5.531
+    },
+    {
+      "n": 3,
+      "start": 10.036,
+      "end": 15.885,
+      "seconds": 5.849
+    },
+    {
+      "n": 4,
+      "start": 15.885,
+      "end": 25.082,
+      "seconds": 9.197
+    },
+    {
+      "n": 5,
+      "start": 25.082,
+      "end": 28.631,
+      "seconds": 3.549
+    },
+    {
+      "n": 6,
+      "start": 28.631,
+      "end": 31.999,
+      "seconds": 3.368
+    },
+    {
+      "n": 7,
+      "start": 31.999,
+      "end": 35.797,
+      "seconds": 3.798
+    },
+    {
+      "n": 8,
+      "start": 35.797,
+      "end": 44.966,
+      "seconds": 9.169
+    }
+  ]
+}
