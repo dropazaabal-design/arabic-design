@@ -2,171 +2,211 @@
   "fps": 30,
   "width": 1080,
   "height": 1920,
-  "totalSeconds": 51.839,
-  "durationInFrames": 1555,
+  "totalSeconds": 54.224,
+  "durationInFrames": 1627,
   "measured": true,
   "segments": [
     {
       "id": "s1",
       "scene": 1,
-      "start": 0.35,
-      "duration": 3.723,
+      "start": 0.3,
+      "duration": 2.677,
       "measured": true,
       "file": "voice/s1.wav"
     },
     {
       "id": "s2",
       "scene": 2,
-      "start": 4.573,
-      "duration": 4.203,
+      "start": 3.357,
+      "duration": 4.128,
       "measured": true,
       "file": "voice/s2.wav"
     },
     {
-      "id": "s3a",
-      "scene": 3,
-      "start": 9.275,
-      "duration": 4.203,
+      "id": "s3",
+      "scene": 2,
+      "start": 7.685,
+      "duration": 2.709,
       "measured": true,
-      "file": "voice/s3a.wav"
-    },
-    {
-      "id": "s3b",
-      "scene": 3,
-      "start": 13.698,
-      "duration": 3.083,
-      "measured": true,
-      "file": "voice/s3b.wav"
+      "file": "voice/s3.wav"
     },
     {
       "id": "s4",
-      "scene": 4,
-      "start": 17.281,
-      "duration": 4.629,
+      "scene": 3,
+      "start": 10.775,
+      "duration": 4.117,
       "measured": true,
       "file": "voice/s4.wav"
     },
     {
       "id": "s5",
-      "scene": 5,
-      "start": 22.41,
-      "duration": 3.253,
+      "scene": 3,
+      "start": 15.092,
+      "duration": 2.592,
       "measured": true,
       "file": "voice/s5.wav"
     },
     {
-      "id": "s6a",
-      "scene": 6,
-      "start": 26.163,
-      "duration": 2.475,
+      "id": "s6",
+      "scene": 4,
+      "start": 18.064,
+      "duration": 1.6,
       "measured": true,
-      "file": "voice/s6a.wav"
+      "file": "voice/s6.wav"
     },
     {
-      "id": "s6b",
-      "scene": 6,
-      "start": 28.858,
-      "duration": 3.168,
+      "id": "s7",
+      "scene": 4,
+      "start": 19.864,
+      "duration": 3.019,
       "measured": true,
-      "file": "voice/s6b.wav"
-    },
-    {
-      "id": "s6c",
-      "scene": 6,
-      "start": 32.246,
-      "duration": 2.432,
-      "measured": true,
-      "file": "voice/s6c.wav"
-    },
-    {
-      "id": "s7a",
-      "scene": 7,
-      "start": 35.178,
-      "duration": 3.339,
-      "measured": true,
-      "file": "voice/s7a.wav"
-    },
-    {
-      "id": "s7b",
-      "scene": 7,
-      "start": 38.737,
-      "duration": 1.835,
-      "measured": true,
-      "file": "voice/s7b.wav"
-    },
-    {
-      "id": "s7c",
-      "scene": 7,
-      "start": 40.791,
-      "duration": 1.493,
-      "measured": true,
-      "file": "voice/s7c.wav"
-    },
-    {
-      "id": "s7d",
-      "scene": 7,
-      "start": 42.505,
-      "duration": 4.075,
-      "measured": true,
-      "file": "voice/s7d.wav"
+      "file": "voice/s7.wav"
     },
     {
       "id": "s8",
-      "scene": 8,
-      "start": 47.079,
-      "duration": 2.56,
+      "scene": 5,
+      "start": 23.263,
+      "duration": 1.184,
       "measured": true,
       "file": "voice/s8.wav"
+    },
+    {
+      "id": "s9",
+      "scene": 5,
+      "start": 24.647,
+      "duration": 1.525,
+      "measured": true,
+      "file": "voice/s9.wav"
+    },
+    {
+      "id": "s10",
+      "scene": 6,
+      "start": 26.552,
+      "duration": 2.304,
+      "measured": true,
+      "file": "voice/s10.wav"
+    },
+    {
+      "id": "s11",
+      "scene": 6,
+      "start": 29.056,
+      "duration": 2.933,
+      "measured": true,
+      "file": "voice/s11.wav"
+    },
+    {
+      "id": "s12",
+      "scene": 6,
+      "start": 32.189,
+      "duration": 2.592,
+      "measured": true,
+      "file": "voice/s12.wav"
+    },
+    {
+      "id": "s13",
+      "scene": 7,
+      "start": 35.161,
+      "duration": 1.173,
+      "measured": true,
+      "file": "voice/s13.wav"
+    },
+    {
+      "id": "s14",
+      "scene": 7,
+      "start": 36.535,
+      "duration": 2.219,
+      "measured": true,
+      "file": "voice/s14.wav"
+    },
+    {
+      "id": "s15",
+      "scene": 7,
+      "start": 38.953,
+      "duration": 1.472,
+      "measured": true,
+      "file": "voice/s15.wav"
+    },
+    {
+      "id": "s16",
+      "scene": 7,
+      "start": 40.625,
+      "duration": 1.739,
+      "measured": true,
+      "file": "voice/s16.wav"
+    },
+    {
+      "id": "s17",
+      "scene": 7,
+      "start": 42.564,
+      "duration": 3.552,
+      "measured": true,
+      "file": "voice/s17.wav"
+    },
+    {
+      "id": "s18",
+      "scene": 8,
+      "start": 46.496,
+      "duration": 2.272,
+      "measured": true,
+      "file": "voice/s18.wav"
+    },
+    {
+      "id": "s19",
+      "scene": 8,
+      "start": 48.968,
+      "duration": 3.456,
+      "measured": true,
+      "file": "voice/s19.wav"
     }
   ],
   "scenes": [
     {
       "n": 1,
       "start": 0,
-      "end": 4.323,
-      "seconds": 4.323
+      "end": 3.107,
+      "seconds": 3.107
     },
     {
       "n": 2,
-      "start": 4.323,
-      "end": 9.025,
-      "seconds": 4.702
+      "start": 3.107,
+      "end": 10.525,
+      "seconds": 7.418
     },
     {
       "n": 3,
-      "start": 9.025,
-      "end": 17.031,
-      "seconds": 8.006
+      "start": 10.525,
+      "end": 17.814,
+      "seconds": 7.289
     },
     {
       "n": 4,
-      "start": 17.031,
-      "end": 22.16,
-      "seconds": 5.129
+      "start": 17.814,
+      "end": 23.013,
+      "seconds": 5.199
     },
     {
       "n": 5,
-      "start": 22.16,
-      "end": 25.913,
-      "seconds": 3.753
+      "start": 23.013,
+      "end": 26.302,
+      "seconds": 3.289
     },
     {
       "n": 6,
-      "start": 25.913,
-      "end": 34.928,
-      "seconds": 9.015
+      "start": 26.302,
+      "end": 34.911,
+      "seconds": 8.609
     },
     {
       "n": 7,
-      "start": 34.928,
-      "end": 46.829,
-      "seconds": 11.901
+      "start": 34.911,
+      "end": 46.246,
+      "seconds": 11.335
     },
     {
       "n": 8,
-      "start": 46.829,
-      "end": 51.839,
-      "seconds": 5.01
+      "start": 46.246,
+      "end": 54.224,
+      "seconds": 7.978
     }
   ]
 }

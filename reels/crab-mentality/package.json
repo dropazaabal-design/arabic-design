@@ -6,7 +6,8 @@
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts CrabReel out/crab-mentality.mp4 --audio-codec=aac",
     "timeline": "node tools/timeline.mjs",
-    "proof": "node tools/proof.mjs out/proof"
+    "proof": "node tools/proof.mjs out/proof",
+    "assets": "esbuild tools/export-assets.tsx --bundle --platform=node --format=esm --packages=external --jsx=automatic --outfile=out/export.mjs --log-level=error && node out/export.mjs && rm out/export.mjs"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.534",
