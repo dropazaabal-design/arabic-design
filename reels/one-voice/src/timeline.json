@@ -1,0 +1,142 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 49.244,
+  "durationInFrames": 1477,
+  "measured": true,
+  "segments": [
+    {
+      "id": "s1",
+      "scene": 1,
+      "start": 0.25,
+      "duration": 5.841,
+      "measured": true,
+      "file": "voice/s1.wav"
+    },
+    {
+      "id": "s2",
+      "scene": 1,
+      "start": 6.241,
+      "duration": 2.7,
+      "measured": true,
+      "file": "voice/s2.wav"
+    },
+    {
+      "id": "s3",
+      "scene": 2,
+      "start": 9.162,
+      "duration": 3.901,
+      "measured": true,
+      "file": "voice/s3.wav"
+    },
+    {
+      "id": "s4",
+      "scene": 2,
+      "start": 13.212,
+      "duration": 3.214,
+      "measured": true,
+      "file": "voice/s4.wav"
+    },
+    {
+      "id": "s5",
+      "scene": 3,
+      "start": 16.646,
+      "duration": 2.945,
+      "measured": true,
+      "file": "voice/s5.wav"
+    },
+    {
+      "id": "s6",
+      "scene": 3,
+      "start": 19.742,
+      "duration": 4.243,
+      "measured": true,
+      "file": "voice/s6.wav"
+    },
+    {
+      "id": "s7",
+      "scene": 4,
+      "start": 24.204,
+      "duration": 4.072,
+      "measured": true,
+      "file": "voice/s7.wav"
+    },
+    {
+      "id": "s8",
+      "scene": 5,
+      "start": 28.497,
+      "duration": 4.784,
+      "measured": true,
+      "file": "voice/s8.wav"
+    },
+    {
+      "id": "s9",
+      "scene": 6,
+      "start": 33.501,
+      "duration": 4.633,
+      "measured": true,
+      "file": "voice/s9.wav"
+    },
+    {
+      "id": "s10",
+      "scene": 6,
+      "start": 38.284,
+      "duration": 4.467,
+      "measured": true,
+      "file": "voice/s10.wav"
+    },
+    {
+      "id": "s11",
+      "scene": 7,
+      "start": 42.97,
+      "duration": 4.674,
+      "measured": true,
+      "file": "voice/s11.wav"
+    }
+  ],
+  "scenes": [
+    {
+      "n": 1,
+      "start": 0,
+      "end": 8.912,
+      "seconds": 8.912
+    },
+    {
+      "n": 2,
+      "start": 8.912,
+      "end": 16.396,
+      "seconds": 7.484
+    },
+    {
+      "n": 3,
+      "start": 16.396,
+      "end": 23.954,
+      "seconds": 7.558
+    },
+    {
+      "n": 4,
+      "start": 23.954,
+      "end": 28.247,
+      "seconds": 4.293
+    },
+    {
+      "n": 5,
+      "start": 28.247,
+      "end": 33.251,
+      "seconds": 5.004
+    },
+    {
+      "n": 6,
+      "start": 33.251,
+      "end": 42.72,
+      "seconds": 9.469
+    },
+    {
+      "n": 7,
+      "start": 42.72,
+      "end": 49.244,
+      "seconds": 6.524
+    }
+  ]
+}

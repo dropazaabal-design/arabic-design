@@ -1,0 +1,95 @@
+{
+ "id": "kitabwbs-motion",
+ "name": "كتاب وبس — ريلز متحركة",
+ "handle": "@kitabwbs",
+ "accounts": [
+  {
+   "platform": "instagram",
+   "handle": "@kitabwbs"
+  }
+ ],
+ "colors": [
+  {
+   "hex": "#2E7BC5",
+   "role": "accent",
+   "name": "الأزرق الأساسي"
+  },
+  {
+   "hex": "#121A33",
+   "role": "bg",
+   "name": "ليل نيلي"
+  },
+  {
+   "hex": "#0E2A5C",
+   "role": "dark",
+   "name": "أزرق ليلي"
+  },
+  {
+   "hex": "#E63946",
+   "role": "negative",
+   "name": "أحمر وظيفي"
+  },
+  {
+   "hex": "#10B981",
+   "role": "positive",
+   "name": "أخضر وظيفي"
+  },
+  {
+   "hex": "#F4B860",
+   "role": "light",
+   "name": "كهرماني"
+  },
+  {
+   "hex": "#F6EBD9",
+   "role": "text",
+   "name": "ورقي عاجي"
+  },
+  {
+   "hex": "#6C4AB6",
+   "role": "scene",
+   "name": "بنفسجي"
+  },
+  {
+   "hex": "#0F3D45",
+   "role": "scene",
+   "name": "فيروزي عميق"
+  },
+  {
+   "hex": "#F28C6B",
+   "role": "scene",
+   "name": "مرجاني"
+  }
+ ],
+ "fonts": {
+  "heading": "cairo",
+  "body": "tajawal",
+  "fallbacks": [
+   "almarai"
+  ],
+  "allowed": [
+   "cairo",
+   "tajawal"
+  ]
+ },
+ "numerals": "latn",
+ "imagery": {
+  "style": "Doodle + Motion Graphics: قلم مرسوم يعبّر بالحركة، دفاتر وقوائم وأدوات، خامة ورقية وخطوط يدوية",
+  "notes": "بلا وجوه أو صور بشرية"
+ },
+ "voice": {
+  "tone": "دافئ وواثق بسخرية خفيفة",
+  "dialect": "عامية عربية بيضاء",
+  "titles": "عناوين قصيرة كبيرة، كلمة معنى واحدة"
+ },
+ "density": "medium",
+ "constraints": [
+  "no-faces",
+  "no-latin-words",
+  "western-digits",
+  "fonts-only"
+ ],
+ "allowedLatin": [
+  "@kitabwbs"
+ ],
+ "creatorId": "default"
+}

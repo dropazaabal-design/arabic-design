@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "errors": 1,
+  "warnings": 0,
+  "issues": [
+    {
+      "code": "source.changed.changed-letters",
+      "severity": "error",
+      "message": "الصفحة ٨: «واحد» صارت «وحيد» (حروف تغيّرت).",
+      "pageId": "pg_kfulfi9a89",
+      "elementId": "title"
+    }
+  ]
+}
