@@ -1,7 +1,7 @@
 {
   "name": "arabic-design",
-  "version": "0.3.0",
-  "description": "مدير تصميم عربي داخل Canva لصانع المحتوى على فيسبوك: Claude يصمّم المنشور والكاروسيل والريل والإعلان بجرافيك عالٍ، وبوّابة عربية تعيد نصّ صاحبه وتصحّح الاتجاه والترقيم والأرقام والتنضيد كلمةً بكلمة، وذاكرة تحفظ ذوقه.",
+  "version": "0.4.0",
+  "description": "مدير تصميم عربي داخل Canva لصانع المحتوى على فيسبوك: Claude يصمّم المنشور والكاروسيل والريل والإعلان بجرافيك عالٍ، وبوّابة عربية تعيد نصّ صاحبه وتصحّح الاتجاه والترقيم والأرقام والتنضيد كلمةً بكلمة، وذاكرة تحفظ ذوقه. ويخرج بالريل إلى آخره: تعليق صوتي بلهجته عبر Habibi-TTS أو NAMAA-Egyptian-TTS، وفيديو ٩:١٦ متحرّك يُركَّب بـRemotion من خطّة المشاهد ثم يُقاس بـffprobe.",
   "license": "MIT",
   "keywords": [
     "arabic",
@@ -10,13 +10,19 @@
     "canva",
     "captions",
     "content-creator",
+    "dialects",
     "facebook",
     "i18n",
     "localization",
     "reels",
+    "remotion",
     "rtl",
     "taste-memory",
-    "typography"
+    "text-to-speech",
+    "tts",
+    "typography",
+    "video",
+    "voiceover"
   ],
   "author": {
     "name": "dropazaabal-design"
