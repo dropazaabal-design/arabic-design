@@ -1,0 +1,34 @@
+{
+  "id": "kitabwbs_nadeem",
+  "name": "نديم — صوت كتاب وبس",
+  "status": "candidate",
+  "note": "حالة «مرشّح» حتى يختار صاحب الحساب عينة. الاسم تسمية داخلية، لا معرّف مزوّد.",
+  "provider": "Resemble AI — Chatterbox (open source, local inference, CPU)",
+  "package": "chatterbox-tts 0.1.7",
+  "model_id": "ResembleAI/chatterbox — ChatterboxMultilingualTTS (t3_mtl23ls_v2.safetensors, s3gen.pt, ve.pt)",
+  "licence": "MIT (code and weights); every output carries Resemble's inaudible Perth watermark",
+  "voice_id": null,
+  "voice_id_note": "Chatterbox has no hosted voice ids: the voice is defined by reference.wav (zero-shot cloning). Its sha256 below is the identity check; speak.py refuses to run if the file changes.",
+  "reference": {
+    "file": "reference.wav",
+    "sha256": "1f571fe45d4e2e5584d51a47cb20d12a430cead7434ea7b1d6d17b7efc42ddce",
+    "seconds": 11.64,
+    "source": "SWivid/Habibi benchmark (Apache-2.0), MSA split, speaker_id 165, rows 1055 + 1056 joined with 0.35 s of silence",
+    "transcript": "ولكن في النهاية الإسرائيليون يتابعون البناء وإنشاء مشاريع استيطانية جديدة … أنت تشجب وهو يفعلون ما يفعلون هم فوق المسائلة",
+    "continuity": "same speaker as the narration of reels/crab-mentality (there through Habibi-TTS MSA)",
+    "caution": "A real person's voice from a research benchmark. For a permanent brand voice, replace it with 10–15 s recorded by a speaker who consents; that recording then becomes the identity."
+  },
+  "language_id": "ar",
+  "register": "عامية عربية بيضاء، لهجة خفيفة متسقة، بلا لكنة مغربية",
+  "performance": "راوٍ دافئ واضح، حواري تلقائي، ابتسامة خفيفة عند المفارقة؛ بلا حشو ولا ضحك ولا تنفّس مصطنع ولا إلقاء إعلاني",
+  "seed": 7,
+  "pauses": { "full_stop": 0.32, "question": 0.42, "ellipsis": 0.5 },
+  "directions": {
+    "A": { "label": "دافئ وهادئ", "exaggeration": 0.35, "cfg_weight": 0.55, "temperature": 0.7 },
+    "B": { "label": "حواري بسخرية خفيفة", "exaggeration": 0.55, "cfg_weight": 0.45, "temperature": 0.8 },
+    "C": { "label": "أكثر حيوية مع وضوح", "exaggeration": 0.8, "cfg_weight": 0.35, "temperature": 0.8 }
+  },
+  "selected": { "direction": null, "date": null, "approved_by": null },
+  "pronunciation": {},
+  "test_text": "تعرف أول يوم، لما تقرر تغيّر حياتك كلها؟ رياضة، وقراءة، وشغل… وكل هذا من بكرة. طيب، وفي اليوم الثالث؟ القائمة لسه طويلة، وأنت تعبت قبل ما تبدأ. خلّينا نجرب بداية تقدر ترجع لها بكرة."
+}
