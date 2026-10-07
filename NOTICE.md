@@ -37,26 +37,6 @@
 | `homepage`/`repository` | أُعيدا إلى مستودع `arabic-design` لأنها صارت تُوزَّع منه، وأُضيف `license: MIT` |
 | `plugin.json` في الجذر (نسخة ثانية للمخطّط العام وواجهة مساعد آخر، `extensions.com.openai`) | حُذف؛ المانيفست الباقي `.claude-plugin/plugin.json` وهو موضع Claude Code. والوصفان كانا يختلفان في سطر واحد: أنّ أدوات Canva تعمل خادمَ MCP هنا، لا CLI فقط |
 
-**[Habibi-TTS](https://github.com/SWivid/Habibi-TTS)** — X-LANCE (SJTU) وSII،
-arXiv:2601.13802. الكود MIT. الأوزان **ليست كلّها** كذلك: الموحّد وSAU وUAE تحت
-CC-BY-NC-SA-4.0 (قيدٌ من مجموعتي SADA وMixat)، وMSA وALG وEGY وIRQ وMAR تحت
-Apache-2.0.
-
-**[NAMAA-Egyptian-TTS](https://huggingface.co/NAMAA-Space/NAMAA-Egyptian-TTS)** —
-مجتمع نماء، MIT (الكود والأوزان). مبنيّ على `ResembleAI/chatterbox` متعدّد اللغات.
-
-**[Remotion](https://github.com/remotion-dev/remotion)** — Remotion GmbH.
-**ليست MIT.** مجانية للأفراد وللجمعيات غير الربحيّة وللشركات الربحيّة حتى ثلاثة
-موظفين؛ وما فوق ذلك يحتاج Company License من `remotion.pro`.
-[`LICENSE.md`](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
-
-**الثلاثة تُستدعى ولا تُحزَم.** لا نموذج ولا وزن ولا حزمة `npm` في هذا
-المستودع: `lib/speech.js` يبني سطر الأوامر و`lib/video.js` يكتب مشروعًا، ثمّ
-يثبّتهما صاحبهما بنفسه ويقرأ ترخيصه. فلا يرث مستودعٌ MIT قيدًا لا يملكه، ولا
-يمرّ مستعملٌ على قيد لا يراه: `--commercial` يرفض الوزن غير التجاري، وحقل
-`licence` يسافر مع كل حالة فيديو. وما كُتب هنا عن حدودهما مقروء من مصدرهما —
-`infer_cli.py` وبطاقة النموذج و`LICENSE.md` — لا من صفحات تعريفهما.
-
 **ما لم يُلمَس عمدًا**: التعارض الظاهر بين «المحرّر بلا إنترنت» في
 `arabic-carousel` وقاعدة `canva-arabic` «Canva يبقى المحرّر: لا تبنِ محرّرًا
 بديلًا». هو تعارض داخل إضافة صاحبها بين طريقَي تسليم يختار بينهما، لا خطأ نصحّحه
