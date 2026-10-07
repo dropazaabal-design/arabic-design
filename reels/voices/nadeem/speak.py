@@ -16,6 +16,7 @@ import json
 import re
 from pathlib import Path
 
+import librosa
 import numpy as np
 import soundfile as sf
 import torch
@@ -64,7 +65,19 @@ for line in json.loads(Path(args.lines).read_text(encoding="utf-8")):
         torch.manual_seed(line.get("seed", profile["seed"]) + i)
         wav = model.generate(part, language_id=profile["language_id"], exaggeration=d["exaggeration"],
                              cfg_weight=d["cfg_weight"], temperature=d["temperature"]).squeeze(0).numpy()
-        audio.append(wav)
+        # Chatterbox pads each sentence with up to ~1.5 s of silence and stretches
+        # comma pauses to ~0.9 s. Keep every voiced stretch as generated, but cap
+        # the gaps inside the sentence and drop the padding at its ends.
+        spans = librosa.effects.split(wav, top_db=profile["trim_top_db"])
+        tail = np.zeros(int(sr * 0.05), dtype=wav.dtype)
+        pieces = [tail]
+        for j, (a, b) in enumerate(spans):
+            if j:
+                gap = min(a - spans[j - 1][1], int(sr * profile["pauses"]["inside_max"]))
+                pieces.append(np.zeros(gap, dtype=wav.dtype))
+            pieces.append(wav[a:b])
+        pieces.append(tail)
+        audio.append(np.concatenate(pieces))
         if i < len(parts) - 1:
             audio.append(np.zeros(int(sr * pause_after(part)), dtype=wav.dtype))
     full = np.concatenate(audio)

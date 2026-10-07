@@ -21,8 +21,8 @@ const approved = JSON.parse(readFileSync(root + 'script.json', 'utf8')).onScreen
 if (placed.length !== approved.length) console.error(`placed ${placed.length} strings, approved ${approved.length}`);
 
 const spec = {
-  brief: 'عقلية السلطعون ٢ — النصوص كما وُضعت في Remotion',
-  brandId: 'kitabwbs-crab',
+  brief: 'ليش تبدأ بحماس… وبعدين تتوقف؟ — النصوص كما وُضعت في Remotion',
+  brandId: 'kitabwbs-motion',
   intent: { mode: 'carousel', format: 'story', pages: placed.length, destination: 'local' },
   pages: placed.map((t) => ({ composition: 'statement', variant: 'block', content: { title: t } })),
 };

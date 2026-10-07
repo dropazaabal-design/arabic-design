@@ -31,14 +31,14 @@ export const Pencil: React.FC<{
       <path d={body} fill={P.body} stroke={P.outline} strokeWidth={6} strokeLinejoin="round" />
       <path d={`M -6 -74 C ${-6 + b} ${-70 - L * 0.35} ${-6 + b} ${-70 - L * 0.65} -6 ${-66 - L}`} fill="none" stroke={P.bodyLight} strokeWidth={14} opacity={0.8} />
       <path d={`M 18 -74 C ${18 + b} ${-70 - L * 0.35} ${18 + b} ${-70 - L * 0.65} 18 ${-66 - L}`} fill="none" stroke={P.bodyDark} strokeWidth={8} opacity={0.7} />
-      <rect x={-w / 2 + b * 0.2} y={-70 - L * 0.62} width={w} height={26} fill={P.band} stroke={P.outline} strokeWidth={5} />
+      <rect x={-w / 2 + b * 0.72} y={-70 - L * 0.62} width={w} height={26} fill={P.band} stroke={P.outline} strokeWidth={5} />
       <rect x={-w / 2 - 2} y={-70 - L - 46} width={w + 4} height={48} rx={6} fill={P.metal} stroke={P.outline} strokeWidth={6} />
       <path d={`M ${-w / 2 + 2} ${-70 - L - 30} L ${w / 2 - 2} ${-70 - L - 30} M ${-w / 2 + 2} ${-70 - L - 16} L ${w / 2 - 2} ${-70 - L - 16}`} stroke={P.outline} strokeWidth={4} opacity={0.6} />
       <rect x={-w / 2 + 2} y={-70 - L - 96} width={w - 4} height={54} rx={20} fill={P.eraser} stroke={P.outline} strokeWidth={6} />
       <path d={`M ${-w / 2} -70 L 0 -6 L ${w / 2} -70 Z`} fill={P.wood} stroke={P.outline} strokeWidth={6} strokeLinejoin="round" />
       <path d="M -11 -22 L 0 -2 L 11 -22 Z" fill={P.lead} />
       {[-1, 1].map((side) => (
-        <g key={side} transform={`translate(${side * 13 + b * 0.25} ${eyeY})`}>
+        <g key={side} transform={`translate(${side * 13 + b * 0.6} ${eyeY})`}>
           <ellipse rx={11} ry={13} fill={P.ink} stroke={P.outline} strokeWidth={4} />
           <circle cx={look[0] * 4} cy={look[1] * 4 + 1} r={5} fill={P.outline} />
           {lid > 0 && <rect x={-12} y={-14} width={24} height={26 * lid} fill={P.body} />}

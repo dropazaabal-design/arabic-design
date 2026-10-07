@@ -7,10 +7,10 @@ import { execFileSync } from 'node:child_process';
 const root = new URL('..', import.meta.url).pathname;
 const script = JSON.parse(readFileSync(root + 'script.json', 'utf8'));
 const FPS = 30;
-const LEAD = 0.3;        // first word after frame 0, so the hook reads first
-const GAP_IN = 0.2;      // pause between segments of one scene
-const GAP_OUT = 0.38;      // pause between scenes
-const TAIL = 1.8;         // closing line stays readable after the voice ends
+const LEAD = 0.25;       // first word after frame 0, so the hook reads first
+const GAP_IN = 0.15;     // pause between segments of one scene
+const GAP_OUT = 0.22;      // pause between scenes
+const TAIL = 1.6;         // closing line stays readable after the voice ends
 const WPS = 2.5;          // estimate only, when a file is missing
 
 const probe = (file) => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file]).toString().trim());
