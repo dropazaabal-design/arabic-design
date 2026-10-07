@@ -2,7 +2,7 @@
   "name": "arabic-design",
   "version": "0.1.0",
   "private": true,
-  "description": "Arabic typesetting and BiDi repair for Canva designs, driven through the Canva MCP connector; plus dialect voiceover (Habibi-TTS, NAMAA-Egyptian-TTS) and Remotion reel rendering.",
+  "description": "Arabic typesetting and BiDi repair for Canva designs, driven through the Canva MCP connector.",
   "license": "MIT",
   "main": "lib/cli.js",
   "scripts": {
