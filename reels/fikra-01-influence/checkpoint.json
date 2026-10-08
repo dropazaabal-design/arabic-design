@@ -1,7 +1,7 @@
 {
   "episode": "fikra-01-influence",
   "updated": "2026-10-08",
-  "resumePoint": "episode delivered for the owner's watching and listening; nothing pending that spends credits. Next only on request: line repairs (one line each), thumbnail, publishing (separate permission).",
+  "resumePoint": "episode delivered as the original MP4 via the GitHub link; nothing pending that spends credits. Next only on request: line repairs, thumbnail, YouTube (separate permission).",
   "stages": [
     {
       "id": "research",
@@ -212,9 +212,12 @@
     "frames": 14419
   },
   "git": {
-    "branch": "fikra-01 (local only)",
-    "pushed": false,
-    "note": "no push, PR, YouTube upload or asset publishing without a separate permission"
+    "branch": "fikra-01 (GitHub; built from origin/main + the three episode commits)",
+    "pushed": true,
+    "pushedOn": "2026-10-08",
+    "permission": "owner chose «رابط تحميل عبر GitHub» in this session",
+    "episodeCommit": "1747931",
+    "pullRequest": "dropazaabal-design/arabic-design#12 (opened by the owner; base claude/wonderful-lamport-ep2m3e)"
   },
   "resume": {
     "afterApproval": [
@@ -235,6 +238,8 @@
     "sha256": "11c8bc8ea8691da0f429a98e09a0a03ad71dc3f6e59d520c03e2cb2216921c8c",
     "spec": "1920x1080, 60/1 constant, 14,419 frames, 240.32 s, H.264 High yuv420p + AAC-LC 48 kHz stereo",
     "note": "the owner chose the original file; no compressed copy was made (an encode that had started was stopped and deleted)",
-    "published": false
+    "published": "GitHub branch fikra-01 only (no YouTube)",
+    "downloadLink": "https://github.com/dropazaabal-design/arabic-design/raw/fikra-01/reels/fikra-01-influence/render/fikra-01.mp4",
+    "linkCheck": "downloaded through the link: HTTP 200, 40,534,727 bytes, same SHA-256, 1920x1080, 60 fps, 14,419 frames"
   }
 }
