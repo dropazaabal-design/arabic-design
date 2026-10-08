@@ -13,11 +13,9 @@ real pause in the recording. Each line is cut at the middles of the pauses
 around it (so its natural breath stays with it) into public/voice/<id>.wav,
 all with one shared gain to -16 LUFS.
 
-The natural length (lead + speech + closing hold) is compared with TOTAL:
-  • shorter → the difference is added as silent beats at scene changes
-    (more where the picture changes most), never inside a sentence;
-  • longer  → the script exits with an error: shorten the text and regenerate
-    the affected lines instead of speeding the voice up.
+The episode length is measured, not chosen: lead + speech + the scene-change
+beats in BEATS + the closing hold. Nothing is padded to reach a number; a
+total outside 180–300 s is reported so the script, not the speed, is fixed.
 
 Writes timeline.json (seconds; fps and frame count for Remotion),
 src/captions.json and audio/alignment.json.

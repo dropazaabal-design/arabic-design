@@ -11,6 +11,7 @@
   "dependencies": {
     "@remotion/cli": "^4.0.534",
     "@remotion/media-utils": "^4.0.534",
+    "@remotion/paths": "^4.0.534",
     "@remotion/renderer": "^4.0.534",
     "@types/react": "^19.3.0",
     "react": "^19.3.0",

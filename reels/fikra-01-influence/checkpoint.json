@@ -1,7 +1,7 @@
 {
   "episode": "fikra-01-influence",
   "updated": "2026-10-08",
-  "resumePoint": "waiting for the account owner's listening approval of audio/sample-opening-HrfUk50jzsIpabKe1W1S.mp3; nothing past this point may spend credits",
+  "resumePoint": "full render running → render/fikra-01.mp4; if interrupted, re-run the command above (no credits involved). Then review-reel, creative review, reports.",
   "stages": [
     {
       "id": "research",
@@ -20,17 +20,18 @@
     },
     {
       "id": "script",
-      "state": "locked",
+      "state": "relocked to the recorded text (owner's choice, option B)",
       "lockedOn": "2026-10-08",
       "out": [
         "script.json",
         "script.md"
       ],
-      "sha256": "e0253b19d0ce64d47c1a53b79fc04df0203ef3cce964a3b3d929224c31659cba"
+      "sha256": "46c51c287065eb0a09a1f5dcd9998da6811ebfb7dc202ace1290363daad1ce3e",
+      "previousLock": "commit 4efdfac"
     },
     {
       "id": "voice-sample",
-      "state": "done — listening approval pending",
+      "state": "approved by the account owner by ear (2026-10-08)",
       "out": [
         "audio/sample-opening-HrfUk50jzsIpabKe1W1S.mp3",
         "audio/sample-notes.json"
@@ -39,16 +40,16 @@
     },
     {
       "id": "storyboard",
-      "state": "done",
+      "state": "updated for the recorded wording; on-screen strings 46 (adds «وحده؟», «تصحيح مهم», «كيف تحمي قرارك؟», «نعم»)",
       "out": [
         "storyboard.json",
         "src/copy.ts"
       ],
-      "check": "node tools/copycheck.mjs (passes); review/arabic-copy-check.json (0 errors, 0 warnings)"
+      "check": "node tools/copycheck.mjs (passes); node tools/arabic-check.mjs → review/arabic-copy-check.json (46 strings, 0 errors, 0 warnings)"
     },
     {
       "id": "scenes",
-      "state": "built on the provisional timeline; reviewed by stills",
+      "state": "re-keyed to the recorded words (tools/beatcheck.py: all resolve). Review on the measured timeline found empty frames and long holds where the real phrasing is longer than the provisional estimate; fixed with word-keyed beats in sc02–sc08 (see storyboard motion). tools/scan.mjs (a frame every 0.5 s): no near-empty frame left except the 0.3 s handover in sc04 and frame 0; longest hold without a detected change 4.5 s (sc07, with small pulses inside)",
       "out": [
         "src/scenes/sc01.tsx … sc08.tsx",
         "src/sfx.tsx"
@@ -73,17 +74,79 @@
     },
     {
       "id": "full-take",
-      "state": "blocked on sample approval",
-      "plan": "ONE generation: eleven_v4, voice dlGxemPxFMTY7iXagmOj, generations_count 1, spoken script only; repair only a defective line, never regenerate the whole take on resume"
+      "state": "adopted (owner chose option B: the recorded text became the locked script)",
+      "plan": "ONE generation: eleven_v4, voice dlGxemPxFMTY7iXagmOj, generations_count 1, spoken script only; repair only a defective line, never regenerate the whole take on resume",
+      "generation": {
+        "flow_id": "dV24FZQgvDThgLmjDXYo",
+        "node_id": "SXT2jfNoL0xk25A0MX2m",
+        "session_id": "vOszWknPrB0pHiowNfs6",
+        "model_id": "eleven_v4",
+        "voice_id": "dlGxemPxFMTY7iXagmOj",
+        "generations_count": 1,
+        "prompt": "script.json segments joined by newline (2668 chars, identical to the priced prompt)",
+        "generation_id": "fzjITWRAzial3C3ezAkg"
+      },
+      "out": [
+        "audio/take-full-fzjITWRAzial3C3ezAkg.mp3"
+      ],
+      "sha256": "09f9a60426f6ff00048886064b893e7e1a37f51b9321e6a75a77e0e7fc449ced",
+      "measured": {
+        "duration_s": 228.598,
+        "format": "mp3 44.1 kHz mono 128 kb/s"
+      },
+      "problem": "The prompt sent was typed into the call instead of read from script.json. It differs from the locked script in 28 of 37 lines (s07–s27, s29–s35; identical: s01–s06, s28, s36, s37); 2604 chars instead of 2668. Exact text sent: audio/take-full.prompt.txt. The alignment against script.json was undone (outputs moved out of the package).",
+      "options": [
+        "A: regenerate once from script.json (estimate 2668 credits)",
+        "B: adopt the recorded text as the locked script, after a content check, and re-key the scenes (0 credits)"
+      ],
+      "optionB_check": {
+        "contentRules": "recorded text checked against research/notes.md: no invented quotes/pages/percentages, no experiment attributed to Cialdini, water demonstration unattributed, examples hypothetical in dollars, no anchoring. One nuance: s10 «وفكرة اليوم واحدة منها» files the contrast principle among the mental shortcuts; the book presents it as a principle of perception that persuaders use (the locked line was more careful).",
+        "alignment": "438 of 453 recorded-text words matched by Whisper; mismatches mostly spelling variants",
+        "checkByEar": {
+          "متجر (heard مجر)": "21.2 s",
+          "أوعية (heard أوعيات)": "64.2 s",
+          "اليدين (heard يدين)": "72.6 s",
+          "الأغلى (heard الأغلة)": "140.4 s",
+          "انتبه (heard انت)": "141.8 s",
+          "الستون (heard ستون)": "157.1 s"
+        },
+        "measured": "228.6 s take → episode 240.3 s; −17.1 LUFS, peak −2.2 dBFS; 122 wpm overall",
+        "onScreenChanges": "sc06 «وحدها؟» → «وحده؟» (the case, masculine, as spoken); re-key ~6 beat words"
+      }
     },
     {
       "id": "alignment",
-      "state": "pending (tool ready and dry-run tested on the sample)",
-      "tool": "tools/align.py"
+      "state": "done",
+      "tool": "tools/align.py",
+      "measured": {
+        "totalSeconds": 240.32,
+        "frames": 14419,
+        "speechSeconds": 228.32,
+        "gainDb": 1.1,
+        "beats": {
+          "s04": 1.0,
+          "s07": 1.0,
+          "s11": 1.5,
+          "s17": 1.0,
+          "s25": 1.0,
+          "s30": 1.0,
+          "s35": 1.0
+        }
+      },
+      "whisper": "438 of 453 words matched; 15 mismatches are spelling variants or words to check by ear (see full-take.optionB_check.checkByEar)",
+      "out": [
+        "timeline.json",
+        "src/words.json",
+        "src/captions.json",
+        "public/voice/s01–s37.wav",
+        "render/captions.ar.srt",
+        "audio/alignment.json"
+      ]
     },
     {
       "id": "full-render",
-      "state": "pending"
+      "state": "rendering",
+      "command": "REMOTION_CHROME=… npx remotion render src/index.ts Episode render/fikra-01.mp4 --audio-codec=aac --audio-bitrate=192k --concurrency=4"
     },
     {
       "id": "review-reel",
@@ -110,21 +173,29 @@
         "credits": 147,
         "generation_id": "HrfUk50jzsIpabKe1W1S",
         "flow_id": "dV24FZQgvDThgLmjDXYo"
+      },
+      {
+        "what": "full take (s01–s37)",
+        "credits": 2604,
+        "session_id": "vOszWknPrB0pHiowNfs6",
+        "generation_id": "fzjITWRAzial3C3ezAkg",
+        "price_usd": 0.2604
       }
     ],
-    "elevenlabsSpent": 147,
+    "elevenlabsSpent": 2751,
     "elevenlabsEstimateFullTake": {
       "credits": 2668,
-      "basis": "connector estimate_only on the locked script, generations_count 1; not yet spent"
+      "basis": "connector estimate_only on the locked script, generations_count 1; not yet spent",
+      "spent": 2604
     },
     "elevenlabsBalance": "غير متاح (not visible to this session)",
     "contextAndQuota": "غير متاح (this session cannot read its own context or plan quota)"
   },
   "timeline": {
     "file": "timeline.json",
-    "provisional": true,
-    "totalSeconds": 265.354,
-    "basis": "real word times for s01–s03 from the sample; the rest estimated at the sample's measured pace (1.83 words/s). Final duration follows the full take."
+    "provisional": false,
+    "totalSeconds": 240.32,
+    "frames": 14419
   },
   "git": {
     "branch": "fikra-01 (local only)",

@@ -26,7 +26,7 @@ const cues = (): Cue[] => [
   // sc07 — the three steps
   ['pageflip', sceneStart('sc07'), 0.1], ['pop', wordAt('s31', 'الحاجة'), 0.12], ['scribble', wordAt('s32', 'معيار'), 0.07], ['pageflip', wordAt('s33', 'القرار'), 0.12], ['pop', wordAt('s34', 'تجربة'), 0.12],
   // sc08 — the close
-  ['tick', wordAt('s35', 'نفسها'), 0.14], ['chime', TL.durationInFrames - sec(3), 0.12],
+  ['tick', wordAt('s35', 'والسعر'), 0.14], ['chime', TL.durationInFrames - sec(3), 0.12],
 ];
 
 export const Sfx: React.FC = () => (

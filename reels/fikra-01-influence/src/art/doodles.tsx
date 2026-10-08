@@ -1,4 +1,5 @@
 import React from 'react';
+import { getLength, getPointAtLength } from '@remotion/paths';
 import { TITLE_FONT, BODY_FONT } from '../fonts';
 import { draw, STROKE } from '../motion';
 import { C } from '../theme';
@@ -97,10 +98,12 @@ export const Bubble: React.FC<P & { w?: number; h?: number; fill?: string; thoug
 );
 
 /** An original descriptive book card (not the cover): spine strip, title, subtitle, author. */
-export const BookCard: React.FC<P & { title: string; subtitle: string; author: string }> = ({ title, subtitle, author, ...g }) => (
+export const BookCard: React.FC<P & { title: string; subtitle: string; author: string; marks?: [number, number, number] }> = ({ title, subtitle, author, marks = [0, 0, 0], ...g }) => (
   <G {...g}>
     <rect x={-200} y={-280} width={400} height={560} rx={18} fill={C.paper} stroke={C.ink} strokeWidth={7} />
     <rect x={140} y={-280} width={60} height={560} rx={10} fill={C.coverBlue} stroke={C.ink} strokeWidth={7} />
+    {/* highlighter strokes under each line as it is named (drawn right to left, the reading direction) */}
+    {([[120, -170, -48, 30], [120, -170, 50, 22], [100, -150, 196, 20]] as const).map(([x1, x2, y, w], i) => marks[i] > 0 && <path key={i} d={`M ${x1} ${y} L ${x2} ${y}`} stroke={C.blue} strokeOpacity={0.22} strokeWidth={w} strokeLinecap="round" {...draw(marks[i])} />)}
     <path d="M -150 -150 L 100 -150" stroke={C.coverBlue} strokeWidth={10} strokeLinecap="round" />
     <ArText x={-25} y={-60} size={96} color={C.ink} weight={900}>{title}</ArText>
     <ArText x={-25} y={40} size={40} color={C.coverBlue} weight={800}>{subtitle}</ArText>
@@ -110,12 +113,20 @@ export const BookCard: React.FC<P & { title: string; subtitle: string; author: s
 );
 
 /** A long winding path and the straight shortcut across it (mental shortcut). */
-export const PathShortcut: React.FC<P & { pLong: number; pShort: number; warn: number }> = ({ pLong, pShort, warn, ...g }) => (
+const LONG_PATH = 'M -380 120 C -300 -140, -160 160, -60 -40 S 160 160, 240 -60 S 360 40, 380 -110';
+const LONG_LEN = getLength(LONG_PATH);
+/** `race` 0→1: a dot crosses the shortcut in the first third while another crawls the whole long way. */
+export const PathShortcut: React.FC<P & { pLong: number; pShort: number; warn: number; fadeLong?: number; race?: number }> = ({ pLong, pShort, warn, fadeLong = 0, race = 0, ...g }) => (
   <G {...g}>
-    <path d="M -380 120 C -300 -140, -160 160, -60 -40 S 160 160, 240 -60 S 360 40, 380 -110" {...STROKE} strokeWidth={10} stroke={C.line} strokeDasharray="1 1" pathLength={1} strokeDashoffset={1 - pLong} />
+    <path d="M -380 120 C -300 -140, -160 160, -60 -40 S 160 160, 240 -60 S 360 40, 380 -110" {...STROKE} strokeWidth={10} stroke={C.line} strokeDasharray="1 1" pathLength={1} strokeDashoffset={1 - pLong} opacity={1 - 0.6 * fadeLong} />
+    <path d={LONG_PATH} {...STROKE} strokeWidth={10} stroke={C.line} opacity={0} />
     <path d="M -380 120 L 380 -110" {...STROKE} strokeWidth={12} stroke={C.blue} {...draw(pShort)} />
     <circle cx={-380} cy={120} r={18} fill={C.ink} />
     <circle cx={380} cy={-110} r={18} fill={C.green} stroke={C.ink} strokeWidth={5} opacity={pShort > 0.95 ? 1 : 0} />
+    {race > 0 && race < 1 && (() => {
+      const q = getPointAtLength(LONG_PATH, LONG_LEN * race) ?? { x: 380, y: -110 }, s = Math.min(1, race * 3);
+      return <><circle cx={q.x} cy={q.y} r={14} fill={C.inkSoft} /><circle cx={-380 + 760 * s} cy={120 - 230 * s} r={16} fill={C.blue} stroke={C.ink} strokeWidth={4} /></>;
+    })()}
     <g transform="translate(40 4)" opacity={warn}>
       <circle r={46} fill={C.red} stroke={C.ink} strokeWidth={6} />
       <path d="M 0 -22 L 0 6" stroke={C.white} strokeWidth={10} strokeLinecap="round" />
