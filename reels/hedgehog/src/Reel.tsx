@@ -315,6 +315,8 @@ const World: React.FC = () => {
 // ---------------------------------------------------------------------------
 // Words: titles and labels (the approved copy), captions (the locked script).
 // ---------------------------------------------------------------------------
+const HOOK_END = sec(3) + 9; // Title holds full until to − 8, so 3 s fully on screen
+
 const Captions: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / TL.fps;
@@ -332,7 +334,9 @@ const Captions: React.FC = () => {
 
 const Texts: React.FC = () => (
   <AbsoluteFill>
-    <Title text={`معضلة {${C.amber}|القنفذ}`} from={0} to={F.s2 - 2} size={132} pop />
+    {/* the hook, fully visible for the first 3 s (frames 0–91) while the hedgehogs keep moving; then the name */}
+    <Title text={`كل ما تقرّب…\n{${C.red}|تنجرح؟}`} from={0} to={HOOK_END} size={128} pop />
+    <Title text={`معضلة {${C.amber}|القنفذ}`} from={HOOK_END} to={F.s2 - 2} size={132} />
     <Pill text="حكاية فلسفية لشوبنهاور" x={540} y={470} bg={C.violet} from={B.book} to={F.s2 - 2} size={48} w={620} />
     <Pill text="برد" x={540} y={520} bg={C.blue} from={B.cold} to={B.huddle + 10} size={64} w={240} />
     <Pill text="وخز" x={540} y={520} bg={C.red} from={B.prick} to={F.s3 - 2} size={64} w={240} />

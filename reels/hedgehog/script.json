@@ -68,6 +68,11 @@
   "onScreen": [
     {
       "scene": 1,
+      "role": "hook",
+      "text": "كل ما تقرّب… تنجرح؟"
+    },
+    {
+      "scene": 1,
       "role": "title",
       "text": "معضلة القنفذ"
     },
