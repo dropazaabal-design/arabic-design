@@ -1,57 +1,70 @@
 {
-  "id": "kitabwbs_nadeem",
-  "name": "نديم — صوت كتاب وبس",
-  "status": "trial — used in reels/hedgehog, pending the account owner's listening review; not an approved identity yet",
-  "provider": "ElevenLabs (hosted), through the claude.ai ElevenLabs connector",
-  "voice_id": "dlGxemPxFMTY7iXagmOj",
-  "voice_name_from_service": "Fernando Martínez - Rapid, Persuasive",
-  "voice_labels_from_service": {
-    "category": "professional",
-    "language": "es",
-    "accent": "latin american",
-    "gender": "male",
-    "age": "middle_aged",
-    "use_case": "narrative_story",
-    "descriptive": "casual"
-  },
+ "id": "kitabwbs_nadeem",
+ "name": "نديم — صوت كتاب وبس",
+ "status": "trial — used in reels/hedgehog and reels/spotlight, pending the account owner's listening review; not an approved identity yet",
+ "provider": "ElevenLabs (hosted), through the claude.ai ElevenLabs connector",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "voice_name_from_service": "Fernando Martínez - Rapid, Persuasive",
+ "voice_labels_from_service": {
+  "category": "professional",
+  "language": "es",
+  "accent": "latin american",
+  "gender": "male",
+  "age": "middle_aged",
+  "use_case": "narrative_story",
+  "descriptive": "casual"
+ },
+ "model_id": "eleven_v4",
+ "model_note": "eleven_v4 is listed by the connector for this workspace (creative_get_flow_node_types). Its schema exposes only voice_id and language_code; the connector's speech tool takes model_id, voice_id and the text. No stability, similarity, speed or style settings exist on this path, so none were set or invented.",
+ "generation_settings_used": {
   "model_id": "eleven_v4",
-  "model_note": "eleven_v4 is listed by the connector for this workspace (creative_get_flow_node_types). Its schema exposes only voice_id and language_code; the connector's speech tool takes model_id, voice_id and the text. No stability, similarity, speed or style settings exist on this path, so none were set or invented.",
-  "generation_settings_used": {
-    "model_id": "eleven_v4",
-    "voice_id": "dlGxemPxFMTY7iXagmOj",
-    "language_code": "not set (auto)",
-    "generations_count": 4,
-    "audio_tags": "none",
-    "text": "spoken script only, one line per paragraph, punctuation for pauses",
-    "post": "none besides trimming to the speech and one static gain to -16 LUFS; no speed or pitch change"
+  "voice_id": "dlGxemPxFMTY7iXagmOj",
+  "language_code": "not set (auto)",
+  "generations_count": 4,
+  "audio_tags": "none",
+  "text": "spoken script only, one line per paragraph, punctuation for pauses",
+  "post": "none besides trimming to the speech and one static gain to -16 LUFS; no speed or pitch change"
+ },
+ "performance_direction": "رجل شاب، دافئ وواضح، تعليمي وحواري، مرتاح في الكلام، بوقفات طبيعية وتأكيد خفيف على الكلمات المهمة؛ ابتسامة خفيفة في المزحة وهدوء في الجملة العملية؛ لا نبرة إعلان ولا همس أو تنهّد أو أنفاس مصطنعة. (توجيه نصّي فقط: لم تُستعمل وسوم أداء.)",
+ "caution": "The service labels this voice Spanish (Latin American). It reads Arabic, but with an accent the Whisper check cannot judge; listen before publishing.",
+ "sample": "elevenlabs/sample-opening.mp3 (generation KouJ3UArouDzzF837x3u, eleven_v4); chosen for review, not approved",
+ "used_in": [
+  {
+   "reel": "reels/hedgehog",
+   "flow_id": "0bHwAacpWZzktKTEsmuO",
+   "chosen_generation": "VyC0Arr42nCypJEakXTT",
+   "other_takes": [
+    "MFpeYWqJP4YiBjNYXNCS",
+    "dXqoM2O7LNVzV0TmtURS",
+    "kvurnexRLffXLD9ZjPbs"
+   ],
+   "why": "the take in which Whisper recognised all 36 key words (match 0.89); recognisability only, not a judgement of delivery or accent",
+   "file": "reels/hedgehog/audio/elevenlabs-take-VyC0Arr42nCypJEakXTT.mp3",
+   "script": "reels/hedgehog/script.json",
+   "credits": "4 × 96 (sample) + 4 × 496 (full) as reported by the connector"
   },
-  "performance_direction": "رجل شاب، دافئ وواضح، تعليمي وحواري، مرتاح في الكلام، بوقفات طبيعية وتأكيد خفيف على الكلمات المهمة؛ ابتسامة خفيفة في المزحة وهدوء في الجملة العملية؛ لا نبرة إعلان ولا همس أو تنهّد أو أنفاس مصطنعة. (توجيه نصّي فقط: لم تُستعمل وسوم أداء.)",
-  "caution": "The service labels this voice Spanish (Latin American). It reads Arabic, but with an accent the Whisper check cannot judge; listen before publishing.",
-  "sample": "elevenlabs/sample-opening.mp3 (generation KouJ3UArouDzzF837x3u, eleven_v4); chosen for review, not approved",
-  "used_in": [
-    {
-      "reel": "reels/hedgehog",
-      "flow_id": "0bHwAacpWZzktKTEsmuO",
-      "chosen_generation": "VyC0Arr42nCypJEakXTT",
-      "other_takes": [
-        "MFpeYWqJP4YiBjNYXNCS",
-        "dXqoM2O7LNVzV0TmtURS",
-        "kvurnexRLffXLD9ZjPbs"
-      ],
-      "why": "the take in which Whisper recognised all 36 key words (match 0.89); recognisability only, not a judgement of delivery or accent",
-      "file": "reels/hedgehog/audio/elevenlabs-take-VyC0Arr42nCypJEakXTT.mp3",
-      "script": "reels/hedgehog/script.json",
-      "credits": "4 × 96 (sample) + 4 × 496 (full) as reported by the connector"
-    }
-  ],
-  "evaluation": {
-    "state": "not evaluated by ear",
-    "what_was_checked": "Whisper could transcribe the key words; that only shows the words are recognisable",
-    "what_was_not": "naturalness of the delivery, accent, warmth, fit with the performance direction — the owner judges these by listening"
-  },
-  "generation_policy": {
-    "set_by": "account owner, 2026-10-08",
-    "rule": "start with ONE short sample (generations_count 1); after review, generate the full script once; regenerate only the part with a specific, named problem; never generate four full versions by default",
-    "note": "this overrides the connector's default of 4 variations"
+  {
+   "reel": "reels/spotlight",
+   "flow_id": "cBR72gOfrS2EhpXLl9jW",
+   "sample_generation": "DWqVRSsvr7pHTLhir6pH",
+   "chosen_generation": "mHxF8zOhLWsXpIwtViSJ",
+   "other_takes": [],
+   "generations_count": "1 for the sample, 1 for the full script (per the generation policy)",
+   "why": "the single full take; no line was regenerated. Whisper heard كشاف as «الشاف» and افترضته as «افترته» — spots to check by ear, not proof of a problem",
+   "file": "reels/spotlight/audio/elevenlabs-take-mHxF8zOhLWsXpIwtViSJ.mp3",
+   "script": "reels/spotlight/script.json",
+   "credits": "106 (sample) + 973 (full take) as reported by the connector",
+   "post": "cut per line on real pauses, one shared gain (+1.6 dB) to -16 LUFS, no speed or pitch change; silent beats at scene changes fill the 90 s"
   }
+ ],
+ "evaluation": {
+  "state": "not evaluated by ear",
+  "what_was_checked": "Whisper could transcribe the key words; that only shows the words are recognisable",
+  "what_was_not": "naturalness of the delivery, accent, warmth, fit with the performance direction — the owner judges these by listening"
+ },
+ "generation_policy": {
+  "set_by": "account owner, 2026-10-08",
+  "rule": "start with ONE short sample (generations_count 1); after review, generate the full script once; regenerate only the part with a specific, named problem; never generate four full versions by default",
+  "note": "this overrides the connector's default of 4 variations"
+ }
 }
