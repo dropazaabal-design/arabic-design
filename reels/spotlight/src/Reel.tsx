@@ -45,7 +45,9 @@ const LAMP = { x: 960, y: 96 };
 const WALL_K = 0.92; // the back wall moves a little less than the props
 const FRONT_K = 1.15; // the proscenium a little more
 
-type Cam = { cx: number; cy: number; z: number };
+export type Cam = { cx: number; cy: number; z: number };
+/** A still (the cover) can frame the stage with its own camera; the video leaves this empty. */
+export const CamOverride = React.createContext<Cam | null>(null);
 const CAM = keys([
   [0, 960, 570, 1.38],
   [F.s2 - sec(0.3), 960, 570, 1.45],
@@ -79,7 +81,7 @@ const view = (c: Cam, k = 1) => {
   const z = 1 + (c.z - 1) * k;
   return `translate(${W / 2} ${H / 2}) scale(${z}) translate(${-(W / 2 + (c.cx - W / 2) * k)} ${-(H / 2 + (c.cy - H / 2) * k)})`;
 };
-const toScreen = (c: Cam, x: number, y: number) => [W / 2 + (x - c.cx) * c.z, H / 2 + (y - c.cy) * c.z];
+export const toScreen = (c: Cam, x: number, y: number) => [W / 2 + (x - c.cx) * c.z, H / 2 + (y - c.cy) * c.z];
 /** A point of the main layer expressed in the wall layer, so light and shadow on the wall line up with what casts them. */
 const toWall = (c: Cam, x: number, y: number) => {
   const z = 1 + (c.z - 1) * WALL_K;
@@ -151,7 +153,7 @@ const popIn = (f: number, at: number, until: number): Life => {
 const showing = (f: number, spans: Array<[number, number]>) => spans.map(([a, b]) => popIn(f, a, b)).reduce((m, p) => (p.o > m.o ? p : m), { o: 0, k: 0.6 });
 
 type Bub = { x: number; y: number; s: number; o: number; amp: number };
-const bubbleA = (f: number): Bub => {
+export const bubbleA = (f: number): Bub => {
   const v = showing(f, [[B.bubble, F.s4 - sec(0.15)], [B.talk, F.s6], [F.s7 + sec(0.3), F.end + sec(1)]]);
   // the replay loop over the notebook (scene 2)
   const amp = prog(f, B.loop, sec(0.8), ease.inOut) * (1 - prog(f, F.s3 - sec(1.1), sec(0.9), ease.inOut));
@@ -397,10 +399,10 @@ const Curtains: React.FC<{ t: number }> = ({ t }) => {
   );
 };
 
-const World: React.FC = () => {
+export const World: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
-  const cam = camAt(f);
+  const cam = React.useContext(CamOverride) ?? camAt(f);
   const sp = spotAt(f);
   const a = bubbleA(f);
   const rot = lampAngle(sp);
@@ -457,7 +459,7 @@ const World: React.FC = () => {
   );
 };
 
-const Grain: React.FC = () => (
+export const Grain: React.FC = () => (
   <svg width={W} height={H} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
     <defs>
       <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={5} /><feColorMatrix values="0 0 0 0 0.97  0 0 0 0 0.93  0 0 0 0 0.86  0 0 0 0.07 0" /></filter>

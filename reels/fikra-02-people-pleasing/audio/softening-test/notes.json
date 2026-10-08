@@ -1,0 +1,17 @@
+{
+  "purpose": "test a gentle softening chain on an EXISTING recording before any new generation (owner's note: the voice sounds sharp)",
+  "source": "ep01 full take (generation fzjITWRAzial3C3ezAkg), 0.3–13.5 s; no new voice was generated for this test",
+  "matched": "all three clips gain-matched to -16.0 LUFS integrated (static gain + soft limiter), so the comparison is not a loudness trick",
+  "chains": {
+    "A-stronger": "highpass 70 Hz; peak EQ 3.5 kHz -2 dB (w 1.0); high shelf 7.5 kHz -3 dB; deesser i=0.3 m=0.5",
+    "B-chosen": "highpass 70 Hz; peak EQ 3.5 kHz -1.5 dB (w 1.0); high shelf 8 kHz -2 dB; deesser i=0.15 m=0.4"
+  },
+  "measured_band_share_dB": {
+    "before":   {"2.5-5k": -19.8, "5-9k": -20.5, "9-16k": -22.4, "centroid_Hz": 582, "sibilance_p95_over_median": 20.0},
+    "A":        {"2.5-5k": -22.4, "5-9k": -26.0, "9-16k": -27.8, "centroid_Hz": 438, "sibilance_p95_over_median": 10.8},
+    "B":        {"2.5-5k": -21.5, "5-9k": -23.6, "9-16k": -25.8, "centroid_Hz": 482, "sibilance_p95_over_median": 12.1}
+  },
+  "intelligibility_proxy": "faster-whisper medium recognised the same words in all three clips (including the same pre-existing slip on «بمئتي»)",
+  "choice": "B: gentler on the 5-9 kHz consonant band (-3.1 dB vs -5.5 dB in A) while roughly halving sibilant spikes",
+  "not_proven": "nobody has listened yet; these measurements do not show that the harshness is gone. The original take stays untouched; the chain is applied to a copy."
+}

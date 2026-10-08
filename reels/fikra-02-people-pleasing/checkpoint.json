@@ -1,0 +1,161 @@
+{
+  "episode": "fikra-02-people-pleasing",
+  "updated": "2026-10-08",
+  "resumePoint": "measured timeline in place; next: visual world (src/art/world.tsx) and scenes sc01–sc08 keyed to words",
+  "stages": [
+    {
+      "id": "setup",
+      "state": "done",
+      "note": "branch fikra-02 from origin/main; foundation copied from ep01 (ep01 untouched)"
+    },
+    {
+      "id": "research",
+      "state": "done",
+      "out": [
+        "book.json",
+        "research/notes.md",
+        "palette.json"
+      ],
+      "limits": "Google Play and mayoclinic.org returned 403, Google Books API 429, YouTube page 429; alternatives recorded in research/notes.md; reference video not watched"
+    },
+    {
+      "id": "hooks",
+      "state": "done",
+      "out": [
+        "research/hooks.md"
+      ],
+      "chosen": "#2 + ending of #1"
+    },
+    {
+      "id": "script",
+      "state": "locked",
+      "out": [
+        "script.json",
+        "script.md",
+        "speech/full.txt"
+      ],
+      "words": 432,
+      "speechSha256": "ef45c276df7c1e9bbbdb02f74ca0d444b3bee9c800a96e0aabb7721f7935cc3a"
+    },
+    {
+      "id": "voice-softening-test",
+      "state": "done",
+      "out": [
+        "audio/softening-test/"
+      ],
+      "chosen": "B (gentle EQ + light de-esser), applied to a copy of the take"
+    },
+    {
+      "id": "voice-sample",
+      "state": "done",
+      "generation": {
+        "flow_id": "gps8H6dONDoYwoLXnYt3",
+        "node_id": "TDTtISlFO0SRVc0Vb14T",
+        "session_id": "u8CuULvlT8KVqkVCQyE2",
+        "generation_id": "TBgvy124c6DO9bK7mXGC",
+        "model_id": "eleven_v4",
+        "voice_id": "dlGxemPxFMTY7iXagmOj",
+        "generations_count": 1,
+        "prompt": "speech/prompt-sample.txt",
+        "promptSha256": "9edd459f0db9b6490374db5a46eacb8ef4bbdc56508b5f3651c94618ffaedb23",
+        "settings": "none exposed by the connector; delivery tag [warmly] [calmly] in the text"
+      },
+      "out": [
+        "audio/sample-opening-TBgvy124c6DO9bK7mXGC.mp3",
+        "audio/sample-opening.whisper-words.json"
+      ],
+      "sha256": "c346fc09f7d657ef68b5e8127855f126aaaf0ae249cba3c9615a81cd98044cfc",
+      "echoedPromptIdentical": true,
+      "measured": {
+        "duration_s": 15.12,
+        "wpm": 107,
+        "f0_median_hz": 130,
+        "ep01_sample_f0_hz": 147,
+        "note": "calm tag lowers pitch ~2 st and slows slightly; upper bands 2-5 dB brighter than the ep01 sample → softening chain applied after the take"
+      }
+    },
+    {
+      "id": "full-take",
+      "state": "done — downloaded",
+      "generation": {
+        "flow_id": "gps8H6dONDoYwoLXnYt3",
+        "node_id": "iAKWp03MZRR09b4GS1A4",
+        "session_id": "RZBxYVjxdfdq1sXR7ig8",
+        "generation_id": "fTjpf9jh2jXBhBso0v8B",
+        "model_id": "eleven_v4",
+        "voice_id": "dlGxemPxFMTY7iXagmOj",
+        "generations_count": 1,
+        "prompt": "speech/prompt-full.txt",
+        "promptSha256": "0d51064aef4e65cdfecc8e145459315823ddf6787b7eaba89d15bde3851e4224",
+        "preSendCheck": "tools/check_prompt.py IDENTICAL; estimate 2469 credits = 2469 chars"
+      },
+      "out": [
+        "audio/take-full-fTjpf9jh2jXBhBso0v8B.mp3"
+      ],
+      "sha256": "8f6edbf3adbd2c942d082c4a565c88216a8f5b0db76a6efbff3fce8877221361",
+      "measured": {
+        "duration_s": 208.12,
+        "wpm": 125
+      },
+      "softening": {
+        "chain": "highpass=f=70,equalizer=f=3500:t=q:w=1.0:g=-2,highshelf=f=6500:g=-3.5,deesser=i=0.2:m=0.5:f=0.5:s=o",
+        "appliedTo": "audio/take-full.wav (copy; raw kept as the mp3)",
+        "abClips": "audio/softening-test/ep02-take-before.mp3, ep02-take-after-C.mp3 (12 s, both at -16 LUFS)"
+      }
+    },
+    {
+      "id": "alignment",
+      "state": "done",
+      "whisper": "all 432 words placed; 7 mismatches: 4 spelling variants (كينغ/كينج، رضا/رضى ×2، وقلقًا/وقلق) and 3 to check by ear: «نعم» 114.8 s (heard نعمة), «محجوز» 153.4 s (heard محجوظ), «شيء» 110.0 s (heard شي)",
+      "measured": {
+        "totalSeconds": 222.98,
+        "frames": 13379,
+        "speechSeconds": 207.98,
+        "beats": {
+          "s05": 1.6,
+          "s09": 1.0,
+          "s13": 1.2,
+          "s20": 1.0,
+          "s26": 1.5,
+          "s35": 1.0,
+          "s39": 1.2,
+          "s28": 1.2,
+          "s42": 0.8
+        }
+      },
+      "note": "total 223 s is below the 235–250 s range: the take came in at ~125 wpm; not padded with silence"
+    },
+    {
+      "id": "scenes",
+      "state": "pending"
+    },
+    {
+      "id": "render",
+      "state": "pending"
+    },
+    {
+      "id": "reviews",
+      "state": "pending"
+    }
+  ],
+  "usage": {
+    "elevenlabs": [
+      {
+        "what": "opening sample s01–s04",
+        "credits": 174,
+        "generation_id": "TBgvy124c6DO9bK7mXGC"
+      },
+      {
+        "what": "full take s01–s43",
+        "credits": 2469,
+        "generation_id": "fTjpf9jh2jXBhBso0v8B"
+      }
+    ],
+    "elevenlabsBalance": "غير معروف (not shown by the connector)",
+    "claudeQuota": "غير معروف"
+  },
+  "git": {
+    "branch": "fikra-02 (local)",
+    "pushed": false
+  }
+}
