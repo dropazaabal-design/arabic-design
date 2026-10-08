@@ -318,6 +318,6 @@
     "fonts": "Cairo, Tajawal (SIL Open Font License, via @fontsource)",
     "sfx": "public/sfx — synthesized with FFmpeg in this repository (crab-mentality project); original. Used: scribble, pop, whoosh, tick, pageflip, snap, scrape, click, thud, chime; each cue sits on the same spoken word as its picture beat (src/sfx.tsx), volume 0.07–0.16, about 13 dB under the voice",
     "music": "none",
-    "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (trial identity, pending listening approval)"
+    "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (trial identity); sample approved by ear by the owner; one full take (generation fzjITWRAzial3C3ezAkg)"
   }
 }

@@ -1,7 +1,7 @@
 {
   "episode": "fikra-01-influence",
   "updated": "2026-10-08",
-  "resumePoint": "full render running → render/fikra-01.mp4; if interrupted, re-run the command above (no credits involved). Then review-reel, creative review, reports.",
+  "resumePoint": "episode delivered for the owner's watching and listening; nothing pending that spends credits. Next only on request: line repairs (one line each), thumbnail, publishing (separate permission).",
   "stages": [
     {
       "id": "research",
@@ -49,7 +49,7 @@
     },
     {
       "id": "scenes",
-      "state": "re-keyed to the recorded words (tools/beatcheck.py: all resolve). Review on the measured timeline found empty frames and long holds where the real phrasing is longer than the provisional estimate; fixed with word-keyed beats in sc02–sc08 (see storyboard motion). tools/scan.mjs (a frame every 0.5 s): no near-empty frame left except the 0.3 s handover in sc04 and frame 0; longest hold without a detected change 4.5 s (sc07, with small pulses inside)",
+      "state": "done: re-keyed to the recorded words; empty frames and long holds filled with word-keyed beats; reviewed by stills and tools/scan.mjs",
       "out": [
         "src/scenes/sc01.tsx … sc08.tsx",
         "src/sfx.tsx"
@@ -145,23 +145,37 @@
     },
     {
       "id": "full-render",
-      "state": "rendering",
-      "command": "REMOTION_CHROME=… npx remotion render src/index.ts Episode render/fikra-01.mp4 --audio-codec=aac --audio-bitrate=192k --concurrency=4"
+      "state": "done",
+      "command": "REMOTION_CHROME=… npx remotion render src/index.ts Episode render/fikra-01.mp4 --audio-codec=aac --audio-bitrate=192k --concurrency=4",
+      "out": [
+        "render/fikra-01.mp4"
+      ],
+      "sha256": "11c8bc8ea8691da0f429a98e09a0a03ad71dc3f6e59d520c03e2cb2216921c8c",
+      "bytes": 40534727,
+      "renderSeconds": 3155
     },
     {
       "id": "review-reel",
-      "state": "pending",
-      "note": "run on the final MP4 with the measured duration, 1920×1080, 60 fps"
+      "state": "done",
+      "note": "run on the final MP4 with the measured duration, 1920×1080, 60 fps",
+      "out": [
+        "review/reel-review/"
+      ],
+      "result": "ok true, technical.passed true (1920x1080, 60 fps, 240.32 s, decode), status needs-review; 47 limited-change windows and 7 silences (scene beats, closing hold) flagged for watching"
     },
     {
       "id": "creative-review",
-      "state": "pending"
+      "state": "done (frames + measurements; no real-time watching or listening)",
+      "out": [
+        "review/creative.md"
+      ]
     },
     {
       "id": "reports",
-      "state": "pending",
+      "state": "done",
       "out": [
         "review/technical.md",
+        "review/technical.json",
         "review/creative.md"
       ]
     }
@@ -185,7 +199,7 @@
     "elevenlabsSpent": 2751,
     "elevenlabsEstimateFullTake": {
       "credits": 2668,
-      "basis": "connector estimate_only on the locked script, generations_count 1; not yet spent",
+      "basis": "connector estimate_only on the first-locked script (2668 chars), generations_count 1; the text actually sent was 2604 chars",
       "spent": 2604
     },
     "elevenlabsBalance": "غير متاح (not visible to this session)",
@@ -214,5 +228,13 @@
       "review-reel on render/fikra-01.mp4 (baseera), then the creative review"
     ],
     "ifRejected": "a different voice or model voids the identity approval: make one new short sample and ask again before any full take"
+  },
+  "delivery": {
+    "file": "render/fikra-01.mp4",
+    "bytes": 40534727,
+    "sha256": "11c8bc8ea8691da0f429a98e09a0a03ad71dc3f6e59d520c03e2cb2216921c8c",
+    "spec": "1920x1080, 60/1 constant, 14,419 frames, 240.32 s, H.264 High yuv420p + AAC-LC 48 kHz stereo",
+    "note": "the owner chose the original file; no compressed copy was made (an encode that had started was stopped and deleted)",
+    "published": false
   }
 }
