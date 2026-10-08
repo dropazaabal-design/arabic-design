@@ -41,7 +41,7 @@ export const SC03: React.FC = () => {
   const tilt = mix(0, 22, moved / 4);
   const L = panPos(tilt, -1), R = panPos(tilt, 1);
   const under = prog(f, b.habit - sec(0.1), sec(0.6), ease.inOut);
-  const cx = mix(620, 380, side), cs = mix(1, 0.66, side), cy = mix(540, 520, side);
+  const cx = mix(960, 380, side), cs = mix(1, 0.66, side), cy = mix(540, 520, side);
   return (
     <Stage f={f} dark svg={
       <>
@@ -70,12 +70,12 @@ export const SC03: React.FC = () => {
               return <Chip key={i} x={mix(fx, tx, m)} y={mix(fy, ty, m) - Math.sin(m * Math.PI) * 170} />;
             })}
             {/* what stays on my side */}
-            {[[b.resent, T.sc03.resent, -70], [b.worry, T.sc03.anxiety, 70]].map(([at, t, dx], i) => {
+            {[[b.resent, T.sc03.resent, -40, 0], [b.worry, T.sc03.anxiety, 40, -86]].map(([at, t, dx, dy], i) => {
               const p = prog(f, (at as number) - sec(0.1), sec(0.4), ease.in);
               return p > 0 ? (
-                <g key={i} transform={`translate(${L[0] + (dx as number)} ${mix(L[1] - 300, L[1] - 40, p)})`} opacity={p}>
-                  <rect x={-78} y={-34} width={156} height={68} rx={34} fill={C.red} />
-                  <ArText x={0} y={2} size={36} color={C.white}>{t as string}</ArText>
+                <g key={i} transform={`translate(${L[0] + (dx as number)} ${mix(L[1] - 300, L[1] - 40 + (dy as number), p)})`} opacity={p}>
+                  <rect x={-98} y={-40} width={196} height={80} rx={40} fill={C.red} />
+                  <ArText x={0} y={2} size={44} color={C.white}>{t as string}</ArText>
                 </g>
               ) : null;
             })}

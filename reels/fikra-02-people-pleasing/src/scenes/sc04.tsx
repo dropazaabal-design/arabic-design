@@ -32,6 +32,7 @@ export const SC04: React.FC = () => {
   };
   const intro = prog(f, start, sec(0.5));
   const msg = prog(f, b.back - sec(0.1), sec(0.5), ease.out);
+  const settle = prog(f, b.race - sec(0.5), sec(0.6), ease.inOut);
   const lanes = prog(f, b.race - sec(0.1), sec(1.1), ease.inOut);
   const race = 1 - prog(f, b.needs - sec(0.2), sec(0.5), ease.in);     // the race layer gives way to the planner
   // the red question: steps onto its lane, dashes, hesitates at the imagined disappointment, then reaches «send»
@@ -77,7 +78,7 @@ export const SC04: React.FC = () => {
         )}
         {/* the message, where the race starts */}
         <g opacity={msg * race}>
-          <MsgBubble x={1400} y={190} s={mix(0.8, 1, msg)} text={T.sc04.ask} size={54} />
+          <MsgBubble x={mix(960, 1400, settle)} y={mix(440, 190, settle)} s={mix(0.8, 1, msg) * mix(1.6, 1, settle)} text={T.sc04.ask} size={54} />
         </g>
         {/* the imagined reaction on the red lane */}
         {heart > 0 && <CrackedHeart x={720} y={300} s={mix(0.6, 1.5, heart)} rot={shake} crack={prog(f, b.hope - sec(0.1), sec(0.4))} o={heart} />}

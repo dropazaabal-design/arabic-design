@@ -39,7 +39,7 @@ export const SC08: React.FC = () => {
   const gap = prog(f, b.two - sec(0.15), sec(0.5), ease.out);
   // the closing words over the stage, then one path
   const veil = prog(f, b.before - sec(0.3), sec(0.5), ease.inOut);
-  const words = 1 - prog(f, b.next - sec(0.3), sec(0.4), ease.in);
+  const words = 1 - prog(f, b.s1 - sec(0.45), sec(0.35), ease.in);
   const legs = [prog(f, b.s1 - sec(0.15), sec(0.4), ease.out), prog(f, b.s1 + sec(0.1), b.s2 - b.s1, ease.inOut), prog(f, b.s2 + sec(0.1), b.s3 - b.s2, ease.inOut)];
   const pathOut = prog(f, outro - sec(0.3), sec(0.5), ease.in);
   const nodeIn = (i: number) => prog(f, [b.s1, b.s2, b.s3][i] - sec(0.15), sec(0.35), ease.out);

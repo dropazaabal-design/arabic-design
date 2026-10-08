@@ -33,7 +33,7 @@ export const SC07: React.FC = () => {
   };
   const t = (f - start) / 60;
   // part A — discomfort, then a simple answer
-  const wave = prog(f, b.feel - sec(0.1), sec(0.9), ease.inOut);
+  const wave = prog(f, start + sec(0.25), b.feel + sec(0.6) - start - sec(0.25), ease.inOut);
   const calm = prog(f, b.ok - sec(0.1), sec(1.2), ease.inOut);
   const typing = prog(f, b.may - sec(0.1), sec(0.3), ease.out);
   const answered = prog(f, b.ok - sec(0.1), sec(0.3), ease.out);

@@ -27,7 +27,7 @@ export const SC05: React.FC = () => {
   const f = useEpisodeFrame();
   const start = sceneStart('sc05');
   const b = {
-    fix: wordAt('s20', 'تصحيح'), no: wordAt('s20', 'لا'), every: wordAt('s20', 'لكل'), thing: wordAt('s20', 'شيء'), nor: wordAt('s20', 'ولا'),
+    here: wordAt('s20', 'وهنا'), fix: wordAt('s20', 'تصحيح'), no: wordAt('s20', 'لا'), every: wordAt('s20', 'لكل'), thing: wordAt('s20', 'شيء'), nor: wordAt('s20', 'ولا'),
     req: wordAt('s20', 'طلب'), exploit: wordAt('s20', 'استغلال'),
     sol: wordAt('s21', 'الحل'), clear: wordAt('s21', 'واضح'), yes: wordAt('s21', 'نعم'), auto: wordAt('s21', 'تلقائية'), no2: wordAt('s21', 'لا', 1), angry: wordAt('s21', 'غاضبة'),
     reply: wordAt('s22', 'رد'), yours: wordAt('s22', 'وقتك'), asker: wordAt('s22', 'طلب'),
@@ -37,7 +37,7 @@ export const SC05: React.FC = () => {
   };
   // part A — not «لا» to everything, not suspicion
   const aOut = prog(f, b.sol - sec(0.3), sec(0.4), ease.in);
-  const fix = prog(f, b.fix - sec(0.1), sec(0.25), ease.out);
+  const fix = prog(f, b.here - sec(0.05), sec(0.3), ease.out);
   const up = prog(f, b.no - sec(0.45), sec(0.4), ease.inOut);
   const noGrid = 1 - prog(f, b.req - sec(0.3), sec(0.3));
   const strikeAll = prog(f, b.nor - sec(0.05), sec(0.35), ease.inOut);
@@ -56,6 +56,7 @@ export const SC05: React.FC = () => {
   const clearOnTop = 1 - prog(f, b.when - sec(0.1), sec(0.3));
   // part D — a choice, not a reaction
   const dOut = prog(f, b.help - sec(0.5), sec(0.4), ease.in);
+  const rise = prog(f, b.choice - sec(0.6), sec(0.5), ease.inOut);
   // part E — tomorrow relaxed, instead of today annoyed
   const eIn = prog(f, b.help - sec(0.3), sec(0.6), ease.out);
   const toTom = prog(f, b.tom - sec(0.15), sec(0.6), ease.inOut);
@@ -113,8 +114,8 @@ export const SC05: React.FC = () => {
         )}
         {cOut > 0 && dOut < 1 && (
           <g opacity={1 - dOut}>
-            <Pill x={960} y={290} text={T.sc05.clear} fill={C.green} size={70} o={prog(f, b.clarity - sec(0.1), sec(0.3))} />
-            <Check x={960 - textW(T.sc05.clear, 70) / 2 - 130} y={290} s={1.4} o={prog(f, b.coop - sec(0.1), sec(0.3))} />
+            <Pill x={960} y={mix(500, 290, rise)} text={T.sc05.clear} fill={C.green} size={mix(96, 70, rise)} o={prog(f, b.clarity - sec(0.1), sec(0.3))} />
+            <Check x={960 - textW(T.sc05.clear, mix(96, 70, rise)) / 2 - mix(170, 130, rise)} y={mix(500, 290, rise)} s={mix(1.9, 1.4, rise)} o={prog(f, b.coop - sec(0.1), sec(0.3))} />
             <Strike x={680} y={600} w={textW(T.sc05.reaction, 96) + 40} p={prog(f, b.react + sec(0.35), sec(0.3))} rot={-4} />
           </g>
         )}

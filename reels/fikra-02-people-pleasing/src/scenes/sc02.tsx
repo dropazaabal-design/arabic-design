@@ -81,7 +81,12 @@ export const SC02: React.FC = () => {
         )}
         {cIn > 0 && (
           <g opacity={cIn}>
-            <Check x={1560} y={170} s={1.3} o={prog(f, b.help - sec(0.1), sec(0.4))} />
+            {/* helping itself: a green block with a check, which steps aside for the pile of «حاضر» */}
+            <g opacity={prog(f, b.help - sec(0.1), sec(0.4)) * (1 - prog(f, b.agree - sec(0.4), sec(0.4)))} transform={`translate(960 ${mix(560, 640, prog(f, b.agree - sec(0.4), sec(0.4)))})`}>
+              <rect x={-260} y={-90} width={520} height={180} rx={26} fill={C.green} filter="url(#lift)" />
+              <ArText x={0} y={2} size={80} color={C.white}>{T.sc02.help}</ArText>
+              <Check x={250} y={-80} s={mix(0.4, 1.4, prog(f, b.not - sec(0.1), sec(0.35), ease.out))} color={C.blue} />
+            </g>
             {stack.map((at, i) => {
               const p = prog(f, at - sec(0.1), sec(0.35), ease.in);
               return p > 0 ? <MsgBubble key={i} x={960 + i * 14} y={mix(-100, 900 - i * 112, p)} rot={(i % 2 ? 1 : -1) * (2 + i * 1.6)} text={T.sc02.yes} size={58} fill={C.red} color={C.white} stroke={C.ink} tail="out" /> : null;
@@ -93,12 +98,12 @@ export const SC02: React.FC = () => {
       {/* part B words, large */}
       {bIn > 0 && bOut < 1 && (
         <div style={{ position: 'absolute', inset: 0, opacity: bIn * (1 - bOut) }}>
-          <Headline text={T.sc02.no} f={f} at={b.two - sec(0.1)} x={noX} y={420} w={300} size={220} color={f >= b.no - sec(0.05) ? C.blue : '#B9C3CF'} />
-          <Headline text={T.sc02.yes} f={f} at={b.two - sec(0.1)} x={yesX} y={420} w={360} size={190} color={f >= b.yes2 - sec(0.05) ? C.red : '#E9B7BC'} />
+          <Headline text={T.sc02.no} f={f} at={b.ep + sec(0.2)} x={noX} y={420} w={300} size={220} color={f >= b.no - sec(0.05) ? C.blue : '#B9C3CF'} />
+          <Headline text={T.sc02.yes} f={f} at={b.ep + sec(0.35)} x={yesX} y={420} w={360} size={190} color={f >= b.yes2 - sec(0.05) ? C.red : '#E9B7BC'} />
         </div>
       )}
       {bIn > 0 && bOut < 1 && <Label text={T.sc02.pause} f={f} at={b.small - sec(0.1)} until={b.help - sec(0.3)} x={960} y={800} size={52} bg={C.blue} />}
-      <Headline text={T.sc02.helpOk} f={f} at={b.not - sec(0.1)} x={880} y={130} w={1200} size={84} color={C.ink} />
+      <Headline text={T.sc02.helpOk} f={f} at={b.help} x={880} y={130} w={1200} size={84} color={C.ink} />
       <Label text={T.sc02.again} f={f} at={b.m1} x={1430} y={600} size={50} bg={C.ink} />
       <Label text={T.sc02.cant} f={f} at={b.cant - sec(0.1)} x={530} y={560} size={54} bg={C.red} />
       <Label text={T.sc02.dontWant} f={f} at={b.want - sec(0.1)} x={530} y={700} size={54} bg={C.red} />
