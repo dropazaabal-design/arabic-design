@@ -1,0 +1,147 @@
+{
+  "episode": "fikra-01-influence",
+  "updated": "2026-10-08",
+  "resumePoint": "waiting for the account owner's listening approval of audio/sample-opening-HrfUk50jzsIpabKe1W1S.mp3; nothing past this point may spend credits",
+  "stages": [
+    {
+      "id": "research",
+      "state": "done",
+      "out": [
+        "book.json",
+        "research/notes.md"
+      ]
+    },
+    {
+      "id": "palette",
+      "state": "done",
+      "out": [
+        "palette.json"
+      ]
+    },
+    {
+      "id": "script",
+      "state": "locked",
+      "lockedOn": "2026-10-08",
+      "out": [
+        "script.json",
+        "script.md"
+      ],
+      "sha256": "e0253b19d0ce64d47c1a53b79fc04df0203ef3cce964a3b3d929224c31659cba"
+    },
+    {
+      "id": "voice-sample",
+      "state": "done — listening approval pending",
+      "out": [
+        "audio/sample-opening-HrfUk50jzsIpabKe1W1S.mp3",
+        "audio/sample-notes.json"
+      ],
+      "sha256": "8c9a0c3077822bc5a160d9f4c14225109ba82db185758d8f641f7471f26f8f36"
+    },
+    {
+      "id": "storyboard",
+      "state": "done",
+      "out": [
+        "storyboard.json",
+        "src/copy.ts"
+      ],
+      "check": "node tools/copycheck.mjs (passes); review/arabic-copy-check.json (0 errors, 0 warnings)"
+    },
+    {
+      "id": "scenes",
+      "state": "built on the provisional timeline; reviewed by stills",
+      "out": [
+        "src/scenes/sc01.tsx … sc08.tsx",
+        "src/sfx.tsx"
+      ]
+    },
+    {
+      "id": "opening-preview",
+      "state": "done",
+      "out": [
+        "render/preview-opening.mp4"
+      ],
+      "spec": "frames 0–959 (16 s), 1920×1080, 60 fps, H.264 + AAC, sample voice + SFX",
+      "sha256": "7ecec4bef4842bcceed79300b743c14e741b0f59713ed595f2c8d1139ee2585d",
+      "verified": {
+        "ffprobe": "960 frames, 60/1 constant (0 irregular frame deltas), H.264 High yuv420p, AAC LC 48 kHz stereo 192 kb/s",
+        "loudness": "−17.1 LUFS integrated, peak −5.4 dBFS (sample voice + SFX)",
+        "sfx": "onsets measured on their words: 1.12, 4.8, 6.76, 11.18, 14.7 s; about 13 dB under the voice",
+        "stillness": "longest still stretch ~1.4 s (13.2–14.7 s) once the line boil is excluded",
+        "silence": "14.9–16.0 s: the sample ends at 14.4 s; the full take fills it",
+        "notListened": "no human has listened to the preview yet"
+      }
+    },
+    {
+      "id": "full-take",
+      "state": "blocked on sample approval",
+      "plan": "ONE generation: eleven_v4, voice dlGxemPxFMTY7iXagmOj, generations_count 1, spoken script only; repair only a defective line, never regenerate the whole take on resume"
+    },
+    {
+      "id": "alignment",
+      "state": "pending (tool ready and dry-run tested on the sample)",
+      "tool": "tools/align.py"
+    },
+    {
+      "id": "full-render",
+      "state": "pending"
+    },
+    {
+      "id": "review-reel",
+      "state": "pending",
+      "note": "run on the final MP4 with the measured duration, 1920×1080, 60 fps"
+    },
+    {
+      "id": "creative-review",
+      "state": "pending"
+    },
+    {
+      "id": "reports",
+      "state": "pending",
+      "out": [
+        "review/technical.md",
+        "review/creative.md"
+      ]
+    }
+  ],
+  "usage": {
+    "elevenlabs": [
+      {
+        "what": "opening sample (s01–s03)",
+        "credits": 147,
+        "generation_id": "HrfUk50jzsIpabKe1W1S",
+        "flow_id": "dV24FZQgvDThgLmjDXYo"
+      }
+    ],
+    "elevenlabsSpent": 147,
+    "elevenlabsEstimateFullTake": {
+      "credits": 2668,
+      "basis": "connector estimate_only on the locked script, generations_count 1; not yet spent"
+    },
+    "elevenlabsBalance": "غير متاح (not visible to this session)",
+    "contextAndQuota": "غير متاح (this session cannot read its own context or plan quota)"
+  },
+  "timeline": {
+    "file": "timeline.json",
+    "provisional": true,
+    "totalSeconds": 265.354,
+    "basis": "real word times for s01–s03 from the sample; the rest estimated at the sample's measured pace (1.83 words/s). Final duration follows the full take."
+  },
+  "git": {
+    "branch": "fikra-01 (local only)",
+    "pushed": false,
+    "note": "no push, PR, YouTube upload or asset publishing without a separate permission"
+  },
+  "resume": {
+    "afterApproval": [
+      "generate the full take once (ElevenLabs creative_generate_speech, eleven_v4, voice dlGxemPxFMTY7iXagmOj, generations_count 1, spoken text of script.json); save as audio/take-full.mp3 with its generation id and credits in this file",
+      "ffmpeg -i audio/take-full.mp3 -ar 48000 -ac 1 audio/take-full.wav",
+      "python tools/words.py audio/take-full.wav audio/take-full.whisper-words.json   # faster-whisper medium, needs a venv with faster-whisper",
+      "python3 tools/align.py audio/take-full.wav audio/take-full.whisper-words.json --lead 0.5 --hold 4.0",
+      "npx tsc --noEmit -p . && node tools/copycheck.mjs",
+      "REMOTION_CHROME=… node tools/stills.mjs OUT review 2s 20s …   # stills per scene",
+      "REMOTION_CHROME=… npx remotion render src/index.ts Episode render/fikra-01.mp4 --audio-codec=aac --audio-bitrate=192k",
+      "review-reel on render/fikra-01.mp4 (baseera), then the creative review"
+    ],
+    "ifRejected": "a different voice or model voids the identity approval: make one new short sample and ask again before any full take"
+  }
+}

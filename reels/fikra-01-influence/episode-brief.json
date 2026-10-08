@@ -1,0 +1,16 @@
+{
+  "series": "فكرة من كتاب",
+  "brand": "كتاب وبس",
+  "episode": 1,
+  "workingTitle": "لماذا تقول «نعم» وأنت غير مقتنع؟",
+  "book": "book.json",
+  "formula": { "book": "التأثير: علم نفس الإقناع", "idea": "مبدأ التباين", "problem": "نوافق على سعر أو عرض لأن ما قبله غيّر إحساسنا به", "application": "الحاجة ← معيار مستقل ← القرار" },
+  "promise": "يفهم المشاهد لماذا يتغيّر حكمه بحسب ما عُرض قبله، ويجرّب خطوات القرار الثلاث.",
+  "format": { "platform": "YouTube", "orientation": "landscape", "width": 1920, "height": 1080, "fps": 60, "container": "mp4", "video": "h264", "audio": "aac" },
+  "duration": { "target": 240, "range": [180, 300], "rule": "the measured recording decides; no padding, no speed or pitch change", "measured": null },
+  "fpsNote": "60 fps from the start (owner override of the 30 fps default in the creative direction document); motion defined in seconds",
+  "style": { "doodle": 0.45, "motionGraphics": 0.25, "kineticType": 0.2, "collage": 0.1, "note": "direction, not per-second quotas" },
+  "rules": ["no faces, people or presenter", "no lyrical music", "Arabic only inside the picture, digits 0–9", "prices are hypothetical and labelled as such on screen", "no cover image in the video; an original descriptive book card", "1–2 strong accents per shot"],
+  "voice": { "identity": "kitabwbs_nadeem (trial)", "provider": "ElevenLabs via the claude.ai connector", "voice_id": "dlGxemPxFMTY7iXagmOj", "model_id": "eleven_v4", "parameters_available": ["voice_id", "language_code (flow nodes only; not set)"], "policy": "one opening sample → owner listens → one full take → fix only a named defect" },
+  "references": "creative_direction_youtube_books_ar (owner's document, read in full); claude-fikra-min-kitab-episode-01 (owner's production brief)"
+}

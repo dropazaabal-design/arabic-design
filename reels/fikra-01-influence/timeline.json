@@ -1,0 +1,334 @@
+{
+ "sampleAudio": {
+  "file": "audio/sample-opening.mp3",
+  "at": 0.5,
+  "note": "preview only: the opening sample under s01–s03"
+ },
+ "provisional": true,
+ "note": "estimated except s01–s03 (from the opening sample); replace with tools/align.py after the full take",
+ "fps": 60,
+ "width": 1920,
+ "height": 1080,
+ "totalSeconds": 265.354,
+ "durationInFrames": 15921,
+ "paceWordsPerSecond": 1.827,
+ "segments": [
+  {
+   "id": "s01",
+   "sceneId": "sc01",
+   "start": 0.5,
+   "duration": 3.92,
+   "provisional": false
+  },
+  {
+   "id": "s02",
+   "sceneId": "sc01",
+   "start": 4.42,
+   "duration": 3.76,
+   "provisional": false
+  },
+  {
+   "id": "s03",
+   "sceneId": "sc01",
+   "start": 8.18,
+   "duration": 6.0,
+   "provisional": false
+  },
+  {
+   "id": "s04",
+   "sceneId": "sc02",
+   "start": 15.18,
+   "duration": 5.472,
+   "provisional": true
+  },
+  {
+   "id": "s05",
+   "sceneId": "sc02",
+   "start": 20.652,
+   "duration": 11.491,
+   "provisional": true
+  },
+  {
+   "id": "s06",
+   "sceneId": "sc02",
+   "start": 32.143,
+   "duration": 3.831,
+   "provisional": true
+  },
+  {
+   "id": "s07",
+   "sceneId": "sc03",
+   "start": 36.974,
+   "duration": 10.396,
+   "provisional": true
+  },
+  {
+   "id": "s08",
+   "sceneId": "sc03",
+   "start": 47.37,
+   "duration": 12.586,
+   "provisional": true
+  },
+  {
+   "id": "s09",
+   "sceneId": "sc03",
+   "start": 59.956,
+   "duration": 4.925,
+   "provisional": true
+  },
+  {
+   "id": "s10",
+   "sceneId": "sc03",
+   "start": 64.881,
+   "duration": 4.925,
+   "provisional": true
+  },
+  {
+   "id": "s11",
+   "sceneId": "sc04",
+   "start": 71.306,
+   "duration": 7.66,
+   "provisional": true
+  },
+  {
+   "id": "s12",
+   "sceneId": "sc04",
+   "start": 78.966,
+   "duration": 10.397,
+   "provisional": true
+  },
+  {
+   "id": "s13",
+   "sceneId": "sc04",
+   "start": 89.363,
+   "duration": 7.114,
+   "provisional": true
+  },
+  {
+   "id": "s14",
+   "sceneId": "sc04",
+   "start": 96.477,
+   "duration": 4.377,
+   "provisional": true
+  },
+  {
+   "id": "s15",
+   "sceneId": "sc04",
+   "start": 100.854,
+   "duration": 7.661,
+   "provisional": true
+  },
+  {
+   "id": "s16",
+   "sceneId": "sc04",
+   "start": 108.515,
+   "duration": 6.567,
+   "provisional": true
+  },
+  {
+   "id": "s17",
+   "sceneId": "sc05",
+   "start": 116.082,
+   "duration": 2.736,
+   "provisional": true
+  },
+  {
+   "id": "s18",
+   "sceneId": "sc05",
+   "start": 118.818,
+   "duration": 6.566,
+   "provisional": true
+  },
+  {
+   "id": "s19",
+   "sceneId": "sc05",
+   "start": 125.384,
+   "duration": 3.83,
+   "provisional": true
+  },
+  {
+   "id": "s20",
+   "sceneId": "sc05",
+   "start": 129.214,
+   "duration": 4.925,
+   "provisional": true
+  },
+  {
+   "id": "s21",
+   "sceneId": "sc05",
+   "start": 134.139,
+   "duration": 9.85,
+   "provisional": true
+  },
+  {
+   "id": "s22",
+   "sceneId": "sc05",
+   "start": 143.989,
+   "duration": 9.849,
+   "provisional": true
+  },
+  {
+   "id": "s23",
+   "sceneId": "sc05",
+   "start": 153.838,
+   "duration": 8.756,
+   "provisional": true
+  },
+  {
+   "id": "s24",
+   "sceneId": "sc05",
+   "start": 162.594,
+   "duration": 7.113,
+   "provisional": true
+  },
+  {
+   "id": "s25",
+   "sceneId": "sc06",
+   "start": 170.707,
+   "duration": 7.114,
+   "provisional": true
+  },
+  {
+   "id": "s26",
+   "sceneId": "sc06",
+   "start": 177.821,
+   "duration": 2.736,
+   "provisional": true
+  },
+  {
+   "id": "s27",
+   "sceneId": "sc06",
+   "start": 180.557,
+   "duration": 7.661,
+   "provisional": true
+  },
+  {
+   "id": "s28",
+   "sceneId": "sc06",
+   "start": 188.218,
+   "duration": 7.113,
+   "provisional": true
+  },
+  {
+   "id": "s29",
+   "sceneId": "sc06",
+   "start": 195.331,
+   "duration": 8.208,
+   "provisional": true
+  },
+  {
+   "id": "s30",
+   "sceneId": "sc07",
+   "start": 204.539,
+   "duration": 3.831,
+   "provisional": true
+  },
+  {
+   "id": "s31",
+   "sceneId": "sc07",
+   "start": 208.37,
+   "duration": 3.83,
+   "provisional": true
+  },
+  {
+   "id": "s32",
+   "sceneId": "sc07",
+   "start": 212.2,
+   "duration": 12.038,
+   "provisional": true
+  },
+  {
+   "id": "s33",
+   "sceneId": "sc07",
+   "start": 224.238,
+   "duration": 7.661,
+   "provisional": true
+  },
+  {
+   "id": "s34",
+   "sceneId": "sc07",
+   "start": 231.899,
+   "duration": 10.944,
+   "provisional": true
+  },
+  {
+   "id": "s35",
+   "sceneId": "sc08",
+   "start": 243.843,
+   "duration": 5.472,
+   "provisional": true
+  },
+  {
+   "id": "s36",
+   "sceneId": "sc08",
+   "start": 249.315,
+   "duration": 5.472,
+   "provisional": true
+  },
+  {
+   "id": "s37",
+   "sceneId": "sc08",
+   "start": 254.787,
+   "duration": 6.567,
+   "provisional": true
+  }
+ ],
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "speechStart": 0.5,
+   "speechEnd": 14.18,
+   "start": 0.0,
+   "end": 14.68
+  },
+  {
+   "sceneId": "sc02",
+   "speechStart": 15.18,
+   "speechEnd": 35.974,
+   "start": 14.68,
+   "end": 36.474
+  },
+  {
+   "sceneId": "sc03",
+   "speechStart": 36.974,
+   "speechEnd": 69.806,
+   "start": 36.474,
+   "end": 70.556
+  },
+  {
+   "sceneId": "sc04",
+   "speechStart": 71.306,
+   "speechEnd": 115.082,
+   "start": 70.556,
+   "end": 115.582
+  },
+  {
+   "sceneId": "sc05",
+   "speechStart": 116.082,
+   "speechEnd": 169.707,
+   "start": 115.582,
+   "end": 170.207
+  },
+  {
+   "sceneId": "sc06",
+   "speechStart": 170.707,
+   "speechEnd": 203.539,
+   "start": 170.207,
+   "end": 204.039
+  },
+  {
+   "sceneId": "sc07",
+   "speechStart": 204.539,
+   "speechEnd": 242.843,
+   "start": 204.039,
+   "end": 243.343
+  },
+  {
+   "sceneId": "sc08",
+   "speechStart": 243.843,
+   "speechEnd": 261.354,
+   "start": 243.343,
+   "end": 265.354
+  }
+ ]
+}

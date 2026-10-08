@@ -1,0 +1,3243 @@
+[
+{
+"seg": "s01",
+"w": "سماعاتٌ",
+"start": 0.5,
+"end": 1.24,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "بأربعين",
+"start": 1.24,
+"end": 1.9,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "دولارًا…",
+"start": 1.9,
+"end": 2.5,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "قد",
+"start": 3.02,
+"end": 3.08,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "تبدو",
+"start": 3.08,
+"end": 3.42,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "لك",
+"start": 3.42,
+"end": 3.68,
+"provisional": false
+},
+{
+"seg": "s01",
+"w": "غالية.",
+"start": 3.68,
+"end": 4.42,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "ثم",
+"start": 4.42,
+"end": 4.8,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "تظهر",
+"start": 4.8,
+"end": 5.26,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "بجانبها",
+"start": 5.26,
+"end": 6.04,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "سماعاتٌ",
+"start": 6.04,
+"end": 6.86,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "بمئتي",
+"start": 6.86,
+"end": 7.5,
+"provisional": false
+},
+{
+"seg": "s02",
+"w": "دولار.",
+"start": 7.5,
+"end": 8.18,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "وفجأة…",
+"start": 8.18,
+"end": 9.26,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "تبدو",
+"start": 9.26,
+"end": 9.62,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "الأولى",
+"start": 9.62,
+"end": 10.0,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "أخفّ.",
+"start": 10.0,
+"end": 10.58,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "مع",
+"start": 10.58,
+"end": 10.94,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "أن",
+"start": 10.94,
+"end": 11.18,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "سعرها",
+"start": 11.18,
+"end": 11.7,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "لم",
+"start": 11.7,
+"end": 11.92,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "يتغيّر،",
+"start": 11.92,
+"end": 12.6,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "والسماعات",
+"start": 12.6,
+"end": 13.5,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "هي",
+"start": 13.5,
+"end": 13.7,
+"provisional": false
+},
+{
+"seg": "s03",
+"w": "نفسها.",
+"start": 13.7,
+"end": 14.18,
+"provisional": false
+},
+{
+"seg": "s04",
+"w": "ما",
+"start": 15.18,
+"end": 15.727,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "الذي",
+"start": 15.727,
+"end": 16.274,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "تغيّر",
+"start": 16.274,
+"end": 16.822,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "إذن؟",
+"start": 16.822,
+"end": 17.369,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "ليس",
+"start": 17.369,
+"end": 17.916,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "السماعات…",
+"start": 17.916,
+"end": 18.463,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "بل",
+"start": 18.463,
+"end": 19.01,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "ما",
+"start": 19.01,
+"end": 19.558,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "وُضع",
+"start": 19.558,
+"end": 20.105,
+"provisional": true
+},
+{
+"seg": "s04",
+"w": "بجانبها.",
+"start": 20.105,
+"end": 20.652,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "وهذا",
+"start": 20.652,
+"end": 21.199,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "يحدث",
+"start": 21.199,
+"end": 21.746,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "معنا",
+"start": 21.746,
+"end": 22.294,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "أكثر",
+"start": 22.294,
+"end": 22.841,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "مما",
+"start": 22.841,
+"end": 23.388,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "نظن:",
+"start": 23.388,
+"end": 23.935,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "في",
+"start": 23.935,
+"end": 24.482,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "متجر،",
+"start": 24.482,
+"end": 25.03,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "في",
+"start": 25.03,
+"end": 25.577,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "عرضِ",
+"start": 25.577,
+"end": 26.124,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "اشتراك،",
+"start": 26.124,
+"end": 26.671,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "أو",
+"start": 26.671,
+"end": 27.218,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "حين",
+"start": 27.218,
+"end": 27.766,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "نقول",
+"start": 27.766,
+"end": 28.313,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "«نعم»",
+"start": 28.313,
+"end": 28.86,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "لشيءٍ",
+"start": 28.86,
+"end": 29.407,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "لم",
+"start": 29.407,
+"end": 29.954,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "نكن",
+"start": 29.954,
+"end": 30.502,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "مقتنعين",
+"start": 30.502,
+"end": 31.049,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "به",
+"start": 31.049,
+"end": 31.596,
+"provisional": true
+},
+{
+"seg": "s05",
+"w": "تمامًا.",
+"start": 31.596,
+"end": 32.143,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "ثم",
+"start": 32.143,
+"end": 32.69,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "نسأل",
+"start": 32.69,
+"end": 33.238,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "أنفسنا",
+"start": 33.238,
+"end": 33.785,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "لاحقًا:",
+"start": 33.785,
+"end": 34.332,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "لماذا",
+"start": 34.332,
+"end": 34.879,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "وافقتُ",
+"start": 34.879,
+"end": 35.426,
+"provisional": true
+},
+{
+"seg": "s06",
+"w": "أصلًا؟",
+"start": 35.426,
+"end": 35.974,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "في",
+"start": 36.974,
+"end": 37.521,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "كتاب",
+"start": 37.521,
+"end": 38.068,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "«التأثير:",
+"start": 38.068,
+"end": 38.615,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "علم",
+"start": 38.615,
+"end": 39.162,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "نفس",
+"start": 39.162,
+"end": 39.71,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "الإقناع»،",
+"start": 39.71,
+"end": 40.257,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "يشرح",
+"start": 40.257,
+"end": 40.804,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "عالم",
+"start": 40.804,
+"end": 41.351,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "النفس",
+"start": 41.351,
+"end": 41.898,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "الأمريكي",
+"start": 41.898,
+"end": 42.446,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "روبرت",
+"start": 42.446,
+"end": 42.993,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "سيالديني",
+"start": 42.993,
+"end": 43.54,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "أننا",
+"start": 43.54,
+"end": 44.087,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "نعتمد",
+"start": 44.087,
+"end": 44.634,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "على",
+"start": 44.634,
+"end": 45.182,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "اختصاراتٍ",
+"start": 45.182,
+"end": 45.729,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "ذهنية",
+"start": 45.729,
+"end": 46.276,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "لنقرّر",
+"start": 46.276,
+"end": 46.823,
+"provisional": true
+},
+{
+"seg": "s07",
+"w": "بسرعة.",
+"start": 46.823,
+"end": 47.37,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "صدر",
+"start": 47.37,
+"end": 47.918,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "الكتاب",
+"start": 47.918,
+"end": 48.465,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "أول",
+"start": 48.465,
+"end": 49.012,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "مرة",
+"start": 49.012,
+"end": 49.559,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "في",
+"start": 49.559,
+"end": 50.106,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "ثمانينيات",
+"start": 50.106,
+"end": 50.654,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "القرن",
+"start": 50.654,
+"end": 51.201,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "الماضي،",
+"start": 51.201,
+"end": 51.748,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "وجمع",
+"start": 51.748,
+"end": 52.295,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "فيه",
+"start": 52.295,
+"end": 52.842,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "سيالديني",
+"start": 52.842,
+"end": 53.39,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "ما",
+"start": 53.39,
+"end": 53.937,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "درسه",
+"start": 53.937,
+"end": 54.484,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "عن",
+"start": 54.484,
+"end": 55.031,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "الإقناع",
+"start": 55.031,
+"end": 55.578,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "في",
+"start": 55.578,
+"end": 56.126,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "الأبحاث،",
+"start": 56.126,
+"end": 56.673,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "وما",
+"start": 56.673,
+"end": 57.22,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "رصده",
+"start": 57.22,
+"end": 57.767,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "في",
+"start": 57.767,
+"end": 58.314,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "عالم",
+"start": 58.314,
+"end": 58.862,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "البيع",
+"start": 58.862,
+"end": 59.409,
+"provisional": true
+},
+{
+"seg": "s08",
+"w": "والتسويق.",
+"start": 59.409,
+"end": 59.956,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "والاختصارات",
+"start": 59.956,
+"end": 60.503,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "الذهنية",
+"start": 60.503,
+"end": 61.05,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "تفيدنا",
+"start": 61.05,
+"end": 61.598,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "في",
+"start": 61.598,
+"end": 62.145,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "أغلب",
+"start": 62.145,
+"end": 62.692,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "الأوقات…",
+"start": 62.692,
+"end": 63.239,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "لكنها",
+"start": 63.239,
+"end": 63.786,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "قد",
+"start": 63.786,
+"end": 64.334,
+"provisional": true
+},
+{
+"seg": "s09",
+"w": "تُستغَل.",
+"start": 64.334,
+"end": 64.881,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "ومن",
+"start": 64.881,
+"end": 65.428,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "الأفكار",
+"start": 65.428,
+"end": 65.975,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "التي",
+"start": 65.975,
+"end": 66.522,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "يعرضها",
+"start": 66.522,
+"end": 67.07,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "الكتاب،",
+"start": 67.07,
+"end": 67.617,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "فكرةٌ",
+"start": 67.617,
+"end": 68.164,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "يسمّيها:",
+"start": 68.164,
+"end": 68.711,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "مبدأ",
+"start": 68.711,
+"end": 69.258,
+"provisional": true
+},
+{
+"seg": "s10",
+"w": "التباين.",
+"start": 69.258,
+"end": 69.806,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "الفكرة",
+"start": 71.306,
+"end": 71.853,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "ببساطة:",
+"start": 71.853,
+"end": 72.4,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "عقلُنا",
+"start": 72.4,
+"end": 72.947,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "لا",
+"start": 72.947,
+"end": 73.494,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "يقيس",
+"start": 73.494,
+"end": 74.042,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "الأشياء",
+"start": 74.042,
+"end": 74.589,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "بمسطرةٍ",
+"start": 74.589,
+"end": 75.136,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "ثابتة،",
+"start": 75.136,
+"end": 75.683,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "بل",
+"start": 75.683,
+"end": 76.23,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "يقارنها",
+"start": 76.23,
+"end": 76.778,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "بما",
+"start": 76.778,
+"end": 77.325,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "رآه",
+"start": 77.325,
+"end": 77.872,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "قبلها",
+"start": 77.872,
+"end": 78.419,
+"provisional": true
+},
+{
+"seg": "s11",
+"w": "مباشرة.",
+"start": 78.419,
+"end": 78.966,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "جرّب",
+"start": 78.966,
+"end": 79.514,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "هذا",
+"start": 79.514,
+"end": 80.061,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "بنفسك:",
+"start": 80.061,
+"end": 80.608,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ضع",
+"start": 80.608,
+"end": 81.155,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "يدًا",
+"start": 81.155,
+"end": 81.702,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "في",
+"start": 81.702,
+"end": 82.25,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ماءٍ",
+"start": 82.25,
+"end": 82.797,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "بارد،",
+"start": 82.797,
+"end": 83.344,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "والأخرى",
+"start": 83.344,
+"end": 83.891,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "في",
+"start": 83.891,
+"end": 84.438,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ماءٍ",
+"start": 84.438,
+"end": 84.986,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ساخن،",
+"start": 84.986,
+"end": 85.533,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ثم",
+"start": 85.533,
+"end": 86.08,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ضع",
+"start": 86.08,
+"end": 86.627,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "اليدين",
+"start": 86.627,
+"end": 87.174,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "معًا",
+"start": 87.174,
+"end": 87.722,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "في",
+"start": 87.722,
+"end": 88.269,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "ماءٍ",
+"start": 88.269,
+"end": 88.816,
+"provisional": true
+},
+{
+"seg": "s12",
+"w": "فاتر.",
+"start": 88.816,
+"end": 89.363,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "اليد",
+"start": 89.363,
+"end": 89.91,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "التي",
+"start": 89.91,
+"end": 90.458,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "كانت",
+"start": 90.458,
+"end": 91.005,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "في",
+"start": 91.005,
+"end": 91.552,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "البارد",
+"start": 91.552,
+"end": 92.099,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "ستشعر",
+"start": 92.099,
+"end": 92.646,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "بالدفء،",
+"start": 92.646,
+"end": 93.194,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "والتي",
+"start": 93.194,
+"end": 93.741,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "كانت",
+"start": 93.741,
+"end": 94.288,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "في",
+"start": 94.288,
+"end": 94.835,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "الساخن",
+"start": 94.835,
+"end": 95.382,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "ستشعر",
+"start": 95.382,
+"end": 95.93,
+"provisional": true
+},
+{
+"seg": "s13",
+"w": "بالبرودة.",
+"start": 95.93,
+"end": 96.477,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "الماء",
+"start": 96.477,
+"end": 97.024,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "واحد…",
+"start": 97.024,
+"end": 97.571,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "لكن",
+"start": 97.571,
+"end": 98.118,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "الإحساس",
+"start": 98.118,
+"end": 98.666,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "تغيّر",
+"start": 98.666,
+"end": 99.213,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "بحسب",
+"start": 99.213,
+"end": 99.76,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "ما",
+"start": 99.76,
+"end": 100.307,
+"provisional": true
+},
+{
+"seg": "s14",
+"w": "سبقه.",
+"start": 100.307,
+"end": 100.854,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "إذن",
+"start": 100.854,
+"end": 101.402,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "الترتيب",
+"start": 101.402,
+"end": 101.949,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "مهم:",
+"start": 101.949,
+"end": 102.496,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "ما",
+"start": 102.496,
+"end": 103.043,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "تراه",
+"start": 103.043,
+"end": 103.59,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "أولًا",
+"start": 103.59,
+"end": 104.138,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "يصبح",
+"start": 104.138,
+"end": 104.685,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "نقطة",
+"start": 104.685,
+"end": 105.232,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "المقارنة،",
+"start": 105.232,
+"end": 105.779,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "وما",
+"start": 105.779,
+"end": 106.326,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "يأتي",
+"start": 106.326,
+"end": 106.874,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "بعده",
+"start": 106.874,
+"end": 107.421,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "يُقاس",
+"start": 107.421,
+"end": 107.968,
+"provisional": true
+},
+{
+"seg": "s15",
+"w": "عليها.",
+"start": 107.968,
+"end": 108.515,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "وهذا",
+"start": 108.515,
+"end": 109.062,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "اختصارٌ",
+"start": 109.062,
+"end": 109.61,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "مفيد",
+"start": 109.61,
+"end": 110.157,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "في",
+"start": 110.157,
+"end": 110.704,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "الغالب؛",
+"start": 110.704,
+"end": 111.251,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "يجعلنا",
+"start": 111.251,
+"end": 111.798,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "نلاحظ",
+"start": 111.798,
+"end": 112.346,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "الفروق",
+"start": 112.346,
+"end": 112.893,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "بسرعة،",
+"start": 112.893,
+"end": 113.44,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "دون",
+"start": 113.44,
+"end": 113.987,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "حساباتٍ",
+"start": 113.987,
+"end": 114.534,
+"provisional": true
+},
+{
+"seg": "s16",
+"w": "طويلة.",
+"start": 114.534,
+"end": 115.082,
+"provisional": true
+},
+{
+"seg": "s17",
+"w": "والأمر",
+"start": 116.082,
+"end": 116.629,
+"provisional": true
+},
+{
+"seg": "s17",
+"w": "نفسه",
+"start": 116.629,
+"end": 117.176,
+"provisional": true
+},
+{
+"seg": "s17",
+"w": "يحدث",
+"start": 117.176,
+"end": 117.723,
+"provisional": true
+},
+{
+"seg": "s17",
+"w": "مع",
+"start": 117.723,
+"end": 118.27,
+"provisional": true
+},
+{
+"seg": "s17",
+"w": "الأسعار.",
+"start": 118.27,
+"end": 118.818,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "حين",
+"start": 118.818,
+"end": 119.365,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "ترى",
+"start": 119.365,
+"end": 119.912,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "سعر",
+"start": 119.912,
+"end": 120.459,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "أربعين",
+"start": 120.459,
+"end": 121.006,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "دولارًا",
+"start": 121.006,
+"end": 121.554,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "وحده،",
+"start": 121.554,
+"end": 122.101,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "تقارنه",
+"start": 122.101,
+"end": 122.648,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "بما",
+"start": 122.648,
+"end": 123.195,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "في",
+"start": 123.195,
+"end": 123.742,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "جيبك،",
+"start": 123.742,
+"end": 124.29,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "وبما",
+"start": 124.29,
+"end": 124.837,
+"provisional": true
+},
+{
+"seg": "s18",
+"w": "تحتاجه.",
+"start": 124.837,
+"end": 125.384,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "وحين",
+"start": 125.384,
+"end": 125.931,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "تراه",
+"start": 125.931,
+"end": 126.478,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "بجانب",
+"start": 126.478,
+"end": 127.026,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "مئتي",
+"start": 127.026,
+"end": 127.573,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "دولار،",
+"start": 127.573,
+"end": 128.12,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "تقارنه",
+"start": 128.12,
+"end": 128.667,
+"provisional": true
+},
+{
+"seg": "s19",
+"w": "بالمئتين.",
+"start": 128.667,
+"end": 129.214,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "السعر",
+"start": 129.214,
+"end": 129.762,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "ثابت…",
+"start": 129.762,
+"end": 130.309,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "لكن",
+"start": 130.309,
+"end": 130.856,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "نقطة",
+"start": 130.856,
+"end": 131.403,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "المقارنة",
+"start": 131.403,
+"end": 131.95,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "تغيّرت،",
+"start": 131.95,
+"end": 132.498,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "فتغيّر",
+"start": 132.498,
+"end": 133.045,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "إحساسك",
+"start": 133.045,
+"end": 133.592,
+"provisional": true
+},
+{
+"seg": "s20",
+"w": "به.",
+"start": 133.592,
+"end": 134.139,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "تخيّل",
+"start": 134.139,
+"end": 134.686,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "أنك",
+"start": 134.686,
+"end": 135.234,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "دخلت",
+"start": 135.234,
+"end": 135.781,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "لتشتري",
+"start": 135.781,
+"end": 136.328,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "سماعاتٍ",
+"start": 136.328,
+"end": 136.875,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "في",
+"start": 136.875,
+"end": 137.422,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "حدود",
+"start": 137.422,
+"end": 137.97,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "ثلاثين",
+"start": 137.97,
+"end": 138.517,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "دولارًا.",
+"start": 138.517,
+"end": 139.064,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "فيعرض",
+"start": 139.064,
+"end": 139.611,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "عليك",
+"start": 139.611,
+"end": 140.158,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "البائع",
+"start": 140.158,
+"end": 140.706,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "أولًا",
+"start": 140.706,
+"end": 141.253,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "التي",
+"start": 141.253,
+"end": 141.8,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "بمئتين،",
+"start": 141.8,
+"end": 142.347,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "ثم",
+"start": 142.347,
+"end": 142.894,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "التي",
+"start": 142.894,
+"end": 143.442,
+"provisional": true
+},
+{
+"seg": "s21",
+"w": "بأربعين.",
+"start": 143.442,
+"end": 143.989,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "فتخرج",
+"start": 143.989,
+"end": 144.536,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "بالأربعين،",
+"start": 144.536,
+"end": 145.083,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "وأنت",
+"start": 145.083,
+"end": 145.63,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "تشعر",
+"start": 145.63,
+"end": 146.178,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "أنك",
+"start": 146.178,
+"end": 146.725,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "وفّرت",
+"start": 146.725,
+"end": 147.272,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "مئةً",
+"start": 147.272,
+"end": 147.819,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "وستين",
+"start": 147.819,
+"end": 148.366,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "دولارًا…",
+"start": 148.366,
+"end": 148.914,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "مع",
+"start": 148.914,
+"end": 149.461,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "أنك",
+"start": 149.461,
+"end": 150.008,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "دفعت",
+"start": 150.008,
+"end": 150.555,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "عشرة",
+"start": 150.555,
+"end": 151.102,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "دولاراتٍ",
+"start": 151.102,
+"end": 151.65,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "فوق",
+"start": 151.65,
+"end": 152.197,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "ما",
+"start": 152.197,
+"end": 152.744,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "خطّطت",
+"start": 152.744,
+"end": 153.291,
+"provisional": true
+},
+{
+"seg": "s22",
+"w": "له.",
+"start": 153.291,
+"end": 153.838,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "ولهذا",
+"start": 153.838,
+"end": 154.386,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "قد",
+"start": 154.386,
+"end": 154.933,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "يُعرض",
+"start": 154.933,
+"end": 155.48,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "الخيار",
+"start": 155.48,
+"end": 156.027,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "الأغلى",
+"start": 156.027,
+"end": 156.574,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "أولًا.",
+"start": 156.574,
+"end": 157.122,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "لا",
+"start": 157.122,
+"end": 157.669,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "لأنك",
+"start": 157.669,
+"end": 158.216,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "ستشتريه",
+"start": 158.216,
+"end": 158.763,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "بالضرورة…",
+"start": 158.763,
+"end": 159.31,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "بل",
+"start": 159.31,
+"end": 159.858,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "لأن",
+"start": 159.858,
+"end": 160.405,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "ما",
+"start": 160.405,
+"end": 160.952,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "بعده",
+"start": 160.952,
+"end": 161.499,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "سيبدو",
+"start": 161.499,
+"end": 162.046,
+"provisional": true
+},
+{
+"seg": "s23",
+"w": "أخفّ.",
+"start": 162.046,
+"end": 162.594,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "لكن",
+"start": 162.594,
+"end": 163.141,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "انتبه:",
+"start": 163.141,
+"end": 163.688,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "الشعور",
+"start": 163.688,
+"end": 164.235,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "بأن",
+"start": 164.235,
+"end": 164.782,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "الأربعين",
+"start": 164.782,
+"end": 165.33,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "صارت",
+"start": 165.33,
+"end": 165.877,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "رخيصة،",
+"start": 165.877,
+"end": 166.424,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "لا",
+"start": 166.424,
+"end": 166.971,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "يعني",
+"start": 166.971,
+"end": 167.518,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "أن",
+"start": 167.518,
+"end": 168.066,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "شراءها",
+"start": 168.066,
+"end": 168.613,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "مناسبٌ",
+"start": 168.613,
+"end": 169.16,
+"provisional": true
+},
+{
+"seg": "s24",
+"w": "لك.",
+"start": 169.16,
+"end": 169.707,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "مثالٌ",
+"start": 170.707,
+"end": 171.254,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "آخر:",
+"start": 171.254,
+"end": 171.802,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "تشتري",
+"start": 171.802,
+"end": 172.349,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "حاسوبًا",
+"start": 172.349,
+"end": 172.896,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "بتسعمئة",
+"start": 172.896,
+"end": 173.443,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "دولار،",
+"start": 173.443,
+"end": 173.99,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "وقبل",
+"start": 173.99,
+"end": 174.538,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "الدفع",
+"start": 174.538,
+"end": 175.085,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "يُعرض",
+"start": 175.085,
+"end": 175.632,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "عليك",
+"start": 175.632,
+"end": 176.179,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "غطاءٌ",
+"start": 176.179,
+"end": 176.726,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "بستين",
+"start": 176.726,
+"end": 177.274,
+"provisional": true
+},
+{
+"seg": "s25",
+"w": "دولارًا.",
+"start": 177.274,
+"end": 177.821,
+"provisional": true
+},
+{
+"seg": "s26",
+"w": "بعد",
+"start": 177.821,
+"end": 178.368,
+"provisional": true
+},
+{
+"seg": "s26",
+"w": "التسعمئة،",
+"start": 178.368,
+"end": 178.915,
+"provisional": true
+},
+{
+"seg": "s26",
+"w": "تبدو",
+"start": 178.915,
+"end": 179.462,
+"provisional": true
+},
+{
+"seg": "s26",
+"w": "الستون",
+"start": 179.462,
+"end": 180.01,
+"provisional": true
+},
+{
+"seg": "s26",
+"w": "صغيرة.",
+"start": 180.01,
+"end": 180.557,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "لكن",
+"start": 180.557,
+"end": 181.104,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "لو",
+"start": 181.104,
+"end": 181.651,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "رأيتها",
+"start": 181.651,
+"end": 182.198,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "وحدها",
+"start": 182.198,
+"end": 182.746,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "في",
+"start": 182.746,
+"end": 183.293,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "يومٍ",
+"start": 183.293,
+"end": 183.84,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "عادي…",
+"start": 183.84,
+"end": 184.387,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "هل",
+"start": 184.387,
+"end": 184.934,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "كنت",
+"start": 184.934,
+"end": 185.482,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "ستدفع",
+"start": 185.482,
+"end": 186.029,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "ستين",
+"start": 186.029,
+"end": 186.576,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "دولارًا",
+"start": 186.576,
+"end": 187.123,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "في",
+"start": 187.123,
+"end": 187.67,
+"provisional": true
+},
+{
+"seg": "s27",
+"w": "غطاء؟",
+"start": 187.67,
+"end": 188.218,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "وهنا",
+"start": 188.218,
+"end": 188.765,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "تصحيحٌ",
+"start": 188.765,
+"end": 189.312,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "مهم:",
+"start": 189.312,
+"end": 189.859,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "هذا",
+"start": 189.859,
+"end": 190.406,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "لا",
+"start": 190.406,
+"end": 190.954,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "يعني",
+"start": 190.954,
+"end": 191.501,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "أنك",
+"start": 191.501,
+"end": 192.048,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "ساذج،",
+"start": 192.048,
+"end": 192.595,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "ولا",
+"start": 192.595,
+"end": 193.142,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "أن",
+"start": 193.142,
+"end": 193.69,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "كل",
+"start": 193.69,
+"end": 194.237,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "عرضٍ",
+"start": 194.237,
+"end": 194.784,
+"provisional": true
+},
+{
+"seg": "s28",
+"w": "خدعة.",
+"start": 194.784,
+"end": 195.331,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "التباين",
+"start": 195.331,
+"end": 195.878,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "طريقةٌ",
+"start": 195.878,
+"end": 196.426,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "طبيعية",
+"start": 196.426,
+"end": 196.973,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "يعمل",
+"start": 196.973,
+"end": 197.52,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "بها",
+"start": 197.52,
+"end": 198.067,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "الإدراك",
+"start": 198.067,
+"end": 198.614,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "عند",
+"start": 198.614,
+"end": 199.162,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "الجميع.",
+"start": 199.162,
+"end": 199.709,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "المشكلة",
+"start": 199.709,
+"end": 200.256,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "فقط…",
+"start": 200.256,
+"end": 200.803,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "أن",
+"start": 200.803,
+"end": 201.35,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "نترك",
+"start": 201.35,
+"end": 201.898,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "المقارنة",
+"start": 201.898,
+"end": 202.445,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "تختار",
+"start": 202.445,
+"end": 202.992,
+"provisional": true
+},
+{
+"seg": "s29",
+"w": "عنّا.",
+"start": 202.992,
+"end": 203.539,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "فماذا",
+"start": 204.539,
+"end": 205.086,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "تفعل",
+"start": 205.086,
+"end": 205.634,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "في",
+"start": 205.634,
+"end": 206.181,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "المرة",
+"start": 206.181,
+"end": 206.728,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "القادمة؟",
+"start": 206.728,
+"end": 207.275,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "ثلاث",
+"start": 207.275,
+"end": 207.822,
+"provisional": true
+},
+{
+"seg": "s30",
+"w": "خطوات.",
+"start": 207.822,
+"end": 208.37,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "أولًا،",
+"start": 208.37,
+"end": 208.917,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "الحاجة:",
+"start": 208.917,
+"end": 209.464,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "ما",
+"start": 209.464,
+"end": 210.011,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "الذي",
+"start": 210.011,
+"end": 210.558,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "أحتاجه",
+"start": 210.558,
+"end": 211.106,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "فعلًا،",
+"start": 211.106,
+"end": 211.653,
+"provisional": true
+},
+{
+"seg": "s31",
+"w": "ولماذا؟",
+"start": 211.653,
+"end": 212.2,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "ثانيًا،",
+"start": 212.2,
+"end": 212.747,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "معيارٌ",
+"start": 212.747,
+"end": 213.294,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "مستقل:",
+"start": 213.294,
+"end": 213.842,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "قارِن",
+"start": 213.842,
+"end": 214.389,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "بميزانيتك،",
+"start": 214.389,
+"end": 214.936,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "أو",
+"start": 214.936,
+"end": 215.483,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "بمنتجاتٍ",
+"start": 215.483,
+"end": 216.03,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "من",
+"start": 216.03,
+"end": 216.578,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "النوع",
+"start": 216.578,
+"end": 217.125,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "نفسه،",
+"start": 217.125,
+"end": 217.672,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "لا",
+"start": 217.672,
+"end": 218.219,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "بما",
+"start": 218.219,
+"end": 218.766,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "وُضع",
+"start": 218.766,
+"end": 219.314,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "بجانبه.",
+"start": 219.314,
+"end": 219.861,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "مثلًا:",
+"start": 219.861,
+"end": 220.408,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "كم",
+"start": 220.408,
+"end": 220.955,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "ساعة",
+"start": 220.955,
+"end": 221.502,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "سأستعمل",
+"start": 221.502,
+"end": 222.05,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "هذه",
+"start": 222.05,
+"end": 222.597,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "السماعات",
+"start": 222.597,
+"end": 223.144,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "في",
+"start": 223.144,
+"end": 223.691,
+"provisional": true
+},
+{
+"seg": "s32",
+"w": "الشهر؟",
+"start": 223.691,
+"end": 224.238,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "ثالثًا،",
+"start": 224.238,
+"end": 224.786,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "القرار:",
+"start": 224.786,
+"end": 225.333,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "اسأل",
+"start": 225.333,
+"end": 225.88,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "نفسك:",
+"start": 225.88,
+"end": 226.427,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "لو",
+"start": 226.427,
+"end": 226.974,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "لم",
+"start": 226.974,
+"end": 227.522,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "أرَ",
+"start": 227.522,
+"end": 228.069,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "الخيار",
+"start": 228.069,
+"end": 228.616,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "الأغلى…",
+"start": 228.616,
+"end": 229.163,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "هل",
+"start": 229.163,
+"end": 229.71,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "سأشتري",
+"start": 229.71,
+"end": 230.258,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "هذا",
+"start": 230.258,
+"end": 230.805,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "بهذا",
+"start": 230.805,
+"end": 231.352,
+"provisional": true
+},
+{
+"seg": "s33",
+"w": "السعر؟",
+"start": 231.352,
+"end": 231.899,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "وإن",
+"start": 231.899,
+"end": 232.446,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "أردت",
+"start": 232.446,
+"end": 232.994,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "تجربةً",
+"start": 232.994,
+"end": 233.541,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "صغيرة",
+"start": 233.541,
+"end": 234.088,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "هذا",
+"start": 234.088,
+"end": 234.635,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "الأسبوع:",
+"start": 234.635,
+"end": 235.182,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "قبل",
+"start": 235.182,
+"end": 235.73,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "أي",
+"start": 235.73,
+"end": 236.277,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "شراءٍ",
+"start": 236.277,
+"end": 236.824,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "فوق",
+"start": 236.824,
+"end": 237.371,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "عشرين",
+"start": 237.371,
+"end": 237.918,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "دولارًا،",
+"start": 237.918,
+"end": 238.466,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "اكتب",
+"start": 238.466,
+"end": 239.013,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "حاجتك",
+"start": 239.013,
+"end": 239.56,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "وميزانيتك،",
+"start": 239.56,
+"end": 240.107,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "قبل",
+"start": 240.107,
+"end": 240.654,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "أن",
+"start": 240.654,
+"end": 241.202,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "تنظر",
+"start": 241.202,
+"end": 241.749,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "إلى",
+"start": 241.749,
+"end": 242.296,
+"provisional": true
+},
+{
+"seg": "s34",
+"w": "العروض.",
+"start": 242.296,
+"end": 242.843,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "عُد",
+"start": 243.843,
+"end": 244.39,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "إلى",
+"start": 244.39,
+"end": 244.938,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "السماعات.",
+"start": 244.938,
+"end": 245.485,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "الأربعون",
+"start": 245.485,
+"end": 246.032,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "دولارًا",
+"start": 246.032,
+"end": 246.579,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "هي",
+"start": 246.579,
+"end": 247.126,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "الأربعون",
+"start": 247.126,
+"end": 247.674,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "نفسها،",
+"start": 247.674,
+"end": 248.221,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "في",
+"start": 248.221,
+"end": 248.768,
+"provisional": true
+},
+{
+"seg": "s35",
+"w": "الحالتين.",
+"start": 248.768,
+"end": 249.315,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "فقبل",
+"start": 249.315,
+"end": 249.862,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "أن",
+"start": 249.862,
+"end": 250.41,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "تقول",
+"start": 250.41,
+"end": 250.957,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "«نعم»",
+"start": 250.957,
+"end": 251.504,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "في",
+"start": 251.504,
+"end": 252.051,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "المرة",
+"start": 252.051,
+"end": 252.598,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "القادمة،",
+"start": 252.598,
+"end": 253.146,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "توقّف",
+"start": 253.146,
+"end": 253.693,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "لحظة",
+"start": 253.693,
+"end": 254.24,
+"provisional": true
+},
+{
+"seg": "s36",
+"w": "واسأل:",
+"start": 254.24,
+"end": 254.787,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "هل",
+"start": 254.787,
+"end": 255.334,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "وافقتُ",
+"start": 255.334,
+"end": 255.882,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "لأن",
+"start": 255.882,
+"end": 256.429,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "الشيء",
+"start": 256.429,
+"end": 256.976,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "يناسبني…",
+"start": 256.976,
+"end": 257.523,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "أم",
+"start": 257.523,
+"end": 258.07,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "لأن",
+"start": 258.07,
+"end": 258.618,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "طريقة",
+"start": 258.618,
+"end": 259.165,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "عرضه",
+"start": 259.165,
+"end": 259.712,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "جعلته",
+"start": 259.712,
+"end": 260.259,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "يبدو",
+"start": 260.259,
+"end": 260.806,
+"provisional": true
+},
+{
+"seg": "s37",
+"w": "كذلك؟",
+"start": 260.806,
+"end": 261.354,
+"provisional": true
+}
+]
