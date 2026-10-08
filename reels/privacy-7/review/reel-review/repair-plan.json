@@ -1,15 +1,15 @@
 {
   "automatic": false,
-  "sourceSha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+  "sourceSha256": "7ef7b1d14c275f89e8b5764b815f78c1b8495003ba85cf4d84d488b13dfcbf23",
   "items": [
     {
-      "findingId": "timeline.freeze-1",
+      "findingId": "timeline.silence-1",
       "sceneId": null,
       "range": {
-        "start": 10.4,
-        "end": 13
+        "start": 40.89,
+        "end": 42.005
       },
-      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "action": "اسمعها قبل التعديل؛ الهدوء المقصود ليس خطأ، ووجود الموسيقى قد يخفي توقف الكلام.",
       "target": "review source timeline",
       "status": "suggested"
     },
@@ -17,8 +17,8 @@
       "findingId": "timeline.freeze-2",
       "sceneId": null,
       "range": {
-        "start": 14.967,
-        "end": 17.5
+        "start": 11.367,
+        "end": 13.65
       },
       "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "target": "review source timeline",
@@ -28,8 +28,8 @@
       "findingId": "timeline.freeze-3",
       "sceneId": null,
       "range": {
-        "start": 24.25,
-        "end": 26.5
+        "start": 24.783,
+        "end": 26.833
       },
       "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "target": "review source timeline",
@@ -39,8 +39,19 @@
       "findingId": "timeline.freeze-4",
       "sceneId": null,
       "range": {
-        "start": 39.85,
-        "end": 42
+        "start": 27.75,
+        "end": 30.567
+      },
+      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "target": "review source timeline",
+      "status": "suggested"
+    },
+    {
+      "findingId": "timeline.freeze-5",
+      "sceneId": null,
+      "range": {
+        "start": 39.917,
+        "end": 42.005
       },
       "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "target": "review source timeline",

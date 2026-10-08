@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BODY_FONT, TITLE_FONT} from './fonts';
+import timeline from '../timeline.json';
 import {C, ease, ramp, HookArt, RefusalArt, PlanArt, IncomeArt, HeartArt, FamilyArt, GiftArt, DreamArt, CloseArt} from './art';
 
 export const COPY=[
@@ -26,7 +27,9 @@ const Identity:React.FC<{color:string}>=({color})=><>
  </>;
 
 export const Scene:React.FC<{index:number}>=({index})=>{
- const frame=useCurrentFrame(),{fps}=useVideoConfig(),t=frame/fps;
+ const frame=useCurrentFrame(),{fps}=useVideoConfig();
+ const authoredDuration=index===0?4:index===8?6.5:4.5;
+ const t=frame/fps*authoredDuration/timeline.scenes[index].seconds;
  const bg=colors[index],ink=foreground[index],light=bg===C.paper;
  const accent=index===4||index===8?C.green:index===1?C.red:C.blue;
  const Art=ART[index], copy=COPY[index],hook=index===0,close=index===8;

@@ -4,5 +4,8 @@ render/qa/
 public/music/
 render/*.log
 render/*.mp4
+render/*.wav
+public/voice/nadeem-soft.wav
 review/reel-review/frames/
 review/reel-review/contact-sheet.jpg
+public/voice/nadeem-raw.mp3

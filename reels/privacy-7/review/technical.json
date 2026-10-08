@@ -22,15 +22,15 @@
         "channels": 2,
         "r_frame_rate": "0/0",
         "avg_frame_rate": "0/0",
-        "nb_read_frames": "1968"
+        "nb_read_frames": "1969"
       }
     ],
     "format": {
-      "duration": "42.000000",
-      "size": "5296364"
+      "duration": "42.005000",
+      "size": "5158902"
     }
   },
-  "sha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+  "sha256": "7ef7b1d14c275f89e8b5764b815f78c1b8495003ba85cf4d84d488b13dfcbf23",
   "cadence": {
     "packetCount": 2520,
     "maxStepErrorSeconds": 6.666666694833678e-07,
@@ -38,11 +38,11 @@
   },
   "decodeErrors": 0,
   "audio": {
-    "integratedLufs": -20.46,
-    "truePeakDbtp": -2.48,
-    "musicAndSfxOnly": true,
-    "narrationPresent": false
+    "integratedLufs": -16.9,
+    "truePeakDbtp": -5.1,
+    "narrationPresent": true,
+    "voice_id": "dlGxemPxFMTY7iXagmOj",
+    "model": "eleven_v4"
   },
-  "repair": "Only final 390 frames re-rendered to clear subtitle; stitched with unchanged 2130-frame prefix, then H264 standard-range encode. Audio stream preserved from gain-adjusted mix.",
   "humanFullWatchAndListen": false
 }

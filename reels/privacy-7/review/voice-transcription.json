@@ -1,0 +1,433 @@
+{
+  "text": "[warmly] ليس كل سؤال يحتاج شرحًا. هذه سبع تفاصيل تختار لمن تحكيها.\n\nأسباب رفضك: رد واضح ومحترم يكفي.\n\nخططك قبل أن تنضج: ناقشها مع من يساعدك.\n\nتفاصيل دخلك: شاركها عند الحاجة، ومع الشخص المناسب.\n\nجراحك القديمة: اختر شخصًا موثوقًا يسمعك ويدعمك.\n\nخلافاتك العائلية: اطلب الدعم بعيدًا عن التشهير.\n\nأعمالك الصالحة: الخير لا يحتاج إعلانًا.\n\nأحلامك: اختر من يشجعك ويصارحك.\n\nاختر لمن تحكي، وماذا تحكي. وعندما تحتاج دعمًا، لا تتردد في طلبه.",
+  "words": [
+    {
+      "text": "[warmly]",
+      "type": "word",
+      "start": 0,
+      "end": 0.224
+    },
+    {
+      "text": "ليس",
+      "type": "word",
+      "start": 0.272,
+      "end": 0.32
+    },
+    {
+      "text": "كل",
+      "type": "word",
+      "start": 0.4,
+      "end": 0.64
+    },
+    {
+      "text": "سؤال",
+      "type": "word",
+      "start": 0.84,
+      "end": 1.04
+    },
+    {
+      "text": "يحتاج",
+      "type": "word",
+      "start": 1.2,
+      "end": 1.6
+    },
+    {
+      "text": "شرحًا.",
+      "type": "word",
+      "start": 1.68,
+      "end": 2.4
+    },
+    {
+      "text": "هذه",
+      "type": "word",
+      "start": 2.64,
+      "end": 2.96
+    },
+    {
+      "text": "سبع",
+      "type": "word",
+      "start": 3.12,
+      "end": 3.36
+    },
+    {
+      "text": "تفاصيل",
+      "type": "word",
+      "start": 3.44,
+      "end": 4
+    },
+    {
+      "text": "تختار",
+      "type": "word",
+      "start": 4.24,
+      "end": 4.64
+    },
+    {
+      "text": "لمن",
+      "type": "word",
+      "start": 4.72,
+      "end": 4.96
+    },
+    {
+      "text": "تحكيها.",
+      "type": "word",
+      "start": 5.08,
+      "end": 5.8
+    },
+    {
+      "text": "أسباب",
+      "type": "word",
+      "start": 6.08,
+      "end": 6.48
+    },
+    {
+      "text": "رفضك:",
+      "type": "word",
+      "start": 6.56,
+      "end": 7.28
+    },
+    {
+      "text": "رد",
+      "type": "word",
+      "start": 7.36,
+      "end": 7.6
+    },
+    {
+      "text": "واضح",
+      "type": "word",
+      "start": 7.76,
+      "end": 8.16
+    },
+    {
+      "text": "ومحترم",
+      "type": "word",
+      "start": 8.24,
+      "end": 8.88
+    },
+    {
+      "text": "يكفي.",
+      "type": "word",
+      "start": 9.04,
+      "end": 9.84
+    },
+    {
+      "text": "خططك",
+      "type": "word",
+      "start": 10.04,
+      "end": 10.48
+    },
+    {
+      "text": "قبل",
+      "type": "word",
+      "start": 10.56,
+      "end": 10.8
+    },
+    {
+      "text": "أن",
+      "type": "word",
+      "start": 10.88,
+      "end": 10.96
+    },
+    {
+      "text": "تنضج:",
+      "type": "word",
+      "start": 11.04,
+      "end": 11.76
+    },
+    {
+      "text": "ناقشها",
+      "type": "word",
+      "start": 11.96,
+      "end": 12.32
+    },
+    {
+      "text": "مع",
+      "type": "word",
+      "start": 12.4,
+      "end": 12.56
+    },
+    {
+      "text": "من",
+      "type": "word",
+      "start": 12.64,
+      "end": 12.72
+    },
+    {
+      "text": "يساعدك.",
+      "type": "word",
+      "start":12.84,
+      "end": 13.76
+    },
+    {
+      "text": "تفاصيل",
+      "type": "word",
+      "start": 14.04,
+      "end": 14.32
+    },
+    {
+      "text": "دخلك:",
+      "type": "word",
+      "start": 14.4,
+      "end": 15.12
+    },
+    {
+      "text": "شاركها",
+      "type": "word",
+      "start": 15.32,
+      "end": 15.6
+    },
+    {
+      "text": "عند",
+      "type": "word",
+      "start": 15.68,
+      "end": 15.84
+    },
+    {
+      "text": "الحاجة،",
+      "type": "word",
+      "start": 15.92,
+      "end": 16.56
+    },
+    {
+      "text": "ومع",
+      "type": "word",
+      "start": 16.64,
+      "end": 16.8
+    },
+    {
+      "text": "الشخص",
+      "type": "word",
+      "start": 16.88,
+      "end": 17.2
+    },
+    {
+      "text": "المناسب.",
+      "type": "word",
+      "start": 17.28,
+      "end": 18.16
+    },
+    {
+      "text": "جراحك",
+      "type": "word",
+      "start": 18.24,
+      "end": 18.72
+    },
+    {
+      "text": "القديمة:",
+      "type": "word",
+      "start": 18.8,
+      "end": 19.6
+    },
+    {
+      "text": "اختر",
+      "type": "word",
+      "start": 19.72,
+      "end": 20
+    },
+    {
+      "text": "شخصًا",
+      "type": "word",
+      "start": 20.08,
+      "end": 20.4
+    },
+    {
+      "text": "موثوقًا",
+      "type": "word",
+      "start": 20.48,
+      "end": 21.04
+    },
+    {
+      "text": "يسمعك",
+      "type": "word",
+      "start": 21.12,
+      "end": 21.76
+    },
+    {
+      "text": "ويدعمك.",
+      "type": "word",
+      "start": 21.84,
+      "end": 22.88
+    },
+    {
+      "text": "خلافاتك",
+      "type": "word",
+      "start": 23.04,
+      "end": 23.52
+    },
+    {
+      "text": "العائلية:",
+      "type": "word",
+      "start": 23.6,
+      "end": 24.56
+    },
+    {
+      "text": "اطلب",
+      "type": "word",
+      "start": 24.64,
+      "end": 24.88
+    },
+    {
+      "text": "الدعم",
+      "type": "word",
+      "start": 24.96,
+      "end": 25.36
+    },
+    {
+      "text": "بعيدًا",
+      "type": "word",
+      "start": 25.48,
+      "end": 25.92
+    },
+    {
+      "text": "عن",
+      "type": "word",
+      "start": 25.96,
+      "end": 26
+    },
+    {
+      "text": "التشهير.",
+      "type": "word",
+      "start": 26.08,
+      "end": 26.96
+    },
+    {
+      "text": "أعمالك",
+      "type": "word",
+      "start": 27,
+      "end": 27.52
+    },
+    {
+      "text": "الصالحة:",
+      "type": "word",
+      "start": 27.6,
+      "end": 28.4
+    },
+    {
+      "text": "الخير",
+      "type": "word",
+      "start": 28.52,
+      "end": 28.96
+    },
+    {
+      "text": "لا",
+      "type": "word",
+      "start": 29.12,
+      "end": 29.28
+    },
+    {
+      "text": "يحتاج",
+      "type": "word",
+      "start": 29.32,
+      "end": 29.76
+    },
+    {
+      "text": "إعلانًا.",
+      "type": "word",
+      "start": 29.84,
+      "end": 30.72
+    },
+    {
+      "text": "أحلامك:",
+      "type": "word",
+      "start": 30.8,
+      "end": 31.68
+    },
+    {
+      "text": "اختر",
+      "type": "word",
+      "start": 31.76,
+      "end": 32.08
+    },
+    {
+      "text": "من",
+      "type": "word",
+      "start": 32.16,
+      "end": 32.32
+    },
+    {
+      "text": "يشجعك",
+      "type": "word",
+      "start": 32.44,
+      "end": 33.12
+    },
+    {
+      "text": "ويصارحك.",
+      "type": "word",
+      "start": 33.28,
+      "end": 34.56
+    },
+    {
+      "text": "اختر",
+      "type": "word",
+      "start": 34.68,
+      "end": 34.96
+    },
+    {
+      "text": "لمن",
+      "type": "word",
+      "start": 35.04,
+      "end": 35.28
+    },
+    {
+      "text": "تحكي،",
+      "type": "word",
+      "start": 35.4,
+      "end": 35.92
+    },
+    {
+      "text": "وماذا",
+      "type": "word",
+      "start": 36.04,
+      "end": 36.4
+    },
+    {
+      "text": "تحكي.",
+      "type": "word",
+      "start": 36.52,
+      "end": 37.12
+    },
+    {
+      "text": "وعندما",
+      "type": "word",
+      "start": 37.2,
+      "end": 37.6
+    },
+    {
+      "text": "تحتاج",
+      "type": "word",
+      "start": 37.68,
+      "end": 38.08
+    },
+    {
+      "text": "دعمًا،",
+      "type": "word",
+      "start": 38.16,
+      "end": 38.8
+    },
+    {
+      "text": "لا",
+      "type": "word",
+      "start": 38.88,
+      "end": 38.96
+    },
+    {
+      "text": "تتردد",
+      "type": "word",
+      "start": 39.04,
+      "end": 39.6
+    },
+    {
+      "text": "في",
+      "type": "word",
+      "start": 39.68,
+      "end": 39.76
+    },
+    {
+      "text": "طلبه.",
+      "type": "word",
+      "start": 39.88,
+      "end": 40.48
+    }
+  ],
+  "model": "eleven_scribe_v1",
+  "generation_id": "cLWmHbGQhAaRur0eW2fL"
+}

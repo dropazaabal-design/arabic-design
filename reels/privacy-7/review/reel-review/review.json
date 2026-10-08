@@ -4,11 +4,11 @@
   "ok": true,
   "status": "needs-review",
   "source": {
-    "name": "kitabwbs-privacy-7.mp4",
-    "sha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659"
+    "name": "privacy-7.mp4",
+    "sha256": "7ef7b1d14c275f89e8b5764b815f78c1b8495003ba85cf4d84d488b13dfcbf23"
   },
   "metadata": {
-    "duration": 42,
+    "duration": 42.005,
     "width": 1080,
     "height": 1920,
     "encodedWidth": 1080,
@@ -56,7 +56,7 @@
       "duration": {
         "status": "passed",
         "expected": 42,
-        "actual": 42,
+        "actual": 42.005,
         "tolerance": 0.1
       }
     }
@@ -65,469 +65,488 @@
     "engine": "ffmpeg",
     "sceneChanges": [
       {
-        "time": 4,
-        "score": 0.200198
+        "time": 5.83333,
+        "score": 0.200021
       },
       {
-        "time": 8.5,
+        "time": 9.68333,
         "score": 1
       },
       {
-        "time": 13,
+        "time": 13.65,
         "score": 1
       },
       {
-        "time": 17.5,
-        "score": 0.77054
+        "time": 18,
+        "score": 0.770511
       },
       {
-        "time": 22,
+        "time": 22.7,
         "score": 1
       },
       {
-        "time": 26.5,
+        "time": 26.8333,
         "score": 1
       },
       {
-        "time": 31,
-        "score": 0.701127
+        "time": 30.5667,
+        "score": 0.701015
       },
       {
-        "time": 35.5,
-        "score": 0.744313
+        "time": 34.3,
+        "score": 0.744406
       }
     ],
     "shots": [
       {
         "index": 1,
         "start": 0,
-        "end": 4,
-        "duration": 4
+        "end": 5.83333,
+        "duration": 5.83333
       },
       {
         "index": 2,
-        "start": 4,
-        "end": 8.5,
-        "duration": 4.5
+        "start": 5.83333,
+        "end": 9.68333,
+        "duration": 3.8499999999999996
       },
       {
         "index": 3,
-        "start": 8.5,
-        "end": 13,
-        "duration": 4.5
+        "start": 9.68333,
+        "end": 13.65,
+        "duration": 3.9666700000000006
       },
       {
         "index": 4,
-        "start": 13,
-        "end": 17.5,
-        "duration": 4.5
+        "start": 13.65,
+        "end": 18,
+        "duration": 4.35
       },
       {
         "index": 5,
-        "start": 17.5,
-        "end": 22,
-        "duration": 4.5
+        "start": 18,
+        "end": 22.7,
+        "duration": 4.699999999999999
       },
       {
         "index": 6,
-        "start": 22,
-        "end": 26.5,
-        "duration": 4.5
+        "start": 22.7,
+        "end": 26.8333,
+        "duration": 4.133300000000002
       },
       {
         "index": 7,
-        "start": 26.5,
-        "end": 31,
-        "duration": 4.5
+        "start": 26.8333,
+        "end": 30.5667,
+        "duration": 3.7333999999999996
       },
       {
         "index": 8,
-        "start": 31,
-        "end": 35.5,
-        "duration": 4.5
+        "start": 30.5667,
+        "end": 34.3,
+        "duration": 3.7332999999999963
       },
       {
         "index": 9,
-        "start": 35.5,
-        "end": 42,
-        "duration": 6.5
+        "start": 34.3,
+        "end": 42.005,
+        "duration": 7.705000000000005
       }
     ],
     "blackIntervals": [],
-    "freezeIntervals": [
+"freezeIntervals": [
       {
-        "start": 10.4,
-        "end": 13,
-        "duration": 2.5999999999999996
+        "start": 11.3667,
+        "end": 13.65,
+        "duration": 2.2833000000000006
       },
       {
-        "start": 14.9667,
-        "end": 17.5,
-        "duration": 2.5333000000000006
+        "start": 24.7833,
+        "end": 26.8333,
+        "duration": 2.0500000000000007
       },
       {
-        "start": 24.25,
-        "end": 26.5,
-        "duration": 2.25
+        "start": 27.75,
+        "end": 30.5667,
+        "duration": 2.816700000000001
       },
       {
-        "start": 39.85,
-        "end": 42,
-        "duration": 2.1499999999999986
+        "start": 39.9167,
+        "end": 42.005,
+        "duration": 2.088300000000004
       }
     ],
     "quietIntervals": [
       {
-        "start": 0,
-        "end": 0.352417,
-        "duration": 0.352417
+        "start": 9.49996,
+        "end": 9.87483,
+        "duration": 0.3748699999999996
       },
       {
-        "start": 41.4531,
-        "end": 41.984,
-        "duration": 0.5309000000000026
+        "start": 22.52,
+        "end": 22.7545,
+        "duration": 0.2345000000000006
+      },
+      {
+        "start": 26.7841,
+        "end": 26.9978,
+        "duration": 0.2137000000000029
+      },
+      {
+        "start": 30.3777,
+        "end": 30.7563,
+        "duration": 0.3785999999999987
+      },
+      {
+        "start": 40.8895,
+        "end": 42.005,
+        "duration": 1.1155000000000044
       }
     ],
     "audioLevels": [
       {
         "time": 0,
-        "rms_db": -21.260115
+        "rms_db": -18.884735
       },
       {
         "time": 0.5,
-        "rms_db": -21.817508
+        "rms_db": -17.937608
       },
       {
         "time": 1,
-        "rms_db": -28.544571
+        "rms_db": -17.711206
       },
       {
         "time": 1.5,
-        "rms_db": -28.779279
+        "rms_db": -19.230941
       },
       {
         "time": 2,
-        "rms_db": -20.443613
+        "rms_db": -27.75557
       },
       {
         "time": 2.5,
-        "rms_db": -27.162521
+        "rms_db": -17.904931
       },
       {
         "time": 3,
-        "rms_db": -33.918417
+        "rms_db": -18.571605
       },
       {
         "time": 3.5,
-        "rms_db": -20.368089
+        "rms_db": -18.392812
       },
       {
         "time": 4,
-        "rms_db": -24.279769
+        "rms_db": -19.626454
       },
       {
         "time": 4.5,
-        "rms_db": -32.576129
+        "rms_db": -17.755486
       },
       {
         "time": 5,
-        "rms_db": -19.273359
+        "rms_db": -20.268455
       },
       {
         "time": 5.5,
-        "rms_db": -24.444258
+        "rms_db": -33.144313
       },
       {
         "time": 6,
-        "rms_db": -31.210769
+        "rms_db": -18.297074
       },
       {
         "time": 6.5,
-        "rms_db": -21.905521
+        "rms_db": -20.456886
       },
       {
         "time": 7,
-        "rms_db": -23.132734
+        "rms_db": -20.878795
       },
       {
         "time": 7.5,
-        "rms_db": -29.875017
+        "rms_db": -17.603331
       },
       {
         "time": 8,
-        "rms_db": -23.710987
+        "rms_db": -18.095713
       },
       {
         "time": 8.5,
-        "rms_db": -21.530846
+        "rms_db": -18.697776
       },
       {
         "time": 9,
-        "rms_db": -26.306346
+        "rms_db": -20.870345
       },
       {
         "time": 9.5,
-        "rms_db": -21.729131
+        "rms_db": -24.376462
       },
       {
         "time": 10,
-        "rms_db": -19.56123
+        "rms_db": -18.608321
       },
       {
         "time": 10.5,
-        "rms_db": -24.202262
+        "rms_db": -18.290002
       },
       {
         "time": 11,
-        "rms_db": -33.16022
+        "rms_db": -20.22292
       },
       {
         "time": 11.5,
-        "rms_db": -20.356175
+        "rms_db": -20.596989
       },
       {
         "time": 12,
-        "rms_db": -25.827272
+        "rms_db": -18.336029
       },
       {
         "time": 12.5,
-        "rms_db": -32.572965
+        "rms_db": -17.682967
       },
       {
         "time": 13,
-        "rms_db": -20.961029
+        "rms_db": -21.967104
       },
       {
         "time": 13.5,
-        "rms_db": -23.089988
+        "rms_db": -24.221933
       },
       {
         "time": 14,
-        "rms_db": -31.218256
+        "rms_db": -17.50972
       },
       {
         "time": 14.5,
-        "rms_db": -21.915695
+        "rms_db": -22.960438
       },
       {
         "time": 15,
-        "rms_db": -21.001383
+        "rms_db": -19.691441
       },
       {
         "time": 15.5,
-        "rms_db": -29.871401
+        "rms_db": -18.12484
       },
       {
         "time": 16,
-        "rms_db": -23.700008
+        "rms_db": -20.526159
       },
       {
         "time": 16.5,
-        "rms_db": -21.789608
+        "rms_db": -18.691177
       },
       {
         "time": 17,
-        "rms_db": -28.515817
+        "rms_db": -18.365486
       },
       {
         "time": 17.5,
-        "rms_db": -28.641021
+        "rms_db": -23.701706
       },
       {
         "time": 18,
-        "rms_db": -20.464823
+        "rms_db": -19.146838
       },
       {
         "time": 18.5,
-        "rms_db": -26.78556
+        "rms_db": -19.607769
       },
       {
         "time": 19,
-        "rms_db": -26.154383
+        "rms_db": -20.373748
       },
       {
         "time": 19.5,
-        "rms_db": -20.359558
+        "rms_db": -19.981496
       },
       {
         "time": 20,
-        "rms_db": -22.667924
+        "rms_db": -19.29835
       },
       {
         "time": 20.5,
-        "rms_db": -29.988416
+        "rms_db": -18.786971
       },
       {
         "time": 21,
-        "rms_db": -20.942845
+        "rms_db": -18.26405
       },
       {
         "time": 21.5,
-        "rms_db": -24.470837
+        "rms_db": -19.272571
       },
       {
         "time": 22,
-        "rms_db": -29.486789
+        "rms_db": -21.564662
       },
       {
         "time": 22.5,
-        "rms_db": -21.323494
+        "rms_db": -26.229319
       },
       {
         "time": 23,
-        "rms_db": -19.890883
+        "rms_db": -18.181371
       },
       {
         "time": 23.5,
-        "rms_db": -28.744336
+        "rms_db": -18.497767
       },
       {
         "time": 24,
-        "rms_db": -22.553545
+        "rms_db": -22.51816
       },
       {
         "time": 24.5,
-        "rms_db": -21.773805
+        "rms_db": -19.013152
       },
       {
         "time": 25,
-        "rms_db": -28.517409
+        "rms_db": -18.339411
       },
       {
         "time": 25.5,
-        "rms_db": -28.751288
+        "rms_db": -18.715427
       },
       {
         "time": 26,
-        "rms_db": -20.451793
+        "rms_db": -19.159206
       },
       {
         "time": 26.5,
-        "rms_db": -27.178891
+        "rms_db": -31.506375
       },
       {
         "time": 27,
-        "rms_db": -28.819336
+        "rms_db": -17.497459
       },
       {
         "time": 27.5,
-        "rms_db": -20.36305
+        "rms_db": -19.762644
       },
       {
         "time": 28,
-        "rms_db": -25.813193
+        "rms_db": -24.502003
       },
       {
         "time": 28.5,
-        "rms_db": -23.342682
+        "rms_db": -18.748195
       },
       {
         "time": 29,
-        "rms_db": -20.866934
+        "rms_db": -18.327137
       },
       {
         "time": 29.5,
-        "rms_db": -24.472745
+        "rms_db": -18.498276
       },
       {
         "time": 30,
-        "rms_db": -31.217507
+        "rms_db": -23.521628
       },
       {
         "time": 30.5,
-        "rms_db": -21.914537
+        "rms_db": -21.965421
       },
       {
         "time": 31,
-        "rms_db": -23.118139
+        "rms_db": -21.19972
       },
       {
         "time": 31.5,
-        "rms_db": -28.899723
+        "rms_db": -21.609626
       },
       {
         "time": 32,
-        "rms_db": -21.353249
+        "rms_db": -17.995174
       },
       {
         "time": 32.5,
-        "rms_db": -21.783124
+        "rms_db": -18.861952
       },
       {
         "time": 33,
-        "rms_db": -28.519863
+        "rms_db": -17.989422
       },
       {
         "time": 33.5,
-        "rms_db": -24.159293
+        "rms_db": -22.344479
       },
       {
         "time": 34,
-        "rms_db": -20.446047
+        "rms_db": -33.955616
       },
       {
         "time": 34.5,
-        "rms_db": -27.163425
+        "rms_db": -19.518196
       },
       {
         "time": 35,
-        "rms_db": -33.91869
+        "rms_db": -18.782069
       },
       {
         "time": 35.5,
-        "rms_db": -19.963223
+        "rms_db": -18.979662
       },
       {
         "time": 36,
-        "rms_db": -25.819412
+        "rms_db": -18.220887
       },
       {
         "time": 36.5,
-        "rms_db": -32.561403
+        "rms_db": -22.674672
       },
       {
         "time": 37,
-        "rms_db": -20.951872
+        "rms_db": -19.624341
       },
       {
         "time": 37.5,
-        "rms_db": -20.612589
+        "rms_db": -19.092921
       },
       {
         "time": 38,
-        "rms_db": -27.993273
+        "rms_db": -18.690787
       },
       {
         "time": 38.5,
-        "rms_db": -21.891524
+        "rms_db": -19.46387
       },
       {
         "time": 39,
-        "rms_db": -23.128567
+        "rms_db": -19.503454
       },
       {
         "time": 39.5,
-        "rms_db": -29.867409
+        "rms_db": -19.772074
       },
       {
         "time": 40,
-        "rms_db": -24.376464
+        "rms_db": -28.479069
       },
       {
         "time": 40.5,
-        "rms_db": -23.968134
+        "rms_db": -37.493563
       },
       {
         "time": 41,
-        "rms_db": -34.821519
+        "rms_db": -48.336768
       },
       {
         "time": 41.5,
-        "rms_db": -49.298616
+        "rms_db": -62.802397
+      },
+      {
+        "time": 42,
+        "rms_db": null
       }
     ],
-    "peakDb": -2.5,
-    "meanDb": -23.5,
+    "peakDb": -5.1,
+    "meanDb": -19.8,
     "beatAnalysis": null,
     "motionEstimates": null,
     "captions": [],
@@ -552,27 +571,27 @@
         "file": "frames/review-3.jpg"
       },
       {
-        "time": 41.9,
+        "time": 41.905,
         "file": "frames/review-4.jpg"
       }
     ]
   },
   "findings": [
     {
-      "id": "timeline.freeze-1",
-      "code": "timeline.freeze",
+      "id": "timeline.silence-1",
+      "code": "timeline.silence",
       "severity": "warning",
       "evidenceClass": "measured",
       "range": {
-        "start": 10.4,
-        "end": 13
+        "start": 40.89,
+        "end": 42.005
       },
       "sceneId": null,
-      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
-      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "message": "مستوى المزيج منخفض جدًا خلال هذه الفترة.",
+      "recommendation": "اسمعها قبل التعديل؛ الهدوء المقصود ليس خطأ، ووجود الموسيقى قد يخفي توقف الكلام.",
       "evidence": {
-        "detector": "freeze",
-        "duration": 2.6,
+        "detector": "silence",
+        "duration": 1.116,
         "candidate": true
       }
     },
@@ -582,15 +601,15 @@
       "severity": "warning",
       "evidenceClass": "measured",
       "range": {
-        "start": 14.967,
-        "end": 17.5
+        "start": 11.367,
+        "end": 13.65
       },
       "sceneId": null,
       "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
       "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "evidence": {
         "detector": "freeze",
-        "duration": 2.533,
+        "duration": 2.283,
         "candidate": true
       }
     },
@@ -600,15 +619,15 @@
       "severity": "warning",
       "evidenceClass": "measured",
       "range": {
-        "start": 24.25,
-        "end": 26.5
+        "start": 24.783,
+        "end": 26.833
       },
       "sceneId": null,
       "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
       "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "evidence": {
         "detector": "freeze",
-        "duration": 2.25,
+        "duration": 2.05,
         "candidate": true
       }
     },
@@ -618,15 +637,33 @@
       "severity": "warning",
       "evidenceClass": "measured",
       "range": {
-        "start": 39.85,
-        "end": 42
+        "start": 27.75,
+        "end": 30.567
       },
       "sceneId": null,
       "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
       "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
       "evidence": {
         "detector": "freeze",
-        "duration": 2.15,
+        "duration": 2.817,
+        "candidate": true
+      }
+    },
+    {
+      "id": "timeline.freeze-5",
+      "code": "timeline.freeze",
+      "severity": "warning",
+      "evidenceClass": "measured",
+      "range": {
+        "start": 39.917,
+        "end": 42.005
+      },
+      "sceneId": null,
+      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
+      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "evidence": {
+        "detector": "freeze",
+        "duration": 2.088,
         "candidate": true
       }
     }
@@ -645,7 +682,7 @@
       "id": "story",
       "range": {
         "start": 0,
-        "end": 42
+        "end": 42.005
       },
       "question": "هل كل مشهد يدفع القصة، وهل الحركة تخدم المعنى؟",
       "status": "pending"
@@ -654,7 +691,7 @@
       "id": "arabic-render",
       "range": {
         "start": 0,
-        "end": 42
+        "end": 42.005
       },
       "question": "هل الحروف متصلة والنص مقروء وغير مقصوص ومتزامن مع الكلام؟",
       "status": "pending"
@@ -663,7 +700,7 @@
       "id": "voice-naturalness",
       "range": {
         "start": 0,
-        "end": 42
+        "end": 42.005
       },
       "question": "هل الإلقاء واللكنة والنبرة طبيعية بالسماع؟ لا يثبتها التفريغ النصي.",
       "status": "pending"
@@ -671,8 +708,8 @@
     {
       "id": "payoff",
       "range": {
-        "start": 37,
-        "end": 42
+        "start": 37.005,
+        "end": 42.005
       },
       "question": "هل النهاية تفي بوعد البداية؟",
       "status": "pending"
@@ -688,16 +725,16 @@
   ],
   "repairPlan": {
     "automatic": false,
-    "sourceSha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+    "sourceSha256": "7ef7b1d14c275f89e8b5764b815f78c1b8495003ba85cf4d84d488b13dfcbf23",
     "items": [
       {
-        "findingId": "timeline.freeze-1",
+        "findingId": "timeline.silence-1",
         "sceneId": null,
         "range": {
-          "start": 10.4,
-          "end": 13
+          "start": 40.89,
+          "end": 42.005
         },
-        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "action": "اسمعها قبل التعديل؛ الهدوء المقصود ليس خطأ، ووجود الموسيقى قد يخفي توقف الكلام.",
         "target": "review source timeline",
         "status": "suggested"
       },
@@ -705,8 +742,8 @@
         "findingId": "timeline.freeze-2",
         "sceneId": null,
         "range": {
-          "start": 14.967,
-          "end": 17.5
+          "start": 11.367,
+          "end": 13.65
         },
         "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
         "target": "review source timeline",
@@ -716,8 +753,8 @@
         "findingId": "timeline.freeze-3",
         "sceneId": null,
         "range": {
-          "start": 24.25,
-          "end": 26.5
+          "start": 24.783,
+          "end": 26.833
         },
         "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
         "target": "review source timeline",
@@ -727,8 +764,19 @@
         "findingId": "timeline.freeze-4",
         "sceneId": null,
         "range": {
-          "start": 39.85,
-          "end": 42
+          "start": 27.75,
+          "end": 30.567
+        },
+        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "target": "review source timeline",
+        "status": "suggested"
+      },
+      {
+        "findingId": "timeline.freeze-5",
+        "sceneId": null,
+        "range": {
+          "start": 39.917,
+          "end": 42.005
         },
         "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
         "target": "review source timeline",
@@ -736,7 +784,7 @@
       }
     ]
   },
-  "cacheKey": "ebb7036044a0c5d7092eb8a5fb484f03f77466b39b8957c5155862dd8f964e6f",
+  "cacheKey": "901057b40840b6f4da64b3ee80839384600fd7e55dfc3031468891d586b2bf53",
   "engineVersions": [
     {
       "binary": "ffmpeg",

@@ -1,0 +1,30 @@
+{
+  "equalization": "equalizer=f=3500:t=q:w=0.7:g=-1.2,highshelf=f=7500:g=-1.2,deesser=i=0.10:m=0.12:f=0.5",
+  "tempoChanged": false,
+  "pitchChanged": false,
+  "rawPreserved": true,
+  "firstPass": {
+    "input_i": "-17.84",
+    "input_tp": "-2.72",
+    "input_lra": "1.30",
+    "input_thresh": "-28.08",
+    "output_i": "-17.20",
+    "output_tp": "-1.99",
+    "output_lra": "1.30",
+    "output_thresh": "-27.46",
+    "normalization_type": "dynamic",
+    "target_offset": "0.20"
+  },
+  "secondPass": {
+    "input_i": "-17.77",
+    "input_tp": "-2.82",
+    "input_lra": "1.30",
+    "input_thresh": "-28.03",
+    "output_i": "-16.93",
+    "output_tp": "-1.98",
+    "output_lra": "1.30",
+    "output_thresh": "-27.19",
+    "normalization_type": "linear",
+    "target_offset": "-0.07"
+  }
+}
