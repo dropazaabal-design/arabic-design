@@ -15,7 +15,7 @@ export const B = {
   notebook: F.s2 + sec(0.15), loop: wordAt('s3', 'وقتها') - sec(0.2), flare: wordAt('s3', 'كشاف'), details: wordAt('s3', 'وكل'),
   ghostsOut: wordAt('s4', 'هذا'), name: wordAt('s4', 'تأثير') - sec(0.25),
   // 3 — inside the light, then the camera pulls back on a busy room
-  pull: wordAt('s5', 'بكل'), estimate: wordAt('s5', 'بعيون') - sec(0.2), estimateEnd: F.s4 + sec(0.75),
+  pull: wordAt('s5', 'بكل'), estimate: wordAt('s5', 'بعيون') - sec(0.2), estimateEnd: F.s4 + sec(0.45),
   // 4 — the shirt, the source, the two cards
   source: wordAt('s6', 'بحث'), picture: wordAt('s6', 'صورة'), guess: wordAt('s6', 'وقدّروا'),
   cardA: wordAt('s7', 'تقديرهم') - sec(0.1), higher: wordAt('s7', 'أعلى'), cardB: wordAt('s7', 'عدد') - sec(0.1),

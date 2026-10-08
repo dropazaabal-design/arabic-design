@@ -143,7 +143,9 @@ export const Lamp: React.FC<{ x: number; y: number; rot: number; on: number }> =
   <g transform={`translate(${x} ${y}) rotate(${rot})`}>
     <path d="M 0 -400 L 0 -40" stroke={C.ink} strokeWidth={6} />
     <path d="M -46 -46 L 46 -46 L 64 30 L -64 30 Z" fill={C.ink} stroke="#2A3050" strokeWidth={4} />
-    <ellipse cx={0} cy={30} rx={64} ry={14} fill={C.warm} opacity={0.5 + 0.5 * on} />
+    {/* the mouth glows with the beam; switched off (on < 0.3) it fades to the dark can */}
+    <ellipse cx={0} cy={30} rx={64} ry={14} fill="#2A3050" opacity={1 - Math.min(1, on / 0.3)} />
+    <ellipse cx={0} cy={30} rx={64} ry={14} fill={C.warm} opacity={(0.5 + 0.5 * on) * Math.min(1, on / 0.3)} />
   </g>
 );
 

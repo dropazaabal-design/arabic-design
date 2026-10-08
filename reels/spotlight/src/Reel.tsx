@@ -49,8 +49,8 @@ type Cam = { cx: number; cy: number; z: number };
 const CAM = keys([
   [0, 960, 570, 1.38],
   [F.s2 - sec(0.3), 960, 570, 1.45],
-  [F.s2 + sec(0.9), 960, 630, 1.4],
-  [F.s3 - sec(0.2), 960, 630, 1.43],
+  [F.s2 + sec(0.9), 960, 540, 1.4],
+  [F.s3 - sec(0.2), 960, 540, 1.43],
   [F.s3 + sec(0.8), 960, 520, 1.9], // inside the light
   [B.pull, 960, 525, 1.95],
   [B.pull + sec(2), 960, 560, 1.0], // the room
@@ -112,8 +112,8 @@ const SPOT = keys([
   [F.s6, 960, 560, 330, 0.36, 0.95, 810],
   [F.s6 + sec(1), 960, 570, 540, 0.3, 0.7, 810],
   [B.chairB - sec(0.2), 960, 570, 540, 0.3, 0.7, 810],
-  [B.chairB + sec(1), 1450, 560, 1100, 0.14, 0, 830], // another chair: ordinary light, no spotlight
-  [F.s7, 1450, 560, 1100, 0.14, 0, 830],
+  [B.chairB + sec(1), 960, 560, 1100, 0.14, 0, 830], // another chair: ordinary light, no spotlight
+  [F.s7, 960, 560, 1100, 0.14, 0, 830],
   [F.s7 + sec(0.9), 960, 560, 330, 0.55, 1, 810],
   [B.swing, 960, 560, 330, 0.55, 1, 810],
   [B.swing + sec(1), 470, 590, 330, 0.55, 1, 830], // attention turns to the one in front of you
@@ -193,10 +193,11 @@ const SCRAPS: Array<{ kind: 'glance' | 'thought' | 'replay' | 'beam'; x: number;
   { kind: 'beam', x: -40, y: 18, rot: -4, at: B.assumedScrap + sec(0.54) },
 ];
 
+const SHIRT_IN = F.s4 + sec(0.3);
 const shirtAt = (f: number) => {
-  const down = prog(f, F.s4 - sec(0.1), sec(1.2), ease.out);
+  const down = prog(f, SHIRT_IN, sec(1.2), ease.out);
   const up = prog(f, F.s5 - sec(0.15), sec(0.8), ease.in);
-  const k = f - F.s4;
+  const k = f - SHIRT_IN;
   return { y: mix(-420, 400, down) - up * 900, rot: down > 0 ? 7 * Math.sin((k / sec(0.9)) * Math.PI) * Math.exp(-Math.max(0, k) / sec(1.4)) : 0, on: down > 0 && up < 1 };
 };
 const cardAt = (f: number, at: number) => {
@@ -523,8 +524,8 @@ const Texts: React.FC = () => {
       <Words text="لاحظت" x={seen.x} y={seen.y} w={seen.w} size={seen.size} o={seen.o} color={C.blue} />
       <Words text="افترضت" x={guessed.x} y={guessed.y} w={guessed.w} size={guessed.size} o={guessed.o} color={C.violet} />
       <Words text="مساء الخير" x={fixed.x} y={fixed.y} w={fixed.w} size={fixed.size} o={fixed.o} color={C.ink} />
-      <Title text={`وسّع الصورة… {${C.warm}|وكمّل}`} from={B.closing} to={F.end + 2} size={108} top={56} plate />
-      <Pill text="كتاب وبس" x={960} y={948} bg="rgba(27,31,51,0.85)" from={B.sign} to={F.end + 10} size={44} w={320} />
+      <Title text={`وسّع الصورة… {${C.warm}|وكمّل}`} from={B.closing} to={F.end + sec(1)} size={108} top={56} plate />
+      <Pill text="كتاب وبس" x={960} y={948} bg="rgba(27,31,51,0.85)" from={B.sign} to={F.end + sec(1)} size={44} w={320} />
       <Captions />
     </AbsoluteFill>
   );
