@@ -1,0 +1,8 @@
+node_modules/
+.remotion/
+render/qa/
+public/music/
+render/*.log
+render/*.mp4
+review/reel-review/frames/
+review/reel-review/contact-sheet.jpg

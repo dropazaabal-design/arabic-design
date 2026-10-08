@@ -1,0 +1,50 @@
+{
+  "automatic": false,
+  "sourceSha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+  "items": [
+    {
+      "findingId": "timeline.freeze-1",
+      "sceneId": null,
+      "range": {
+        "start": 10.4,
+        "end": 13
+      },
+      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "target": "review source timeline",
+      "status": "suggested"
+    },
+    {
+      "findingId": "timeline.freeze-2",
+      "sceneId": null,
+      "range": {
+        "start": 14.967,
+        "end": 17.5
+      },
+      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "target": "review source timeline",
+      "status": "suggested"
+    },
+    {
+      "findingId": "timeline.freeze-3",
+      "sceneId": null,
+      "range": {
+        "start": 24.25,
+        "end": 26.5
+      },
+      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "target": "review source timeline",
+      "status": "suggested"
+    },
+    {
+      "findingId": "timeline.freeze-4",
+      "sceneId": null,
+      "range": {
+        "start": 39.85,
+        "end": 42
+      },
+      "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "target": "review source timeline",
+      "status": "suggested"
+    }
+  ]
+}

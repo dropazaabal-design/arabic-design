@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "file": "kitabwbs-privacy-7.mp4",
+  "specs": {
+    "programs": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "color_range": "tv",
+        "r_frame_rate": "60/1",
+        "avg_frame_rate": "60/1",
+        "nb_read_frames": "2520"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "nb_read_frames": "1968"
+      }
+    ],
+    "format": {
+      "duration": "42.000000",
+      "size": "5296364"
+    }
+  },
+  "sha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+  "cadence": {
+    "packetCount": 2520,
+    "maxStepErrorSeconds": 6.666666694833678e-07,
+    "constant60fps": true
+  },
+  "decodeErrors": 0,
+  "audio": {
+    "integratedLufs": -20.46,
+    "truePeakDbtp": -2.48,
+    "musicAndSfxOnly": true,
+    "narrationPresent": false
+  },
+  "repair": "Only final 390 frames re-rendered to clear subtitle; stitched with unchanged 2130-frame prefix, then H264 standard-range encode. Audio stream preserved from gain-adjusted mix.",
+  "humanFullWatchAndListen": false
+}

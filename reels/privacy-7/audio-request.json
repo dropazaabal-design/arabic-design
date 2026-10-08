@@ -1,0 +1,9 @@
+{
+  "status": "not-generated-connector-unavailable",
+  "voice_id": "dlGxemPxFMTY7iXagmOj",
+  "identity": "نديم — كتاب وبس",
+  "model": "discover from connected provider; do not assume Eleven v4 is a real exposed model",
+  "text": "ليس كل سؤال يحتاج شرحًا. هذه سبع تفاصيل تختار لمن تحكيها.\n\nأسباب رفضك: رد واضح ومحترم يكفي.\n\nخططك قبل أن تنضج: ناقشها مع من يساعدك.\n\nتفاصيل دخلك: شاركها عند الحاجة، ومع الشخص المناسب.\n\nجراحك القديمة: اختر شخصًا موثوقًا يسمعك ويدعمك.\n\nخلافاتك العائلية: اطلب الدعم بعيدًا عن التشهير.\n\nأعمالك الصالحة: الخير لا يحتاج إعلانًا.\n\nأحلامك: اختر من يشجعك ويصارحك.\n\nاختر لمن تحكي، وماذا تحكي. وعندما تحتاج دعمًا، لا تتردد في طلبه.",
+  "delivery": "Arabic, relaxed conversational feel, no announcer exaggeration",
+  "postprocess": "Preserve original. Gentle gain-matched de-essing only after listening. No speed/pitch change."
+}

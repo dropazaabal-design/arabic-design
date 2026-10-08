@@ -1,0 +1,137 @@
+{
+  "input": {
+    "sessionId": "kitabwbs-privacy-reel-20261008",
+    "title": "ليس كل سؤال يحتاج شرحًا",
+    "numerals": "latn",
+    "idea": {
+      "hook": "ليس كل سؤال يحتاج شرحًا",
+      "points": [
+        {
+          "title": "1. أسباب رفضك",
+          "subtitle": "رد واضح ومحترم يكفي"
+        },
+        {
+          "title": "2. خططك قبل أن تنضج",
+          "subtitle": "ناقشها مع من يساعدك"
+        },
+        {
+          "title": "3. تفاصيل دخلك",
+          "subtitle": "شاركها عند الحاجة"
+        },
+        {
+          "title": "4. جراحك القديمة",
+          "subtitle": "اختر شخصًا موثوقًا"
+        },
+        {
+          "title": "5. خلافاتك العائلية",
+          "subtitle": "اطلب الدعم بعيدًا عن التشهير"
+        },
+        {
+          "title": "6. أعمالك الصالحة",
+          "subtitle": "الخير لا يحتاج إعلانًا"
+        },
+        {
+          "title": "7. أحلامك",
+          "subtitle": "اختر من يشجعك ويصارحك"
+        }
+      ],
+      "cta": "اختر لمن تحكي… وماذا تحكي"
+    }
+  },
+  "tool": "canva_build_reel",
+  "status": "planned",
+  "reel": {
+    "scenes": [
+      {
+        "n": 1,
+        "role": "hook",
+        "composition": "statement",
+        "variant": "block",
+        "seconds": 2.5,
+        "words": 5,
+        "title": "ليس كل سؤال يحتاج شرحًا"
+      },
+      {
+        "n": 2,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "type",
+        "seconds": 3.5,
+        "words": 8,
+        "title": "1. أسباب رفضك"
+      },
+      {
+        "n": 3,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "center",
+        "seconds": 4.1,
+        "words": 10,
+        "title": "2. خططك قبل أن تنضج"
+      },
+      {
+        "n": 4,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "type",
+        "seconds": 3.1,
+        "words": 7,
+        "title": "3. تفاصيل دخلك"
+      },
+      {
+        "n": 5,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "center",
+        "seconds": 3.1,
+        "words": 7,
+        "title": "4. جراحك القديمة"
+      },
+      {
+        "n": 6,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "type",
+        "seconds": 3.8,
+        "words": 9,
+        "title": "5. خلافاتك العائلية"
+      },
+      {
+        "n": 7,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "center",
+        "seconds": 3.5,
+        "words": 8,
+        "title": "6. أعمالك الصالحة"
+      },
+      {
+        "n": 8,
+        "role": "point",
+        "composition": "numbered",
+        "variant": "type",
+        "seconds": 3.1,
+        "words": 7,
+        "title": "7. أحلامك"
+      },
+      {
+        "n": 9,
+        "role": "cta",
+        "composition": "outro",
+        "seconds": 3.1,
+        "words": 7,
+        "title": "اختر لمن تحكي… وماذا تحكي"
+      }
+    ],
+    "totalSeconds": 29.8,
+    "issues": []
+  },
+  "quality": {
+    "passed": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  },
+  "execution": "planning-and-files-only",
+  "actualRendering": "Remotion,42seconds,60fps"
+}

@@ -1,0 +1,754 @@
+{
+  "kind": "baseera-reel-review",
+  "version": "1.0.0",
+  "ok": true,
+  "status": "needs-review",
+  "source": {
+    "name": "kitabwbs-privacy-7.mp4",
+    "sha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659"
+  },
+  "metadata": {
+    "duration": 42,
+    "width": 1080,
+    "height": 1920,
+    "encodedWidth": 1080,
+    "encodedHeight": 1920,
+    "rotation": 0,
+    "fps": 60,
+    "nominalFps": 60,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audioStreams": 1,
+    "audioSampleRate": 48000,
+    "videoStreamIndex": 0,
+    "audioStreamIndex": 1
+  },
+  "privacy": {
+    "networkRequests": false,
+    "mediaUploaded": false,
+    "originalModified": false
+  },
+  "technical": {
+    "passed": true,
+    "checks": {
+      "decode": {
+        "status": "passed",
+        "evidence": "full video/audio decode (FFmpeg)"
+      },
+      "width": {
+        "status": "passed",
+        "expected": 1080,
+        "actual": 1080,
+        "tolerance": 0
+      },
+      "height": {
+        "status": "passed",
+        "expected": 1920,
+        "actual": 1920,
+        "tolerance": 0
+      },
+      "fps": {
+        "status": "passed",
+        "expected": 60,
+        "actual": 60,
+        "tolerance": 0.02
+      },
+      "duration": {
+        "status": "passed",
+        "expected": 42,
+        "actual": 42,
+        "tolerance": 0.1
+      }
+    }
+  },
+  "evidence": {
+    "engine": "ffmpeg",
+    "sceneChanges": [
+      {
+        "time": 4,
+        "score": 0.200198
+      },
+      {
+        "time": 8.5,
+        "score": 1
+      },
+      {
+        "time": 13,
+        "score": 1
+      },
+      {
+        "time": 17.5,
+        "score": 0.77054
+      },
+      {
+        "time": 22,
+        "score": 1
+      },
+      {
+        "time": 26.5,
+        "score": 1
+      },
+      {
+        "time": 31,
+        "score": 0.701127
+      },
+      {
+        "time": 35.5,
+        "score": 0.744313
+      }
+    ],
+    "shots": [
+      {
+        "index": 1,
+        "start": 0,
+        "end": 4,
+        "duration": 4
+      },
+      {
+        "index": 2,
+        "start": 4,
+        "end": 8.5,
+        "duration": 4.5
+      },
+      {
+        "index": 3,
+        "start": 8.5,
+        "end": 13,
+        "duration": 4.5
+      },
+      {
+        "index": 4,
+        "start": 13,
+        "end": 17.5,
+        "duration": 4.5
+      },
+      {
+        "index": 5,
+        "start": 17.5,
+        "end": 22,
+        "duration": 4.5
+      },
+      {
+        "index": 6,
+        "start": 22,
+        "end": 26.5,
+        "duration": 4.5
+      },
+      {
+        "index": 7,
+        "start": 26.5,
+        "end": 31,
+        "duration": 4.5
+      },
+      {
+        "index": 8,
+        "start": 31,
+        "end": 35.5,
+        "duration": 4.5
+      },
+      {
+        "index": 9,
+        "start": 35.5,
+        "end": 42,
+        "duration": 6.5
+      }
+    ],
+    "blackIntervals": [],
+    "freezeIntervals": [
+      {
+        "start": 10.4,
+        "end": 13,
+        "duration": 2.5999999999999996
+      },
+      {
+        "start": 14.9667,
+        "end": 17.5,
+        "duration": 2.5333000000000006
+      },
+      {
+        "start": 24.25,
+        "end": 26.5,
+        "duration": 2.25
+      },
+      {
+        "start": 39.85,
+        "end": 42,
+        "duration": 2.1499999999999986
+      }
+    ],
+    "quietIntervals": [
+      {
+        "start": 0,
+        "end": 0.352417,
+        "duration": 0.352417
+      },
+      {
+        "start": 41.4531,
+        "end": 41.984,
+        "duration": 0.5309000000000026
+      }
+    ],
+    "audioLevels": [
+      {
+        "time": 0,
+        "rms_db": -21.260115
+      },
+      {
+        "time": 0.5,
+        "rms_db": -21.817508
+      },
+      {
+        "time": 1,
+        "rms_db": -28.544571
+      },
+      {
+        "time": 1.5,
+        "rms_db": -28.779279
+      },
+      {
+        "time": 2,
+        "rms_db": -20.443613
+      },
+      {
+        "time": 2.5,
+        "rms_db": -27.162521
+      },
+      {
+        "time": 3,
+        "rms_db": -33.918417
+      },
+      {
+        "time": 3.5,
+        "rms_db": -20.368089
+      },
+      {
+        "time": 4,
+        "rms_db": -24.279769
+      },
+      {
+        "time": 4.5,
+        "rms_db": -32.576129
+      },
+      {
+        "time": 5,
+        "rms_db": -19.273359
+      },
+      {
+        "time": 5.5,
+        "rms_db": -24.444258
+      },
+      {
+        "time": 6,
+        "rms_db": -31.210769
+      },
+      {
+        "time": 6.5,
+        "rms_db": -21.905521
+      },
+      {
+        "time": 7,
+        "rms_db": -23.132734
+      },
+      {
+        "time": 7.5,
+        "rms_db": -29.875017
+      },
+      {
+        "time": 8,
+        "rms_db": -23.710987
+      },
+      {
+        "time": 8.5,
+        "rms_db": -21.530846
+      },
+      {
+        "time": 9,
+        "rms_db": -26.306346
+      },
+      {
+        "time": 9.5,
+        "rms_db": -21.729131
+      },
+      {
+        "time": 10,
+        "rms_db": -19.56123
+      },
+      {
+        "time": 10.5,
+        "rms_db": -24.202262
+      },
+      {
+        "time": 11,
+        "rms_db": -33.16022
+      },
+      {
+        "time": 11.5,
+        "rms_db": -20.356175
+      },
+      {
+        "time": 12,
+        "rms_db": -25.827272
+      },
+      {
+        "time": 12.5,
+        "rms_db": -32.572965
+      },
+      {
+        "time": 13,
+        "rms_db": -20.961029
+      },
+      {
+        "time": 13.5,
+        "rms_db": -23.089988
+      },
+      {
+        "time": 14,
+        "rms_db": -31.218256
+      },
+      {
+        "time": 14.5,
+        "rms_db": -21.915695
+      },
+      {
+        "time": 15,
+        "rms_db": -21.001383
+      },
+      {
+        "time": 15.5,
+        "rms_db": -29.871401
+      },
+      {
+        "time": 16,
+        "rms_db": -23.700008
+      },
+      {
+        "time": 16.5,
+        "rms_db": -21.789608
+      },
+      {
+        "time": 17,
+        "rms_db": -28.515817
+      },
+      {
+        "time": 17.5,
+        "rms_db": -28.641021
+      },
+      {
+        "time": 18,
+        "rms_db": -20.464823
+      },
+      {
+        "time": 18.5,
+        "rms_db": -26.78556
+      },
+      {
+        "time": 19,
+        "rms_db": -26.154383
+      },
+      {
+        "time": 19.5,
+        "rms_db": -20.359558
+      },
+      {
+        "time": 20,
+        "rms_db": -22.667924
+      },
+      {
+        "time": 20.5,
+        "rms_db": -29.988416
+      },
+      {
+        "time": 21,
+        "rms_db": -20.942845
+      },
+      {
+        "time": 21.5,
+        "rms_db": -24.470837
+      },
+      {
+        "time": 22,
+        "rms_db": -29.486789
+      },
+      {
+        "time": 22.5,
+        "rms_db": -21.323494
+      },
+      {
+        "time": 23,
+        "rms_db": -19.890883
+      },
+      {
+        "time": 23.5,
+        "rms_db": -28.744336
+      },
+      {
+        "time": 24,
+        "rms_db": -22.553545
+      },
+      {
+        "time": 24.5,
+        "rms_db": -21.773805
+      },
+      {
+        "time": 25,
+        "rms_db": -28.517409
+      },
+      {
+        "time": 25.5,
+        "rms_db": -28.751288
+      },
+      {
+        "time": 26,
+        "rms_db": -20.451793
+      },
+      {
+        "time": 26.5,
+        "rms_db": -27.178891
+      },
+      {
+        "time": 27,
+        "rms_db": -28.819336
+      },
+      {
+        "time": 27.5,
+        "rms_db": -20.36305
+      },
+      {
+        "time": 28,
+        "rms_db": -25.813193
+      },
+      {
+        "time": 28.5,
+        "rms_db": -23.342682
+      },
+      {
+        "time": 29,
+        "rms_db": -20.866934
+      },
+      {
+        "time": 29.5,
+        "rms_db": -24.472745
+      },
+      {
+        "time": 30,
+        "rms_db": -31.217507
+      },
+      {
+        "time": 30.5,
+        "rms_db": -21.914537
+      },
+      {
+        "time": 31,
+        "rms_db": -23.118139
+      },
+      {
+        "time": 31.5,
+        "rms_db": -28.899723
+      },
+      {
+        "time": 32,
+        "rms_db": -21.353249
+      },
+      {
+        "time": 32.5,
+        "rms_db": -21.783124
+      },
+      {
+        "time": 33,
+        "rms_db": -28.519863
+      },
+      {
+        "time": 33.5,
+        "rms_db": -24.159293
+      },
+      {
+        "time": 34,
+        "rms_db": -20.446047
+      },
+      {
+        "time": 34.5,
+        "rms_db": -27.163425
+      },
+      {
+        "time": 35,
+        "rms_db": -33.91869
+      },
+      {
+        "time": 35.5,
+        "rms_db": -19.963223
+      },
+      {
+        "time": 36,
+        "rms_db": -25.819412
+      },
+      {
+        "time": 36.5,
+        "rms_db": -32.561403
+      },
+      {
+        "time": 37,
+        "rms_db": -20.951872
+      },
+      {
+        "time": 37.5,
+        "rms_db": -20.612589
+      },
+      {
+        "time": 38,
+        "rms_db": -27.993273
+      },
+      {
+        "time": 38.5,
+        "rms_db": -21.891524
+      },
+      {
+        "time": 39,
+        "rms_db": -23.128567
+      },
+      {
+        "time": 39.5,
+        "rms_db": -29.867409
+      },
+      {
+        "time": 40,
+        "rms_db": -24.376464
+      },
+      {
+        "time": 40.5,
+        "rms_db": -23.968134
+      },
+      {
+        "time": 41,
+        "rms_db": -34.821519
+      },
+      {
+        "time": 41.5,
+        "rms_db": -49.298616
+      }
+    ],
+    "peakDb": -2.5,
+    "meanDb": -23.5,
+    "beatAnalysis": null,
+    "motionEstimates": null,
+    "captions": [],
+    "planScenes": [],
+    "scriptCheck": {
+      "status": "not-supplied"
+    }
+  },
+  "artifacts": {
+    "contactSheet": "contact-sheet.jpg",
+    "frames": [
+      {
+        "time": 0,
+        "file": "frames/review-1.jpg"
+      },
+      {
+        "time": 1,
+        "file": "frames/review-2.jpg"
+      },
+      {
+        "time": 2,
+        "file": "frames/review-3.jpg"
+      },
+      {
+        "time": 41.9,
+        "file": "frames/review-4.jpg"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "timeline.freeze-1",
+      "code": "timeline.freeze",
+      "severity": "warning",
+      "evidenceClass": "measured",
+      "range": {
+        "start": 10.4,
+        "end": 13
+      },
+      "sceneId": null,
+      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
+      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "evidence": {
+        "detector": "freeze",
+        "duration": 2.6,
+        "candidate": true
+      }
+    },
+    {
+      "id": "timeline.freeze-2",
+      "code": "timeline.freeze",
+      "severity": "warning",
+      "evidenceClass": "measured",
+      "range": {
+        "start": 14.967,
+        "end": 17.5
+      },
+      "sceneId": null,
+      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
+      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "evidence": {
+        "detector": "freeze",
+        "duration": 2.533,
+        "candidate": true
+      }
+    },
+    {
+      "id": "timeline.freeze-3",
+      "code": "timeline.freeze",
+      "severity": "warning",
+      "evidenceClass": "measured",
+      "range": {
+        "start": 24.25,
+        "end": 26.5
+      },
+      "sceneId": null,
+      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
+      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "evidence": {
+        "detector": "freeze",
+        "duration": 2.25,
+        "candidate": true
+      }
+    },
+    {
+      "id": "timeline.freeze-4",
+      "code": "timeline.freeze",
+      "severity": "warning",
+      "evidenceClass": "measured",
+      "range": {
+        "start": 39.85,
+        "end": 42
+      },
+      "sceneId": null,
+      "message": "تغيّر بصري محدود اكتشفه مرشح السكون.",
+      "recommendation": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+      "evidence": {
+        "detector": "freeze",
+        "duration": 2.15,
+        "candidate": true
+      }
+    }
+  ],
+  "manualChecks": [
+    {
+      "id": "hook",
+      "range": {
+        "start": 0,
+        "end": 3
+      },
+      "question": "هل تظهر الفكرة سريعًا وتثير فضولًا محددًا؟",
+      "status": "pending"
+    },
+    {
+      "id": "story",
+      "range": {
+        "start": 0,
+        "end": 42
+      },
+      "question": "هل كل مشهد يدفع القصة، وهل الحركة تخدم المعنى؟",
+      "status": "pending"
+    },
+    {
+      "id": "arabic-render",
+      "range": {
+        "start": 0,
+        "end": 42
+      },
+      "question": "هل الحروف متصلة والنص مقروء وغير مقصوص ومتزامن مع الكلام؟",
+      "status": "pending"
+    },
+    {
+      "id": "voice-naturalness",
+      "range": {
+        "start": 0,
+        "end": 42
+      },
+      "question": "هل الإلقاء واللكنة والنبرة طبيعية بالسماع؟ لا يثبتها التفريغ النصي.",
+      "status": "pending"
+    },
+    {
+      "id": "payoff",
+      "range": {
+        "start": 37,
+        "end": 42
+      },
+      "question": "هل النهاية تفي بوعد البداية؟",
+      "status": "pending"
+    }
+  ],
+  "limitations": [
+    "الملاحظات التحريرية تقديرات، وليست توقعًا للانتشار أو قياسًا للاحتفاظ الفعلي.",
+    "fps هو متوسط معدل الإطارات المبلغ عنه؛ لا يثبت انتظام توقيت كل إطار في فيديو بمعدل متغير.",
+    "لا تثبت تغيّرات المشهد تطابق التوقيت مع الخطة، ولا يثبت غيابها أن الفيديو ثابت.",
+    "الترجمة والخطة مدخلات مقدمة؛ لم تُقرأ الكلمات تلقائيًا من صورة الفيديو ولم يُفرّغ الصوت.",
+    "المستويات والصمت تخص المزيج الصوتي، ولا تفصل التعليق عن الموسيقى.",
+    "الملفات المحلية لا تُرفع هنا؛ مشاهدتها بواسطة مساعد سحابي تخضع لبيئة ذلك المساعد."
+  ],
+  "repairPlan": {
+    "automatic": false,
+    "sourceSha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659",
+    "items": [
+      {
+        "findingId": "timeline.freeze-1",
+        "sceneId": null,
+        "range": {
+          "start": 10.4,
+          "end": 13
+        },
+        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "target": "review source timeline",
+        "status": "suggested"
+      },
+      {
+        "findingId": "timeline.freeze-2",
+        "sceneId": null,
+        "range": {
+          "start": 14.967,
+          "end": 17.5
+        },
+        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "target": "review source timeline",
+        "status": "suggested"
+      },
+      {
+        "findingId": "timeline.freeze-3",
+        "sceneId": null,
+        "range": {
+          "start": 24.25,
+          "end": 26.5
+        },
+        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "target": "review source timeline",
+        "status": "suggested"
+      },
+      {
+        "findingId": "timeline.freeze-4",
+        "sceneId": null,
+        "range": {
+          "start": 39.85,
+          "end": 42
+        },
+        "action": "راجع الحركة ووظيفة اللقطة؛ إن كانت وقفة مقصودة فاحتفظ بها.",
+        "target": "review source timeline",
+        "status": "suggested"
+      }
+    ]
+  },
+  "cacheKey": "ebb7036044a0c5d7092eb8a5fb484f03f77466b39b8957c5155862dd8f964e6f",
+  "engineVersions": [
+    {
+      "binary": "ffmpeg",
+      "available": true,
+      "version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers"
+    },
+    {
+      "binary": "ffprobe",
+      "available": true,
+      "version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers"
+    }
+  ],
+  "cacheHit": false,
+  "directory": "/workspace/scratch/2b12cc35e0d6/arabic-design-shared/reels/privacy-7/review/reel-review"
+}

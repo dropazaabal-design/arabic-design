@@ -1,0 +1,26 @@
+{
+  "frames": [
+    210,
+    450,
+    1260,
+    1548,
+    1818,
+    2460
+  ],
+  "scale": 0.4,
+  "composition": {
+    "id": "PrivacyReel",
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationInFrames": 2520,
+    "props": {},
+    "defaultProps": {},
+    "defaultCodec": null,
+    "defaultOutName": null,
+    "defaultVideoImageFormat": null,
+    "defaultPixelFormat": null,
+    "defaultProResProfile": null,
+    "defaultSampleRate": null
+  }
+}

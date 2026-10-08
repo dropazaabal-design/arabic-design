@@ -1,0 +1,56 @@
+{
+  "project": "privacy-7",
+  "repository": "dropazaabal-design/arabic-design",
+  "sourceBranch": "fikra-01",
+  "deliveryBranch": "codex/privacy-reel",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "duration": 42,
+    "frames": 2520
+  },
+  "completed": [
+    "reference reviewed",
+    "Baseera 9-scene plan,0 errors,0 warnings",
+    "locked script and timeline",
+    "9 independently exportable scene compositions",
+    "font and SFX reuse",
+    "original instrumental generation",
+    "typecheck",
+    "scene still review",
+    "one batch of fixes from initial review",
+    "42-second final video",
+    "constant60fps cadence verified",
+    "full decode passed",
+    "audio -20.46LUFS and -2.48dBTP measured",
+    "final-only scene repair",
+    "final MP4 saved for user",
+    "source package prepared for GitHub branch"
+  ],
+  "narration": {
+    "status": "connector unavailable; not generated",
+    "voice_id": "dlGxemPxFMTY7iXagmOj"
+  },
+  "resources": {
+    "elevenLabsGenerationCalls": 0,
+    "elevenLabsCreditsSpent": 0,
+    "tokensUsed": null,
+    "remainingSubscription": null,
+    "note": "No reliable token balance exposed. No invented percentage."
+  },
+  "resume": [
+    "npm ci",
+    "python3 tools/make-bed.py",
+    "npm run render",
+    "run Baseera review-reel against final MP4; check specs and loudness"
+  ],
+  "remaining": [],
+  "finalFile": {
+    "filename": "kitabwbs-privacy-7.mp4",
+    "bytes": 5296364,
+    "sha256": "177ae22df9bc6c3d0c7420f0524438a685885a5efc5a5950e39d015742a3f659"
+  },
+  "productionStatus": "verified-file-delivered",
+  "sourceSyncTarget": "codex/privacy-reel"
+}

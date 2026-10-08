@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "sceneCount": 9,
+  "screenStringsCheckedAgainstTimeline": 18,
+  "additionalScreenStrings": [
+    "كتاب وبس",
+    "@kitabwbs",
+    "لا"
+  ],
+  "script_sha256": "a83550f4f0cc3f333a03e7a2153aef0ddf220be32c76a3edae044a16919171f6",
+  "narrationGenerated": false,
+  "notes": [
+    "RTL and connected letters checked visually in rendered scene samples",
+    "No transcription test: no narration in current file"
+  ]
+}
