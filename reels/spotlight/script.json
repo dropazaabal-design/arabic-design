@@ -1,0 +1,141 @@
+{
+  "title": "تأثير بقعة الضوء — ليش تحس إن الكل يراقبك؟",
+  "format": "landscape 1920x1080, 60 fps, 90 s exactly (5400 frames)",
+  "register": "عامية عربية بيضاء بلمسة خليجية خفيفة، تعليمية حوارية",
+  "voice": "kitabwbs_nadeem (trial) → ElevenLabs voice_id dlGxemPxFMTY7iXagmOj, model eleven_v4 (see ../voices/nadeem/elevenlabs.json)",
+  "source": "Gilovich, T., Medvec, V. H., & Savitsky, K. (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. Journal of Personality and Social Psychology, 78(2), 211–222. https://doi.org/10.1037/0022-3514.78.2.211 — PMID 10707330. Wearers of a conspicuous T-shirt overestimated how many observers noticed it; in group discussions participants overestimated how salient their own contributions were to others. No percentages are used in the video.",
+  "segments": [
+    {
+      "id": "s1",
+      "scene": 1,
+      "text": "قلت كلمة غلط قدّام مجموعة… ورجعت البيت تعيدها في راسك؟"
+    },
+    {
+      "id": "s2",
+      "scene": 1,
+      "text": "تتذكر مين كان موجود… وتتخيل إنهم لسه يتكلمون عنها."
+    },
+    {
+      "id": "s3",
+      "scene": 2,
+      "text": "وقتها، كأن كشاف كبير مسلّط عليك، وكل تفصيلة صارت واضحة للكل."
+    },
+    {
+      "id": "s4",
+      "scene": 2,
+      "text": "هذا اسمه تأثير بقعة الضوء: إننا أحيانًا نبالغ في تقدير انتباه الآخرين لمظهرنا وتصرفاتنا."
+    },
+    {
+      "id": "s5",
+      "scene": 3,
+      "text": "أنت عشت الموقف من الداخل، بكل تفاصيله… فيصعب تشوفه بعيون غيرك."
+    },
+    {
+      "id": "s6",
+      "scene": 4,
+      "text": "في بحث نُشر سنة ألفين، لبس مشاركون قمصان عليها صورة لافتة، وقدّروا كم واحد لاحظها."
+    },
+    {
+      "id": "s7",
+      "scene": 4,
+      "text": "تقديرهم كان أعلى من عدد اللي لاحظوها فعلًا."
+    },
+    {
+      "id": "s8",
+      "scene": 5,
+      "text": "وفي نقاشات جماعية، بالغوا كمان في تقدير بروز كلامهم عند الموجودين."
+    },
+    {
+      "id": "s9",
+      "scene": 5,
+      "text": "أكيد، بعض الناس ممكن يلاحظون. بس إحساسك بضخامة الموقف… ما يكفي لوحده عشان تعرف حجم انتباههم."
+    },
+    {
+      "id": "s10",
+      "scene": 6,
+      "text": "فلو صار لك موقف مشابه، اسأل نفسك: إيش اللي لاحظته فعلًا؟ وإيش اللي افترضته؟"
+    },
+    {
+      "id": "s11",
+      "scene": 6,
+      "text": "وتخيّل لو شخص ثاني قال نفس الكلمة… كنت بتظل تفكر فيها طول اليوم؟"
+    },
+    {
+      "id": "s12",
+      "scene": 7,
+      "text": "إذا أخطأت بحق أحد، اعتذر. وإذا كانت مجرد كلمة تعثّرت فيها، صحّحها وكمّل."
+    },
+    {
+      "id": "s13",
+      "scene": 7,
+      "text": "ورجّع انتباهك للي قدامك: إيش يقول؟ وإيش تبغى توصل له؟"
+    },
+    {
+      "id": "s14",
+      "scene": 8,
+      "text": "قبل ما تعيد المشهد للمرة العاشرة… تذكّر: اللي كبير في تجربتك، ممكن يكون أصغر عند غيرك."
+    }
+  ],
+  "onScreen": [
+    {
+      "scene": 1,
+      "role": "hook",
+      "text": "تحس إن الكل يراقبك؟"
+    },
+    {
+      "scene": 1,
+      "role": "bubble",
+      "text": "صباح الخير"
+    },
+    {
+      "scene": 2,
+      "role": "title",
+      "text": "تأثير بقعة الضوء"
+    },
+    {
+      "scene": 3,
+      "role": "label",
+      "text": "تقديرك لانتباههم"
+    },
+    {
+      "scene": 4,
+      "role": "source",
+      "text": "جيلوفيتش وزملاؤه، 2000"
+    },
+    {
+      "scene": 4,
+      "role": "card",
+      "text": "ما توقّعوه"
+    },
+    {
+      "scene": 4,
+      "role": "card",
+      "text": "ما تذكّره الآخرون"
+    },
+    {
+      "scene": 6,
+      "role": "column",
+      "text": "لاحظت"
+    },
+    {
+      "scene": 6,
+      "role": "column",
+      "text": "افترضت"
+    },
+    {
+      "scene": 7,
+      "role": "bubble",
+      "text": "مساء الخير"
+    },
+    {
+      "scene": 8,
+      "role": "closing",
+      "text": "وسّع الصورة… وكمّل"
+    },
+    {
+      "scene": 8,
+      "role": "signature",
+      "text": "كتاب وبس"
+    }
+  ]
+}

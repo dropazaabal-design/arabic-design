@@ -1,0 +1,323 @@
+{
+  "episode": "fikra-01-influence",
+  "timing": "timeline.json (measured from the full take; every beat keys on a spoken word)",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "safe": {
+      "x": 154,
+      "y": 86
+    }
+  },
+  "type": {
+    "emphasis": "Cairo 900, 56–110 px",
+    "secondary": "Tajawal 700, 36–42 px",
+    "maxLines": 2
+  },
+  "motionFamilies": {
+    "draw-on": "a stroke drawn along its path as the idea is spoken",
+    "build": "parts placed one after another, never all at once",
+    "morph": "a shape or bar changing into its new meaning",
+    "reveal": "a word uncovered after the expectation is built",
+    "compare": "split or side-by-side, at most two things at once",
+    "hold": "0.6–1.5 s of stillness for an idea that needs it"
+  },
+  "scenes": [
+    {
+      "sceneId": "sc01",
+      "name": "الخطاف — مفارقة السماعات",
+      "audio": [
+        "s01",
+        "s02",
+        "s03"
+      ],
+      "background": "light #F4F5F2 with paper grain",
+      "purpose": "the paradox before second 12: the same $40 feels lighter once $200 stands next to it",
+      "visual": "doodle headphones A (blue) on a red price tag «40 دولارًا»; a 'felt price' gauge beside it; headphones B (cover blue, larger) slides in with «200 دولار»; A's gauge drops while its tag stays the same",
+      "motion": [
+        "draw-on A on «سماعاتٌ»",
+        "gauge fills high on «غالية»",
+        "build: B slides in on «تظهر»",
+        "draw-on: a comparison arrow from B to A on «وفجأة» (B now sets the yardstick)",
+        "morph: A's gauge falls on «أخفّ»",
+        "compare: an '=' tag lock on «لم يتغيّر»",
+        "draw-on: a green ring around A on «والسماعات» (the pair itself is the same)"
+      ],
+      "onScreen": [
+        "40 دولارًا",
+        "200 دولار",
+        "يبدو غاليًا",
+        "يبدو أخفّ",
+        "السعر نفسه",
+        "مثال افتراضي"
+      ],
+      "colors": [
+        "blue",
+        "red",
+        "coverBlue"
+      ]
+    },
+    {
+      "sceneId": "sc02",
+      "name": "المشكلة — ما الذي تغيّر؟",
+      "audio": [
+        "s04",
+        "s05",
+        "s06"
+      ],
+      "background": "navy #101827",
+      "purpose": "name the viewer's problem: the neighbor changed, not the product; it happens in shops, offers, yeses",
+      "visual": "the two headphones as small doodles; a dashed ring jumps from A to its neighbor B; three paper cards slide in (a shop bag, a subscription card, a speech bubble «نعم»); a thought bubble asks why",
+      "motion": [
+        "reveal «ما الذي تغيّر؟»",
+        "the cheaper pair shakes 'no' on «ليس السماعات»",
+        "draw-on dashed ring on «بجانبها»",
+        "the pair rises and shrinks through «وهذا يحدث معنا أكثر مما نظن» and stays above as the reference",
+        "build three collage cards on «متجر» / «اشتراك» / «نعم»; the «نعم» card wobbles on «مقتنعين»",
+        "the thought bubble opens on «نسأل»; hold on «لماذا وافقتُ؟»"
+      ],
+      "onScreen": [
+        "ما الذي تغيّر؟",
+        "بجانبها",
+        "نعم",
+        "لماذا وافقتُ؟"
+      ],
+      "colors": [
+        "red",
+        "blue"
+      ]
+    },
+    {
+      "sceneId": "sc03",
+      "name": "الكتاب والفكرة",
+      "audio": [
+        "s07",
+        "s08",
+        "s09",
+        "s10"
+      ],
+      "background": "light",
+      "purpose": "introduce the book and author briefly; mental shortcuts; name the idea",
+      "visual": "an original descriptive book card (no cover image): «التأثير» / «علم نفس الإقناع» / «روبرت سيالديني»; a winding path with a straight shortcut drawn across it; a small red warning on the shortcut; the idea's name revealed",
+      "motion": [
+        "build the book card from the cut",
+        "each card line is underlined as it is named («التأثير» / «الإقناع» / «روبرت سيالديني»)",
+        "draw-on: long path, then the shortcut",
+        "a dot races along the shortcut and one along the long path on «توفّر»; a green check on «تخدمنا جيدًا»",
+        "a ring on the shortcut on «واحدة منها»",
+        "a red mark pops on «تُستغَل»; two numbered cards placed on «يرتّب… نراه»",
+        "reveal «مبدأ التباين» (the card clears on «مبدأ»)"
+      ],
+      "onScreen": [
+        "التأثير",
+        "علم نفس الإقناع",
+        "روبرت سيالديني",
+        "اختصار ذهني",
+        "مبدأ التباين"
+      ],
+      "colors": [
+        "coverBlue",
+        "coverGray",
+        "blue",
+        "red"
+      ],
+      "rights": "no cover image; a card drawn from the title text only"
+    },
+    {
+      "sceneId": "sc04",
+      "name": "الآلية — المسطرة والماء",
+      "audio": [
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s16"
+      ],
+      "background": "navy",
+      "purpose": "the mechanism: comparison with what came just before; the water demonstration; the order makes the reference point",
+      "visual": "a ruler crossed out, replaced by an arrow between two shapes; three bowls (cold, lukewarm, hot); two 'felt' gauges travel from cold and hot into the lukewarm bowl and read warm and cold while the real thermometer stays still; a three-step chain",
+      "motion": [
+        "the ruler draws from the cut and is complete on «بمسطرة»; red cross on «بل»",
+        "the ruler holds through «جرّب هذا»; three bowls land one by one on «ثلاثة أوعية»",
+        "highlight rings on the cold and hot bowls as the hands go in",
+        "the felt gauges move on «انقل» and change through «اليد القادمة… / والقادمة…»",
+        "hold on «الماء واحد»",
+        "three dashed slots on «الترتيب», filled by the 3-step chain"
+      ],
+      "onScreen": [
+        "مسطرة ثابتة؟",
+        "بارد",
+        "فاتر",
+        "ساخن",
+        "الماء واحد",
+        "ما تراه أولًا",
+        "نقطة المقارنة",
+        "ما بعده يُقاس عليها"
+      ],
+      "colors": [
+        "blue",
+        "red",
+        "light"
+      ],
+      "note": "no hands drawn: perceived temperature is shown by gauges"
+    },
+    {
+      "sceneId": "sc05",
+      "name": "المثال الأول — تطوّر القرار",
+      "audio": [
+        "s17",
+        "s18",
+        "s19",
+        "s20",
+        "s21",
+        "s22",
+        "s23",
+        "s24"
+      ],
+      "background": "light",
+      "purpose": "the decision evolving: alone vs next to $200; a $30 plan that ends at $40 while feeling like $160 saved",
+      "visual": "A with a wallet and a need icon; the comparison pointer jumps from the wallet to B; a plan tag «الخطة: 30 دولارًا», the seller's order 200 → 40; split compare: the feeling «وفّرتُ 160!» against the fact «10 دولارات فوق الخطة»; a closing warning",
+      "motion": [
+        "the $40 pair draws itself through «لكن لنرَ كيف يتطوّر القرار»; the «مثال افتراضي» label pops on «مثال»",
+        "a dashed ring on «وحدها»; a small need target beside the wallet on «تحتاجه»",
+        "the comparison pointer goes to the wallet on «ستقارنها»",
+        "the $200 pair arrives on «بجانب»; the pointer moves to it on «تتغيّر نقطة المقارنة»",
+        "the $40 tag dips on «صفقة» and pulses on «ثابت»; a felt gauge drops on «الإحساس به تحرّك»",
+        "build the purchase sequence word by word (plan, $200 pair, its tag, $40 pair, its tag)",
+        "compare split: feeling vs fact",
+        "on «لم يكذب عليك أحد» the feeling and fact step aside and a check marks the honest price",
+        "the order is replayed with badges 1 → 2 on «ترتيب»; badge 1 pulses on «الأغلى»",
+        "reveal the warning",
+        "on «أخفّ» the $40 tag dips; on «لا يعني أنه مناسبٌ» a need target appears with ≠ between it and the pair"
+      ],
+      "onScreen": [
+        "40 دولارًا",
+        "200 دولار",
+        "نقطة المقارنة",
+        "الخطة: 30 دولارًا",
+        "وفّرتُ 160 دولارًا؟",
+        "10 دولارات فوق الخطة",
+        "أخفّ… لا يعني مناسبًا",
+        "مثال افتراضي"
+      ],
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "sceneId": "sc06",
+      "name": "المثال الثاني وتصحيح الفهم",
+      "audio": [
+        "s25",
+        "s26",
+        "s27",
+        "s28",
+        "s29"
+      ],
+      "background": "navy",
+      "purpose": "same mechanism in a second everyday case; correct the misunderstanding (not naivety, not every offer a trick)",
+      "visual": "a laptop «900 دولار», a case «60 دولارًا» shrinking next to it; then the case alone on a calendar day; a correction card; an arrow that the viewer's own ruler re-points",
+      "motion": [
+        "two empty slots (big, small) and a comparison arrow on «والآلية نفسها»",
+        "build laptop then case into the slots",
+        "the case moves next to the laptop on «بجانب»; morph scale: 60 shrinks beside 900, regrows alone; its tag pulses on «ستين»",
+        "reveal «تصحيح مهم», then the two correction labels",
+        "a grey ruler on «نحكم» turns green on «نختر… بأنفسنا»; it dims as a red dashed outside pointer arrives on «لغيرنا»"
+      ],
+      "onScreen": [
+        "900 دولار",
+        "60 دولارًا",
+        "وحده؟",
+        "تصحيح مهم",
+        "ليست سذاجة",
+        "ولا كل عرض خدعة",
+        "مثال افتراضي"
+      ],
+      "colors": [
+        "blue",
+        "red",
+        "green"
+      ]
+    },
+    {
+      "sceneId": "sc07",
+      "name": "التطبيق — ثلاث خطوات",
+      "audio": [
+        "s30",
+        "s31",
+        "s32",
+        "s33",
+        "s34"
+      ],
+      "background": "light",
+      "purpose": "three steps (need, independent yardstick, decision) and one small experiment",
+      "visual": "three doodle stations built in order: a target (need), a green ruler next to a budget card (yardstick), a paper card covering the $200 headphones (decision); a small 'this week' card",
+      "motion": [
+        "three dashed slots from the cut; the question «كيف تحمي قرارك؟» on «فكيف»",
+        "numbers 1–3 pop on «ثلاث خطوات»",
+        "build step 1, 2, 3 on «الحاجة» / «معيار» / «القرار»; small pulses on «أحتاجه» and «ميزانيتك»",
+        "draw-on the green ruler",
+        "the cover card slides over B",
+        "reveal the week card, its second line on «اكتب»"
+      ],
+      "onScreen": [
+        "كيف تحمي قرارك؟",
+        "الحاجة",
+        "معيار مستقل",
+        "القرار",
+        "كم ساعة في الشهر؟",
+        "لو لم أرَ الأغلى؟",
+        "قبل أي شراء فوق 20 دولارًا",
+        "اكتب حاجتك وميزانيتك"
+      ],
+      "colors": [
+        "green",
+        "blue"
+      ]
+    },
+    {
+      "sceneId": "sc08",
+      "name": "الخاتمة — العودة إلى السؤال",
+      "audio": [
+        "s35",
+        "s36",
+        "s37"
+      ],
+      "background": "light → navy",
+      "purpose": "return to the first symbol and the opening question; quiet close",
+      "visual": "the two headphones from sc01, side by side; both $40 tags locked equal; the final question in two lines; series mark",
+      "motion": [
+        "compare: the two $40 tags; the faded $200 pair leaves on «لم تتغيّر»",
+        "the equality line on «والسعر لم يتغيّر»",
+        "a «نعم» bubble pops on «تقول «نعم»»; the light lowers a little on «توقّف لحظة»",
+        "the pair steps away on «واسأل»",
+        "reveal the question line by line",
+        "hold",
+        "series mark"
+      ],
+      "onScreen": [
+        "40 دولارًا = 40 دولارًا",
+        "نعم",
+        "هل وافقتُ لأنه يناسبني…",
+        "أم لأن طريقة عرضه جعلته يبدو كذلك؟",
+        "فكرة من كتاب",
+        "كتاب وبس"
+      ],
+      "colors": [
+        "blue",
+        "coverBlue"
+      ]
+    }
+  ],
+  "assets": {
+    "drawings": "all doodles are original SVG drawn in src/art (no stock, no AI images, no people)",
+    "fonts": "Cairo, Tajawal (SIL Open Font License, via @fontsource)",
+    "sfx": "public/sfx — synthesized with FFmpeg in this repository (crab-mentality project); original. Used: scribble, pop, whoosh, tick, pageflip, snap, scrape, click, thud, chime; each cue sits on the same spoken word as its picture beat (src/sfx.tsx), volume 0.07–0.16, about 13 dB under the voice",
+    "music": "none",
+    "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (trial identity); sample approved by ear by the owner; one full take (generation fzjITWRAzial3C3ezAkg)"
+  }
+}

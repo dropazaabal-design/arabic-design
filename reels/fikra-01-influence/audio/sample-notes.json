@@ -1,0 +1,10 @@
+{
+  "file": "audio/sample-opening-HrfUk50jzsIpabKe1W1S.mp3",
+  "sha256": "8c9a0c3077822bc5a160d9f4c14225109ba82db185758d8f641f7471f26f8f36",
+  "generation": { "flow_id": "dV24FZQgvDThgLmjDXYo", "session_id": "nh4ZUcZjE9l4ZIZMPW2X", "generation_id": "HrfUk50jzsIpabKe1W1S", "model_id": "eleven_v4", "voice_id": "dlGxemPxFMTY7iXagmOj", "generations_count": 1, "credits": 147, "parameters_sent": "model_id, voice_id, spoken text only (language_code not set)" },
+  "text": "script.json segments s01–s03 (sceneId sc01)",
+  "measured": { "duration_s": 13.87, "format": "mp3 44.1 kHz mono 128 kbps", "integrated_lufs": -17.0, "pauses_s": [[2.00, 2.37], [3.68, 4.06], [7.42, 7.77], [8.38, 8.76], [9.90, 10.15]], "words_per_minute": 110 },
+  "whisper_medium": { "recognized": "all words except «بمئتي», heard as «دمائتي»", "meaning": "word intelligibility only; says nothing about natural delivery or accent" },
+  "listening_review": { "state": "pending — waiting for the account owner", "points_to_check_by_ear": ["«بمئتي» at about 5.5–7.7 s", "naturalness and accent of the Arabic (the service labels this voice Spanish)", "the pace (110 wpm, slower than the 115–135 guide)"] },
+  "full_take_estimate": { "credits": 2668, "basis": "connector estimate_only for the locked script, generations_count 1" }
+}
