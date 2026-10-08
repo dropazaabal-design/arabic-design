@@ -89,7 +89,11 @@
     "تقرر": "once heard «تقبل»; another seed was clean — retake, no respelling needed",
     "ضخمة / اختار": "Whisper sometimes hears ح for خ; seeds 101 and 7 were clean",
     "شيء": "diacritised «شَيء» came out «سيء» twice; plain spelling with seed 101 or 202 was clean",
-    "method": "every line checked with faster-whisper medium against the script; flagged lines retaken with seeds 101/202 and a diacritised variant, best take kept"
+    "method": "every line checked with faster-whisper medium against the script; flagged lines retaken with seeds 101/202 and a diacritised variant, best take kept",
+    "الذكي": "comes out with ز («الزكي») in 4 of 4 takes, plain and with shadda: the model's colloquial ذ→ز; kept, as everyday white colloquial says it",
+    "ضغط": "heard «بغط» / «ذهب» / «ضل» in 3 takes; seed 101 plain was recognised («ضغط»)",
+    "وافقوهم": "heard «واثقوهم» once; seeds 101/202 came out «وفقوهم» (short alif), accepted",
+    "يفتح": "heard «يستح» twice (seed 7, also with harakat); seed 202 plain was a full match"
   },
   "test_text": "تعرف أول يوم، لما تقرر تغيّر حياتك كلها؟ رياضة، وقراءة، وشغل… وكل هذا من بكرة. طيب، وفي اليوم الثالث؟ القائمة لسه طويلة، وأنت تعبت قبل ما تبدأ. خلّينا نجرب بداية تقدر ترجع لها بكرة.",
   "trim_top_db": 38,
@@ -127,6 +131,34 @@
         "s12": "seed 101",
         "others": "seed 7 (default)"
       }
+    },
+    {
+      "reel": "reels/one-voice",
+      "takes": {
+        "s1": "seed 101",
+        "s6": "seed 101",
+        "s7": "seed 101",
+        "s11": "seed 202",
+        "others": "seed 7 (default)"
+      },
+      "post": "post + basira_youth_edu"
     }
-  ]
+  ],
+  "post_presets": {
+    "basira_youth_edu": {
+      "source": "given by the account owner in the conversation (verbatim ffmpeg filter chain)",
+      "applied_after": "post (tempo 1.1, pause cap 0.4 s, -16 LUFS)",
+      "filter": "highpass=f=75,lowpass=f=14500,asetrate=48000*1.035,aresample=48000,atempo=0.985,equalizer=f=140:t=q:w=1:g=-1.5,equalizer=f=950:t=q:w=1:g=0.8,equalizer=f=3200:t=q:w=1.1:g=1.8,equalizer=f=6500:t=q:w=1:g=0.7,acompressor=threshold=-20dB:ratio=2.2:attack=12:release=110:makeup=1.5,loudnorm=I=-16:TP=-1.5:LRA=8",
+      "effect": "pitch about +0.6 semitone (asetrate ×1.035), net speed ×1.019, low cut, presence lift around 3.2 kHz, gentle compression, loudness −16 LUFS / −1.5 dBTP",
+      "notes": [
+        "input must be 48 kHz: asetrate=48000*1.035 assumes it (a 24 kHz input would come out twice as fast)",
+        "add -ar 48000 on the output: loudnorm writes 192 kHz otherwise",
+        "run it on the whole narration at once, then cut into lines (reels/one-voice/tools/voice-chain.py): loudnorm on 3-second islands is uneven"
+      ],
+      "sample": "candidates/A-youth-edu.wav",
+      "used_in": [
+        "reels/one-voice"
+      ]
+    }
+  }
 }
