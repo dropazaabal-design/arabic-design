@@ -4,11 +4,14 @@
   "status": "used — chosen by the account owner for reels/one-voice",
   "provider": "ElevenLabs (hosted)",
   "voice_type": "pvc (professional voice clone) — from the file name",
-  "voice_id": null,
-  "voice_id_note": "Not in the file. To pin this voice, copy its Voice ID from ElevenLabs (Voices → the voice → ID) into this field.",
+  "voice_id": "cXKxmnaaadsos6OYJ96c",
+  "voice_id_note": "Read from the ElevenLabs connector (creative_list_voices): name «Hassan Mort - Arabic», category professional, language ar, accent modern standard, gender male, age middle_aged.",
   "model_id": null,
   "model_note": "The file name ends in «v4»; which ElevenLabs model or setting that names is not stated, so it is left unfilled here.",
-  "settings_from_file_name": { "raw": "pvc_sp100_s99_sb99_v4", "reading": "sp100, s99, sb99 — probably speed, stability and similarity boost; not confirmed" },
+  "settings_from_file_name": {
+    "raw": "pvc_sp100_s99_sb99_v4",
+    "reading": "sp100, s99, sb99 — probably speed, stability and similarity boost; not confirmed"
+  },
   "reference": {
     "file": "../../one-voice/audio/hassan/ElevenLabs_Hassan_Mort_Arabic_pvc_sp100_s99_sb99_v4.mp3",
     "sha256": "8740fe9dff6a31669b0f76803467d9c855a3f72f104fd0d0b387b1d81ce58d49",
@@ -16,5 +19,9 @@
     "text": "the full reel text of reels/one-voice (narration and on-screen labels)"
   },
   "post": "none besides one shared gain to −16 LUFS (peaks limited to −1.5 dB) — reels/one-voice/tools/split-voice.py; the basira_youth_edu chain was not applied",
-  "observations": ["reads «ما أحد» as «ما حد»", "reads «كتاب وبس» with a short break before «وبس»", "pace about 1.9 words/s, faster than Nadeem A after post (about 1.8)"]
+  "observations": [
+    "reads «ما أحد» as «ما حد»",
+    "reads «كتاب وبس» with a short break before «وبس»",
+    "pace about 1.9 words/s, faster than Nadeem A after post (about 1.8)"
+  ]
 }

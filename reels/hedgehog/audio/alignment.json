@@ -1,0 +1,604 @@
+[
+ {
+  "seg": "s1",
+  "script": "تبي",
+  "heard": "تبي",
+  "t": 0.0,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "تقرب",
+  "heard": "تقرب",
+  "t": 0.28,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "من",
+  "heard": "من",
+  "t": 0.68,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "الناس…",
+  "heard": "الناس",
+  "t": 0.88,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "بس",
+  "heard": "بس",
+  "t": 1.78,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "كل",
+  "heard": "كلمة",
+  "t": 2.1,
+  "match": false
+ },
+ {
+  "seg": "s1",
+  "script": "ما",
+  "heard": "كلمة",
+  "t": 2.1,
+  "match": false
+ },
+ {
+  "seg": "s1",
+  "script": "قرّبت،",
+  "heard": "قربت",
+  "t": 2.46,
+  "match": true
+ },
+ {
+  "seg": "s1",
+  "script": "انجرحت؟",
+  "heard": "انجرحت؟",
+  "t": 3.24,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "هذي",
+  "heard": "هذه",
+  "t": 4.38,
+  "match": false
+ },
+ {
+  "seg": "s2",
+  "script": "اسمها",
+  "heard": "اسمها",
+  "t": 4.78,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "معضلة",
+  "heard": "معضلة",
+  "t": 5.28,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "القنفذ،",
+  "heard": "القنفذ",
+  "t": 5.74,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "حكاية",
+  "heard": "حكاية",
+  "t": 6.4,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "فلسفية",
+  "heard": "فلسفية",
+  "t": 6.98,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "ذكرها",
+  "heard": "ذكرها",
+  "t": 7.56,
+  "match": true
+ },
+ {
+  "seg": "s2",
+  "script": "شوبنهاور.",
+  "heard": "شوپنهاور",
+  "t": 8.02,
+  "match": false
+ },
+ {
+  "seg": "s3",
+  "script": "في",
+  "heard": "في",
+  "t": 8.94,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "ليلة",
+  "heard": "ليلة",
+  "t": 9.14,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "باردة،",
+  "heard": "باردة",
+  "t": 9.48,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "قنافذ",
+  "heard": "قنافذ",
+  "t": 9.92,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "قرّبت",
+  "heard": "قربت",
+  "t": 10.52,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "من",
+  "heard": "من",
+  "t": 11.0,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "بعض",
+  "heard": "بعض",
+  "t": 11.2,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "عشان",
+  "heard": "عشان",
+  "t": 11.48,
+  "match": true
+ },
+ {
+  "seg": "s3",
+  "script": "تدفى.",
+  "heard": "تدفى",
+  "t": 11.8,
+  "match": true
+ },
+ {
+  "seg": "s4",
+  "script": "بس",
+  "heard": "بس",
+  "t": 12.46,
+  "match": true
+ },
+ {
+  "seg": "s4",
+  "script": "كل",
+  "heard": "كلمة",
+  "t": 12.84,
+  "match": false
+ },
+ {
+  "seg": "s4",
+  "script": "ما",
+  "heard": "كلمة",
+  "t": 12.84,
+  "match": false
+ },
+ {
+  "seg": "s4",
+  "script": "التصقت…",
+  "heard": "التصقت",
+  "t": 13.14,
+  "match": true
+ },
+ {
+  "seg": "s4",
+  "script": "الأشواك",
+  "heard": "الأشواك",
+  "t": 13.9,
+  "match": true
+ },
+ {
+  "seg": "s4",
+  "script": "وخزت",
+  "heard": "وخزت",
+  "t": 14.74,
+  "match": true
+ },
+ {
+  "seg": "s4",
+  "script": "بعضها.",
+  "heard": "بعضها",
+  "t": 15.26,
+  "match": true
+ },
+ {
+  "seg": "s5",
+  "script": "فابتعدت…",
+  "heard": "فابتعدت",
+  "t": 15.96,
+  "match": true
+ },
+ {
+  "seg": "s5",
+  "script": "ورجع",
+  "heard": "ورجع",
+  "t": 17.06,
+  "match": true
+ },
+ {
+  "seg": "s5",
+  "script": "البرد.",
+  "heard": "البرد",
+  "t": 17.52,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "وظلّت",
+  "heard": "وظلت",
+  "t": 18.18,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "تقرّب",
+  "heard": "تقرب",
+  "t": 18.7,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "وتبعد،",
+  "heard": "وتبعد",
+  "t": 19.2,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "لين",
+  "heard": "لين",
+  "t": 19.84,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "لقت",
+  "heard": "لقت",
+  "t": 20.3,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "مسافة:",
+  "heard": "مسافة",
+  "t": 20.56,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "دافية،",
+  "heard": "دافية",
+  "t": 21.36,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "وما",
+  "heard": "وما",
+  "t": 22.04,
+  "match": true
+ },
+ {
+  "seg": "s6",
+  "script": "توخز.",
+  "heard": "توخز",
+  "t": 22.42,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "وإحنا",
+  "heard": "وإحنا",
+  "t": 23.14,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "كذا.",
+  "heard": "كذا",
+  "t": 23.68,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "القرب",
+  "heard": "القرب",
+  "t": 24.2,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "يدفّي،",
+  "heard": "يدفي",
+  "t": 24.76,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "والقرب",
+  "heard": "والقرب",
+  "t": 25.32,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "الزايد",
+  "heard": "الزايد",
+  "t": 25.88,
+  "match": true
+ },
+ {
+  "seg": "s7",
+  "script": "يوخز.",
+  "heard": "يوخز",
+  "t": 26.46,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "مثلًا:",
+  "heard": "مثلا",
+  "t": 27.12,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "تحب",
+  "heard": "اتحب",
+  "t": 27.86,
+  "match": false
+ },
+ {
+  "seg": "s8",
+  "script": "أخوك،",
+  "heard": "أخوك",
+  "t": 28.32,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "بس",
+  "heard": "بس",
+  "t": 28.94,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "ما",
+  "heard": "ما",
+  "t": 29.16,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "تحب",
+  "heard": "تحب",
+  "t": 29.34,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "يفتح",
+  "heard": "يفتح",
+  "t": 29.56,
+  "match": true
+ },
+ {
+  "seg": "s8",
+  "script": "جوالك.",
+  "heard": "جوالك",
+  "t": 29.9,
+  "match": true
+ },
+ {
+  "seg": "s9",
+  "script": "هذي",
+  "heard": "هذه",
+  "t": 30.62,
+  "match": false
+ },
+ {
+  "seg": "s9",
+  "script": "مو",
+  "heard": "مو",
+  "t": 31.06,
+  "match": true
+ },
+ {
+  "seg": "s9",
+  "script": "قطيعة.",
+  "heard": "قطيعة",
+  "t": 31.28,
+  "match": true
+ },
+ {
+  "seg": "s9",
+  "script": "هذي",
+  "heard": "هذه",
+  "t": 31.96,
+  "match": false
+ },
+ {
+  "seg": "s9",
+  "script": "مساحتك.",
+  "heard": "مساحتك",
+  "t": 32.28,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "والزيارة؟",
+  "heard": "والزيارة",
+  "t": 33.12,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "خلّها",
+  "heard": "خلها",
+  "t": 34.04,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "مستمرة…",
+  "heard": "مستمرة",
+  "t": 34.46,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "بس",
+  "heard": "بس",
+  "t": 35.1,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "بموعد",
+  "heard": "بموعد",
+  "t": 35.48,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "يريّح",
+  "heard": "يريح",
+  "t": 35.94,
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "البيتين.",
+  "heard": "البيتين",
+  "t": 36.38,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "الحد",
+  "heard": "الحد",
+  "t": 37.04,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "اللطيف",
+  "heard": "اللطيف",
+  "t": 37.58,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "ما",
+  "heard": "ما",
+  "t": 38.04,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "يقطع",
+  "heard": "يقطع",
+  "t": 38.26,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "الود…",
+  "heard": "الود",
+  "t": 38.6,
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "يحميه.",
+  "heard": "يحميه",
+  "t": 38.94,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "احفظ",
+  "heard": "احفظ",
+  "t": 39.84,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "الفيديو،",
+  "heard": "الفيديو",
+  "t": 40.3,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "وارجع",
+  "heard": "ورجع",
+  "t": 40.94,
+  "match": false
+ },
+ {
+  "seg": "s12",
+  "script": "له",
+  "heard": "له",
+  "t": 41.38,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "لما",
+  "heard": "لما",
+  "t": 41.48,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "تحتاج",
+  "heard": "تحتاج",
+  "t": 41.74,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "مسافة",
+  "heard": "مسافة",
+  "t": 42.22,
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "دافية.",
+  "heard": "دافية",
+  "t": 42.74,
+  "match": true
+ }
+]

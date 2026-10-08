@@ -1,0 +1,125 @@
+{
+  "title": "معضلة القنفذ",
+  "register": "عامية عربية بيضاء بلمسة خليجية خفيفة",
+  "voice": "kitabwbs_nadeem → ElevenLabs voice_id dlGxemPxFMTY7iXagmOj, model eleven_v4 (see ../voices/nadeem/elevenlabs.json)",
+  "source": "Schopenhauer, Parerga und Paralipomena (1851), vol. II, ch. 31 §396 — a parable, not an experiment",
+  "segments": [
+    {
+      "id": "s1",
+      "scene": 1,
+      "text": "تبي تقرب من الناس… بس كل ما قرّبت، انجرحت؟"
+    },
+    {
+      "id": "s2",
+      "scene": 1,
+      "text": "هذي اسمها معضلة القنفذ، حكاية فلسفية ذكرها شوبنهاور."
+    },
+    {
+      "id": "s3",
+      "scene": 2,
+      "text": "في ليلة باردة، قنافذ قرّبت من بعض عشان تدفى."
+    },
+    {
+      "id": "s4",
+      "scene": 2,
+      "text": "بس كل ما التصقت… الأشواك وخزت بعضها."
+    },
+    {
+      "id": "s5",
+      "scene": 3,
+      "text": "فابتعدت… ورجع البرد."
+    },
+    {
+      "id": "s6",
+      "scene": 3,
+      "text": "وظلّت تقرّب وتبعد، لين لقت مسافة: دافية، وما توخز."
+    },
+    {
+      "id": "s7",
+      "scene": 4,
+      "text": "وإحنا كذا. القرب يدفّي، والقرب الزايد يوخز."
+    },
+    {
+      "id": "s8",
+      "scene": 5,
+      "text": "مثلًا: تحب أخوك، بس ما تحب يفتح جوالك."
+    },
+    {
+      "id": "s9",
+      "scene": 5,
+      "text": "هذي مو قطيعة. هذي مساحتك."
+    },
+    {
+      "id": "s10",
+      "scene": 6,
+      "text": "والزيارة؟ خلّها مستمرة… بس بموعد يريّح البيتين."
+    },
+    {
+      "id": "s11",
+      "scene": 6,
+      "text": "الحد اللطيف ما يقطع الود… يحميه."
+    },
+    {
+      "id": "s12",
+      "scene": 7,
+      "text": "احفظ الفيديو، وارجع له لما تحتاج مسافة دافية."
+    }
+  ],
+  "onScreen": [
+    {
+      "scene": 1,
+      "role": "title",
+      "text": "معضلة القنفذ"
+    },
+    {
+      "scene": 1,
+      "role": "source",
+      "text": "حكاية فلسفية لشوبنهاور"
+    },
+    {
+      "scene": 2,
+      "role": "label",
+      "text": "برد"
+    },
+    {
+      "scene": 2,
+      "role": "label",
+      "text": "وخز"
+    },
+    {
+      "scene": 3,
+      "role": "label",
+      "text": "مسافة دافية"
+    },
+    {
+      "scene": 4,
+      "role": "title",
+      "text": "القرب يدفّي… والزايد يوخز"
+    },
+    {
+      "scene": 5,
+      "role": "title",
+      "text": "مساحتك مو قطيعة"
+    },
+    {
+      "scene": 6,
+      "role": "title",
+      "text": "ود مستمر… بموعد مريح"
+    },
+    {
+      "scene": 6,
+      "role": "label",
+      "text": "الحد اللطيف يحمي الود"
+    },
+    {
+      "scene": 7,
+      "role": "title",
+      "text": "مسافة دافية"
+    },
+    {
+      "scene": 7,
+      "role": "signature",
+      "text": "كتاب وبس"
+    }
+  ]
+}
