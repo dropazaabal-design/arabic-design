@@ -1,0 +1,13 @@
+// Every word shown on screen, in one place. tools/copycheck.mjs requires this to equal the
+// storyboard's onScreen lists exactly (same strings, same scenes). Typed text is a list of whole
+// words: the field fills one word at a time, never letter by letter.
+export const T = {
+  sc01: { contact: 'زميل', ask: 'ممكن تساعدني اليوم؟', typed: ['لا', 'أستطيع', 'اليوم'], yes: 'حاضر', today: 'اليوم', project: 'مشروعي', help: 'مساعدة', why1: 'فلماذا وافقت…', why2: 'وأنت تريد أن تقول لا؟' },
+  sc02: { notUrgent: 'غير عاجل', evening: 'المساء', project: 'مشروعي', help: 'مساعدة', tomorrow: 'غدًا', after: 'بعد غد', no: 'لا', yes: 'حاضر', twoSec: 'ثانيتان', pause: 'وقفة صغيرة قبل الموافقة', helpOk: 'المساعدة ليست المشكلة', again: 'مرة بعد مرة', cant: 'لا تقدر', dontWant: 'لا تريد' },
+  sc03: { title1: 'توقف عن', title2: 'إرضاء الآخرين', author: 'باتريك كينغ', role: 'كاتب ومدرب في المهارات الاجتماعية', yes: 'نعم', theirs: 'رضاهم', mine: 'وقتي', resent: 'استياء', anxiety: 'قلق', receipt: 'الفاتورة', r1: 'طلب بسيط', r2: 'ردّ سريع: حاضر', r3: 'الثمن: مساء كامل' },
+  sc04: { ask: 'ممكن تساعدني اليوم؟', cover: 'الجدول', today: 'اليوم', q1: 'هل سينزعج؟', q2: 'هل أقدر فعلًا؟', yes: 'حاضر', unopened: 'لم يُفتح', promise1: 'وعدتُ نفسي:', promise2: 'المشروع', project: 'مشروعي', before: 'حاضر… قبل أن تصبح قرارك', ours: 'في رسالتنا' },
+  sc05: { correction: 'تصحيح مهم', no: 'لا', yes: 'نعم', exploit: 'استغلال؟', clear: 'ردّ واضح', autoYes: 'نعم تلقائية', angryNo: 'لا غاضبة', yourTime: 'وقتك', request: 'طلبه', less: '«وقتي أقل أهمية»', choice: 'اختيار', reaction: 'ردّ فعل', today: 'اليوم', tomorrow: 'غدًا', relaxed: 'مرتاح', annoyed: 'منزعج', help: 'مساعدة', project: 'مشروعي' },
+  sc06: { ask: 'ممكن تساعدني اليوم؟', contact: 'زميل', yes: 'حاضر', help: 'مساعدة', cover: 'الجدول', step1: 'توقّف', step2: 'راجع قدرتك', step3: 'أجب بوضوح', notUrgent: 'غير عاجل', want: 'هل أريد أن أساعد؟', when: 'ومتى أقدر؟', today: 'اليوم', tomorrow: 'غدًا', project: 'مشروعي', half: 'نصف ساعة', reply1: ['لا', 'أستطيع', 'اليوم.'], reply2: ['أقدر', 'غدًا', 'نصف', 'ساعة.'], optional: 'اختياري', later: 'سأراجع وقتي وأرد عليك.', long: 'قصة طويلة وأعذار…' },
+  sc07: { uneasy: 'عدم ارتياح', ok: 'تمام، غدًا إذن', noGuarantee: 'لا يضمن رضا الجميع', yours1: 'لكنه يجعل قرارك…', yours2: 'قرارك', small: 'ابدأ بالصغير', practice: 'وقت وتدريب' },
+  sc08: { contact: 'زميل', ask: 'ممكن تساعدني اليوم؟', reply1: 'لا أستطيع اليوم.', reply2: 'أقدر غدًا نصف ساعة.', today: 'اليوم', project: 'مشروعي', twoSec: 'ثانيتان', end1: 'قبل أن تقول «نعم»…', end2: 'تأكّد أنها إجابتك', s1: 'توقّف', s2: 'راجع وقتك', s3: 'أجب', series: 'فكرة من كتاب', brand: 'كتاب وبس' },
+} as const;

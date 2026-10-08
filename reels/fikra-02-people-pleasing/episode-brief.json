@@ -1,0 +1,70 @@
+{
+ "series": "فكرة من كتاب",
+ "brand": "كتاب وبس",
+ "episode": 2,
+ "workingTitle": "لماذا تقول نعم… وأنت تريد أن تقول لا؟",
+ "book": "book.json",
+ "formula": {
+  "book": "توقف عن إرضاء الآخرين — باتريك كينغ",
+  "idea": "الموافقة خوفًا من ردّ الفعل تسبق مراجعة القدرة",
+  "problem": "تقول «حاضر» لطلب غير عاجل وأنت تريد أن تقول «لا»، فيذهب المساء المحجوز لمشروعك",
+  "application": "توقّف ← راجع قدرتك ← أجب بوضوح"
+ },
+ "situation": "رسالة زميل غير عاجلة «ممكن تساعدني اليوم؟» ومساء محجوز للمشروع الشخصي (مثال افتراضي)",
+ "promise": "يرى المشاهد لماذا خرجت «حاضر» قبل أن تصبح قراره، ويجرّب ثلاث خطوات على الرسالة نفسها.",
+ "format": {
+  "platform": "YouTube",
+  "orientation": "landscape",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "container": "mp4",
+  "video": "h264",
+  "audio": "aac"
+ },
+ "duration": {
+  "target": 240,
+  "range": [
+   235,
+   250
+  ],
+  "rule": "the measured recording decides; no padding with silence, no speed or pitch change",
+  "measured": 222.98,
+  "note": "below range: the full take ran ~125 wpm over 432 words; only purposeful holds were added (see timeline.json addedBeats)"
+ },
+ "style": {
+  "doodle": 0.35,
+  "motionGraphics": 0.25,
+  "kineticType": 0.25,
+  "collage": 0.15,
+  "note": "direction, not per-second quotas"
+ },
+ "palette": "palette.json (identity 5 + aqua and cardboard from the Arabic edition's cover); no fixed yellow or orange",
+ "rules": [
+  "no faces, people or presenter",
+  "Arabic only inside the picture, digits 0–9",
+  "words animate as whole units; typed text fills a whole word at a time",
+  "no book cover image in the video; an original kraft-paper book card",
+  "helping is not the problem; fear of the reaction is a possibility, not a diagnosis",
+  "a clear reply does not guarantee everyone's approval; not every request is exploitation",
+  "no therapy claims, statistics or brain terms",
+  "the reference video (Bookaffeine) is not copied and was not watched"
+ ],
+ "feedbackApplied": "storyboard.json → feedbackFromEpisode1",
+ "voice": {
+  "identity": "kitabwbs_nadeem (trial)",
+  "provider": "ElevenLabs via the claude.ai connector",
+  "voice_id": "dlGxemPxFMTY7iXagmOj",
+  "model_id": "eleven_v4",
+  "direction": "[warmly] [calmly] audio tags at the start of the text (not spoken)",
+  "softening": "audio/softening-chain.txt (gentle EQ + light de-esser) applied to a copy of the take before alignment",
+  "policy": "one opening sample → owner approval → one full take; generation text built by tools/build_prompts.py and verified identical (SHA-256) before estimate and generation"
+ },
+ "mix": {
+  "loudness": "-16 LUFS integrated",
+  "truePeak": "≤ -1 dBTP",
+  "sfx": "src/sfx.tsx",
+  "music": "none"
+ },
+ "references": "claude-fikra-02-people-pleasing.md (owner's production brief); creative direction and episode-1 feedback from the owner"
+}

@@ -1,0 +1,357 @@
+{
+ "file": "render/fikra-02.mp4",
+ "bytes": 41547183,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1920,
+  "height": 1080,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "13379"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 222.997,
+  "video": 222.983333,
+  "timeline": 222.98,
+  "framesExpected": 13379
+ },
+ "cadence": {
+  "frames": 13379,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "LRA": 2.4,
+  "truePeakDBFS": -4.5
+ },
+ "black": [],
+ "frozenOver3s": [
+  [
+   4.16667,
+   4.58333
+  ],
+  [
+   48.0,
+   3.58333
+  ],
+  [
+   56.6667,
+   3.25
+  ],
+  [
+   86.5333,
+   3.1
+  ]
+ ],
+ "silencesOver0.8s": [
+  [
+   14.8694,
+   16.7681
+  ],
+  [
+   68.4961,
+   69.982
+  ],
+  [
+   134.998,
+   136.789
+  ],
+  [
+   146.712,
+   148.129
+  ],
+  [
+   210.917,
+   211.988
+  ],
+  [
+   218.965,
+   219.983
+  ],
+  [
+   220.692,
+   222.997
+  ]
+ ],
+ "narrationOnsets": {
+  "lines": 43,
+  "found": 41,
+  "maxAbsOffset": 0.078,
+  "notFound": [
+   "s10",
+   "s38"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.5,
+    "measured": 0.578083,
+    "offset": 0.078
+   },
+   {
+    "id": "s02",
+    "planned": 4.221,
+    "measured": 4.25183,
+    "offset": 0.031
+   },
+   {
+    "id": "s03",
+    "planned": 7.704,
+    "measured": 7.7369,
+    "offset": 0.033
+   },
+   {
+    "id": "s04",
+    "planned": 9.458,
+    "measured": 9.48321,
+    "offset": 0.025
+   },
+   {
+    "id": "s05",
+    "planned": 16.747,
+    "measured": 16.7769,
+    "offset": 0.03
+   },
+   {
+    "id": "s06",
+    "planned": 20.924,
+    "measured": 20.9591,
+    "offset": 0.035
+   },
+   {
+    "id": "s07",
+    "planned": 27.424,
+    "measured": 27.4552,
+    "offset": 0.031
+   },
+   {
+    "id": "s08",
+    "planned": 35.396,
+    "measured": 35.4235,
+    "offset": 0.027
+   },
+   {
+    "id": "s09",
+    "planned": 43.545,
+    "measured": 43.5836,
+    "offset": 0.039
+   },
+   {
+    "id": "s10",
+    "planned": 51.749,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s11",
+    "planned": 57.601,
+    "measured": 57.6315,
+    "offset": 0.031
+   },
+   {
+    "id": "s12",
+    "planned": 62.403,
+    "measured": 62.4408,
+    "offset": 0.038
+   },
+   {
+    "id": "s13",
+    "planned": 69.947,
+    "measured": 69.9828,
+    "offset": 0.036
+   },
+   {
+    "id": "s14",
+    "planned": 75.045,
+    "measured": 75.0746,
+    "offset": 0.03
+   },
+   {
+    "id": "s15",
+    "planned": 79.075,
+    "measured": 79.1139,
+    "offset": 0.039
+   },
+   {
+    "id": "s16",
+    "planned": 86.584,
+    "measured": 86.6116,
+    "offset": 0.028
+   },
+   {
+    "id": "s17",
+    "planned": 88.936,
+    "measured": 88.968,
+    "offset": 0.032
+   },
+   {
+    "id": "s18",
+    "planned": 94.005,
+    "measured": 94.0473,
+    "offset": 0.042
+   },
+   {
+    "id": "s19",
+    "planned": 100.069,
+    "measured": 100.099,
+    "offset": 0.03
+   },
+   {
+    "id": "s20",
+    "planned": 106.308,
+    "measured": 106.34,
+    "offset": 0.032
+   },
+   {
+    "id": "s21",
+    "planned": 112.927,
+    "measured": 112.958,
+    "offset": 0.031
+   },
+   {
+    "id": "s22",
+    "planned": 117.359,
+    "measured": 117.402,
+    "offset": 0.043
+   },
+   {
+    "id": "s23",
+    "planned": 121.472,
+    "measured": 121.513,
+    "offset": 0.041
+   },
+   {
+    "id": "s24",
+    "planned": 126.069,
+    "measured": 126.109,
+    "offset": 0.04
+   },
+   {
+    "id": "s25",
+    "planned": 130.243,
+    "measured": 130.274,
+    "offset": 0.031
+   },
+   {
+    "id": "s26",
+    "planned": 136.753,
+    "measured": 136.789,
+    "offset": 0.036
+   },
+   {
+    "id": "s27",
+    "planned": 140.839,
+    "measured": 140.879,
+    "offset": 0.04
+   },
+   {
+    "id": "s28",
+    "planned": 148.122,
+    "measured": 148.149,
+    "offset": 0.027
+   },
+   {
+    "id": "s29",
+    "planned": 154.87,
+    "measured": 154.907,
+    "offset": 0.037
+   },
+   {
+    "id": "s30",
+    "planned": 157.915,
+    "measured": 157.955,
+    "offset": 0.04
+   },
+   {
+    "id": "s31",
+    "planned": 160.638,
+    "measured": 160.633,
+    "offset": -0.005
+   },
+   {
+    "id": "s32",
+    "planned": 165.99,
+    "measured": 165.968,
+    "offset": -0.022
+   },
+   {
+    "id": "s33",
+    "planned": 169.684,
+    "measured": 169.725,
+    "offset": 0.041
+   },
+   {
+    "id": "s34",
+    "planned": 173.061,
+    "measured": 173.089,
+    "offset": 0.028
+   },
+   {
+    "id": "s35",
+    "planned": 178.769,
+    "measured": 178.805,
+    "offset": 0.036
+   },
+   {
+    "id": "s36",
+    "planned": 184.183,
+    "measured": 184.21,
+    "offset": 0.027
+   },
+   {
+    "id": "s37",
+    "planned": 187.217,
+    "measured": 187.252,
+    "offset": 0.035
+   },
+   {
+    "id": "s38",
+    "planned": 192.142,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s39",
+    "planned": 199.545,
+    "measured": 199.574,
+    "offset": 0.029
+   },
+   {
+    "id": "s40",
+    "planned": 204.212,
+    "measured": 204.24,
+    "offset": 0.028
+   },
+   {
+    "id": "s41",
+    "planned": 206.145,
+    "measured": 206.174,
+    "offset": 0.029
+   },
+   {
+    "id": "s42",
+    "planned": 211.953,
+    "measured": 211.99,
+    "offset": 0.037
+   },
+   {
+    "id": "s43",
+    "planned": 215.103,
+    "measured": 215.135,
+    "offset": 0.032
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}
