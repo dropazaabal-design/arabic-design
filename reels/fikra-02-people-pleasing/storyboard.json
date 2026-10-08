@@ -1,0 +1,435 @@
+{
+ "episode": "fikra-02-people-pleasing",
+ "timing": "timeline.json (measured from the full take; every beat keys on a spoken word via wordAt)",
+ "canvas": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "safe": {
+   "x": 154,
+   "y": 86
+  }
+ },
+ "world": "one world: a phone, a day calendar, paper (kraft cards, tape, receipt, stamps) and time (clock, evening bar). Large objects whose parts move separately so the picture shows cause and effect.",
+ "type": {
+  "emphasis": "Cairo 900, 56–220 px",
+  "secondary": "Tajawal 700, 30–42 px (calendar hours)",
+  "rule": "words move as whole units; typed text fills one whole word at a time"
+ },
+ "motionFamilies": {
+  "draw-on": "a stroke drawn along its path as the idea is spoken",
+  "build": "parts placed one after another",
+  "morph": "a shape changing into its new meaning (a reply becomes a block of time; a line becomes a beam)",
+  "reveal": "a word uncovered after the expectation is built",
+  "compare": "at most two things at once",
+  "hold": "stillness for an idea that needs it"
+ },
+ "generatedOnScreen": {
+  "note": "strings drawn by components, not listed in copy.ts",
+  "items": [
+   "calendar and evening hour labels «4 م» … «9 م» (digits 0–9 + م)",
+   "the contact avatar initial «ز» (first letter of «زميل»)"
+  ]
+ },
+ "feedbackFromEpisode1": [
+  "bigger main elements (phone 0.9 scale, calendar 600×760) instead of small icons in empty space",
+  "the paradox is on screen by second 10, the question by second 12",
+  "no row of three boxes: the steps change the phone and calendar themselves (sc06)",
+  "more kinetic type («لا» / «حاضر», «قرارك», the closing line) and collage (kraft card, tape, receipt, stamps)"
+ ],
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "name": "الخطاف — «حاضر» التي أكلت المساء",
+   "time": [
+    0.0,
+    15.808
+   ],
+   "audio": [
+    "s01",
+    "s02",
+    "s03",
+    "s04"
+   ],
+   "background": "light #F4F5F2",
+   "purpose": "within 12 s: the situation (a non-urgent message), the paradox (you wanted «لا», you sent «حاضر») and the question",
+   "visual": "a large phone (right) with the message «ممكن تساعدني اليوم؟»; a large day calendar (left) with the evening booked for «مشروعي»",
+   "motion": [
+    "build: the message pops in on «رسالة»",
+    "kinetic type in the field: «لا» «أستطيع» «اليوم» typed as whole words on the spoken words",
+    "erase word by word on «تمسحها»",
+    "«حاضر» typed and sent on «وترسل… حاضر»",
+    "morph: the sent «حاضر» flies into 6 pm and becomes the red «مساعدة» block that squeezes the project to a grey sliver",
+    "draw-on: a red ring around the sent reply on «غاضب»",
+    "reveal: the stage steps back and the question holds («فلماذا وافقت…» / «وأنت تريد أن تقول لا؟»)"
+   ],
+   "onScreen": [
+    "زميل",
+    "ممكن تساعدني اليوم؟",
+    "لا",
+    "أستطيع",
+    "اليوم",
+    "حاضر",
+    "مشروعي",
+    "مساعدة",
+    "فلماذا وافقت…",
+    "وأنت تريد أن تقول لا؟"
+   ],
+   "colors": [
+    "red",
+    "green",
+    "blue",
+    "cardboard"
+   ]
+  },
+  {
+   "sceneId": "sc02",
+   "name": "الأثر، والوعد، والتوازن",
+   "time": [
+    15.808,
+    42.931
+   ],
+   "audio": [
+    "s05",
+    "s06",
+    "s07",
+    "s08"
+   ],
+   "background": "light #F4F5F2",
+   "purpose": "what the reply cost (the evening, the project pushed to tomorrow and after), the promise (the two seconds between «لا» and «حاضر» open into a pause), then the nuance (helping is not the problem)",
+   "visual": "the request with a «غير عاجل» stamp; a horizontal evening timeline (4 pm on the right) with a clock; the project card; big kinetic «لا» / «حاضر»; a stack of «حاضر» bubbles",
+   "motion": [
+    "draw-on: the evening bar from «الطلب» to «المساء»",
+    "build: «حاضر» drops onto 6 pm; the help block grows on «ساعة» and «ساعتين»",
+    "morph: the project card is pushed off the bar to «غدًا», then «بعد غد»",
+    "compare: «لا» (blue) and «حاضر» (red) with a bracket «ثانيتان»; they part and a pause sign opens on «وقفة»",
+    "build: «حاضر» bubbles pile up on «توافق… مرة بعد مرة»"
+   ],
+   "onScreen": [
+    "غير عاجل",
+    "المساء",
+    "مشروعي",
+    "مساعدة",
+    "غدًا",
+    "بعد غد",
+    "لا",
+    "حاضر",
+    "ثانيتان",
+    "وقفة صغيرة قبل الموافقة",
+    "المساعدة ليست المشكلة",
+    "مرة بعد مرة",
+    "لا تقدر",
+    "لا تريد"
+   ],
+   "colors": [
+    "red",
+    "blue",
+    "green",
+    "aqua"
+   ]
+  },
+  {
+   "sceneId": "sc03",
+   "name": "الكتاب والفكرة — الميزان والفاتورة",
+   "time": [
+    42.931,
+    69.217
+   ],
+   "audio": [
+    "s09",
+    "s10",
+    "s11",
+    "s12"
+   ],
+   "background": "navy #101827",
+   "purpose": "name the book and author (no cover image), then the idea: a «نعم» that keeps their approval moves our time to their side; what stays is resentment and worry; the receipt",
+   "visual": "an original kraft-paper book card (title, author, role pill, tape); a balance «وقتي» / «رضاهم» with green time chips; a printed receipt",
+   "motion": [
+    "build: title lines on «توقف» and «إرضاء»; red underline on «العادة»",
+    "compare: the card steps aside on «نعم» and the balance appears",
+    "morph: four time chips hop from «وقتي» to «رضاهم» on «لنحافظ / رضا / يكلفنا / أكثر»; the beam tilts",
+    "build: «استياء» and «قلق» drop into my pan",
+    "reveal: a receipt prints its rows on «طلب / ورد / وثمن», the last in red"
+   ],
+   "onScreen": [
+    "توقف عن",
+    "إرضاء الآخرين",
+    "باتريك كينغ",
+    "كاتب ومدرب في المهارات الاجتماعية",
+    "نعم",
+    "رضاهم",
+    "وقتي",
+    "استياء",
+    "قلق",
+    "الفاتورة",
+    "طلب بسيط",
+    "ردّ سريع: حاضر",
+    "الثمن: مساء كامل"
+   ],
+   "colors": [
+    "cardboard",
+    "aqua",
+    "green",
+    "red"
+   ]
+  },
+  {
+   "sceneId": "sc04",
+   "name": "سباق السؤالين",
+   "time": [
+    69.217,
+    105.688
+   ],
+   "audio": [
+    "s13",
+    "s14",
+    "s15",
+    "s16",
+    "s17",
+    "s18",
+    "s19"
+   ],
+   "background": "light #F4F5F2",
+   "purpose": "why «حاضر» came out: two questions race from the message; fear of the reaction takes the short lane and arrives first; the capacity question needs the calendar, which was never opened",
+   "visual": "the message (top right); a short red lane and a long dotted blue lane through a closed calendar to the send button; the questions themselves are the runners",
+   "motion": [
+    "draw-on: both lanes on «يتسابق»",
+    "build: «هل سينزعج؟» and «هل أقدر فعلًا؟» step onto their lanes on the spoken questions",
+    "the red question dashes on «سريع», pauses at a cracked heart on «خيبة… أمله», reaches «send» on «فيصل» → red «حاضر»",
+    "tape «لم يُفتح» across the closed calendar on «والجدول»",
+    "morph: the calendar grows and opens on «فيحتاج… تنظر»; the project glows on «وقتك»; a kraft note «وعدتُ نفسي: المشروع» on «وعدت»",
+    "kinetic type: «حاضر… قبل أن تصبح قرارك» word by word; the red question returns with the stamp «في رسالتنا»"
+   ],
+   "onScreen": [
+    "ممكن تساعدني اليوم؟",
+    "الجدول",
+    "اليوم",
+    "هل سينزعج؟",
+    "هل أقدر فعلًا؟",
+    "حاضر",
+    "لم يُفتح",
+    "وعدتُ نفسي:",
+    "المشروع",
+    "مشروعي",
+    "حاضر… قبل أن تصبح قرارك",
+    "في رسالتنا"
+   ],
+   "colors": [
+    "red",
+    "blue",
+    "green",
+    "cardboard"
+   ]
+  },
+  {
+   "sceneId": "sc05",
+   "name": "التصحيح",
+   "time": [
+    105.688,
+    135.866
+   ],
+   "audio": [
+    "s20",
+    "s21",
+    "s22",
+    "s23",
+    "s24",
+    "s25"
+   ],
+   "background": "navy #101827",
+   "purpose": "the correction: not «لا» to everything, not suspicion of every request; a clear reply between an automatic «نعم» and an angry «لا»; respect both; clarity makes help a choice",
+   "visual": "stamp «تصحيح مهم»; a field of «لا» stamps struck through; a request with «استغلال؟» struck; a spectrum line whose middle «ردّ واضح» becomes the pivot of a balance «وقتك» / «طلبه»; two calendars «اليوم» / «غدًا»",
+   "motion": [
+    "build: «لا» stamps multiply on «لكل شيء»; one strike on «ولا»",
+    "draw-on: the spectrum line; «ردّ واضح» in the middle; both ends struck",
+    "morph: the line shortens and becomes the beam of the balance on «ردّ يحترم»",
+    "build: four «نعم» weights drop on «توافق دائمًا»; the beam tips; «وقتي أقل أهمية» on «وقتي»",
+    "compare: «اختيار» (green) vs «ردّ فعل» (struck)",
+    "morph: the help block lands in tomorrow on «غدًا» («مرتاح»); a dashed red ghost over today's project is struck on «منزعج»"
+   ],
+   "onScreen": [
+    "تصحيح مهم",
+    "لا",
+    "نعم",
+    "استغلال؟",
+    "ردّ واضح",
+    "نعم تلقائية",
+    "لا غاضبة",
+    "وقتك",
+    "طلبه",
+    "«وقتي أقل أهمية»",
+    "اختيار",
+    "ردّ فعل",
+    "اليوم",
+    "غدًا",
+    "مرتاح",
+    "منزعج",
+    "مساعدة",
+    "مشروعي"
+   ],
+   "colors": [
+    "aqua",
+    "red",
+    "green",
+    "blue"
+   ]
+  },
+  {
+   "sceneId": "sc06",
+   "name": "إعادة المشهد — قرار يُبنى أمام المشاهد",
+   "time": [
+    135.866,
+    178.151
+   ],
+   "audio": [
+    "s26",
+    "s27",
+    "s28",
+    "s29",
+    "s30",
+    "s31",
+    "s32",
+    "s33",
+    "s34"
+   ],
+   "background": "light #F4F5F2",
+   "purpose": "the application, built as one decision on the same phone and calendar (no row of boxes): 1) pause, 2) review capacity (calendar before keyboard), 3) answer clearly and briefly; the optional alternative; «سأراجع…»; one clear sentence instead of a story",
+   "visual": "sc01's end state rewinds; the same phone and calendar; a big clock that pins itself to the phone; the calendar opened; a kraft card «غدًا» with a half-hour slot; replies; a long paper that folds",
+   "motion": [
+    "rewind on «فلنُعِد»: the sent «حاضر» un-sends, the evening unsqueezes, the calendar closes",
+    "step 1 on «توقّف»: the clock stops (aqua halo), the screen turns aqua, only the caret blinks; «غير عاجل» stamp; a ring draws for «دقيقة»; the clock pins itself to the phone",
+    "step 2 on «راجع قدرتك»: the calendar grows and opens on «افتح جدولك»; the keyboard drops away on «لوحة المفاتيح»; the project glows on «محجوز»; questions «هل أريد أن أساعد؟» → «ومتى أقدر؟» with the tomorrow card",
+    "step 3 on «أجب بوضوح»: the keyboard returns; «لا أستطيع اليوم.» typed word by word and sent → a check on the project; «أقدر غدًا نصف ساعة.» sent (dashed) → the tomorrow slot fills; «اختياري»",
+    "variants: a dashed «سأراجع وقتي وأرد عليك.»; «قصة طويلة وأعذار…» unrolls and folds away on «جملة»; the sent replies pulse on «واضحة»"
+   ],
+   "onScreen": [
+    "ممكن تساعدني اليوم؟",
+    "زميل",
+    "حاضر",
+    "مساعدة",
+    "الجدول",
+    "توقّف",
+    "راجع قدرتك",
+    "أجب بوضوح",
+    "غير عاجل",
+    "هل أريد أن أساعد؟",
+    "ومتى أقدر؟",
+    "اليوم",
+    "غدًا",
+    "مشروعي",
+    "نصف ساعة",
+    "لا",
+    "أستطيع",
+    "اليوم.",
+    "أقدر",
+    "نصف",
+    "ساعة.",
+    "اختياري",
+    "سأراجع وقتي وأرد عليك.",
+    "قصة طويلة وأعذار…"
+   ],
+   "colors": [
+    "aqua",
+    "blue",
+    "green",
+    "red",
+    "cardboard"
+   ]
+  },
+  {
+   "sceneId": "sc07",
+   "name": "بعد الرد",
+   "time": [
+    178.151,
+    198.841
+   ],
+   "audio": [
+    "s35",
+    "s36",
+    "s37",
+    "s38"
+   ],
+   "background": "navy #101827",
+   "purpose": "honest aftermath: some discomfort, maybe annoyance (possible, not certain); a simple answer; a clear reply does not guarantee everyone's approval but makes the decision yours; start with small requests; skill takes time and practice",
+   "visual": "a red wobbling line («عدم ارتياح») and a typing bubble; «تمام، غدًا إذن»; kinetic type «قرارك» circled; request bubbles as growing steps; a practice bar",
+   "motion": [
+    "draw-on: the red wave on «تشعر»",
+    "build: typing dots on «وقد ينزعج»; the answer replaces them on «تمام» and the wave settles",
+    "morph: the calm line slides down and becomes the practice track",
+    "kinetic type: «لا يضمن رضا الجميع» → «لكنه يجعل قرارك…» → «قرارك» with a green ring",
+    "build: four requests, each larger, on «بالطلبات / الصغيرة / حيث / يكلّف»; the bar fills to about two thirds on «فالمهارة… وتدريبًا»"
+   ],
+   "onScreen": [
+    "عدم ارتياح",
+    "تمام، غدًا إذن",
+    "لا يضمن رضا الجميع",
+    "لكنه يجعل قرارك…",
+    "قرارك",
+    "ابدأ بالصغير",
+    "وقت وتدريب"
+   ],
+   "colors": [
+    "red",
+    "green",
+    "aqua"
+   ]
+  },
+  {
+   "sceneId": "sc08",
+   "name": "الإغلاق — الرسالة نفسها، والفرق ثانيتان",
+   "time": [
+    198.841,
+    222.98
+   ],
+   "audio": [
+    "s39",
+    "s40",
+    "s41",
+    "s42",
+    "s43"
+   ],
+   "background": "light #F4F5F2",
+   "purpose": "close the loop with the hook: same message, read, a pause, then a clear reply; the evening stays with the project; the difference is two seconds; the closing line; the three steps as one path for the next request",
+   "visual": "the sc01 phone and calendar; green replies; a bracket «ثانيتان» between the message and the reply; the stage steps back for the closing line; one drawn path with three stops",
+   "motion": [
+    "build: the message on «وصلت», read ticks on «وقرأتها»",
+    "hold: aqua screen and the pinned clock on «وتوقّفت لحظة»",
+    "build: the two-line reply on «ثم أجبت»",
+    "glow and check on the project on «المساء لمشروعك»",
+    "draw-on: the bracket «ثانيتان» on «ثانيتان»",
+    "reveal: «قبل أن تقول «نعم»…» / «تأكّد أنها إجابتك»",
+    "draw-on: one path «توقّف» → «راجع وقتك» → «أجب» on the spoken steps",
+    "end card «فكرة من كتاب» / «كتاب وبس» 3 s before the end"
+   ],
+   "onScreen": [
+    "زميل",
+    "ممكن تساعدني اليوم؟",
+    "لا أستطيع اليوم.",
+    "أقدر غدًا نصف ساعة.",
+    "اليوم",
+    "مشروعي",
+    "ثانيتان",
+    "قبل أن تقول «نعم»…",
+    "تأكّد أنها إجابتك",
+    "توقّف",
+    "راجع وقتك",
+    "أجب",
+    "فكرة من كتاب",
+    "كتاب وبس"
+   ],
+   "colors": [
+    "green",
+    "blue",
+    "aqua",
+    "red"
+   ]
+  }
+ ],
+ "assets": {
+  "drawings": "all drawings are original SVG in src/art (world.tsx, doodles.tsx); no stock, no AI images, no people or faces; no book cover image",
+  "fonts": "Cairo, Tajawal (SIL Open Font License, via @fontsource)",
+  "sfx": "public/sfx — synthesized with FFmpeg in this repository (crab-mentality project); original; cues in src/sfx.tsx sit on the spoken words, volume 0.06–0.14",
+  "music": "none",
+  "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj; one sample then one full take (generation fTjpf9jh2jXBhBso0v8B); softening chain C (EQ + light de-esser) applied before alignment"
+ }
+}
