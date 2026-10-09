@@ -1,0 +1,1 @@
+highpass=f=75,afftdn=nr=6:nf=-42,deesser=i=0.1:m=0.4:f=0.5:s=o
