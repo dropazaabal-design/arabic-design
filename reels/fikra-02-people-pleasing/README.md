@@ -42,7 +42,7 @@
 | `audio/` | العيّنة، والتسجيل الكامل الأصلي، وسلسلة التخفيف، وكلمات Whisper، والمحاذاة |
 | `src/` | مشروع Remotion. عالم الحلقة في `src/art/world.tsx`، وكل مشهد في `src/scenes/scNN.tsx` وله تركيبة `Scene-scNN`، وكل النصوص الظاهرة في `src/copy.ts`، والمؤثرات في `src/sfx.tsx` |
 | `review/` | فحص النصوص العربية، والتقرير التقني، والمراجعة الإبداعية، ومخرجات reel-review |
-| `render/` | الحلقة `fikra-02.mp4` والترجمة `captions.ar.srt` |
+| `render/` | الحلقة `fikra-02.mp4` والترجمة العربية `captions.ar.srt` (85 سطرًا، من نص السكربت بترقيمه، على أزمنة الفيديو النهائي؛ تُرفع إلى يوتيوب ملفَّ ترجمة) |
 | `checkpoint.json` | المراحل، والاستهلاك، والبصمات، ونقطة الاستئناف |
 | `publish/` | غلاف يوتيوب (1280×720 و1920×1080) وغلاف الريل (1080×1920، آمن لشبكة 3:4)، والعنوان والوصف والفصول والكابشن (`publish.md`). مصدر الأغلفة `src/Cover.tsx` |
 
@@ -61,6 +61,7 @@ python3 tools/verify.py render/fikra-02.mp4   # → review/technical.json
 ffmpeg -i audio/take-full-fTjpf9jh2jXBhBso0v8B.mp3 -af "$(cat audio/softening-chain.txt)" -ar 48000 -ac 1 audio/take-full.wav
 python tools/words.py audio/take-full.wav audio/take-full.whisper-words.json
 python3 tools/align.py audio/take-full.wav audio/take-full.whisper-words.json --lead 0.5 --hold 4.0
+python3 tools/srt.py                 # الترجمة render/captions.ar.srt من نص السكربت بترقيمه وأزمنة الكلمات المقيسة
 ```
 
 لكل حركة كلمةٌ منطوقة تقع عليها (`wordAt` في `src/time.ts`). لا تُحرّك المشاهد يدويًا، ولا يُغيَّر الإيقاع أو طبقة الصوت. لتعديل مشهد واحد أعد تصدير تركيبته `Scene-scNN`.
