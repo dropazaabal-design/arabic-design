@@ -1,0 +1,48 @@
+{
+ "reel": "reels/mukarram",
+ "note": "Every asset in the reel, where it came from, and whether it may be used. Nothing from the reference video is used in the output.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s11.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj, generation aNXNFFMXD5ZtIJwqc0Ce (take A), cut by tools/align.py",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-A-aNXNFFMXD5ZtIJwqc0Ce.mp3",
+   "sha256": "87fd089f5bc2ae930dc55ebc65473e0f8f404caeb66a9c67430b4771561742b0"
+  },
+  {
+   "path": "audio/take-B-wxDEzbpg4W3Q1FFtohqN.mp3",
+   "source": "ElevenLabs alternative take (not used)",
+   "rights": "same as above",
+   "sha256": "67dca836c76c1f8fbd19e1e24033686845e7db7817b992a2e2e1e00347b253c1"
+  },
+  {
+   "path": "assets/sfx/{splat,chomp,flutter,creak,boing,spit,breeze,crinkle,whistle}.wav",
+   "source": "original numpy syntheses, tools/sfx.py (seeded)",
+   "rights": "original to this project"
+  },
+  {
+   "path": "assets/sfx/{whoosh,thud,pop,click,chime,tick,snap,scrape,scribble,pageflip}.wav",
+   "source": "original FFmpeg syntheses from reels/crab-mentality (via reels/save-advice)",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "assets/fonts/*.woff2",
+   "source": "Cairo, Tajawal (Google Fonts) copied from reels/save-advice",
+   "rights": "SIL Open Font License"
+  },
+  {
+   "path": "src/characters/*, assets/svg/*.svg",
+   "source": "original SVG/React rigs drawn in code for this reel (no tracing, no reference frames)",
+   "rights": "original to this project"
+  },
+  {
+   "path": "references/1000145373.mp4",
+   "source": "third-party reference reel provided by the user",
+   "rights": "analysis only; not in the output, not committed (.gitignore)",
+   "sha256": "6448ba10063237356c3d98c0f0f2cf187c27f4d355f5cf40d8f14eabef7ccb34"
+  }
+ ],
+ "music": "none (deliberate: voice and short effects only)",
+ "realPhotos": "none",
+ "thirdPartyImages": "none"
+}

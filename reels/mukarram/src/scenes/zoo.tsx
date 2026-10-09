@@ -37,9 +37,9 @@ const ZooWorld: React.FC<{ f: number; children?: React.ReactNode; pile?: number;
     {Array.from({ length: 16 }, (_, i) => <path key={i} d={bowLine(-380 + i * 120, 760, -380 + i * 120 + 4, 1190, (i % 3) - 1)} {...stroke(10, PAL.navy)} />)}
     <path d={bowLine(-420, 790, 1500, 790, 4)} {...stroke(12, PAL.navy)} />
     {/* gate posts and the sign */}
-    <path d="M150 1190 L150 380 L220 380 L220 1190Z" fill={PAL.wood} {...stroke()} />
-    <path d="M860 1190 L860 380 L930 380 L930 1190Z" fill={PAL.wood} {...stroke()} />
-    <Sign x={540} y={560} lines={['حديقة الحيوان']} w={720} h={170} post={0} size={84} />
+    <path d="M150 1190 L150 250 L220 250 L220 1190Z" fill={PAL.wood} {...stroke()} />
+    <path d="M860 1190 L860 250 L930 250 L930 1190Z" fill={PAL.wood} {...stroke()} />
+    <Sign x={540} y={420} lines={['حديقة الحيوان']} w={720} h={170} post={0} size={84} />
     <Tree x={1010} y={1210} s={0.9} sway={Math.sin(f / 20)} />
     <Log x={MX} y={MY + 34} s={1.1} />
     {Array.from({ length: pile }, (_, i) => <Peel key={i} x={PILE[0] + [0, 56, -48, 28][i]} y={PILE[1] - [0, 10, 6, 26][i]} rot={[10, -30, 50, 80][i]} s={0.9} />)}
@@ -60,8 +60,8 @@ export const ZooHook: React.FC<ShotProps> = ({ f }) => {
   const [px, py] = arc([1180, 640], [380, 1490], t, 260);
   const id = idle(f, 71);
   const pose = mTrack(f, [[0, MONKEY_POSES.tossBack], [10, MONKEY_POSES.sit], [30, MONKEY_POSES.eat]]);
-  const zoom = keys(f, [[0, 1.7], [10, 1.55], [44, 0.9]], ease.out);
-  const cx = keys(f, [[0, 520], [10, 470], [44, 540]]), cy = keys(f, [[0, 1240], [10, 1300], [44, 1040]]);
+  const zoom = keys(f, [[0, 1.7], [10, 1.55], [44, 1.0]], ease.out);
+  const cx = keys(f, [[0, 520], [10, 470], [44, 540]]), cy = keys(f, [[0, 1240], [10, 1300], [44, 1000]]);
   return (
     <Shot f={f} cam={{ cx, cy, zoom, shake: f >= land && f < land + 6 ? 6 : 0 }} bounds={BOUNDS}>
       <ZooWorld f={f}>
@@ -150,7 +150,7 @@ export const ZooSign: React.FC<ShotProps> = ({ f, t0 }) => {
     <Shot f={f} cam={{ cx: 560, cy: 1120, zoom: keys(f, [[t0, 1.4], [signs, 1.48]]) }} bounds={BOUNDS}>
       <ZooWorld f={f} binAt={false}>
         <Monkey x={MX} y={MY} s={MS} pose={pose} expr={exprTrack(f, [[t0, 'curious'], [signs + 4, 'surprised']])} blink={id.blink} glance={[0, 0.8]} />
-        <PictoSign x={MX + 4} y={MY - 200} s={1.1} upside rot={keys(f, [[t0, -6], [signs, 4]])} />
+        <PictoSign x={MX + 4} y={MY - 70} s={0.8} upside rot={keys(f, [[t0, -6], [signs, 4]])} />
       </ZooWorld>
     </Shot>
   );

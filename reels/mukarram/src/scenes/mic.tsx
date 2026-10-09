@@ -40,7 +40,7 @@ const MicSet: React.FC<{ f: number; c: MicCfg }> = ({ f, c }) => {
       <StudioBack glow={c.glow} />
       <Narrator frame={f} x={540} y={1420} s={1.32} pose={pose} expr={exprTrack(f, c.exprs)} blink={id.blink} bob={id.bob + (c.bounce?.(f) ?? 0)}
         look={look} glance={glance} talk={talkAt(f)} shadow={false} />
-      <Mic x={930} y={1180} s={1.05} />
+      <Mic x={1010} y={1180} s={1.05} />
       <Desk x={540} y={1180} w={900} />
       {c.extra}
     </Shot>

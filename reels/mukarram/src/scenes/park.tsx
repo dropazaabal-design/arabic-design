@@ -23,7 +23,7 @@ const CB = { ...BUILD, ...BUILDS.cleaner };
 
 const SIGN_LINES = ['حافظ على', 'نظافة المكان'];
 
-const ParkWorld: React.FC<{ f: number; children?: React.ReactNode; sun?: number; bin?: React.ReactNode }> = ({ f, children, sun = 0, bin }) => (
+const ParkWorld: React.FC<{ f: number; children?: React.ReactNode; sun?: number; bin?: React.ReactNode; sign?: boolean }> = ({ f, children, sun = 0, bin, sign = true }) => (
   <g>
     <rect x={-420} y={-900} width={1920} height={2200} fill="#E2EDF5" />
     <Glow x={880} y={sun > 0 ? 300 : 260} r={180 + sun * 160} o={0.5 + sun * 0.5} />
@@ -37,7 +37,7 @@ const ParkWorld: React.FC<{ f: number; children?: React.ReactNode; sun?: number;
     <Tree x={120} y={1240} s={1} sway={Math.sin(f / 24)} />
     <Bench x={760} y={1330} s={0.7} />
     <Pavement y={1440} x={-420} w={1920} seed={3} />
-    <Sign x={SIGN_X} y={1470} lines={SIGN_LINES} w={440} h={180} post={330} size={56} />
+    {sign && <Sign x={SIGN_X} y={1470} lines={SIGN_LINES} w={440} h={180} post={330} size={56} />}
     {bin ?? <Bin x={BIN_X} y={GROUND + 6} s={0.82} />}
     {children}
   </g>
@@ -80,7 +80,7 @@ export const ParkRead: React.FC<ShotProps> = ({ f, t0 }) => {
   const u1 = prog(f, a, aEnd - a, ease.linear), u2 = prog(f, b, bEnd - b, ease.linear);
   const line = (y: number, wd: number, p: number) => p > 0 && <path d={bowLine(SIGN_X + wd / 2, y, SIGN_X + wd / 2 - wd * p, y, 2)} {...stroke(9, PAL.red)} />;
   return (
-    <Shot f={f} cam={{ cx: 470, cy: 1020, zoom: keys(f, [[t0, 1.7], [t0 + sec(2), 1.78]]) }} bounds={BOUNDS}>
+    <Shot f={f} cam={{ cx: 490, cy: 1020, zoom: keys(f, [[t0, 1.5], [t0 + sec(2), 1.56]]) }} bounds={BOUNDS}>
       <ParkWorld f={f}>
         {line(board - 15 + 18, 230, u1)}
         {line(board + 55 + 18, 340, u2)}
@@ -223,7 +223,7 @@ const CleanerBends: React.FC<ShotProps & { bends: number[]; drops: number[]; pus
   const [hx, hy] = handWorld(BUILDS.cleaner, pose, 1, CX, GROUND, CS, -1);
   const tired = bends.length >= 1 && f > bends[bends.length - 1];
   return (
-    <Shot f={f} cam={{ cx: 560, cy: 1180, zoom: push ? keys(f, [[t0, 1.3], [bends[bends.length - 1], 1.5]], ease.out) : 1.3, shake: push && f > picks[2] && f < picks[2] + 6 ? 5 : 0 }} bounds={BOUNDS}>
+    <Shot f={f} cam={{ cx: 520, cy: 1180, zoom: push ? keys(f, [[t0, 1.3], [bends[bends.length - 1], 1.5]], ease.out) : 1.3, shake: push && f > picks[2] && f < picks[2] + 6 ? 5 : 0 }} bounds={BOUNDS}>
       <ParkWorld f={f}>
         {/* bags on the ground, or falling in from above on their cue */}
         {[0, 1, 2].map((i) => {
@@ -270,7 +270,7 @@ export const ParkPocket: React.FC<ShotProps> = ({ f, t0 }) => {
   const bag: [number, number] = [((lx + rx) / 2) * (1 - into) + pocketAt[0] * into, ((ly + ry) / 2 + 10) * (1 - into) + pocketAt[1] * into];
   return (
     <Shot f={f} cam={{ cx: 600, cy: 1010, zoom: keys(f, [[t0, 1.45], [pocket, 1.55]]) }} bounds={BOUNDS}>
-      <ParkWorld f={f}>
+      <ParkWorld f={f} sign={false}>
         <Litterer x={600} y={GROUND} s={LS} facing={1} pose={pose} blink={id.blink} expr={exprTrack(f, [[t0, 'neutral'], [fold, 'determined'], [pocket, 'satisfied']])}
           look={vecTrack(f, [[t0, [0, 0.5]], [pocket + 6, [0.2, 0]]])} />
         {into < 1 && <SnackBag x={bag[0]} y={bag[1]} s={0.6 * (1 - into * 0.6)} fold={prog(f, fold, 12, ease.inOut)} empty />}
@@ -291,7 +291,7 @@ export const ParkBin: React.FC<ShotProps> = ({ f, t0 }) => {
   const fall = prog(f, sala, 6, ease.in);
   return (
     <Shot f={f} cam={{ cx: 700, cy: 1130, zoom: 1.2 }} bounds={BOUNDS}>
-      <ParkWorld f={f} bin={<Bin x={BIN_X} y={GROUND + 6} s={0.82} lid={lid} face={prog(f, sala + 12, 8)} />}>
+      <ParkWorld f={f} sign={false} bin={<Bin x={BIN_X} y={GROUND + 6} s={0.82} lid={lid} face={prog(f, sala + 12, 8)} />}>
         <Litterer x={w.x} y={GROUND} s={LS} facing={1} pose={pose} blink={id.blink} expr={exprTrack(f, [[t0, 'satisfied'], [sala + 10, 'laugh']])} look={[0.3, 0.1]} />
         {f > sala - 14 && fall < 1 && <SnackBag x={hx + (BIN_X - hx) * fall} y={hy + 20 + fall * 80} s={0.36} fold={1} empty />}
         <Sparkles x={BIN_X} y={GROUND - 200} t={(f - sala - 10) / 16} r={110} color={PAL.blue} seed={21} />
@@ -317,7 +317,7 @@ export const ParkClear: React.FC<ShotProps> = ({ f, t0 }) => {
   const cPose = poseTrack(f, [[t0, { ...POSES.stand, armR: [16, -40], handR: 'fist', lean: 10, tilt: 6 }], [sadaqa - 2, { ...POSES.stand, armL: [160, 20], armR: [160, 20], handL: 'open', handR: 'open', lean: -6, squash: 0.04 }]], sec(0.35));
   return (
     <Shot f={f} cam={{ cx: 560, cy: 1100, zoom: keys(f, [[t0, 1.0], [sadaqa, 1.04]]) }} bounds={BOUNDS}>
-      <ParkWorld f={f} sun={warm} bin={<Bin x={BIN_X} y={GROUND + 6} s={0.82} lid={lid} face={warm} />}>
+      <ParkWorld f={f} sun={warm} sign={false} bin={<Bin x={BIN_X} y={GROUND + 6} s={0.82} lid={lid} face={warm} />}>
         <Glow x={540} y={1050} r={520} o={warm * 0.6} />
         <Cleaner x={190} y={GROUND} s={CS * 0.95} facing={1} pose={cPose} blink={idc.blink} expr={exprTrack(f, [[t0, 'tired'], [sadaqa, 'satisfied']])} look={[0.3, -0.1]}
           itemR={f < sadaqa ? <Broom x={0} y={150} s={0.75} rot={-8} /> : undefined} />
