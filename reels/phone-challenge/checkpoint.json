@@ -1,0 +1,27 @@
+{
+  "reel": "phone-challenge",
+  "updated": "2026-10-09",
+  "done": [
+    "narration locked: narration.txt (78 words, 429 chars, sha256 fe974d43c660fc1c0c0bec5e53cdd48d2235c439628b9f8660292072f15c4c24); reviewed once, no change",
+    "voice: model checked (eleven_v4 available, same method as ep02, so no new sample); one full take, generation 9Rw3qHATlAmg6JQR5O3R, prompt speech/prompt-full.txt identical (sha256 abe1987b…), 447 credits = 447 chars; take sha256 11c8a487…; Variant B chain (audio/variant-b-chain.txt, values from fikra-02 softening-test notes) on a copy",
+    "timeline measured once: 41.74 s = 2504 frames at 60 fps (range 35–45); no speed or pitch change",
+    "scenes: src/scenes.tsx (three continuous stages), burned captions src/captions.json + render/captions.ar.srt (tools/srt.py), original music public/music/bed.wav (tools/music.py), word-keyed effects src/sfx.tsx",
+    "checks: copycheck match (6 scenes); Baseera text check 31 strings (13 on-screen + 18 captions) 0 errors 0 warnings; one 540x960 preview; final MP4 verified"
+  ],
+  "final": {
+    "file": "render/phone-challenge.mp4",
+    "sha256": "fa5677a3986e6b82154ea0108d53dcc6e739402528b82970891be4e68a5d34c2",
+    "bytes": 8194566,
+    "spec": "1080x1920, 60/1 fps constant (2504 frames, 0 irregular), H.264 High yuv420p, AAC-LC 48 kHz stereo 189 kb/s, 41.75 s",
+    "audio": "-14.0 LUFS integrated, true peak -3.5 dBTP, LRA 2.4",
+    "frames": "no black frames; no frozen stretch over 3 s; full decode without errors",
+    "sync": "each narration line found in the final mix by cross-correlation within 8 ms of timeline.json"
+  },
+  "notDone": [
+    "nobody has watched the reel at full length or listened to it; my review is frames and measurements",
+    "«دماغك» (~29 s) was heard by Whisper as «دمافك»: check by ear",
+    "no posting to any platform, no merge"
+  ],
+  "usage": { "elevenlabs": [{ "what": "full take", "credits": 447, "generation_id": "9Rw3qHATlAmg6JQR5O3R" }], "elevenlabsBalance": "unknown (not shown by the connector)" },
+  "resume": "npm run render  (REMOTION_CHROME must point at a headless Chromium); python3 tools/verify.py render/phone-challenge.mp4"
+}
