@@ -14,7 +14,7 @@
     "bytes": 8194566,
     "spec": "1080x1920, 60/1 fps constant (2504 frames, 0 irregular), H.264 High yuv420p, AAC-LC 48 kHz stereo 189 kb/s, 41.75 s",
     "audio": "-14.0 LUFS integrated, true peak -3.5 dBTP, LRA 2.4",
-    "frames": "no black frames; no frozen stretch over 3 s; full decode without errors",
+    "frames": "لا إطارات سوداء؛ لم يرصد الفحص مقاطع ثابتة أطول من 3 ثوانٍ؛ قد توجد وقفات أقصر؛ فك الترميز كاملًا دون أخطاء",
     "sync": "each narration line found in the final mix by cross-correlation within 8 ms of timeline.json"
   },
   "notDone": [
