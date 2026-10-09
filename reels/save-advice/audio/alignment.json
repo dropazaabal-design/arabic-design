@@ -1,0 +1,434 @@
+[
+ {
+  "seg": "s01",
+  "script": "كم",
+  "heard": "كم",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "نصيحة",
+  "heard": "نصيحة",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "حفظتَ…",
+  "heard": "حفظت",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "ولم",
+  "heard": "ولم",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "تستخدم؟",
+  "heard": "تستخدم؟",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "فيديو",
+  "heard": "فيديو",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "عن",
+  "heard": "عن",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "القراءة،",
+  "heard": "القراءة",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "وآخر",
+  "heard": "وآخر",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "عن",
+  "heard": "عن",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "التركيز،",
+  "heard": "التركيز",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "وثالث",
+  "heard": "وثالث",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "عن",
+  "heard": "عن",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "ترتيب",
+  "heard": "ترتيب",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "يومك.",
+  "heard": "يومك",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "لكن",
+  "heard": "لكن",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "بعد",
+  "heard": "بعد",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "الحفظ،",
+  "heard": "الحفظ",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "ماذا",
+  "heard": "ماذا",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "تغيّر؟",
+  "heard": "تغير؟",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "قد",
+  "heard": "قد",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "تتحول",
+  "heard": "تتحول",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "قائمة",
+  "heard": "قائمة",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "المحفوظات",
+  "heard": "المحفوظات",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "إلى",
+  "heard": "إلى",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "قائمة",
+  "heard": "قائمة",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "أشياء",
+  "heard": "أشياء",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "تؤجلها.",
+  "heard": "تؤجلها",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "جرّب",
+  "heard": "جرب",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "الآن:",
+  "heard": "الآن",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "اختر",
+  "heard": "اختر",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "نصيحة",
+  "heard": "نصيحة",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "واحدة،",
+  "heard": "واحدة",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "وحوّلها",
+  "heard": "وحولها",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "إلى",
+  "heard": "إلى",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "فعل",
+  "heard": "فعل",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "صغير.",
+  "heard": "صغير",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "نصيحة",
+  "heard": "نصيحة",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "عن",
+  "heard": "عن",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "القراءة؟",
+  "heard": "القراءة",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "افتح",
+  "heard": "افتح",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "الكتاب",
+  "heard": "الكتاب",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "واقرأ",
+  "heard": "وقرأ",
+  "match": false
+ },
+ {
+  "seg": "s06",
+  "script": "صفحة.",
+  "heard": "صفحة",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "عن",
+  "heard": "عن",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "التركيز؟",
+  "heard": "التركيز",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "أبعِد",
+  "heard": "ابعد",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "الهاتف",
+  "heard": "الهاتف",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "وابدأ",
+  "heard": "وابدأ",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "مهمة",
+  "heard": "مهمة",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "واحدة.",
+  "heard": "واحدة",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "ليس",
+  "heard": "ليس",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "المطلوب",
+  "heard": "المطلوب",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "تنفيذ",
+  "heard": "تنفيذ",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "كل",
+  "heard": "كل",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "تشاهده.",
+  "heard": "تشاهده",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "المطلوب",
+  "heard": "المطلوب",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "أن",
+  "heard": "أن",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "تختار",
+  "heard": "تختار",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "يناسبك،",
+  "heard": "يناسبك",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "وتبدأ.",
+  "heard": "وتبدأ",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "قبل",
+  "heard": "قبل",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "أن",
+  "heard": "أن",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "تحفظ",
+  "heard": "تحفظ",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "هذا",
+  "heard": "هذا",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "الفيديو…",
+  "heard": "الفيديو",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "الخطوة",
+  "heard": "الخطوة",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "التي",
+  "heard": "التي",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "ستنفّذها؟",
+  "heard": "ستنفذها؟",
+  "match": true
+ }
+]

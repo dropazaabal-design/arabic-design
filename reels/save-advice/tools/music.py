@@ -1,18 +1,18 @@
 """Original instrumental bed for the reel (no samples, no third-party material): a soft pad and a
-mallet-like pluck pattern (Karplus–Strong) over Am–F–C–G at 92 BPM, with a light synthetic room.
+mallet-like pluck pattern (Karplus–Strong) over C–G–Am–F at 96 BPM, with a light synthetic room.
 usage: python3 tools/music.py SECONDS OUT.wav     (seeded: the same file every time)
 It starts at full (low) level from the first frame — no silent intro — and fades only at the end."""
 import sys, wave
 import numpy as np
 
 sr, dur, out = 48000, float(sys.argv[1]), sys.argv[2]
-rng = np.random.default_rng(7)
+rng = np.random.default_rng(11)
 n = int(sr * dur)
 mix = np.zeros(n)
-beat = 60 / 92
+beat = 60 / 96
 bar = 4 * beat
 hz = lambda m: 440 * 2 ** ((m - 69) / 12)
-chords = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]   # Am F C G
+chords = [[48, 52, 55], [55, 59, 62], [57, 60, 64], [53, 57, 60]]   # C G Am F
 t_all = np.arange(n) / sr
 
 # pad: two bars per chord, slow attack/release, slightly detuned sines
@@ -37,7 +37,7 @@ def pluck(f, length):
         buf[i % p] = 0.996 * 0.5 * (buf[i % p] + buf[(i + 1) % p])
     return y
 
-pent = {0: [69, 72, 76, 79], 1: [65, 69, 72, 77], 2: [64, 67, 72, 76], 3: [67, 71, 74, 79]}
+pent = {0: [64, 67, 72, 76], 1: [67, 71, 74, 79], 2: [69, 72, 76, 79], 3: [65, 69, 72, 77]}
 cache = {}
 step = beat / 2
 for i in range(int(dur / step)):
