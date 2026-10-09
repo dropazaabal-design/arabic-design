@@ -1,0 +1,35 @@
+{
+  "reel": "taghafol",
+  "updated": "2026-10-09",
+  "done": [
+    "source: source/original.mp4 untouched (718x1280, 30 fps, 83.917 s; sha256 in source/original.sha256); speaker not identified (no name on screen; face not used to identify)",
+    "transcript: Whisper medium word times + wording checked against the clip's burned-in subtitles (transcript/reviewed.json); word onsets at cuts from the 20 ms envelope and spectrograms",
+    "EDL: cold open «سُئل أعرابي: من أذكى الناس؟ قال: الفطن المتغافل» (src 22.25–27.95), then the talk in order with that exchange removed from its original place, so it is heard once; only silences trimmed (audio/cuts.md)",
+    "voice: the speaker's own recording only, edited with ffmpeg (no synthesis, no cloning, no speed or pitch change); 100–120 ms room-tone crossfades; chain highpass 75 Hz + afftdn nr 6 + light de-esser; one gain to −14 LUFS + limiter with compensated lookahead",
+    "audio measured (audio/audiocheck.json): true peak −1.4 dBTP, LRA 7.0 (source 7.4), PLR 12.8 dB; limiter > 1 dB on 690 ms of 77.6 s of speech, max 2.6 dB; speech bands above 75 Hz changed ≤ 0.3 dB, room tone unchanged; joins show no click; every piece at 0.0 ms of its timeline position",
+    "captions and SRT re-timed to the edited voice: 32 cues (verse lines shown as titles, captions hidden there)",
+    "scenes: 11 independent scenes, 5 speaker (source frames, each shown twice at 60 fps, no interpolation; crop above the burned-in subtitles) and 6 graphics at 60 fps (lens/eye, passing notes, balance, choice paths, house, end card); light SFX, no music",
+    "checks: copycheck match (11 scenes); Baseera text check 52 strings (20 on-screen + 32 captions) 0 errors 0 warnings; one stills sheet; one 540x960 preview (sent); one final export and one final check"
+  ],
+  "final": {
+    "file": "render/taghafol.mp4",
+    "sha256": "8a50792a22befd67e0afc9a0a9bb43c340b5b5a48ca389a699f5f5312dd006f2",
+    "bytes": 18444499,
+    "spec": "1080x1920, 60/1 fps constant (4934 frames, 0 irregular), H.264 High yuv420p, AAC-LC 48 kHz stereo 189 kb/s, 82.24 s",
+    "audio": "-14.2 LUFS integrated, LRA 7.0, true peak -4.2 dBTP per channel in the stereo mix (the mono voice is −1.4 dBTP; Remotion spreads it on two channels at −3 dB each, so loudness is unchanged)",
+    "frames": "لا إطارات سوداء؛ لم يرصد الفحص ثباتًا أطول من 3 ثوانٍ (freezedetect، عتبة ضوضاء 0.001)؛ قد توجد وقفات أقصر؛ فك الترميز كاملًا دون أخطاء (0 سطر خطأ)",
+    "silence": "only after his last word: 80.23–82.24 s (end card)",
+    "audioSync": "the edited voice found in the final mix at 0.0 ms in all 8 windows (2 per EDL piece)",
+    "pictureSync": "each speaker scene's motion matches the source at offset 0 source frames (5 of 5 scenes); a first single-frame method was too flat to decide and was replaced (review/technical.json)",
+    "effects": "effect peaks at their volumes -34.0 to -24.4 dBFS, at least 23 dB under the voice's peaks"
+  },
+  "notDone": [
+    "nobody has watched the reel at full length or listened to it; my review is frames, spectrograms and measurements",
+    "naturalness of the cuts is measured (no clicks, no word onset inside a fade, room tone continuous), not heard: the joins at 5.65 s, 21.41 s and 24.94 s are the ones to listen to",
+    "after «ولم يُقل» the source has a short voiced sound (src 83.27–83.65) that the clip cuts off; it is left out — tell me if it should stay",
+    "source credit: the speaker's name and account are not in the file; the end card says «مقطع منشور على X». Send the name/account to replace it",
+    "verse attributions are not shown: he says «قال الأول»; nothing was verified or added",
+    "no publish kit (cover/caption) for this reel yet; no posting to any platform; no merge"
+  ],
+  "resume": "python3 tools/edl.py (needs audio/original-48k.wav from source/original.mp4) && npm run render (REMOTION_CHROME) && python tools/verify.py render/taghafol.mp4"
+}

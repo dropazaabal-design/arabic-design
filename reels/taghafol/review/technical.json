@@ -1,0 +1,212 @@
+{
+ "file": "render/taghafol.mp4",
+ "bytes": 18444499,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "4934"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 82.24,
+  "video": 82.233333,
+  "timeline": 82.23,
+  "framesExpected": 4934
+ },
+ "cadence": {
+  "frames": 4934,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -14.2,
+  "LRA": 7.0,
+  "truePeakDBFS": -4.2
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [
+  [
+   80.231,
+   82.24
+  ]
+ ],
+ "audioSync": {
+  "method": "edited voice (public/audio/voice.wav) cross-correlated with the final mix, 1.5 s windows, 2 per EDL piece",
+  "maxAbsOffsetMs": 0.0,
+  "detail": [
+   {
+    "at": 1.71,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 3.99,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 10.36,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 16.71,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 22.45,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 23.91,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 41.34,
+    "offsetMs": 0.0
+   },
+   {
+    "at": 63.28,
+    "offsetMs": 0.0
+   }
+  ]
+ },
+ "pictureSync": {
+  "method": "frame-to-frame motion of the speaker crop, reel vs source, cross-correlated over ±6 source frames per speaker scene; 0 = each recorded frame is shown at its mapped time",
+  "note": "replaces a single-frame thumbnail match whose error curve was too flat to decide (push-in and encoding differences larger than one frame of motion)",
+  "detail": [
+   {
+    "scene": "sc01",
+    "reel": [
+     0.1,
+     5.55
+    ],
+    "src": 22.35,
+    "expectedSourceFrame": 670,
+    "samples": 163,
+    "bestOffsetSourceFrames": 0,
+    "corrAtBest": 0.673,
+    "corrAt0": 0.673
+   },
+   {
+    "scene": "sc03",
+    "reel": [
+     21.52,
+     24.84
+    ],
+    "src": 18.267,
+    "expectedSourceFrame": 548,
+    "samples": 99,
+    "bestOffsetSourceFrames": 0,
+    "corrAtBest": 1.016,
+    "corrAt0": 1.016
+   },
+   {
+    "scene": "sc05",
+    "reel": [
+     33.63,
+     40.28
+    ],
+    "src": 37.053,
+    "expectedSourceFrame": 1111,
+    "samples": 199,
+    "bestOffsetSourceFrames": 0,
+    "corrAtBest": 1.019,
+    "corrAt0": 1.019
+   },
+   {
+    "scene": "sc08",
+    "reel": [
+     55.58,
+     65.43
+    ],
+    "src": 59.003,
+    "expectedSourceFrame": 1770,
+    "samples": 295,
+    "bestOffsetSourceFrames": 0,
+    "corrAtBest": 1.018,
+    "corrAt0": 1.018
+   },
+   {
+    "scene": "sc10",
+    "reel": [
+     73.68,
+     79.63
+    ],
+    "src": 77.103,
+    "expectedSourceFrame": 2313,
+    "samples": 178,
+    "bestOffsetSourceFrames": 0,
+    "corrAtBest": 0.959,
+    "corrAt0": 0.959
+   }
+  ]
+ },
+ "sfx": {
+  "voiceTruePeakDbfs": -4.2,
+  "effects": [
+   {
+    "file": "chime",
+    "volume": 0.06,
+    "peakDbfsAtVolume": -27.4
+   },
+   {
+    "file": "pop",
+    "volume": 0.04,
+    "peakDbfsAtVolume": -30.1
+   },
+   {
+    "file": "pop",
+    "volume": 0.05,
+    "peakDbfsAtVolume": -28.1
+   },
+   {
+    "file": "scribble",
+    "volume": 0.04,
+    "peakDbfsAtVolume": -34.0
+   },
+   {
+    "file": "snap",
+    "volume": 0.05,
+    "peakDbfsAtVolume": -26.0
+   },
+   {
+    "file": "thud",
+    "volume": 0.06,
+    "peakDbfsAtVolume": -24.4
+   },
+   {
+    "file": "tick",
+    "volume": 0.04,
+    "peakDbfsAtVolume": -31.1
+   },
+   {
+    "file": "whoosh",
+    "volume": 0.04,
+    "peakDbfsAtVolume": -34.0
+   },
+   {
+    "file": "whoosh",
+    "volume": 0.05,
+    "peakDbfsAtVolume": -32.0
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person",
+ "decode": {
+  "command": "ffmpeg -v error -i render/taghafol.mp4 -f null -",
+  "errorLines": 0
+ },
+ "sha256": "8a50792a22befd67e0afc9a0a9bb43c340b5b5a48ca389a699f5f5312dd006f2",
+ "stillnessCheck": "freezedetect noise 0.001, minimum 3 s: none found. Shorter still moments may exist."
+}
