@@ -1,0 +1,71 @@
+{
+ "title": "حفظت النصيحة… متى تطبّقها؟",
+ "account": "كتاب وبس",
+ "locked": true,
+ "lockedOn": "2026-10-09",
+ "source": "the owner's proposed script, reviewed once for delivery: two diacritics added so the voice reads the intended form — «حفظتَ» (you saved) and «أبعِد» (imperative); no other change",
+ "direction": "eleven_v4 audio tags (not spoken): a curious start, a plain middle, an encouraging close",
+ "segments": [
+  {
+   "id": "s01",
+   "sceneId": "sc01",
+   "tag": "[warmly] [curious]",
+   "text": "كم نصيحة حفظتَ… ولم تستخدم؟"
+  },
+  {
+   "id": "s02",
+   "sceneId": "sc02",
+   "tag": "",
+   "text": "فيديو عن القراءة، وآخر عن التركيز، وثالث عن ترتيب يومك."
+  },
+  {
+   "id": "s03",
+   "sceneId": "sc03",
+   "tag": "",
+   "text": "لكن بعد الحفظ، ماذا تغيّر؟"
+  },
+  {
+   "id": "s04",
+   "sceneId": "sc03",
+   "tag": "",
+   "text": "قد تتحول قائمة المحفوظات إلى قائمة أشياء تؤجلها."
+  },
+  {
+   "id": "s05",
+   "sceneId": "sc04",
+   "tag": "[warmly]",
+   "text": "جرّب الآن: اختر نصيحة واحدة، وحوّلها إلى فعل صغير."
+  },
+  {
+   "id": "s06",
+   "sceneId": "sc05",
+   "tag": "",
+   "text": "نصيحة عن القراءة؟ افتح الكتاب واقرأ صفحة."
+  },
+  {
+   "id": "s07",
+   "sceneId": "sc05",
+   "tag": "",
+   "text": "عن التركيز؟ أبعِد الهاتف وابدأ مهمة واحدة."
+  },
+  {
+   "id": "s08",
+   "sceneId": "sc06",
+   "tag": "[warmly] [encouraging]",
+   "text": "ليس المطلوب تنفيذ كل ما تشاهده."
+  },
+  {
+   "id": "s09",
+   "sceneId": "sc06",
+   "tag": "",
+   "text": "المطلوب أن تختار ما يناسبك، وتبدأ."
+  },
+  {
+   "id": "s10",
+   "sceneId": "sc07",
+   "tag": "",
+   "text": "قبل أن تحفظ هذا الفيديو… ما الخطوة التي ستنفّذها؟"
+  }
+ ],
+ "words": 72
+}
