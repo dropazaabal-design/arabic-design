@@ -1,0 +1,121 @@
+{
+ "file": "render/la-tursilha.mp4",
+ "bytes": 6339069,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "30/1",
+  "avg_frame_rate": "30/1",
+  "nb_frames": "1486"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 49.536,
+  "video": 49.533333,
+  "timeline": 49.523,
+  "framesExpected": 1486
+ },
+ "cadence": {
+  "frames": 1486,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -14.3,
+  "LRA": 2.3,
+  "truePeakDBTP": -4.9,
+  "target": "≈ -14 LUFS, true peak ≤ -1 dBTP"
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [
+  [
+   28.3988,
+   29.2714
+  ],
+  [
+   47.6242,
+   49.536
+  ]
+ ],
+ "voiceOnsets": {
+  "lines": 9,
+  "found": 9,
+  "maxAbsOffset": 0.265,
+  "notFound": [],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.25,
+    "measured": 0.252042,
+    "offset": 0.002
+   },
+   {
+    "id": "s02",
+    "planned": 2.549,
+    "measured": 2.54981,
+    "offset": 0.001
+   },
+   {
+    "id": "s03",
+    "planned": 9.954,
+    "measured": 9.95587,
+    "offset": 0.002
+   },
+   {
+    "id": "s04",
+    "planned": 15.309,
+    "measured": 15.0436,
+    "offset": -0.265
+   },
+   {
+    "id": "s05",
+    "planned": 23.878,
+    "measured": 23.8795,
+    "offset": 0.002
+   },
+   {
+    "id": "s06",
+    "planned": 31.224,
+    "measured": 31.226,
+    "offset": 0.002
+   },
+   {
+    "id": "s07",
+    "planned": 36.229,
+    "measured": 36.2302,
+    "offset": 0.001
+   },
+   {
+    "id": "s08",
+    "planned": 41.955,
+    "measured": 41.9561,
+    "offset": 0.001
+   },
+   {
+    "id": "s09",
+    "planned": 45.781,
+    "measured": 45.767,
+    "offset": -0.014
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the reel looks or sounds to a person",
+ "asrFinalAudio": {
+  "model": "faster-whisper large-v3 (CPU, int8)",
+  "scriptWords": 90,
+  "matched": 90,
+  "differences": [],
+  "meaning": "word intelligibility of the exported audio only; says nothing about natural delivery or accent"
+ }
+}
