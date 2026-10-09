@@ -1,0 +1,5 @@
+node_modules
+audio/take-full-raw.wav
+audio/take-full.wav
+render/*.png
+render/preview*
