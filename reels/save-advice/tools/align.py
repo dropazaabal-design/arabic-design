@@ -33,7 +33,7 @@ arg = lambda k, d: float(sys.argv[sys.argv.index(k) + 1]) if k in sys.argv else 
 LEAD, HOLD, FPS = arg('--lead', 0.3), arg('--hold', 2.0), 60
 TARGET_LUFS = -14.0   # voice alone; music (about 14 dB lower) and effects sit under it
 # Visual holds where the story needs them (seconds of picture without speech), not to reach a length:
-BEATS = {'sc02': 0.6, 'sc04': 0.4, 'sc06': 0.5}   # before a scene (default 0.3 s): the hook question lands, the study starts, the closing question
+BEATS = {'sc02': 0.4, 'sc04': 0.5, 'sc07': 0.5}   # before a scene (default 0.3 s): after the hook, before «جرّب الآن», before the closing question
 DEFAULT_BEAT = 0.3
 SEG_HOLDS = {}
 HARAKAT = re.compile('[ً-ْٰـ]')

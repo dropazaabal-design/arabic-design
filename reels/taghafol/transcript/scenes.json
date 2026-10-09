@@ -1,0 +1,13 @@
+[
+ {"id": "sc01", "kind": "speaker", "seg": 0, "src": [22.25, 27.95]},
+ {"id": "sc02", "kind": "graphics", "seg": 1, "src": [0.6, 16.5]},
+ {"id": "sc03", "kind": "speaker", "seg": 2, "src": [18.1, 21.75]},
+ {"id": "sc04", "kind": "graphics", "seg": 3, "src": [28.3, 36.95]},
+ {"id": "sc05", "kind": "speaker", "seg": 3, "src": [36.95, 43.8]},
+ {"id": "sc06", "kind": "graphics", "seg": 3, "src": [43.8, 52.1]},
+ {"id": "sc07", "kind": "graphics", "seg": 3, "src": [52.1, 58.9]},
+ {"id": "sc08", "kind": "speaker", "seg": 3, "src": [58.9, 68.95]},
+ {"id": "sc09", "kind": "graphics", "seg": 3, "src": [68.95, 77.0]},
+ {"id": "sc10", "kind": "speaker", "seg": 3, "src": [77.0, 83.15]},
+ {"id": "sc11", "kind": "graphics", "seg": 3, "src": [83.15, null]}
+]

@@ -17,7 +17,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parent.parent
 out = Path(sys.argv[1]) if len(sys.argv) > 1 else root / 'render/captions.ar.srt'
 words = json.loads((root / 'src/words.json').read_text(encoding='utf-8'))
-MAX, MAX_SINGLE, MAX_DUR, MIN_DUR, TAIL, SHORT = 31, 32, 3.4, 0.9, 0.3, 10   # short lines for a vertical reel
+MAX, MAX_SINGLE, MAX_DUR, MIN_DUR, TAIL, SHORT = 34, 34, 3.8, 0.9, 0.3, 10   # short lines for a vertical reel
 BREAK = ('،', ':', '؛', '.', '؟', '…', '!')
 STOP = {'في', 'من', 'على', 'إلى', 'عن', 'أن', 'ما', 'بين', 'لا', 'و', 'ثم', 'قد', 'لم'}
 

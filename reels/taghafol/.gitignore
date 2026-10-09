@@ -1,0 +1,6 @@
+node_modules
+audio/original-48k.wav
+audio/voice-edit.wav
+audio/aside.wav
+render/*.png
+render/preview*
