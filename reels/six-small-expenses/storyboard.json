@@ -1,0 +1,65 @@
+{
+ "title": "6 مصاريف صغيرة تستنزف راتبك دون أن تنتبه",
+ "format": "1080x1920, 30 fps, 394 frames (13.13 s), silent",
+ "brief": "brief.md",
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "frames": [
+    0,
+    394
+   ],
+   "onScreen": [
+    "6 مصاريف صغيرة تستنزف راتبك",
+    "دون أن تنتبه:",
+    "اشتراكات لا تستخدمها:",
+    "يتجدد خصمها، وأنت نسيت وجودها.",
+    "قهوة جاهزة يوميًا:",
+    "المبلغ بسيط؛ التكرار يجعله أكبر.",
+    "رسوم توصيل متكررة:",
+    "تدفع مقابل الراحة مع كل طلب.",
+    "إضافات عند الدفع:",
+    "قطعة صغيرة لم تكن في قائمتك.",
+    "سناكات عند كل توقف:",
+    "تشتريها تلقائيًا، دون قرار مسبق.",
+    "باقات أكبر من حاجتك:",
+    "تدفع مقابل مزايا لا تستخدمها.",
+    "راجع التكرار، لا السعر فقط."
+   ],
+   "latin": [
+    "@kitabwbs"
+   ],
+   "timing": [
+    {
+     "frames": [
+      0,
+      4
+     ],
+     "what": "title and symbols fully visible from the first frame; list hidden"
+    },
+    {
+     "frames": [
+      4,
+      28
+     ],
+     "what": "list revealed together: opacity 0→1, blur 10→0 px (0.12–0.95 s)"
+    },
+    {
+     "frames": [
+      28,
+      384
+     ],
+     "what": "all six items and the closing line held still for reading (0.95–12.80 s)"
+    },
+    {
+     "frames": [
+      384,
+      394
+     ],
+     "what": "list eased back to the opening state (last 0.33 s); title and symbols unchanged"
+    }
+   ],
+   "symbols": "wallet with a receipt; round green coins slipping out and fading (one slot per half reel, seamless loop)"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "reel": "six-small-expenses",
+  "updated": "2026-10-09",
+  "done": [
+    "approved text from brief.md used verbatim (15 strings, tools/copycheck.mjs); @kitabwbs the only Latin text",
+    "layout as briefed: symbols 0-350, title band 350-634, list band 644-1580, quiet black below; side margins 64 px, list 120 px from the right edge (platform buttons)",
+    "title 64 px (72 px measured ~1044 px wide, past the margins); item titles Cairo 800 46 px, explanations Tajawal 500 40 px; numbers 1-6 in round badges on the right",
+    "timing: title and symbols from frame 0; list revealed frames 4-28 (opacity, 10 px blur cleared); held 28-384; eased back 384-394 for the loop",
+    "checks: Baseera text check 0 errors; stills from the renderer; frames decoded from the MP4; ffprobe, cadence, decode, loop seam; Baseera review-reel technical pass"
+  ],
+  "final": {
+    "file": "render/kitabwbs-six-small-expenses.mp4",
+    "sha256": "9ea54807e88074c4c00ccb03fc1ff7cec6ae0772603d0b41efbbb077d1346313",
+    "spec": "1080x1920, 30/1 fps constant (394 frames, 0 irregular), H.264 High yuv420p, no audio stream, 13.133 s"
+  },
+  "notDone": [
+    "the reference video REEL FCB 814 004.mp4 was not attached; the layout follows the brief's description",
+    "not watched on a phone inside the Instagram/TikTok interface; the right-side button zone is kept clear by margin, not by an overlay test",
+    "no publishing; no merge"
+  ]
+}

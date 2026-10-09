@@ -1,0 +1,72 @@
+{
+ "file": "render/kitabwbs-six-small-expenses.mp4",
+ "sha256": "9ea54807e88074c4c00ccb03fc1ff7cec6ae0772603d0b41efbbb077d1346313",
+ "bytes": 669669,
+ "streams": [
+  {
+   "index": 0,
+   "codec_name": "h264",
+   "profile": "High",
+   "codec_type": "video",
+   "width": 1080,
+   "height": 1920,
+   "pix_fmt": "yuv420p",
+   "r_frame_rate": "30/1",
+   "avg_frame_rate": "30/1",
+   "nb_frames": "394"
+  }
+ ],
+ "duration": 13.133333,
+ "cadence": {
+  "frames": 394,
+  "irregularDeltas": 0
+ },
+ "decodeErrorLines": 0,
+ "loopSeam": {
+  "ssimFirstVsLastFrame": 0.999739,
+  "note": "the last frame returns to the opening state, so the loop restarts cleanly"
+ },
+ "baseera": {
+  "command": "review-reel --expect-size 1080x1920 --expect-fps 30 --expect-duration 13.133",
+  "technicalPassed": true,
+  "checks": {
+   "decode": "passed",
+   "width": "passed",
+   "height": "passed",
+   "fps": "passed",
+   "duration": "passed"
+  },
+  "findings": [
+   {
+    "code": "audio.absent",
+    "severity": "info",
+    "range": {
+     "start": 0,
+     "end": 13.133
+    }
+   },
+   {
+    "code": "timeline.freeze",
+    "severity": "warning",
+    "range": {
+     "start": 0.667,
+     "end": 12.867
+    }
+   },
+   {
+    "code": "pacing.long-shot",
+    "severity": "info",
+    "range": {
+     "start": 0,
+     "end": 13.133
+    }
+   }
+  ],
+  "assessment": "audio.absent: silent by brief. timeline.freeze 0.67-12.87 s and pacing.long-shot: the reading hold the brief asks for (one still list, no cuts); the only motion is the slow coin drift above the title. Kept."
+ },
+ "textChecks": {
+  "copycheck": "15 approved strings match brief.md verbatim",
+  "baseera": "15 strings, 0 errors, 0 warnings"
+ },
+ "framesInspected": "frames 0, 30, 197, 383, 393 decoded from the MP4 (not from the renderer): Arabic joined and right-to-left, numbers 1-6 in order, colons at line ends, handle clear of all text"
+}
