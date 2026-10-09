@@ -1,0 +1,107 @@
+{
+ "file": "render/phone-challenge.mp4",
+ "bytes": 8194566,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "2504"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189376"
+  }
+ ],
+ "duration": {
+  "container": 41.749,
+  "video": 41.733333,
+  "timeline": 41.74,
+  "framesExpected": 2504
+ },
+ "cadence": {
+  "frames": 2504,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -14.0,
+  "LRA": 2.4,
+  "truePeakDBFS": -3.5
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [],
+ "narrationOnsets": {
+  "lines": 8,
+  "found": 0,
+  "maxAbsOffset": null,
+  "notFound": [
+   "s01",
+   "s02",
+   "s03",
+   "s04",
+   "s05",
+   "s06",
+   "s07",
+   "s08"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.3,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s02",
+    "planned": 3.64,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s03",
+    "planned": 8.824,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s04",
+    "planned": 15.137,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s05",
+    "planned": 21.751,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s06",
+    "planned": 26.527,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s07",
+    "planned": 29.956,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s08",
+    "planned": 35.318,
+    "measured": null,
+    "offset": null
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}
