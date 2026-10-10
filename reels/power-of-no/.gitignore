@@ -6,5 +6,5 @@ output/contact-svg/
 output/cover-svg/
 output/*.png
 output/*.wav
-output/*.mp4
+output/visual_*.mp4
 tools/export-frames.mjs
