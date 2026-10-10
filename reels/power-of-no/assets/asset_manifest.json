@@ -1,0 +1,16 @@
+{
+  "project": "Baseera 06 — Power of No",
+  "stage": "Original React SVG ink/doodle, generated locally in src/scene.tsx",
+  "palette": {"blue":"#2E7BC5","red":"#E63946","charcoal":"#14283A","plant":"#4DA987"},
+  "voice": {
+    "provider": "ElevenLabs Creative",
+    "model": "eleven_v4",
+    "voice_id": "dlGxemPxFMTY7iXagmOj",
+    "generation_id": "2kf4Ov0KGpKyBY01lVRH",
+    "duration_seconds": 41.92,
+    "local_binary": "unavailable; expected at public/narration.mp3"
+  },
+  "transcript": {"provider":"ElevenLabs Scribe","model":"eleven_scribe_v1","generation_id":"zXgxC8q0zoFDrMaJDuPp","words":"audio/words.json"},
+  "sfx": "Locally synthesized minimal ticks, bag thud, leaf rustle, power drop, breath, and desk scrape",
+  "music": "none"
+}
