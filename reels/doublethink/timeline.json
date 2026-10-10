@@ -1,0 +1,216 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 55.272,
+  "durationInFrames": 1658,
+  "measured": true,
+  "source": "take-A.wav",
+  "gainDb": 2.9,
+  "speechSeconds": 51.522,
+  "addedBeats": {
+    "s02": 0.25,
+    "s04": 0.2,
+    "s06": 0.15,
+    "s11": 0.6,
+    "s13": 0.2,
+    "s15": 0.3
+  },
+  "removedFromTake": {
+    "s11": 3.03
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "door",
+      "start": 0.15,
+      "duration": 3.533,
+      "fileStart": 0.05,
+      "file": "audio/voice/s01.wav",
+      "measured": true
+    },
+    {
+      "id": "s02",
+      "sceneId": "open",
+      "start": 4.239,
+      "duration": 2.033,
+      "fileStart": 4.101,
+      "file": "audio/voice/s02.wav",
+      "measured": true
+    },
+    {
+      "id": "s03",
+      "sceneId": "open",
+      "start": 6.635,
+      "duration": 2.696,
+      "fileStart": 6.469,
+      "file": "audio/voice/s03.wav",
+      "measured": true
+    },
+    {
+      "id": "s04",
+      "sceneId": "closed",
+      "start": 9.798,
+      "duration": 2.701,
+      "fileStart": 9.679,
+      "file": "audio/voice/s04.wav",
+      "measured": true
+    },
+    {
+      "id": "s05",
+      "sceneId": "closed",
+      "start": 12.725,
+      "duration": 3.968,
+      "fileStart": 12.627,
+      "file": "audio/voice/s05.wav",
+      "measured": true
+    },
+    {
+      "id": "s06",
+      "sceneId": "papers",
+      "start": 17.135,
+      "duration": 3.719,
+      "fileStart": 17.004,
+      "file": "audio/voice/s06.wav",
+      "measured": true
+    },
+    {
+      "id": "s07",
+      "sceneId": "papers",
+      "start": 21.082,
+      "duration": 2.859,
+      "fileStart": 20.983,
+      "file": "audio/voice/s07.wav",
+      "measured": true
+    },
+    {
+      "id": "s08",
+      "sceneId": "papers",
+      "start": 24.172,
+      "duration": 2.131,
+      "fileStart": 24.071,
+      "file": "audio/voice/s08.wav",
+      "measured": true
+    },
+    {
+      "id": "s09",
+      "sceneId": "both",
+      "start": 26.548,
+      "duration": 3.502,
+      "fileStart": 26.441,
+      "file": "audio/voice/s09.wav",
+      "measured": true
+    },
+    {
+      "id": "s11",
+      "sceneId": "name",
+      "start": 30.857,
+      "duration": 5.421,
+      "fileStart": 30.776,
+      "file": "audio/voice/s11.wav",
+      "measured": true
+    },
+    {
+      "id": "s12",
+      "sceneId": "name",
+      "start": 36.476,
+      "duration": 4.772,
+      "fileStart": 36.392,
+      "file": "audio/voice/s12.wav",
+      "measured": true
+    },
+    {
+      "id": "s13",
+      "sceneId": "check",
+      "start": 41.715,
+      "duration": 3.615,
+      "fileStart": 41.597,
+      "file": "audio/voice/s13.wav",
+      "measured": true
+    },
+    {
+      "id": "s14",
+      "sceneId": "check",
+      "start": 45.599,
+      "duration": 4.09,
+      "fileStart": 45.48,
+      "file": "audio/voice/s14.wav",
+      "measured": true
+    },
+    {
+      "id": "s15",
+      "sceneId": "close",
+      "start": 50.257,
+      "duration": 3.115,
+      "fileStart": 50.138,
+      "file": "audio/voice/s15.wav",
+      "measured": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "door",
+      "start": 0.0,
+      "speechStart": 0.15,
+      "speechEnd": 3.683,
+      "end": 3.961,
+      "seconds": 3.961
+    },
+    {
+      "sceneId": "open",
+      "start": 3.961,
+      "speechStart": 4.239,
+      "speechEnd": 9.331,
+      "end": 9.564,
+      "seconds": 5.603
+    },
+    {
+      "sceneId": "closed",
+      "start": 9.564,
+      "speechStart": 9.798,
+      "speechEnd": 16.693,
+      "end": 16.914,
+      "seconds": 7.35
+    },
+    {
+      "sceneId": "papers",
+      "start": 16.914,
+      "speechStart": 17.135,
+      "speechEnd": 26.303,
+      "end": 26.425,
+      "seconds": 9.511
+    },
+    {
+      "sceneId": "both",
+      "start": 26.425,
+      "speechStart": 26.548,
+      "speechEnd": 30.05,
+      "end": 30.453,
+      "seconds": 4.028
+    },
+    {
+      "sceneId": "name",
+      "start": 30.453,
+      "speechStart": 30.857,
+      "speechEnd": 41.248,
+      "end": 41.481,
+      "seconds": 11.028
+    },
+    {
+      "sceneId": "check",
+      "start": 41.481,
+      "speechStart": 41.715,
+      "speechEnd": 49.689,
+      "end": 49.973,
+      "seconds": 8.492
+    },
+    {
+      "sceneId": "close",
+      "start": 49.973,
+      "speechStart": 50.257,
+      "speechEnd": 53.372,
+      "end": 55.272,
+      "seconds": 5.299
+    }
+  ]
+}

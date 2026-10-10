@@ -1,0 +1,163 @@
+{
+  "title": "التفكير المزدوج",
+  "topic": "«التفكير المزدوج» مصطلح أدبي من رواية جورج أورويل «1984» (1949): قبول فكرتين متناقضتين معًا وتجاهل التناقض أو محوه من الوعي. مشهد المكتب تشبيه تخييلي أصلي، ليس من الرواية ولا تشخيصًا نفسيًا، ولا يساوي الكذب المقصود أو التردد أو تغيير الرأي بسبب دليل جديد.",
+  "factCheck": [
+    "The Orwell Foundation — Nineteen Eighty-Four: https://www.orwellfoundation.com/the-orwell-foundation/orwell/books-by-orwell/nineteen-eighty-four/"
+  ],
+  "voice": {
+    "provider": "ElevenLabs (connector)",
+    "model_id": "eleven_v4",
+    "voice_id": "dlGxemPxFMTY7iXagmOj",
+    "note": "same voice and model as reels/boiling-frog (Baseera 02) and reels/mukarram"
+  },
+  "world": {
+    "lock": "locked",
+    "doorSign": [
+      "مفتوح",
+      "مغلق",
+      "مفتوح"
+    ],
+    "meetingTime": "3:00"
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "door",
+      "tag": "[playfully]",
+      "text": "شدّ الباب بكل قوته… طق! ما انفتح."
+    },
+    {
+      "id": "s02",
+      "sceneId": "open",
+      "tag": "",
+      "text": "المدير قال: «الباب مفتوح»."
+    },
+    {
+      "id": "s03",
+      "sceneId": "open",
+      "tag": "",
+      "text": "ابتسم، حاول يعبر… وارتطم."
+    },
+    {
+      "id": "s04",
+      "sceneId": "closed",
+      "tag": "[sarcastic]",
+      "text": "وبعد لحظة: «الباب مقفول من البداية!»"
+    },
+    {
+      "id": "s05",
+      "sceneId": "closed",
+      "tag": "[playfully]",
+      "text": "هزّ رأسه: «طبعًا!»… ومحا ما كان مصدّقه قبل قليل."
+    },
+    {
+      "id": "s06",
+      "sceneId": "papers",
+      "tag": "",
+      "text": "ثم وصلته ورقتان للاجتماع نفسه، في الساعة نفسها:"
+    },
+    {
+      "id": "s07",
+      "sceneId": "papers",
+      "tag": "",
+      "text": "«الاجتماع قائم»… و«الاجتماع ملغي»."
+    },
+    {
+      "id": "s08",
+      "sceneId": "papers",
+      "tag": "",
+      "text": "ختم على الاثنتين: «صحيح»."
+    },
+    {
+      "id": "s09",
+      "sceneId": "both",
+      "tag": "[excited]",
+      "text": "جاب كرسي ليحضر… وعلّق الإلغاء بيده الثانية!"
+    },
+    {
+      "id": "s11",
+      "sceneId": "name",
+      "tag": "[warmly]",
+      "text": "جورج أورويل سمّى هذا «التفكير المزدوج» في رواية «1984»:"
+    },
+    {
+      "id": "s12",
+      "sceneId": "name",
+      "tag": "",
+      "text": "تصدّق فكرتين متناقضتين في وقت واحد، وتتغاضى عن التناقض."
+    },
+    {
+      "id": "s13",
+      "sceneId": "check",
+      "tag": "[softly]",
+      "text": "أما لو تغيّر الدليل وغيّرت رأيك، فهذا طبيعي."
+    },
+    {
+      "id": "s14",
+      "sceneId": "check",
+      "tag": "",
+      "text": "لكن المدير ما لمس القفل. اللي تغيّر… كلامه فقط."
+    },
+    {
+      "id": "s15",
+      "sceneId": "close",
+      "tag": "[curious]",
+      "text": "وإيش اللي تغيّر فعلًا… الواقع، ولا الكلام؟"
+    }
+  ],
+  "onScreen": [
+    {
+      "id": "signOpen",
+      "text": "مفتوح"
+    },
+    {
+      "id": "signClosed",
+      "text": "مغلق"
+    },
+    {
+      "id": "meeting",
+      "text": "الاجتماع"
+    },
+    {
+      "id": "on",
+      "text": "قائم"
+    },
+    {
+      "id": "off",
+      "text": "ملغي"
+    },
+    {
+      "id": "true",
+      "text": "صحيح"
+    },
+    {
+      "id": "time",
+      "text": "3:00"
+    },
+    {
+      "id": "board",
+      "text": "التفكير المزدوج"
+    },
+    {
+      "id": "boardSub",
+      "text": "أورويل · 1984"
+    },
+    {
+      "id": "seal",
+      "text": "المدير"
+    },
+    {
+      "id": "note2",
+      "text": "مقفول"
+    }
+  ],
+  "cut": [
+    {
+      "id": "s10",
+      "sceneId": "name",
+      "tag": "[curious]",
+      "text": "هنا الغرابة: هو مصدّق القرارين معًا.",
+      "reason": "spoken in take A (29.76–32.42 s) but cut at its pauses: with every line kept the reel measured ~57.5 s; the brief says to drop a sentence rather than speed up. It restates the definition that follows (تصدّق فكرتين متناقضتين في وقت واحد)."
+    }
+  ]
+}
