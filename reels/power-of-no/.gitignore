@@ -1,0 +1,10 @@
+node_modules/
+public/narration.mp3
+public/foley.wav
+output/frames/
+output/contact-svg/
+output/cover-svg/
+output/*.png
+output/*.wav
+output/*.mp4
+tools/export-frames.mjs
