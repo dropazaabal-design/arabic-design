@@ -1,0 +1,4 @@
+node_modules/
+tools/.export-svg.cjs
+out/
+audio/*.wav

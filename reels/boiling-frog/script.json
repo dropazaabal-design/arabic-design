@@ -1,0 +1,31 @@
+{
+  "title": "الضفدع هرب… وأنت؟",
+  "topic": "«الضفدع المغلي» تشبيه شائع لا حقيقة علمية ولا متلازمة: الضفدع السليم يحاول الهرب حين يسخن الماء. يبقى التشبيه مفيدًا لشيء آخر: عادات صغيرة تكبر شوي شوي حتى تصير عادية عندنا.",
+  "factCheck": [
+    "Christopher S. Baird, West Texas A&M University (2012): https://www.wtamu.edu/~cbaird/sq/2012/12/08/why-can-you-boil-a-frog-without-it-jumping-out-to-safety-if-you-raise-the-temperature-slowly/",
+    "ABC Science (2010): https://www.abc.net.au/science/archive/articles/2010/12/07/3085614.htm"
+  ],
+  "voice": { "provider": "ElevenLabs (connector)", "model_id": "eleven_v4", "voice_id": "dlGxemPxFMTY7iXagmOj", "note": "same voice as reels/mukarram and the project's latest reels" },
+  "segments": [
+    { "id": "s01", "sceneId": "pond", "tag": "[playfully]", "text": "يقولون: الضفدع ما ينتبه للخطر إذا جاه بالتدريج…" },
+    { "id": "s02", "sceneId": "pond", "tag": "[surprised]", "text": "لكن تدري؟ الضفدع نفسه يحاول يهرب!" },
+    { "id": "s03", "sceneId": "myth", "tag": "[playfully]", "text": "يعني القصة مو صحيحة… هي مجرد تشبيه." },
+    { "id": "s04", "sceneId": "myth", "tag": "[warmly]", "text": "بس التشبيه يصدق علينا أحيانًا." },
+    { "id": "s05", "sceneId": "phone", "tag": "[playfully]", "text": "خمس دقايق على الجوال… تصير عشر… وفجأة راحت ساعة!" },
+    { "id": "s06", "sceneId": "tasks", "tag": "[sarcastic]", "text": "«بأجّلها لبكرة»… وبكرة يجيب معه كومة ثانية." },
+    { "id": "s07", "sceneId": "slow", "tag": "[softly]", "text": "ما تغيّر شي في يوم واحد… تغيّر شوي، ثم شوي." },
+    { "id": "s08", "sceneId": "notice", "tag": "[warmly]", "text": "اسأل نفسك: وش الشي اللي صار عادي عندي… وهو قبل كان يزعجني؟" },
+    { "id": "s09", "sceneId": "act", "tag": "", "text": "انتبه له اليوم، وغيّر خطوة وحدة صغيرة." },
+    { "id": "s10", "sceneId": "close", "tag": "[playfully]", "text": "الضفدع هرب… وأنت؟" },
+    { "id": "s11", "sceneId": "close", "tag": "[softly]", "text": "لا تنتظر المشكلة تكبر عشان تنتبه." }
+  ],
+  "onScreen": [
+    { "id": "myth", "text": "القصة مجرد تشبيه" },
+    { "id": "min5", "text": "5 دقائق" },
+    { "id": "min10", "text": "10 دقائق" },
+    { "id": "min60", "text": "60 دقيقة" },
+    { "id": "tomorrow", "text": "بكرة" },
+    { "id": "card", "text": "الضفدع هرب… وأنت؟" },
+    { "id": "card2", "text": "لا تنتظر المشكلة تكبر" }
+  ]
+}
