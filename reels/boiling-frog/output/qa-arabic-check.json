@@ -1,0 +1,7 @@
+{
+ "tool": "Baseera studio check (letters, hamza, ة/ه, ى/ي, digits, punctuation) on every on-screen string",
+ "strings": 7,
+ "errors": 0,
+ "warnings": 0,
+ "textIssues": []
+}

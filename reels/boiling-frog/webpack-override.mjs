@@ -4,7 +4,8 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const here = path.dirname(fileURLToPath(import.meta.url));
+// remotion.config.ts is bundled as CommonJS (no import.meta there; it runs from this folder).
+const here = import.meta?.url ? path.dirname(fileURLToPath(import.meta.url)) : process.cwd();
 export const webpackOverride = (c) => ({
   ...c,
   resolve: {

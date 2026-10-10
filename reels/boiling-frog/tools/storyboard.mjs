@@ -35,5 +35,5 @@ for (const s of shots) {
   md += `| narration | ${s.narration} |\n| scene_goal | ${s.scene_goal} |\n| characters | ${s.characters.join('، ')} |\n| action | ${s.action} |\n`;
   md += `| camera | ${s.camera} |\n| sound | ${s.sound} |\n| visual_punchline | ${s.visual_punchline} |\n| transition | ${s.transition} |\n\n`;
 }
-writeFileSync(root + 'output/storyboard.md', md);
-console.log(`output/storyboard.md: ${shots.length} shots, ${t(tl.durationInFrames)} s`);
+writeFileSync(root + 'storyboard.md', md);
+console.log(`storyboard.md: ${shots.length} shots, ${t(tl.durationInFrames)} s`);
