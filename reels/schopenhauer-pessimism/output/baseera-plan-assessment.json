@@ -1,0 +1,2060 @@
+{
+  "engineVersion": "basira-ai-engine-1",
+  "modelVersions": {
+    "x": "basira-x-v1",
+    "instagram": "basira-instagram-v1",
+    "facebook": "basira-facebook-v1"
+  },
+  "createdAt": "2026-10-11T22:58:11.650Z",
+  "account": "default",
+  "content": {
+    "type": "reel",
+    "key": "01b90d3ef4f84bcd67386dff83a375132a3991e5e8bf4117217a75723c23796c",
+    "meta": {},
+    "words": 598,
+    "hook": "# Storyboard — آلة الأمنية"
+  },
+  "overall": {
+    "score": 27,
+    "label": "إمكانات المحتوى إجمالًا",
+    "confidence": 0.35
+  },
+  "platforms": {
+    "x": {
+      "modelVersion": "basira-x-v1",
+      "weightsVersion": "default",
+      "score": 44,
+      "parts": {
+        "positive": 0.39,
+        "negative": 0.05,
+        "quality": 0.65,
+        "fit": 1,
+        "historicalShift": 0
+      },
+      "confidence": {
+        "confidence": 0.35,
+        "confidenceLabel": "low",
+        "history": {
+          "value": 0,
+          "quantity": 0,
+          "recency": 0,
+          "similarity": 0,
+          "ageDays": null
+        },
+        "reasons": [
+          {
+            "code": "no-history",
+            "ar": "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "en": "Generic platform model only: no account history yet."
+          },
+          {
+            "code": "heuristic-share",
+            "ar": "100% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا.",
+            "en": "100% of the score's weight rests on rule-of-thumb estimates."
+          }
+        ]
+      },
+      "scores": {
+        "hook": 45,
+        "retention": 40,
+        "conversation": 27,
+        "share": 48,
+        "save": 54,
+        "click": 39,
+        "contentQuality": 65,
+        "negativeRisk": 5,
+        "platformFit": 100,
+        "historicalFit": null
+      },
+      "explanation": {
+        "platform": "x",
+        "title": "إكس — ملاءمة المنصة: 44/100",
+        "positives": [
+          {
+            "id": "score.platformFit",
+            "label": "ملاءمة الصيغة",
+            "points": 5,
+            "provenance": "derived",
+            "provenanceLabel": "قياس من المحتوى",
+            "why": [
+              "طول الجملة الأولى مرتفع"
+            ]
+          },
+          {
+            "id": "score.contentQuality",
+            "label": "جودة المحتوى",
+            "points": 3,
+            "provenance": "derived",
+            "provenanceLabel": "قياس من المحتوى",
+            "why": [
+              "الوضوح مرتفع",
+              "التحديد مرتفع"
+            ]
+          }
+        ],
+        "negatives": [
+          {
+            "id": "x.reply_potential",
+            "label": "قابلية الرد",
+            "level": "منخفض",
+            "value": 0.26,
+            "points": -5,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "لا سؤال للقارئ",
+              "لا توجد دعوة للتفاعل"
+            ]
+          },
+          {
+            "id": "x.negative_feedback_risk",
+            "label": "خطر التفاعل السلبي",
+            "level": "منخفض",
+            "value": 0.05,
+            "points": -3,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": []
+          },
+          {
+            "id": "x.quote_potential",
+            "label": "قابلية الاقتباس",
+            "level": "منخفض",
+            "value": 0.28,
+            "points": -2.7,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": []
+          }
+        ],
+        "scoreTypes": {
+          "hook": {
+            "label": "الافتتاحية",
+            "score": 45,
+            "top": [
+              {
+                "id": "x.hook_strength",
+                "label": "قوة الافتتاحية",
+                "level": "منخفض",
+                "value": 0.17,
+                "points": -22,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              },
+              {
+                "id": "x.opening_fit",
+                "label": "طول الجملة الأولى",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 16.7,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "الجملة الأولى 3 كلمة"
+                ]
+              }
+            ]
+          },
+          "retention": {
+            "label": "الاستبقاء",
+            "score": 40,
+            "top": [
+              {
+                "id": "x.dwell_potential",
+                "label": "زمن البقاء",
+                "level": "منخفض",
+                "value": 0.4,
+                "points": -10,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "598 كلمة"
+                ]
+              }
+            ]
+          },
+          "conversation": {
+            "label": "النقاش",
+            "score": 27,
+            "top": [
+              {
+                "id": "x.reply_potential",
+                "label": "قابلية الرد",
+                "level": "منخفض",
+                "value": 0.26,
+                "points": -16,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "لا سؤال للقارئ",
+                  "لا توجد دعوة للتفاعل"
+                ]
+              },
+              {
+                "id": "x.quote_potential",
+                "label": "قابلية الاقتباس",
+                "level": "منخفض",
+                "value": 0.28,
+                "points": -7.3,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              }
+            ]
+          },
+          "share": {
+            "label": "المشاركة",
+            "score": 48,
+            "top": [
+              {
+                "id": "x.repost_potential",
+                "label": "قابلية إعادة النشر",
+                "level": "متوسط",
+                "value": 0.47,
+                "points": -1.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "فائدة عملية 0.42",
+                  "جِدّة الفكرة 0"
+                ]
+              },
+              {
+                "id": "x.share_potential",
+                "label": "قابلية المشاركة",
+                "level": "متوسط",
+                "value": 0.48,
+                "points": -1,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "فائدة عملية 0.42"
+                ]
+              }
+            ]
+          },
+          "save": {
+            "label": "الحفظ",
+            "score": 54,
+            "top": [
+              {
+                "id": "x.bookmark_potential",
+                "label": "قابلية الحفظ",
+                "level": "متوسط",
+                "value": 0.54,
+                "points": 4,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "درجة التحديد 0.95"
+                ]
+              }
+            ]
+          },
+          "click": {
+            "label": "النقر والزيارة",
+            "score": 39,
+            "top": [
+              {
+                "id": "x.profile_click_potential",
+                "label": "زيارة الملف الشخصي",
+                "level": "منخفض",
+                "value": 0.39,
+                "points": -5.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              },
+              {
+                "id": "x.follow_potential",
+                "label": "قابلية المتابعة",
+                "level": "منخفض",
+                "value": 0.39,
+                "points": -5.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              }
+            ]
+          },
+          "contentQuality": {
+            "label": "جودة المحتوى",
+            "score": 65,
+            "top": [
+              {
+                "id": "x.clarity",
+                "label": "الوضوح",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 16.7,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "سهولة القراءة 100/100",
+                  "متوسط الجملة 4.4 كلمات"
+                ]
+              },
+              {
+                "id": "x.novelty",
+                "label": "الجِدّة",
+                "level": "منخفض",
+                "value": 0,
+                "points": -16.7,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "جِدّة الفكرة 0"
+                ]
+              },
+              {
+                "id": "x.specificity",
+                "label": "التحديد",
+                "level": "مرتفع",
+                "value": 0.95,
+                "points": 15,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "درجة التحديد 0.95"
+                ]
+              }
+            ]
+          },
+          "negativeRisk": {
+            "label": "خطر التفاعل السلبي",
+            "score": 5,
+            "top": [
+              {
+                "id": "x.negative_feedback_risk",
+                "label": "خطر التفاعل السلبي",
+                "level": "منخفض",
+                "value": 0.05,
+                "points": -45,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              }
+            ]
+          },
+          "platformFit": {
+            "label": "ملاءمة الصيغة",
+            "score": 100,
+            "top": [
+              {
+                "id": "x.opening_fit",
+                "label": "طول الجملة الأولى",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 50,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "الجملة الأولى 3 كلمة"
+                ]
+              }
+            ]
+          }
+        },
+        "confidence": {
+          "value": 0.35,
+          "label": "low",
+          "reasons": [
+            "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "100% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا."
+          ]
+        },
+        "unavailable": [
+          {
+            "id": "x.click_potential",
+            "label": "قابلية النقر",
+            "note": "no link in the post"
+          },
+          {
+            "id": "x.author_affinity",
+            "label": "ألفة الجمهور بالموضوع",
+            "note": "no account history for this topic"
+          },
+          {
+            "id": "x.network_relevance",
+            "label": "الملاءمة الشبكية",
+            "note": "requires follower-graph data that X does not expose to creators"
+          }
+        ],
+        "disclaimer": "لا تدّعي بصيرة الوصول إلى خوارزميات الترتيب الخاصة بالمنصات. الدرجات تقديرات مبنية على معلومات المنصات المنشورة وخصائص المحتوى وأداء حسابك السابق. درجة ملاءمة المنصة مقياس نسبي للتوافق وفق النموذج الحالي، وليست احتمال وصول أو انتشار."
+      },
+      "recommendations": [
+        {
+          "topic": null,
+          "id": "x:missing_cta",
+          "rule": "missing_cta",
+          "platform": "x",
+          "issue": "missing_cta",
+          "title": "لا توجد دعوة في النهاية",
+          "reason": "المحتوى مرجعي (قابلية الحفظ أعلى من التعليق) ولا يذكّر القارئ بالحفظ.",
+          "suggestedFix": "اختم بدعوة حفظ مرتبطة بالاستخدام («احفظه لتعود إليه قبل…»).",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "conversation",
+            "deltaPoints": 4,
+            "overallDelta": 2,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "cta.present",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            },
+            {
+              "feature": "audience.saveWorthiness",
+              "value": 0.54,
+              "provenance": "heuristic"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "x:weak_opening:opening",
+          "rule": "weak_opening",
+          "platform": "x",
+          "issue": "weak_opening",
+          "title": "افتتاحية ضعيفة",
+          "reason": "قوة الافتتاحية 0.17 من 1؛ أضعف أجزائها: الفضول، التحديد.",
+          "suggestedFix": "لا يوجد سؤال ولا فجوة فضول في الافتتاحية: اذكر النتيجة واترك السبب للشرائح التالية. الافتتاحية بلا رقم أو تفصيل محدد: ضع الرقم أو المدة أو المثال في السطر الأول.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 18,
+            "overallDelta": 1,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "hook.parts.curiosity",
+              "value": 0,
+              "target": 0.8,
+              "provenance": "heuristic"
+            },
+            {
+              "feature": "hook.parts.specificity",
+              "value": 0.2,
+              "target": 0.8,
+              "provenance": "heuristic"
+            }
+          ],
+          "rewrite": "Rewrite the opening: improve curiosity and specificity; keep it under 12 words and keep the meaning.",
+          "severity": 0.98
+        },
+        {
+          "topic": null,
+          "id": "x:reel_promise_late",
+          "rule": "reel_promise_late",
+          "platform": "x",
+          "issue": "reel_promise_late",
+          "title": "الوعد متأخر في الريل",
+          "reason": "أول 3 ثوانٍ (6 كلمة) بلا رقم ولا سؤال ولا تحذير.",
+          "suggestedFix": "افتح بالنتيجة أو الرقم في المشهد الأول، واترك الشرح لما بعده.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 0,
+            "overallDelta": 0,
+            "basis": "model-counterfactual",
+            "note": "no change under the current model"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.firstSecondsHasPromise",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.7
+        },
+        {
+          "topic": null,
+          "id": "x:x_visual_text_missing",
+          "rule": "x_visual_text_missing",
+          "platform": "x",
+          "issue": "x_visual_text_missing",
+          "title": "لا نص مرافق على إكس",
+          "reason": "على إكس تُعرض الشرائح أو الفيديو كوسائط، والنص المرافق هو ما يقرؤه المستخدم أولًا.",
+          "suggestedFix": "اكتب نصًا مرافقًا يحمل وعد الغلاف في جملة قصيرة.",
+          "priority": "medium",
+          "expectedEffect": null,
+          "confidence": 0.6,
+          "basis": "derived",
+          "evidence": [
+            {
+              "feature": "caption",
+              "value": null,
+              "target": "text",
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.5
+        },
+        {
+          "topic": null,
+          "id": "x:reel_duration",
+          "rule": "reel_duration",
+          "platform": "x",
+          "issue": "reel_duration",
+          "title": "مدة الريل خارج المدى",
+          "reason": "المدة المقدّرة 315.3 ث.",
+          "suggestedFix": "اجعلها بين 10 و35 ثانية بحذف المشاهد الأضعف أو دمجها.",
+          "priority": "low",
+          "expectedEffect": {
+            "scoreType": "retention",
+            "deltaPoints": 0,
+            "overallDelta": 0,
+            "basis": "model-counterfactual",
+            "note": "no change under the current model"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.durationSec",
+              "value": 315.3,
+              "target": "10–35",
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "x:redundancy",
+          "rule": "redundancy",
+          "platform": "x",
+          "issue": "redundancy",
+          "title": "تكرار كثير",
+          "reason": "46% من الكلمات المضمونية مكررة (أكثرها 16 مرات).",
+          "suggestedFix": "احذف التكرار أو استبدل بعضه بمرادف أو بضمير.",
+          "priority": "low",
+          "expectedEffect": null,
+          "confidence": 0.6,
+          "basis": "derived",
+          "evidence": [
+            {
+              "feature": "text.redundancy",
+              "value": 0.46,
+              "target": 0.3,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.25
+        }
+      ],
+      "accountEvidence": [],
+      "notes": [
+        {
+          "code": "x.visual-format",
+          "provenance": "derived",
+          "text": "على إكس تُعرض الشرائح أو الفيديو كوسائط؛ تُقرأ الدرجة من النص المرافق والغلاف فقط."
+        }
+      ]
+    },
+    "instagram": {
+      "modelVersion": "basira-instagram-v1",
+      "weightsVersion": "default",
+      "score": 19,
+      "parts": {
+        "positive": 0.34,
+        "negative": 0.44,
+        "quality": 0.92,
+        "fit": 0.27,
+        "historicalShift": 0
+      },
+      "confidence": {
+        "confidence": 0.37,
+        "confidenceLabel": "low",
+        "history": {
+          "value": 0,
+          "quantity": 0,
+          "recency": 0,
+          "similarity": 0,
+          "ageDays": null
+        },
+        "reasons": [
+          {
+            "code": "no-history",
+            "ar": "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "en": "Generic platform model only: no account history yet."
+          },
+          {
+            "code": "heuristic-share",
+            "ar": "92% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا.",
+            "en": "92% of the score's weight rests on rule-of-thumb estimates."
+          }
+        ]
+      },
+      "scores": {
+        "hook": 31,
+        "retention": 25,
+        "conversation": 25,
+        "share": 46,
+        "save": 54,
+        "click": 27,
+        "contentQuality": 92,
+        "negativeRisk": 44,
+        "platformFit": 27,
+        "historicalFit": null
+      },
+      "explanation": {
+        "platform": "instagram",
+        "title": "إنستغرام — ملاءمة المنصة: 19/100",
+        "positives": [
+          {
+            "id": "score.contentQuality",
+            "label": "جودة المحتوى",
+            "points": 8.4,
+            "provenance": "derived",
+            "provenanceLabel": "قياس من المحتوى",
+            "why": [
+              "وضوح المحتوى مرتفع",
+              "التحديد مرتفع"
+            ]
+          }
+        ],
+        "negatives": [
+          {
+            "id": "instagram.skip_risk",
+            "label": "خطر التخطي",
+            "level": "مرتفع",
+            "value": 0.83,
+            "points": -20.7,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": []
+          },
+          {
+            "id": "instagram.time_spent_potential",
+            "label": "زمن المشاهدة",
+            "level": "منخفض",
+            "value": 0,
+            "points": -5,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "المدة 315.3 ث"
+            ]
+          },
+          {
+            "id": "instagram.hook_strength",
+            "label": "قوة الغلاف",
+            "level": "منخفض",
+            "value": 0.17,
+            "points": -3.3,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "الافتتاحية 3 كلمات",
+              "افتتاحية عامة بلا تفاصيل محددة"
+            ]
+          },
+          {
+            "id": "instagram.comment_potential",
+            "label": "قابلية التعليق",
+            "level": "منخفض",
+            "value": 0.25,
+            "points": -2.5,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "لا سؤال للقارئ",
+              "لا توجد دعوة للتفاعل"
+            ]
+          },
+          {
+            "id": "instagram.profile_visit_potential",
+            "label": "زيارة الحساب",
+            "level": "منخفض",
+            "value": 0.27,
+            "points": -2.3,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": []
+          }
+        ],
+        "scoreTypes": {
+          "hook": {
+            "label": "الافتتاحية",
+            "score": 31,
+            "top": [
+              {
+                "id": "instagram.hook_strength",
+                "label": "قوة الغلاف",
+                "level": "منخفض",
+                "value": 0.17,
+                "points": -16.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              },
+              {
+                "id": "instagram.reel_hook",
+                "label": "افتتاحية الريل",
+                "level": "متوسط",
+                "value": 0.45,
+                "points": -2.5,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "لا وعد في الثواني الأولى"
+                ]
+              }
+            ]
+          },
+          "retention": {
+            "label": "الاستبقاء",
+            "score": 25,
+            "top": [
+              {
+                "id": "instagram.time_spent_potential",
+                "label": "زمن المشاهدة",
+                "level": "منخفض",
+                "value": 0,
+                "points": -16.7,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "المدة 315.3 ث"
+                ]
+              },
+              {
+                "id": "instagram.reel_completion",
+                "label": "إكمال الريل",
+                "level": "منخفض",
+                "value": 0.38,
+                "points": -8,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "المدة 315.3 ث",
+                  "حلقات فضول مفتوحة: 0",
+                  "لا خلاصة في النهاية"
+                ]
+              }
+            ]
+          },
+          "conversation": {
+            "label": "النقاش",
+            "score": 25,
+            "top": [
+              {
+                "id": "instagram.comment_potential",
+                "label": "قابلية التعليق",
+                "level": "منخفض",
+                "value": 0.25,
+                "points": -25,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "لا سؤال للقارئ",
+                  "لا توجد دعوة للتفاعل"
+                ]
+              }
+            ]
+          },
+          "share": {
+            "label": "المشاركة",
+            "score": 46,
+            "top": [
+              {
+                "id": "instagram.share_potential",
+                "label": "قابلية الإرسال والمشاركة",
+                "level": "متوسط",
+                "value": 0.46,
+                "points": -4,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "فائدة عملية 0.42",
+                  "جِدّة الفكرة 0"
+                ]
+              }
+            ]
+          },
+          "save": {
+            "label": "الحفظ",
+            "score": 54,
+            "top": [
+              {
+                "id": "instagram.save_potential",
+                "label": "قابلية الحفظ",
+                "level": "متوسط",
+                "value": 0.54,
+                "points": 4,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "درجة التحديد 0.95"
+                ]
+              }
+            ]
+          },
+          "click": {
+            "label": "النقر والزيارة",
+            "score": 27,
+            "top": [
+              {
+                "id": "instagram.profile_visit_potential",
+                "label": "زيارة الحساب",
+                "level": "منخفض",
+                "value": 0.27,
+                "points": -23,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              }
+            ]
+          },
+          "contentQuality": {
+            "label": "جودة المحتوى",
+            "score": 92,
+            "top": [
+              {
+                "id": "instagram.content_clarity",
+                "label": "وضوح المحتوى",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 16.7,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "سهولة القراءة 100/100"
+                ]
+              },
+              {
+                "id": "instagram.specificity",
+                "label": "التحديد",
+                "level": "مرتفع",
+                "value": 0.95,
+                "points": 15,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "درجة التحديد 0.95"
+                ]
+              },
+              {
+                "id": "instagram.visual_density",
+                "label": "كثافة النص في الشرائح",
+                "level": "مرتفع",
+                "value": 0.8,
+                "points": 10,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "أكثر مشهد كلامًا 14 كلمة"
+                ]
+              }
+            ]
+          },
+          "negativeRisk": {
+            "label": "خطر التفاعل السلبي",
+            "score": 44,
+            "top": [
+              {
+                "id": "instagram.negative_feedback_risk",
+                "label": "خطر التفاعل السلبي",
+                "level": "منخفض",
+                "value": 0.05,
+                "points": -22.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              },
+              {
+                "id": "instagram.skip_risk",
+                "label": "خطر التخطي",
+                "level": "مرتفع",
+                "value": 0.83,
+                "points": 16.5,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              }
+            ]
+          },
+          "platformFit": {
+            "label": "ملاءمة الصيغة",
+            "score": 27,
+            "top": [
+              {
+                "id": "instagram.format_fit",
+                "label": "ملاءمة الصيغة",
+                "level": "منخفض",
+                "value": 0,
+                "points": -33.3,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "المدة 315.3 ث"
+                ]
+              },
+              {
+                "id": "instagram.visual_density",
+                "label": "كثافة النص في الشرائح",
+                "level": "مرتفع",
+                "value": 0.8,
+                "points": 10,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "أكثر مشهد كلامًا 14 كلمة"
+                ]
+              }
+            ]
+          }
+        },
+        "confidence": {
+          "value": 0.37,
+          "label": "low",
+          "reasons": [
+            "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "92% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا."
+          ]
+        },
+        "unavailable": [
+          {
+            "id": "instagram.carousel_completion",
+            "label": "إكمال الكاروسيل",
+            "note": "not a carousel"
+          },
+          {
+            "id": "instagram.caption_fit",
+            "label": "ملاءمة الوصف",
+            "note": "no caption given"
+          },
+          {
+            "id": "instagram.topic_affinity",
+            "label": "ألفة الجمهور بالموضوع",
+            "note": "no account history for this topic"
+          }
+        ],
+        "disclaimer": "لا تدّعي بصيرة الوصول إلى خوارزميات الترتيب الخاصة بالمنصات. الدرجات تقديرات مبنية على معلومات المنصات المنشورة وخصائص المحتوى وأداء حسابك السابق. درجة ملاءمة المنصة مقياس نسبي للتوافق وفق النموذج الحالي، وليست احتمال وصول أو انتشار."
+      },
+      "recommendations": [
+        {
+          "topic": null,
+          "id": "instagram:reel_duration",
+          "rule": "reel_duration",
+          "platform": "instagram",
+          "issue": "reel_duration",
+          "title": "مدة الريل خارج المدى",
+          "reason": "المدة المقدّرة 315.3 ث.",
+          "suggestedFix": "اجعلها بين 10 و35 ثانية بحذف المشاهد الأضعف أو دمجها.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "retention",
+            "deltaPoints": 54,
+            "overallDelta": 21,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.durationSec",
+              "value": 315.3,
+              "target": "10–35",
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "instagram:weak_opening:opening",
+          "rule": "weak_opening",
+          "platform": "instagram",
+          "issue": "weak_opening",
+          "title": "افتتاحية ضعيفة",
+          "reason": "قوة الافتتاحية 0.17 من 1؛ أضعف أجزائها: الفضول، التحديد.",
+          "suggestedFix": "لا يوجد سؤال ولا فجوة فضول في الافتتاحية: اذكر النتيجة واترك السبب للشرائح التالية. الافتتاحية بلا رقم أو تفصيل محدد: ضع الرقم أو المدة أو المثال في السطر الأول.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 14,
+            "overallDelta": 9,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "hook.parts.curiosity",
+              "value": 0,
+              "target": 0.8,
+              "provenance": "heuristic"
+            },
+            {
+              "feature": "hook.parts.specificity",
+              "value": 0.2,
+              "target": 0.8,
+              "provenance": "heuristic"
+            }
+          ],
+          "rewrite": "Rewrite the opening: improve curiosity and specificity; keep it under 12 words and keep the meaning.",
+          "severity": 0.98
+        },
+        {
+          "topic": null,
+          "id": "instagram:reel_promise_late",
+          "rule": "reel_promise_late",
+          "platform": "instagram",
+          "issue": "reel_promise_late",
+          "title": "الوعد متأخر في الريل",
+          "reason": "أول 3 ثوانٍ (6 كلمة) بلا رقم ولا سؤال ولا تحذير.",
+          "suggestedFix": "افتح بالنتيجة أو الرقم في المشهد الأول، واترك الشرح لما بعده.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 28,
+            "overallDelta": 5,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.firstSecondsHasPromise",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.7
+        },
+        {
+          "topic": null,
+          "id": "instagram:missing_cta",
+          "rule": "missing_cta",
+          "platform": "instagram",
+          "issue": "missing_cta",
+          "title": "لا توجد دعوة في النهاية",
+          "reason": "المحتوى مرجعي (قابلية الحفظ أعلى من التعليق) ولا يذكّر القارئ بالحفظ.",
+          "suggestedFix": "اختم بدعوة حفظ مرتبطة بالاستخدام («احفظه لتعود إليه قبل…»).",
+          "priority": "low",
+          "expectedEffect": {
+            "scoreType": "conversation",
+            "deltaPoints": 9,
+            "overallDelta": 0,
+            "basis": "model-counterfactual",
+            "note": "no change under the current model"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "cta.present",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            },
+            {
+              "feature": "audience.saveWorthiness",
+              "value": 0.54,
+              "provenance": "heuristic"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "instagram:redundancy",
+          "rule": "redundancy",
+          "platform": "instagram",
+          "issue": "redundancy",
+          "title": "تكرار كثير",
+          "reason": "46% من الكلمات المضمونية مكررة (أكثرها 16 مرات).",
+          "suggestedFix": "احذف التكرار أو استبدل بعضه بمرادف أو بضمير.",
+          "priority": "low",
+          "expectedEffect": null,
+          "confidence": 0.6,
+          "basis": "derived",
+          "evidence": [
+            {
+              "feature": "text.redundancy",
+              "value": 0.46,
+              "target": 0.3,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.25
+        }
+      ],
+      "accountEvidence": [],
+      "notes": []
+    },
+    "facebook": {
+      "modelVersion": "basira-facebook-v1",
+      "weightsVersion": "default",
+      "score": 19,
+      "parts": {
+        "positive": 0.28,
+        "negative": 0.36,
+        "quality": 0.98,
+        "fit": 0.5,
+        "historicalShift": 0
+      },
+      "confidence": {
+        "confidence": 0.35,
+        "confidenceLabel": "low",
+        "history": {
+          "value": 0,
+          "quantity": 0,
+          "recency": 0,
+          "similarity": 0,
+          "ageDays": null
+        },
+        "reasons": [
+          {
+            "code": "no-history",
+            "ar": "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "en": "Generic platform model only: no account history yet."
+          },
+          {
+            "code": "heuristic-share",
+            "ar": "100% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا.",
+            "en": "100% of the score's weight rests on rule-of-thumb estimates."
+          }
+        ]
+      },
+      "scores": {
+        "hook": 17,
+        "retention": 35,
+        "conversation": 14,
+        "share": 46,
+        "save": null,
+        "click": null,
+        "contentQuality": 98,
+        "negativeRisk": 36,
+        "platformFit": 50,
+        "historicalFit": null
+      },
+      "explanation": {
+        "platform": "facebook",
+        "title": "فيسبوك — ملاءمة المنصة: 19/100",
+        "positives": [
+          {
+            "id": "score.contentQuality",
+            "label": "جودة المحتوى",
+            "points": 9.6,
+            "provenance": "derived",
+            "provenanceLabel": "قياس من المحتوى",
+            "why": [
+              "سهولة قراءة النص مرتفع",
+              "التحديد مرتفع"
+            ]
+          }
+        ],
+        "negatives": [
+          {
+            "id": "facebook.scroll_past_risk",
+            "label": "خطر التمرير دون توقف",
+            "level": "مرتفع",
+            "value": 0.83,
+            "points": -16.6,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": []
+          },
+          {
+            "id": "facebook.meaningful_comment_potential",
+            "label": "قابلية التعليق الهادف",
+            "level": "منخفض",
+            "value": 0.15,
+            "points": -8.7,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "لا سؤال للقارئ",
+              "لا توجد دعوة للتفاعل"
+            ]
+          },
+          {
+            "id": "facebook.conversation_potential",
+            "label": "قابلية النقاش",
+            "level": "منخفض",
+            "value": 0.13,
+            "points": -4.6,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "لا سؤال للقارئ"
+            ]
+          },
+          {
+            "id": "facebook.hook_strength",
+            "label": "قوة الافتتاحية",
+            "level": "منخفض",
+            "value": 0.17,
+            "points": -4.1,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "الافتتاحية 3 كلمات",
+              "افتتاحية عامة بلا تفاصيل محددة"
+            ]
+          },
+          {
+            "id": "facebook.watch_retention",
+            "label": "الاحتفاظ بالمشاهدة",
+            "level": "منخفض",
+            "value": 0.38,
+            "points": -2.2,
+            "provenance": "heuristic",
+            "provenanceLabel": "تقدير قاعدي",
+            "why": [
+              "المدة 315.3 ث",
+              "حلقات فضول مفتوحة: 0",
+              "لا خلاصة في النهاية"
+            ]
+          }
+        ],
+        "scoreTypes": {
+          "hook": {
+            "label": "الافتتاحية",
+            "score": 17,
+            "top": [
+              {
+                "id": "facebook.hook_strength",
+                "label": "قوة الافتتاحية",
+                "level": "منخفض",
+                "value": 0.17,
+                "points": -33,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              }
+            ]
+          },
+          "retention": {
+            "label": "الاستبقاء",
+            "score": 35,
+            "top": [
+              {
+                "id": "facebook.watch_retention",
+                "label": "الاحتفاظ بالمشاهدة",
+                "level": "منخفض",
+                "value": 0.38,
+                "points": -8,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "المدة 315.3 ث",
+                  "حلقات فضول مفتوحة: 0",
+                  "لا خلاصة في النهاية"
+                ]
+              },
+              {
+                "id": "facebook.show_more_potential",
+                "label": "النقر على «عرض المزيد»",
+                "level": "منخفض",
+                "value": 0.29,
+                "points": -7,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              }
+            ]
+          },
+          "conversation": {
+            "label": "النقاش",
+            "score": 14,
+            "top": [
+              {
+                "id": "facebook.meaningful_comment_potential",
+                "label": "قابلية التعليق الهادف",
+                "level": "منخفض",
+                "value": 0.15,
+                "points": -23.3,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "لا سؤال للقارئ",
+                  "لا توجد دعوة للتفاعل"
+                ]
+              },
+              {
+                "id": "facebook.conversation_potential",
+                "label": "قابلية النقاش",
+                "level": "منخفض",
+                "value": 0.13,
+                "points": -12.3,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "لا سؤال للقارئ"
+                ]
+              }
+            ]
+          },
+          "share": {
+            "label": "المشاركة",
+            "score": 46,
+            "top": [
+              {
+                "id": "facebook.share_potential",
+                "label": "قابلية المشاركة",
+                "level": "متوسط",
+                "value": 0.46,
+                "points": -4,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "فائدة عملية 0.42"
+                ]
+              }
+            ]
+          },
+          "contentQuality": {
+            "label": "جودة المحتوى",
+            "score": 98,
+            "top": [
+              {
+                "id": "facebook.caption_readability",
+                "label": "سهولة قراءة النص",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 25,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "سهولة القراءة 100/100"
+                ]
+              },
+              {
+                "id": "facebook.specificity",
+                "label": "التحديد",
+                "level": "مرتفع",
+                "value": 0.95,
+                "points": 22.5,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "درجة التحديد 0.95"
+                ]
+              }
+            ]
+          },
+          "negativeRisk": {
+            "label": "خطر التفاعل السلبي",
+            "score": 36,
+            "top": [
+              {
+                "id": "facebook.negative_feedback_risk",
+                "label": "خطر التفاعل السلبي",
+                "level": "منخفض",
+                "value": 0.05,
+                "points": -27,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": []
+              },
+              {
+                "id": "facebook.scroll_past_risk",
+                "label": "خطر التمرير دون توقف",
+                "level": "مرتفع",
+                "value": 0.83,
+                "points": 13.2,
+                "provenance": "heuristic",
+                "provenanceLabel": "تقدير قاعدي",
+                "why": [
+                  "الافتتاحية 3 كلمات",
+                  "افتتاحية عامة بلا تفاصيل محددة"
+                ]
+              }
+            ]
+          },
+          "platformFit": {
+            "label": "ملاءمة الصيغة",
+            "score": 50,
+            "top": [
+              {
+                "id": "facebook.format_fit",
+                "label": "ملاءمة الصيغة",
+                "level": "منخفض",
+                "value": 0,
+                "points": -25,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "المدة 315.3 ث"
+                ]
+              },
+              {
+                "id": "facebook.caption_readability",
+                "label": "سهولة قراءة النص",
+                "level": "مرتفع",
+                "value": 1,
+                "points": 25,
+                "provenance": "derived",
+                "provenanceLabel": "قياس من المحتوى",
+                "why": [
+                  "سهولة القراءة 100/100"
+                ]
+              }
+            ]
+          }
+        },
+        "confidence": {
+          "value": 0.35,
+          "label": "low",
+          "reasons": [
+            "نموذج المنصة العام فقط: لا توجد بيانات أداء لهذا الحساب بعد.",
+            "100% من وزن الدرجة تقديرات قاعدية وليست قياسًا مباشرًا."
+          ]
+        },
+        "unavailable": [
+          {
+            "id": "facebook.click_potential",
+            "label": "قابلية النقر على الرابط",
+            "note": "no link in the post"
+          },
+          {
+            "id": "facebook.topic_affinity",
+            "label": "ألفة الجمهور بالموضوع",
+            "note": "no account history for this topic"
+          }
+        ],
+        "disclaimer": "لا تدّعي بصيرة الوصول إلى خوارزميات الترتيب الخاصة بالمنصات. الدرجات تقديرات مبنية على معلومات المنصات المنشورة وخصائص المحتوى وأداء حسابك السابق. درجة ملاءمة المنصة مقياس نسبي للتوافق وفق النموذج الحالي، وليست احتمال وصول أو انتشار."
+      },
+      "recommendations": [
+        {
+          "topic": null,
+          "id": "facebook:fb_show_more",
+          "rule": "fb_show_more",
+          "platform": "facebook",
+          "issue": "fb_show_more",
+          "title": "السطور الأولى لا تدفع إلى «عرض المزيد»",
+          "reason": "منشور من 3133 حرفًا يطويه فيسبوك؛ يتوقع النظام النقر على «عرض المزيد» (بطاقة نظام الخلاصة)، وسطوره الأولى ضعيفة الجذب (0.29).",
+          "suggestedFix": "ضع الادعاء والسبب للقراءة في السطرين الأولين، واترك التفاصيل لما بعد الطي.",
+          "priority": "high",
+          "expectedEffect": {
+            "scoreType": "retention",
+            "deltaPoints": 8,
+            "overallDelta": 6,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.6,
+          "basis": "official",
+          "evidence": [
+            {
+              "feature": "facebook.show_more_potential",
+              "value": 0.29,
+              "target": 0.5,
+              "provenance": "heuristic"
+            },
+            {
+              "feature": "text.chars",
+              "value": 3133,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "facebook:fb_no_question",
+          "rule": "fb_no_question",
+          "platform": "facebook",
+          "issue": "fb_no_question",
+          "title": "لا سؤال يفتح النقاش",
+          "reason": "قابلية النقاش 0.13 ولا يوجد سؤال للقارئ. (تقدير قاعدي: السؤال وحده لا يضمن وصولًا أكبر.)",
+          "suggestedFix": "اختم بسؤال عن تجربة القارئ نفسه، لا بسؤال عام.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "conversation",
+            "deltaPoints": 38,
+            "overallDelta": 15,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "text.question",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            },
+            {
+              "feature": "facebook.conversation_potential",
+              "value": 0.13,
+              "provenance": "heuristic"
+            }
+          ],
+          "severity": 0.3
+        },
+        {
+          "topic": null,
+          "id": "facebook:reel_duration",
+          "rule": "reel_duration",
+          "platform": "facebook",
+          "issue": "reel_duration",
+          "title": "مدة الريل خارج المدى",
+          "reason": "المدة المقدّرة 315.3 ث.",
+          "suggestedFix": "اجعلها بين 10 و35 ثانية بحذف المشاهد الأضعف أو دمجها.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "retention",
+            "deltaPoints": 20,
+            "overallDelta": 11,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.durationSec",
+              "value": 315.3,
+              "target": "10–35",
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "facebook:weak_opening:opening",
+          "rule": "weak_opening",
+          "platform": "facebook",
+          "issue": "weak_opening",
+          "title": "افتتاحية ضعيفة",
+          "reason": "قوة الافتتاحية 0.17 من 1؛ أضعف أجزائها: الفضول، التحديد.",
+          "suggestedFix": "لا يوجد سؤال ولا فجوة فضول في الافتتاحية: اذكر النتيجة واترك السبب للشرائح التالية. الافتتاحية بلا رقم أو تفصيل محدد: ضع الرقم أو المدة أو المثال في السطر الأول.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 28,
+            "overallDelta": 10,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "hook.parts.curiosity",
+              "value": 0,
+              "target": 0.8,
+              "provenance": "heuristic"
+            },
+            {
+              "feature": "hook.parts.specificity",
+              "value": 0.2,
+              "target": 0.8,
+              "provenance": "heuristic"
+            }
+          ],
+          "rewrite": "Rewrite the opening: improve curiosity and specificity; keep it under 12 words and keep the meaning.",
+          "severity": 0.98
+        },
+        {
+          "topic": null,
+          "id": "facebook:missing_cta",
+          "rule": "missing_cta",
+          "platform": "facebook",
+          "issue": "missing_cta",
+          "title": "لا توجد دعوة في النهاية",
+          "reason": "المحتوى مرجعي (قابلية الحفظ أعلى من التعليق) ولا يذكّر القارئ بالحفظ.",
+          "suggestedFix": "اختم بدعوة حفظ مرتبطة بالاستخدام («احفظه لتعود إليه قبل…»).",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "conversation",
+            "deltaPoints": 5,
+            "overallDelta": 2,
+            "basis": "model-counterfactual"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "cta.present",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            },
+            {
+              "feature": "audience.saveWorthiness",
+              "value": 0.54,
+              "provenance": "heuristic"
+            }
+          ],
+          "severity": 0.45
+        },
+        {
+          "topic": null,
+          "id": "facebook:reel_promise_late",
+          "rule": "reel_promise_late",
+          "platform": "facebook",
+          "issue": "reel_promise_late",
+          "title": "الوعد متأخر في الريل",
+          "reason": "أول 3 ثوانٍ (6 كلمة) بلا رقم ولا سؤال ولا تحذير.",
+          "suggestedFix": "افتح بالنتيجة أو الرقم في المشهد الأول، واترك الشرح لما بعده.",
+          "priority": "medium",
+          "expectedEffect": {
+            "scoreType": "hook",
+            "deltaPoints": 0,
+            "overallDelta": 0,
+            "basis": "model-counterfactual",
+            "note": "no change under the current model"
+          },
+          "confidence": 0.35,
+          "basis": "heuristic",
+          "evidence": [
+            {
+              "feature": "reel.firstSecondsHasPromise",
+              "value": false,
+              "target": true,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.7
+        },
+        {
+          "topic": null,
+          "id": "facebook:redundancy",
+          "rule": "redundancy",
+          "platform": "facebook",
+          "issue": "redundancy",
+          "title": "تكرار كثير",
+          "reason": "46% من الكلمات المضمونية مكررة (أكثرها 16 مرات).",
+          "suggestedFix": "احذف التكرار أو استبدل بعضه بمرادف أو بضمير.",
+          "priority": "low",
+          "expectedEffect": null,
+          "confidence": 0.6,
+          "basis": "derived",
+          "evidence": [
+            {
+              "feature": "text.redundancy",
+              "value": 0.46,
+              "target": 0.3,
+              "provenance": "derived"
+            }
+          ],
+          "severity": 0.25
+        }
+      ],
+      "accountEvidence": [],
+      "notes": []
+    }
+  },
+  "recommendations": [
+    {
+      "topic": null,
+      "id": "fb_show_more",
+      "rule": "fb_show_more",
+      "platform": "facebook",
+      "issue": "fb_show_more",
+      "title": "السطور الأولى لا تدفع إلى «عرض المزيد»",
+      "reason": "منشور من 3133 حرفًا يطويه فيسبوك؛ يتوقع النظام النقر على «عرض المزيد» (بطاقة نظام الخلاصة)، وسطوره الأولى ضعيفة الجذب (0.29).",
+      "suggestedFix": "ضع الادعاء والسبب للقراءة في السطرين الأولين، واترك التفاصيل لما بعد الطي.",
+      "priority": "high",
+      "expectedEffect": {
+        "scoreType": "retention",
+        "deltaPoints": 8,
+        "overallDelta": 6,
+        "basis": "model-counterfactual"
+      },
+      "confidence": 0.6,
+      "basis": "official",
+      "evidence": [
+        {
+          "feature": "facebook.show_more_potential",
+          "value": 0.29,
+          "target": 0.5,
+          "provenance": "heuristic"
+        },
+        {
+          "feature": "text.chars",
+          "value": 3133,
+          "provenance": "derived"
+        }
+      ],
+      "severity": 0.45,
+      "platforms": [
+        "facebook"
+      ],
+      "effects": {
+        "facebook": {
+          "scoreType": "retention",
+          "deltaPoints": 8,
+          "overallDelta": 6,
+          "basis": "model-counterfactual"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "fb_no_question",
+      "rule": "fb_no_question",
+      "platform": "facebook",
+      "issue": "fb_no_question",
+      "title": "لا سؤال يفتح النقاش",
+      "reason": "قابلية النقاش 0.13 ولا يوجد سؤال للقارئ. (تقدير قاعدي: السؤال وحده لا يضمن وصولًا أكبر.)",
+      "suggestedFix": "اختم بسؤال عن تجربة القارئ نفسه، لا بسؤال عام.",
+      "priority": "medium",
+      "expectedEffect": {
+        "scoreType": "conversation",
+        "deltaPoints": 38,
+        "overallDelta": 15,
+        "basis": "model-counterfactual"
+      },
+      "confidence": 0.35,
+      "basis": "heuristic",
+      "evidence": [
+        {
+          "feature": "text.question",
+          "value": false,
+          "target": true,
+          "provenance": "derived"
+        },
+        {
+          "feature": "facebook.conversation_potential",
+          "value": 0.13,
+          "provenance": "heuristic"
+        }
+      ],
+      "severity": 0.3,
+      "platforms": [
+        "facebook"
+      ],
+      "effects": {
+        "facebook": {
+          "scoreType": "conversation",
+          "deltaPoints": 38,
+          "overallDelta": 15,
+          "basis": "model-counterfactual"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "missing_cta",
+      "rule": "missing_cta",
+      "platform": "all",
+      "issue": "missing_cta",
+      "title": "لا توجد دعوة في النهاية",
+      "reason": "المحتوى مرجعي (قابلية الحفظ أعلى من التعليق) ولا يذكّر القارئ بالحفظ.",
+      "suggestedFix": "اختم بدعوة حفظ مرتبطة بالاستخدام («احفظه لتعود إليه قبل…»).",
+      "priority": "medium",
+      "expectedEffect": {
+        "scoreType": "conversation",
+        "deltaPoints": 4,
+        "overallDelta": 2,
+        "basis": "model-counterfactual"
+      },
+      "confidence": 0.35,
+      "basis": "heuristic",
+      "evidence": [
+        {
+          "feature": "cta.present",
+          "value": false,
+          "target": true,
+          "provenance": "derived"
+        },
+        {
+          "feature": "audience.saveWorthiness",
+          "value": 0.54,
+          "provenance": "heuristic"
+        }
+      ],
+      "severity": 0.45,
+      "platforms": [
+        "x",
+        "instagram",
+        "facebook"
+      ],
+      "effects": {
+        "x": {
+          "scoreType": "conversation",
+          "deltaPoints": 4,
+          "overallDelta": 2,
+          "basis": "model-counterfactual"
+        },
+        "instagram": {
+          "scoreType": "conversation",
+          "deltaPoints": 9,
+          "overallDelta": 0,
+          "basis": "model-counterfactual",
+          "note": "no change under the current model"
+        },
+        "facebook": {
+          "scoreType": "conversation",
+          "deltaPoints": 5,
+          "overallDelta": 2,
+          "basis": "model-counterfactual"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "weak_opening:opening",
+      "rule": "weak_opening",
+      "platform": "all",
+      "issue": "weak_opening",
+      "title": "افتتاحية ضعيفة",
+      "reason": "قوة الافتتاحية 0.17 من 1؛ أضعف أجزائها: الفضول، التحديد.",
+      "suggestedFix": "لا يوجد سؤال ولا فجوة فضول في الافتتاحية: اذكر النتيجة واترك السبب للشرائح التالية. الافتتاحية بلا رقم أو تفصيل محدد: ضع الرقم أو المدة أو المثال في السطر الأول.",
+      "priority": "medium",
+      "expectedEffect": {
+        "scoreType": "hook",
+        "deltaPoints": 18,
+        "overallDelta": 1,
+        "basis": "model-counterfactual"
+      },
+      "confidence": 0.35,
+      "basis": "heuristic",
+      "evidence": [
+        {
+          "feature": "hook.parts.curiosity",
+          "value": 0,
+          "target": 0.8,
+          "provenance": "heuristic"
+        },
+        {
+          "feature": "hook.parts.specificity",
+          "value": 0.2,
+          "target": 0.8,
+          "provenance": "heuristic"
+        }
+      ],
+      "rewrite": "Rewrite the opening: improve curiosity and specificity; keep it under 12 words and keep the meaning.",
+      "severity": 0.98,
+      "platforms": [
+        "x",
+        "instagram",
+        "facebook"
+      ],
+      "effects": {
+        "x": {
+          "scoreType": "hook",
+          "deltaPoints": 18,
+          "overallDelta": 1,
+          "basis": "model-counterfactual"
+        },
+        "instagram": {
+          "scoreType": "hook",
+          "deltaPoints": 14,
+          "overallDelta": 9,
+          "basis": "model-counterfactual"
+        },
+        "facebook": {
+          "scoreType": "hook",
+          "deltaPoints": 28,
+          "overallDelta": 10,
+          "basis": "model-counterfactual"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "reel_promise_late",
+      "rule": "reel_promise_late",
+      "platform": "all",
+      "issue": "reel_promise_late",
+      "title": "الوعد متأخر في الريل",
+      "reason": "أول 3 ثوانٍ (6 كلمة) بلا رقم ولا سؤال ولا تحذير.",
+      "suggestedFix": "افتح بالنتيجة أو الرقم في المشهد الأول، واترك الشرح لما بعده.",
+      "priority": "medium",
+      "expectedEffect": {
+        "scoreType": "hook",
+        "deltaPoints": 0,
+        "overallDelta": 0,
+        "basis": "model-counterfactual",
+        "note": "no change under the current model"
+      },
+      "confidence": 0.35,
+      "basis": "heuristic",
+      "evidence": [
+        {
+          "feature": "reel.firstSecondsHasPromise",
+          "value": false,
+          "target": true,
+          "provenance": "derived"
+        }
+      ],
+      "severity": 0.7,
+      "platforms": [
+        "x",
+        "instagram",
+        "facebook"
+      ],
+      "effects": {
+        "x": {
+          "scoreType": "hook",
+          "deltaPoints": 0,
+          "overallDelta": 0,
+          "basis": "model-counterfactual",
+          "note": "no change under the current model"
+        },
+        "instagram": {
+          "scoreType": "hook",
+          "deltaPoints": 28,
+          "overallDelta": 5,
+          "basis": "model-counterfactual"
+        },
+        "facebook": {
+          "scoreType": "hook",
+          "deltaPoints": 0,
+          "overallDelta": 0,
+          "basis": "model-counterfactual",
+          "note": "no change under the current model"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "x_visual_text_missing",
+      "rule": "x_visual_text_missing",
+      "platform": "x",
+      "issue": "x_visual_text_missing",
+      "title": "لا نص مرافق على إكس",
+      "reason": "على إكس تُعرض الشرائح أو الفيديو كوسائط، والنص المرافق هو ما يقرؤه المستخدم أولًا.",
+      "suggestedFix": "اكتب نصًا مرافقًا يحمل وعد الغلاف في جملة قصيرة.",
+      "priority": "medium",
+      "expectedEffect": null,
+      "confidence": 0.6,
+      "basis": "derived",
+      "evidence": [
+        {
+          "feature": "caption",
+          "value": null,
+          "target": "text",
+          "provenance": "derived"
+        }
+      ],
+      "severity": 0.5,
+      "platforms": [
+        "x"
+      ],
+      "effects": {
+        "x": null
+      }
+    },
+    {
+      "topic": null,
+      "id": "reel_duration",
+      "rule": "reel_duration",
+      "platform": "all",
+      "issue": "reel_duration",
+      "title": "مدة الريل خارج المدى",
+      "reason": "المدة المقدّرة 315.3 ث.",
+      "suggestedFix": "اجعلها بين 10 و35 ثانية بحذف المشاهد الأضعف أو دمجها.",
+      "priority": "medium",
+      "expectedEffect": {
+        "scoreType": "retention",
+        "deltaPoints": 0,
+        "overallDelta": 0,
+        "basis": "model-counterfactual",
+        "note": "no change under the current model"
+      },
+      "confidence": 0.35,
+      "basis": "heuristic",
+      "evidence": [
+        {
+          "feature": "reel.durationSec",
+          "value": 315.3,
+          "target": "10–35",
+          "provenance": "derived"
+        }
+      ],
+      "severity": 0.45,
+      "platforms": [
+        "x",
+        "instagram",
+        "facebook"
+      ],
+      "effects": {
+        "x": {
+          "scoreType": "retention",
+          "deltaPoints": 0,
+          "overallDelta": 0,
+          "basis": "model-counterfactual",
+          "note": "no change under the current model"
+        },
+        "instagram": {
+          "scoreType": "retention",
+          "deltaPoints": 54,
+          "overallDelta": 21,
+          "basis": "model-counterfactual"
+        },
+        "facebook": {
+          "scoreType": "retention",
+          "deltaPoints": 20,
+          "overallDelta": 11,
+          "basis": "model-counterfactual"
+        }
+      }
+    },
+    {
+      "topic": null,
+      "id": "redundancy",
+      "rule": "redundancy",
+      "platform": "all",
+      "issue": "redundancy",
+      "title": "تكرار كثير",
+      "reason": "46% من الكلمات المضمونية مكررة (أكثرها 16 مرات).",
+      "suggestedFix": "احذف التكرار أو استبدل بعضه بمرادف أو بضمير.",
+      "priority": "low",
+      "expectedEffect": null,
+      "confidence": 0.6,
+      "basis": "derived",
+      "evidence": [
+        {
+          "feature": "text.redundancy",
+          "value": 0.46,
+          "target": 0.3,
+          "provenance": "derived"
+        }
+      ],
+      "severity": 0.25,
+      "platforms": [
+        "x",
+        "instagram",
+        "facebook"
+      ],
+      "effects": {
+        "x": null,
+        "instagram": null,
+        "facebook": null
+      }
+    }
+  ],
+  "perSlide": null,
+  "semantic": {
+    "source": "local-lexicon",
+    "provenance": "heuristic"
+  },
+  "disclaimer": "لا تدّعي بصيرة الوصول إلى خوارزميات الترتيب الخاصة بالمنصات. الدرجات تقديرات مبنية على معلومات المنصات المنشورة وخصائص المحتوى وأداء حسابك السابق. درجة ملاءمة المنصة مقياس نسبي للتوافق وفق النموذج الحالي، وليست احتمال وصول أو انتشار."
+}

@@ -1,0 +1,10 @@
+{
+  "screenStrings": 48,
+  "captions": 41,
+  "captionTextMatchesNarration": true,
+  "maxCps": 14.819205690575005,
+  "font": "Cairo",
+  "captionDirection": "RTL",
+  "findings": [],
+  "limits": "Source-text checks; visual Arabic shaping separately inspected in Chromium stills. This does not measure all screen text boxes."
+}

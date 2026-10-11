@@ -1,0 +1,210 @@
+{
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "width": 1080,
+        "height": 1920,
+        "coded_width": 1080,
+        "coded_height": 1920,
+        "closed_captions": 0,
+        "film_grain": 0,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "9:16",
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "chroma_location": "center",
+        "field_order": "progressive",
+        "refs": 1,
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1019904,
+        "duration": "66.400000",
+        "bit_rate": "1198232",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1992",
+        "extradata_size": 51,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]",
+          "encoder": "Lavc61.19.101 libx264"
+        },
+        "side_data_list": [
+          {
+            "side_data_type": "ICC Profile"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/48000",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 3187680,
+        "duration": "66.410000",
+        "bit_rate": "192483",
+        "nb_frames": "3114",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/workspace/arabic-design/reels/schopenhauer-pessimism/output/final_reel.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "66.410000",
+      "size": "11618021",
+      "bit_rate": "1399550",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf61.7.103",
+        "comment": "Made with Remotion 4.0.534"
+      }
+    }
+  },
+  "decodeExit": 0,
+  "decodeErrors": "",
+  "black": [],
+  "freezes": [],
+  "silences": [],
+  "integratedLUFS": -16.1,
+  "truePeakDBTP": -5.2,
+  "bytes": 11618021,
+  "sha256": "a8a0677afab9e433b685acc8188019f0b501b8b89eb503d5c549e7fc10deb951",
+  "audioSync": [
+    {
+      "at": 1,
+      "offsetMs": 0.0,
+      "correlation": 0.9997333288192749
+    },
+    {
+      "at": 9,
+      "offsetMs": 0.0,
+      "correlation": 0.9997522830963135
+    },
+    {
+      "at": 17,
+      "offsetMs": 0.0,
+      "correlation": 0.9999441504478455
+    },
+    {
+      "at": 27,
+      "offsetMs": 0.0,
+      "correlation": 0.9999347925186157
+    },
+    {
+      "at": 35,
+      "offsetMs": 0.0,
+      "correlation": 0.9998357892036438
+    },
+    {
+      "at": 45,
+      "offsetMs": 0.0,
+      "correlation": 0.9999006390571594
+    },
+    {
+      "at": 51,
+      "offsetMs": 0.0,
+      "correlation": 0.9999442100524902
+    },
+    {
+      "at": 60,
+      "offsetMs": 0.0,
+      "correlation": 0.9998352527618408
+    },
+    {
+      "at": 64,
+      "offsetMs": 0.0,
+      "correlation": 0.9998844265937805
+    }
+  ],
+  "captions": {
+    "count": 41,
+    "maxCharactersPerSecond": 14.819205690575005,
+    "minSeconds": 0.3399999999999963
+  }
+}
