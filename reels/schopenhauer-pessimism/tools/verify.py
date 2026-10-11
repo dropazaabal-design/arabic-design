@@ -5,7 +5,7 @@ def run(*a):return subprocess.run(a,capture_output=True,text=True)
 probe=json.loads(run('ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)).stdout)
 dec=run('ffmpeg','-v','error','-i',str(p),'-f','null','-')
 scan=run('ffmpeg','-hide_banner','-i',str(p),'-vf','blackdetect=d=0.1:pix_th=.1,freezedetect=n=-55dB:d=3','-af','silencedetect=noise=-50dB:d=0.8,ebur128=peak=true','-f','null','-')
-(r/'output/qa-scan.log').write_text(scan.stderr)
+(r/'output/qa-scan.log').write_text('\n'.join(x.rstrip() for x in scan.stderr.splitlines())+'\n')
 last=scan.stderr.rsplit('Summary:',1)[-1]
 LUFS=re.search(r'I:\s*([-\d.]+) LUFS',last);tp=re.search(r'Peak:\s*([-\d.]+) dBFS',last)
 res=dict(probe=probe,decodeExit=dec.returncode,decodeErrors=dec.stderr,black=[l for l in scan.stderr.splitlines() if 'black_start:' in l],freezes=[l for l in scan.stderr.splitlines() if 'freeze_start:' in l],silences=[l for l in scan.stderr.splitlines() if 'silence_start:' in l],integratedLUFS=float(LUFS[1]) if LUFS else None,truePeakDBTP=float(tp[1]) if tp else None,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest())
