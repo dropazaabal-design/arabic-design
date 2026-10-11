@@ -1,0 +1,260 @@
+[
+  {
+    "at": 0,
+    "duration": 2.5,
+    "kind": "rub",
+    "amplitude": 0.13
+  },
+  {
+    "at": 0.1,
+    "duration": 2.3,
+    "kind": "motor",
+    "amplitude": 0.038
+  },
+  {
+    "at": 2.55,
+    "duration": 0.2,
+    "kind": "thud",
+    "amplitude": 0.15
+  },
+  {
+    "at": 4.1,
+    "duration": 0.25,
+    "kind": "click",
+    "amplitude": 0.11
+  },
+  {
+    "at": 6.05,
+    "duration": 0.18,
+    "kind": "click",
+    "amplitude": 0.09
+  },
+  {
+    "at": 6.0,
+    "duration": 2.7,
+    "kind": "motor",
+    "amplitude": 0.026
+  },
+  {
+    "at": 9.65,
+    "duration": 5.8,
+    "kind": "motor",
+    "amplitude": 0.027
+  },
+  {
+    "at": 12.4,
+    "duration": 0.23,
+    "kind": "squeak",
+    "amplitude": 0.065
+  },
+  {
+    "at": 14.8,
+    "duration": 0.22,
+    "kind": "click",
+    "amplitude": 0.11
+  },
+  {
+    "at": 16.9,
+    "duration": 1.45,
+    "kind": "motor",
+    "amplitude": 0.03
+  },
+  {
+    "at": 18.45,
+    "duration": 0.45,
+    "kind": "rub",
+    "amplitude": 0.08
+  },
+  {
+    "at": 19.08,
+    "duration": 0.2,
+    "kind": "thud",
+    "amplitude": 0.12
+  },
+  {
+    "at": 19.25,
+    "duration": 1.2,
+    "kind": "piano",
+    "amplitude": 0.035
+  },
+  {
+    "at": 23.6,
+    "duration": 0.13,
+    "kind": "click",
+    "amplitude": 0.033
+  },
+  {
+    "at": 24.0,
+    "duration": 0.13,
+    "kind": "click",
+    "amplitude": 0.033
+  },
+  {
+    "at": 24.4,
+    "duration": 0.13,
+    "kind": "click",
+    "amplitude": 0.033
+  },
+  {
+    "at": 24.8,
+    "duration": 0.13,
+    "kind": "click",
+    "amplitude": 0.033
+  },
+  {
+    "at": 25.2,
+    "duration": 0.13,
+    "kind": "click",
+    "amplitude": 0.033
+  },
+  {
+    "at": 29.85,
+    "duration": 0.19,
+    "kind": "click",
+    "amplitude": 0.12
+  },
+  {
+    "at": 31.7,
+    "duration": 1.5,
+    "kind": "motor",
+    "amplitude": 0.04
+  },
+  {
+    "at": 33.5,
+    "duration": 0.5,
+    "kind": "thud",
+    "amplitude": 0.17
+  },
+  {
+    "at": 35.2,
+    "duration": 0.6,
+    "kind": "thud",
+    "amplitude": 0.22
+  },
+  {
+    "at": 35.4,
+    "duration": 0.45,
+    "kind": "squeak",
+    "amplitude": 0.045
+  },
+  {
+    "at": 37.2,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 38.32,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 39.44,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 40.559999999999995,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 41.67999999999999,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 42.79999999999999,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 43.91999999999999,
+    "duration": 0.15,
+    "kind": "click",
+    "amplitude": 0.035
+  },
+  {
+    "at": 45.75,
+    "duration": 0.2,
+    "kind": "click",
+    "amplitude": 0.07
+  },
+  {
+    "at": 46.35,
+    "duration": 0.2,
+    "kind": "click",
+    "amplitude": 0.07
+  },
+  {
+    "at": 47.5,
+    "duration": 0.8,
+    "kind": "motor",
+    "amplitude": 0.027
+  },
+  {
+    "at": 49.15,
+    "duration": 1.8,
+    "kind": "piano",
+    "amplitude": 0.03
+  },
+  {
+    "at": 51.2,
+    "duration": 1.8,
+    "kind": "piano",
+    "amplitude": 0.03
+  },
+  {
+    "at": 53.5,
+    "duration": 1.8,
+    "kind": "piano",
+    "amplitude": 0.03
+  },
+  {
+    "at": 56.4,
+    "duration": 1.8,
+    "kind": "piano",
+    "amplitude": 0.03
+  },
+  {
+    "at": 52,
+    "duration": 3.7,
+    "kind": "rub",
+    "amplitude": 0.027
+  },
+  {
+    "at": 59.8,
+    "duration": 2.7,
+    "kind": "rub",
+    "amplitude": 0.115
+  },
+  {
+    "at": 61.0,
+    "duration": 0.3,
+    "kind": "squeak",
+    "amplitude": 0.09
+  },
+  {
+    "at": 63.35,
+    "duration": 1.15,
+    "kind": "motor",
+    "amplitude": 0.06
+  },
+  {
+    "at": 64.28,
+    "duration": 0.2,
+    "kind": "thud",
+    "amplitude": 0.105
+  },
+  {
+    "at": 65.95,
+    "duration": 0.17,
+    "kind": "squeak",
+    "amplitude": 0.055
+  }
+]

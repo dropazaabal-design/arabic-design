@@ -1,0 +1,788 @@
+[
+  {
+    "text": "قطعة",
+    "type": "word",
+    "start": 0.7,
+    "end": 1.153
+  },
+  {
+    "text": "واحدة...",
+    "type": "word",
+    "start": 1.269,
+    "end": 1.815
+  },
+  {
+    "text": "وبعدها",
+    "type": "word",
+    "start": 1.896,
+    "end": 2.395
+  },
+  {
+    "text": "سأرتاح.",
+    "type": "word",
+    "start": 2.465,
+    "end": 3.092
+  },
+  {
+    "text": "هكذا",
+    "type": "word",
+    "start": 3.831,
+    "end": 4.237
+  },
+  {
+    "text": "تبدأ",
+    "type": "word",
+    "start": 4.295,
+    "end": 4.551
+  },
+  {
+    "text": "الجولة.",
+    "type": "word",
+    "start": 4.586,
+    "end": 5.12
+  },
+  {
+    "text": "ليست",
+    "type": "word",
+    "start": 5.282,
+    "end": 5.619
+  },
+  {
+    "text": "البطة",
+    "type": "word",
+    "start": 5.665,
+    "end": 6.037
+  },
+  {
+    "text": "هي",
+    "type": "word",
+    "start": 6.107,
+    "end": 6.211
+  },
+  {
+    "text": "التي",
+    "type": "word",
+    "start": 6.234,
+    "end": 6.455
+  },
+  {
+    "text": "تسحبه؛",
+    "type": "word",
+    "start": 6.501,
+    "end": 7.012
+  },
+  {
+    "text": "إنه",
+    "type": "word",
+    "start": 7.163,
+    "end": 7.477
+  },
+  {
+    "text": "وعد",
+    "type": "word",
+    "start": 7.523,
+    "end": 7.744
+  },
+  {
+    "text": "الراحة",
+    "type": "word",
+    "start": 7.79,
+    "end": 8.196
+  },
+  {
+    "text": "حين",
+    "type": "word",
+    "start": 8.278,
+    "end": 8.452
+  },
+  {
+    "text": "تصبح",
+    "type": "word",
+    "start": 8.521,
+    "end": 8.846
+  },
+  {
+    "text": "له.",
+    "type": "word",
+    "start": 8.928,
+    "end": 9.206
+  },
+  {
+    "text": "عند",
+    "type": "word",
+    "start": 9.404,
+    "end": 9.624
+  },
+  {
+    "text": "شُوبِنْهاوَر،",
+    "type": "word",
+    "start": 9.706,
+    "end": 10.367
+  },
+  {
+    "text": "تنطلق",
+    "type": "word",
+    "start": 10.483,
+    "end": 10.925
+  },
+  {
+    "text": "الرغبة",
+    "type": "word",
+    "start": 10.983,
+    "end": 11.331
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 11.412,
+    "end": 11.494
+  },
+  {
+    "text": "إحساس",
+    "type": "word",
+    "start": 11.517,
+    "end": 11.877
+  },
+  {
+    "text": "بالنقص.",
+    "type": "word",
+    "start": 11.981,
+    "end": 12.48
+  },
+  {
+    "text": "ما",
+    "type": "word",
+    "start": 12.597,
+    "end": 12.701
+  },
+  {
+    "text": "نريده",
+    "type": "word",
+    "start": 12.747,
+    "end": 13.119
+  },
+  {
+    "text": "بعيد،",
+    "type": "word",
+    "start": 13.235,
+    "end": 13.723
+  },
+  {
+    "text": "فنركض",
+    "type": "word",
+    "start": 13.804,
+    "end": 14.268
+  },
+  {
+    "text": "إليه",
+    "type": "word",
+    "start": 14.338,
+    "end": 14.582
+  },
+  {
+    "text": "كأن",
+    "type": "word",
+    "start": 14.686,
+    "end": 14.895
+  },
+  {
+    "text": "الراحة",
+    "type": "word",
+    "start": 14.93,
+    "end": 15.302
+  },
+  {
+    "text": "تختبئ",
+    "type": "word",
+    "start": 15.383,
+    "end": 15.778
+  },
+  {
+    "text": "داخله.",
+    "type": "word",
+    "start": 15.894,
+    "end": 16.428
+  },
+  {
+    "text": "أخيرًا!",
+    "type": "word",
+    "start": 17.037,
+    "end": 17.617
+  },
+  {
+    "text": "وصلت",
+    "type": "word",
+    "start": 17.722,
+    "end": 18.151
+  },
+  {
+    "text": "البطة.",
+    "type": "word",
+    "start": 18.198,
+    "end": 18.674
+  },
+  {
+    "text": "وسكن",
+    "type": "word",
+    "start": 18.778,
+    "end": 19.219
+  },
+  {
+    "text": "النقص",
+    "type": "word",
+    "start": 19.266,
+    "end": 19.544
+  },
+  {
+    "text": "لحظة.",
+    "type": "word",
+    "start": 19.637,
+    "end": 20.02
+  },
+  {
+    "text": "لكن",
+    "type": "word",
+    "start": 20.836,
+    "end": 21.173
+  },
+  {
+    "text": "الراحة",
+    "type": "word",
+    "start": 21.219,
+    "end": 21.579
+  },
+  {
+    "text": "لم",
+    "type": "word",
+    "start": 21.637,
+    "end": 21.73
+  },
+  {
+    "text": "تتحول",
+    "type": "word",
+    "start": 21.777,
+    "end": 22.264
+  },
+  {
+    "text": "إلى",
+    "type": "word",
+    "start": 22.311,
+    "end": 22.462
+  },
+  {
+    "text": "عيد",
+    "type": "word",
+    "start": 22.531,
+    "end": 22.763
+  },
+  {
+    "text": "دائم.",
+    "type": "word",
+    "start": 22.88,
+    "end": 23.297
+  },
+  {
+    "text": "اليد",
+    "type": "word",
+    "start": 24.414,
+    "end": 24.715
+  },
+  {
+    "text": "تقول:",
+    "type": "word",
+    "start": 24.808,
+    "end": 25.296
+  },
+  {
+    "text": "اكتفيت.",
+    "type": "word",
+    "start": 25.342,
+    "end": 26.109
+  },
+  {
+    "text": "والقدم",
+    "type": "word",
+    "start": 26.202,
+    "end": 26.678
+  },
+  {
+    "text": "تقول:",
+    "type": "word",
+    "start": 26.794,
+    "end": 27.27
+  },
+  {
+    "text": "جولة",
+    "type": "word",
+    "start": 27.386,
+    "end": 27.792
+  },
+  {
+    "text": "أخرى.",
+    "type": "word",
+    "start": 27.897,
+    "end": 28.326
+  },
+  {
+    "text": "حين",
+    "type": "word",
+    "start": 28.819,
+    "end": 29.074
+  },
+  {
+    "text": "لا",
+    "type": "word",
+    "start": 29.156,
+    "end": 29.214
+  },
+  {
+    "text": "يبقى",
+    "type": "word",
+    "start": 29.26,
+    "end": 29.527
+  },
+  {
+    "text": "شيء",
+    "type": "word",
+    "start": 29.585,
+    "end": 29.817
+  },
+  {
+    "text": "نطلبه،",
+    "type": "word",
+    "start": 29.934,
+    "end": 30.421
+  },
+  {
+    "text": "قد",
+    "type": "word",
+    "start": 30.526,
+    "end": 30.7
+  },
+  {
+    "text": "يأتي",
+    "type": "word",
+    "start": 30.781,
+    "end": 30.99
+  },
+  {
+    "text": "الملل.",
+    "type": "word",
+    "start": 31.013,
+    "end": 31.466
+  },
+  {
+    "text": "فتفتح",
+    "type": "word",
+    "start": 31.582,
+    "end": 32.047
+  },
+  {
+    "text": "الأمنية",
+    "type": "word",
+    "start": 32.105,
+    "end": 32.511
+  },
+  {
+    "text": "التالية",
+    "type": "word",
+    "start": 32.569,
+    "end": 33.08
+  },
+  {
+    "text": "بابها...",
+    "type": "word",
+    "start": 33.196,
+    "end": 33.742
+  },
+  {
+    "text": "وتحتاج",
+    "type": "word",
+    "start": 33.823,
+    "end": 34.369
+  },
+  {
+    "text": "إلى",
+    "type": "word",
+    "start": 34.461,
+    "end": 34.589
+  },
+  {
+    "text": "ذراعين",
+    "type": "word",
+    "start": 34.67,
+    "end": 35.123
+  },
+  {
+    "text": "إضافيتين.",
+    "type": "word",
+    "start": 35.204,
+    "end": 36.098
+  },
+  {
+    "text": "هنا",
+    "type": "word",
+    "start": 36.915,
+    "end": 37.228
+  },
+  {
+    "text": "بندوله:",
+    "type": "word",
+    "start": 37.298,
+    "end": 37.948
+  },
+  {
+    "text": "ألم",
+    "type": "word",
+    "start": 38.052,
+    "end": 38.331
+  },
+  {
+    "text": "السعي",
+    "type": "word",
+    "start": 38.389,
+    "end": 38.702
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 38.772,
+    "end": 38.853
+  },
+  {
+    "text": "جهة،",
+    "type": "word",
+    "start": 38.923,
+    "end": 39.237
+  },
+  {
+    "text": "والملل",
+    "type": "word",
+    "start": 39.283,
+    "end": 39.736
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 39.817,
+    "end": 39.91
+  },
+  {
+    "text": "جهة",
+    "type": "word",
+    "start": 39.968,
+    "end": 40.235
+  },
+  {
+    "text": "أخرى.",
+    "type": "word",
+    "start": 40.34,
+    "end": 40.734
+  },
+  {
+    "text": "هذه",
+    "type": "word",
+    "start": 40.85,
+    "end": 41.187
+  },
+  {
+    "text": "رؤيته",
+    "type": "word",
+    "start": 41.28,
+    "end": 41.663
+  },
+  {
+    "text": "الفلسفية؛",
+    "type": "word",
+    "start": 41.721,
+    "end": 42.441
+  },
+  {
+    "text": "ليست",
+    "type": "word",
+    "start": 42.557,
+    "end": 42.905
+  },
+  {
+    "text": "قانونًا",
+    "type": "word",
+    "start": 42.975,
+    "end": 43.381
+  },
+  {
+    "text": "لكل",
+    "type": "word",
+    "start": 43.416,
+    "end": 43.695
+  },
+  {
+    "text": "شعور.",
+    "type": "word",
+    "start": 43.788,
+    "end": 44.252
+  },
+  {
+    "text": "وحين",
+    "type": "word",
+    "start": 44.726,
+    "end": 45.051
+  },
+  {
+    "text": "حاول",
+    "type": "word",
+    "start": 45.133,
+    "end": 45.388
+  },
+  {
+    "text": "الهرب",
+    "type": "word",
+    "start": 45.423,
+    "end": 45.702
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 45.794,
+    "end": 45.887
+  },
+  {
+    "text": "الآلة،",
+    "type": "word",
+    "start": 45.945,
+    "end": 46.375
+  },
+  {
+    "text": "وجد",
+    "type": "word",
+    "start": 46.433,
+    "end": 46.758
+  },
+  {
+    "text": "طرف",
+    "type": "word",
+    "start": 46.851,
+    "end": 47.072
+  },
+  {
+    "text": "الخيط",
+    "type": "word",
+    "start": 47.13,
+    "end": 47.408
+  },
+  {
+    "text": "في",
+    "type": "word",
+    "start": 47.524,
+    "end": 47.606
+  },
+  {
+    "text": "يده.",
+    "type": "word",
+    "start": 47.652,
+    "end": 48.024
+  },
+  {
+    "text": "ثم",
+    "type": "word",
+    "start": 48.698,
+    "end": 48.907
+  },
+  {
+    "text": "رأى",
+    "type": "word",
+    "start": 48.976,
+    "end": 49.127
+  },
+  {
+    "text": "الظل.",
+    "type": "word",
+    "start": 49.15,
+    "end": 49.592
+  },
+  {
+    "text": "للحظات،",
+    "type": "word",
+    "start": 49.708,
+    "end": 50.428
+  },
+  {
+    "text": "لم",
+    "type": "word",
+    "start": 50.497,
+    "end": 50.648
+  },
+  {
+    "text": "يسأل:",
+    "type": "word",
+    "start": 50.706,
+    "end": 51.182
+  },
+  {
+    "text": "كيف",
+    "type": "word",
+    "start": 51.298,
+    "end": 51.554
+  },
+  {
+    "text": "أملكه؟",
+    "type": "word",
+    "start": 51.623,
+    "end": 52.099
+  },
+  {
+    "text": "بل",
+    "type": "word",
+    "start": 52.216,
+    "end": 52.378
+  },
+  {
+    "text": "انتبه",
+    "type": "word",
+    "start": 52.413,
+    "end": 52.796
+  },
+  {
+    "text": "إلى",
+    "type": "word",
+    "start": 52.877,
+    "end": 53.005
+  },
+  {
+    "text": "شكله.",
+    "type": "word",
+    "start": 53.086,
+    "end": 53.574
+  },
+  {
+    "text": "والتأمل",
+    "type": "word",
+    "start": 53.748,
+    "end": 54.305
+  },
+  {
+    "text": "الفني",
+    "type": "word",
+    "start": 54.352,
+    "end": 54.723
+  },
+  {
+    "text": "في",
+    "type": "word",
+    "start": 54.839,
+    "end": 54.909
+  },
+  {
+    "text": "رؤيته",
+    "type": "word",
+    "start": 54.967,
+    "end": 55.408
+  },
+  {
+    "text": "فسحة",
+    "type": "word",
+    "start": 55.524,
+    "end": 56.0
+  },
+  {
+    "text": "مؤقتة",
+    "type": "word",
+    "start": 56.116,
+    "end": 56.651
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 56.767,
+    "end": 56.871
+  },
+  {
+    "text": "المطالبة،",
+    "type": "word",
+    "start": 56.918,
+    "end": 57.533
+  },
+  {
+    "text": "لا",
+    "type": "word",
+    "start": 57.614,
+    "end": 57.742
+  },
+  {
+    "text": "نهاية",
+    "type": "word",
+    "start": 57.788,
+    "end": 58.171
+  },
+  {
+    "text": "للرغبة.",
+    "type": "word",
+    "start": 58.253,
+    "end": 58.787
+  },
+  {
+    "text": "جميل...",
+    "type": "word",
+    "start": 59.396,
+    "end": 59.988
+  },
+  {
+    "text": "لكن",
+    "type": "word",
+    "start": 60.104,
+    "end": 60.417
+  },
+  {
+    "text": "البطة",
+    "type": "word",
+    "start": 60.475,
+    "end": 60.824
+  },
+  {
+    "text": "الكبيرة",
+    "type": "word",
+    "start": 60.87,
+    "end": 61.358
+  },
+  {
+    "text": "لا",
+    "type": "word",
+    "start": 61.439,
+    "end": 61.509
+  },
+  {
+    "text": "تمر",
+    "type": "word",
+    "start": 61.567,
+    "end": 61.845
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 61.938,
+    "end": 62.043
+  },
+  {
+    "text": "الباب.",
+    "type": "word",
+    "start": 62.101,
+    "end": 62.554
+  },
+  {
+    "text": "وربما...",
+    "type": "word",
+    "start": 63.27,
+    "end": 64.013
+  },
+  {
+    "text": "جولة",
+    "type": "word",
+    "start": 64.129,
+    "end": 64.512
+  },
+  {
+    "text": "أخيرة؟",
+    "type": "word",
+    "start": 64.628,
+    "end": 65.371
+  }
+]
