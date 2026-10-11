@@ -1,0 +1,23 @@
+{
+  "name": "power-of-no",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Reel output/final_reel.mp4 --audio-codec=aac --audio-bitrate=192k",
+    "preview": "remotion render src/index.ts Reel output/preview.mp4 --scale=0.5 --crf=28 --audio-codec=aac --audio-bitrate=128k",
+    "typecheck": "tsc --noEmit",
+    "assets": "mkdir -p public && python3 tools/make-output.py && cp output/foley.wav public/foley.wav",
+    "cover": "remotion still src/index.ts Cover publish/cover-1080x1920.png"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "4.0.534",
+    "typescript": "^7.0.2"
+  }
+}
