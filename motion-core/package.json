@@ -1,0 +1,11 @@
+{
+ "name":"@baseera/motion-core","version":"0.1.0","private":true,"type":"module",
+ "scripts":{"build:core":"tsc -p tsconfig.core.json",
+ "test":"npm run build:core && node --test tests/*.test.mjs","typecheck":"tsc -p tsconfig.json"},
+ "peerDependencies":{"react":"^19.0.0","remotion":"4.0.534",
+  "@remotion/paths":"4.0.534","@remotion/captions":"4.0.534",
+  "@remotion/gsap":"4.0.534","gsap":"^3.13.0"},
+ "devDependencies":{"typescript":"^5.9.3","@types/react":"^19.2.2",
+  "react":"19.2.0","remotion":"4.0.534","@remotion/paths":"4.0.534",
+  "@remotion/captions":"4.0.534","@remotion/gsap":"4.0.534","gsap":"^3.13.0"}
+}
