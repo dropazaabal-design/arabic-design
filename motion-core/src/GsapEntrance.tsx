@@ -1,6 +1,6 @@
 import React from 'react';
 import {useGsapTimeline} from '@remotion/gsap';
-import type {MotionEvent} from './core.js';
+import type {MotionEvent} from './core';
 /** Paused GSAP timeline, sought by Remotion. No playback callbacks or wall-clock timers. */
 export const GsapEntrance:React.FC<{event:MotionEvent;fps:number;children:React.ReactNode}>=({event,fps,children})=>{
  const from=event.startFrame/fps;
