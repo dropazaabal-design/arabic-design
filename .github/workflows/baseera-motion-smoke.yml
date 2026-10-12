@@ -20,19 +20,29 @@ jobs:
           node-version: 22
       - name: Install pinned Remotion dependencies
         run: npm install --no-audit --no-fund
+      - name: Install FFmpeg and ffprobe
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffmpeg -version | head -n 1
+          ffprobe -version | head -n 1
       - name: Semantic timing unit tests
         run: npm test
       - name: TSX typecheck
         run: npm run typecheck
       - name: Render voice-aligned demonstration
+        id: render
         run: npm run smoke:render
-      - name: Verify audio/video container
+      - name: Verify audio/video container and decode
         run: |
           ffprobe -v error -show_entries stream=codec_type,codec_name,width,height -show_entries format=duration -of json demo/output/smoke.mp4
-          ffmpeg -v error -i demo/output/smoke.mp4 -f null -
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 demo/output/smoke.mp4 | grep -q '^h264$'
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 demo/output/smoke.mp4 | grep -q '^aac$'
+          ffmpeg -v error -xerror -i demo/output/smoke.mp4 -f null -
       - uses: actions/upload-artifact@v4
-        if: success()
+        if: ${{ always() && steps.render.outcome == 'success' }}
         with:
           name: baseera-motion-ac-smoke
           path: motion-core/demo/output/smoke.mp4
+          if-no-files-found: error
           retention-days: 7
