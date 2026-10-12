@@ -1,7 +1,7 @@
 import React from 'react';
 import type {Caption} from '@remotion/captions';
 import {useCurrentFrame} from 'remotion';
-import type {AlignedWord} from './core.js';
+import type {AlignedWord} from './core';
 /** Preserve word boundaries and whitespace for @remotion/captions tools. */
 export const toRemotionCaptions=(words:readonly AlignedWord[]):Caption[]=>words.map(w=>({
  text:' '+w.text,startMs:w.startMs,endMs:w.endMs,
