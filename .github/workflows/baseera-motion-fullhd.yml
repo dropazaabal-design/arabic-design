@@ -1,0 +1,57 @@
+name: Baseera Motion Full HD validation
+on:
+  pull_request:
+    paths:
+      - 'motion-core/**'
+      - '.github/workflows/baseera-motion-fullhd.yml'
+  workflow_dispatch:
+
+jobs:
+  fullhd-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: motion-core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install FFmpeg
+        run: |
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+      - name: Timing tests and TSX typecheck
+        run: |
+          npm test
+          npm run typecheck
+      - name: Render full-resolution with original narration
+        id: render
+        run: npm run smoke:render:full
+      - name: Check 1080x1920 H.264, AAC, fps, duration, frames and decode
+        run: |
+          ffprobe -v error -show_streams -show_format -of json demo/output/fullhd.mp4 > demo/output/metadata.json
+          node demo/check-media.mjs demo/output/metadata.json
+          ffmpeg -v error -xerror -i demo/output/fullhd.mp4 -f null -
+      - name: Generate visual contact sheet from decoded output
+        run: |
+          ffmpeg -hide_banner -loglevel error -i demo/output/fullhd.mp4 \
+            -vf "fps=1/2,scale=360:640:flags=lanczos,tile=3x2" \
+            -frames:v 1 -update 1 demo/output/contact-sheet.png
+          test -s demo/output/contact-sheet.png
+      - name: Upload full-resolution MP4, contact sheet and metadata
+        if: ${{ always() && steps.render.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: baseera-motion-ac-fullhd-review
+          path: |
+            motion-core/demo/output/fullhd.mp4
+            motion-core/demo/output/contact-sheet.png
+            motion-core/demo/output/metadata.json
+          if-no-files-found: error
+          retention-days: 7
