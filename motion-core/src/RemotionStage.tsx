@@ -1,8 +1,8 @@
 import React from 'react';
 import {evolvePath} from '@remotion/paths';
 import {useCurrentFrame} from 'remotion';
-import {sampleActor,sampleStroke} from './core.js';
-import type {MotionPlan} from './core.js';
+import {sampleActor,sampleStroke} from './core';
+import type {MotionPlan} from './core';
 
 /** Faceless geometric actor; replace its SVG rig without changing the semantic plan. */
 export const SemanticCharacter:React.FC<{
