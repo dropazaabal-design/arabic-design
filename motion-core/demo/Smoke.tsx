@@ -1,11 +1,11 @@
 import React from 'react';
 import {AbsoluteFill, Audio, staticFile} from 'remotion';
 import alignedWords from '../../reels/clear-thinking-pause/src/words.json';
-import {compileMotionPlan, fromSegmentedWhisperWords} from '../src/core.js';
-import type {SemanticBeat} from '../src/core.js';
-import {SemanticCharacter, SemanticPath} from '../src/RemotionStage.js';
-import {ArabicWordCaption} from '../src/Captions.js';
-import {GsapEntrance} from '../src/GsapEntrance.js';
+import {compileMotionPlan, fromSegmentedWhisperWords} from '../src/core';
+import type {SemanticBeat} from '../src/core';
+import {SemanticCharacter, SemanticPath} from '../src/RemotionStage';
+import {ArabicWordCaption} from '../src/Captions';
+import {GsapEntrance} from '../src/GsapEntrance';
 
 export const FPS = 30;
 export const DURATION_FRAMES = 330; // 11 seconds of existing voice
