@@ -42,11 +42,14 @@ const array=(value:unknown,name:string):unknown[]=>{
  return value as unknown[];
 };
 const str=(value:unknown,name:string):string=>{
- if(typeof value!=='string'||!value.trim())fail(name+' must be nonempty text');
- return value.trim();
+ if(typeof value!=='string')return fail(name+' must be nonempty text');
+ const trimmed=value.trim();
+ if(!trimmed)return fail(name+' must be nonempty text');
+ return trimmed;
 };
 const num=(value:unknown,name:string):number=>{
- if(typeof value!=='number'||!Number.isFinite(value))fail(name+' must be finite');
+ if(typeof value!=='number'||!Number.isFinite(value))
+  return fail(name+' must be finite');
  return value;
 };
 const cleanWord=(value:string)=>value.normalize('NFKC')
@@ -84,7 +87,7 @@ export function prepareStoryboard(
  if(!words.length)fail('aligned words are required');
  const word=(id:string, expected?:string):AlignedWord=>{
    const found=wordMap.get(id);
-   if(!found)fail('unknown word anchor '+id);
+   if(!found)return fail('unknown word anchor '+id);
    if(expected!==undefined&&cleanWord(found.text)!==cleanWord(expected))
     fail('word text mismatch for '+id+': expected '+expected+', found '+found.text);
    return found;
