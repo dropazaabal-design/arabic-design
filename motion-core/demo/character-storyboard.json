@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "language": "ar",
+  "description": "رجل يتردد أمام الرد على رسالة مزعجة؛ تصل شخصية ثانية، وتتدرج اللقطات من التحذير إلى لحظة الاختيار.",
+  "actors": [
+    {
+      "id": "hero",
+      "role": "صاحب الرسالة المتردد"
+    },
+    {
+      "id": "other",
+      "role": "الشخص الآخر الذي يلاحظ التوتر"
+    }
+  ],
+  "cues": [
+    {
+      "id": "hero-enter",
+      "wordId": "s01:0",
+      "expectedWord": "لا",
+      "actorId": "hero",
+      "direction": "enter",
+      "distance": 200,
+      "durationMs": 700,
+      "visualReason": "حركة دخول لتأسيس الشخصية قبل التحذير"
+    },
+    {
+      "id": "hero-hesitate",
+      "wordId": "s01:3",
+      "expectedWord": "غاضب.",
+      "actorId": "hero",
+      "direction": "hesitate",
+      "durationMs": 800,
+      "visualReason": "تردد بالجسد يرافق الغضب بدل نص ساكن"
+    },
+    {
+      "id": "other-enter",
+      "wordId": "s02:0",
+      "expectedWord": "وصلتك",
+      "actorId": "other",
+      "direction": "enter",
+      "distance": -135,
+      "durationMs": 700,
+      "visualReason": "ظهور الطرف الثاني مع بداية وصول الرسالة"
+    },
+    {
+      "id": "other-notice",
+      "wordId": "s02:2",
+      "expectedWord": "ضايقتك.",
+      "actorId": "other",
+      "direction": "notice",
+      "durationMs": 550,
+      "visualReason": "التفاتة تجسّد ملاحظة الانزعاج"
+    },
+    {
+      "id": "hero-explain",
+      "wordId": "s02:3",
+      "expectedWord": "فتحت",
+      "actorId": "hero",
+      "direction": "explain",
+      "durationMs": 750,
+      "visualReason": "حركة يد مرتبطة بالفعل الذي يشرحه الراوي"
+    },
+    {
+      "id": "other-hesitate",
+      "wordId": "s02:5",
+      "expectedWord": "وكتبت",
+      "actorId": "other",
+      "direction": "hesitate",
+      "durationMs": 650,
+      "visualReason": "وقفة قبل الاندفاع في كتابة الرد"
+    },
+    {
+      "id": "hero-emphasis",
+      "wordId": "s02:9",
+      "expectedWord": "ضغطة",
+      "actorId": "hero",
+      "direction": "emphasize",
+      "durationMs": 550,
+      "visualReason": "تأكيد جسدي صغير عند لحظة الضغط"
+    }
+  ],
+  "shots": [
+    {
+      "id": "opening",
+      "fromWordId": "s01:0",
+      "toWordId": "s01:3",
+      "camera": "wide",
+      "focusActorId": "hero",
+      "visualReason": "المشهد الواسع يمنح الشخصية مساحة للحركة"
+    },
+    {
+      "id": "arrival",
+      "fromWordId": "s02:0",
+      "toWordId": "s02:2",
+      "camera": "medium",
+      "focusActorId": "other",
+      "screenText": "وصلتك رسالة",
+      "visualReason": "لقطة متوسطة تربط ظهور الشخصية بوصول الرسالة"
+    },
+    {
+      "id": "reaction",
+      "fromWordId": "s02:3",
+      "toWordId": "s02:7",
+      "camera": "medium",
+      "focusActorId": "hero",
+      "screenText": "توقّف قبل الرد",
+      "visualReason": "الإبقاء على الفعل مرئيًا أثناء الشرح"
+    },
+    {
+      "id": "choice",
+      "fromWordId": "s02:8",
+      "toWordId": "s02:10",
+      "camera": "close",
+      "focusActorId": "hero",
+      "screenText": "ضغطة واحدة",
+      "visualReason": "التقريب يزيد التوتر عند اقتراب القرار"
+    },
+    {
+      "id": "question",
+      "fromWordId": "s03:0",
+      "toWordId": "s03:1",
+      "camera": "wide",
+      "focusActorId": "hero",
+      "screenText": "اسأل نفسك",
+      "visualReason": "اتساع المساحة يسمح بانتقال السرد من الاندفاع إلى التفكير"
+    }
+  ]
+}
