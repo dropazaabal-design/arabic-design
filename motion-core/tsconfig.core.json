@@ -12,6 +12,7 @@
   "include": [
     "src/core.ts",
     "src/character-rig.ts",
-    "src/semantic-director.ts"
+    "src/semantic-director.ts",
+    "src/storyboard-contract.ts"
   ]
 }
