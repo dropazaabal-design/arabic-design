@@ -353,6 +353,42 @@ node tools/arabic-check.mjs                              # → output/qa-arabic-
 ffmpeg -i output/final_reel.mp4 -vf "select='eq(n\,46)+eq(n\,112)+…',scale=216:384,tile=10x3" -frames:v 1 -vsync vfr output/contact_sheet.jpg
 ```
 
+### 12.1 البوابات الآلية (`reels/tools/qa_gates.py`)
+
+بنود الجدول أعلاه صارت اختبارات تنجح أو تفشل. كل ريل يحمل في `script.json` كتلة `qa` يُفحص آليًا:
+
+```json
+"qa": { "duration": [88, 92], "cta": { "seg": "s29", "srt": "تابعنا" }, "maxStillSeconds": 2.0, "stillAllow": [],
+        "waive": { "arabic": ["text.clipped-word"] }, "waiveReason": "سبب الإعفاء مكتوبًا" }
+```
+
+```sh
+python3 reels/tools/qa_gates.py reels/<slug>            # من القياسات المحفوظة output/qa-*.json
+python3 reels/tools/qa_gates.py reels/<slug> --measure  # يعيد القياس من final_reel.mp4 (ffmpeg + numpy + node)
+python3 reels/tools/qa_gates.py --all --measure          # كل ريل فيه كتلة qa
+python3 reels/tools/qa_gates.py --self-test              # منطق البوابات نفسه
+```
+
+| البوابة | تفشل إذا |
+|---|---|
+| `fresh` | القياسات المحفوظة أُخذت من ملف MP4 غير الموجود الآن (حجمه مختلف) |
+| `spec` / `frames` | ليس H.264/yuv420p/1080×1920/30/AAC 48 kHz، أو عدد الإطارات ≠ `timeline.durationInFrames`، أو التوقيت غير منتظم |
+| `duration` | المدة خارج `qa.duration` |
+| `loudness` | الجهارة خارج −16 ± 1 LUFS، أو الذروة الحقيقية > −1 dBTP |
+| `black/freeze` | يوجد سواد، أو تجميد > 3 ث |
+| `sync` | سطر من `timeline.json` غير موجود في المزيج، أو انحراف > 20 مللي ث |
+| `motion` | لقطة (غير مستثناة في `stillAllow`) فيها سكون أطول من `maxStillSeconds` |
+| `arabic` | خطأ من فحص استوديو بصيرة غير معفى. الإعفاء يحتاج `waiveReason` مكتوبًا |
+| `on-screen text` | حرف لاتيني أو رقم شرقي (٠–٩) في `onScreen` |
+| `srt` | مقاطع غير مرتبة أو متداخلة، أو مقطع > 46 حرفًا، أو حرف لاتيني |
+| `cta` | سطر `qa.cta.seg` غير موجود في المزيج، أو العبارة `qa.cta.srt` غائبة عن SRT |
+| `voice` | كلمة من النص لم يسمعها التفريغ المستقل (`audio/alignment.json`) |
+| `manifest` | ملف له `sha256` في `asset_manifest.json` مفقود أو تغيّر |
+| `cover` | الغلاف مفقود أو ليس 1080×1920 |
+
+**في GitHub:** يشغّل `.github/workflows/reel-qa.yml` الاختبار الذاتي ثم `--all --measure` على كل PR يمس `reels/`.
+ما بقي يدويًا: هل العنوان داخل قص 3:4، والحكم الإبداعي، والسماع والمشاهدة.
+
 ---
 
 ## 13. المرحلة 10 — التوثيق والنشر
@@ -411,6 +447,7 @@ for i in 1 2 3 4; do git push -u origin claude/<slug> && break; sleep $((2**i));
 
 ## 16. قائمة التسليم (تحقق منها قبل الرد على المستخدم)
 
+- [ ] `python3 reels/tools/qa_gates.py reels/<slug> --measure` ← `ALL GATES PASS` (و`script.json` فيه كتلة `qa`)
 - [ ] `output/final_reel.mp4` ضمن المدة، والفحوص التقنية كلها ✓
 - [ ] طلب الإعجاب والمتابعة مسموع، وفي SRT، والأيقونتان في آخر ثانيتين
 - [ ] `output/captions.ar.srt` مرتب ومقروء
