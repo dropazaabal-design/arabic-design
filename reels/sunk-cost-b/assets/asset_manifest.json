@@ -1,0 +1,58 @@
+{
+ "reel": "reels/sunk-cost-b",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no real faces, no third-party footage or music.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s19.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the Baseera narrator), generation epsVIGzjYWWiB3ITfMDt (flow t335HX0HEAVgSPqVg8zE), loudness-normalised and cut by reels/tools/voice_timeline.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-B2-epsVIGzjYWWiB3ITfMDt.mp3",
+   "sha256": "81e3faf27f3fac5200740996341371f7e94a95ad0e494527821e6965eee6f0b9"
+  },
+  {
+   "path": "assets/sfx/engine.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "ee7516221e78798c5b5fd8f92d558a745b01972a31206f122284ba6ece1ef688"
+  },
+  {
+   "path": "assets/sfx/bell.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "352eac13b31f10795246aca694a4929562381c68b8f45a13d866008d1681eb40"
+  },
+  {
+   "path": "assets/sfx/wind.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "825aa65e449f96127b1bff1cb6df118349e4456089f18084edd9d2ecd01c14b4"
+  },
+  {
+   "path": "assets/sfx/waves.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "dd44268e33134bbec4c7b26aaa91c66f4be23308bc106b541a9a2c6cae87fc99"
+  },
+  {
+   "path": "assets/sfx/sweep.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "2e36cdb791d31defaae0f78c75b043de673aac97ca22a68baa0214b37a253b53"
+  },
+  {
+   "path": "characters, props and scenes (src/scene/*.tsx)",
+   "source": "this repository: reels/mukarram rig (Person, faces, poses, Glasses/Cap), arm IK from reels/doublethink via reels/power-of-no-b, motion layer reels/motion",
+   "rights": "original, this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts (Cairo 800/900)",
+   "source": "imported from reels/mukarram (no copies)",
+   "rights": "SIL Open Font License (as recorded in reels/mukarram)"
+  },
+  {
+   "path": "../sunk-cost-a/assets/sfx/{printer,splash,bubbles,ticks}.wav, ../mukarram/assets/sfx/{pop,whoosh,chime,scribble,boing,thud}.wav, ../doublethink/assets/sfx/{pneu,stamp}.wav",
+   "source": "imported from reels/sunk-cost-a, reels/mukarram and reels/doublethink (no copies)",
+   "rights": "original (sunk-cost-a) / as recorded in those reels' manifests"
+  }
+ ]
+}
