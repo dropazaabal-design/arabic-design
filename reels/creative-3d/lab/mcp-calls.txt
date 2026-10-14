@@ -120,3 +120,43 @@ INIT blender: [{'name': 'blender', 'status': 'connected', 'source': 'user'}]
 
 == FINAL success turns 12 cost_usd 0.1743576
 
+################ 03-reopen  (claude -p, stream-json; ToolSearch lookups omitted)
+INIT blender: [{'name': 'blender', 'status': 'connected', 'source': 'user'}]
+
+>> TOOL_USE mcp__blender__get_addon_status {}
+<< RESULT {"result":"{\n  \"up_to_date\": true,\n  \"protocol_version\": 13,\n  \"expected_protocol_version\": 13,\n  \"addon_version\": [\n    1,\n    8\n  ],\n  \"capabilities\": [\n    \"bpy_api_lookup\",\n    \"describe_node_type\",\n    \"drain_human_activity\",\n    \"execute_code\",\n    \"get_addon_info\",\n    \"get_object_info\",\n    \"get_scene_info\",\n    \"get_telemetry_consent\",\n    \"get_viewport_screenshot\",\n    \"get_world_state_snapshot\",\n    \"list_scene_items\",\n    \"pick_viewport_object\",\n    \"set_telemetry_consent\"\n  ],\n  \"blender_version\": \"4.5.9 LTS\",\n  \"premium_generators\": [],\n  \"libraries\": {\n    \"polyhaven\": \"off\",\n    \"sketchfab\": \"off\",\n    \"polypizza\": \"off\"\n  },\n  \"generators\": {\n    \"tripo\": \"off (Premium only)\",\n    \"hunyuan3d\": \"off\",\n    \"hyper3d\": \"off\"\n  },\n  \"source\": \"native\",\n  \"warning\": null,\n  \"telemetry_consent\": false,\n  \"update_command\": \"uvx mcp-for-blender install-addon\",\n  \"after_install\": \"If the addon file was updated: in Blender, Preferences \\u2192 Add-ons \\u2192 disable/enable 'Interface: Blender MCP', or restart Blender, then Start MCP Server.\"\n}"}
+
+>> TOOL_USE mcp__blender__get_scene_info {}
+<< RESULT {"result":"Scene 'Scene' | 1 camera, 1 light, 1 mesh | active Cube | selected Cube | mode OBJECT\n\nShowing 3 of 3 (name | type | location | size | hidden | children):\nCube | mesh | at (0.0, 0.0, 0.0) | size 2.0x2.0x2.0\nLight | light | at (4.08, 1.01, 5.9)\nCamera | camera | at (7.36, -6.93, 4.96)"}
+
+>> TOOL_USE mcp__blender__execute_blender_code {"code": "import bpy; bpy.ops.wm.open_mainfile(filepath=\"/home/user/arabic-design/reels/creative-3d/lab/lab.blend\"); print(\"opened\", bpy.data.filepath, sorted(s.name for s in bpy.data.scenes))"}
+<< RESULT {"result":"Code executed successfully: opened /home/user/arabic-design/reels/creative-3d/lab/lab.blend ['Creative_Reels_Anim', 'Creative_Reels_Lab', 'Scene']\n"}
+
+>> TOOL_USE mcp__blender__get_scene_info {}
+<< RESULT {"result":"Scene 'Creative_Reels_Anim' | 1 camera, 3 empty, 3 light, 14 mesh | active none | selected none | mode OBJECT\n\nShowing 6 of 6 (name | type | location | size | hidden | children):\nStudio | mesh | at (0.0, 0.0, 0.0) | size 30.0x22.0x14.0\nHB_Root | empty | at (-1.7, 0.0, 0.0) | 3 children\nBK_Root | empty | at (0.9, 0.0, 0.0) | 4 children\nCAM | camera | at (-0.15, -8.6, 1.6)\nKEY | light | at (-3.5, -4.5, 5.5)\nRIM | light | at (3.5, 3.0, 4.0)"}
+
+>> TEXT Running step 5: loading scene.py and calling verify().
+
+>> TOOL_USE mcp__blender__execute_blender_code {"code": "exec(open(\"/home/user/arabic-design/reels/creative-3d/lab/scene.py\").read()); print(verify())"}
+<< RESULT {"result":"Code executed successfully: {\"scene\": \"Creative_Reels_Anim\", \"frames\": [1, 96], \"fps\": 24, \"camera\": \"CAM\", \"keyed_objects\": {\"HB_Root\": {\"fcurves\": 6, \"keys\": 14, \"range\": [1, 96]}, \"HB_Body\": {\"fcurves\": 6, \"keys\": 25, \"range\": [1, 96]}, \"HB_EyeL\": {\"fcurves\": 3, \"keys\": 7, \"range\": [1, 70]}, \"HB_PupilL\": {\"fcurves\": 3, \"keys\": 4, \"range\": [1, 96]}, \"HB_EyeR\": {\"fcurves\": 3, \"keys\": 7, \"range\": [1, 70]}, \"HB_PupilR\": {\"fcurves\": 3, \"keys\": 4, \"range\": [1, 96]}, \"BK_Root\": {\"fcurves\": 3, \"keys\": 3, \"range\": [1, 54]}, \"BK_Hinge\": {\"fcurves\": 3, \"keys\": 6, \"range\": [1, 65]}, \"SP_Spark\": {\"fcurves\": 9, \"keys\": 7, \"range\": [1, 96]}, \"SP_Light\": {\"fcurves\": 1, \"keys\": 4, \"range\": [1, 96]}, \"CAM\": {\"fcurves\": 6, \"keys\": 2, \"range\": [1, 96]}}, \"probe\": {\"1\": {\"HB_Body\": [-1.7, 0.0, 0.0], \"BK_Root\": [0.9, 0.0, 0.0], \"SP_Spark\": [0.5, 0.0, 0.2], \"cover_angle_deg\": 0, \"body_scale_z\": 1.0}, \"20\": {\"HB_Body\": [-1.15, 0.0, 0.0], \"BK_Root\": [0.9, 0.0, 0.0], \"SP_Spark\": [0.5, 0.0, 0.2], \"cover_angle_deg\": 0, \"body_scale_z\": 0.95}, \"46\": {\"HB_Body\": [-0.35, 0.0, 0.0], \"BK_Root\": [0.9, 0.0, 0.0], \"SP_Spark\": [0.5, 0.0, 0.2], \"cover_angle_deg\": 0, \"body_scale_z\": 0.9}, \"54\": {\"HB_Body\": [-0.62, 0.0, 0.0], \"BK_Root\": [1.22, 0.0, 0.0], \"SP_Spark\": [0.82, 0.0, 0.2], \"cover_angle_deg\": 131, \"body_scale_z\": 1.0}, \"62\": {\"HB_Body\": [-
+
+>> TOOL_USE mcp__blender__look {"mode": "frames", "view": "camera", "shading": "material", "frames": [1, 20, 46, 54, 62, 78, 96], "max_size": 512}
+<< RESULT <image> [Image: source: /root/.claude/projects/-tmp/ba5642b0-a5a8-5305-88cd-e987ccddeaae/tool-results/mcp-blender-blob-1792019975272-9ajbrp.png] Frames left to right, top to bottom: 1, 20, 46, 54, 62, 78, 96. Framed 17 objects, 30 x 22 x 14.03 m across, centred at [0.0, -3.0, 6.99].
+
+>> TEXT Results, in order:
+
+1. **get_addon_status:** `up_to_date: true`, protocol 13/13, addon 1.8, Blender 4.5.9 LTS, source native, no warning. Libraries and generators are off, and telemetry is off.
+2. **get_scene_info (fresh Blender):** `Scene 'Scene' | 1 camera, 1 light, 1 mesh`, containing Cube, Light and Camera.
+3. **open_mainfile:** the tool returned only `Code executed successfully: opened ... ['Creative_Reels_Anim', 'Creative_Reels_Lab', 'Scene']`. The `print` output was part of that string. The path text in it is trimmed to "..." here, because I wrote that line without the full path in view.
+4. **get_scene_info:** `Scene 'Creative_Reels_Anim' | 1 camera, 3 empty, 3 light, 14 mesh`. It listed Studio, HB_Root, BK_Root, CAM, KEY and RIM, and showed 6 of 6 with the default limit.
+5. **scene.py verify():** the scene is Creative_Reels_Anim, frames 1–96 at 24 fps, camera CAM.
+   - Keyed objects: HB_Root has 14 keys, HB_Body 25, BK_Hinge 6 and SP_Spark 7. HB_EyeL, HB_EyeR, HB_PupilL, HB_PupilR, BK_Root, SP_Light and CAM are also keyed.
+   - Probe cover angle: 0° at frames 1, 20 and 46, 131° at frame 54, 157° at frame 62, and 169° at frames 78 and 96.
+   - SP_Spark z: 0.2 until frame 54, then 0.9 at frame 62 and 2.04 at frame 78.
+6. **Frame strip (camera, material shading, frames 1, 20, 46, 54, 62, 78, 96):** the blue character walks toward the book and hops, the pink book cover swings open from flat to a wide angle, and a white spark rises above the book.
+
+**PASS/FAIL**
+- Addon re
+
+== FINAL success turns 8 cost_usd 0.1443345
+
