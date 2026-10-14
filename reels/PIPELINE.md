@@ -252,9 +252,25 @@ let cache = null; export const B = () => (cache ??= beats());
 - **الوجوه:** `EXPRESSIONS`، وتعابير إضافية `X` في `src/scenes/common.tsx`. الأداة `xTrack(f, [[frame, expr], …])` تمزج بين التعابير خلال 4 إطارات. لا تكرر الوجه نفسه في لقطتين متتاليتين.
 - **الفم:** `talkAt(f, role)` من `envelope.json`، فيتحرك فم كل شخصية على أسطرها فقط.
 
-### 8.5 قواعد تصميم الكادر
+### 8.5 طبقة الحركة (`reels/motion` ← `@motion/index`)
 
-- الأبعاد 1080×1920، والإطارات 30 في الثانية.
+ساعة واحدة: إطار Remotion. كل طبقة دالة في `t = frame / fps` بالثواني، فيُرسم أي إطار وحده وبأي ترتيب، بـ 30 أو 60. التفاصيل والقرارات في `reels/motion/README.md`، والمثال الكامل `reels/idea-flight`.
+
+| الحاجة | الأداة | ملاحظة |
+|---|---|---|
+| كاميرا، هزة، قفزة، ظهور بارتداد، نبض، عناوين HTML | GSAP عبر `useGsapTimeline` الرسمية (`@remotion/gsap`) + `popIn`/`hop`/`swing`/`shake`/`pulse`/`camera`، و`<GsapCamera>` | أهداف عناصر فقط. لا `play()` ولا callbacks ولا random. محور SVG بـ `svgOrigin` |
+| رسم خط، أثر متحرك، جسم على مسار، تحوّل شكل، دائرة تمييز يدوية | `@remotion/paths`: `DrawPath`، `drawn(d, p, from)`، `alongPath(d, p)`، `morph`، `scribbleLoop` | لا مكتبة مسارات ثانية (لا MotionPath ولا DrawSVG) |
+| أرقام الـ rig (وضعيات، IK، وجوه) | `tween`/`keys` بثوانٍ وأسماء easing من GSAP (`ease('back.out(1.7)')`)، أو أدوات mukarram بـ `f30` | `blinkAt(Math.floor(f30), 30, seed)`؛ `Boil t={t}` |
+| شخصية Rive بآلة حالات | `<RiveActor src artboard stateMachine inputs={[{at, name, value?}]} fallback>` داخل `<foreignObject>` | لا `@remotion/rive`: يتقدم بفرق الإطارات (يتأثر بالترتيب) ويجلب WASM من الشبكة ولا يشغّل آلات الحالة |
+
+- **اكتب المشهد بالثواني** لا بعدد الإطارات. الصوت والمؤثرات توضع بـ `Math.round(s * fps)`.
+- **60 إطارًا/ث** للإنتاجات الجديدة: `timeline.json.fps = 60`. سجّل `Reel30` (المشهد نفسه بـ 30) لاختبار التطابق.
+- **GSAP والـ rig معًا:** GSAP يحرك المجموعات (`<g data-actor>`)، والـ rig يحسب الأطراف من `t`. ما تمسكه اليد يُرسم داخل المجموعة نفسها، فيقفز معها.
+- **اختبارات العرض:** `node tools/render-tests.mjs` في الريل. تتحقق من تطابق الإطار بأي ترتيب، وتطابق 30 و60 عند الثانية نفسها، ورسم Rive، وبديله عند الفشل، وفك MP4.
+
+### 8.6 قواعد تصميم الكادر
+
+- الأبعاد 1080×1920، والإطارات 30 في الثانية (أو 60 للإنتاجات الجديدة: §8.5).
 - **المنطقة الآمنة** (`SAFE`): المحتوى المهم بين y=250 وy=1560، ولا يتجاوز x=900 من اليمين (أزرار المنصة).
 - **الغلاف:** العنوان داخل قص 3:4، أي بين y=240 وy=1680. تحقق بصورة رُسم عليها الإطار:
   ```sh
@@ -359,6 +375,7 @@ ffmpeg -i output/final_reel.mp4 -vf "select='eq(n\,46)+eq(n\,112)+…',scale=216
 
 ```json
 "qa": { "duration": [88, 92], "cta": { "seg": "s29", "srt": "تابعنا" }, "maxStillSeconds": 2.0, "stillAllow": [],
+        "maxSilenceSeconds": 0.8, "renderTests": true,
         "waive": { "arabic": ["text.clipped-word"] }, "waiveReason": "سبب الإعفاء مكتوبًا" }
 ```
 
@@ -372,11 +389,13 @@ python3 reels/tools/qa_gates.py --self-test              # منطق البواب
 | البوابة | تفشل إذا |
 |---|---|
 | `fresh` | القياسات المحفوظة أُخذت من ملف MP4 غير الموجود الآن (حجمه مختلف) |
-| `spec` / `frames` | ليس H.264/yuv420p/1080×1920/30/AAC 48 kHz، أو عدد الإطارات ≠ `timeline.durationInFrames`، أو التوقيت غير منتظم |
+| `spec` / `frames` | ليس H.264/yuv420p/1080×1920/AAC 48 kHz بمعدل `timeline.fps` (30 أو 60)، أو عدد الإطارات ≠ `timeline.durationInFrames`، أو التوقيت غير منتظم |
 | `duration` | المدة خارج `qa.duration` |
-| `loudness` | الجهارة خارج −16 ± 1 LUFS، أو الذروة الحقيقية > −1 dBTP |
+| `loudness` | الجهارة خارج −16 ± 1 LUFS، أو الذروة الحقيقية > −4 dBTP |
 | `black/freeze` | يوجد سواد، أو تجميد > 3 ث |
-| `sync` | سطر من `timeline.json` غير موجود في المزيج، أو انحراف > 20 مللي ث |
+| `silence` (اختيارية: `maxSilenceSeconds`) | صمت أطول من الحد (−45 dB). لا يفرضها الريلان السابقان: في `power-of-no-b` تسع فترات صمت > 0.8 ث |
+| `render tests` (اختيارية: `renderTests`) | `output/qa-render-tests.json` فيه اختبار فاشل أو غائب |
+| `sync` | سطر من `timeline.json` غير موجود في المزيج، أو انحراف > 20 مللي ث (أو `qa.maxSyncMs` إن كان أشد؛ لا يُسمح بأوسع) |
 | `motion` | لقطة (غير مستثناة في `stillAllow`) فيها سكون أطول من `maxStillSeconds` |
 | `arabic` | خطأ من فحص استوديو بصيرة غير معفى. الإعفاء يحتاج `waiveReason` مكتوبًا |
 | `on-screen text` | حرف لاتيني أو رقم شرقي (٠–٩) في `onScreen` |
@@ -386,7 +405,7 @@ python3 reels/tools/qa_gates.py --self-test              # منطق البواب
 | `manifest` | ملف له `sha256` في `asset_manifest.json` مفقود أو تغيّر |
 | `cover` | الغلاف مفقود أو ليس 1080×1920 |
 
-**في GitHub:** يشغّل `.github/workflows/reel-qa.yml` الاختبار الذاتي ثم `--all --measure` على كل PR يمس `reels/`.
+**في GitHub:** يشغّل `.github/workflows/reel-qa.yml` الاختبار الذاتي ثم `--all --measure` على كل PR يمس `reels/`. ووظيفة ثانية (`motion`) تشغّل اختبارات `reels/motion` والتحقق من الأنواع واختبارات العرض في `reels/idea-flight`.
 ما بقي يدويًا: هل العنوان داخل قص 3:4، والحكم الإبداعي، والسماع والمشاهدة.
 
 ---
@@ -470,3 +489,4 @@ for i in 1 2 3 4; do git push -u origin claude/<slug> && break; sleep $((2**i));
 | راوٍ في استوديو مع مايك | `reels/mukarram/src/scenes/mic.tsx` | الراوي الأصلي ومكتبه |
 | شخصية غير بشرية بضغط وتمدد | `reels/boiling-frog/src/characters/frog.tsx` | rig الضفدع |
 | مكتب وأختام وأوراق | `reels/doublethink/src/characters/office.tsx` | `Door`، `Memo`، `StampTool`، `Chair` |
+| لقطة متصلة بكاميرا سينمائية بـ 60 إطارًا، طائرة/غرض على مسار، رسم يظهر، شخصية Rive | `reels/idea-flight/src/scene/Scene.tsx` | `GsapCamera`، `alongPath` + IK للإمساك، `morph` ورقة ⇄ طائرة، `DrawPath`، `RiveActor` بآلة حالات، عناوين HTML بـ GSAP، `Reel30` واختبارات العرض |

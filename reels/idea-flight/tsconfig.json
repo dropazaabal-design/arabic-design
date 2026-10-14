@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@mukarram/*": ["../mukarram/src/*"],
+      "@mukarram-assets/*": ["../mukarram/assets/*"],
+      "@doublethink/*": ["../doublethink/src/*"],
+      "@motion/*": ["../motion/src/*"],
+      "react": ["./node_modules/@types/react"],
+      "react/*": ["./node_modules/@types/react/*"],
+      "remotion": ["./node_modules/remotion"]
+    }
+  },
+  "include": ["src"]
+}

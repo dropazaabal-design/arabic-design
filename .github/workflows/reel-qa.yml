@@ -29,3 +29,28 @@ jobs:
         run: python reels/tools/qa_gates.py --self-test
       - name: Quality gates (re-measured from each final_reel.mp4)
         run: python reels/tools/qa_gates.py --all --measure
+  motion:
+    # The motion layer (reels/motion): unit tests, then real headless renders of reels/idea-flight that require the
+    # same picture in any frame order and at 30 and 60 fps, Rive drawn / fallback / failure, and the MP4 decoding.
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Install (motion layer and the demo reel)
+        run: |
+          npm ci --prefix reels/motion --no-audit --no-fund
+          npm ci --prefix reels/idea-flight --no-audit --no-fund
+      - name: Unit tests (eases, GSAP seek order, paths, Rive step plan)
+        run: npm test --prefix reels/motion
+      - name: Typecheck (motion layer + demo reel)
+        run: npx --prefix reels/idea-flight tsc -p reels/idea-flight/tsconfig.json
+      - name: Render tests (headless Chrome)
+        working-directory: reels/idea-flight
+        run: node tools/render-tests.mjs

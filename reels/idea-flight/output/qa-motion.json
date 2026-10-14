@@ -1,0 +1,51 @@
+{
+ "file": "output/final_reel.mp4",
+ "fps": 60,
+ "frames": 816,
+ "stepFrames": 24,
+ "threshold": 1.2,
+ "shots": [
+  {
+   "shot": "b1",
+   "from_s": 0.0,
+   "to_s": 3.25,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 4.9
+  },
+  {
+   "shot": "b2",
+   "from_s": 3.25,
+   "to_s": 4.84,
+   "movingShare": 0.97,
+   "longestStillSeconds": 0.05,
+   "meanDelta": 9.48
+  },
+  {
+   "shot": "b3",
+   "from_s": 4.84,
+   "to_s": 7.92,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 13.83
+  },
+  {
+   "shot": "b4",
+   "from_s": 7.92,
+   "to_s": 10.95,
+   "movingShare": 0.82,
+   "longestStillSeconds": 0.45,
+   "meanDelta": 8.86
+  },
+  {
+   "shot": "b5",
+   "from_s": 10.95,
+   "to_s": 13.6,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 15.26
+  }
+ ],
+ "longestStillAnywhere": 0.45,
+ "note": "measurement only"
+}
