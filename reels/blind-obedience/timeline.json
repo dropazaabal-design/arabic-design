@@ -1,0 +1,321 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 72.257,
+  "durationInFrames": 2168,
+  "measured": true,
+  "sources": {
+    "N": "take-N1-6CcF7Z01DxKBQDuhg7KV.mp3",
+    "E": "take-E1-E6ZWoTE8u3wfkyKoAqmI.mp3"
+  },
+  "gainDb": {
+    "N": 2.1,
+    "E": 3.9
+  },
+  "speechSeconds": 62.499,
+  "pausesBefore": {
+    "s01": 0.0,
+    "s02": 0.32,
+    "s03": 0.45,
+    "s04": 0.285,
+    "s05": 0.32,
+    "s06": 0.32,
+    "s07": 0.32,
+    "s08": 0.32,
+    "s09": 0.317,
+    "s10": 0.359,
+    "s11": 0.282,
+    "s12": 0.442,
+    "s13": 0.267,
+    "s14": 0.246,
+    "s15": 0.291,
+    "s16": 0.242,
+    "s17": 0.259,
+    "s18": 0.27
+  },
+  "addedBeats": {
+    "s01": 0.55,
+    "s04": 0.25,
+    "s06": 0.2,
+    "s08": 0.55,
+    "s09": 0.35,
+    "s12": 0.3,
+    "s15": 0.3,
+    "s18": 0.25
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "take": "E",
+      "role": "X",
+      "sceneId": "lab",
+      "start": 0.75,
+      "duration": 1.593,
+      "fileStart": 0.65,
+      "file": "audio/voice/s01.wav",
+      "measured": true
+    },
+    {
+      "id": "s02",
+      "take": "N",
+      "role": "N",
+      "sceneId": "lab",
+      "start": 2.663,
+      "duration": 2.866,
+      "fileStart": 2.563,
+      "file": "audio/voice/s02.wav",
+      "measured": true
+    },
+    {
+      "id": "s03",
+      "take": "N",
+      "role": "N",
+      "sceneId": "predict",
+      "start": 5.979,
+      "duration": 3.717,
+      "fileStart": 5.769,
+      "file": "audio/voice/s03.wav",
+      "measured": true
+    },
+    {
+      "id": "s04",
+      "take": "N",
+      "role": "N",
+      "sceneId": "predict",
+      "start": 10.231,
+      "duration": 6.061,
+      "fileStart": 10.103,
+      "file": "audio/voice/s04.wav",
+      "measured": true
+    },
+    {
+      "id": "s05",
+      "take": "E",
+      "role": "X",
+      "sceneId": "wall",
+      "start": 16.612,
+      "duration": 2.323,
+      "fileStart": 16.434,
+      "file": "audio/voice/s05.wav",
+      "measured": true
+    },
+    {
+      "id": "s06",
+      "take": "N",
+      "role": "N",
+      "sceneId": "wall",
+      "start": 19.455,
+      "duration": 2.812,
+      "fileStart": 19.294,
+      "file": "audio/voice/s06.wav",
+      "measured": true
+    },
+    {
+      "id": "s07",
+      "take": "E",
+      "role": "X",
+      "sceneId": "wall",
+      "start": 22.587,
+      "duration": 3.205,
+      "fileStart": 22.395,
+      "file": "audio/voice/s07.wav",
+      "measured": true
+    },
+    {
+      "id": "s08",
+      "take": "N",
+      "role": "N",
+      "sceneId": "wall",
+      "start": 26.662,
+      "duration": 0.617,
+      "fileStart": 26.532,
+      "file": "audio/voice/s08.wav",
+      "measured": true
+    },
+    {
+      "id": "s09",
+      "take": "N",
+      "role": "N",
+      "sceneId": "reveal",
+      "start": 27.946,
+      "duration": 3.325,
+      "fileStart": 27.802,
+      "file": "audio/voice/s09.wav",
+      "measured": true
+    },
+    {
+      "id": "s10",
+      "take": "N",
+      "role": "N",
+      "sceneId": "reveal",
+      "start": 31.63,
+      "duration": 2.185,
+      "fileStart": 31.465,
+      "file": "audio/voice/s10.wav",
+      "measured": true
+    },
+    {
+      "id": "s11",
+      "take": "N",
+      "role": "N",
+      "sceneId": "asch",
+      "start": 34.097,
+      "duration": 2.057,
+      "fileStart": 33.971,
+      "file": "audio/voice/s11.wav",
+      "measured": true
+    },
+    {
+      "id": "s12",
+      "take": "N",
+      "role": "N",
+      "sceneId": "asch",
+      "start": 36.897,
+      "duration": 4.195,
+      "fileStart": 36.69,
+      "file": "audio/voice/s12.wav",
+      "measured": true
+    },
+    {
+      "id": "s13",
+      "take": "N",
+      "role": "N",
+      "sceneId": "asch",
+      "start": 41.359,
+      "duration": 6.174,
+      "fileStart": 41.241,
+      "file": "audio/voice/s13.wav",
+      "measured": true
+    },
+    {
+      "id": "s14",
+      "take": "N",
+      "role": "N",
+      "sceneId": "today",
+      "start": 47.779,
+      "duration": 4.906,
+      "fileStart": 47.671,
+      "file": "audio/voice/s14.wav",
+      "measured": true
+    },
+    {
+      "id": "s15",
+      "take": "N",
+      "role": "N",
+      "sceneId": "partner",
+      "start": 53.276,
+      "duration": 3.418,
+      "fileStart": 53.145,
+      "file": "audio/voice/s15.wav",
+      "measured": true
+    },
+    {
+      "id": "s16",
+      "take": "N",
+      "role": "N",
+      "sceneId": "partner",
+      "start": 56.936,
+      "duration": 3.925,
+      "fileStart": 56.83,
+      "file": "audio/voice/s16.wav",
+      "measured": true
+    },
+    {
+      "id": "s17",
+      "take": "N",
+      "role": "N",
+      "sceneId": "close",
+      "start": 61.12,
+      "duration": 4.668,
+      "fileStart": 61.005,
+      "file": "audio/voice/s17.wav",
+      "measured": true
+    },
+    {
+      "id": "s18",
+      "take": "N",
+      "role": "N",
+      "sceneId": "cta",
+      "start": 66.308,
+      "duration": 4.449,
+      "fileStart": 66.188,
+      "file": "audio/voice/s18.wav",
+      "measured": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "lab",
+      "start": 0.0,
+      "speechStart": 0.75,
+      "speechEnd": 5.529,
+      "end": 5.754,
+      "seconds": 5.754
+    },
+    {
+      "sceneId": "predict",
+      "start": 5.754,
+      "speechStart": 5.979,
+      "speechEnd": 16.292,
+      "end": 16.452,
+      "seconds": 10.698
+    },
+    {
+      "sceneId": "wall",
+      "start": 16.452,
+      "speechStart": 16.612,
+      "speechEnd": 27.279,
+      "end": 27.613,
+      "seconds": 11.161
+    },
+    {
+      "sceneId": "reveal",
+      "start": 27.613,
+      "speechStart": 27.946,
+      "speechEnd": 33.815,
+      "end": 33.956,
+      "seconds": 6.343
+    },
+    {
+      "sceneId": "asch",
+      "start": 33.956,
+      "speechStart": 34.097,
+      "speechEnd": 47.533,
+      "end": 47.656,
+      "seconds": 13.7
+    },
+    {
+      "sceneId": "today",
+      "start": 47.656,
+      "speechStart": 47.779,
+      "speechEnd": 52.685,
+      "end": 52.981,
+      "seconds": 5.325
+    },
+    {
+      "sceneId": "partner",
+      "start": 52.981,
+      "speechStart": 53.276,
+      "speechEnd": 60.861,
+      "end": 60.99,
+      "seconds": 8.009
+    },
+    {
+      "sceneId": "close",
+      "start": 60.99,
+      "speechStart": 61.12,
+      "speechEnd": 65.788,
+      "end": 66.048,
+      "seconds": 5.058
+    },
+    {
+      "sceneId": "cta",
+      "start": 66.048,
+      "speechStart": 66.308,
+      "speechEnd": 70.757,
+      "end": 72.257,
+      "seconds": 6.209
+    }
+  ]
+}
