@@ -84,3 +84,4 @@ bash reels/creative-3d/start-blender.sh
 | `lab/lab.blend` | الملف المحفوظ عبر MCP، وفيه المشاهد الثلاثة: الافتراضي ومختبر المرحلة 2 والمشهد المتحرك |
 | `lab/still_f062.png` | تصيير داخل Blender الحي عبر MCP |
 | `lab/preview.mp4` | معاينة 4 ث صُيّرت من الـ `.blend` في عملية منفصلة |
+| `lab/mcp-calls.txt` و`lab/look-*.png` | ملخص 24 نداء MCP حقيقيًا ونتائجها، وما أعادته أداة `look` |
