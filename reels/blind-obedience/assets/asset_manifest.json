@@ -1,0 +1,61 @@
+{
+ "reel": "reels/blind-obedience",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no real faces, no archive footage.",
+ "items": [
+  {
+   "path": "assets/audio/voice/{s02–s04,s06,s08–s18}.wav (role N)",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the Baseera narrator), generation 6CcF7Z01DxKBQDuhg7KV (take N1, flow XOV965lfMLWarOK0rD6s), cut by tools/align.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-N1-6CcF7Z01DxKBQDuhg7KV.mp3",
+   "sha256": "3a695e540bca5c31665f93807200733024cb0cee4f3056b201ad5835ba17440d"
+  },
+  {
+   "path": "assets/audio/voice/{s01,s05,s07}.wav (role X)",
+   "source": "ElevenLabs eleven_v4, voice JAFpvTRfGNCbJ2St9kyT (saber — formal Arabic), generation E6ZWoTE8u3wfkyKoAqmI (take E1); Milgram's prods 1, 2 and 4 in Arabic",
+   "rights": "same as above",
+   "master": "audio/take-E1-E6ZWoTE8u3wfkyKoAqmI.mp3",
+   "sha256": "6b2d0c7de2283597a0940903d7934c53006584bdb69ba1a7937c7c32a2836a5b"
+  },
+  {
+   "path": "audio/take-N2-Tv5vXyuXyzXkPR58dcrj.mp3",
+   "source": "ElevenLabs alternative narrator take (not used); the other variations were not kept",
+   "rights": "same as above"
+  },
+  {
+   "path": "audio/take-*.words.json · audio/take-*.scribe.raw.json · audio/alignment.json",
+   "source": "ElevenLabs Scribe (eleven_scribe_v1) on the chosen takes: word times and the independent pronunciation check",
+   "rights": "derived data"
+  },
+  {
+   "path": "assets/sfx/hum.wav",
+   "source": "original, synthesised with numpy by tools/sfx.py (seeded)",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "imported effects (not copied): reels/mukarram/assets/sfx {chime,click,pop,scribble,snap,thud,tick,whoosh} · reels/doublethink/assets/sfx {clack,flap,rattle,stamp} · reels/boiling-frog/assets/sfx {tap}",
+   "source": "those reels' own manifests",
+   "rights": "as recorded there"
+  },
+  {
+   "path": "fonts: reels/mukarram/assets/fonts cairo-800/900 (imported)",
+   "source": "Cairo, SIL Open Font License",
+   "rights": "OFL"
+  },
+  {
+   "path": "src/characters/lab.tsx · src/characters/people.tsx",
+   "source": "original drawings after the descriptions in Milgram (1963) and Asch (1955): the panel of 30 switches 15–450 V with translated group labels, the partition, the card with three comparison lines; no photographs or film stills were traced",
+   "rights": "original"
+  },
+  {
+   "path": "characters reused",
+   "source": "reels/doublethink Employee (the participant), reels/mukarram Narrator and cast builds (Asch's group, the honest partner), reels/mukarram rig",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "publish/cover-1080x1920.jpg",
+   "source": "rendered from the reel's own Hook shot (Cover composition)",
+   "rights": "original",
+   "sha256": "024767dceed16c570f248d84ab88b7e4007734722666413fe151336bb429e7a8"
+  }
+ ]
+}
