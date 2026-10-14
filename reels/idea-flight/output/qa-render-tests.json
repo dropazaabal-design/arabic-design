@@ -1,13 +1,13 @@
 {
  "tool": "tools/render-tests.mjs",
- "passed": 12,
+ "passed": 13,
  "failed": 0,
  "results": [
   {
    "name": "order: Reel frame 330 (t=5.5 s, Rive input fired) before and after frames 744 and 60",
    "ok": true,
    "detail": {
-    "sha": "d6eb19fc121a84cc"
+    "sha": "18833e3792f3d6bb"
    }
   },
   {
@@ -21,35 +21,35 @@
    "name": "fps: Reel @60 and Reel30 @30 identical at t=1 s",
    "ok": true,
    "detail": {
-    "sha": "1cf3fc8810bfc88c"
+    "sha": "d6e1d0fd6cf9c08b"
    }
   },
   {
    "name": "fps: Reel @60 and Reel30 @30 identical at t=4.6 s",
    "ok": true,
    "detail": {
-    "sha": "74342af7ec11ca4c"
+    "sha": "c09d7a1b135ca2a5"
    }
   },
   {
    "name": "fps: Reel @60 and Reel30 @30 identical at t=6.2 s",
    "ok": true,
    "detail": {
-    "sha": "6b21ed09fb64b944"
+    "sha": "a362812c45eb5126"
    }
   },
   {
    "name": "fps: Reel @60 and Reel30 @30 identical at t=8.8 s",
    "ok": true,
    "detail": {
-    "sha": "a2c0816150869ab0"
+    "sha": "88947e37ebd0c877"
    }
   },
   {
    "name": "fps: Reel @60 and Reel30 @30 identical at t=12.4 s",
    "ok": true,
    "detail": {
-    "sha": "de2643c1a55290d7"
+    "sha": "095011d0b122df0f"
    }
   },
   {
@@ -90,6 +90,13 @@
    "ok": true,
    "detail": {
     "error": "/public/rive/does-not-exist.riv: HTTP 404"
+   }
+  },
+  {
+   "name": "mp4: output/final_reel.mp4 decodes with no errors",
+   "ok": true,
+   "detail": {
+    "decoded": true
    }
   }
  ]

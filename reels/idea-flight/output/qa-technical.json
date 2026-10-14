@@ -1,6 +1,6 @@
 {
  "file": "output/final_reel.mp4",
- "bytes": 3932270,
+ "bytes": 3877202,
  "video": {
   "codec_name": "h264",
   "profile": "High",
@@ -31,9 +31,9 @@
   "irregularDeltas": 0
  },
  "loudness": {
-  "integratedLUFS": -18.4,
+  "integratedLUFS": -16.0,
   "LRA": 12.6,
-  "truePeakDBFS": -6.7
+  "truePeakDBFS": -4.3
  },
  "black": [],
  "frozenOver3s": [],

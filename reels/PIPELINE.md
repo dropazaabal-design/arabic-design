@@ -395,7 +395,7 @@ python3 reels/tools/qa_gates.py --self-test              # منطق البواب
 | `black/freeze` | يوجد سواد، أو تجميد > 3 ث |
 | `silence` (اختيارية: `maxSilenceSeconds`) | صمت أطول من الحد (−45 dB). لا يفرضها الريلان السابقان: في `power-of-no-b` تسع فترات صمت > 0.8 ث |
 | `render tests` (اختيارية: `renderTests`) | `output/qa-render-tests.json` فيه اختبار فاشل أو غائب |
-| `sync` | سطر من `timeline.json` غير موجود في المزيج، أو انحراف > 20 مللي ث |
+| `sync` | سطر من `timeline.json` غير موجود في المزيج، أو انحراف > 20 مللي ث (أو `qa.maxSyncMs` إن كان أشد؛ لا يُسمح بأوسع) |
 | `motion` | لقطة (غير مستثناة في `stillAllow`) فيها سكون أطول من `maxStillSeconds` |
 | `arabic` | خطأ من فحص استوديو بصيرة غير معفى. الإعفاء يحتاج `waiveReason` مكتوبًا |
 | `on-screen text` | حرف لاتيني أو رقم شرقي (٠–٩) في `onScreen` |

@@ -45,6 +45,7 @@
   "maxStillSeconds": 2.0,
   "stillAllow": [],
   "maxSilenceSeconds": 0.8,
-  "renderTests": true
+  "renderTests": true,
+  "maxSyncMs": 14
  }
 }

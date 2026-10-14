@@ -15,6 +15,7 @@ Per-reel settings live in script.json → "qa" (absent = the reel is not gated):
           "maxStillSeconds": 2.0, "stillAllow": ["sh30"],
           "maxSilenceSeconds": 0.8,                 opt-in: fail on any silence longer than this (verify.py, −45 dB)
           "renderTests": true,                      opt-in: output/qa-render-tests.json must show every test passing
+          "maxSyncMs": 14,                          opt-in: a stricter line-sync limit than the default 20 ms (never looser)
           "waive": { "arabic": ["text.clipped-word"] }, "waiveReason": "…" }   a waiver needs a reason
 The frame rate in "spec" is the reel's own (timeline.json: 30 or 60). Loudness: −16 ± 1 LUFS, true peak ≤ −4 dBTP.
 """
@@ -102,7 +103,8 @@ def gates(reel, m=None):
 
     seg_ids = [s['id'] for s in tl['segments']]
     found = {d['id']: d for d in sync['detail']}
-    add('sync', sorted(found) == sorted(seg_ids) and sync['maxAbsOffsetMs'] <= MAX_SYNC_MS, f"{len(found)}/{len(seg_ids)} lines, max {sync['maxAbsOffsetMs']} ms")
+    sync_ms = min(MAX_SYNC_MS, qa.get('maxSyncMs', MAX_SYNC_MS))   # a reel may only tighten the limit
+    add('sync', sorted(found) == sorted(seg_ids) and sync['maxAbsOffsetMs'] <= sync_ms, f"{len(found)}/{len(seg_ids)} lines, max {sync['maxAbsOffsetMs']} ms (limit {sync_ms:g})")
 
     allow = set(qa.get('stillAllow', []))
     still = [(s['shot'], s['longestStillSeconds']) for s in motion['shots'] if s['shot'] not in allow and s['longestStillSeconds'] > qa.get('maxStillSeconds', 2.0)]
@@ -194,6 +196,7 @@ def self_test():
         qa_on = {'duration': [60, 75], 'cta': {'seg': 's02', 'srt': 'تابعنا'}, 'maxSilenceSeconds': 0.4}
         base_script = {'onScreen': [{'id': 'a', 'text': 'تجربة آش، 1955'}], 'qa': {'duration': [60, 75], 'cta': {'seg': 's02', 'srt': 'تابعنا'}}}
         expect('silence', lambda: w('script.json', {**base_script, 'qa': qa_on}), lambda: w('script.json', base_script))
+        expect('sync', lambda: w('script.json', {**base_script, 'qa': {**base_script['qa'], 'maxSyncMs': 10}}), lambda: w('script.json', base_script))
         w('output/qa-render-tests.json', {'passed': 11, 'failed': 1})
         expect('render tests', lambda: w('script.json', {**base_script, 'qa': {**base_script['qa'], 'renderTests': True}}), lambda: w('script.json', base_script))
         expect('duration', lambda: w('output/qa-technical.json', {**tech, 'duration': {'container': 80}}), lambda: w('output/qa-technical.json', tech))
