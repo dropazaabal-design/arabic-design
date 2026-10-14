@@ -17,6 +17,8 @@ Hard rules (details in PIPELINE.md §1):
 - Motion: use `reels/motion` (`@motion/index`, README there) — GSAP via the official `useGsapTimeline` for element
   choreography, `@remotion/paths` for drawing/paths/morphs, `RiveActor` for Rive (never `@remotion/rive`), all as
   functions of `t = frame / fps` in seconds. No other timeline, no second path or easing library. New reels: 60 fps.
+- 3D is optional (`creative-3d`): Blender through MCP, see `reels/creative-3d/README.md`. Run
+  `python3 reels/creative-3d/backend.py check` first; exit 1 = no Blender → stay in `creative-motion` (Remotion).
 - Give `script.json` a `"qa"` block (PIPELINE.md §12.1) and run
   `python3 reels/tools/qa_gates.py reels/<slug> --measure` until it prints `ALL GATES PASS` before opening or
   updating a PR; CI (`.github/workflows/reel-qa.yml`) runs the same gates on every PR touching `reels/`.
