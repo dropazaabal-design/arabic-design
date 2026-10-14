@@ -303,11 +303,11 @@ export const S10Three: React.FC<ShotProps & { t0: number }> = ({ t, T }) => {
   const items: Array<[number, number, React.ReactNode, string]> = [[B.money, 300, <Bills key="b" />, 'فلوس'], [B.time, 790, <Hourglass key="h" />, 'وقت'], [B.effort, 540, <Drop key="d" />, 'تعب']];
   return (
     <Frame T={T} bg={C.night} start={{ cx: 540, cy: 990, zoom: 0.9 }} moves={[{ at: 0, dur: 6, cx: 540, cy: 1100, zoom: 0.95, ease: 'sine.inOut' }]}
-      overlay={<>{items.map(([at, x, , label], i) => <Pill key={i} t={T} from={at + 0.75} to={99} text={label} top={1610 - (i === 2 ? 80 : 0)} left={x - 150} width={300} size={52} bg={C.velvet} />)}</>}>
+      overlay={<>{items.map(([at, x, , label], i) => <Pill key={i} t={T} from={at + 0.3} to={99} text={label} top={1610 - (i === 2 ? 80 : 0)} left={x - 150} width={300} size={52} bg={C.velvet} />)}</>}>
       <Tank T={T} doorL={0.3} doorR={0.3}>
         <g transform="translate(540 1640) scale(0.95)"><Ticket /></g>
         {items.map(([at, x, node], i) => {
-          const p = tween(T, at - 0.3, at + 0.75, 0, 1, 'power2.in');
+          const p = tween(T, at - 0.35, at + 0.3, 0, 1, 'power2.in'); // lands as the word ends: «تعب» still reads before the cut
           const y = lerp(300, 1560 - (i === 2 ? 80 : 0), p);
           return <g key={i} transform={`translate(${x + Math.sin(p * 9) * 30 * (1 - p)} ${y}) rotate(${(1 - p) * 30 * (i - 1)}) scale(0.9)`} opacity={T > at - 0.3 ? 1 : 0}>{node}</g>;
         })}

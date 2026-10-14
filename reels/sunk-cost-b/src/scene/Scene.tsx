@@ -33,7 +33,10 @@ export const Scene: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: C.sky }}>
       {SHOTS.map(([t0, Comp, id], i) => {
-        const f0 = Math.round(t0 * fps), f1 = i + 1 < SHOTS.length ? Math.round(SHOTS[i + 1][0] * fps) : end;
+        // cuts on the 60-fps grid at any fps (a half frame at 30 fps), so every clock inside a shot (t, the GSAP camera)
+        // reads the same seconds at 30 and 60 fps and Reel30 is exactly every other frame of Reel
+        const at = (s: number) => Math.round(s * 60) * fps / 60;
+        const f0 = at(t0), f1 = i + 1 < SHOTS.length ? at(SHOTS[i + 1][0]) : end;
         return <Sequence key={id} from={f0} durationInFrames={f1 - f0} name={id}><Shot t0={f0 / fps} C={Comp} /></Sequence>;
       })}
     </AbsoluteFill>

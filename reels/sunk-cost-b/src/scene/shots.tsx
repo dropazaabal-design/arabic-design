@@ -162,11 +162,13 @@ export const S02Inside: React.FC<ShotProps> = ({ t, T, t0 }) => {
       { at: L(B.wrong - 0.8), dur: 0.5, cx: 520, cy: 520, zoom: 1.5, ease: 'power3.out' },
       { at: L(B.wrong + 0.2), dur: 0.5, cx: 600, cy: 1150, zoom: 1.3, ease: 'power2.inOut' },
       { at: L(B.off - 0.3), dur: 0.8, cx: 700, cy: 1100, zoom: 1.05, ease: 'power2.inOut' },
+      { at: L(B.dist - 0.25), dur: 2.8, cx: 680, cy: 1330, zoom: 1.45, ease: 'sine.inOut' }, // his «حرام»… her calm smile beside him
     ]}>
       <Interior T={T} dist={distAt(T)} moving={moving} km={kmAt(T)} front={<g transform={`translate(1160 ${FLOOR})`}><rect x={-60} y={-640} width={120} height={640} fill={C.busDeep} {...stroke(LINE)} /><rect x={-50 + 100 * tween(T, B.next + 0.3, B.next + 0.7, 0, 1) * tween(T, B.aunt + 2.4, B.aunt + 2.8, 1, 0)} y={-630} width={100} height={620} fill={C.busWin} opacity={0.7} /></g>}>
         <g transform={`translate(0 ${sway(T, moving)})`}>
           <Aunt x={AX} y={SY} s={SS * 0.95} T={t} sit={1} expr={'satisfied'} look={[-0.4, 0]} pose={P({ armL: [40, 70], armR: [40, 70], handL: 'pinch', handR: 'pinch' })} />
-          <Hero x={HX} y={SY} s={SS} T={t} sit={1 - rise} expr={expr} look={look} pose={P({ lean: rise * 16, tilt: T > B.wrong - 0.2 && T < B.wrong + 0.3 ? -10 : 0 })} />
+          <Hero x={HX} y={SY} s={SS} T={t} sit={1 - rise} expr={expr} look={look} pose={{ ...poseTrack(s30(T), [[0, P({})], [s30(B.dist - 0.3), P({ armL: [26, -60], armR: [26, -60], handL: 'fist', handR: 'fist' })]], 9), lean: rise * 16,
+            tilt: (T > B.wrong - 0.2 && T < B.wrong + 0.3 ? -10 : 0) + 9 * Math.sin((T - B.no) * Math.PI * 6) * tween(T, B.no - 0.05, B.no + 0.55, 1, 0) * (T > B.no - 0.05 ? 1 : 0) }} />
         </g>
       </Interior>
     </Frame>
@@ -271,13 +273,19 @@ export const S06Map: React.FC<ShotProps> = ({ t, T, t0 }) => {
   const drive = tween(T, t0, B.sank, 0.45, 1, 'power1.inOut');
   const sink = tween(T, B.sank - 0.2, B.either + 0.4, 0, 1, 'power2.inOut');
   const bus = alongPath(ROUTE, drive);
+  const follow = (x: number) => { const p = alongPath(ROUTE, tween(x, t0, B.sank, 0.45, 1, 'power1.inOut')); return { x: lerp(540, p.x, 0.8), y: p.y + 120 }; };
   const fresh = tween(T, B.nearest - 0.6, B.nearest + 0.9, 0, 1, 'power2.inOut');
   const ask = tween(T, B.here - 0.3, B.here + 0.2, 0, 1);
   return (
-    <Frame T={T} bg={C.map} start={{ cx: 540, cy: 980, zoom: 1.0 }} moves={[{ at: L(B.sank - 0.4), dur: 1.4, cx: 520, cy: 1080, zoom: 0.92, ease: 'power2.inOut' }, { at: L(B.here - 0.4), dur: 1.2, cx: 560, cy: 960, zoom: 0.95, ease: 'power2.inOut' }]}
+    <Frame T={T} bg={C.map} start={{ cx: follow(t0).x, cy: follow(t0).y, zoom: 1.3 }} moves={[
+      ...Array.from({ length: 6 }, (_, k) => { const a = t0 + k * (B.sank - 0.4 - t0) / 6, b = t0 + (k + 1) * (B.sank - 0.4 - t0) / 6; return { at: L(a), dur: b - a, cx: follow(b).x, cy: follow(b).y, zoom: 1.3, ease: 'none' }; }),
+      { at: L(B.sank - 0.4), dur: 1.4, cx: 520, cy: 1080, zoom: 0.92, ease: 'power2.inOut' },
+      { at: L(B.sank + 1.0), dur: B.here - 0.4 - (B.sank + 1.0), cx: 470, cy: 1130, zoom: 0.98, ease: 'sine.inOut' }, // back along what sank (bus stays in frame)
+      { at: L(B.here - 0.4), dur: 1.2, cx: 560, cy: 960, zoom: 0.95, ease: 'power2.inOut' },
+      { at: L(B.here + 0.8), dur: 2.4, cx: 540, cy: 850, zoom: 0.98, ease: 'sine.inOut' }]}
       overlay={<>
         <Pill t={T} from={B.name - 0.05} to={B.q - 0.3} text="مغالطة التكلفة الغارقة" top={260} size={58} bg={C.cap} />
-        <Pill t={T} from={B.here - 0.1} to={99} text="من هنا… وين أقرب طريق؟" top={260} size={56} bg={C.pin} />
+        <Pill t={T} from={B.here - 0.1} to={99} text="من هنا… وين أقرب طريق؟" top={260} left={30} width={700} size={52} bg={C.pin} /> {/* left of the bus column, never over it */}
       </>}>
       <rect x={-700} y={-600} width={2600} height={3400} fill={C.map} />
       {Array.from({ length: 30 }, (_, i) => <path key={i} d={wobRect(-500 + (i % 6) * 330, -200 + Math.floor(i / 6) * 420, 260, 320, 20, i, 4)} fill={C.mapBlock} />)}
@@ -288,7 +296,7 @@ export const S06Map: React.FC<ShotProps> = ({ t, T, t0 }) => {
       <DrawPath d={ROUTE} p={drive} stroke={C.stripe} strokeWidth={6} strokeDasharray={undefined} />
       <DrawPath d={ROUTE} p={Math.min(drive, sink)} stroke={C.water} strokeWidth={140} />
       <DrawPath d={ROUTE} p={Math.min(drive, sink * 0.98)} stroke={C.waterDeep} strokeWidth={70} opacity={0.6} />
-      {sink > 0.1 && Array.from({ length: 8 }, (_, i) => { const w = alongPath(ROUTE, Math.min(sink, drive) * (i / 8)); return <path key={i} d={`M${w.x - 30} ${w.y} q15 -12 30 0 q15 12 30 0`} fill="none" {...stroke(5, C.stripe)} opacity={0.8} />; })}
+      {sink > 0.1 && Array.from({ length: 8 }, (_, i) => { const w = alongPath(ROUTE, Math.min(sink, drive) * (((i + T * 0.5) % 8) / 8)); return <path key={i} d={`M${w.x - 30} ${w.y} q15 -12 30 0 q15 12 30 0`} fill="none" {...stroke(5, C.stripe)} opacity={0.8} />; })}
       {/* home, and the new useful line from where he is now */}
       <g transform={`translate(${HOME[0]} ${HOME[1]})`}><path d="M0 60 C-40 18 -40 -34 0 -34 C40 -34 40 18 0 60Z" fill={C.pin} {...stroke(LINE)} /><circle cy={-4} r={12} fill={C.stripe} /><text x={10} y={-56} textAnchor="middle" direction="rtl" fontFamily={FONT} fontWeight={900} fontSize={50} fill={INK}>البيت</text></g>
       <DrawPath d={NEW} p={fresh} stroke={C.pin} strokeWidth={16} strokeDasharray={undefined} />

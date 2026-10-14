@@ -19,7 +19,8 @@ const { renderStill, selectComposition } = req('@remotion/renderer');
 const { webpackOverride } = await import(pathToFileURL(path.join(root, 'webpack-override.mjs')).href);
 const tl = JSON.parse(readFileSync(path.join(root, 'timeline.json'), 'utf8'));
 const times = process.argv.slice(2).map(Number);
-const at = times.length ? times : [0.2, 0.37, 0.62, 0.9].map((k) => +(tl.totalSeconds * k).toFixed(2));
+// on the 30-fps grid, so both compositions show the very same instant (e.g. 15.55 s is frame 933 @60 but 466.5 @30)
+const at = (times.length ? times : [0.2, 0.37, 0.62, 0.9].map((k) => tl.totalSeconds * k)).map((t) => +(Math.round(t * 30) / 30).toFixed(4));
 const tmp = mkdtempSync(path.join(os.tmpdir(), 'render-check-'));
 const browserExecutable = process.env.REMOTION_CHROME;
 const serveUrl = await bundle({ entryPoint: path.join(root, 'src/video/index.ts'), publicDir: path.join(root, 'assets'), webpackOverride });

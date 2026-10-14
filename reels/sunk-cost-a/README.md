@@ -28,4 +28,5 @@ npm run render       # التصيير النهائي + إعادة الترميز
 npm run cover
 npm run check        # ترتيب الإطارات، وتطابق 30/60، وفك MP4
 npm run gates        # بوابات الجودة على الملف النهائي
+python3 ../tools/patch_render.py . A-B   # إصلاح صورة في مدى إطارات دون تصيير كامل (الصوت كما هو)
 ```

@@ -74,7 +74,10 @@
 | `remotion.config.ts` + `AUDIO_ONLY=1` | تصيير الصوت وحده في ثوانٍ لضبط `MIX_GAIN` على −16 LUFS قبل أي صورة | `npm run mix` |
 | `render_final.sh` | التصيير النهائي ثم إعادة الترميز (§11)، ويسجل الزمن في `output/render-time.json` | `npm run render` |
 | `render_check.mjs` | ترتيب الإطارات، وتطابق 30/60، وفك MP4 ← `output/qa-render-tests.json` | `npm run check` |
+| `patch_render.py` | إصلاح صورة في ثوانٍ بعد التصيير النهائي: يصيّر مدى الإطارات المتغيرة وحده، ويلصقه في `out/render-raw.mp4`، ثم يعيد الترميز مرة واحدة ويتحقق من عدد الإطارات. الصوت يُنسخ كما هو. وفّر تصييرين كاملين (نحو 14 د لكل منهما) في ريلي التكلفة الغارقة | `python3 ../tools/patch_render.py . 480-700 2080-2820` |
 | `verify.py`، `synccheck.py`، `motion.py`، `arabic-check.mjs` | نسخ مشتركة يشغّلها `qa_gates.py` عند غياب نسخة الريل | `npm run gates` |
+
+**القطع على شبكة 60:** في `Scene.tsx` تبدأ كل لقطة عند `Math.round(t0 * 60) * fps / 60` (نصف إطار عند 30)، لا عند `Math.round(t0 * fps)`. وإلا فإن ساعة اللقطة وكاميرا GSAP تبدآن عند لحظة مختلفة بين 30 و60، ويفشل تطابق 30/60 في اللقطات التي يقع قطعها بين إطارين من 30.
 
 ومن `reels/sunk-cost-a/src/scene/kit.tsx`: `sitBuild` (الجلوس والقيام بطول الفخذ)، و`Hero` بيدين IK وأغراض في اليد، و`SeatBack`/`SeatFront`. ومن `reels/motion`: `Pill` و`EndCard` (عناوين HTML عربية وبطاقة الختام).
 
