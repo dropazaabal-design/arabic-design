@@ -1,0 +1,66 @@
+{
+ "reel": "reels/power-of-no-b",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no real faces, no third-party images. The rig, fonts and most effects are imported from reels/mukarram, reels/doublethink and reels/boiling-frog, not copied.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s30.wav (roles N/W)",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (same as Baseera 01/02/04), generation yZoD5vUcUqMEv8yAWTiO (take N1, flow e6FvXUX40bhHWtaWk5J3), cut at its own pauses by tools/align.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-N1-yZoD5vUcUqMEv8yAWTiO.mp3",
+   "sha256": "dd850ef1281ab67991306a1d6e63638bac18f8fd158cf7b2479a395c0105826a"
+  },
+  {
+   "path": "assets/audio/voice/s02,s15,s18,s26,s28,s30.wav (role C)",
+   "source": "ElevenLabs eleven_v4, voice rpGHcNQJvO8dFNNFNj1v (Fahad — Saudi, warm), generation HiESb63L1QkQcCiYZmRr (take C2, same flow), cut by tools/align.py",
+   "rights": "same as above",
+   "master": "audio/take-C2-HiESb63L1QkQcCiYZmRr.mp3",
+   "sha256": "d62b3cb1a0968c33ea7ba4b58e05e3671e60b2795879f46a643d4969dc37b65e"
+  },
+  {
+   "path": "audio/take-N3-CA7fgIbiGRt8M4ITGZ3Y.mp3 · audio/take-C3-wbbjCw9p6lzPS8TMmtkx.mp3",
+   "source": "ElevenLabs alternative takes of the same requests (not used). Variations N2 and C1 were not kept: N2 ran its lines together (7 pauses for 17 lines) and C1 was not needed once C2 matched the script",
+   "rights": "same as above"
+  },
+  {
+   "path": "audio/take-N.words.json · audio/take-C.words.json · audio/take-*.scribe.raw.json · audio/alignment.json",
+   "source": "ElevenLabs Scribe (eleven_scribe_v1) on the chosen takes attached as plain files: word times and the independent pronunciation check",
+   "rights": "derived data"
+  },
+  {
+   "path": "assets/sfx/{buzz,whomp}.wav",
+   "source": "original, synthesised with numpy by tools/sfx.py (seeded)",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "imported effects (not copied): reels/mukarram/assets/sfx {chime,click,creak,crinkle,breeze,boing,pop,snap,thud,tick,whoosh} · reels/doublethink/assets/sfx {casters,clack,rattle} · reels/boiling-frog/assets/sfx {gulp,tap}",
+   "source": "those reels' own manifests",
+   "rights": "as recorded there (original/synthesised)"
+  },
+  {
+   "path": "fonts: reels/mukarram/assets/fonts cairo-800/900 (imported)",
+   "source": "Cairo, SIL Open Font License (as recorded in reels/mukarram)",
+   "rights": "OFL"
+  },
+  {
+   "path": "src/characters/worker.tsx",
+   "source": "original: the worker (coat with a tail that can catch, red scarf, curly hair, breast-pocket phone, front pocket for the lid) on the reels/mukarram rig; arm IK imported from reels/doublethink",
+   "rights": "original"
+  },
+  {
+   "path": "src/characters/studio.tsx",
+   "source": "original: exit door with «خروج», digital clock, handover list «التسليم», softboxes, tripod camera, blue backdrop, wheeled photo desk, cup and red lid, equipment bag, decor plant, frown masks, thought bubble",
+   "rights": "original"
+  },
+  {
+   "path": "colleagues",
+   "source": "the Litterer, Spitter and Passerby presets of reels/mukarram/src/characters/cast.tsx (imported, unchanged)",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "publish/cover-1080x1920.jpg",
+   "source": "rendered from the reel's own world (Cover composition)",
+   "rights": "original",
+   "sha256": "00f21ecc08196722906d704c388f63fbed10b8ed2a75d81e7c5c9015470a20d5"
+  }
+ ]
+}
