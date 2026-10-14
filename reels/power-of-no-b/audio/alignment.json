@@ -1,0 +1,848 @@
+[
+ {
+  "seg": "s01",
+  "script": "باقي",
+  "heard": "باقي",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "دقيقة",
+  "heard": "دقيقة",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "ويطلع",
+  "heard": "ويطلع",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "من",
+  "heard": "من",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "الاستوديو…",
+  "heard": "الاستوديو",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "لولا",
+  "heard": "لولا",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "«طلب",
+  "heard": "طلب",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "صغير».",
+  "heard": "صغير.",
+  "match": true
+ },
+ {
+  "seg": "s03",
+  "script": "أكيد!",
+  "heard": "أكيد.",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "ثم",
+  "heard": "ثم",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "حقيبة",
+  "heard": "حقيبة",
+  "match": true
+ },
+ {
+  "seg": "s04",
+  "script": "المعدات…",
+  "heard": "المعدات",
+  "match": true
+ },
+ {
+  "seg": "s05",
+  "script": "أكيد.",
+  "heard": "أكيد.",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "ونبتة",
+  "heard": "ونبتة",
+  "match": true
+ },
+ {
+  "seg": "s06",
+  "script": "الديكور…",
+  "heard": "الديكور",
+  "match": true
+ },
+ {
+  "seg": "s07",
+  "script": "أكيد!",
+  "heard": "أكيد.",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "كل",
+  "heard": "كل",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "واحد",
+  "heard": "واحد",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "رجع",
+  "heard": "رجع",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "لشغله…",
+  "heard": "لشغله",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "وهو",
+  "heard": "وهو",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "بقي",
+  "heard": "بقي",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "مكانه،",
+  "heard": "مكانه",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "شايل",
+  "heard": "شايل",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "نص",
+  "heard": "نص",
+  "match": true
+ },
+ {
+  "seg": "s08",
+  "script": "الاستوديو.",
+  "heard": "الاستوديو.",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "اهتز",
+  "heard": "اهتز",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "جواله:",
+  "heard": "جواله.",
+  "match": true
+ },
+ {
+  "seg": "s09",
+  "script": "«وصلتُ».",
+  "heard": "وصلت.",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "حرّك",
+  "heard": "حرك",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "إصبعه",
+  "heard": "إصبعه",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "ليرد…",
+  "heard": "ليرد",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "فانزلق",
+  "heard": "فانزلق",
+  "match": true
+ },
+ {
+  "seg": "s10",
+  "script": "الكوب.",
+  "heard": "الكوب",
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "مسكه",
+  "heard": "مسكه",
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "بذقنه…",
+  "heard": "بذقنه",
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "فمالت",
+  "heard": "فمالت",
+  "match": true
+ },
+ {
+  "seg": "s11",
+  "script": "النبتة.",
+  "heard": "النبتة.",
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "استقام",
+  "heard": "استقام",
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "ينقذها…",
+  "heard": "ينقذها",
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "فعلق",
+  "heard": "فعلق",
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "معطفه",
+  "heard": "معطفه",
+  "match": true
+ },
+ {
+  "seg": "s12",
+  "script": "بالباب!",
+  "heard": "بالباب.",
+  "match": true
+ },
+ {
+  "seg": "s13",
+  "script": "طالع",
+  "heard": "طالع",
+  "match": true
+ },
+ {
+  "seg": "s13",
+  "script": "الساعة.",
+  "heard": "الساعة",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "كان",
+  "heard": "كان",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "يقدر",
+  "heard": "يقدر",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "يقول:",
+  "heard": "يقول",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "«كل",
+  "heard": "كل",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "واحد",
+  "heard": "واحد",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "ياخذ",
+  "heard": "ياخذ",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "غرضه»…",
+  "heard": "غرضه",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "لكنه",
+  "heard": "لكنه",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "تخيّل",
+  "heard": "تخيل",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "وجوههم،",
+  "heard": "وجوههم",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "وبلع",
+  "heard": "وبلع",
+  "match": true
+ },
+ {
+  "seg": "s14",
+  "script": "الجملة.",
+  "heard": "الجملة",
+  "match": true
+ },
+ {
+  "seg": "s16",
+  "script": "في",
+  "heard": "في",
+  "match": true
+ },
+ {
+  "seg": "s16",
+  "script": "خياله…",
+  "heard": "خياله.",
+  "match": true
+ },
+ {
+  "seg": "s16",
+  "script": "زعلوا",
+  "heard": "زعلوا",
+  "match": true
+ },
+ {
+  "seg": "s16",
+  "script": "كلهم،",
+  "heard": "كلهم",
+  "match": true
+ },
+ {
+  "seg": "s16",
+  "script": "وانطفى",
+  "heard": "وانطفأ",
+  "match": false
+ },
+ {
+  "seg": "s16",
+  "script": "الاستوديو.",
+  "heard": "الاستوديو.",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "لا،",
+  "heard": "لا",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "اليوم",
+  "heard": "اليوم",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "أقدر.",
+  "heard": "أقدر.",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "عندي",
+  "heard": "عندي",
+  "match": true
+ },
+ {
+  "seg": "s17",
+  "script": "موعد.",
+  "heard": "موعد.",
+  "match": true
+ },
+ {
+  "seg": "s19",
+  "script": "سحب",
+  "heard": "سحب",
+  "match": true
+ },
+ {
+  "seg": "s19",
+  "script": "المكتب",
+  "heard": "المكتب",
+  "match": true
+ },
+ {
+  "seg": "s19",
+  "script": "بنفسه،",
+  "heard": "بنفسه.",
+  "match": true
+ },
+ {
+  "seg": "s20",
+  "script": "والثاني",
+  "heard": "والثاني",
+  "match": true
+ },
+ {
+  "seg": "s20",
+  "script": "أخذ",
+  "heard": "أخذ",
+  "match": true
+ },
+ {
+  "seg": "s20",
+  "script": "حقيبته،",
+  "heard": "حقيبته.",
+  "match": true
+ },
+ {
+  "seg": "s21",
+  "script": "والثالث",
+  "heard": "والثالث",
+  "match": true
+ },
+ {
+  "seg": "s21",
+  "script": "نبتته…",
+  "heard": "نبتته.",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "كل",
+  "heard": "كل",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "هذا؟",
+  "heard": "هذا",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "كان",
+  "heard": "كان",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "ينتظر",
+  "heard": "ينتظر",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "كلمة",
+  "heard": "كلمة",
+  "match": true
+ },
+ {
+  "seg": "s22",
+  "script": "وحدة!",
+  "heard": "واحدة.",
+  "match": false
+ },
+ {
+  "seg": "s23",
+  "script": "لما",
+  "heard": "لما",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "تربط",
+  "heard": "تربط",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "قيمتك",
+  "heard": "قيمتك",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "برضا",
+  "heard": "برضا",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "كل",
+  "heard": "كل",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "الناس،",
+  "heard": "الناس",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "يصير",
+  "heard": "يصير",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "الرفض",
+  "heard": "الرفض",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "أثقل",
+  "heard": "أثقل",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "من",
+  "heard": "من",
+  "match": true
+ },
+ {
+  "seg": "s23",
+  "script": "أغراضهم.",
+  "heard": "أغراضهم.",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "وهذا",
+  "heard": "وهذا",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "يلامس",
+  "heard": "يلامس",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "يسمّيه",
+  "heard": "يسميه",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "الباحثون:",
+  "heard": "الباحثون",
+  "match": true
+ },
+ {
+  "seg": "s24",
+  "script": "السوسيوتروبيّة.",
+  "heard": "السوسيوتروبية.",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "قال",
+  "heard": "قال",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "«لا»",
+  "heard": "لا",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "للطلب،",
+  "heard": "للطلب",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "مو",
+  "heard": "مو",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "للناس…",
+  "heard": "للناس.",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "والعلاقة",
+  "heard": "والعلاقة",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "بقيت",
+  "heard": "بقيت",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "مثل",
+  "heard": "مثل",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s25",
+  "script": "هي.",
+  "heard": "هي.",
+  "match": true
+ },
+ {
+  "seg": "s27",
+  "script": "إذا",
+  "heard": "إذا",
+  "match": true
+ },
+ {
+  "seg": "s27",
+  "script": "بكرة…",
+  "heard": "بكرا",
+  "match": false
+ },
+ {
+  "seg": "s27",
+  "script": "عشر",
+  "heard": "عشر",
+  "match": true
+ },
+ {
+  "seg": "s27",
+  "script": "دقايق.",
+  "heard": "دقايق.",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "إذا",
+  "heard": "إذا",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "عجبك",
+  "heard": "عجبك",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "الريل،",
+  "heard": "الريل",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "حط",
+  "heard": "حط",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "لايك",
+  "heard": "لايك",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "وتابعنا.",
+  "heard": "وتابعنا.",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "وإذا",
+  "heard": "وإذا",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "قلت",
+  "heard": "قلت",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "لا…",
+  "heard": "لا",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "نقول",
+  "heard": "نقول",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "لك:",
+  "heard": "لك",
+  "match": true
+ },
+ {
+  "seg": "s29",
+  "script": "تمام!",
+  "heard": "تمام.",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "ممكن",
+  "heard": "ممكن",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "تمسك",
+  "heard": "تمسك",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "الكوب",
+  "heard": "الكوب",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "دقيقة؟",
+  "heard": "دقيقة؟",
+  "match": true
+ },
+ {
+  "seg": "s15",
+  "script": "وتقدر",
+  "heard": "وتقدر",
+  "match": true
+ },
+ {
+  "seg": "s15",
+  "script": "تنقل",
+  "heard": "تنقل",
+  "match": true
+ },
+ {
+  "seg": "s15",
+  "script": "المكتب؟",
+  "heard": "المكتب؟",
+  "match": true
+ },
+ {
+  "seg": "s18",
+  "script": "تمام.",
+  "heard": "تمام.",
+  "match": true
+ },
+ {
+  "seg": "s26",
+  "script": "ممكن…؟",
+  "heard": "ممكن...",
+  "match": true
+ },
+ {
+  "seg": "s28",
+  "script": "كنت",
+  "heard": "كنت",
+  "match": true
+ },
+ {
+  "seg": "s28",
+  "script": "بسأل",
+  "heard": "بسأل",
+  "match": true
+ },
+ {
+  "seg": "s28",
+  "script": "وين",
+  "heard": "وين",
+  "match": true
+ },
+ {
+  "seg": "s28",
+  "script": "غطا",
+  "heard": "غطا",
+  "match": true
+ },
+ {
+  "seg": "s28",
+  "script": "الكوب!",
+  "heard": "الكوب.",
+  "match": true
+ },
+ {
+  "seg": "s30",
+  "script": "تمام!",
+  "heard": "تمام",
+  "match": true
+ }
+]

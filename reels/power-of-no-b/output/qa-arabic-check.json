@@ -1,0 +1,13 @@
+{
+ "tool": "Baseera studio check (letters, hamza, ة/ه, ى/ي, digits, punctuation) on every on-screen string",
+ "strings": 16,
+ "errors": 1,
+ "warnings": 0,
+ "textIssues": [
+  [
+   "error",
+   "text.clipped-word",
+   "«الجملة»: كلمة أعرض من مساحتها وستُقص."
+  ]
+ ]
+}
