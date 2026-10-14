@@ -337,5 +337,23 @@
       "id": "t7",
       "text": "5:06"
     }
-  ]
+  ],
+  "qa": {
+    "duration": [
+      88,
+      92
+    ],
+    "cta": {
+      "seg": "s29",
+      "srt": "تابعنا"
+    },
+    "maxStillSeconds": 2.0,
+    "stillAllow": [],
+    "waive": {
+      "arabic": [
+        "text.clipped-word"
+      ]
+    },
+    "waiveReason": "the checker lays each string into a carousel stand-in; «السوسيوتروبيّة» at 136 px overflows its 888 px slot there, while in the reel it is 86 px inside a pill and fully visible (output/qa_report.md)"
+  }
 }

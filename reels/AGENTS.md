@@ -14,5 +14,8 @@ Hard rules (details in PIPELINE.md §1):
 - Every number on screen comes from a source you actually read; record what you read in `script.md`.
 - Arabic only inside the frame (RTL, Western digits); no diagnosis; provocation = a question, not blame.
 - Never claim you listened to or watched the result; say what was measured.
+- Give `script.json` a `"qa"` block (PIPELINE.md §12.1) and run
+  `python3 reels/tools/qa_gates.py reels/<slug> --measure` until it prints `ALL GATES PASS` before opening or
+  updating a PR; CI (`.github/workflows/reel-qa.yml`) runs the same gates on every PR touching `reels/`.
 - No force push, no merge, no publishing; open a **draft** PR to `claude/new-session-gmtqwj` and read its state.
 - Do not commit `node_modules/`, `out/`, `audio/*.wav`.

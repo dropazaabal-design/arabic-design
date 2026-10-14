@@ -300,5 +300,17 @@
       "id": "cover",
       "text": "65% ضغطوا الزر الأخير… وأنت؟"
     }
-  ]
+  ],
+  "qa": {
+    "duration": [
+      60,
+      75
+    ],
+    "cta": {
+      "seg": "s18",
+      "srt": "تابعنا"
+    },
+    "maxStillSeconds": 2.0,
+    "stillAllow": []
+  }
 }
