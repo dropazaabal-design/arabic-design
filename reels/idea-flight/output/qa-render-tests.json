@@ -1,0 +1,96 @@
+{
+ "tool": "tools/render-tests.mjs",
+ "passed": 12,
+ "failed": 0,
+ "results": [
+  {
+   "name": "order: Reel frame 330 (t=5.5 s, Rive input fired) before and after frames 744 and 60",
+   "ok": true,
+   "detail": {
+    "sha": "d6eb19fc121a84cc"
+   }
+  },
+  {
+   "name": "order: Probe frame 150 before and after frame 30",
+   "ok": true,
+   "detail": {
+    "sha": "e865f7bbcf923aad"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=1 s",
+   "ok": true,
+   "detail": {
+    "sha": "1cf3fc8810bfc88c"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=4.6 s",
+   "ok": true,
+   "detail": {
+    "sha": "74342af7ec11ca4c"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=6.2 s",
+   "ok": true,
+   "detail": {
+    "sha": "6b21ed09fb64b944"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=8.8 s",
+   "ok": true,
+   "detail": {
+    "sha": "a2c0816150869ab0"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=12.4 s",
+   "ok": true,
+   "detail": {
+    "sha": "de2643c1a55290d7"
+   }
+  },
+  {
+   "name": "fps: Probe @60 and Probe30 @30 identical at t=1.5 s",
+   "ok": true,
+   "detail": {
+    "sha": "82003596604fa950"
+   }
+  },
+  {
+   "name": "gsap: Probe changes between t=0.5 and t=1.5 (the timeline is really sought)",
+   "ok": true,
+   "detail": {
+    "a": "a7fd110f32c1bd0d",
+    "b": "82003596604fa950"
+   }
+  },
+  {
+   "name": "rive: the bird draws (RiveProbe, > 8 % non-black pixels at t=1 s)",
+   "ok": true,
+   "detail": {
+    "drawnShare": 0.374
+   }
+  },
+  {
+   "name": "rive: a missing file renders the fallback (red square)",
+   "ok": true,
+   "detail": {
+    "centre": [
+     255,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "rive: a missing file without fallback fails the render",
+   "ok": true,
+   "detail": {
+    "error": "/public/rive/does-not-exist.riv: HTTP 404"
+   }
+  }
+ ]
+}

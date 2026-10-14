@@ -1,0 +1,39 @@
+{
+ "fps": 60,
+ "width": 1080,
+ "height": 1920,
+ "totalSeconds": 13.6,
+ "durationInFrames": 816,
+ "measured": true,
+ "sources": {
+  "B": "take-B-HnvrIicfXJf8nNgBzxM4.mp3"
+ },
+ "loudnorm": {
+  "I": -16,
+  "TP": -5,
+  "measuredInputI": -18.16,
+  "measuredInputTP": -3.03
+ },
+ "segments": [
+  {
+   "id": "s01",
+   "take": "B",
+   "role": "N",
+   "start": 0.5,
+   "duration": 2.5,
+   "fileStart": 0.4,
+   "file": "audio/voice/s01.wav",
+   "measured": true
+  },
+  {
+   "id": "s02",
+   "take": "B",
+   "role": "N",
+   "start": 8.4,
+   "duration": 4.16,
+   "fileStart": 8.21,
+   "file": "audio/voice/s02.wav",
+   "measured": true
+  }
+ ]
+}
