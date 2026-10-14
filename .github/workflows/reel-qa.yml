@@ -27,6 +27,8 @@ jobs:
           python -m pip install --quiet numpy
       - name: Gate logic self-test
         run: python reels/tools/qa_gates.py --self-test
+      - name: creative-3d backend self-test (no Blender needed)
+        run: python reels/creative-3d/backend.py selftest
       - name: Quality gates (re-measured from each final_reel.mp4)
         run: python reels/tools/qa_gates.py --all --measure
   motion:
