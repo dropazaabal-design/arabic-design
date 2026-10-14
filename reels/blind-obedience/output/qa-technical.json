@@ -1,0 +1,161 @@
+{
+ "file": "output/final_reel.mp4",
+ "bytes": 19388667,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "30/1",
+  "avg_frame_rate": "30/1",
+  "nb_frames": "2168"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 72.277,
+  "video": 72.266667,
+  "timeline": 72.257,
+  "framesExpected": 2168
+ },
+ "cadence": {
+  "frames": 2168,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.1,
+  "LRA": 3.0,
+  "truePeakDBFS": -4.3
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [],
+ "narrationOnsets": {
+  "lines": 18,
+  "found": 16,
+  "maxAbsOffset": 0.179,
+  "notFound": [
+   "s01",
+   "s02"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.75,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s02",
+    "planned": 2.663,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s03",
+    "planned": 5.979,
+    "measured": 6.01175,
+    "offset": 0.033
+   },
+   {
+    "id": "s04",
+    "planned": 10.231,
+    "measured": 10.2623,
+    "offset": 0.031
+   },
+   {
+    "id": "s05",
+    "planned": 16.612,
+    "measured": 16.6451,
+    "offset": 0.033
+   },
+   {
+    "id": "s06",
+    "planned": 19.455,
+    "measured": 19.4955,
+    "offset": 0.041
+   },
+   {
+    "id": "s07",
+    "planned": 22.587,
+    "measured": 22.6249,
+    "offset": 0.038
+   },
+   {
+    "id": "s08",
+    "planned": 26.662,
+    "measured": 26.6982,
+    "offset": 0.036
+   },
+   {
+    "id": "s09",
+    "planned": 27.946,
+    "measured": 27.7668,
+    "offset": -0.179
+   },
+   {
+    "id": "s10",
+    "planned": 31.63,
+    "measured": 31.6662,
+    "offset": 0.036
+   },
+   {
+    "id": "s11",
+    "planned": 34.097,
+    "measured": 34.1274,
+    "offset": 0.03
+   },
+   {
+    "id": "s12",
+    "planned": 36.897,
+    "measured": 36.9416,
+    "offset": 0.045
+   },
+   {
+    "id": "s13",
+    "planned": 41.359,
+    "measured": 41.3866,
+    "offset": 0.028
+   },
+   {
+    "id": "s14",
+    "planned": 47.779,
+    "measured": 47.813,
+    "offset": 0.034
+   },
+   {
+    "id": "s15",
+    "planned": 53.276,
+    "measured": 53.2984,
+    "offset": 0.022
+   },
+   {
+    "id": "s16",
+    "planned": 56.936,
+    "measured": 56.9737,
+    "offset": 0.038
+   },
+   {
+    "id": "s17",
+    "planned": 61.12,
+    "measured": 61.1489,
+    "offset": 0.029
+   },
+   {
+    "id": "s18",
+    "planned": 66.308,
+    "measured": 66.1984,
+    "offset": -0.11
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}
