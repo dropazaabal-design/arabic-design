@@ -58,7 +58,13 @@
   },
   {
    "path": "publish/cover-1080x1920.jpg",
-   "source": "rendered from the reel's own world (Cover composition)",
+   "source": "rendered from the reel's own world (Cover composition); headline «تقول «أكيد»… وأنت تقصد «لا»؟»",
+   "rights": "original",
+   "sha256": "3a3ffbb243522d5500f03ba315bbed2e31d304272ee9e1f39f62b0fc255c9459"
+  },
+  {
+   "path": "publish/cover-v1-calm-1080x1920.jpg",
+   "source": "the first cover (headline «قال نعم… حتى اختفى تحت الطلبات!»), same frame",
    "rights": "original",
    "sha256": "00f21ecc08196722906d704c388f63fbed10b8ed2a75d81e7c5c9015470a20d5"
   }
