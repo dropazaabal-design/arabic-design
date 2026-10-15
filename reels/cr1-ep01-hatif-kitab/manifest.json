@@ -1,0 +1,269 @@
+{
+ "episode": "cr1-ep01-hatif-kitab",
+ "version": "1.0.0",
+ "written": "2026-10-15T20:32:27+00:00",
+ "deliverables": [
+  {
+   "file": "export/cr1-ep01_hatif-kitab_16x9_v1.0.0.ar.srt",
+   "bytes": 6873,
+   "sha256": "ba02c37f5c02b8f12306d58f78ce22965c0c2fb96fd52264ef4910af6dad6347",
+   "version": "1.0.0",
+   "inputsFingerprint": "d7b63277abec94f24cb8046d8fda0000997ec769cbdf5cd4a0c3d9257cbe8b5c",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_16x9_v1.0.0.mp4",
+   "bytes": 20027202,
+   "sha256": "8a9b40b79eec985fa824f757757bd8c6203d55f00b519d5b6babf930329764b5",
+   "version": "1.0.0",
+   "inputsFingerprint": "d7b63277abec94f24cb8046d8fda0000997ec769cbdf5cd4a0c3d9257cbe8b5c",
+   "report": "review/cr1-ep01_hatif-kitab_16x9_v1.0.0.json"
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_16x9_v1.0.0_cover.png",
+   "bytes": 881577,
+   "sha256": "89c91e2e11339e447f34352e9825a11c7e6a6ef35d114381717a24408a005a6e",
+   "version": "1.0.0",
+   "inputsFingerprint": "d7b63277abec94f24cb8046d8fda0000997ec769cbdf5cd4a0c3d9257cbe8b5c",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_16x9_v1.0.0_mix.flac",
+   "bytes": 9968289,
+   "sha256": "83b16ab79277c45e2c4835b0c07c22f6aebc9cb3c41e8ed6ed0f405e1cd87a67",
+   "version": "1.0.0",
+   "inputsFingerprint": "d7b63277abec94f24cb8046d8fda0000997ec769cbdf5cd4a0c3d9257cbe8b5c",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_4x5_v1.0.0.mp4",
+   "bytes": 6081548,
+   "sha256": "658285058f7f95f40bb76a70d040557be58d087d810baa47c5b3045c107f322c",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": "review/cr1-ep01_hatif-kitab_4x5_v1.0.0.json"
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_4x5_v1.0.0_cover.png",
+   "bytes": 704207,
+   "sha256": "95deb0da492d1eb444e9bf8250e9c31ef6badca1f851a79e214650723ca313c6",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_9x16_v1.0.0.mp4",
+   "bytes": 6551865,
+   "sha256": "d0d01c353f5a9eb762cd321fcbc71c6f2e0d9e902c2878ce4f7b3239bb109e24",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": "review/cr1-ep01_hatif-kitab_9x16_v1.0.0.json"
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_9x16_v1.0.0_cover.png",
+   "bytes": 1015062,
+   "sha256": "cfbe9b8886382d11911017a4ce3e8103fb10a664d8dbb16e0e8e3d997cac119f",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_reel_v1.0.0.ar.srt",
+   "bytes": 2198,
+   "sha256": "409ebec538baef6e334e822a5d8b55607a0698e631d88786e9b955476ae0c8e6",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep01_hatif-kitab_reel_v1.0.0_mix.flac",
+   "bytes": 3063069,
+   "sha256": "734f1a93cdbd2b800cbaea517aff5a8bcfb8ce221e6b7b4e38baaa1a868bd9e6",
+   "version": "1.0.0",
+   "inputsFingerprint": "d3ae7d8c0ec39103295f48d9ceea699e612a3e8a5be0a0383c66da5739a0a332",
+   "report": null
+  }
+ ],
+ "state": {
+  "approvedInputs": [
+   {
+    "file": "script-long.md",
+    "sha256": "d4f7dfbd79e6262e11ea360aeae6ba7ca5b013edd53b96b8fe8d75f471e99650"
+   },
+   {
+    "file": "script-short.md",
+    "sha256": "b2923b70c95061765b8f6b9d193f448939d2fcfc482005d79d5ef22cad171a5b"
+   },
+   {
+    "file": "audio/takes/L1-UHxukaCx2JNaLMKEotCB.mp3",
+    "sha256": "64841fd513d534852cc7e1c17af6ae655b111d32fa9a27ffa6a29f84eeb8b280"
+   },
+   {
+    "file": "audio/takes/L1-UXggKDorzaw4Bz9c0HHq.mp3",
+    "sha256": "f0644dd379fe4c6c70b2c91521f5a356ebb65c327f1b444025aacc62ec462bad"
+   },
+   {
+    "file": "audio/takes/L1-lfY1jTYIr3dKGRpxWwpX.mp3",
+    "sha256": "6be61ee1a200ffdf1e744149e802712b38e9fcacd85c9dbd2f9adcdba9aa565a"
+   },
+   {
+    "file": "audio/takes/L1-t71NFqyRowmZ0UgpOt7v.mp3",
+    "sha256": "8604dd3d135b2765a2a9e51b2522249eb1c8e8850fae2322694a4b2b2d7738ba"
+   },
+   {
+    "file": "audio/takes/L2-IWtunjq2W0Tsj3GLjRc1.mp3",
+    "sha256": "35d8cab800327fe15dbb436be7596f778d08ce0cfae8e28d49774a0575752e91"
+   },
+   {
+    "file": "audio/takes/L2-OAZWlUVJcqSOSDumr599.mp3",
+    "sha256": "fe374662a5744c5e297b746b3e0e4453ccf143fb49d1644c663b9ed1d15081ad"
+   },
+   {
+    "file": "audio/takes/L2-P0tdY5rIexpBbX9wVC3T.mp3",
+    "sha256": "60c48b2343ef29407fd2cb9a16817bb548228cae99377ec280ba9d8d4ecd5e9a"
+   },
+   {
+    "file": "audio/takes/L2-P6DZI9nAzpViUi4dto6j.mp3",
+    "sha256": "bc3953474942a21eeaf6f3a7e87611469e680977faebabe7a55198173d8d01f4"
+   },
+   {
+    "file": "audio/takes/L3-2dPrFAtz3PwKmpbfclVx.mp3",
+    "sha256": "555e2c6b8f155fdbce96afa28d6f113ce82b7b54e8e5574be91492d179923849"
+   },
+   {
+    "file": "audio/takes/L3-DUxCoFHHbTtsbgntqIys.mp3",
+    "sha256": "2c73239fc7ac7e020e9ae4ea6900ed6c8dabb7a0f9ff195b296eabfb55e803ac"
+   },
+   {
+    "file": "audio/takes/L3-gaqShZoHOfEQUS5pcCSZ.mp3",
+    "sha256": "864862ac36d32ed34b77a6c360252a8bcb3ff2bdbaa2cd6fe869dd0c0ea9a94c"
+   },
+   {
+    "file": "audio/takes/L3-vpj2q2MBXaA5h3n8cQSp.mp3",
+    "sha256": "64bf7271fb54376ec73e2a005b924bee4edb41449fc868b127376463d2324dff"
+   },
+   {
+    "file": "audio/takes/L4-DGWlNnCqi4wHtyQoo5DS.mp3",
+    "sha256": "d695c9be6d18343cf47c334d9323e0fddc46b276ea2501cec2ea5fa8914079d4"
+   },
+   {
+    "file": "audio/takes/L4-ELTjoLSCqTiM9k3Ds0IH.mp3",
+    "sha256": "3ac1143d8cd66625f04e4f782c1a594b983fd026f98117c5851062a9bc195335"
+   },
+   {
+    "file": "audio/takes/L4-ZttCwmbqIEictbvk2Qaw.mp3",
+    "sha256": "8e9834814c583206d46ea3c24afec8bed6d699b3dd170a1a003b01c367c32ae4"
+   },
+   {
+    "file": "audio/takes/L4-bn8FQtmv1Tcw24Eb6a24.mp3",
+    "sha256": "62e7f3005fbec94b54cb8b59ed60a27cbb1a04d8308ae254828217eaea1644ac"
+   },
+   {
+    "file": "audio/takes/L5-EgpZDjflUyqIhFlTMY1q.mp3",
+    "sha256": "920d53d7b37fa83c8cbe1fd05b570a7e6ea851b8a8ed5aa9e734981cacc16d0b"
+   },
+   {
+    "file": "audio/takes/L5-QuP7gjTNXCM4ZVCydZ3l.mp3",
+    "sha256": "4a6715a129285ef04e43b9bbc7e21521aa7a8d1af883a2d0cbfabd49d1082234"
+   },
+   {
+    "file": "audio/takes/L5-UUN3kX1quos8KYJ4zdTW.mp3",
+    "sha256": "2b81a8d5b51e2dd4bd1214898fee702447018ae4ec109d6019df9ca1cf05d71e"
+   },
+   {
+    "file": "audio/takes/L5-l6bGxMZxUpAdcecjDMGq.mp3",
+    "sha256": "4c66aff0b89a8333d897e627cf6f40dee61a3a64e8c8bc70b8ad2dea83d9a89e"
+   },
+   {
+    "file": "audio/takes/L6-2KOHs622R91QtWYz9NTf.mp3",
+    "sha256": "b54a53c93bfa60259c1bf827fc723acd25eb6d1e18967793aebd37554ce4bad1"
+   },
+   {
+    "file": "audio/takes/L6-vqseachROlWGAyGc7w7W.mp3",
+    "sha256": "91eb3960fbbf96f6347e600121c52aeaa7e25439d74994beb69e0e97877dfec2"
+   },
+   {
+    "file": "audio/takes/L6-vwevgllhOE0ODj7CUAak.mp3",
+    "sha256": "5cf3a11b628915619f0f0153d1df00a74097b6ece375b6da27f6e6b8d099dfa6"
+   },
+   {
+    "file": "audio/takes/L6-yns6tfs99lajrZTpyg1r.mp3",
+    "sha256": "d18c1f1b8f2d5ff0a45f5bec5d4421749a3efc461546774acd924e7094cf6d83"
+   },
+   {
+    "file": "audio/takes/L7-84I1HfnZ3k2hTyMFphuM.mp3",
+    "sha256": "ae1c7995c358ae485d75dd013d0d632490699776e5efb6a3c4a8b98ac9f36736"
+   },
+   {
+    "file": "audio/takes/L7-DqPUaLHpxzQcO0XznpdB.mp3",
+    "sha256": "39797eeea13e4d8a3f621331c19bc0200077f91135ddff8a26d3fd48dd704f77"
+   },
+   {
+    "file": "audio/takes/L7-LBX8L5zpUPavI05LpuVu.mp3",
+    "sha256": "3847beb3c8be7970c17c74e39ddcf71c234fe52bb99529a06fef8389595ccd18"
+   },
+   {
+    "file": "audio/takes/L7-nKUCKjnLk4Bu1hNaY4Ja.mp3",
+    "sha256": "7ca4c81f375fd0deacd2e6e98bbe08353dbd19c8fadb66121caf43716968924a"
+   },
+   {
+    "file": "audio/takes/L8-NvGEGe0E1sqGBruitcHZ.mp3",
+    "sha256": "74cbaecafb8c1e3a8d1e9a9146895d4b26cb66a414b9cd438a86766ea296f2f7"
+   },
+   {
+    "file": "audio/takes/L8-YTIyPnvKB11RVvSW9NIo.mp3",
+    "sha256": "f14028495013b6877bd00308b46d0182f5131296824867860d57cef083a20980"
+   },
+   {
+    "file": "audio/takes/L8-g8F179I2rAThun0U32Mn.mp3",
+    "sha256": "2e6d1596d02d74eba8ebffca1c629c33dcfcce3f45ea996c52befc870f073272"
+   },
+   {
+    "file": "audio/takes/L8-m5EHhUO0YuoBJSQVkYr9.mp3",
+    "sha256": "ea09b9c0e981a72730df48a3f8171f023d31a54a9b88496390382e180110a77b"
+   },
+   {
+    "file": "audio/takes/S1-Dnz0MyVEDKI75mYca0qu.mp3",
+    "sha256": "cb6a583d1a06da3bf930dce0b83051515e6afc3d14c1489aac896871caad0d92"
+   },
+   {
+    "file": "audio/takes/S1-EaA4g52C0AOlu9uoNFuE.mp3",
+    "sha256": "dd84f8b3fd57777a2abbbc414c70dd792a445725eb7224ea932b3c71caa248e9"
+   },
+   {
+    "file": "audio/takes/S1-Fo7mw6P1oaZClxAhd9PA.mp3",
+    "sha256": "d5bd693d966c982e4e9cdf6af02a802fb566130fee3ef0c7e2f3e1a3e5761e70"
+   },
+   {
+    "file": "audio/takes/S1-PhPjySIi8gs9bpbPNtI9.mp3",
+    "sha256": "ef4bc5d02b12ca86de259a47036f2d2d56752142fd9c4468b55e3a540e8f851b"
+   },
+   {
+    "file": "audio/takes/S2-8wbIVdGkcq1LGeAgQaci.mp3",
+    "sha256": "734bc8fb8883c383cda8572e22255c1322dcfa84bffb3a7c5744c98a9faa4e51"
+   },
+   {
+    "file": "audio/takes/S2-LGLrBoD6F9CZp5sowWvr.mp3",
+    "sha256": "cb8e05b06af9b5ff5e8aa219e71f67eed7b9e0880e5ae46bf22493e014b5b5ba"
+   },
+   {
+    "file": "audio/takes/S2-Rit4VOhaFVOvEa3LYStS.mp3",
+    "sha256": "02e5a67dc80fcb931374c249ff5c0bb27f29e15997e3d0f6e46cfaec1d3aa6df"
+   },
+   {
+    "file": "audio/takes/S2-pjTF6z7oTzEEwsTQrcgl.mp3",
+    "sha256": "ac882c24a43704dfce28167103e2eb7091727e3238c5b0d12fd729154f4b20ae"
+   },
+   {
+    "file": "public/audio/long-mix.wav",
+    "sha256": "2a0e8ce137afc844c007b3087de513fa92149a6a634ab0583444529160e081a7"
+   },
+   {
+    "file": "public/audio/short-mix.wav",
+    "sha256": "817792a437aadaa2b2f59bf63fe93eda28a5d19c6b29a890daa20011a05080e0"
+   }
+  ],
+  "lastStop": "التسليم الفني مكتمل: المقاسات الثلاثة اجتازت كل الفحوص الآلية بعد تصحيح توقيت الكلمات بعد الوقفات (#14)",
+  "next": "سماع كامل ومشاهدة على الهاتف من صاحب القناة؛ ثم النشر بتكليف منفصل"
+ }
+}
