@@ -1,0 +1,10 @@
+{
+ "fps": 60,
+ "video": {"codec": "H.264 High", "pixelFormat": "yuv420p", "scan": "progressive", "frameRate": "60 CFR", "color": "BT.709 (primaries, transfer, matrix tagged)", "startingBitrate": "≈12 Mbps for 1080p60 (YouTube guidance, then judged by line sharpness and size)", "faststart": true},
+ "audio": {"codec": "AAC-LC", "sampleRate": 48000, "channels": 2, "bitrate": "192k", "loudness": "−16 LUFS integrated (±1)", "truePeak": "≤ −4 dBTP"},
+ "profiles": [
+  {"id": "16x9", "composition": "Episode16x9", "size": "1920x1080", "program": "long", "safe": {"x": [154, 1766], "y": [86, 994]}, "text": {"title": 88, "body": "44–56"}, "captions": "separate SRT", "file": "export/cr1-ep01_hatif-kitab_16x9_v1.0.0.mp4"},
+  {"id": "9x16", "composition": "Reel9x16", "size": "1080x1920", "program": "short", "safe": {"x": [96, 900], "y": [220, 1540]}, "text": {"title": 84, "body": "52–56", "captions": 56}, "captions": "burned in (social)", "file": "export/cr1-ep01_hatif-kitab_9x16_v1.0.0.mp4"},
+  {"id": "4x5", "composition": "Reel4x5", "size": "1080x1350", "program": "short", "safe": {"x": [86, 994], "y": [108, 1215]}, "text": {"title": 76, "body": "48–52", "captions": 52}, "captions": "burned in (social)", "file": "export/cr1-ep01_hatif-kitab_4x5_v1.0.0.mp4"}
+ ]
+}
