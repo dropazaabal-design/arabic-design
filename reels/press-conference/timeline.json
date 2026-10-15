@@ -1,0 +1,262 @@
+{
+ "fps": 60,
+ "width": 1080,
+ "height": 1920,
+ "totalSeconds": 86.04,
+ "durationInFrames": 5162,
+ "measured": true,
+ "sources": {
+  "take": "take-1-PBS2w5i4VZEAJjldhPfL.mp3"
+ },
+ "loudnorm": {
+  "I": -16,
+  "TP": -5,
+  "inputI": -19.53,
+  "inputTP": -2.69
+ },
+ "beats": {
+  "s02": 0.3,
+  "s03": 0.4,
+  "s04": 0.5,
+  "s05": 0.3,
+  "s06": 0.3,
+  "s07": 0.5,
+  "s08": 0.6,
+  "s09": 0.6,
+  "s10": 1.0,
+  "s11": 0.4,
+  "s12": 0.8,
+  "s13": 0.5,
+  "s14": 0.6,
+  "s15": 0.6,
+  "s16": 0.8,
+  "s17": 0.6,
+  "s18": 0.6,
+  "s19": 0.3,
+  "s20": 0.5,
+  "s21": 0.5,
+  "s22": 0.8
+ },
+ "segments": [
+  {
+   "id": "s01",
+   "text": "كل ما تعثّر في مشروعه… عقد مؤتمرًا صحفيًا.",
+   "start": 0.9,
+   "end": 4.3,
+   "duration": 3.4,
+   "fileStart": 0.84,
+   "file": "audio/voice/s01.wav",
+   "measured": true
+  },
+  {
+   "id": "s02",
+   "text": "يحاول يبني جسرًا. تقع قطعة… يترك الأدوات، ويطلع يشرح.",
+   "start": 5.02,
+   "end": 9.82,
+   "duration": 4.8,
+   "fileStart": 4.925,
+   "file": "audio/voice/s02.wav",
+   "measured": true
+  },
+  {
+   "id": "s03",
+   "text": "ليش تأخّر. وليش أخطأ. وليش الناس فاهمته غلط.",
+   "start": 10.68,
+   "end": 13.98,
+   "duration": 3.3,
+   "fileStart": 10.594,
+   "file": "audio/voice/s03.wav",
+   "measured": true
+  },
+  {
+   "id": "s04",
+   "text": "وبعد كل شرح… يرجع يلقى الجسر مثل ما تركه.",
+   "start": 14.88,
+   "end": 18.18,
+   "duration": 3.3,
+   "fileStart": 14.829,
+   "file": "audio/voice/s04.wav",
+   "measured": true
+  },
+  {
+   "id": "s05",
+   "text": "ومع الوقت، صار يجهّز الرد… قبل ما يجرّب الحل.",
+   "start": 18.88,
+   "end": 22.12,
+   "duration": 3.24,
+   "fileStart": 18.831,
+   "file": "audio/voice/s05.wav",
+   "measured": true
+  },
+  {
+   "id": "s06",
+   "text": "حتى بدايته صارت تنتظر موافقة ناس ما تعرف مشروعه أصلًا.",
+   "start": 22.76,
+   "end": 26.78,
+   "duration": 4.02,
+   "fileStart": 22.646,
+   "file": "audio/voice/s06.wav",
+   "measured": true
+  },
+  {
+   "id": "s07",
+   "text": "كان يحاول يصلح صورته… قبل ما يصلح القطعة.",
+   "start": 27.56,
+   "end": 30.3,
+   "duration": 2.74,
+   "fileStart": 27.521,
+   "file": "audio/voice/s07.wav",
+   "measured": true
+  },
+  {
+   "id": "s08",
+   "text": "وفي يوم، تعطّل الميكروفون.",
+   "start": 31.44,
+   "end": 33.32,
+   "duration": 1.88,
+   "fileStart": 31.414,
+   "file": "audio/voice/s08.wav",
+   "measured": true
+  },
+  {
+   "id": "s09",
+   "text": "انتظر الحكم من الجمهور…",
+   "start": 34.38,
+   "end": 36.02,
+   "duration": 1.64,
+   "fileStart": 34.322,
+   "file": "audio/voice/s09.wav",
+   "measured": true
+  },
+  {
+   "id": "s10",
+   "text": "ثم انتبه: أغلب الكراسي فاضية.",
+   "start": 37.56,
+   "end": 39.88,
+   "duration": 2.32,
+   "fileStart": 37.449,
+   "file": "audio/voice/s10.wav",
+   "measured": true
+  },
+  {
+   "id": "s11",
+   "text": "بعض الأصوات كانت في رأسه… والباقي ما كان ينتظر جوابًا أصلًا.",
+   "start": 40.72,
+   "end": 45.0,
+   "duration": 4.28,
+   "fileStart": 40.648,
+   "file": "audio/voice/s11.wav",
+   "measured": true
+  },
+  {
+   "id": "s12",
+   "text": "المشكلة ما اختفت. القطعة بقيت معوجّة، والوقت اللي ضاع ما رجع.",
+   "start": 46.24,
+   "end": 50.84,
+   "duration": 4.6,
+   "fileStart": 46.207,
+   "file": "audio/voice/s12.wav",
+   "measured": true
+  },
+  {
+   "id": "s13",
+   "text": "بس لأول مرة… عرف وين يحط يده.",
+   "start": 51.74,
+   "end": 54.14,
+   "duration": 2.4,
+   "fileStart": 51.652,
+   "file": "audio/voice/s13.wav",
+   "measured": true
+  },
+  {
+   "id": "s14",
+   "text": "رجع للطاولة. جرّب. أخطأ. عدّل.",
+   "start": 55.16,
+   "end": 58.06,
+   "duration": 2.9,
+   "fileStart": 55.064,
+   "file": "audio/voice/s14.wav",
+   "measured": true
+  },
+  {
+   "id": "s15",
+   "text": "ولما احتاج يدًا ثانية… طلبها.",
+   "start": 58.92,
+   "end": 60.94,
+   "duration": 2.02,
+   "fileStart": 58.905,
+   "file": "audio/voice/s15.wav",
+   "measured": true
+  },
+  {
+   "id": "s16",
+   "text": "الجسر ما اكتمل لأنه سكت.",
+   "start": 62.1,
+   "end": 63.8,
+   "duration": 1.7,
+   "fileStart": 62.055,
+   "file": "audio/voice/s16.wav",
+   "measured": true
+  },
+  {
+   "id": "s17",
+   "text": "اكتمل لأنه اشتغل، وتعلّم، وقبل المساعدة.",
+   "start": 64.72,
+   "end": 67.92,
+   "duration": 3.2,
+   "fileStart": 64.655,
+   "file": "audio/voice/s17.wav",
+   "measured": true
+  },
+  {
+   "id": "s18",
+   "text": "إذا أخطأت بحق أحد، اعتذر.",
+   "start": 68.86,
+   "end": 70.78,
+   "duration": 1.92,
+   "fileStart": 68.812,
+   "file": "audio/voice/s18.wav",
+   "measured": true
+  },
+  {
+   "id": "s19",
+   "text": "وإذا احتجت أحد، تكلّم.",
+   "start": 71.36,
+   "end": 72.98,
+   "duration": 1.62,
+   "fileStart": 71.216,
+   "file": "audio/voice/s19.wav",
+   "measured": true
+  },
+  {
+   "id": "s20",
+   "text": "لكن مو لازم تشرح كل تعثّر… لكل عابر.",
+   "start": 73.78,
+   "end": 76.54,
+   "duration": 2.76,
+   "fileStart": 73.712,
+   "file": "audio/voice/s20.wav",
+   "measured": true
+  },
+  {
+   "id": "s21",
+   "text": "خلّ الخطوة تصير… قبل ما تتحوّل إلى بيان.",
+   "start": 77.34,
+   "end": 80.0,
+   "duration": 2.66,
+   "fileStart": 77.152,
+   "file": "audio/voice/s21.wav",
+   "measured": true
+  },
+  {
+   "id": "s22",
+   "text": "حياتك مو مؤتمر صحفي.",
+   "start": 81.26,
+   "end": 83.04,
+   "duration": 1.78,
+   "fileStart": 80.906,
+   "file": "audio/voice/s22.wav",
+   "measured": true
+  }
+ ]
+}
