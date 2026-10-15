@@ -1,0 +1,219 @@
+{
+ "file": "output/final_reel.mp4",
+ "fps": 60,
+ "frames": 5162,
+ "stepFrames": 24,
+ "threshold": 1.2,
+ "shots": [
+  {
+   "shot": "p01",
+   "from_s": 0.0,
+   "to_s": 10.533,
+   "movingShare": 0.78,
+   "longestStillSeconds": 0.85,
+   "meanDelta": 5.51
+  },
+  {
+   "shot": "p02a",
+   "from_s": 10.533,
+   "to_s": 11.417,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 21.66
+  },
+  {
+   "shot": "p02b",
+   "from_s": 11.417,
+   "to_s": 12.45,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 14.32
+  },
+  {
+   "shot": "p02c",
+   "from_s": 12.45,
+   "to_s": 14.583,
+   "movingShare": 0.93,
+   "longestStillSeconds": 0.12,
+   "meanDelta": 5.87
+  },
+  {
+   "shot": "p03",
+   "from_s": 14.583,
+   "to_s": 18.583,
+   "movingShare": 0.93,
+   "longestStillSeconds": 0.18,
+   "meanDelta": 5.23
+  },
+  {
+   "shot": "p04",
+   "from_s": 18.583,
+   "to_s": 22.467,
+   "movingShare": 0.84,
+   "longestStillSeconds": 0.52,
+   "meanDelta": 3.71
+  },
+  {
+   "shot": "p05",
+   "from_s": 22.467,
+   "to_s": 24.333,
+   "movingShare": 0.88,
+   "longestStillSeconds": 0.23,
+   "meanDelta": 11.69
+  },
+  {
+   "shot": "p05b",
+   "from_s": 24.333,
+   "to_s": 25.533,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 19.93
+  },
+  {
+   "shot": "p05c",
+   "from_s": 25.533,
+   "to_s": 27.217,
+   "movingShare": 0.81,
+   "longestStillSeconds": 0.32,
+   "meanDelta": 12.29
+  },
+  {
+   "shot": "p06",
+   "from_s": 27.217,
+   "to_s": 31.033,
+   "movingShare": 0.97,
+   "longestStillSeconds": 0.1,
+   "meanDelta": 16.55
+  },
+  {
+   "shot": "p07",
+   "from_s": 31.033,
+   "to_s": 33.983,
+   "movingShare": 0.86,
+   "longestStillSeconds": 0.18,
+   "meanDelta": 4.68
+  },
+  {
+   "shot": "p08",
+   "from_s": 33.983,
+   "to_s": 37.067,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 9.44
+  },
+  {
+   "shot": "p09",
+   "from_s": 37.067,
+   "to_s": 40.517,
+   "movingShare": 0.72,
+   "longestStillSeconds": 0.67,
+   "meanDelta": 11.31
+  },
+  {
+   "shot": "p10",
+   "from_s": 40.517,
+   "to_s": 45.633,
+   "movingShare": 0.91,
+   "longestStillSeconds": 0.28,
+   "meanDelta": 16.62
+  },
+  {
+   "shot": "p11",
+   "from_s": 45.633,
+   "to_s": 51.283,
+   "movingShare": 0.77,
+   "longestStillSeconds": 0.67,
+   "meanDelta": 6.36
+  },
+  {
+   "shot": "p12a",
+   "from_s": 51.283,
+   "to_s": 52.967,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 11.54
+  },
+  {
+   "shot": "p12b",
+   "from_s": 52.967,
+   "to_s": 54.667,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 8.32
+  },
+  {
+   "shot": "p13",
+   "from_s": 54.667,
+   "to_s": 58.617,
+   "movingShare": 0.84,
+   "longestStillSeconds": 0.37,
+   "meanDelta": 3.48
+  },
+  {
+   "shot": "p14",
+   "from_s": 58.617,
+   "to_s": 61.75,
+   "movingShare": 0.9,
+   "longestStillSeconds": 0.3,
+   "meanDelta": 5.53
+  },
+  {
+   "shot": "p15",
+   "from_s": 61.75,
+   "to_s": 64.417,
+   "movingShare": 0.89,
+   "longestStillSeconds": 0.23,
+   "meanDelta": 6.17
+  },
+  {
+   "shot": "p16",
+   "from_s": 64.417,
+   "to_s": 68.467,
+   "movingShare": 0.88,
+   "longestStillSeconds": 0.25,
+   "meanDelta": 4.4
+  },
+  {
+   "shot": "p17",
+   "from_s": 68.467,
+   "to_s": 71.217,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 6.68
+  },
+  {
+   "shot": "p18",
+   "from_s": 71.217,
+   "to_s": 73.533,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 6.51
+  },
+  {
+   "shot": "p19",
+   "from_s": 73.533,
+   "to_s": 77.133,
+   "movingShare": 0.71,
+   "longestStillSeconds": 0.57,
+   "meanDelta": 3.92
+  },
+  {
+   "shot": "p20",
+   "from_s": 77.133,
+   "to_s": 80.767,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 8.4
+  },
+  {
+   "shot": "p21",
+   "from_s": 80.767,
+   "to_s": 86.033,
+   "movingShare": 0.4,
+   "longestStillSeconds": 0.93,
+   "meanDelta": 1.4
+  }
+ ],
+ "longestStillAnywhere": 0.93,
+ "note": "measurement only"
+}
