@@ -1,0 +1,178 @@
+{
+ "file": "output/final_reel.mp4",
+ "bytes": 22960647,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "4931"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 82.197,
+  "video": 82.183333,
+  "timeline": 82.18,
+  "framesExpected": 4931
+ },
+ "cadence": {
+  "frames": 4931,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.1,
+  "LRA": 2.5,
+  "truePeakDBFS": -4.5
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [],
+ "narrationOnsets": {
+  "lines": 19,
+  "found": 6,
+  "maxAbsOffset": 0.423,
+  "notFound": [
+   "s02",
+   "s03",
+   "s04",
+   "s05",
+   "s06",
+   "s07",
+   "s08",
+   "s10",
+   "s11",
+   "s13",
+   "s14",
+   "s17",
+   "s19"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.3,
+    "measured": 0.100229,
+    "offset": -0.2
+   },
+   {
+    "id": "s02",
+    "planned": 5.4,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s03",
+    "planned": 8.2,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s04",
+    "planned": 12.08,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s05",
+    "planned": 17.44,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s06",
+    "planned": 20.38,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s07",
+    "planned": 24.1,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s08",
+    "planned": 27.24,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s09",
+    "planned": 30.16,
+    "measured": 30.1002,
+    "offset": -0.06
+   },
+   {
+    "id": "s10",
+    "planned": 34.92,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s11",
+    "planned": 42.48,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s12",
+    "planned": 47.22,
+    "measured": 47.0175,
+    "offset": -0.203
+   },
+   {
+    "id": "s13",
+    "planned": 52.04,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s14",
+    "planned": 55.28,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s15",
+    "planned": 59.28,
+    "measured": 58.9157,
+    "offset": -0.364
+   },
+   {
+    "id": "s16",
+    "planned": 63.66,
+    "measured": 63.2365,
+    "offset": -0.423
+   },
+   {
+    "id": "s17",
+    "planned": 67.54,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s18",
+    "planned": 73.94,
+    "measured": 73.8282,
+    "offset": -0.112
+   },
+   {
+    "id": "s19",
+    "planned": 77.78,
+    "measured": null,
+    "offset": null
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}

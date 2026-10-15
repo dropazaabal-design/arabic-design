@@ -1,0 +1,57 @@
+{
+ "reel": "reels/cr1-adab-al-majlis",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no faces, no third-party footage, no music.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s11.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the Baseera narrator), generation 3zzG3GblqAgyGVJ5TDC7 (flow C8dkJcc2jboCltnjbMEP), loudness-normalised and cut by reels/tools/voice_timeline.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-3-3zzG3GblqAgyGVJ5TDC7.mp3",
+   "sha256": "03a0ec6378ae4f9dd09f37b011fee0b596c31aab60f12162f67054f427039939"
+  },
+  {
+   "path": "audio/take-3.words.json",
+   "source": "ElevenLabs Scribe transcript QqPLOwtP9ZA2sU30eHad of the take uploaded as a separate asset (independent ASR, not the generation's own alignment)",
+   "rights": "derived from the take above"
+  },
+  {
+   "path": "assets/sfx/room.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "8d72dde104e49ea970ea055a5377016146c3313182c49b2546a2396045deacca"
+  },
+  {
+   "path": "assets/sfx/step.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "b17d0967d5f35aff8edd209346ec085a27c2207a106e92983a6a37e7b641043e"
+  },
+  {
+   "path": "assets/sfx/rustle.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "4578cfb1704f90debd435725f785b141f72173edf18a49fb81e25719f81f9fd3"
+  },
+  {
+   "path": "assets/fonts/amiri-700-arabic.woff2",
+   "source": "Amiri Bold, Google Fonts (fonts.gstatic.com), Arabic subset incl. U+FB50–FDFF, for the hadith and verse cards",
+   "rights": "SIL Open Font License 1.1",
+   "sha256": "c775d9f8c3a7cf0d0c2bb5246dd699e8c09bf6f8758e1be0b98939331b18bcce"
+  },
+  {
+   "path": "characters, majlis, cards and marks (src/scene/*.tsx)",
+   "source": "drawn in this repository: faceless seated figures with two-bone arm IK, floor majlis, motion layer reels/motion (GsapCamera, EndCard)",
+   "rights": "original, this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts (Cairo 800/900, Tajawal 700)",
+   "source": "imported from reels/mukarram (no copies)",
+   "rights": "SIL Open Font License (as recorded in reels/mukarram)"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{tick,thud,pageflip,crinkle,click,whoosh,pop}.wav, ../doublethink/assets/sfx/slide.wav",
+   "source": "imported from reels/mukarram and reels/doublethink (no copies)",
+   "rights": "as recorded in those reels' manifests"
+  }
+ ]
+}

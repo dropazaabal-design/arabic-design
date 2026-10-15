@@ -45,10 +45,12 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
-      - name: Install (motion layer and the demo reel)
+      - name: Install (motion layer, the demo reel, the sunk-cost reels)
         run: |
           npm ci --prefix reels/motion --no-audit --no-fund
           npm ci --prefix reels/idea-flight --no-audit --no-fund
+          npm ci --prefix reels/sunk-cost-a --no-audit --no-fund
+          npm ci --prefix reels/sunk-cost-b --no-audit --no-fund
       - name: Unit tests (eases, GSAP seek order, paths, Rive step plan)
         run: npm test --prefix reels/motion
       - name: Typecheck (motion layer + demo reel)
@@ -56,3 +58,7 @@ jobs:
       - name: Render tests (headless Chrome)
         working-directory: reels/idea-flight
         run: node tools/render-tests.mjs
+      - name: Render checks of the sunk-cost reels (frame order, 30 = 60 fps, MP4 decode)
+        run: |
+          (cd reels/sunk-cost-a && npx tsc -p tsconfig.json && node ../tools/render_check.mjs)
+          (cd reels/sunk-cost-b && npx tsc -p tsconfig.json && node ../tools/render_check.mjs)

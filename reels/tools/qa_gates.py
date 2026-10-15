@@ -63,10 +63,12 @@ def measure(reel, tmp):
     """Re-run the reel's own measuring tools; returns the paths of fresh measurements."""
     video = 'output/final_reel.mp4'
     run = lambda *a, **k: subprocess.run(a, cwd=reel, check=True, capture_output=True, text=True, **k)
-    run('python3', 'tools/verify.py', video, str(tmp / 'qa-technical.json'))
-    (tmp / 'qa-sync.json').write_text(run('python3', 'tools/synccheck.py', video).stdout, encoding='utf-8')
-    run('python3', 'tools/motion.py', video, str(tmp / 'qa-motion.json'))
-    subprocess.run(['node', 'tools/arabic-check.mjs'], cwd=reel, capture_output=True, text=True)   # exit 1 = errors found; the JSON says which
+    # the reel's own tool if it has one, else the shared copy in reels/tools (both run with the reel as cwd)
+    tool = lambda n: str(reel / 'tools' / n) if (reel / 'tools' / n).exists() else str(Path(__file__).resolve().parent / n)
+    run('python3', tool('verify.py'), video, str(tmp / 'qa-technical.json'))
+    (tmp / 'qa-sync.json').write_text(run('python3', tool('synccheck.py'), video).stdout, encoding='utf-8')
+    run('python3', tool('motion.py'), video, str(tmp / 'qa-motion.json'))
+    subprocess.run(['node', tool('arabic-check.mjs')], cwd=reel, capture_output=True, text=True)   # exit 1 = errors found; the JSON says which
     return {'technical': tmp / 'qa-technical.json', 'sync': tmp / 'qa-sync.json', 'motion': tmp / 'qa-motion.json', 'arabic': reel / 'output/qa-arabic-check.json'}
 
 
