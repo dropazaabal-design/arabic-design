@@ -1,0 +1,69 @@
+{
+ "reel": "reels/press-conference",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no faces, no third-party footage, no music, nothing from the reference video.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s22.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the account's established narrator; its current display name: Fernando Martínez - Rapid, Persuasive), one take, generation PBS2w5i4VZEAJjldhPfL (flow Zn71dkFRGaZSWxi9Oa8d); loudness-normalised and cut by reels/tools/voice_timeline.py, then compressed and peak-limited by tools/limit_voice.py; never sped up, slowed or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-1-PBS2w5i4VZEAJjldhPfL.mp3",
+   "sha256": "505b574bfb98418021c07a17a1fe3ccbc326bac094bf43f77d0188c85dd6274a"
+  },
+  {
+   "path": "audio/take-1.words.json",
+   "source": "ElevenLabs Scribe transcript D3KGOWGBw1cM2YyZVZd4 of the take uploaded as a separate asset (pSNEMYN6oJSma1qEUuuc): an independent ASR, not the generation's own alignment",
+   "rights": "derived from the take above"
+  },
+  {
+   "path": "assets/sfx/room.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "149ff71be59ac729fa3a11a77a03c70218a6a09af5c20812402b1cf22dfc4668"
+  },
+  {
+   "path": "assets/sfx/step.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "e6bf4abea9372e86b68c6fdca49d3722fe20871a11f4833dbe9a7cf70787e0a8"
+  },
+  {
+   "path": "assets/sfx/servo.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "e2c5c07f5167058e5bdac0b8ad1fd2b648bf5366215d6d624c46f8f703fb22af"
+  },
+  {
+   "path": "assets/sfx/crackle.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "4b4b38b636bfed65f81fd1ac78d1a8bd89a86b0f29379eb192720209f6812f4f"
+  },
+  {
+   "path": "assets/sfx/murmur.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "1a1cb6c3dcc8f121c34692f1d2b435272c764aff2d31c449e22410f8cb4565dd"
+  },
+  {
+   "path": "assets/sfx/tink.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "9e956a10eaf3bcdad81bbe7e8ffea59db3be5b92a5439d3d8191c3915361d97c"
+  },
+  {
+   "path": "the robot, the workshop, the bridge, the podium, the press room, the helping hand (src/scene/*.tsx)",
+   "source": "drawn in this repository as SVG; robot arm/leg two-bone IK; motion layer reels/motion (GsapCamera)",
+   "rights": "original, this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts (Cairo 800/900, Tajawal 700)",
+   "source": "imported from reels/mukarram (no copies)",
+   "rights": "SIL Open Font License (as recorded in reels/mukarram)"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{click,tick,creak,snap,scrape,pageflip,pop}.wav, ../doublethink/assets/sfx/{slide,clack,casters,rub,marker,pneu,rattle}.wav, ../sunk-cost-a/assets/sfx/{hall,ticks}.wav, ../blind-obedience/assets/sfx/hum.wav",
+   "source": "imported from those reels (no copies)",
+   "rights": "as recorded in those reels' manifests"
+  }
+ ]
+}
