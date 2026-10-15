@@ -1,0 +1,35 @@
+{
+ "checkedOn": "2026-10-15",
+ "howChecked": "بحث ويب من بيئة الإنتاج. نطاقا jamesclear.com وsupport.google.com لم يكونا متاحين للجلب المباشر من الحاوية؛ النصوص أدناه من مقتطفات محركات البحث. كل بند ما زال يحتاج نظرة بشرية على المصدر نفسه قبل النشر.",
+ "book": {
+  "title": "Atomic Habits", "arabicTitleUsed": "العادات الذرية", "author": "James Clear (جيمس كلير)", "publisher": "Avery / Penguin Random House", "year": 2018,
+  "chapter": "Chapter 6 — Motivation Is Overrated; Environment Often Matters More (بحسب فهرس الكتاب وتلخيصات متعددة)",
+  "authorExcerpt": {"url": "https://jamesclear.com/power-of-environment", "title": "Motivation is Overvalued. Environment Often Matters More.",
+   "openIssue": "وثيقة CR1 تذكر أن الموقع يعرّف المقتطف بأنه من الفصل السادس. ملخص محرك البحث للصفحة قال «Chapter 12». لم نستطع فتح الصفحة للتأكد. لذلك لا يُذكر رقم فصل في الصوت ولا على الشاشة."}
+ },
+ "claims": [
+  {"id": "C1", "type": "فكرة المؤلف", "text": "البيئة كثيرًا ما تؤثر في سلوكنا أكثر من الحماس.", "where": "الفصل 6 (العنوان نفسه) ومقتطف المؤلف", "form": "إعادة صياغة عربية، لا اقتباس", "said": ["L3", "R3"]},
+  {"id": "C2", "type": "فكرة المؤلف", "text": "الذين يبدو أنهم ملتزمون بسهولة يعيش كثير منهم في بيئة تسهّل الالتزام.", "where": "مقتطف المؤلف (power-of-environment)", "form": "إعادة صياغة", "said": ["L3"]},
+  {"id": "C3", "type": "فكرة المؤلف", "text": "كل عادة تبدأ بإشارة، والإشارة الظاهرة أسهل أن ننتبه لها.", "where": "الفصل 6", "form": "إعادة صياغة من الكتاب؛ لم يُطابَق مع النص في هذه الجلسة", "said": ["L3", "R3"]},
+  {"id": "C4", "type": "تبسيط من إنتاجنا", "text": "إشارة ← رغبة ← فعل", "where": "أول ثلاث مراحل من حلقة العادة عند كلير (إشارة، رغبة، استجابة، مكافأة) — الفصل 3", "form": "رسم توضيحي من السلسلة", "said": ["L4"]},
+  {"id": "C5", "type": "مثال من إنتاجنا", "text": "المكتب والهاتف والدرج", "where": "—", "form": "موقف توضيحي، مكتوب على الشاشة «مثال توضيحي» و«مثال من عندنا»؛ لا يُنسب إلى المؤلف", "said": ["L1", "L2", "L5", "R1", "R2", "R4"]},
+  {"id": "C6", "type": "ملاحظة من السلسلة", "text": "ما يبقى أمامك طويلًا قد تعتاده فلا تلاحظه.", "where": "—", "form": "بصيغة احتمال («ممكن»)، غير منسوبة للكتاب", "said": ["L6"]},
+  {"id": "C7", "type": "تطبيق مقترح", "text": "أسبوع: الكتاب ظاهر ومفتوح، الشاحن بعيد، وعلامة لكل ليلة فُتح فيها الكتاب.", "where": "—", "form": "تجربة قابلة للملاحظة بلا وعد بنتيجة؛ على الشاشة «تجربة مقترحة»", "said": ["L7", "R5"]}
+ ],
+ "numbers": "لا أرقام ولا دراسات في الحلقة. دراسة كافتيريا المستشفى المذكورة في الفصل نفسه لم تُستعمل لأن مصدرها الأصلي لم يُراجَع.",
+ "platforms": [
+  {"n": 1, "what": "يوتيوب: فهم فيديوهات شورتس التي تبلغ ثلاث دقائق", "url": "https://support.google.com/youtube/answer/15424877", "fact": "الرفع المربع أو العمودي حتى 3 دقائق يُصنَّف شورتس (للرفع من 15 أكتوبر 2024)."},
+  {"n": 2, "what": "ميتا: توحيد الفيديو تحت ريلز (17 يونيو 2025)", "url": "https://techcrunch.com/2025/06/17/facebook-announces-that-all-videos-on-its-platform-will-soon-be-shared-as-reels", "fact": "تقرير ثانوي عن الإعلان؛ منشور ميتا الأصلي لم يُفتح."},
+  {"n": 3, "what": "إكس: الفيديو الأطول", "url": "https://help.x.com/en/using-x/premium-longer-videos", "fact": "الحساب غير المشترك حتى 140 ثانية؛ حد 512 ميغابايت مذكور في وثيقة CR1 ولم نجده في الصفحة الحالية."},
+  {"n": 4, "what": "يوتيوب: إعدادات الترميز الموصى بها", "url": "https://support.google.com/youtube/answer/1722171", "fact": "1080p بمعدل 60 إطارًا SDR: نحو 12 Mbps، مع Fast Start وAAC-LC 48 kHz و4:2:0."},
+  {"n": 5, "what": "جيمس كلير: تصميم البيئة", "url": "https://jamesclear.com/power-of-environment", "fact": "انظر book.authorExcerpt.openIssue"}
+ ],
+ "assets": [
+  {"what": "خط Tajawal 700/800", "license": "SIL Open Font License 1.1", "source": "Google Fonts"},
+  {"what": "خط Cairo (متغير 600–700)", "license": "SIL Open Font License 1.1", "source": "Google Fonts"},
+  {"what": "المؤثرات click, pop, tick, pageflip, whoosh", "license": "مولّدة بـFFmpeg في هذا المستودع (reels/clear-thinking-pause)", "source": "تاريخ المستودع"},
+  {"what": "الرسوم", "license": "من إنتاجنا، مرسومة بالكود في src/art.tsx", "source": "—"},
+  {"what": "الصوت", "license": "ElevenLabs، الصوت dlGxemPxFMTY7iXagmOj على حساب صاحب القناة", "source": "audio/takes"}
+ ],
+ "music": "لا موسيقى."
+}
