@@ -34,7 +34,7 @@ const cues = (): Cue[] => [
   sit(B.take + 0.85), [pageflip, B.hadith2 - 0.45, 0.12], ...steps(B.returned - 1.3, B.returned + 0.2), sit(B.returned + 0.25),
   [crinkle, B.returned + 0.85, 0.08], [tick, B.right, 0.22],
   // 3 · leave room beside you
-  [slide, B.beside - 0.1, 0.11], [thud, B.crowd + 0.2, 0.1], [slide, B.wide - 0.9, 0.11], [tick, B.wide + 0.25, 0.2], [pop, B.comfort, 0.07],
+  ...steps(B.sat2 - 1.4, B.sat2 - 0.4), sit(B.sat2 - 0.3), [slide, B.beside - 0.1, 0.11], [thud, B.crowd + 0.2, 0.1], [slide, B.wide - 0.9, 0.11], [tick, B.wide + 0.25, 0.2], [pop, B.comfort, 0.07],
   // 4 · make room for who comes in; then the verse in silence (room tone only)
   ...steps(B.crowded - 1.35, B.crowded + 0.2), ...[4, 3, 2, 1, 0].map((k): Cue => [slide, B.makeRoom + 0.1 + (4 - k) * 0.2, 0.06]),
   ...steps(B.ability, B.ability + 0.45), sit(B.ability + 0.45), [tick, B.noHarm + 0.1, 0.2], [pageflip, B.verse - 0.85, 0.1],

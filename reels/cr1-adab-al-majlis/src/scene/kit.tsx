@@ -29,22 +29,24 @@ const body = (sit: number) => ({ hip: lerp(-175, -48, sit), sh: lerp(-335, -208,
 
 /** Hand targets (figure-local) for the poses this reel needs; mixed with `pose(t, keys)` below. */
 export const HANDS = {
-  rest: (sit: number, side: -1 | 1): V => mix([side * 58, -200], [side * 74, -54], sit),          // by the side / on the knees
-  ask: (sit: number, side: -1 | 1): V => mix([side * 92, -268], [side * 92, -150], sit),            // open hand raised: «may I?»
+  rest: (sit: number, side: -1 | 1): V => mix([side * 62, -168], [side * 82, -46], sit),          // hanging / on the knees
+  ask: (sit: number, side: -1 | 1): V => mix([side * 84, -232], [side * 96, -140], sit),           // open hand at the chest: «may I?»
   invite: (sit: number, side: -1 | 1): V => mix([side * 150, -210], [side * 150, -90], sit),         // palm out toward a place
   talk: (sit: number, side: -1 | 1): V => mix([side * 70, -250], [side * 64, -128], sit),           // a small speaking gesture
   hold: (sit: number, side: -1 | 1): V => mix([side * 30, -245], [side * 26, -120], sit),           // holding the book at the chest
   down: (sit: number, side: -1 | 1): V => mix([side * 90, -60], [side * 110, -8], sit),            // reaching to the seat
 };
 
-/** Two-bone arm: elbow bends outward, away from the body (front view). */
+/** Two-bone arm (front view): of the two elbow solutions take the natural one, lower and a little outward (an elbow
+ *  that points up and out reads as hands-on-hips). */
 const arm = (s: V, t: V, a = 78, b = 74, side: -1 | 1): V => {
   const dx = t[0] - s[0], dy = t[1] - s[1];
   const d = Math.min(Math.hypot(dx, dy), a + b - 1);
   const base = Math.atan2(dy, dx);
   const off = Math.acos(Math.max(-1, Math.min(1, (a * a + d * d - b * b) / (2 * a * d))));
-  const k = side < 0 ? 1 : -1;
-  return [s[0] + a * Math.cos(base + k * off), s[1] + a * Math.sin(base + k * off)];
+  const [e1, e2] = [base + off, base - off].map((g): V => [s[0] + a * Math.cos(g), s[1] + a * Math.sin(g)]);
+  const score = (e: V) => e[1] + 0.35 * side * (e[0] - s[0]);
+  return score(e1) >= score(e2) ? e1 : e2;
 };
 
 export type FigProps = {
@@ -227,7 +229,7 @@ export const Card: React.FC<{ t: number; from: number; to: number; head: string;
           {head && <div style={{ fontFamily: FONT, fontWeight: 800, fontSize: 44, color: C.brand, lineHeight: 1.4 }}>{head}</div>}
           <div style={{ marginTop: head ? 10 : 0 }}>
             {lines.map(([at, txt], i) => (
-              <div key={i} style={{ fontFamily: NASKH, fontWeight: 700, fontSize: size, lineHeight: 1.75, color: C.ink, opacity: tween(t, at, at + 0.4, 0, 1), transform: `translateY(${tween(t, at, at + 0.4, 14, 0, 'power2.out')}px)` }}>{txt}</div>
+              <div key={i} style={{ fontFamily: NASKH, fontWeight: 700, fontSize: size, lineHeight: 1.75, color: C.ink, textWrap: 'balance', opacity: tween(t, at, at + 0.4, 0, 1), transform: `translateY(${tween(t, at, at + 0.4, 14, 0, 'power2.out')}px)` }}>{txt}</div>
             ))}
           </div>
           {source && <div style={{ marginTop: 14, fontFamily: BODY, fontWeight: 700, fontSize: 36, color: C.slate }}>{source}</div>}

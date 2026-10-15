@@ -9,7 +9,7 @@
     "storyboard": "python3 ../tools/storyboard.py .",
     "mix": "AUDIO_ONLY=1 remotion render src/video/index.ts Reel out/mix.wav --codec=wav --log=error",
     "render": "bash ../tools/render_final.sh .",
-    "cover": "remotion still src/video/index.ts Cover out/cover.png --frame=1614 && ffmpeg -v error -y -i out/cover.png -q:v 2 publish/cover-1080x1920.jpg",
+    "cover": "remotion still src/video/index.ts Cover out/cover.png --frame=2172 && ffmpeg -v error -y -i out/cover.png -q:v 2 publish/cover-1080x1920.jpg",
     "check": "node ../tools/render_check.mjs",
     "gates": "python3 ../tools/qa_gates.py . --measure",
     "typecheck": "tsc -p tsconfig.json"

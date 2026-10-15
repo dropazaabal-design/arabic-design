@@ -17,4 +17,4 @@ export const wordAt = (segId: string, w: string, n = 0) => find(segId, w, n).sta
 export const wordEnd = (segId: string, w: string, n = 0) => find(segId, w, n).end;
 
 /** One gain for the whole mix (voice and effects), set from the measured audio-only render (npm run mix). */
-export const MIX_GAIN = 1;
+export const MIX_GAIN = 10 ** (0.7 / 20);   // measured mix −16.68 LUFS / −6.25 dBTP → −16.0
