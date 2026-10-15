@@ -78,6 +78,24 @@ for prog, cfg in PROGRAMS.items():
             raise SystemExit(f'{unit}: alignment words do not match the locked script')
         dur = float(run('ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(take)).stdout)
         a = max(0.0, heard[0]['start'] - 0.06)
+        # The alignment puts a unit's first word at 0.00 and is coarse after pauses; the voice
+        # actually starts a few hundredths later. Every word that follows a pause is moved to the
+        # acoustic onset measured in the take, so motion keyed to it lands on the sound.
+        # −40 dB rather than −45 so a quiet breath before a word is not taken for the word
+        sil = run('ffmpeg', '-hide_banner', '-i', str(take), '-af', 'silencedetect=n=-40dB:d=0.1', '-f', 'null', '-').stderr
+        onsets = [float(x) for x in re.findall(r'silence_end: ([\d.]+)', sil)]
+        head = run('ffmpeg', '-hide_banner', '-i', str(take), '-t', '1', '-af', 'silencedetect=n=-40dB:d=0.01', '-f', 'null', '-').stderr
+        first = re.search(r'silence_start: -?0(?:\.0+)?\s.*?silence_end: ([\d.]+)', head, re.S)
+        onsets = [float(first.group(1)) if first else 0.0] + onsets  # the take's own leading silence is short
+        heard = [dict(h) for h in heard]
+        for k, h in enumerate(heard):
+            if k == 0 or h['start'] - heard[k - 1]['end'] >= 0.06:
+                near = [o for o in onsets if abs(o - h['start']) <= 0.15]
+                if near:
+                    h['start'] = min(near, key=lambda o: abs(o - h['start']))
+                    h['end'] = max(h['end'], h['start'] + 0.05)
+                    if k and heard[k - 1]['end'] > h['start']:
+                        heard[k - 1]['end'] = h['start']
         b = min(dur, heard[-1]['end'] + 0.3)
         pieces.append((take, a, b, t))
         off = t - a
