@@ -1,0 +1,349 @@
+{
+"unit": "L3",
+"take": "UNgYTB65OwRKc9IXtK2k",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "ماجد",
+"type": "word",
+"start": 0,
+"end": 0.36
+},
+{
+"text": "موظف",
+"type": "word",
+"start": 0.48,
+"end": 1.16
+},
+{
+"text": "مجتهد،",
+"type": "word",
+"start": 1.28,
+"end": 2
+},
+{
+"text": "وراتبه",
+"type": "word",
+"start": 2.32,
+"end": 2.8
+},
+{
+"text": "طيب.",
+"type": "word",
+"start": 3.04,
+"end": 3.6
+},
+{
+"text": "كل",
+"type": "word",
+"start": 3.68,
+"end": 3.76
+},
+{
+"text": "صباح",
+"type": "word",
+"start": 3.84,
+"end": 4.16
+},
+{
+"text": "يوقّف",
+"type": "word",
+"start": 4.24,
+"end": 4.56
+},
+{
+"text": "سيارته",
+"type": "word",
+"start": 4.68,
+"end": 5.04
+},
+{
+"text": "القديمة",
+"type": "word",
+"start": 5.08,
+"end": 5.6
+},
+{
+"text": "جنب",
+"type": "word",
+"start": 5.68,
+"end": 5.84
+},
+{
+"text": "سيارات",
+"type": "word",
+"start": 5.96,
+"end": 6.32
+},
+{
+"text": "زملائه،",
+"type": "word",
+"start": 6.4,
+"end": 7.12
+},
+{
+"text": "ويحس",
+"type": "word",
+"start": 7.24,
+"end": 7.6
+},
+{
+"text": "إنها",
+"type": "word",
+"start": 7.68,
+"end": 7.92
+},
+{
+"text": "تتكلم",
+"type": "word",
+"start": 7.96,
+"end": 8.4
+},
+{
+"text": "عنه",
+"type": "word",
+"start": 8.48,
+"end": 8.8
+},
+{
+"text": "قبل",
+"type": "word",
+"start": 8.96,
+"end": 9.2
+},
+{
+"text": "ما",
+"type": "word",
+"start": 9.24,
+"end": 9.28
+},
+{
+"text": "يتكلم.",
+"type": "word",
+"start": 9.36,
+"end": 10.16
+},
+{
+"text": "وهذا",
+"type": "word",
+"start": 10.28,
+"end": 10.48
+},
+{
+"text": "شعور",
+"type": "word",
+"start": 10.56,
+"end": 10.88
+},
+{
+"text": "نعرفه",
+"type": "word",
+"start": 10.96,
+"end": 11.36
+},
+{
+"text": "كلنا:",
+"type": "word",
+"start": 11.52,
+"end": 12.08
+},
+{
+"text": "نريد",
+"type": "word",
+"start": 12.16,
+"end": 12.48
+},
+{
+"text": "نحس",
+"type": "word",
+"start": 12.56,
+"end": 12.88
+},
+{
+"text": "إننا",
+"type": "word",
+"start": 12.96,
+"end": 13.28
+},
+{
+"text": "وصلنا.",
+"type": "word",
+"start": 13.44,
+"end": 13.84
+},
+{
+"text": "وصلته",
+"type": "word",
+"start": 14.24,
+"end": 14.72
+},
+{
+"text": "مكافأة،",
+"type": "word",
+"start": 14.96,
+"end": 15.6
+},
+{
+"text": "فقرر:",
+"type": "word",
+"start": 15.68,
+"end": 16.4
+},
+{
+"text": "سيارة",
+"type": "word",
+"start": 16.52,
+"end": 16.96
+},
+{
+"text": "جديدة.",
+"type": "word",
+"start": 17.04,
+"end": 17.68
+},
+{
+"text": "دفع",
+"type": "word",
+"start": 17.84,
+"end": 18
+},
+{
+"text": "المكافأة",
+"type": "word",
+"start": 18.12,
+"end": 18.72
+},
+{
+"text": "ومدخراته",
+"type": "word",
+"start": 18.8,
+"end": 19.44
+},
+{
+"text": "مقدّمًا،",
+"type": "word",
+"start": 19.52,
+"end": 20.24
+},
+{
+"text": "والباقي",
+"type": "word",
+"start": 20.36,
+"end": 20.8
+},
+{
+"text": "أقساط",
+"type": "word",
+"start": 20.96,
+"end": 21.36
+},
+{
+"text": "تاخذ",
+"type": "word",
+"start": 21.44,
+"end": 21.76
+},
+{
+"text": "ثلث",
+"type": "word",
+"start": 21.88,
+"end": 22.08
+},
+{
+"text": "راتبه",
+"type": "word",
+"start": 22.2,
+"end": 22.48
+},
+{
+"text": "لخمس",
+"type": "word",
+"start": 22.56,
+"end": 22.88
+},
+{
+"text": "سنين.",
+"type": "word",
+"start": 22.96,
+"end": 23.6
+},
+{
+"text": "وأول",
+"type": "word",
+"start": 23.68,
+"end": 24
+},
+{
+"text": "أسبوع،",
+"type": "word",
+"start": 24.08,
+"end": 24.72
+},
+{
+"text": "وين",
+"type": "word",
+"start": 24.76,
+"end": 24.96
+},
+{
+"text": "ما",
+"type": "word",
+"start": 25.04,
+"end": 25.12
+},
+{
+"text": "راح،",
+"type": "word",
+"start": 25.28,
+"end": 25.68
+},
+{
+"text": "يلمح",
+"type": "word",
+"start": 25.8,
+"end": 26.08
+},
+{
+"text": "العيون",
+"type": "word",
+"start": 26.16,
+"end": 26.48
+},
+{
+"text": "على",
+"type": "word",
+"start": 26.56,
+"end": 26.64
+},
+{
+"text": "السيارة،",
+"type": "word",
+"start": 26.68,
+"end": 27.44
+},
+{
+"text": "ويفهمها",
+"type": "word",
+"start": 27.48,
+"end": 28.16
+},
+{
+"text": "إعجاب",
+"type": "word",
+"start": 28.24,
+"end": 28.64
+},
+{
+"text": "فيه",
+"type": "word",
+"start": 28.72,
+"end": 28.96
+},
+{
+"text": "هو.",
+"type": "word",
+"start": 29.08,
+"end": 29.52
+}
+]
+}

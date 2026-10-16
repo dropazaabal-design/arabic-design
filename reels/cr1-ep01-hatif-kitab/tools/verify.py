@@ -1,7 +1,7 @@
 """Measure one exported file against CR1 §9 and §13: container and codec, 60 fps constant, BT.709
 tags, AAC-LC 48 kHz, fast start, a full decode without errors, duration against the timeline,
 loudness and true peak, black frames, holds over 3 s, silences over 0.8 s, and whether each voice
-line starts where the timeline says.
+line, and each word after a pause, starts where the timeline says.
 
 usage: python3 tools/verify.py FILE.mp4 long|short WIDTHxHEIGHT [OUT.json]
 Measurements only: they say nothing about how the film looks or sounds to a person.
@@ -54,6 +54,14 @@ for s in data['segments']:
     got = min(near, key=lambda e: abs(e - s['start'])) if near else None
     onsets.append({'id': s['id'], 'planned': s['start'], 'measured': got, 'offset': None if got is None else round(got - s['start'], 3)})
 found = [o['offset'] for o in onsets if o['offset'] is not None]
+# every word after a pause inside a line, where a pause is measured near it (the lines' first words are above)
+inner = []
+for k, w in enumerate(data['words'][1:], 1):
+    prev = data['words'][k - 1]
+    near = [e for e in ends if abs(e - w['start']) <= 0.3 and prev['start'] + 0.1 < e < w['end'] - 0.05] if w['seg'] == prev['seg'] and w['start'] - prev['end'] >= 0.06 else []
+    if near:
+        got = min(near, key=lambda e: abs(e - w['start']))
+        inner.append({'seg': w['seg'], 'i': w['i'], 'w': w['w'], 'planned': w['start'], 'measured': got, 'offset': round(got - w['start'], 3)})
 
 checks = {
     'h264 + yuv420p progressive': v['codec_name'] == 'h264' and v['pix_fmt'] == 'yuv420p' and v.get('field_order', 'progressive') in ('progressive', 'unknown'),
@@ -68,6 +76,7 @@ checks = {
     'true peak ≤ −4 dBTP': tp <= -4.0,
     'no black frames': not blacks,
     'voice lines start on time (≤ 1 frame)': len(found) == len(onsets) and max(map(abs, found)) <= 1 / FPS + 0.002,
+    'words after a pause on time (≤ 1 frame)': all(abs(o['offset']) <= 1 / FPS + 0.002 for o in inner),
 }
 res = {
     'file': Path(video).name, 'bytes': int(probe['format']['size']), 'videoBitrate': int(v.get('bit_rate') or 0),
@@ -77,7 +86,8 @@ res = {
     'loudness': {'integratedLUFS': lufs, 'truePeakDBTP': tp},
     'decodeErrors': decode[:20], 'black': blacks,
     'holdsOver3s': freezes, 'silencesOver0.8s': silences,
-    'voiceOnsets': {'lines': len(onsets), 'found': len(found), 'maxAbsOffset': max(map(abs, found)) if found else None, 'detail': onsets},
+    'voiceOnsets': {'lines': len(onsets), 'found': len(found), 'maxAbsOffset': max(map(abs, found)) if found else None, 'detail': onsets,
+                    'afterPause': {'words': len(inner), 'maxAbsOffset': max((abs(o['offset']) for o in inner), default=None), 'detail': inner}},
     'checks': checks, 'pass': all(checks.values()),
     'flags': 'holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge',
     'note': 'measurements only; nothing here proves how the film looks or sounds to a person',

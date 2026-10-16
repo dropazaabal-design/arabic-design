@@ -90,7 +90,7 @@ for prog, cfg in PROGRAMS.items():
         heard = [dict(h) for h in heard]
         for k, h in enumerate(heard):
             if k == 0 or h['start'] - heard[k - 1]['end'] >= 0.06:
-                near = [o for o in onsets if abs(o - h['start']) <= 0.15]
+                near = [o for o in onsets if abs(o - h['start']) <= 0.3 and o < h['end'] - 0.05 and (k == 0 or o > heard[k - 1]['start'] + 0.1)]  # inside this word, never the one before
                 if near:
                     h['start'] = min(near, key=lambda o: abs(o - h['start']))
                     h['end'] = max(h['end'], h['start'] + 0.05)
