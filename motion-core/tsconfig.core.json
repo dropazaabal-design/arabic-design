@@ -13,6 +13,7 @@
     "src/core.ts",
     "src/character-rig.ts",
     "src/semantic-director.ts",
-    "src/storyboard-contract.ts"
+    "src/storyboard-contract.ts",
+    "src/cartoon/rig.ts"
   ]
 }
