@@ -30,3 +30,17 @@ const p = track(f, [{ at: 0, to: pose('stand') }, { at: 120, to: pose('proud'), 
 
 `npm test` يشمل `tests/cartoon.test.mjs`: المزج، والمفاتيح المتأخرة، ونهاية المشي، والرمش الحتمي.
 الحكم على الجمال والتعبير يحتاج عينًا: `Lab` و`LabProps` في ريل ep02 ورقتا مراجعة للطقم كله.
+
+## شخصية من مصدر SVG (SVGR)
+
+الرسم في ملف SVG قابل للتحرير، والحركة في الكود:
+
+- `art/characters/sultan.svg`: كل جزء مجموعة عليا `<g data-part data-pivot [data-anchor]>`، وعددها 18 جزءًا. الألوان متغيرات CSS بقيم افتراضية (`fill:var(--shirt,#5E6BC4)`).
+- `node tools/svgr-build.mjs sultan` يحوّله عبر SVGR (`@svgr/core` و`plugin-jsx`، وSVGO معطّل) إلى `src/characters/sultan/Art.tsx`: مكوّن لكل جزء مع جدولي `PIVOTS` و`ANCHORS`. الملف مولَّد ولا يُحرَّر يدويًا. `--check` يفشل إن كان قديمًا.
+- `src/characters/SvgPerson.tsx` يركّب الأجزاء بالوضعيات والتعابير نفسها في هذا الطقم (`Pose` و`Face` و`track` و`walk` و`blink`):
+  - الإمساك ثلاث طبقات: الكف، ثم الغرض عند نقطة الإمساك، ثم الأصابع فوقه.
+  - `reach()` حلّ بمفصلين يضع نقطة الإمساك على هدف.
+  - `holdUpright` يبقي الغرض قائمًا.
+  - `farInFront` يقدّم الذراع البعيدة أمام الجسم.
+- `tests/svgr.test.mjs` يتحقق من أجزاء المصدر ونقاط الإمساك، ومن تطابق `Art.tsx` مع ما يولّده SVGR.
+- استُعمل أول مرة في `reels/cr1-ep03-daqiqatayn`. ورقة المراجعة فيه `SvgLab`.

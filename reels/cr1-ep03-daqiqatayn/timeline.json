@@ -1,0 +1,534 @@
+{
+ "short": {
+  "totalSeconds": 69.367,
+  "frames": 4162,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.5,
+  "maxCps": 11.9,
+  "units": [
+   {
+    "unit": "U1",
+    "take": "HwfcRf67Frnl9mRkgwXq",
+    "file": "U1-HwfcRf67Frnl9mRkgwXq.mp3",
+    "sha256": "eaa182253c703d2c4b28cbf6f26567b4acd033ad32979d9ed6b36e7a4878578c",
+    "cut": [
+     0.0,
+     21.159
+    ],
+    "at": 0.3,
+    "breaks": [
+     [
+      13.3,
+      0.45
+     ],
+     [
+      17.249,
+      0.5
+     ]
+    ]
+   },
+   {
+    "unit": "U2",
+    "take": "vMhHIeSPfbEme6xwsBa9",
+    "file": "U2-vMhHIeSPfbEme6xwsBa9.mp3",
+    "sha256": "ae34bbf0988537d888364cf59d40004cb7dbcb75457b01a86aecbd8a04f4136c",
+    "cut": [
+     0.0,
+     19.487
+    ],
+    "at": 22.859,
+    "breaks": []
+   },
+   {
+    "unit": "U3",
+    "take": "R8IUtVXrD5waOsYFmrPs",
+    "file": "U3-R8IUtVXrD5waOsYFmrPs.mp3",
+    "sha256": "e85d1e66e29fd81b25014b53752b891e6bb0fbfe0c9f247c2e5fefcda7f9b79a",
+    "cut": [
+     0.0,
+     23.066
+    ],
+    "at": 42.747,
+    "breaks": [
+     [
+      3.957,
+      0.25
+     ],
+     [
+      5.871,
+      0.75
+     ],
+     [
+      7.916,
+      0.3
+     ],
+     [
+      9.827,
+      0.45
+     ],
+     [
+      14.238,
+      0.3
+     ],
+     [
+      20.812,
+      0.35
+     ]
+    ]
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "R1",
+    "i": 5,
+    "sfx": "whoosh",
+    "gain": -24,
+    "offset": 0.2,
+    "why": "camera pulls back from the box",
+    "time": 2.99,
+    "word": "وصار"
+   },
+   {
+    "seg": "R1",
+    "i": 7,
+    "sfx": "pageflip",
+    "gain": -20,
+    "offset": -0.3,
+    "why": "the calendar fills with crossed days",
+    "time": 3.2,
+    "word": "شهر"
+   },
+   {
+    "seg": "R2",
+    "i": 0,
+    "sfx": "pop",
+    "gain": -26,
+    "offset": 0.6,
+    "why": "pats his belly",
+    "time": 5.465,
+    "word": "كان"
+   },
+   {
+    "seg": "R2",
+    "i": 4,
+    "sfx": "scribble",
+    "gain": -18,
+    "offset": 0.15,
+    "why": "writes the plan",
+    "time": 6.506,
+    "word": "فكتب"
+   },
+   {
+    "seg": "R2",
+    "i": 12,
+    "sfx": "scribble",
+    "gain": -20,
+    "offset": 0.1,
+    "why": "writes 5:30",
+    "time": 9.942,
+    "word": "الساعة"
+   },
+   {
+    "seg": "R2",
+    "i": 14,
+    "sfx": "click",
+    "gain": -24,
+    "offset": 0,
+    "why": "caps the marker, proud",
+    "time": 10.82,
+    "word": "ونص"
+   },
+   {
+    "seg": "R3",
+    "i": 2,
+    "sfx": "alarm",
+    "gain": -17,
+    "offset": 0,
+    "why": "the alarm rings",
+    "time": 12.647,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R3",
+    "i": 3,
+    "sfx": "click",
+    "gain": -14,
+    "offset": 0.78,
+    "why": "he slaps it off",
+    "time": 13.747,
+    "word": "المنبه."
+   },
+   {
+    "seg": "R3",
+    "i": 4,
+    "sfx": "whoosh",
+    "gain": -26,
+    "offset": -0.4,
+    "why": "sits up",
+    "time": 13.83,
+    "word": "شاف"
+   },
+   {
+    "seg": "R3",
+    "i": 6,
+    "sfx": "pop",
+    "gain": -22,
+    "offset": 0.15,
+    "why": "the thought bubble",
+    "time": 15.479,
+    "word": "وتخيّل"
+   },
+   {
+    "seg": "R3",
+    "i": 9,
+    "sfx": "whoosh",
+    "gain": -22,
+    "offset": 0.3,
+    "why": "back under the blanket",
+    "time": 17.416,
+    "word": "ورجع"
+   },
+   {
+    "seg": "R3",
+    "i": 11,
+    "sfx": "click",
+    "gain": -22,
+    "offset": -0.45,
+    "why": "night: the lamp",
+    "time": 18.194,
+    "word": "وكل"
+   },
+   {
+    "seg": "R3",
+    "i": 13,
+    "sfx": "scribble",
+    "gain": -20,
+    "offset": 0,
+    "why": "strikes the plan",
+    "time": 19.41,
+    "word": "يعوّض"
+   },
+   {
+    "seg": "R3",
+    "i": 15,
+    "sfx": "scribble",
+    "gain": -18,
+    "offset": 0,
+    "why": "writes the bigger plan",
+    "time": 20.41,
+    "word": "أكبر:"
+   },
+   {
+    "seg": "R3",
+    "i": 17,
+    "sfx": "pop",
+    "gain": -22,
+    "offset": 0,
+    "why": "pleased with himself",
+    "time": 21.65,
+    "word": "ساعتين!"
+   },
+   {
+    "seg": "R4",
+    "i": 3,
+    "sfx": "pageflip",
+    "gain": -20,
+    "offset": -0.2,
+    "why": "the book card",
+    "time": 23.899,
+    "word": "كتاب"
+   },
+   {
+    "seg": "R4",
+    "i": 12,
+    "sfx": "whoosh",
+    "gain": -22,
+    "offset": 0,
+    "why": "the hour shrinks",
+    "time": 29.153,
+    "word": "ابدأها"
+   },
+   {
+    "seg": "R4",
+    "i": 15,
+    "sfx": "pop",
+    "gain": -20,
+    "offset": 0,
+    "why": "under two minutes",
+    "time": 30.779,
+    "word": "أقل"
+   },
+   {
+    "seg": "R4",
+    "i": 18,
+    "sfx": "thud",
+    "gain": -18,
+    "offset": 0,
+    "why": "the heavy book",
+    "time": 32.397,
+    "word": "مو"
+   },
+   {
+    "seg": "R4",
+    "i": 21,
+    "sfx": "pageflip",
+    "gain": -18,
+    "offset": 0,
+    "why": "one page",
+    "time": 33.665,
+    "word": "تقرأ"
+   },
+   {
+    "seg": "R4",
+    "i": 23,
+    "sfx": "step",
+    "gain": -20,
+    "offset": 0,
+    "why": "running",
+    "time": 34.825,
+    "word": "مو"
+   },
+   {
+    "seg": "R4",
+    "i": 23,
+    "sfx": "step",
+    "gain": -22,
+    "offset": 0.25,
+    "why": "running",
+    "time": 35.075,
+    "word": "مو"
+   },
+   {
+    "seg": "R4",
+    "i": 24,
+    "sfx": "step",
+    "gain": -22,
+    "offset": 0.2,
+    "why": "running",
+    "time": 35.379,
+    "word": "تركض"
+   },
+   {
+    "seg": "R4",
+    "i": 26,
+    "sfx": "pop",
+    "gain": -20,
+    "offset": 0,
+    "why": "the shoe held up",
+    "time": 36.145,
+    "word": "تلبس"
+   },
+   {
+    "seg": "R5",
+    "i": 5,
+    "sfx": "step",
+    "gain": -16,
+    "offset": 0,
+    "why": "onto the first step",
+    "time": 40.059,
+    "word": "توجد"
+   },
+   {
+    "seg": "R5",
+    "i": 7,
+    "sfx": "chime",
+    "gain": -24,
+    "offset": 0,
+    "why": "the next steps light up",
+    "time": 41.139,
+    "word": "قبل"
+   },
+   {
+    "seg": "R6",
+    "i": 1,
+    "sfx": "scribble",
+    "gain": -18,
+    "offset": 0,
+    "why": "strikes the big plan",
+    "time": 43.387,
+    "word": "شطب"
+   },
+   {
+    "seg": "R6",
+    "i": 4,
+    "sfx": "scribble",
+    "gain": -18,
+    "offset": 0,
+    "why": "writes the small one",
+    "time": 45.584,
+    "word": "ألبس"
+   },
+   {
+    "seg": "R6",
+    "i": 7,
+    "sfx": "pop",
+    "gain": -18,
+    "offset": -0.2,
+    "why": "the lid comes off",
+    "time": 47.437,
+    "word": "الكرتون"
+   },
+   {
+    "seg": "R6",
+    "i": 8,
+    "sfx": "chime",
+    "gain": -20,
+    "offset": 0.75,
+    "why": "the shoes catch the light",
+    "time": 48.987,
+    "word": "أخيرًا."
+   },
+   {
+    "seg": "R6",
+    "i": 11,
+    "sfx": "step",
+    "gain": -20,
+    "offset": 0,
+    "why": "taps the new shoe",
+    "time": 50.507,
+    "word": "لبسه"
+   },
+   {
+    "seg": "R6",
+    "i": 13,
+    "sfx": "whoosh",
+    "gain": -24,
+    "offset": -0.3,
+    "why": "next day",
+    "time": 51.867,
+    "word": "ثاني"
+   },
+   {
+    "seg": "R6",
+    "i": 16,
+    "sfx": "click",
+    "gain": -16,
+    "offset": 0,
+    "why": "the door handle",
+    "time": 53.327,
+    "word": "الباب."
+   },
+   {
+    "seg": "R6",
+    "i": 17,
+    "sfx": "whoosh",
+    "gain": -24,
+    "offset": -0.35,
+    "why": "weeks later",
+    "time": 54.138,
+    "word": "وبعد"
+   },
+   {
+    "seg": "R6",
+    "i": 18,
+    "sfx": "tick",
+    "gain": -24,
+    "offset": 0,
+    "why": "days ticked",
+    "time": 54.817,
+    "word": "كم"
+   },
+   {
+    "seg": "R6",
+    "i": 20,
+    "sfx": "step",
+    "gain": -22,
+    "offset": -0.25,
+    "why": "walking (in the pause, off the word)",
+    "time": 55.386,
+    "word": "صار"
+   },
+   {
+    "seg": "R6",
+    "i": 22,
+    "sfx": "step",
+    "gain": -22,
+    "offset": 0.62,
+    "why": "walking (in the pause after the word)",
+    "time": 56.997,
+    "word": "يمشي…"
+   },
+   {
+    "seg": "R6",
+    "i": 23,
+    "sfx": "pop",
+    "gain": -26,
+    "offset": 0.1,
+    "why": "the old voice: tomorrow?",
+    "time": 57.063,
+    "word": "بدون"
+   },
+   {
+    "seg": "R6",
+    "i": 25,
+    "sfx": "pop",
+    "gain": -20,
+    "offset": 0.45,
+    "why": "it bursts; he keeps walking",
+    "time": 57.987,
+    "word": "يتفاوض"
+   },
+   {
+    "seg": "R7",
+    "i": 0,
+    "sfx": "click",
+    "gain": -22,
+    "offset": -0.2,
+    "why": "back in: the door",
+    "time": 59.018,
+    "word": "الدقيقتين"
+   },
+   {
+    "seg": "R7",
+    "i": 3,
+    "sfx": "whoosh",
+    "gain": -26,
+    "offset": 0,
+    "why": "the door closes",
+    "time": 60.837,
+    "word": "هي"
+   },
+   {
+    "seg": "R7",
+    "i": 5,
+    "sfx": "tick",
+    "gain": -26,
+    "offset": 0.1,
+    "why": "takes the big plan off the wall",
+    "time": 61.99,
+    "word": "اختر"
+   },
+   {
+    "seg": "R7",
+    "i": 8,
+    "sfx": "crumple",
+    "gain": -14,
+    "offset": 0,
+    "why": "crumples it",
+    "time": 63.305,
+    "word": "وصغّرها"
+   },
+   {
+    "seg": "R7",
+    "i": 11,
+    "sfx": "thud",
+    "gain": -22,
+    "offset": 0.32,
+    "why": "into the empty box",
+    "time": 64.797,
+    "word": "تقدر"
+   },
+   {
+    "seg": "R7",
+    "i": 18,
+    "sfx": "chime",
+    "gain": -22,
+    "offset": 0.75,
+    "why": "the question lands",
+    "time": 68.337,
+    "word": "عادتك؟"
+   }
+  ]
+ }
+}

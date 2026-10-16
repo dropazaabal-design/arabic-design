@@ -1,0 +1,34 @@
+{
+ "series": "فكرة من كتاب",
+ "account": "كتاب وبس",
+ "episode": "cr1-ep03",
+ "slug": "daqiqatayn",
+ "title": "دقيقتين بس",
+ "version": "1.0.0",
+ "book": {
+  "title": "العادات الذرية",
+  "author": "جيمس كلير",
+  "edition": "Atomic Habits, Avery 2018, chapter 13"
+ },
+ "idea": "قاعدة الدقيقتين: ابدأ أي عادة جديدة بنسخة تاخذ أقل من دقيقتين؛ العادة لازم توجد قبل ما تتحسن.",
+ "application": "اختر عادة تبيها، وصغّرها لين ما تقدر تقول لا.",
+ "story": "قصة توضيحية من إعداد السلسلة (سلطان وحذاء الرياضة)، وليست من الكتاب.",
+ "formats": [
+  "9x16"
+ ],
+ "voice": {
+  "voice_id": "dlGxemPxFMTY7iXagmOj",
+  "model": "eleven_v4"
+ },
+ "budget": {
+  "cap": 20000,
+  "spentCredits": 2819.73,
+  "detail": "12 takes (3 units × 4) at 1 credit per character; word timings by transcribe_audio on the chosen takes cost 0",
+  "flow": "kYvYgiIRC3IMDOdwSyct"
+ },
+ "picks": {
+  "U1": "HwfcRf67Frnl9mRkgwXq",
+  "U2": "vMhHIeSPfbEme6xwsBa9",
+  "U3": "R8IUtVXrD5waOsYFmrPs"
+ }
+}

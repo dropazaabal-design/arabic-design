@@ -116,6 +116,8 @@ const TimeShot: React.FC<{ f: number; k: FreedomBeats; ratio: Ratio }> = ({ f, k
       </g>}
       {toClock > 0 && <g opacity={toClock} transform={`translate(${center.x} ${center.y}) scale(${mix(0.4, 1, toClock)})`}>
         <Clock x={0} y={0} r={r} hour={300 + turn * 60} minute={turn * 720} />
+        {/* the second hand ticks while time is still someone else's */}
+        <path d={`M0 ${r * 0.12} L0 ${-r * 0.82}`} stroke={C.red} strokeWidth={4} strokeLinecap="round" transform={`rotate(${Math.floor(f / sec(1)) * 6})`} />
       </g>}
       {notesFall(f, k.time - sec(0.2), [center.x, center.y], [center.x, center.y + 120], 5, sec(0.8))}
       {f >= k.quote - sec(0.3) && <Actor f={f} d={{ look: CAST.saad, id: `fr-s-${ratio}`, seed: 64, x: center.x + by(ratio, 500, 230), y: center.y + by(ratio, 470, 470), scale: by(ratio, 1.2, 0.75), facing: -1,

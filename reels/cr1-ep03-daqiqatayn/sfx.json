@@ -1,0 +1,365 @@
+{
+ "note": "Few and quiet, each on an action on screen. Anchored to a spoken word: seg, word index, offset in seconds. Gains are relative to the file, before the mix is normalised. alarm, scribble, step, crumple, chime and thud are synthesised by tools/make_sfx.py. Steps sit in the pauses: a step on a word's first consonant blurred it for the independent transcription (صار heard as صاه).",
+ "short": [
+  {
+   "seg": "R1",
+   "i": 5,
+   "sfx": "whoosh",
+   "gain": -24,
+   "offset": 0.2,
+   "why": "camera pulls back from the box"
+  },
+  {
+   "seg": "R1",
+   "i": 7,
+   "sfx": "pageflip",
+   "gain": -20,
+   "offset": -0.3,
+   "why": "the calendar fills with crossed days"
+  },
+  {
+   "seg": "R2",
+   "i": 0,
+   "sfx": "pop",
+   "gain": -26,
+   "offset": 0.6,
+   "why": "pats his belly"
+  },
+  {
+   "seg": "R2",
+   "i": 4,
+   "sfx": "scribble",
+   "gain": -18,
+   "offset": 0.15,
+   "why": "writes the plan"
+  },
+  {
+   "seg": "R2",
+   "i": 12,
+   "sfx": "scribble",
+   "gain": -20,
+   "offset": 0.1,
+   "why": "writes 5:30"
+  },
+  {
+   "seg": "R2",
+   "i": 14,
+   "sfx": "click",
+   "gain": -24,
+   "offset": 0,
+   "why": "caps the marker, proud"
+  },
+  {
+   "seg": "R3",
+   "i": 2,
+   "sfx": "alarm",
+   "gain": -17,
+   "offset": 0,
+   "why": "the alarm rings"
+  },
+  {
+   "seg": "R3",
+   "i": 3,
+   "sfx": "click",
+   "gain": -14,
+   "offset": 0.78,
+   "why": "he slaps it off"
+  },
+  {
+   "seg": "R3",
+   "i": 4,
+   "sfx": "whoosh",
+   "gain": -26,
+   "offset": -0.4,
+   "why": "sits up"
+  },
+  {
+   "seg": "R3",
+   "i": 6,
+   "sfx": "pop",
+   "gain": -22,
+   "offset": 0.15,
+   "why": "the thought bubble"
+  },
+  {
+   "seg": "R3",
+   "i": 9,
+   "sfx": "whoosh",
+   "gain": -22,
+   "offset": 0.3,
+   "why": "back under the blanket"
+  },
+  {
+   "seg": "R3",
+   "i": 11,
+   "sfx": "click",
+   "gain": -22,
+   "offset": -0.45,
+   "why": "night: the lamp"
+  },
+  {
+   "seg": "R3",
+   "i": 13,
+   "sfx": "scribble",
+   "gain": -20,
+   "offset": 0,
+   "why": "strikes the plan"
+  },
+  {
+   "seg": "R3",
+   "i": 15,
+   "sfx": "scribble",
+   "gain": -18,
+   "offset": 0,
+   "why": "writes the bigger plan"
+  },
+  {
+   "seg": "R3",
+   "i": 17,
+   "sfx": "pop",
+   "gain": -22,
+   "offset": 0,
+   "why": "pleased with himself"
+  },
+  {
+   "seg": "R4",
+   "i": 3,
+   "sfx": "pageflip",
+   "gain": -20,
+   "offset": -0.2,
+   "why": "the book card"
+  },
+  {
+   "seg": "R4",
+   "i": 12,
+   "sfx": "whoosh",
+   "gain": -22,
+   "offset": 0,
+   "why": "the hour shrinks"
+  },
+  {
+   "seg": "R4",
+   "i": 15,
+   "sfx": "pop",
+   "gain": -20,
+   "offset": 0,
+   "why": "under two minutes"
+  },
+  {
+   "seg": "R4",
+   "i": 18,
+   "sfx": "thud",
+   "gain": -18,
+   "offset": 0,
+   "why": "the heavy book"
+  },
+  {
+   "seg": "R4",
+   "i": 21,
+   "sfx": "pageflip",
+   "gain": -18,
+   "offset": 0,
+   "why": "one page"
+  },
+  {
+   "seg": "R4",
+   "i": 23,
+   "sfx": "step",
+   "gain": -20,
+   "offset": 0,
+   "why": "running"
+  },
+  {
+   "seg": "R4",
+   "i": 23,
+   "sfx": "step",
+   "gain": -22,
+   "offset": 0.25,
+   "why": "running"
+  },
+  {
+   "seg": "R4",
+   "i": 24,
+   "sfx": "step",
+   "gain": -22,
+   "offset": 0.2,
+   "why": "running"
+  },
+  {
+   "seg": "R4",
+   "i": 26,
+   "sfx": "pop",
+   "gain": -20,
+   "offset": 0,
+   "why": "the shoe held up"
+  },
+  {
+   "seg": "R5",
+   "i": 5,
+   "sfx": "step",
+   "gain": -16,
+   "offset": 0,
+   "why": "onto the first step"
+  },
+  {
+   "seg": "R5",
+   "i": 7,
+   "sfx": "chime",
+   "gain": -24,
+   "offset": 0,
+   "why": "the next steps light up"
+  },
+  {
+   "seg": "R6",
+   "i": 1,
+   "sfx": "scribble",
+   "gain": -18,
+   "offset": 0,
+   "why": "strikes the big plan"
+  },
+  {
+   "seg": "R6",
+   "i": 4,
+   "sfx": "scribble",
+   "gain": -18,
+   "offset": 0,
+   "why": "writes the small one"
+  },
+  {
+   "seg": "R6",
+   "i": 7,
+   "sfx": "pop",
+   "gain": -18,
+   "offset": -0.2,
+   "why": "the lid comes off"
+  },
+  {
+   "seg": "R6",
+   "i": 8,
+   "sfx": "chime",
+   "gain": -20,
+   "offset": 0.75,
+   "why": "the shoes catch the light"
+  },
+  {
+   "seg": "R6",
+   "i": 11,
+   "sfx": "step",
+   "gain": -20,
+   "offset": 0,
+   "why": "taps the new shoe"
+  },
+  {
+   "seg": "R6",
+   "i": 13,
+   "sfx": "whoosh",
+   "gain": -24,
+   "offset": -0.3,
+   "why": "next day"
+  },
+  {
+   "seg": "R6",
+   "i": 16,
+   "sfx": "click",
+   "gain": -16,
+   "offset": 0,
+   "why": "the door handle"
+  },
+  {
+   "seg": "R6",
+   "i": 17,
+   "sfx": "whoosh",
+   "gain": -24,
+   "offset": -0.35,
+   "why": "weeks later"
+  },
+  {
+   "seg": "R6",
+   "i": 18,
+   "sfx": "tick",
+   "gain": -24,
+   "offset": 0,
+   "why": "days ticked"
+  },
+  {
+   "seg": "R6",
+   "i": 20,
+   "sfx": "step",
+   "gain": -22,
+   "offset": -0.25,
+   "why": "walking (in the pause, off the word)"
+  },
+  {
+   "seg": "R6",
+   "i": 22,
+   "sfx": "step",
+   "gain": -22,
+   "offset": 0.62,
+   "why": "walking (in the pause after the word)"
+  },
+  {
+   "seg": "R6",
+   "i": 23,
+   "sfx": "pop",
+   "gain": -26,
+   "offset": 0.1,
+   "why": "the old voice: tomorrow?"
+  },
+  {
+   "seg": "R6",
+   "i": 25,
+   "sfx": "pop",
+   "gain": -20,
+   "offset": 0.45,
+   "why": "it bursts; he keeps walking"
+  },
+  {
+   "seg": "R7",
+   "i": 0,
+   "sfx": "click",
+   "gain": -22,
+   "offset": -0.2,
+   "why": "back in: the door"
+  },
+  {
+   "seg": "R7",
+   "i": 3,
+   "sfx": "whoosh",
+   "gain": -26,
+   "offset": 0,
+   "why": "the door closes"
+  },
+  {
+   "seg": "R7",
+   "i": 5,
+   "sfx": "tick",
+   "gain": -26,
+   "offset": 0.1,
+   "why": "takes the big plan off the wall"
+  },
+  {
+   "seg": "R7",
+   "i": 8,
+   "sfx": "crumple",
+   "gain": -14,
+   "offset": 0,
+   "why": "crumples it"
+  },
+  {
+   "seg": "R7",
+   "i": 11,
+   "sfx": "thud",
+   "gain": -22,
+   "offset": 0.32,
+   "why": "into the empty box"
+  },
+  {
+   "seg": "R7",
+   "i": 18,
+   "sfx": "chime",
+   "gain": -22,
+   "offset": 0.75,
+   "why": "the question lands"
+  }
+ ]
+}

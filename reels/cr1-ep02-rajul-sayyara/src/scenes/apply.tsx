@@ -109,12 +109,13 @@ const Questions: React.FC<{ f: number; k: ApplyBeats; ratio: Ratio }> = ({ f, k,
           <rect x={-70} y={-200} width={mix(140, 90, small)} height={200} fill="#3B5D7C" stroke={INK} strokeWidth={5} />
         </g>
       </g>}
-      {you > 0 && <g transform={`translate(${by(ratio, 960, 540)} ${by(ratio, 500, 470)}) scale(${mix(0.85, 1, you) * by(ratio, 1.35, 1)})`} opacity={Math.min(1, you)}>
+      {you > 0 && <g transform={`translate(${by(ratio, 960, 540)} ${by(ratio, 500, 470)}) scale(${mix(0.85, 1, you) * by(ratio, 1.35, 1) * (1 + 0.012 * Math.sin(f / 22))})`} opacity={Math.min(1, you)}>
         <Card w={by(ratio, 620, 600)} h={by(ratio, 300, 300)} o={1} fill={C.tealDeep} edge={C.mint}>
           <Say x={0} y={-30} size={110} title>وأنت؟</Say>
           <g transform="translate(0 90)">
             <path d="M-60 -34 Q-60 -54 -40 -54 L40 -54 Q60 -54 60 -34 L60 4 Q60 24 40 24 L-6 24 L-30 46 L-28 24 L-40 24 Q-60 24 -60 4 Z" fill={C.light} stroke={INK} strokeWidth={4} />
-            {[-24, 0, 24].map((x) => <circle key={x} cx={x} cy={-15} r={7} fill={INK} />)}
+            {/* someone is typing an answer */}
+            {[-24, 0, 24].map((x, j) => <circle key={x} cx={x} cy={-15 - 5 * Math.max(0, Math.sin(f / 7 - j * 0.9))} r={7} fill={INK} />)}
           </g>
         </Card>
       </g>}

@@ -48,7 +48,9 @@ export const Valet: React.FC<{ f: number; k: ValetBeats; ratio: Ratio }> = ({ f,
   const dimTitle = prog(f, k.name, sec(0.6));
   const base: Cam = by(ratio, { x: 960, y: 560, z: 1.05 }, { x: 980, y: 520, z: 1.06 }, { x: 980, y: 560, z: 0.96 });
   const near: Cam = by(ratio, { x: 900, y: 520, z: 1.25 }, { x: 900, y: 470, z: 1.15 }, { x: 900, y: 520, z: 1.05 });
-  const c = camMix(base, near, prog(f, k.dream - sec(0.4), sec(1.2), ease.inOut));
+  // a slow push while he waits for the cars, so the wait never reads as a frozen frame
+  const wait = prog(f, k.start, Math.max(1, k.dream - k.start), (x) => x);
+  const c = camMix({ ...base, z: base.z * (1 + 0.06 * wait), x: base.x - 40 * wait }, near, prog(f, k.dream - sec(0.4), sec(1.2), ease.inOut));
   const bx = by(ratio, 540, 700), by_ = by(ratio, 340, 200, 250), bw = by(ratio, 420, 440), bh = by(ratio, 300, 310);
   return (
     <Frame ratio={ratio} c={c} world={<>

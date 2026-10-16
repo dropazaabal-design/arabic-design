@@ -48,12 +48,17 @@ blacks = list(zip(num(r'black_start:([\d.]+)'), num(r'black_end:([\d.]+)')))
 
 fine = run('ffmpeg', '-hide_banner', '-nostats', '-i', video, '-map', '0:a', '-af', 'silencedetect=n=-45dB:d=0.12', '-f', 'null', '-').stderr
 ends = [float(x) for x in re.findall(r'silence_end: ([\d.]+)', fine)]
+# a sound effect that starts just before a line fills the silence the onset is measured from; such a
+# line is reported as masked, not as late, and the other lines still have to land on time
+cues = json.loads((root / 'timeline.json').read_text(encoding='utf-8'))[prog]['sfx']
 onsets = []
 for s in data['segments']:
+    mask = next((c['sfx'] for c in cues if s['start'] - 0.7 <= c['time'] <= s['start'] + 0.05), None)
     near = [e for e in ends if abs(e - s['start']) <= 0.4]
     got = min(near, key=lambda e: abs(e - s['start'])) if near else None
-    onsets.append({'id': s['id'], 'planned': s['start'], 'measured': got, 'offset': None if got is None else round(got - s['start'], 3)})
-found = [o['offset'] for o in onsets if o['offset'] is not None]
+    onsets.append({'id': s['id'], 'planned': s['start'], 'measured': got, 'offset': None if got is None else round(got - s['start'], 3),
+                   **({'maskedBy': mask} if mask else {})})
+found = [o['offset'] for o in onsets if o['offset'] is not None and 'maskedBy' not in o]
 # every word after a pause inside a line, where a pause is measured near it (the lines' first words are above)
 inner = []
 for k, w in enumerate(data['words'][1:], 1):
@@ -75,7 +80,7 @@ checks = {
     'loudness −16 ±1 LUFS': abs(lufs + 16) <= 1,
     'true peak ≤ −4 dBTP': tp <= -4.0,
     'no black frames': not blacks,
-    'voice lines start on time (≤ 1 frame)': len(found) == len(onsets) and max(map(abs, found)) <= 1 / FPS + 0.002,
+    'voice lines start on time (≤ 1 frame)': bool(found) and len(found) == sum('maskedBy' not in o for o in onsets) and max(map(abs, found)) <= 1 / FPS + 0.002,
     'words after a pause on time (≤ 1 frame)': all(abs(o['offset']) <= 1 / FPS + 0.002 for o in inner),
 }
 res = {
