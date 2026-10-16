@@ -96,7 +96,9 @@ for prog, cfg in PROGRAMS.items():
         heard = [dict(h) for h in heard]
         for k, h in enumerate(heard):
             if k == 0 or h['start'] - heard[k - 1]['end'] >= 0.06:
-                near = [o for o in onsets if abs(o - h['start']) <= 0.3 and o < h['end'] - 0.05 and (k == 0 or o > heard[k - 1]['start'] + 0.1)]  # inside this word, never the one before
+                # inside this word, never the one before; a unit's first word takes the end of the take's own
+                # leading silence even when the alignment gives it a very short span (L4 «هنا» ends at 0.08)
+                near = [o for o in onsets if abs(o - h['start']) <= 0.3 and (k == 0 or (o < h['end'] - 0.05 and o > heard[k - 1]['start'] + 0.1))]
                 if near:
                     h['start'] = min(near, key=lambda o: abs(o - h['start']))
                     h['end'] = max(h['end'], h['start'] + 0.05)
