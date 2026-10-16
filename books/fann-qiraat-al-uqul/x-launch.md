@@ -57,6 +57,32 @@
 
 ---
 
+## 3ب) رسالة الخاص
+لمن يطلب الرابط في الخاص. هنا يجوز وضع الروابط، لأن X لا يقلل وصول الرسائل الخاصة.
+
+**الرسالة الرئيسية**
+```
+هلا وغلا 👋
+هذا شرح «فن قراءة العقول» PDF 📥
+https://raw.githubusercontent.com/dropazaabal-design/arabic-design/9ced6cbb742087561633710871b0afd985fbc707/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
+
+12 فصلًا مشروحة، ومع كل فكرة: ماذا يقول العلم عنها.
+
+ولو عجبك، اشترك في قناتنا على يوتيوب 🎬 نشرح فكرة من كتاب في دقيقة:
+https://www.youtube.com/@kitabwbs?sub_confirmation=1
+
+قراءة ممتعة 📚 وعلمني بعدها أي فصل استفدت منه أكثر
+```
+
+**نسخة قصيرة**
+```
+أبشر 📥 شرح «فن قراءة العقول»:
+https://raw.githubusercontent.com/dropazaabal-design/arabic-design/9ced6cbb742087561633710871b0afd985fbc707/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
+
+واشترك في القناة للكتاب الجاي 🎬
+https://www.youtube.com/@kitabwbs?sub_confirmation=1
+```
+
 ## 4) قبل النشر
 - [ ] افتح الرابط من متصفح خاص (Incognito) وتأكد أنه يعمل لغير المسجلين.
 - [ ] الرابط في خانة الموقع الإلكتروني في البايو.
