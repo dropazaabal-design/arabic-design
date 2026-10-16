@@ -7,14 +7,15 @@
  * track(), walk() and blink() work unchanged. Far = toward the facing side, drawn behind the torso.
  *
  * A grip is three layers: palm (gripBack), the held object at the hand's anchor, then the curled fingers
- * (gripFront) over it — the object is held, not pasted on top of a fist.
+ * (gripFront) over it — the object is held, not pasted on top of a fist. 'edge' holds a board the same way
+ * (fingers behind, thumb in front); 'pinch' holds something small between thumb and index tip.
  */
 import React from 'react';
 import { CALM, REST, type Face, type Pose } from '../cartoon/rig';
 import { ANCHORS, PARTS, PIVOTS, type PartName } from './sultan/Art';
 
 export const INK = '#0E1626';
-export type SvgHand = 'open' | 'fist' | 'point' | 'grip';
+export type SvgHand = 'open' | 'fist' | 'point' | 'pinch' | 'grip' | 'edge';
 export type SvgLook = {
   skin: string; skinShade: string; hair: string; shirt: string; shirtShade: string;
   pants: string; pantsShade: string; slipper: string; shoe: string; shoeShade: string;
@@ -71,22 +72,22 @@ const Place: React.FC<{ part: PartName; at: [number, number]; deg?: number; chil
   );
 };
 
-const HAND: Record<Exclude<SvgHand, 'grip'>, PartName> = { open: 'handOpen', fist: 'handFist', point: 'handPoint' };
+// the part under the held object, and for two-layer hands the part drawn over it (fingers round a handle, a thumb on a board's face)
+const HAND: Record<SvgHand, PartName> = { open: 'handOpen', fist: 'handFist', point: 'handPoint', pinch: 'handPinch', grip: 'gripBack', edge: 'edgeBack' };
+const FRONT: Partial<Record<SvgHand, PartName>> = { grip: 'gripFront', edge: 'edgeFront' };
 
 const Hand: React.FC<{ kind: SvgHand; at: [number, number]; deg: number; hold?: React.ReactNode; upright?: boolean }> = ({ kind, at, deg, hold, upright }) => {
-  const part = kind === 'grip' ? 'gripBack' : HAND[kind];
+  const part = HAND[kind], front = FRONT[kind];
   const [ax, ay] = ANCHORS[part] ?? P[part];
   // the held object sits at the anchor, in the hand's frame (or counter-rotated to stay upright)
   const held = hold && <g transform={`translate(${ax} ${ay})${upright ? ` rotate(${deg.toFixed(2)})` : ''}`}>{hold}</g>;
   return (
     <Place part={part} at={at} deg={deg}>
       {held}
-      {kind === 'grip' && <PartsGripFront />}
+      {front && React.createElement(PARTS[front])}
     </Place>
   );
 };
-// gripFront is drawn in the same frame as gripBack (same pivot), so it can live inside its Place
-const PartsGripFront = () => { const C = PARTS.gripFront; return <C />; };
 
 type Arm = ReturnType<typeof svgJoints>['armF'];
 const ArmView: React.FC<{ a: Arm; hand: SvgHand; hold?: React.ReactNode; wrist: number; upright?: boolean }> = ({ a, hand, hold, wrist, upright }) => (
@@ -199,7 +200,7 @@ export const SvgPerson: React.FC<SvgPersonProps> = ({
 export function anchorAt(p: Pose, side: 'F' | 'N', hand: SvgHand, wrist = 0): [number, number] {
   const j = svgJoints(p);
   const a = side === 'F' ? j.armF : j.armN;
-  const part = hand === 'grip' ? 'gripBack' : HAND[hand];
+  const part = HAND[hand];
   const [ax, ay] = ANCHORS[part] ?? P[part];
   const [px, py] = P[part];
   const d = rad(-(a.foreDeg + wrist));
@@ -213,7 +214,7 @@ export function anchorAt(p: Pose, side: 'F' | 'N', hand: SvgHand, wrist = 0): [n
  * Out-of-reach targets give the straight arm toward them.
  */
 export function reach(p: Pose, side: 'F' | 'N', target: [number, number], hand: SvgHand = 'grip', bend: 1 | -1 = 1): Pose {
-  const part = hand === 'grip' ? 'gripBack' : HAND[hand];
+  const part = HAND[hand];
   const [ax, ay] = ANCHORS[part] ?? P[part];
   const [px, py] = P[part];
   const grip = Math.hypot(ax - px, ay - py); // the anchor sits this far down the hand, along the forearm
