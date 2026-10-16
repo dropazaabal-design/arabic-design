@@ -9,7 +9,7 @@ https://claude.ai/artifact/7RVcfiBydZsF1xY8Spdirb
 افتح Share في الصفحة واجعلها عامة قبل وضعها في البايو.
 
 **رابط PDF المباشر** (بديل لا يحتاج إعدادًا، ويبدأ التحميل فورًا):
-https://raw.githubusercontent.com/dropazaabal-design/arabic-design/2eee6eb98cb2c5908d31124f2de3aa5e3e7f58a7/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
+https://raw.githubusercontent.com/dropazaabal-design/arabic-design/9ced6cbb742087561633710871b0afd985fbc707/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
 الرابط مثبّت على نسخة محددة، فلا ينكسر إذا تغيّر الفرع. يمكن تقصيره بأي خدمة اختصار روابط.
 
 ---

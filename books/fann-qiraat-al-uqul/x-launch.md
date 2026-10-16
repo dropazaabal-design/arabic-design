@@ -6,7 +6,7 @@
 - **صفحة الهبوط** (فيها القراءة أونلاين وزر تحميل PDF): https://claude.ai/artifact/7RVcfiBydZsF1xY8Spdirb
   اجعلها عامة من قائمة Share أولًا.
 - **أو رابط PDF المباشر**، يعمل الآن للجميع:
-  https://raw.githubusercontent.com/dropazaabal-design/arabic-design/2eee6eb98cb2c5908d31124f2de3aa5e3e7f58a7/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
+  https://raw.githubusercontent.com/dropazaabal-design/arabic-design/9ced6cbb742087561633710871b0afd985fbc707/books/fann-qiraat-al-uqul/fann-qiraat-al-uqul.pdf
 
 ---
 
@@ -16,6 +16,7 @@
 ```
 كتاب وبس 📚 فكرة من كتاب في دقيقة
 📥 شرح «فن قراءة العقول» PDF مجانًا: الرابط تحت 👇
+🎬 يوتيوب: youtube.com/@kitabwbs
 ```
 
 ---
