@@ -1,0 +1,38 @@
+{
+ "note": "Independent checks of what is said; no person has listened (the production environment cannot play audio). Whisper is one model family: agreement is evidence, not proof.",
+ "takes": {
+  "method": "Whisper large-v3-turbo and large-v3 (sherpa-onnx int8, local) on all 6 takes; word error rate after normalising spelling (review/asr-turbo.json, review/asr-large-v3.json)",
+  "chosen": {
+   "U1": "uegWMwLlw4YuEi3Lmzv5: large-v3 WER 0.029 (only «ثلاثة»→«ثلاه»)",
+   "U2": "2lDzZOxkTQXyJD03J81b: large-v3 WER 0.048 («بيعاند وكانمان»→«بعاند وكان من», a word boundary)",
+   "U3": "oAzsPB3nQ2rZTMDtWbrx: large-v3 WER 0.032 («الظهر»→«الهر»)"
+  }
+ },
+ "export": {
+  "method": "the exported MP4 audio (voice + effects) in three windows, large-v3",
+  "heard": "every word of the script, except: «ثلاثة»→«ثلاة», «بيعاند»→«بعاند», «الظهر»→«الهر»; «مع إن» written «مع أن» (spelling)"
+ },
+ "listenFirst": [
+  {
+   "t": 13.3,
+   "word": "ثلاثة",
+   "why": "both models, both takes: the ث in the middle is heard weak or missing"
+  },
+  {
+   "t": 31.4,
+   "word": "بيعاند",
+   "why": "heard «بعاند»: the ي may be swallowed (acceptable in speech, confirm)"
+  },
+  {
+   "t": 61.8,
+   "word": "الظهر",
+   "why": "both models, both takes: the ظ is not heard; may be a soft ظ/ض, needs an ear"
+  },
+  {
+   "t": 21.1,
+   "word": "كانمان",
+   "why": "turbo hears «كانمن» in one take; large-v3 hears it right in the export"
+  }
+ ],
+ "dialect": "white Arabic leaning Gulf (بياخذ، مو، إيش، دايم، نصها، يعاند); no Egyptian forms in the script; how Gulf the voice sounds needs a native ear"
+}

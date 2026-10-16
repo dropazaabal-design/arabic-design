@@ -1,0 +1,942 @@
+{
+ "file": "cr1-ep04_saa-w-akhallis_9x16_v1.0.0.mp4",
+ "bytes": 37833012,
+ "videoBitrate": 4031764,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "4289",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189375"
+ },
+ "duration": {
+  "container": 71.488,
+  "timeline": 71.487,
+  "frames": 4289,
+  "framesExpected": 4289,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.4
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [],
+ "voiceOnsets": {
+  "method": "silence edge (−45 dB, ≥ 0.12 s) nearest each planned onset. masked = a sound effect is still sounding at the onset (the edge would be the effect); shortPause = the pause before the word is under the detector minimum; notFound = no edge within the window. Only measured onsets are judged.",
+  "lines": {
+   "total": 7,
+   "measured": 6,
+   "masked": 1,
+   "notFound": 0,
+   "shortPause": 0,
+   "maxAbsOffsetMs": 10.0,
+   "withinOneFrame": 6,
+   "within14ms": 6,
+   "detail": [
+    {
+     "id": "R1",
+     "planned": 0.325,
+     "status": "measured",
+     "measured": 0.326146,
+     "offset": 0.001
+    },
+    {
+     "id": "R2",
+     "planned": 8.157,
+     "status": "measured",
+     "measured": 8.15915,
+     "offset": 0.002
+    },
+    {
+     "id": "R3",
+     "planned": 20.637,
+     "status": "masked",
+     "maskedBy": "pageflip"
+    },
+    {
+     "id": "R4",
+     "planned": 32.224,
+     "status": "measured",
+     "measured": 32.2261,
+     "offset": 0.002
+    },
+    {
+     "id": "R5",
+     "planned": 46.228,
+     "status": "measured",
+     "measured": 46.2345,
+     "offset": 0.006
+    },
+    {
+     "id": "R6",
+     "planned": 53.317,
+     "status": "measured",
+     "measured": 53.3269,
+     "offset": 0.01
+    },
+    {
+     "id": "R7",
+     "planned": 67.136,
+     "status": "measured",
+     "measured": 67.1372,
+     "offset": 0.001
+    }
+   ]
+  },
+  "wordsAfterPause": {
+   "total": 98,
+   "measured": 8,
+   "masked": 7,
+   "notFound": 23,
+   "shortPause": 60,
+   "maxAbsOffsetMs": 2.0,
+   "withinOneFrame": 8,
+   "within14ms": 8,
+   "detail": [
+    {
+     "seg": "R1",
+     "i": 1,
+     "w": "عنده",
+     "planned": 0.78,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 2,
+     "w": "ضيوف",
+     "planned": 1.18,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 3,
+     "w": "الساعة",
+     "planned": 1.58,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 4,
+     "w": "سبع.",
+     "planned": 1.98,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 5,
+     "w": "الساعة",
+     "planned": 3.052,
+     "pause": 0.352,
+     "status": "measured",
+     "measured": 3.05287,
+     "offset": 0.001
+    },
+    {
+     "seg": "R1",
+     "i": 6,
+     "w": "أربع",
+     "planned": 3.56,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 7,
+     "w": "فتح",
+     "planned": 4.12,
+     "pause": 0.24,
+     "status": "notFound"
+    },
+    {
+     "seg": "R1",
+     "i": 8,
+     "w": "كرتون",
+     "planned": 4.44,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 9,
+     "w": "مكتبة",
+     "planned": 4.84,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 11,
+     "w": "وقال:",
+     "planned": 5.96,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R1",
+     "i": 12,
+     "w": "ساعة",
+     "planned": 6.541,
+     "pause": 0.101,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 13,
+     "w": "وأخلّصها.",
+     "planned": 7.08,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 1,
+     "w": "برغي",
+     "planned": 8.52,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 2,
+     "w": "دخل",
+     "planned": 8.92,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 4,
+     "w": "والتعليمات",
+     "planned": 10.18,
+     "pause": 0.3,
+     "status": "masked",
+     "maskedBy": "pageflip"
+    },
+    {
+     "seg": "R2",
+     "i": 5,
+     "w": "كلها",
+     "planned": 10.9,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 6,
+     "w": "رسوم.",
+     "planned": 11.42,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R2",
+     "i": 7,
+     "w": "والقطعة",
+     "planned": 12.371,
+     "pause": 0.351,
+     "status": "masked",
+     "maskedBy": "thud"
+    },
+    {
+     "seg": "R2",
+     "i": 8,
+     "w": "رقم",
+     "planned": 12.85,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 9,
+     "w": "ثلاثة…",
+     "planned": 13.29,
+     "pause": 0.2,
+     "status": "notFound"
+    },
+    {
+     "seg": "R2",
+     "i": 10,
+     "w": "طلعت",
+     "planned": 13.894,
+     "pause": 0.164,
+     "status": "measured",
+     "measured": 13.8952,
+     "offset": 0.001
+    },
+    {
+     "seg": "R2",
+     "i": 11,
+     "w": "مقلوبة.",
+     "planned": 14.29,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 12,
+     "w": "الساعة",
+     "planned": 15.807,
+     "pause": 0.637,
+     "status": "measured",
+     "measured": 15.8084,
+     "offset": 0.001
+    },
+    {
+     "seg": "R2",
+     "i": 13,
+     "w": "سبع",
+     "planned": 16.37,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R2",
+     "i": 14,
+     "w": "رنّ",
+     "planned": 16.73,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 16,
+     "w": "والمكتبة",
+     "planned": 18.101,
+     "pause": 0.411,
+     "status": "measured",
+     "measured": 18.1028,
+     "offset": 0.002
+    },
+    {
+     "seg": "R2",
+     "i": 17,
+     "w": "نصها",
+     "planned": 18.89,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R2",
+     "i": 18,
+     "w": "على",
+     "planned": 19.37,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 19,
+     "w": "الأرض.",
+     "planned": 19.61,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 1,
+     "w": "كانمان،",
+     "planned": 21.098,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 3,
+     "w": "كتاب",
+     "planned": 22.018,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R3",
+     "i": 4,
+     "w": "«التفكير",
+     "planned": 22.378,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 5,
+     "w": "السريع",
+     "planned": 23.018,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 6,
+     "w": "والبطيء»،",
+     "planned": 23.498,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 7,
+     "w": "يسمّي",
+     "planned": 24.364,
+     "pause": 0.066,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 8,
+     "w": "هذا:",
+     "planned": 24.858,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 10,
+     "w": "التخطيط.",
+     "planned": 26.258,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R3",
+     "i": 11,
+     "w": "نقدّر",
+     "planned": 27.252,
+     "pause": 0.194,
+     "status": "measured",
+     "measured": 27.253,
+     "offset": 0.001
+    },
+    {
+     "seg": "R3",
+     "i": 12,
+     "w": "الوقت",
+     "planned": 27.738,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 13,
+     "w": "على",
+     "planned": 28.258,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R3",
+     "i": 14,
+     "w": "أحسن",
+     "planned": 28.458,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 15,
+     "w": "احتمال…",
+     "planned": 28.858,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 16,
+     "w": "كأن",
+     "planned": 30.127,
+     "pause": 0.469,
+     "status": "masked",
+     "maskedBy": "boing"
+    },
+    {
+     "seg": "R3",
+     "i": 17,
+     "w": "ولا",
+     "planned": 30.618,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R3",
+     "i": 18,
+     "w": "برغي",
+     "planned": 30.938,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 19,
+     "w": "بيعاند.",
+     "planned": 31.378,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R4",
+     "i": 1,
+     "w": "نفسه",
+     "planned": 32.938,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R4",
+     "i": 2,
+     "w": "وقع",
+     "planned": 33.258,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 3,
+     "w": "فيها:",
+     "planned": 33.738,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 5,
+     "w": "هو",
+     "planned": 34.898,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R4",
+     "i": 6,
+     "w": "وفريقه",
+     "planned": 35.138,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R4",
+     "i": 7,
+     "w": "كتابًا",
+     "planned": 35.738,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 8,
+     "w": "مدرسيًا",
+     "planned": 36.298,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R4",
+     "i": 9,
+     "w": "بسنتين.",
+     "planned": 36.858,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 11,
+     "w": "إن",
+     "planned": 38.098,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "pop"
+    },
+    {
+     "seg": "R4",
+     "i": 12,
+     "w": "خبيرًا",
+     "planned": 38.298,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 13,
+     "w": "معهم",
+     "planned": 38.698,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 14,
+     "w": "قال:",
+     "planned": 39.178,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 16,
+     "w": "فريق",
+     "planned": 40.058,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 17,
+     "w": "مثلكم",
+     "planned": 40.458,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 18,
+     "w": "خلّص",
+     "planned": 41.018,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 19,
+     "w": "في",
+     "planned": 41.498,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 20,
+     "w": "أقل",
+     "planned": 41.658,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 21,
+     "w": "من",
+     "planned": 42.138,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 22,
+     "w": "سبع",
+     "planned": 42.298,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 23,
+     "w": "سنين.",
+     "planned": 42.618,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 24,
+     "w": "وخلّصوه",
+     "planned": 43.779,
+     "pause": 0.441,
+     "status": "masked",
+     "maskedBy": "whoosh"
+    },
+    {
+     "seg": "R4",
+     "i": 25,
+     "w": "بعد",
+     "planned": 44.618,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 26,
+     "w": "قرابة",
+     "planned": 44.938,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 27,
+     "w": "ثمان.",
+     "planned": 45.618,
+     "pause": 0.2,
+     "status": "notFound"
+    },
+    {
+     "seg": "R5",
+     "i": 1,
+     "w": "تسأل:",
+     "planned": 46.538,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 3,
+     "w": "بياخذ",
+     "planned": 47.418,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 4,
+     "w": "معي؟",
+     "planned": 47.818,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 7,
+     "w": "أخذ",
+     "planned": 49.338,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 8,
+     "w": "مع",
+     "planned": 49.738,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 9,
+     "w": "غيري؟",
+     "planned": 49.978,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 11,
+     "w": "أخذ",
+     "planned": 51.178,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "shutter"
+    },
+    {
+     "seg": "R5",
+     "i": 12,
+     "w": "معي",
+     "planned": 51.418,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 13,
+     "w": "آخر",
+     "planned": 51.938,
+     "pause": 0.2,
+     "status": "notFound"
+    },
+    {
+     "seg": "R5",
+     "i": 14,
+     "w": "مرة؟",
+     "planned": 52.298,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 1,
+     "w": "شهر",
+     "planned": 53.717,
+     "pause": 0.067,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 3,
+     "w": "ناصر",
+     "planned": 54.837,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 4,
+     "w": "طاولة.",
+     "planned": 55.237,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 7,
+     "w": "يفتحها،",
+     "planned": 56.557,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 8,
+     "w": "فتح",
+     "planned": 57.397,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "click"
+    },
+    {
+     "seg": "R6",
+     "i": 9,
+     "w": "جواله:",
+     "planned": 57.677,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 11,
+     "w": "أخذت",
+     "planned": 59.317,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 12,
+     "w": "خمس",
+     "planned": 59.797,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 14,
+     "w": "فبدأ",
+     "planned": 61.018,
+     "pause": 0.3,
+     "status": "measured",
+     "measured": 61.0192,
+     "offset": 0.001
+    },
+    {
+     "seg": "R6",
+     "i": 15,
+     "w": "من",
+     "planned": 61.617,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 16,
+     "w": "الظهر.",
+     "planned": 61.777,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 17,
+     "w": "والساعة",
+     "planned": 63.097,
+     "pause": 0.6,
+     "status": "measured",
+     "measured": 63.0983,
+     "offset": 0.001
+    },
+    {
+     "seg": "R6",
+     "i": 18,
+     "w": "سبع",
+     "planned": 63.657,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 19,
+     "w": "رنّ",
+     "planned": 64.137,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 21,
+     "w": "والطاولة",
+     "planned": 65.569,
+     "pause": 0.4,
+     "status": "measured",
+     "measured": 65.5709,
+     "offset": 0.002
+    },
+    {
+     "seg": "R7",
+     "i": 3,
+     "w": "دايم",
+     "planned": 67.897,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 4,
+     "w": "تقول",
+     "planned": 68.217,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 5,
+     "w": "عنها:",
+     "planned": 68.577,
+     "pause": 0.12,
+     "status": "notFound"
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1080x1920": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "measured line starts within one frame (16.7 ms)": true,
+  "measured line starts within the 14 ms target": true,
+  "measured words after a pause within one frame": true,
+  "measured words after a pause within the 14 ms target": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

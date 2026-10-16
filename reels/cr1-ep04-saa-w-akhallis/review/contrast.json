@@ -1,0 +1,50 @@
+{
+ "day": {
+  "background": "#E9E8F2",
+  "outline": 14.89,
+  "shirt": 5.97,
+  "trousers": 5.7,
+  "skin": 1.99,
+  "white panel": 1.14
+ },
+ "evening (dusk 0.85), behind him": {
+  "background": "#D6D6E2",
+  "outline": 12.55,
+  "shirt": 5.03,
+  "trousers": 4.81,
+  "skin": 1.67,
+  "white panel": 1.36
+ },
+ "evening (dusk 0.85), frame edge": {
+  "background": "#7A7D94",
+  "outline": 4.47,
+  "shirt": 1.79,
+  "trousers": 1.71,
+  "skin": 1.68,
+  "white panel": 3.81
+ },
+ "night (dusk 1), behind him": {
+  "background": "#D3D3DF",
+  "outline": 12.19,
+  "shirt": 4.88,
+  "trousers": 4.67,
+  "skin": 1.63,
+  "white panel": 1.4
+ },
+ "night (dusk 1), frame edge": {
+  "background": "#666B83",
+  "outline": 3.44,
+  "shirt": 1.38,
+  "trousers": 1.32,
+  "skin": 2.18,
+  "white panel": 4.95
+ },
+ "text": {
+  "title ink on page #F3F4F8": 16.45,
+  "clock-blue title #1E5C99 on its card": 6.49,
+  "caption white on its pill (#0E1626 at 0.78 over the day wall)": 9.74,
+  "caption white on its pill over the dark edge": 14.55,
+  "clock rim #2E7BC5 on the wall": 3.64
+ },
+ "note": "WCAG 2 contrast ratios from source colours; the outline is what separates a shape, a fill ratio near 1 is not by itself a failure (see the colour report)"
+}

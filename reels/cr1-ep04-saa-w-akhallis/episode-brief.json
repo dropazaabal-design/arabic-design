@@ -1,0 +1,15 @@
+{
+ "series": "فكرة من كتاب",
+ "account": "كتاب وبس",
+ "episode": "cr1-ep04",
+ "slug": "saa-w-akhallis",
+ "title": "ساعة وأخلّصها",
+ "version": "1.0.0",
+ "book": {"title": "التفكير السريع والبطيء", "author": "دانيال كانمان", "edition": "Thinking, Fast and Slow, Farrar, Straus and Giroux 2011, chapter 23 (The Outside View); Arabic: Hindawi"},
+ "idea": "مغالطة التخطيط: نقدّر الوقت على أحسن احتمال؛ والأصدق أن نسأل كم أخذت الأشياء المشابهة مع غيرنا ومعنا قبل.",
+ "application": "قبل خطتك الجاية اسأل: كم أخذت مثلها قبل؟",
+ "story": "قصة توضيحية من إعداد السلسلة (ناصر والمكتبة ثم الطاولة)، وليست من الكتاب.",
+ "formats": ["9x16"],
+ "voice": {"voice_id": "dlGxemPxFMTY7iXagmOj", "model": "eleven_v4"},
+ "budget": {"cap": 20000, "spentCredits": 1435.85, "seriesTotal": 19334.07, "note": "free-only from here (user, 16 Oct 2026): no new paid generation"}
+}

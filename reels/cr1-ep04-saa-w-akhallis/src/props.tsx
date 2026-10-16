@@ -4,7 +4,7 @@ import { C } from './theme';
 
 const INK = C.ink;
 // the room, in world units (floor at y 0)
-export const CLOCK = { x: -140, y: -1010, r: 120 };
+export const CLOCK = { x: -140, y: -1100, r: 120 };
 export const DOOR = { x: 980, w: 300, h: 860 };
 export const HANDLE: [number, number] = [DOOR.x + DOOR.w / 2 - 40, -404];
 export const WORK_X = 160; // where the flat-pack lies on the floor
@@ -24,7 +24,7 @@ export const WallClock: React.FC<{ min: number; r?: number; note?: string; spin?
       <path transform={`rotate(${m})`} d={`M0 16 L0 ${-r * 0.78}`} stroke={C.clockDeep} strokeWidth={7} strokeLinecap="round" />
       <circle r={9} fill={INK} />
       {spin > 0 && <circle r={r * 0.9} fill="none" stroke={C.clock} strokeWidth={6} strokeDasharray="30 40" opacity={0.6 * spin} transform={`rotate(${min * 3})`} />}
-      {note && <g transform={`translate(${r * 0.75} ${r * 0.85}) rotate(8)`}>
+      {note && <g transform={`translate(${r * 1.2} ${r * 0.5}) rotate(8)`}>
         <rect x={-70} y={-34} width={140} height={68} fill={C.note} stroke={INK} strokeWidth={3.5} />
         <text x={0} y={12} textAnchor="middle" direction="rtl" fontFamily={TITLE} fontWeight={800} fontSize={30} fill={INK}>{note}</text>
       </g>}
@@ -198,7 +198,7 @@ export const PhoneLog: React.FC<{ glow?: number; result?: number }> = ({ glow = 
   <g>
     <rect x={-70} y={-130} width={140} height={260} rx={22} fill="#1B2433" stroke={INK} strokeWidth={5} />
     <rect x={-60} y={-112} width={120} height={224} rx={10} fill={C.screen} opacity={0.4 + 0.6 * glow} />
-    {[['4:00', -60, 0.3], ['9:00', 10, 1]].map(([t, y, b]) => (
+    {[['4:00', -78, 0.3], ['9:00', -10, 1]].map(([t, y, b]) => (
       <g key={t as string} transform={`translate(0 ${y as number})`}>
         <rect x={-50} y={-36} width={100} height={60} rx={6} fill={C.panelShade} stroke={INK} strokeWidth={2.5} />
         <g transform="translate(-18 18) scale(0.13)"><Shelf built={b as number} books={b === 1 ? 1 : 0} /></g>
@@ -206,8 +206,8 @@ export const PhoneLog: React.FC<{ glow?: number; result?: number }> = ({ glow = 
       </g>
     ))}
     {result > 0 && <g opacity={result}>
-      <rect x={-56} y={62} width={112} height={40} rx={10} fill={C.clock} />
-      <text x={0} y={90} textAnchor="middle" direction="rtl" fontFamily={BODY} fontWeight={700} fontSize={22} fill="#FFFFFF">5 ساعات</text>
+      <rect x={-56} y={30} width={112} height={40} rx={10} fill={C.clock} />
+      <text x={0} y={58} textAnchor="middle" direction="rtl" fontFamily={BODY} fontWeight={700} fontSize={22} fill="#FFFFFF">5 ساعات</text>
     </g>}
   </g>
 );

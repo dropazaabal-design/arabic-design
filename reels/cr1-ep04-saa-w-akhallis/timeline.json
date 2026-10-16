@@ -1,0 +1,433 @@
+{
+ "short": {
+  "totalSeconds": 71.487,
+  "frames": 4289,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.3,
+  "maxCps": 11.4,
+  "units": [
+   {
+    "unit": "U1",
+    "take": "uegWMwLlw4YuEi3Lmzv5",
+    "file": "U1-uegWMwLlw4YuEi3Lmzv5.mp3",
+    "sha256": "b6e07dc8dd9fcf90a91535a28a694d9476a70a9af8e9577b5b2f833e0849e494",
+    "cut": [
+     0.0,
+     17.868
+    ],
+    "at": 0.3,
+    "breaks": [
+     [
+      2.262,
+      0.3
+     ],
+     [
+      9.191,
+      0.3
+     ],
+     [
+      10.998,
+      0.35
+     ],
+     [
+      13.771,
+      0.6
+     ],
+     [
+      15.745,
+      0.4
+     ]
+    ]
+   },
+   {
+    "unit": "U2",
+    "take": "2lDzZOxkTQXyJD03J81b",
+    "file": "U2-2lDzZOxkTQXyJD03J81b.mp3",
+    "sha256": "42af14ad475e7c61811ae4d245992259e889586f04582b7a985d18d1c6f066f5",
+    "cut": [
+     0.0,
+     31.399
+    ],
+    "at": 20.618,
+    "breaks": [
+     [
+      8.941,
+      0.4
+     ],
+     [
+      22.212,
+      0.4
+     ]
+    ]
+   },
+   {
+    "unit": "U3",
+    "take": "oAzsPB3nQ2rZTMDtWbrx",
+    "file": "U3-oAzsPB3nQ2rZTMDtWbrx.mp3",
+    "sha256": "b2b8d3f82cf0fe335e7b6e7fa3e715422e328a3f47da1ad111eab35deb64ef04",
+    "cut": [
+     0.0,
+     15.882
+    ],
+    "at": 53.317,
+    "breaks": [
+     [
+      7.297,
+      0.3
+     ],
+     [
+      8.749,
+      0.6
+     ],
+     [
+      10.813,
+      0.4
+     ]
+    ]
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "R1",
+    "i": 4,
+    "sfx": "tick",
+    "gain": -24,
+    "offset": 0.0,
+    "why": "the guests note pulses: seven",
+    "time": 1.98,
+    "word": "سبع."
+   },
+   {
+    "seg": "R1",
+    "i": 7,
+    "sfx": "crumple",
+    "gain": -16,
+    "offset": 0.1,
+    "why": "he rips the carton open",
+    "time": 4.22,
+    "word": "فتح"
+   },
+   {
+    "seg": "R1",
+    "i": 12,
+    "sfx": "pop",
+    "gain": -22,
+    "offset": -0.1,
+    "why": "one finger up: an hour",
+    "time": 6.441,
+    "word": "ساعة"
+   },
+   {
+    "seg": "R2",
+    "i": 0,
+    "sfx": "scribble",
+    "gain": -24,
+    "offset": 0.3,
+    "why": "the screwdriver turns",
+    "time": 8.457,
+    "word": "أول"
+   },
+   {
+    "seg": "R2",
+    "i": 3,
+    "sfx": "click",
+    "gain": -18,
+    "offset": 0.25,
+    "why": "the screw goes in crooked",
+    "time": 9.53,
+    "word": "عوج."
+   },
+   {
+    "seg": "R2",
+    "i": 4,
+    "sfx": "pageflip",
+    "gain": -18,
+    "offset": -0.25,
+    "why": "picks up the instructions",
+    "time": 9.93,
+    "word": "والتعليمات"
+   },
+   {
+    "seg": "R2",
+    "i": 6,
+    "sfx": "pageflip",
+    "gain": -22,
+    "offset": 0.1,
+    "why": "turns the sheet round",
+    "time": 11.52,
+    "word": "رسوم."
+   },
+   {
+    "seg": "R2",
+    "i": 7,
+    "sfx": "thud",
+    "gain": -20,
+    "offset": -0.2,
+    "why": "lifts panel 3",
+    "time": 12.171,
+    "word": "والقطعة"
+   },
+   {
+    "seg": "R2",
+    "i": 11,
+    "sfx": "whoosh",
+    "gain": -24,
+    "offset": 0.5,
+    "why": "flips it the right way up",
+    "time": 14.79,
+    "word": "مقلوبة."
+   },
+   {
+    "seg": "R2",
+    "i": 12,
+    "sfx": "tick",
+    "gain": -22,
+    "offset": -0.6,
+    "why": "the clock races",
+    "time": 15.207,
+    "word": "الساعة"
+   },
+   {
+    "seg": "R2",
+    "i": 12,
+    "sfx": "tick",
+    "gain": -24,
+    "offset": -0.35,
+    "why": "the clock races",
+    "time": 15.457,
+    "word": "الساعة"
+   },
+   {
+    "seg": "R2",
+    "i": 14,
+    "sfx": "doorbell",
+    "gain": -14,
+    "offset": 0.0,
+    "why": "the doorbell: seven",
+    "time": 16.73,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R3",
+    "i": 0,
+    "sfx": "pageflip",
+    "gain": -22,
+    "offset": -0.2,
+    "why": "the book card",
+    "time": 20.437,
+    "word": "دانيال"
+   },
+   {
+    "seg": "R3",
+    "i": 11,
+    "sfx": "pop",
+    "gain": -24,
+    "offset": 0.1,
+    "why": "the dream bubble",
+    "time": 27.352,
+    "word": "نقدّر"
+   },
+   {
+    "seg": "R3",
+    "i": 16,
+    "sfx": "boing",
+    "gain": -14,
+    "offset": -0.35,
+    "why": "a screw springs out",
+    "time": 29.777,
+    "word": "كأن"
+   },
+   {
+    "seg": "R4",
+    "i": 9,
+    "sfx": "tick",
+    "gain": -22,
+    "offset": 0.0,
+    "why": "their estimate: two years",
+    "time": 36.858,
+    "word": "بسنتين."
+   },
+   {
+    "seg": "R4",
+    "i": 10,
+    "sfx": "pop",
+    "gain": -24,
+    "offset": 0.3,
+    "why": "the expert: none under seven",
+    "time": 38.106,
+    "word": "مع"
+   },
+   {
+    "seg": "R4",
+    "i": 24,
+    "sfx": "whoosh",
+    "gain": -22,
+    "offset": -0.1,
+    "why": "the bar runs on to eight",
+    "time": 43.679,
+    "word": "وخلّصوه"
+   },
+   {
+    "seg": "R5",
+    "i": 5,
+    "sfx": "pop",
+    "gain": -24,
+    "offset": 0.0,
+    "why": "the better question",
+    "time": 48.383,
+    "word": "اسأل:"
+   },
+   {
+    "seg": "R5",
+    "i": 10,
+    "sfx": "shutter",
+    "gain": -16,
+    "offset": 0.4,
+    "why": "he photographs the finished shelf",
+    "time": 51.032,
+    "word": "وكم"
+   },
+   {
+    "seg": "R6",
+    "i": 8,
+    "sfx": "click",
+    "gain": -22,
+    "offset": 0.0,
+    "why": "unlocks the phone",
+    "time": 57.397,
+    "word": "فتح"
+   },
+   {
+    "seg": "R6",
+    "i": 12,
+    "sfx": "pop",
+    "gain": -22,
+    "offset": 0.1,
+    "why": "five hours",
+    "time": 59.897,
+    "word": "خمس"
+   },
+   {
+    "seg": "R6",
+    "i": 14,
+    "sfx": "tick",
+    "gain": -22,
+    "offset": -0.25,
+    "why": "twelve o'clock",
+    "time": 60.768,
+    "word": "فبدأ"
+   },
+   {
+    "seg": "R6",
+    "i": 14,
+    "sfx": "crumple",
+    "gain": -16,
+    "offset": 0.5,
+    "why": "opens the table carton at once",
+    "time": 61.518,
+    "word": "فبدأ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "doorbell",
+    "gain": -14,
+    "offset": 0.0,
+    "why": "the doorbell: seven, ready",
+    "time": 64.137,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "step",
+    "gain": -24,
+    "offset": 0.6,
+    "why": "to the door",
+    "time": 64.737,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "step",
+    "gain": -24,
+    "offset": 1.05,
+    "why": "to the door",
+    "time": 65.187,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "step",
+    "gain": -24,
+    "offset": 1.5,
+    "why": "to the door",
+    "time": 65.637,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "click",
+    "gain": -18,
+    "offset": 1.95,
+    "why": "the handle",
+    "time": 66.087,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R6",
+    "i": 19,
+    "sfx": "whoosh",
+    "gain": -26,
+    "offset": 2.15,
+    "why": "the door opens",
+    "time": 66.287,
+    "word": "رنّ"
+   },
+   {
+    "seg": "R7",
+    "i": 0,
+    "sfx": "pop",
+    "gain": -26,
+    "offset": 0.5,
+    "why": "one finger, like at the start",
+    "time": 67.636,
+    "word": "إيش"
+   },
+   {
+    "seg": "R7",
+    "i": 7,
+    "sfx": "chime",
+    "gain": -22,
+    "offset": 1.0,
+    "why": "the question lands",
+    "time": 70.537,
+    "word": "وأخلّصها؟"
+   },
+   {
+    "seg": "R6",
+    "i": 17,
+    "sfx": "tick",
+    "gain": -22,
+    "offset": -0.55,
+    "why": "the hours run on to seven",
+    "time": 62.547,
+    "word": "والساعة"
+   },
+   {
+    "seg": "R6",
+    "i": 17,
+    "sfx": "tick",
+    "gain": -24,
+    "offset": -0.3,
+    "why": "the hours run on to seven",
+    "time": 62.797,
+    "word": "والساعة"
+   }
+  ]
+ }
+}

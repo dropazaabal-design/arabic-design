@@ -22,14 +22,14 @@ root = Path(__file__).resolve().parent.parent
 FPS = 60
 TARGET_LUFS, TP_LIMIT = -16.0, -4.5  # limiter sits below the −4 dBTP ceiling: AAC adds overshoot
 PROGRAMS = {
-    'short': {'script': 'script-short.md', 'units': {'U1': ['R1', 'R2', 'R3'], 'U2': ['R4', 'R5'], 'U3': ['R6', 'R7']},
-              'lead': 0.3, 'hold': 1.1, 'gaps': {'U1': 0.45, 'U2': 0.4}},
+    'short': {'script': 'script-short.md', 'units': {'U1': ['R1', 'R2'], 'U2': ['R3', 'R4', 'R5'], 'U3': ['R6', 'R7']},
+              'lead': 0.3, 'hold': 0.95, 'gaps': {'U1': 0.5, 'U2': 0.5}},
 }
 PARTIAL = set()
 # extra silence opened inside a take's own pause, before word (seg, i): room for an action the
 # narration leaves to the picture (the alarm rings, the lid comes off). Each one is covered by a cue in sfx.json.
-BREAKS = {('R3', 4): 0.45, ('R3', 11): 0.5, ('R6', 6): 0.25, ('R6', 9): 0.75, ('R6', 13): 0.3, ('R6', 17): 0.45,
-          ('R7', 0): 0.3, ('R7', 14): 0.35}
+BREAKS = {('R1', 5): 0.3, ('R2', 4): 0.3, ('R2', 7): 0.35, ('R2', 12): 0.6, ('R2', 16): 0.4, ('R3', 16): 0.4, ('R4', 24): 0.4,
+          ('R6', 14): 0.3, ('R6', 17): 0.6, ('R6', 21): 0.4}
 HARAKAT = re.compile('[\u064b-\u0652\u0670\u0640]')
 norm = lambda w: re.sub(r'[^\w]', '', HARAKAT.sub('', w))
 
@@ -87,23 +87,23 @@ for prog, cfg in PROGRAMS.items():
         # The alignment puts a unit's first word at 0.00 and is coarse after pauses; the voice
         # actually starts a few hundredths later. Every word that follows a pause is moved to the
         # acoustic onset measured in the take, so motion keyed to it lands on the sound.
-        # −40 dB rather than −45 so a quiet breath before a word is not taken for the word
-        sil = run('ffmpeg', '-hide_banner', '-i', str(take), '-af', 'silencedetect=n=-40dB:d=0.1', '-f', 'null', '-').stderr
+        # −45 dB, the same threshold tools/verify.py measures with: two thresholds put a soft onset («و…») 15–30 ms apart
+        sil = run('ffmpeg', '-hide_banner', '-i', str(take), '-af', 'silencedetect=n=-45dB:d=0.1', '-f', 'null', '-').stderr
         onsets = [float(x) for x in re.findall(r'silence_end: ([\d.]+)', sil)]
-        head = run('ffmpeg', '-hide_banner', '-i', str(take), '-t', '1', '-af', 'silencedetect=n=-40dB:d=0.01', '-f', 'null', '-').stderr
+        head = run('ffmpeg', '-hide_banner', '-i', str(take), '-t', '1', '-af', 'silencedetect=n=-45dB:d=0.01', '-f', 'null', '-').stderr
         first = re.search(r'silence_start: -?0(?:\.0+)?\s.*?silence_end: ([\d.]+)', head, re.S)
         onsets = [float(first.group(1)) if first else 0.0] + onsets  # the take's own leading silence is short
         heard = [dict(h) for h in heard]
         for k, h in enumerate(heard):
-            if k == 0 or h['start'] - heard[k - 1]['end'] >= 0.06:
-                # inside this word, never the one before; a unit's first word takes the end of the take's own
-                # leading silence even when the alignment gives it a very short span (L4 «هنا» ends at 0.08)
-                near = [o for o in onsets if abs(o - h['start']) <= 0.3 and (k == 0 or (o < h['end'] - 0.05 and o > heard[k - 1]['start'] + 0.1))]
-                if near:
-                    h['start'] = min(near, key=lambda o: abs(o - h['start']))
-                    h['end'] = max(h['end'], h['start'] + 0.05)
-                    if k and heard[k - 1]['end'] > h['start']:
-                        heard[k - 1]['end'] = h['start']
+            # every word that follows a measured pause, whatever gap the alignment shows (it can put the pause inside the
+            # previous word: «الجرس…» ends 0.04 s before «والمكتبة» in the alignment, 0.21 s of silence in the audio).
+            # Inside this word, never the one before; a unit's first word takes the end of the take's own leading silence.
+            near = [o for o in onsets if abs(o - h['start']) <= 0.3 and (k == 0 or (o < h['end'] - 0.05 and o > heard[k - 1]['start'] + 0.1))]
+            if near:
+                h['start'] = min(near, key=lambda o: abs(o - h['start']))
+                h['end'] = max(h['end'], h['start'] + 0.05)
+                if k and heard[k - 1]['end'] > h['start']:
+                    heard[k - 1]['end'] = h['start']
         b = min(dur, heard[-1]['end'] + 0.3)
         if nxt:  # the silence between the unit's last word and the next one, cut 0.25 s into it
             gap = [(float(s), float(e)) for s, e in re.findall(r'silence_start: ([\d.]+).*?silence_end: ([\d.]+)', sil, re.S)
@@ -181,7 +181,7 @@ for prog, cfg in PROGRAMS.items():
             'segments': segments_out, 'words': [{k: v for k, v in w.items() if k != 'chunk'} for w in words], 'captions': captions}
     (root / f'src/data/{prog}.json').write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     srt_name = '9x16'
-    (root / f'export/cr1-ep03_daqiqatayn_{srt_name}_v{VERSION}.ar.srt').write_text(''.join(f"{k + 1}\n{srt_time(c['start'])} --> {srt_time(c['end'])}\n{c['text']}\n\n" for k, c in enumerate(captions)), encoding='utf-8')
+    (root / f'export/cr1-ep04_saa-w-akhallis_{srt_name}_v{VERSION}.ar.srt').write_text(''.join(f"{k + 1}\n{srt_time(c['start'])} --> {srt_time(c['end'])}\n{c['text']}\n\n" for k, c in enumerate(captions)), encoding='utf-8')
     report[prog] = {'totalSeconds': total, 'frames': round(total * FPS), 'mixLUFS': lufs, 'mixTruePeak': tp, 'gainDb': gain,
                     'maxCps': max(c['cps'] for c in captions), 'units': units_out, 'sfx': cues}
     print(prog, json.dumps({k: report[prog][k] for k in ('totalSeconds', 'frames', 'mixLUFS', 'mixTruePeak', 'maxCps')}))
