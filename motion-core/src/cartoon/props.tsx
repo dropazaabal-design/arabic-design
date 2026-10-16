@@ -128,15 +128,15 @@ export const Keys: React.FC<{ color: string; swing?: number }> = ({ color, swing
   </g>
 );
 
-/** A glass savings jar, origin at its base. `level` 0 … 1 fills it with banknotes. */
-export const Jar: React.FC<{ level: number; note: string; noteShade: string; w?: number; h?: number; label?: React.ReactNode }> = ({ level, note, noteShade, w = 150, h = 190, label }) => {
+/** A glass savings jar, origin at its base. `level` 0 … 1 fills it with banknotes. Two jars on one frame need distinct `id`s. */
+export const Jar: React.FC<{ level: number; note: string; noteShade: string; w?: number; h?: number; label?: React.ReactNode; id?: string }> = ({ level, note, noteShade, w = 150, h = 190, label, id = `jar-${w}-${h}` }) => {
   const fillH = (h - 34) * Math.max(0, Math.min(1, level));
   const rows = Math.ceil(fillH / 18);
   return (
     <g>
       <path d={`M${-w / 2} -12 Q${-w / 2} 0 ${-w / 2 + 14} 0 L${w / 2 - 14} 0 Q${w / 2} 0 ${w / 2} -12 L${w / 2} ${-h + 34} Q${w / 2} ${-h + 22} ${w / 2 - 18} ${-h + 20} L${-w / 2 + 18} ${-h + 20} Q${-w / 2} ${-h + 22} ${-w / 2} ${-h + 34} Z`} fill="#DDEFF7" opacity={0.25} />
-      <clipPath id={`jar-${w}-${h}`}><rect x={-w / 2 + 6} y={-fillH - 6} width={w - 12} height={fillH} /></clipPath>
-      <g clipPath={`url(#jar-${w}-${h})`}>
+      <clipPath id={id}><rect x={-w / 2 + 6} y={-fillH - 6} width={w - 12} height={fillH} /></clipPath>
+      <g clipPath={`url(#${id})`}>
         {Array.from({ length: rows }, (_, k) => (
           <g key={k} transform={`translate(${((k * 37) % 30) - 15} ${-12 - k * 18}) rotate(${((k * 53) % 24) - 12})`}>
             <rect x={-48} y={-9} width={96} height={20} rx={4} fill={k % 2 ? note : noteShade} stroke={INK} strokeWidth={2.5} />

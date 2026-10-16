@@ -7,8 +7,8 @@ from fontTools.ttLib import TTFont
 
 root = Path(__file__).resolve().parent.parent
 text = ''
-for f in ('Episode.tsx', 'Reel.tsx', 'text.tsx', 'art.tsx'):
-    text += ''.join(re.findall(r"[؀-ۿ][^'\"<>{}\n]*", (root / 'src' / f).read_text(encoding='utf-8')))
+for f in sorted((root / 'src').rglob('*.tsx')):
+    text += ''.join(re.findall(r"[؀-ۿ][^'\"<>{}\n]*", f.read_text(encoding='utf-8')))
 for prog in ('long', 'short'):
     text += ''.join(c['text'] for c in json.loads((root / f'src/data/{prog}.json').read_text(encoding='utf-8'))['captions'])
 text += '0123456789:؟،.«»…'

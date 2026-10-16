@@ -84,37 +84,39 @@ const BonusCard: React.FC<{ o: number }> = ({ o }) => (
 );
 
 const MoneyShot: React.FC<{ f: number; k: K; ratio: Ratio; V: boolean }> = ({ f, k, ratio, V }) => {
-  const c: Cam = V ? { x: 960, y: 640, z: 0.95 } : { x: 960, y: 540, z: 1 };
+  const c: Cam = V ? { x: 540, y: ratio === '4x5' ? 640 : 700, z: ratio === '4x5' ? 0.82 : 0.95 } : { x: 960, y: 540, z: 1 };
   // the down payment: notes leave the jar and land in the car
   const pour = prog(f, k.pay + sec(0.2), sec(1.4), ease.inOut);
-  const jar = { x: V ? 760 : 560, y: V ? 520 : 470 }, car = { x: V ? 1180 : 1360, y: V ? 520 : 470 };
+  const jar = V ? { x: 300, y: 430 } : { x: 520, y: 470 }, car = V ? { x: 760, y: 430 } : { x: 1340, y: 470 };
+  const js = V ? 1.5 : 1.9, cs = V ? 0.62 : 1.0;
   const barIn = prog(f, k.rest, sec(0.5), ease.out);
   const third = prog(f, k.third, sec(0.6), ease.out);
   const months = prog(f, k.five, sec(1.6), ease.inOut) * 60;
-  const barY = V ? 760 : 640, barX = 560, barW = 800;
+  const barX = V ? 140 : 400, barW = V ? 800 : 1060, barY = V ? 600 : 610, cell = V ? 56 : 44;
+  const gx = V ? 540 - 6 * cell : 960 - 6 * cell, gy = V ? 760 : 760;
   return (
     <Frame ratio={ratio} c={c} world={<>
       <StageSet />
-      <g transform={`translate(${jar.x} ${jar.y})`}><Jar level={0.85 * (1 - pour)} note={C.mint} noteShade={C.teal} /></g>
-      <Say x={jar.x} y={jar.y + 50} size={34} color={C.mist}>مدخراته</Say>
-      <g transform={`translate(${car.x} ${car.y})`}><Car id={`m-car-${ratio}`} kind="new" color={C.pearl} shade={C.pearlShade} glass={C.glass} scale={0.72} /></g>
+      <g transform={`translate(${jar.x} ${jar.y}) scale(${js})`}><Jar id={`m-jar-${ratio}`} level={0.85 * (1 - pour)} note={C.mint} noteShade={C.teal} /></g>
+      <Say x={jar.x} y={jar.y + 52} size={44} color={C.mist}>مدخراته</Say>
+      <Car id={`m-car-${ratio}`} kind="new" color={C.pearl} shade={C.pearlShade} glass={C.glass} x={car.x} y={car.y} scale={cs} shine={(f - k.pay - sec(1.2)) / sec(1)} />
       {pour > 0 && pour < 1 && [0, 1, 2, 3, 4].map((j) => {
         const t = Math.max(0, Math.min(1, pour * 1.6 - j * 0.15));
         if (t <= 0 || t >= 1) return null;
-        const x = jar.x + (car.x - jar.x) * t, y = jar.y - 200 - Math.sin(Math.PI * t) * 160;
-        return <g key={j} transform={`translate(${x} ${y})`}><Note color={C.mint} shade={C.teal} rot={t * 160 + j * 30} scale={0.7} /></g>;
+        const x = jar.x + (car.x - jar.x) * t, y = jar.y - 220 - Math.sin(Math.PI * t) * 130;
+        return <g key={j} transform={`translate(${x} ${y})`}><Note color={C.mint} shade={C.teal} rot={t * 160 + j * 30} scale={0.9} /></g>;
       })}
-      <Tag x={car.x} y={car.y + 60} text="مقدّمًا" color={C.blue} size={34} o={prog(f, k.pay + sec(0.9), sec(0.4))} />
+      <Tag x={car.x} y={car.y + 64} text="مقدّمًا" color={C.blue} size={40} o={prog(f, k.pay + sec(0.9), sec(0.4))} />
       {barIn > 0 && <g opacity={barIn} transform={`translate(0 ${(1 - barIn) * 20})`}>
-        <Say x={barX + barW + 90} y={barY + 40} size={36} color={C.mist}>الراتب</Say>
-        <Bar x={barX} y={barY} w={barW} h={80} labelSize={34} segs={[
+        <Say x={V ? 540 : barX + barW + 100} y={V ? barY - 40 : barY + 50} size={42} color={C.mist}>الراتب</Say>
+        <Bar x={barX} y={barY} w={barW} h={100} labelSize={40} segs={[
           { frac: 1 / 3, color: mixColor('#3E6C8F', C.red, third), label: third > 0.5 ? 'القسط' : undefined },
           { frac: 2 / 3, color: '#3E6C8F' },
         ]} />
       </g>}
       {months > 0 && <g>
-        <Months x={V ? 300 : 1460 - 12 * 34} y={V ? 900 : 790} cell={V ? 40 : 34} filled={months} color={C.red} />
-        <Tag x={V ? 300 + 12 * 20 : 1460 - 6 * 34} y={V ? 1150 : 990} text="5 سنين" color={C.red} size={32} o={prog(f, k.five + sec(0.4), sec(0.4))} />
+        <Months x={gx} y={gy} cell={cell} filled={months} color={C.red} />
+        <Tag x={V ? 540 : 960} y={gy + 5 * cell + 50} text="5 سنين" color={C.red} size={40} o={prog(f, k.five + sec(0.4), sec(0.4))} />
       </g>}
     </>} />
   );

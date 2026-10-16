@@ -43,12 +43,12 @@ export const Signature: React.FC<{ o: number; size: number; style?: React.CSSPro
   </div>
 );
 
-/** «قصة توضيحية» tag for our own example story (CR1: examples are labelled). */
-export const StoryTag: React.FC<{ o: number; size: number; style?: React.CSSProperties }> = ({ o, size, style }) => (
+/** «قصة توضيحية» tag for our own example story, «من الكتاب» for the book's (CR1: sources are labelled). */
+export const StoryTag: React.FC<{ o: number; size: number; style?: React.CSSProperties; text?: string }> = ({ o, size, style, text = 'قصة توضيحية' }) => (
   <div dir="rtl" lang="ar" style={{
     fontFamily: BODY, fontWeight: 700, fontSize: size, color: C.light, opacity: o, whiteSpace: 'nowrap',
     background: 'rgba(14,22,38,0.78)', border: `2px solid ${C.mist}`, borderRadius: 10, padding: '0.05em 0.55em 0.12em', ...style,
-  }}>قصة توضيحية</div>
+  }}>{text}</div>
 );
 
 const trim = (t: string) => t.replace(/[.،:]+$/, '');

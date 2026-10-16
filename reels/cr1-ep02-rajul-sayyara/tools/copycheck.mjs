@@ -1,9 +1,11 @@
 // On-screen copy: Arabic only (no Latin letters), Western digits only, captions rejoin to the locked
 // scripts word for word, and no caption faster than 17 characters a second.
 import fs from 'node:fs';
+import path from 'node:path';
 const errors = [];
 const strings = [];
-for (const f of ['src/Episode.tsx', 'src/Reel.tsx', 'src/text.tsx', 'src/art.tsx']) {
+const tsx = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? tsx(path.join(d, e.name)) : e.name.endsWith('.tsx') ? [path.join(d, e.name)] : []));
+for (const f of tsx('src')) {
   const src = fs.readFileSync(f, 'utf8');
   // JSX text and string literals that carry Arabic
   for (const m of src.matchAll(/(?:'([^'\n]*[؀-ۿ][^'\n]*)'|>([^<>{}\n]*[؀-ۿ][^<>{}\n]*)<|"([^"\n]*[؀-ۿ][^"\n]*)")/g)) strings.push((m[1] ?? m[2] ?? m[3]).trim());

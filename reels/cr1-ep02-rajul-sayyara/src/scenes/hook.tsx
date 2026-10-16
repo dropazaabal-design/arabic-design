@@ -126,3 +126,8 @@ export const Hook: React.FC<{ f: number; b: HookBeats; ratio: Ratio; o?: number;
 };
 
 export const hookCam = (ratio: Ratio) => LAYOUT[ratio].cam;
+/** Where the camera ends (fully pushed in) and where Majid stands: for scenes that freeze on the hook. */
+export const hookEnd = (ratio: Ratio) => {
+  const L = LAYOUT[ratio];
+  return { cam: { x: L.cam.x + L.panX, y: L.cam.y - 30, z: L.cam.z * (1 + L.push) } as Cam, majid: L.majid };
+};

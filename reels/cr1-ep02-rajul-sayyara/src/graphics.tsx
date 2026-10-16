@@ -156,3 +156,29 @@ export const Card: React.FC<{ w: number; h: number; o?: number; children?: React
 ) : null;
 
 export const TITLE_FONT = TITLE;
+
+/** Three short strokes over a head: the moment someone notices. `t` frames since it started. */
+export const Notice: React.FC<{ x: number; y: number; r: number; t: number; len: number }> = ({ x, y, r, t, len }) => {
+  if (t < 0 || t > len) return null;
+  const o = Math.min(1, t / 7) * Math.min(1, (len - t) / 12);
+  const g = Math.min(1, t / 12);
+  return <g opacity={o} stroke={INK} strokeWidth={5} strokeLinecap="round">
+    {[-125, -95, -65].map((a) => {
+      const ca = Math.cos((a * Math.PI) / 180), sa = Math.sin((a * Math.PI) / 180), r1 = r + 6 * g, r2 = r1 + 20;
+      return <path key={a} d={`M${x + ca * r1} ${y + sa * r1} L${x + ca * r2} ${y + sa * r2}`} />;
+    })}
+  </g>;
+};
+
+/** An engine block, for horsepower. Origin at its base centre. */
+export const Engine: React.FC<{ s?: number }> = ({ s = 1 }) => (
+  <g transform={`scale(${s})`}>
+    <rect x={-80} y={-70} width={160} height={70} rx={10} fill="#5B6B7E" stroke={INK} strokeWidth={5} />
+    {[-50, 0, 50].map((x) => <g key={x}>
+      <rect x={x - 18} y={-118} width={36} height={52} rx={6} fill="#728399" stroke={INK} strokeWidth={4} />
+      <rect x={x - 12} y={-132} width={24} height={16} rx={4} fill="#3E4C5E" stroke={INK} strokeWidth={3.5} />
+    </g>)}
+    <circle cx={-96} cy={-36} r={20} fill="#3E4C5E" stroke={INK} strokeWidth={4} />
+    <path d="M-60 -36 L60 -36" stroke={INK} strokeWidth={3} opacity={0.4} />
+  </g>
+);

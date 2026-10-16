@@ -30,6 +30,7 @@ export const CAST: Record<string, Look> = {
   noura: { ...skin.medium, hair: 'hijab', hairColor: '#231C24', hijab: C.rose, top: '#3E6C80', topShade: '#2E5263', bottom: '#2E5263', dress: true, shoes: '#1E2430' },
   elder: { ...skin.deep, hair: 'bald', hairColor: '#B9B6C4', beard: 'full', top: '#2C4A73', topShade: '#20385A', collar: 'jacket', bottom: '#222C3C', shoes: '#11161F', build: 1.1 },
   young: { ...skin.deep, hair: 'short', hairColor: '#1D171C', top: '#5E7FA3', topShade: '#4A6688', collar: 'shirt', bottom: '#2B3445', shoes: '#151A24', build: 0.96 },
+  guest: { ...skin.light, hair: 'short', hairColor: '#8E8A99', beard: 'stubble', glasses: true, top: '#2C3550', topShade: '#1F2740', collar: 'jacket', bottom: '#1E2433', shoes: '#0F131B', build: 1.02 },
   valet: { ...skin.light, hair: 'cap', hairColor: '#2A2027', cap: C.plumDeep, top: C.plum, topShade: C.plumDeep, collar: 'jacket', bottom: '#2A2F3F', shoes: '#11151D', build: 0.95 },
 };
 

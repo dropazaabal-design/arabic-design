@@ -22,13 +22,14 @@ root = Path(__file__).resolve().parent.parent
 FPS = 60
 TARGET_LUFS, TP_LIMIT = -16.0, -4.5  # limiter sits below the −4 dBTP ceiling: AAC adds overshoot
 PROGRAMS = {
-    'long': {'script': 'script-long.md', 'units': {f'L{k}': [f'L{k}'] for k in range(1, 9)},
+    'long': {'script': 'script-long.md', 'units': {'L1': ['L1'], 'L2': ['L2'], **{f'L{k}': [f'L{k}'] for k in range(3, 12)}},
              'lead': 1.2, 'hold': 4.0,
              # silence between units, seconds: room for the scene change each join carries
-             'gaps': {'L1': 1.1, 'L2': 1.2, 'L3': 1.0, 'L4': 1.3, 'L5': 1.3, 'L6': 1.2, 'L7': 1.3}},
+             'gaps': {'L1': 0.5, 'L2': 1.1, 'L3': 1.2, 'L4': 1.0, 'L5': 1.1, 'L6': 1.2, 'L7': 1.0, 'L8': 1.2, 'L9': 1.0, 'L10': 1.1}},
     'short': {'script': 'script-short.md', 'units': {'S1': ['R1', 'R2', 'R3'], 'S2': ['R4', 'R5', 'R6']},
               'lead': 0.35, 'hold': 2.6, 'gaps': {'S1': 0.7}},
 }
+PARTIAL = {'L1'}
 HARAKAT = re.compile('[\u064b-\u0652\u0670\u0640]')
 norm = lambda w: re.sub(r'[^\w]', '', HARAKAT.sub('', w))
 
@@ -74,6 +75,11 @@ for prog, cfg in PROGRAMS.items():
         heard = [h for h in heard if h['type'] == 'word']
         script = [(sid, ci, i, w) for sid in ids for ci, line in enumerate(segs[sid]) for i, w in
                   enumerate(line.split(), start=sum(len(l.split()) for l in segs[sid][:ci]))]
+        # a take may carry more than its unit (L1's takes also hold segment L2, whose ending was
+        # cut and was regenerated alone): keep the unit's words and cut in the pause after them
+        nxt = heard[len(script)] if unit in PARTIAL and len(heard) > len(script) else None
+        if nxt:
+            heard = heard[:len(script)]
         if len(script) != len(heard) or any(norm(w) != norm(h['text']) for (_, _, _, w), h in zip(script, heard)):
             raise SystemExit(f'{unit}: alignment words do not match the locked script')
         dur = float(run('ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', str(take)).stdout)
@@ -97,6 +103,12 @@ for prog, cfg in PROGRAMS.items():
                     if k and heard[k - 1]['end'] > h['start']:
                         heard[k - 1]['end'] = h['start']
         b = min(dur, heard[-1]['end'] + 0.3)
+        if nxt:  # the silence between the unit's last word and the next one, cut 0.25 s into it
+            gap = [(float(s), float(e)) for s, e in re.findall(r'silence_start: ([\d.]+).*?silence_end: ([\d.]+)', sil, re.S)
+                   if heard[-1]['start'] < float(s) < nxt['start'] + 0.2]
+            if not gap:
+                raise SystemExit(f'{unit}: no pause before the words it leaves out')
+            b = gap[0][0] + min(0.25, (gap[0][1] - gap[0][0]) / 2)
         pieces.append((take, a, b, t))
         off = t - a
         for (sid, ci, i, w), h in zip(script, heard):
@@ -151,7 +163,7 @@ for prog, cfg in PROGRAMS.items():
             'segments': segments_out, 'words': [{k: v for k, v in w.items() if k != 'chunk'} for w in words], 'captions': captions}
     (root / f'src/data/{prog}.json').write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     srt_name = {'long': '16x9', 'short': 'reel'}[prog]
-    (root / f'export/cr1-ep01_hatif-kitab_{srt_name}_v{VERSION}.ar.srt').write_text(''.join(f"{k + 1}\n{srt_time(c['start'])} --> {srt_time(c['end'])}\n{c['text']}\n\n" for k, c in enumerate(captions)), encoding='utf-8')
+    (root / f'export/cr1-ep02_rajul-sayyara_{srt_name}_v{VERSION}.ar.srt').write_text(''.join(f"{k + 1}\n{srt_time(c['start'])} --> {srt_time(c['end'])}\n{c['text']}\n\n" for k, c in enumerate(captions)), encoding='utf-8')
     report[prog] = {'totalSeconds': total, 'frames': round(total * FPS), 'mixLUFS': lufs, 'mixTruePeak': tp, 'gainDb': gain,
                     'maxCps': max(c['cps'] for c in captions), 'units': units_out, 'sfx': cues}
     print(prog, json.dumps({k: report[prog][k] for k in ('totalSeconds', 'frames', 'mixLUFS', 'mixTruePeak', 'maxCps')}))

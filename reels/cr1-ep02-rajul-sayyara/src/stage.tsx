@@ -58,3 +58,11 @@ export const Actor: React.FC<{ f: number; d: Direction }> = ({ f, d }) => {
   );
   return d.o === undefined || d.o >= 1 ? person : <g opacity={Math.max(0, d.o)}>{person}</g>;
 };
+
+/** Diagram scenes: 16:9 frames the 1920 × 1080 stage; the portrait ratios frame a column of
+ * world x 140 … 940, y 0 … 1000, placed in each profile's safe area above the captions. */
+export const STAGE_CAM: Record<Ratio, Cam> = { '16x9': { x: 960, y: 540, z: 1 }, '9x16': { x: 582, y: 685, z: 1 }, '4x5': { x: 540, y: 617, z: 0.9 } };
+/** Pick by ratio; 4:5 falls back to the 9:16 value. */
+export const by = <T,>(r: Ratio, wide: T, tall: T, feed?: T): T => (r === '16x9' ? wide : r === '4x5' && feed !== undefined ? feed : tall);
+/** Ease a camera between two framings. */
+export const camMix = (a: Cam, b: Cam, p: number): Cam => ({ x: a.x + (b.x - a.x) * p, y: a.y + (b.y - a.y) * p, z: a.z + (b.z - a.z) * p });

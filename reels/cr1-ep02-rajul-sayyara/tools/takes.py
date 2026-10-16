@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 
 root = Path(__file__).resolve().parent.parent
-UNITS = {'L1': ['L1'], 'L2': ['L2'], 'L3': ['L3'], 'L4': ['L4'], 'L5': ['L5'], 'L6': ['L6'], 'L7': ['L7'], 'L8': ['L8'],
+UNITS = {'L1': ['L1', 'L2'], 'L2': ['L2'], **{f'L{k}': [f'L{k}'] for k in range(3, 12)},
          'S1': ['R1', 'R2', 'R3'], 'S2': ['R4', 'R5', 'R6']}
 SR = 16000
 
@@ -100,7 +100,21 @@ for unit, takes in rows.items():
             - (10 if bad else 0), 3)
     picked[unit] = max(takes, key=lambda g: takes[g]['score'])
 
-out = {'note': 'acoustic proxy for listening; a person must still listen to the chosen takes', 'median': med, 'picked': picked, 'takes': rows}
+# Whisper (tools/asr.py, review/asr-*.json) overrules the acoustic score where it heard a word
+# missing or wrong in the acoustic favourite; endings were checked by transcribing the last line alone
+HEARD = {
+    'L1': ('wOOaYRAR3HQg7yeT34Lu', 'only segment L1 is used: every L1 take stops mid-word in segment L2'),
+    'L4': ('L0wbIiBf8alZDr0NX8pX', 'lowest WER (0.056); the acoustic favourite blurs «تستعمله مقياس»'),
+    'L6': ('MyEUgbv98h0jFD7mfF8H', 'lowest WER (0.033); the acoustic favourite has «خدش→خجش»'),
+    'L7': ('1O5ZB5HEDg3V9ICvMYTT', 'last line heard whole («يلتفت له أحد»); the acoustic favourite says «لأحد»'),
+    'L8': ('kelNlkDUEL4Rk9TNp0yj', 'lowest WER (0.022); the acoustic favourite drops «أريد»'),
+    'S2': ('fRvya7HFLJYrloJilp78', 'lowest WER (0.036)'),
+}
+reasons = {u: 'acoustic score, Whisper agrees' for u in picked}
+for u, (gid, why) in HEARD.items():
+    picked[u], reasons[u] = gid, why
+out = {'note': 'acoustic proxy for listening, overruled by the independent Whisper check where it heard a fault; a person must still listen to the chosen takes',
+       'median': med, 'picked': picked, 'reasons': reasons, 'takes': rows}
 (root / 'review').mkdir(exist_ok=True)
 (root / 'review/takes.json').write_text(json.dumps(out, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 print('median', med)

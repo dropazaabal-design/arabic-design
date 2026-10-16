@@ -1,0 +1,187 @@
+{
+"unit": "L5",
+"take": "FCvBHfJTFpJc3K9GogUl",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "وهاوسل",
+"type": "word",
+"start": 0,
+"end": 0.56
+},
+{
+"text": "ما",
+"type": "word",
+"start": 0.64,
+"end": 0.72
+},
+{
+"text": "يقول:",
+"type": "word",
+"start": 0.8,
+"end": 1.2
+},
+{
+"text": "لا",
+"type": "word",
+"start": 1.6,
+"end": 1.68
+},
+{
+"text": "تشتري",
+"type": "word",
+"start": 1.76,
+"end": 2.16
+},
+{
+"text": "سيارة",
+"type": "word",
+"start": 2.28,
+"end": 2.64
+},
+{
+"text": "حلوة.",
+"type": "word",
+"start": 2.8,
+"end": 3.2
+},
+{
+"text": "يقول",
+"type": "word",
+"start": 3.6,
+"end": 4
+},
+{
+"text": "بمعنى",
+"type": "word",
+"start": 4.08,
+"end": 4.4
+},
+{
+"text": "كلامه:",
+"type": "word",
+"start": 4.48,
+"end": 4.96
+},
+{
+"text": "تظن",
+"type": "word",
+"start": 5.28,
+"end": 5.6
+},
+{
+"text": "إنك",
+"type": "word",
+"start": 5.68,
+"end": 6
+},
+{
+"text": "تريد",
+"type": "word",
+"start": 6.08,
+"end": 6.32
+},
+{
+"text": "السيارة،",
+"type": "word",
+"start": 6.4,
+"end": 7.28
+},
+{
+"text": "والحقيقة",
+"type": "word",
+"start": 7.4,
+"end": 8
+},
+{
+"text": "إنك",
+"type": "word",
+"start": 8.24,
+"end": 8.56
+},
+{
+"text": "تريد",
+"type": "word",
+"start": 8.64,
+"end": 8.88
+},
+{
+"text": "الاحترام.",
+"type": "word",
+"start": 8.96,
+"end": 9.84
+},
+{
+"text": "والاحترام",
+"type": "word",
+"start": 9.96,
+"end": 10.48
+},
+{
+"text": "يجيك",
+"type": "word",
+"start": 10.56,
+"end": 10.96
+},
+{
+"text": "من",
+"type": "word",
+"start": 11.04,
+"end": 11.12
+},
+{
+"text": "التواضع",
+"type": "word",
+"start": 11.24,
+"end": 11.84
+},
+{
+"text": "واللطف",
+"type": "word",
+"start": 11.92,
+"end": 12.48
+},
+{
+"text": "والتعاطف،",
+"type": "word",
+"start": 12.56,
+"end": 13.44
+},
+{
+"text": "أكثر",
+"type": "word",
+"start": 13.64,
+"end": 13.84
+},
+{
+"text": "مما",
+"type": "word",
+"start": 13.92,
+"end": 14.16
+},
+{
+"text": "تجيبه",
+"type": "word",
+"start": 14.24,
+"end": 14.8
+},
+{
+"text": "أي",
+"type": "word",
+"start": 14.88,
+"end": 15.12
+},
+{
+"text": "قوة",
+"type": "word",
+"start": 15.2,
+"end": 15.6
+},
+{
+"text": "محرك.",
+"type": "word",
+"start": 15.72,
+"end": 16.4
+}
+]
+}
