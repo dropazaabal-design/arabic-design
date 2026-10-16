@@ -18,12 +18,13 @@ version = brief['version']
 def fingerprint(paths):
     h = hashlib.sha256()
     for p in sorted(paths):
-        h.update(str(p.relative_to(root)).encode())
+        h.update(str(p.relative_to(root.parent.parent)).encode())
         h.update(sha(p).encode())
     return h.hexdigest()
 
 
-code = [*root.glob('src/*.ts'), *root.glob('src/*.tsx'), root / 'remotion.config.ts', *root.glob('public/fonts/*.woff2')]
+kit = root.parent.parent / 'motion-core/src/cartoon'
+code = [*root.glob('src/**/*.ts'), *root.glob('src/**/*.tsx'), *kit.glob('*.ts*'), root / 'remotion.config.ts', *root.glob('public/fonts/*.woff2'), *root.glob('public/sfx/*.wav')]
 inputs = {
     'long': [root / 'script-long.md', root / 'src/data/long.json', root / 'public/audio/long-mix.wav', *code],
     'short': [root / 'script-short.md', root / 'src/data/short.json', root / 'public/audio/short-mix.wav', *code],
