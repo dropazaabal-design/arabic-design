@@ -1,0 +1,53 @@
+{
+ "flow_id": "kYvYgiIRC3IMDOdwSyct",
+ "model": "eleven_v4",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "takes_per_unit": 4,
+ "units": {
+  "U1": {
+   "segments": [
+    "R1",
+    "R2",
+    "R3"
+   ],
+   "node": "zzW88mJLNKOPAESYY53u",
+   "credits": 939.91,
+   "sessions": [
+    "mIfpDyC80GzN1O2w3fLK",
+    "mozZ9kShRmhw0sVUuKvy",
+    "WmtbEYhcVTsK1vDHDs5w",
+    "DwnISjNA2m8BLAKFjvlx"
+   ]
+  },
+  "U2": {
+   "segments": [
+    "R4",
+    "R5"
+   ],
+   "node": "Dm0ksR72V4TFNYySHNY5",
+   "credits": 847.92,
+   "sessions": [
+    "jxlJCosFZlDDefQ6Mqx1",
+    "UeFi17nC3nYeKEPmFP1M",
+    "dM7KCB75tunLXkixeing",
+    "IgUI7InNLXs05KsaOiOb"
+   ]
+  },
+  "U3": {
+   "segments": [
+    "R6",
+    "R7"
+   ],
+   "node": "u1gLPHpb4mpvxCX2KnKJ",
+   "credits": 1031.9,
+   "sessions": [
+    "1pgdZtSbmCnwnttC6ZBH",
+    "SAKW9sV4v3chHQ4aW48b",
+    "jtNCLf9Dt5fPCZPnrazv",
+    "SwSgSe3SByS8DakE4TMR"
+   ]
+  }
+ },
+ "totalCredits": 2819.73,
+ "capNote": "within the 20,000 cap approved by delegation for this series (15,078.49 spent before this reel)"
+}

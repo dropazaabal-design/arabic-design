@@ -1,0 +1,191 @@
+{
+ "file": "cr1-ep03_daqiqatayn_9x16_v1.0.0.mp4",
+ "bytes": 44795270,
+ "videoBitrate": 4963865,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "4162",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189375"
+ },
+ "duration": {
+  "container": 69.376,
+  "timeline": 69.367,
+  "frames": 4162,
+  "framesExpected": 4162,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.5
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [],
+ "voiceOnsets": {
+  "lines": 7,
+  "found": 6,
+  "maxAbsOffset": 0.016,
+  "detail": [
+   {
+    "id": "R1",
+    "planned": 0.333,
+    "measured": 0.333937,
+    "offset": 0.001
+   },
+   {
+    "id": "R2",
+    "planned": 4.865,
+    "measured": 4.86433,
+    "offset": -0.001
+   },
+   {
+    "id": "R3",
+    "planned": 11.86,
+    "measured": 11.8436,
+    "offset": -0.016
+   },
+   {
+    "id": "R4",
+    "planned": 22.882,
+    "measured": 22.8828,
+    "offset": 0.001
+   },
+   {
+    "id": "R5",
+    "planned": 37.633,
+    "measured": 37.633,
+    "offset": 0.0
+   },
+   {
+    "id": "R6",
+    "planned": 42.795,
+    "measured": 42.7952,
+    "offset": 0.0
+   },
+   {
+    "id": "R7",
+    "planned": 59.218,
+    "measured": 59.2176,
+    "offset": -0.0,
+    "maskedBy": "click"
+   }
+  ],
+  "afterPause": {
+   "words": 9,
+   "maxAbsOffset": 0.002,
+   "detail": [
+    {
+     "seg": "R3",
+     "i": 11,
+     "w": "وكل",
+     "planned": 18.644,
+     "measured": 18.6445,
+     "offset": 0.001,
+     "maskedBy": "click"
+    },
+    {
+     "seg": "R4",
+     "i": 21,
+     "w": "تقرأ",
+     "planned": 33.665,
+     "measured": 33.6582,
+     "offset": -0.007,
+     "maskedBy": "pageflip"
+    },
+    {
+     "seg": "R4",
+     "i": 26,
+     "w": "تلبس",
+     "planned": 36.145,
+     "measured": 36.1443,
+     "offset": -0.001,
+     "maskedBy": "pop"
+    },
+    {
+     "seg": "R6",
+     "i": 3,
+     "w": "وكتب:",
+     "planned": 44.739,
+     "measured": 44.7389,
+     "offset": -0.0
+    },
+    {
+     "seg": "R6",
+     "i": 6,
+     "w": "وفتح",
+     "planned": 47.092,
+     "measured": 47.0918,
+     "offset": -0.0
+    },
+    {
+     "seg": "R6",
+     "i": 9,
+     "w": "أول",
+     "planned": 49.787,
+     "measured": 49.7864,
+     "offset": -0.001
+    },
+    {
+     "seg": "R6",
+     "i": 13,
+     "w": "ثاني",
+     "planned": 52.167,
+     "measured": 51.9171,
+     "offset": -0.25,
+     "maskedBy": "whoosh"
+    },
+    {
+     "seg": "R6",
+     "i": 17,
+     "w": "وبعد",
+     "planned": 54.488,
+     "measured": 54.1881,
+     "offset": -0.3,
+     "maskedBy": "whoosh"
+    },
+    {
+     "seg": "R7",
+     "i": 14,
+     "w": "إيش",
+     "planned": 66.147,
+     "measured": 66.1491,
+     "offset": 0.002
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1080x1920": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "voice lines start on time (≤ 1 frame)": true,
+  "words after a pause on time (≤ 1 frame)": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

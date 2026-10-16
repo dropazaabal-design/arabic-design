@@ -1,0 +1,38 @@
+{
+ "note": "Independent checks of what is said; no person has listened yet (the production environment cannot play audio to me).",
+ "takes": {
+  "method": "Whisper large-v3-turbo (sherpa-onnx int8, local) on all 12 takes, word error rate after normalising spelling (review/asr-turbo.json); endings transcribed alone; large-v3 on the three chosen takes",
+  "chosen": {
+   "U1": "HwfcRf67Frnl9mRkgwXq: turbo WER 0, large-v3 word for word",
+   "U2": "vMhHIeSPfbEme6xwsBa9: turbo «تقرأ→تكرا» once (likely a Gulf g for qaf), large-v3 word for word",
+   "U3": "R8IUtVXrD5waOsYFmrPs: turbo WER 0, large-v3 word for word"
+  }
+ },
+ "export": {
+  "method": "the exported MP4 audio (voice + effects), transcribed in three windows (0–22.6, 22.6–42.6, 42.6–69.4 s) by both models",
+  "large-v3": "word for word in all three windows",
+  "turbo": [
+   "«ونص» written «ونصف» (spelling)",
+   "«صار» heard «صاه» at 55.6 s",
+   "«تبيها» heard «بيها» at 62.6 s"
+  ]
+ },
+ "listenFirst": [
+  {
+   "t": 33.0,
+   "word": "تقرأ",
+   "why": "qaf may be a Gulf g; acceptable, confirm by ear"
+  },
+  {
+   "t": 55.6,
+   "word": "صار",
+   "why": "turbo hears صاه in the mix; the take alone and large-v3 are clean"
+  },
+  {
+   "t": 62.6,
+   "word": "تبيها",
+   "why": "turbo hears بيها in the mix and in 3 of 4 takes; the chosen take alone and large-v3 are clean"
+  }
+ ],
+ "dialect": "white Arabic leaning Gulf (يبي، مو، إيش، لين، كم أسبوع); no Egyptian forms in the script; whether the voice sounds Gulf or Levantine needs a native ear"
+}
