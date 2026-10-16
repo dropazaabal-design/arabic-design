@@ -1,0 +1,13 @@
+{
+ "flow_id": "AziKkNWo1Zx7MCEH8NKZ",
+ "model": "eleven_v4",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "takes_per_unit": 2,
+ "units": {
+  "U1": {"segments": ["R1", "R2"], "node": "PvHupqAEFPIt6H1e7Wju", "credits": 401.96, "sessions": ["VuX10XMxNXyS3ZP3h7d0", "b1tEOzWFVzLS61ec9W9k"]},
+  "U2": {"segments": ["R3", "R4", "R5"], "node": "fnRPETCmcEghEX1wA9IL", "credits": 679.93, "sessions": ["Emseek3XQJbZW7jPX9Us", "0kI1aEDF29GuwOwEaYXY"]},
+  "U3": {"segments": ["R6", "R7"], "node": "KGk4vSbRiFyCfYA6jU3N", "credits": 353.96, "sessions": ["E2RdOMYRtibxH217XPW8", "xX6u8i2sq9TeJL6JThk3"]}
+ },
+ "totalCredits": 1435.85,
+ "capNote": "series cap 20,000 approved by delegation; spent before this reel: 15,078.49 (ep02) + 2,819.73 (ep03) = 17,898.22; remaining before this reel 2,101.78. Two takes per unit instead of four to stay under it. The workspace balance itself could not be read from this connector (no balance tool); every run was priced with estimate_only first."
+}

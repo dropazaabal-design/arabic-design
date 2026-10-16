@@ -70,6 +70,26 @@ export const PartGripFront = () => <g data-part="gripFront"><path d="M25 -120 C2
     fill: "var(--skin,#C98F7E)"
   }} stroke="#0E1626" strokeWidth={3} strokeLinejoin="round" /></g>;
 
+export const PartHandPinch = () => <g data-part="handPinch"><path d="M27 -136 C23 -126 22 -112 26 -104 C30 -98 38 -98 42 -102 L50 -112 C54 -118 53 -128 49 -136 Z" style={{
+    fill: "var(--skin,#C98F7E)"
+  }} stroke="#0E1626" strokeWidth={3.5} strokeLinejoin="round" /><path d="M38 -108 C40 -100 43 -94 47 -90 C50 -87 54 -90 52 -94 C49 -98 46 -104 45 -110 Z" style={{
+    fill: "var(--skin,#C98F7E)"
+  }} stroke="#0E1626" strokeWidth={3.5} strokeLinejoin="round" /><path d="M49 -128 C57 -124 58 -110 55 -97 C54 -92 50 -91 49 -95 C50 -103 50 -112 47 -118 Z" style={{
+    fill: "var(--skin,#C98F7E)"
+  }} stroke="#0E1626" strokeWidth={3.5} strokeLinejoin="round" /><path d="M29 -118 C31 -110 34 -106 38 -105" style={{
+    stroke: "var(--skin-shade,#A9705F)"
+  }} strokeWidth={2.6} fill="none" strokeLinecap="round" /></g>;
+
+export const PartEdgeBack = () => <g data-part="edgeBack"><path d="M27 -136 C23 -126 23 -110 25 -98 C26 -90 33 -87 37 -89 L46 -93 C50 -95 51 -100 50 -106 L51 -116 C53 -124 52 -130 49 -136 Z" style={{
+    fill: "var(--skin,#C98F7E)"
+  }} stroke="#0E1626" strokeWidth={3.5} strokeLinejoin="round" /><path d="M31 -112 L30 -96 M37 -110 L37 -92 M43 -110 L44 -95" stroke="#0E1626" strokeWidth={2.2} strokeLinecap="round" opacity={0.45} /></g>;
+
+export const PartEdgeFront = () => <g data-part="edgeFront"><path d="M46 -131 C56 -127 59 -117 56 -108 C54 -102 48 -102 47 -107 C48 -113 47 -120 43 -124 Z" style={{
+    fill: "var(--skin,#C98F7E)"
+  }} stroke="#0E1626" strokeWidth={3.5} strokeLinejoin="round" /><path d="M50 -110 C52 -108 53 -106 53 -104" style={{
+    stroke: "var(--skin-shade,#A9705F)"
+  }} strokeWidth={2.6} fill="none" strokeLinecap="round" /></g>;
+
 export const PartTorso = () => <g data-part="torso"><path d="M-12 -292 L12 -292 L12 -270 L-12 -270 Z" style={{
     fill: "var(--skin,#C98F7E)"
   }} stroke="#0E1626" strokeWidth={4} /><path d="M-12 -280 C-4 -276 6 -276 12 -280" style={{
@@ -134,6 +154,9 @@ export const PARTS = {
   handPoint: PartHandPoint,
   gripBack: PartGripBack,
   gripFront: PartGripFront,
+  handPinch: PartHandPinch,
+  edgeBack: PartEdgeBack,
+  edgeFront: PartEdgeFront,
   torso: PartTorso,
   head: PartHead,
   hair: PartHair,
@@ -159,6 +182,9 @@ export const PIVOTS: Record<PartName, [number, number]> = {
   handPoint: [38, -134],
   gripBack: [38, -134],
   gripFront: [38, -134],
+  handPinch: [38, -134],
+  edgeBack: [38, -134],
+  edgeFront: [38, -134],
   torso: [0, -146],
   head: [0, -286],
   hair: [0, -298],
@@ -176,5 +202,8 @@ export const ANCHORS: Partial<Record<PartName, [number, number]>> = {
   handPoint: [44, -80],
   gripBack: [40, -112],
   gripFront: [40, -112],
+  handPinch: [51, -89],
+  edgeBack: [45, -104],
+  edgeFront: [45, -104],
 };
 
