@@ -1,0 +1,195 @@
+{
+ "reel": "save-advice",
+ "title": "حفظت النصيحة… متى تطبّقها؟",
+ "canvas": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 60,
+  "titleBand": "y 300–520",
+  "stage": "y 450–1290 (the drawer front sits at y 1030–1270)",
+  "captions": "y 1330 (burned)",
+  "clearZones": "top bar above y 250, right-hand buttons x > 900 in the lower half, bottom UI below y 1560"
+ },
+ "timing": "timeline.json, measured from the full take; every beat keys on a spoken word (wordAt)",
+ "continuity": "scenes are independent components; the reel cuts between them with no crossfade, and each scene starts in exactly the state the previous one ended (shared positions in src/scenes/shared.tsx); titles fade before each cut",
+ "developedFrom": "phone-challenge: one connected world instead of three stages; objects change role (button→drawer, card→book, card→task, drawer→step) rather than being replaced; titles never cut mid-word",
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "name": "الافتتاح: الحفظ يصير درجًا ممتلئًا",
+   "time": [
+    0.0,
+    3.393
+   ],
+   "audio": [
+    "s01"
+   ],
+   "purpose": "from the first frame: the save button is pressed and becomes a drawer that is already full; its contents grey (unused)",
+   "motion": [
+    "button pressed on «كم»",
+    "button morphs into the drawer front",
+    "drawer opens full on «حفظتَ»",
+    "contents grey on «تستخدم»"
+   ],
+   "onScreen": [
+    "حفظت… ولم تطبّق؟"
+   ]
+  },
+  {
+   "sceneId": "sc02",
+   "name": "فيديو بعد فيديو",
+   "time": [
+    3.393,
+    8.726
+   ],
+   "audio": [
+    "s02"
+   ],
+   "purpose": "three saved videos arrive one after another and drop into the drawer as tabs",
+   "motion": [
+    "card «القراءة» on «القراءة»",
+    "card «التركيز» on «التركيز»",
+    "card «ترتيب اليوم» on «ترتيب»",
+    "each drops into the drawer before the next"
+   ],
+   "onScreen": [
+    "القراءة",
+    "التركيز",
+    "ترتيب اليوم"
+   ]
+  },
+  {
+   "sceneId": "sc03",
+   "name": "المحفوظات تصير مؤجلات",
+   "time": [
+    8.726,
+    15.908
+   ],
+   "audio": [
+    "s03",
+    "s04"
+   ],
+   "purpose": "nothing changed after saving: the drawer closes, pages turn, the list comes back out and each card is stamped «لاحقًا»",
+   "motion": [
+    "drawer closes on «لكن»",
+    "calendar pages turn on «بعد / ماذا / تغيّر»",
+    "cards rise into a fan on «المحفوظات»",
+    "stamps on «قائمة / أشياء / تؤجلها»"
+   ],
+   "onScreen": [
+    "ماذا تغيّر؟",
+    "لاحقًا",
+    "القراءة",
+    "التركيز",
+    "ترتيب اليوم"
+   ]
+  },
+  {
+   "sceneId": "sc04",
+   "name": "اختر واحدة… وحوّلها",
+   "time": [
+    15.908,
+    21.256
+   ],
+   "audio": [
+    "s05"
+   ],
+   "purpose": "one card is chosen (green ring), its stamp peels off, the others go back, and it turns over into a book — a small action",
+   "motion": [
+    "lift on «اختر»",
+    "peel on «واحدة»",
+    "flip into a book on «وحوّلها»",
+    "label on «فعل»"
+   ],
+   "onScreen": [
+    "اختر واحدة",
+    "فعل صغير",
+    "لاحقًا",
+    "القراءة",
+    "التركيز",
+    "ترتيب اليوم"
+   ]
+  },
+  {
+   "sceneId": "sc05",
+   "name": "التنفيذ أمامك",
+   "time": [
+    21.256,
+    28.866
+   ],
+   "audio": [
+    "s06",
+    "s07"
+   ],
+   "purpose": "the book opens and one page is read line by line; the focus card comes out, the phone is moved away, one task starts filling",
+   "motion": [
+    "book opens on «افتح»",
+    "lines highlight on «واقرأ»",
+    "book steps aside on «عن»",
+    "phone away on «أبعِد»",
+    "task bar on «وابدأ»"
+   ],
+   "onScreen": [
+    "اقرأ صفحة",
+    "مهمة واحدة",
+    "التركيز"
+   ]
+  },
+  {
+   "sceneId": "sc06",
+   "name": "ليس كل شيء",
+   "time": [
+    28.866,
+    35.145
+   ],
+   "audio": [
+    "s08",
+    "s09"
+   ],
+   "purpose": "a flood of saved cards; all but one fall away; the one that fits is chosen and started",
+   "motion": [
+    "flood on «كل ما تشاهده»",
+    "fall on «المطلوب»",
+    "green ring on «تختار»",
+    "check on «يناسبك»",
+    "start on «وتبدأ»"
+   ],
+   "onScreen": [
+    "ليس كل شيء",
+    "اختر… وابدأ",
+    "ترتيب اليوم"
+   ]
+  },
+  {
+   "sceneId": "sc07",
+   "name": "خطوة واحدة",
+   "time": [
+    35.145,
+    41.14
+   ],
+   "audio": [
+    "s10"
+   ],
+   "purpose": "the save button returns, the drawer now holds less, and one step comes out of it; the last question stays",
+   "motion": [
+    "drawer opens with fewer cards on «قبل»",
+    "save button hovers on «تحفظ»",
+    "the step rises on «الخطوة»",
+    "account name in the last 1.6 s"
+   ],
+   "onScreen": [
+    "ترتيب اليوم",
+    "ما الخطوة التي ستنفّذها؟",
+    "خطوة واحدة",
+    "كتاب وبس"
+   ]
+  }
+ ],
+ "assets": {
+  "drawings": "original SVG in src/art/saved.tsx (+ Phone from reel.tsx, helpers from doodles.tsx/world.tsx); no people, no faces",
+  "fonts": "Cairo, Tajawal (SIL OFL)",
+  "sfx": "public/sfx — FFmpeg syntheses from reels/crab-mentality",
+  "music": "public/music/bed.wav — original, tools/music.py (C–G–Am–F, 96 BPM, seed 11), no samples",
+  "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj, one full take (generation 53nJKvfS63xfKKzpPaag); Variant B chain on a copy"
+ }
+}

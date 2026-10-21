@@ -1,0 +1,22 @@
+{
+  "name": "phone-challenge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Reel render/phone-challenge.mp4 --audio-codec=aac --audio-bitrate=192k",
+    "stills": "node tools/stills.mjs",
+    "copycheck": "node tools/copycheck.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.534",
+    "@remotion/media-utils": "^4.0.534",
+    "@remotion/paths": "^4.0.534",
+    "@remotion/renderer": "^4.0.534",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.534",
+    "typescript": "^7.0.2"
+  }
+}

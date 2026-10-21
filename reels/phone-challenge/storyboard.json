@@ -1,0 +1,169 @@
+{
+ "reel": "phone-challenge",
+ "canvas": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 60,
+  "titleBand": "y 270–380",
+  "captions": "y 1330 (burned, from src/captions.json)",
+  "clearZones": "top bar above y 250, right-hand buttons x > 900 in the lower half, bottom caption/handle zone below y 1560"
+ },
+ "timing": "timeline.json, measured from the full take; every beat keys on a spoken word (wordAt)",
+ "stages": {
+  "A": "sc01–sc03 (light), one continuous world",
+  "B": "sc04 (navy)",
+  "C": "sc05–sc06 (light)"
+ },
+ "generatedOnScreen": {
+  "captions": "src/captions.json — the narration itself, in short cues"
+ },
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "name": "الافتتاح: دقيقتان بلا هاتف؟",
+   "time": [
+    0.0,
+    3.154
+   ],
+   "audio": [
+    "s01"
+   ],
+   "purpose": "the challenge in the first second: the phone is on screen from frame 0 and a timer ring draws around it",
+   "visual": "phone + timer ring (red arc draws 0.3–2.9 s)",
+   "motion": [
+    "ring draws from 0.3 s (no logo, no empty frame)",
+    "kinetic title word by word on «دقيقتين / بلا / هاتف»"
+   ],
+   "onScreen": [
+    "دقيقتان",
+    "بلا",
+    "هاتف؟"
+   ]
+  },
+  {
+   "sceneId": "sc02",
+   "name": "حتى بلا إشعار",
+   "time": [
+    3.154,
+    8.518
+   ],
+   "audio": [
+    "s02"
+   ],
+   "purpose": "the reach for the phone as a loop that keeps returning, with a silent bell",
+   "visual": "phone (smaller), a dotted loop, a dot that leaves and returns, tally marks, a grey bell with an empty badge",
+   "motion": [
+    "loop draws as the scene opens",
+    "the dot circles every 1.2 s from «جرّب»; each return flashes the screen and adds a mark",
+    "bell appears on «حتى»"
+   ],
+   "onScreen": [
+    "حتى بلا إشعار"
+   ]
+  },
+  {
+   "sceneId": "sc03",
+   "name": "لاحظ العادة",
+   "time": [
+    8.518,
+    14.76
+   ],
+   "audio": [
+    "s03"
+   ],
+   "purpose": "not a willpower test: noticing; the loop stops and a lens looks at the marks",
+   "visual": "the dot stops (turns red) on «ليست»; a dumbbell is crossed on «بل»; a lens slides onto the marks on «ملاحظة»",
+   "motion": [
+    "freeze",
+    "cross",
+    "lens enlarges the marks"
+   ],
+   "onScreen": [
+    "لاحظ العادة"
+   ]
+  },
+  {
+   "sceneId": "sc04",
+   "name": "التجربة المنشورة",
+   "time": [
+    14.76,
+    26.228
+   ],
+   "audio": [
+    "s04",
+    "s05"
+   ],
+   "purpose": "the published experiment as it was: mobile internet blocked for two weeks, calls and texts kept; sustained attention improved; sticking to it was hard",
+   "visual": "two weeks (14 days) fill green; wifi struck in red; call and message keep green checks; a rising green line; a small phone keeps pushing back toward the two weeks",
+   "motion": [
+    "source line on «تجربة»",
+    "cut on «حُجب»",
+    "days fill on «أسبوعين»",
+    "checks on «المكالمات» / «والرسائل»",
+    "line draws on «تحسّن»",
+    "push on «الالتزام»"
+   ],
+   "onScreen": [
+    "حجب الإنترنت أسبوعين",
+    "المصدر: كاستيلو وزملاؤه، 2025"
+   ]
+  },
+  {
+   "sceneId": "sc05",
+   "name": "تجربة، وليست وعدًا",
+   "time": [
+    26.228,
+    34.9
+   ],
+   "audio": [
+    "s06",
+    "s07"
+   ],
+   "purpose": "two minutes are not the study: a long bar (two weeks) next to a tiny one (two minutes); no reset promise; then the phone is put away and a notebook takes its place",
+   "visual": "bars; a reset arrow crossed; phone slides away; notebook writes",
+   "motion": [
+    "bars on «هذا» / «دقيقتين»",
+    "cross on «دماغك»",
+    "phone away on «ضع»",
+    "notebook on «اختر»"
+   ],
+   "onScreen": [
+    "تجربة، وليست وعدًا",
+    "أسبوعان",
+    "دقيقتان"
+   ]
+  },
+  {
+   "sceneId": "sc06",
+   "name": "لسبب… أم عادة؟",
+   "time": [
+    34.9,
+    41.74
+   ],
+   "audio": [
+    "s08"
+   ],
+   "purpose": "the closing question as two paths from the phone, then the timer returns to the opening picture",
+   "visual": "a green path to a check («لسبب») and a red loop («عادة»); the timer ring redraws around the phone; the account name",
+   "motion": [
+    "green path on «لسبب»",
+    "red loop on «لمجرد»",
+    "ring returns after «العادة»",
+    "name in the last 1.6 s"
+   ],
+   "onScreen": [
+    "لسبب… أم عادة؟",
+    "لسبب",
+    "عادة",
+    "كتاب وبس"
+   ]
+  }
+ ],
+ "assets": {
+  "drawings": "original SVG in src/art (reel.tsx, doodles.tsx, world.tsx helpers); no people, no faces, no stock",
+  "fonts": "Cairo, Tajawal (SIL OFL)",
+  "sfx": "public/sfx — FFmpeg syntheses from reels/crab-mentality (byte-identical copies)",
+  "music": "public/music/bed.wav — original, synthesized by tools/music.py (seeded), no samples",
+  "voice": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj, one full take (generation 9Rw3qHATlAmg6JQR5O3R); Variant B chain (audio/variant-b-chain.txt) on a copy"
+ }
+}

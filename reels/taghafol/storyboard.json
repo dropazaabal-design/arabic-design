@@ -1,0 +1,181 @@
+{
+ "title": "التغافل — الفطن المتغافل",
+ "format": "1080x1920, 60 fps; speaker frames are the 30 fps source frames, each shown twice",
+ "voice": "the speaker's own recording only (no synthesis, no cloning); edited in pauses, see timeline.json and audio/cuts.md",
+ "scenes": [
+  {
+   "sceneId": "sc01",
+   "kind": "speaker",
+   "out": [
+    0.0,
+    5.65
+   ],
+   "srcStart": 22.25,
+   "seg": 0,
+   "visual": "Cold open, from frame 0: the speaker, title «من أذكى الناس؟»; on «الفطن» the title becomes his answer in green. Source 22.25–27.95 (the exchange is heard once: it is not repeated later).",
+   "onScreen": [
+    "من أذكى الناس؟",
+    "الفطن المتغافل"
+   ]
+  },
+  {
+   "sceneId": "sc02",
+   "kind": "graphics",
+   "out": [
+    5.65,
+    21.41
+   ],
+   "srcStart": 0.6,
+   "seg": 1,
+   "visual": "Definition (lens + notes): an eye draws on; four notes appear around it, each on a dotted line of sight. «تكلّف الغفلة»: a card with a sleepy eye is held up in front of it; behind it the notes still get a tick on «تغافل، تغابى، تكلّف، الغباء». «تظهر كذلك» is written on the card; on «وأنت لست كذلك» the card comes down and the open eye is there, with a green check and «ولست كذلك».",
+   "onScreen": [
+    "التغافل",
+    "تكلّف الغفلة",
+    "تظهر كذلك",
+    "ولست كذلك"
+   ]
+  },
+  {
+   "sceneId": "sc03",
+   "kind": "speaker",
+   "out": [
+    21.41,
+    24.94
+   ],
+   "srcStart": 18.1,
+   "seg": 2,
+   "visual": "«وهذا التغافل صفة محمودة في الرجال» — title «صفة محمودة».",
+   "onScreen": [
+    "صفة محمودة"
+   ]
+  },
+  {
+   "sceneId": "sc04",
+   "kind": "graphics",
+   "out": [
+    24.94,
+    33.53
+   ],
+   "srcStart": 28.3,
+   "seg": 3,
+   "visual": "Notes passing (ملاحظات تمرّ): title «الفطن المتغافل» recalls who «هو» is. Notes keep arriving from the right and pass under the eye; each is seen (line of sight, tick) and none is stopped. «فطِن» (blue) on «فطن», «متغافل» (green) and a half-lowered lid on «متغافل». A magnifier comes down over the lane on «يحقّق» and is crossed out on «في كل».",
+   "onScreen": [
+    "الفطن المتغافل",
+    "فطِن",
+    "متغافل"
+   ]
+  },
+  {
+   "sceneId": "sc05",
+   "kind": "speaker",
+   "out": [
+    33.53,
+    40.38
+   ],
+   "srcStart": 36.95,
+   "seg": 3,
+   "visual": "The opposite, acted out by him: «أنت لماذا قلت؟…» (title in red), then «لذا قال الأول».",
+   "onScreen": [
+    "أنت لماذا قلت؟",
+    "لذا قال الأول"
+   ]
+  },
+  {
+   "sceneId": "sc06",
+   "kind": "graphics",
+   "out": [
+    40.38,
+    48.68
+   ],
+   "srcStart": 43.8,
+   "seg": 3,
+   "visual": "Verse 1 as the title, word by word on his voice (captions hidden). Balance (ميزان): right pan «الغبي» (a shut eye), left pan «المتغابي» (half-lidded eye). The crown goes over the first and is refused (red X), then lands on the second on «المتغابي»; that side goes down and turns green.",
+   "onScreen": [
+    "ليس الغبيُّ بسيدٍ في قومه",
+    "لكنّ سيدَ قومِه المتغابي",
+    "الغبي",
+    "المتغابي"
+   ]
+  },
+  {
+   "sceneId": "sc07",
+   "kind": "graphics",
+   "out": [
+    48.68,
+    55.48
+   ],
+   "srcStart": 52.1,
+   "seg": 3,
+   "visual": "Verse 2 as the title (captions hidden). Choice paths (مسارات اختيار): from one start, a red path circles each of three matters and ends in a knot short of the goal; «الحمد» appears; on «إلا من غفل» a green path passes the same matters by (they fade) and reaches «الحمد», which pulses on «نعم» and on the repeated «بالحمد».",
+   "onScreen": [
+    "وتغافلْ عن أمورٍ إنه",
+    "لم يفُزْ بالحمدِ إلا من غفل",
+    "الحمد"
+   ]
+  },
+  {
+   "sceneId": "sc08",
+   "kind": "speaker",
+   "out": [
+    55.48,
+    65.53
+   ],
+   "srcStart": 58.9,
+   "seg": 3,
+   "visual": "«حمد الرجال، حمد من عاشره… هذه من خصال السادة، من خصال الوجهاء» — titles «حمد من عاشره», then «من خصال السادة» (green).",
+   "onScreen": [
+    "حمد من عاشره",
+    "من خصال السادة"
+   ]
+  },
+  {
+   "sceneId": "sc09",
+   "kind": "graphics",
+   "out": [
+    65.53,
+    73.58
+   ],
+   "srcStart": 68.95,
+   "seg": 3,
+   "visual": "«هذا التغافل… حتى في بيتك»: the half-lidded eye goes up under a roof, a house is drawn around it, and three rooms light on «بنيك», «أهلك», «من إليك».",
+   "onScreen": [
+    "هذا التغافل",
+    "حتى في بيتك",
+    "بنيك",
+    "أهلك",
+    "من إليك"
+   ]
+  },
+  {
+   "sceneId": "sc10",
+   "kind": "speaker",
+   "out": [
+    73.58,
+    79.73
+   ],
+   "srcStart": 77.0,
+   "seg": 3,
+   "visual": "Conclusion in his words: «لقد رأيت… لكن», then «اصنع كأنك لم تسمع» (green).",
+   "onScreen": [
+    "لقد رأيت… لكن",
+    "اصنع كأنك لم تسمع"
+   ]
+  },
+  {
+   "sceneId": "sc11",
+   "kind": "graphics",
+   "out": [
+    79.73,
+    82.23
+   ],
+   "srcStart": 83.15,
+   "seg": 3,
+   "visual": "End card after his last word: the half-lidded eye, «الفطن المتغافل», «كتاب وبس», and the source as far as it can be stated: «مقطع منشور على X».",
+   "onScreen": [
+    "الفطن المتغافل",
+    "كتاب وبس",
+    "مقطع منشور على X"
+   ]
+  }
+ ]
+}
