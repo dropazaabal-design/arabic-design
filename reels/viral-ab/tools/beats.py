@@ -40,8 +40,48 @@ B['shade'] = {'date1': 10.3, 'date2': 10.9, 'text': 10.4, 'look': 11.4}
 B['again'] = {'stand': 12.6, 'cane': 12.85, 'shoot': 13.0, 'walk': 13.2, 'walkEnd': 13.85, 'kneel': 13.9, 'scoop': [14.0, 14.25], 'set': 14.5}
 B['ask'] = {'girl': 15.05, 'girlAt': 15.55, 'askText': 15.2, 'askEnd': 16.1, 'stand': 15.72, 'pat': 16.0, 'text': 16.2, 'sign': 16.9}
 
+# ——— C «الضربة 101» (16 s, loops) ———
+# 100 strikes leave 100 chips on the wall and nothing happens; the 101st lands where the first did and the crack
+# runs through every chip (a minimum spanning tree over them), then over the whole wall, which falls away.
+GY, S = 1560, 1.15
+rc = random.Random(21)
+C = {'duration': 16.0, 'GY': GY, 'S': S, 'DX': -1500,
+     'shots': [['wide', 0.0], ['montage', 3.4], ['close', 8.7], ['impact', 9.9], ['reveal', 10.6], ['journey', 13.4]]}
+fast = [round(3.55 + 5.0 * ((k + 1) / 97) ** 0.62, 3) for k in range(97)]  # strikes 4–100, the gaps shrinking to 2 frames
+C['hits'] = [0.3, 1.6, 2.9] + fast + [9.9]
+first = (540, 1268)
+chips = [first, (first[0] - 14, first[1] + 10), (first[0] + 12, first[1] - 9)]
+while len(chips) < 100:
+    q = (round(rc.uniform(170, 910)), round(rc.uniform(GY - 330 * S, GY - 172 * S)))
+    if all((q[0] - c[0]) ** 2 + (q[1] - c[1]) ** 2 > 22 ** 2 for c in chips):
+        chips.append(q)
+C['chips'] = [list(c) for c in chips]
+C['final'] = list(first)
+# minimum spanning tree over the chips (Prim), each edge with its depth from the final strike for the reveal order
+pts = chips
+inside, edges, depth = {0}, [], {0: 0}
+while len(inside) < len(pts):
+    i, j = min(((i, j) for i in inside for j in range(len(pts)) if j not in inside), key=lambda e: (pts[e[0]][0] - pts[e[1]][0]) ** 2 + (pts[e[0]][1] - pts[e[1]][1]) ** 2)
+    inside.add(j)
+    depth[j] = depth[i] + 1
+    edges.append([i, j, depth[j]])
+C['mst'] = edges
+# the wall's break lines: a jittered grid; its cells are the shards that fall
+cols, rows = 11, 15
+xs = [-400 + k * 1900 / (cols - 1) for k in range(cols)]
+ys = [-1100 + k * (GY + 1100) / (rows - 1) for k in range(rows)]
+C['grid'] = {'cols': cols, 'rows': rows, 'pts': [[round(x + (rc.uniform(-55, 55) if 0 < i < cols - 1 else 0)), round(y + (rc.uniform(-50, 50) if 0 < j < rows - 1 else 0))]
+                                                 for j, y in enumerate(ys) for i, x in enumerate(xs)]}
+C['passers'] = {'in': 4.4, 'stop': 5.2, 'out': 6.7}
+C['text'] = {'once': 0.4, 'nothing': 1.3, 'nothingOut': 3.2, 'said': 4.9, 'saidOut': 6.8, 'big': 9.15, 'last': 11.0, 'before': 12.0, 'outro': 14.6, 'sign': 12.8}
+C['close'] = {'lean': 8.75, 'look': 9.0, 'raise': 9.35}
+C['impact'] = {'flash': 9.9, 'crack1': 10.05, 'crack2': 10.35, 'fall': 10.6}
+C['journey'] = {'walk': 13.6, 'arrive': 15.15, 'raise': 15.2, 'up': 15.55}
+
 (root / 'src/a').mkdir(parents=True, exist_ok=True)
 (root / 'src/b').mkdir(parents=True, exist_ok=True)
+(root / 'src/c').mkdir(parents=True, exist_ok=True)
 (root / 'src/a/beats.json').write_text(json.dumps(A, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 (root / 'src/b/beats.json').write_text(json.dumps(B, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+(root / 'src/c/beats.json').write_text(json.dumps(C, ensure_ascii=False) + '\n', encoding='utf-8')
 print('ok')
