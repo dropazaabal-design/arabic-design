@@ -1,0 +1,7 @@
+node_modules
+out/
+audio/lines/
+audio/*.wav
+public/audio/*.wav
+tools/.export-svg.cjs
+previews/dev/

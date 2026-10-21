@@ -1,0 +1,59 @@
+import React from 'react';
+import { AbsoluteFill, Composition } from 'remotion';
+import { Character } from '../kit/characters/Character';
+import { POSES } from '../kit/characters/poses';
+import { pose } from '../kit/characters/skeleton';
+import { PAL } from '../kit/style';
+import { CAST } from '../kit/characters/cast';
+import { Hand } from '../kit/characters/hands';
+import { MEETING, MeetingBack, MeetingTableFront } from '../kit/places/MeetingRoom';
+import { Street } from '../kit/places/Street';
+import { UnderTable } from '../kit/places/UnderTable';
+
+// One still per place, with a character or two on top for scale.
+const Frame: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <AbsoluteFill style={{ background: PAL.paper }}>
+    <svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{ position: 'absolute' }}>{children}</svg>
+  </AbsoluteFill>
+);
+const stand = POSES.stand;
+// seated with forearms on a table top `up` px above the feet (character units)
+const atTable = (up: number) => pose({ sit: 1, footR: [52, 0], footL: [64, 0], R: { hand: [60, -up] }, L: { hand: [74, -up + 4] } });
+
+const Meeting: React.FC = () => {
+  const up = (MEETING.feetY - MEETING.tableTop) / MEETING.scale;
+  const who = ['salim', 'att1', 'hadi', 'jaser', 'att2', 'mona'] as const;
+  return (
+    <Frame>
+      <MeetingBack t={12} />
+      {MEETING.seats.map((s, i) => i === 2 ? null : <Character key={i} who={who[i]} p={atTable(up)} x={s.x} y={MEETING.feetY} s={MEETING.scale} facing={s.facing} face={i === 3 ? 'smug' : 'calm'} />)}
+      <Character who="att3" p={POSES.explain.p} hands={POSES.explain.hands} x={MEETING.standAt.x} y={MEETING.standAt.y} s={1.45} facing={-1} />
+      <MeetingTableFront />
+    </Frame>
+  );
+};
+
+const Under: React.FC = () => (
+  <Frame>
+    <UnderTable />
+    <g transform="translate(860 600) rotate(-20) scale(16)"><Hand g="pen" skin={CAST.salim.skin} /></g>
+  </Frame>
+);
+
+const StreetShot: React.FC<{ pan: number; eve: boolean }> = ({ pan, eve }) => (
+  <Frame>
+    <Street pan={pan} eve={eve} />
+    <Character who="salim" p={POSES.walk.p} x={900} y={860} s={1.45} />
+    <Character who="reem" p={stand.p} x={1150} y={860} s={1.45} facing={-1} />
+  </Frame>
+);
+
+const cfg = { durationInFrames: 1, fps: 60, width: 1920, height: 1080 } as const;
+export const PlacesPreview: React.FC = () => (
+  <>
+    <Composition id="Meeting" component={Meeting} {...cfg} />
+    <Composition id="UnderTable" component={Under} {...cfg} />
+    <Composition id="Street" component={StreetShot} {...cfg} defaultProps={{ pan: 0, eve: false }} />
+    <Composition id="StreetEve" component={StreetShot} {...cfg} defaultProps={{ pan: 1, eve: true }} />
+  </>
+);
