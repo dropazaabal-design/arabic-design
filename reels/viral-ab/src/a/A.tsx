@@ -131,8 +131,10 @@ const THROWS: Throw[] = [...B.volley.map((v) => ({ t: v.t0, who: v.who })), { t:
 const RELEASE: [number, number] = [44, -262]; // the throwing hand at release, character space
 const release = (i: number): [number, number] => [CROWD[i] + RELEASE[0] * S, CLIFF.top + RELEASE[1] * S];
 
-export const ReelA: React.FC = () => {
-  const f = useCurrentFrame();
+/** `bare` drops the words on screen, `still` holds one frame and `cam` frames it: the covers reuse the picture. */
+export const ReelA: React.FC<{ bare?: boolean; still?: number; cam?: Cam }> = ({ bare = false, still, cam }) => {
+  const now = useCurrentFrame();
+  const f = still ?? now;
   const shot = [...B.shots].reverse().find(([, t]) => f >= at(t as number))![0] as string;
   const idx = (name: string) => B.shots.findIndex(([n]) => n === name);
   const shotStart = (name: string) => at(B.shots[idx(name)][1] as number);
@@ -226,7 +228,7 @@ export const ReelA: React.FC = () => {
     silent: camMix({ x: 210, y: 1080, z: 1.95 }, { x: 205, y: 1070, z: 2.08 }, local('silent')),
     stairs: camMix({ x: 482, y: 694, z: 0.92 }, { x: 478, y: 700, z: 0.98 }, local('stairs')),
   };
-  const c = cams[shot];
+  const c = cam ?? cams[shot];
   const flash = 1 - prog(f, at(B.summit.flash), 22);
   const shake = shot === 'summit' && f >= at(B.summit.flash) ? Math.sin(f * 1.7) * 6 * (1 - prog(f, at(B.summit.flash), 14)) : 0;
 
@@ -303,12 +305,14 @@ export const ReelA: React.FC = () => {
         {world}
         <rect x={0} y={0} width={W} height={H} fill="#FFFFFF" opacity={f >= at(B.summit.flash) ? flash * 0.55 : 0} />
       </svg>
+      {!bare && <>
       {(shot === 'crowd' || shot === 'wide') && <Laughs f={f} c={c} />}
       <Text text="ضحكوا عليه…" o={say1} top={1400} size={120} />
       <Text text="…وصل." o={say2} top={240} size={130} />
       <Text text="وأول ما وصل…" o={end1} top={226} size={88} color={C.textDim} />
       <Text text="نزّل لهم سلّم." o={end2} top={340} size={124} />
       <Text text="كتاب وبس" o={sign * 0.85} top={1560} size={40} weight={700} color={C.textDim} />
+      </>}
       <Audio src={staticFile('audio/a-mix.wav')} />
     </AbsoluteFill>
   );

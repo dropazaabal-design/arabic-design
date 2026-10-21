@@ -117,8 +117,10 @@ const Bubble: React.FC<{ text: string; o: number; x: number }> = ({ text, o, x }
 
 const years = (n: number) => (n === 1 ? 'سنة' : n === 2 ? 'سنتين' : n <= 10 ? `${n} سنوات` : `${n} سنة`);
 
-export const ReelB: React.FC = () => {
-  const f = useCurrentFrame();
+/** `bare` drops the words on screen, `still` holds one frame and `cam` frames it: the covers reuse the picture. */
+export const ReelB: React.FC<{ bare?: boolean; still?: number; cam?: Cam }> = ({ bare = false, still, cam }) => {
+  const now = useCurrentFrame();
+  const f = still ?? now;
   const shot = [...B.shots].reverse().find(([, t]) => f >= at(t as number))![0] as string;
   const idx = (name: string) => B.shots.findIndex(([n]) => n === name);
   const shotStart = (name: string) => at(B.shots[idx(name)][1] as number);
@@ -241,7 +243,7 @@ export const ReelB: React.FC = () => {
     again: camMix(view(690, 1.25), view(720, 1.25), local('again')),
     ask: camMix(view(950, 1.95), view(952, 2.02), local('ask')),
   };
-  const c = cams[shot];
+  const c = cam ?? cams[shot];
 
   // soil from the hole: tossed at each stroke onto a mound beside it
   const strokesDone = D.strokes.filter((s) => f >= at(s) + 16).length;
@@ -302,12 +304,14 @@ export const ReelB: React.FC = () => {
         <Sky c={c} night={night} />
         {world}
       </svg>
+      {!bare && <>
       <Bubble text="يا جدّي… متى بتاكل منها؟" o={ask1} x={head(bx, KID)[0]} />
       <Bubble text="يا بابا… متى بتاكل منها؟" o={ask2} x={head(girlX, 0.6)[0]} />
       {yearsShown > 0 && <Text text={years(yearsShown)} o={yo} top={250} size={96} />}
       <Text text="زرعوا… فأكلنا." o={Math.min(1, t1)} top={shot === 'ask' ? 230 : 260} size={shot === 'ask' ? 84 : 112} color={shot === 'ask' ? C.textDim : C.text} />
       <Text text="ونزرع… فيأكلون." o={t2} top={350} size={118} />
       <Text text="كتاب وبس" o={sign * 0.85} top={1600} size={40} weight={700} color={C.textDim} />
+      </>}
       <Audio src={staticFile('audio/b-mix.wav')} />
     </AbsoluteFill>
   );
