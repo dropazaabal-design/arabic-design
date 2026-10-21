@@ -5,3 +5,4 @@ audio/*.wav
 public/audio/*.wav
 tools/.export-svg.cjs
 previews/dev/
+previews/review/

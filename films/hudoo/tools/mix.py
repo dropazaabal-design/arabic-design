@@ -1,7 +1,7 @@
 """The soundtrack: narration + a quiet piano that steps aside when the voice speaks + light effects on their actions.
 
 usage: python3 tools/mix.py   → public/audio/mix.wav (48 kHz stereo, −16 LUFS, peak ≤ −2 dBTP), audio/mix-report.json
-Effects are cued in audio/sfx.json as {shot, at: word text or seconds into the shot, sfx, gain}; the shot timing is the
+Effects are cued in audio/sfx/bN.json (one file per batch of shots) as {shot, at: word text or seconds into the shot, sfx, gain}; the shot timing is the
 same rule as src/film/engine.tsx (one shot per line, the cut 0.22 s at most before the voice). No samples: all synthesised.
 """
 import json
@@ -10,38 +10,16 @@ import subprocess
 import wave
 from pathlib import Path
 
+import sys
+
 import numpy as np
 
-root = Path(__file__).resolve().parent.parent
-SR, FPS = 48000, 60
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from timeline import FPS, LINES, SHOTS, SR, T, TOTAL, WORDS, norm, root  # noqa: E402,F401
+
 rng = np.random.default_rng(4)
-LINES = json.loads((root / 'timing/lines.json').read_text(encoding='utf-8'))
-WORDS = json.loads((root / 'timing/words.json').read_text(encoding='utf-8'))
-SHOTS = json.loads((root / 'narrative/shotlist.json').read_text(encoding='utf-8'))
-TOTAL = LINES['total']
 
-
-def norm(s):
-    s = re.sub(r'[^\u0621-\u064A0-9]', '', s)
-    return s.replace('أ', 'ا').replace('إ', 'ا').replace('آ', 'ا').replace('ة', 'ه').replace('ى', 'ي')
-
-
-def timeline():
-    out, prev_end = [], 0.0
-    for k, s in enumerate(SHOTS):
-        L = next(l for l in LINES['lines'] if l['id'] == s['line'])
-        lw = [w for w in WORDS if w['line'] == s['line']]
-        part = s['part']
-        ws = lw[part[0]:part[1]] if part else lw
-        sp0 = ws[0]['start'] if part and part[0] > 0 else L['start']
-        sp1 = lw[part[1]]['start'] if part and part[1] is not None else L['end']
-        lead = 0 if k == 0 else min(0.22, (sp0 - prev_end) * 0.6)
-        out.append({'id': s['id'], 'from': 0 if k == 0 else round((sp0 - lead) * FPS) / FPS, 'words': ws, 'chapter': L['chapter'], 'speech': (sp0, sp1)})
-        prev_end = sp1
-    return out
-
-
-T = timeline()
 
 
 def cue_time(c):
@@ -202,7 +180,7 @@ mL, mR = music.L[:n] * duck, music.R[:n] * duck
 
 # ——— effects ———
 fx = Bus(TOTAL)
-cues = json.loads((root / 'audio/sfx.json').read_text(encoding='utf-8')) if (root / 'audio/sfx.json').exists() else []
+cues = [c for p in sorted((root / 'audio/sfx').glob('*.json')) for c in json.loads(p.read_text(encoding='utf-8'))]  # one file per batch
 placed = []
 for c in cues:
     t = cue_time(c)

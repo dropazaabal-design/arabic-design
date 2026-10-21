@@ -80,7 +80,7 @@ export const PostScreen = ({ author, text, comments, reply, menu = 0, blocked = 
                     </div>
                   )}
                   {k.hostile && m > 0 && (
-                    <div style={{ position: 'absolute', left: 6, top: 34, opacity: m, transform: `scale(${0.6 + 0.4 * m})`, transformOrigin: 'left top', ...card, borderRadius: 14, width: 150, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ position: 'absolute', left: 6, top: 'calc(100% - 6px)', opacity: m, transform: `scale(${0.6 + 0.4 * m})`, transformOrigin: 'left top', ...card, borderRadius: 14, width: 150, padding: '4px 0', display: 'flex', flexDirection: 'column' }}>
                       {[['حظر', BLOCK, PAL.provoke], ['إبلاغ', FLAG, c.text]].map(([label, d, col], j) => (
                         <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 16px', fontSize: 20, fontWeight: 700, color: col, borderTop: j ? `1.5px solid ${c.line}` : 'none' }}>
                           {ico(d, col)}<span>{label}</span>

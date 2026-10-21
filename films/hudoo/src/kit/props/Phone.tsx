@@ -53,7 +53,7 @@ export const Phone = ({ w = 44, screen, glow = 0, faceDown = false, buzz = 0, t 
             </svg>
             {/* round the glass corners: the body colour over the screen's square corners */}
             <path d={`M${sx} ${sy} h${sw} v${sh} h${-sw} Z ${rrect(sx, sy, sw, sh, sr)}`} fill={BODY} fillRule="evenodd" />
-            <circle cx={0} cy={sy + sw * 0.07} r={sw * 0.028} fill={EDGE} />
+            <circle cx={0} cy={sy + sw * 0.045} r={sw * 0.018} fill={EDGE} />
             <path d={rrect(sx, sy, sw, sh, sr)} fill="none" stroke={INK} strokeWidth={lw * 0.45} />
           </g>
         )}

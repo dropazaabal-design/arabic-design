@@ -10,7 +10,7 @@ type P = [number, number];
  * A paper notebook seen from above-front, opening like an Arabic notebook (spine on the right of the closed cover).
  * Origin: the spine, at the pages' vertical centre. Open spread is w wide (default 220) × ≈0.66·w tall; the closed
  * notebook covers the LEFT half (x −w/2..0). Everything scales with w.
- * `open` 0 closed … 1 open; `lines` are written on the right page, one per ruled line (≈24 characters fit);
+ * `open` 0 closed … 1 open; `lines` are written on the right page, one per ruled line (long lines are set smaller to fit; ≤ 24 characters keeps the full size);
  * `written` 0..1 writes them in order, each line revealed from its right end (handwriting runs right to left).
  */
 export const Notebook = ({ open = 1, lines = [], written = 1, w = 220 }: { open?: number; lines?: string[]; written?: number; w?: number }) => {
@@ -51,8 +51,10 @@ export const Notebook = ({ open = 1, lines = [], written = 1, w = 220 }: { open?
           const p = clamp01((clamp01(written) * total - before) / lens[i]);
           before += lens[i];
           if (p <= 0) return null;
+          // ponytail: width estimated from the character count (~0.5 em per Arabic letter in Cairo), not measured
+          const size = Math.min(fs, (pw * 0.78) / (lens[i] * 0.5));
           return (
-            <div key={i} style={{ position: 'absolute', right: (i % 3) * w * 0.004, top: (i + 1) * ls - ls * 0.08, width: '100%', textAlign: 'right', whiteSpace: 'nowrap', transform: `rotate(${(((i * 37) % 7) - 3) * 0.35}deg)`, transformOrigin: 'right center' }}>
+            <div key={i} style={{ fontSize: size, position: 'absolute', right: (i % 3) * w * 0.004, top: (i + 1) * ls - ls * 0.08, width: '100%', textAlign: 'right', whiteSpace: 'nowrap', transform: `rotate(${(((i * 37) % 7) - 3) * 0.35}deg)`, transformOrigin: 'right center' }}>
               <span style={{ position: 'relative', display: 'inline-block' }}>
                 <span style={{ visibility: 'hidden' }}>{l}</span>
                 <span style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: `${p * 100}%`, overflow: 'hidden' }}>

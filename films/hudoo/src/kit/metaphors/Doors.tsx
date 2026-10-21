@@ -1,6 +1,6 @@
 import React from 'react';
 import { INK, LINE, PAL, sketch, sketchRect } from '../style';
-import { Frame, clamp01, ease, ink, mix, smooth, useUid, type P } from './util';
+import { Frame, clamp01, ease, ink, smooth, useUid, type P } from './util';
 
 // Three doors: the same message read three ways. Behind each door a different light: jagged rose, wavy lavender,
 // calm blue. Door centres x = 520 / 960 / 1400, top y = 360, floor y = 860. Free for captions: y < 320, and a
@@ -32,12 +32,13 @@ const Behind: React.FC<{ kind: number; x: number; y: number; w: number; h: numbe
           const pts: P[] = Array.from({ length: 24 }, (_, i) => [x - 10 + i * 12, yy + Math.sin(i * 0.7 + t * 1.6 + r) * 12]);
           return <path key={r} d={smooth(pts)} fill="none" stroke={col} strokeWidth={8} strokeLinecap="round" />;
         }
-        // calm: long level lines, slowly breathing in length
+        // calm: long level lines under a quiet moon, slowly breathing in length
+        if (r < 2) return null;
         const len = w * (0.45 + 0.25 * Math.sin(t * 0.6 + r * 1.3));
         const cx = x + w / 2 + Math.sin(r * 2.1) * 30;
         return <path key={r} d={`M${cx - len / 2} ${yy} L${cx + len / 2} ${yy}`} stroke={col} strokeWidth={8} strokeLinecap="round" opacity={0.85} />;
       })}
-      {kind === 2 && <circle cx={x + w * 0.62} cy={y + h * 0.2} r={30} fill="#F4F8FC" stroke={L.a} strokeWidth={4} />}
+      {kind === 2 && <circle cx={x + w * 0.6} cy={y + 90} r={32} fill="#F4F8FC" stroke={L.a} strokeWidth={4} />}
     </g>
   );
 };
@@ -125,7 +126,7 @@ export const SingleDoor: React.FC<SingleDoorProps> = ({ t, open, knock }) => {
       {/* lamp */}
       <path d={`M380 ${floor - 4} L380 520`} {...ink(14)} /><path d={`M380 ${floor - 4} L380 520`} stroke={PAL.metal} strokeWidth={7} />
       <ellipse cx={380} cy={floor - 4} rx={60} ry={14} fill={PAL.chair} {...ink()} />
-      <path d={`M300 420 L460 420 L430 520 L330 520 Z`} fill="#F4F2FA" {...ink()} transform="translate(0 0)" />
+      <path d={`M300 420 L460 420 L430 520 L330 520 Z`} fill="#F4F2FA" {...ink()} />
       <path d={`M330 520 L430 520 L520 ${floor - 20} L240 ${floor - 20} Z`} fill="#FFFFFF" opacity={0.28} />
       {/* picture: just calm shapes */}
       <path d={sketchRect(1300, 360, 240, 170, 8)} fill="#F7F5F1" {...ink()} />
@@ -145,16 +146,17 @@ export const SingleDoor: React.FC<SingleDoorProps> = ({ t, open, knock }) => {
         <circle cx={x + w * 0.4} cy={top + h * 0.45} r={70} fill="#FFFFFF" opacity={0.8} />
       </g>
       <Panel x={x} y={top} w={w} h={h} open={open * 0.75} hinge="right" dir={-1} color="#A7B6C6" seed={50} />
-      {/* the knock: rings travelling out from the door and fading */}
+      {/* the knock: sound arcs travelling out from both sides of the door and fading */}
       {kn < 1 && [0, 1, 2].map((k) => {
-        const p = clamp01(kn * 1.25 - k * 0.12);
-        if (p <= 0) return null;
-        return <ellipse key={k} cx={kx} cy={ky} rx={60 + p * 420} ry={50 + p * 330} fill="none" stroke={PAL.rose} strokeWidth={8 - p * 5} opacity={(1 - p) * 0.9} />;
+        const p = clamp01(kn * 1.3 - k * 0.14);
+        if (p <= 0 || p >= 1) return null;
+        const r = 190 + p * 260;
+        return [-1, 1].map((sd) => {
+          const a0 = (-38 * Math.PI) / 180, a1 = (38 * Math.PI) / 180;
+          const pts: P[] = Array.from({ length: 9 }, (_, i) => { const a = a0 + ((a1 - a0) * i) / 8; return [kx + sd * Math.cos(a) * r, ky + Math.sin(a) * r * 0.9]; });
+          return <path key={`${k}${sd}`} d={smooth(pts)} fill="none" stroke={PAL.warn} strokeWidth={9 - p * 5} strokeLinecap="round" opacity={(1 - p) * 0.95} />;
+        });
       })}
-      {kn < 0.3 && [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([sx, sy], i) => (
-        <path key={i} d={`M${kx + sx * 26} ${ky + sy * 22} L${kx + sx * 44} ${ky + sy * 36}`} {...ink(5)} opacity={1 - kn / 0.3} />
-      ))}
-      {void mix}
     </Frame>
   );
 };

@@ -83,8 +83,9 @@ export const k = (f: number, keys: [number, number][], e = ease.inOut) => {
 export const settle = (f: number, from: number, w = 9) => { const t = Math.max(0, (f - from) / FPS); return 1 - (1 + w * t) * Math.exp(-w * t); };
 
 // ——— poses and faces over time ———
-type PoseKey = [number, PoseName | Stance | Pose, number?];
-const asStance = (v: PoseName | Stance | Pose): { p: Pose; hands?: Stance['hands'] } => (typeof v === 'string' ? POSES[v] : 'p' in v ? v : { p: v });
+export type PoseLike = PoseName | { p: Pose; hands?: Stance['hands'] } | Pose;
+type PoseKey = [number, PoseLike, number?];
+const asStance = (v: PoseLike): { p: Pose; hands?: Stance['hands'] } => (typeof v === 'string' ? POSES[v] : 'p' in v ? v : { p: v });
 /** Pose track: each key blends in from the previous over its duration (default 16 frames, eased). Hands switch at the blend midpoint. */
 export const poseAt = (f: number, keys: PoseKey[]) => {
   let cur = asStance(keys[0][1]);

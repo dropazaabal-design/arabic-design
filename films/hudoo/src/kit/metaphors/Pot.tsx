@@ -85,11 +85,13 @@ export const Pot: React.FC<PotProps> = ({ t, boil, flame: fl, press, steamOut, k
       <path d={`M700 864 L1220 864`} stroke={PAL.metal} strokeWidth={5} strokeLinecap="round" />
       <circle cx={670} cy={ky} r={28} fill={PAL.paper} {...ink()} />
       <path d={`M670 ${ky} L670 ${ky - 20}`} {...ink(6)} />
-      {/* the knob that matters: three flame marks for low, mid and high */}
-      {[-58, 0, 58].map((a, i) => {
-        const r = 50, ax = kx + Math.sin((a * Math.PI) / 180) * r, ay = ky - Math.cos((a * Math.PI) / 180) * r;
-        return <g key={i}><path d={flame(ax, ay + 6 + i * 3, 10 + i * 4, 12 + i * 7)} fill={PAL.flameBlue} {...ink(1.8)} /><path d={flame(ax, ay + 6 + i * 3, 5 + i * 2, 6 + i * 3.5)} fill={PAL.flameCore} /></g>;
-      })}
+      {/* the knob that matters: a wedge from low (thin, left) to high (thick, right) */}
+      <path d={(() => {
+        const pt = (a: number, r: number) => `${kx + Math.sin((a * Math.PI) / 180) * r} ${ky - Math.cos((a * Math.PI) / 180) * r}`;
+        const n = 16, outer = Array.from({ length: n + 1 }, (_, i) => { const a = -62 + (124 * i) / n; return pt(a, 40 + 4 + (i / n) * 18); });
+        const inner = Array.from({ length: n + 1 }, (_, i) => { const a = 62 - (124 * i) / n; return pt(a, 40); });
+        return `M${outer.join(' L')} L${inner.join(' L')} Z`;
+      })()} fill={PAL.flameBlue} {...ink(LINE.fine)} />
       <circle cx={kx} cy={ky} r={28} fill={PAL.paper} {...ink()} />
       <g transform={`rotate(${kAng} ${kx} ${ky})`}><path d={`M${kx} ${ky + 2} L${kx} ${ky - 21}`} {...ink(7)} /></g>
       <path d={sketchRect(540, 738, 840, 30, 8)} fill={PAL.tableEdge} {...ink(LINE.bold)} />
@@ -121,6 +123,12 @@ export const Pot: React.FC<PotProps> = ({ t, boil, flame: fl, press, steamOut, k
         <path d={`M${cx - 210} ${rim + 140} L${cx - 210} ${rim + 152}`} stroke="#D5E4F1" strokeWidth={14} strokeLinecap="round" opacity={0.8} />
         <path d={sketchRect(cx - 272, rim - 4, 544, 24, 12, 1)} fill={ENAMEL_D} {...ink()} />
       </g>
+      {/* the dark inside of the pot, seen when the lid lifts */}
+      {(lift > 1 || tilt < -0.5) && (() => {
+        const a = (tilt * Math.PI) / 180, pv = tilt < 0 ? cx - 252 : cx + 252, sgn = tilt < 0 ? 1 : -1;
+        const far: P = [pv + sgn * 506 * Math.cos(a), rim + sgn * 506 * Math.sin(a) - lift];
+        return <path d={`M${cx - 254} ${rim} L${tilt < 0 ? pv : far[0]} ${tilt < 0 ? rim - lift : far[1]} L${tilt < 0 ? far[0] : pv} ${tilt < 0 ? far[1] : rim - lift} L${cx + 254} ${rim} Z`} fill="#3E5A78" {...ink(LINE.normal)} />;
+      })()}
       {/* boiling bubbles at the rim, under the lid */}
       {bubbles.map((q, i) => q.on && q.r > 0.5 && <circle key={i} cx={q.x} cy={q.y} r={q.r} fill="#EEF4F9" {...ink(2)} />)}
       {/* the lid */}
@@ -140,9 +148,9 @@ export const Pot: React.FC<PotProps> = ({ t, boil, flame: fl, press, steamOut, k
       <Puffs c={[...puffs(4, cx - 270, rim - 6, -170, 80, 24, 1.1, 1, b * (1 - so) * (0.4 + pr * 0.6)), ...puffs(4, cx + 270, rim - 6, 170, 80, 24, 1.1, 7, b * (1 - so) * (0.4 + pr * 0.6))]} fill={PAL.steam} line={LINE.fine} seed={2} />
       {/* the lid tilted open: three soft wisps rise and thin out */}
       {so > 0.02 && [0, 1, 2].map((k) => {
-        const x0 = cx + 150 + k * 46, y0 = rim - 30 - k * 8, hh = (220 + k * 40) * (0.4 + 0.6 * so) * (0.5 + 0.5 * b);
-        const pts: P[] = Array.from({ length: 12 }, (_, i) => { const u = i / 11; return [x0 + u * 40 + Math.sin(u * 7 - t * 2.4 + k * 2) * 16 * u, y0 - u * hh]; });
-        return <g key={k} opacity={so * (0.55 + 0.45 * b)}>
+        const x0 = cx + 236 + k * 30, y0 = rim - 14 - k * 10, hh = (220 + k * 40) * (0.4 + 0.6 * so) * (0.5 + 0.5 * b);
+        const pts: P[] = Array.from({ length: 12 }, (_, i) => { const u = i / 11; return [x0 + u * 70 + Math.sin(u * 7 - t * 2.4 + k * 2) * 16 * u, y0 - u * hh]; });
+        return <g key={k} opacity={so * (0.8 + 0.2 * b)}>
           <path d={smooth(pts)} fill="none" stroke={INK} strokeWidth={21} strokeLinecap="round" opacity={0.35} />
           <path d={smooth(pts)} fill="none" stroke={PAL.steam} strokeWidth={15} strokeLinecap="round" />
         </g>;

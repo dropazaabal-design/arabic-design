@@ -76,7 +76,7 @@ export const Paper = ({ lines = 8, crumple = 0, seed = 1 }: { lines?: number; cr
       )}
       {c > 0 && (
         <g opacity={Math.min(1, c * 1.5)}>
-          {[0, 1, 2].map((k) => <path key={k} d={`M0 0 L${pts[(k * 11 + 3) % N][0] * 0.9} ${pts[(k * 11 + 3) % N][1] * 0.9} L${pts[(k * 11 + 8) % N][0] * 0.9} ${pts[(k * 11 + 8) % N][1] * 0.9} Z`} fill={PAL.paperShade} />)}
+          {[0, 1, 2].map((k) => <path key={k} d={`M0 0 L${pts[(k * 11 + 3) % N][0] * 0.9} ${pts[(k * 11 + 3) % N][1] * 0.9} L${pts[(k * 11 + 8) % N][0] * 0.9} ${pts[(k * 11 + 8) % N][1] * 0.9} Z`} fill={PAL.paperShade} opacity={0.6} />)}
           <g fill="none" stroke={INK} strokeWidth={1.4} strokeLinecap="round" opacity={0.55}>{creases.map((d, k) => <path key={k} d={d} />)}</g>
         </g>
       )}

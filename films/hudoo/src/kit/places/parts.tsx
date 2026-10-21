@@ -11,6 +11,8 @@ export const BASE = 820;
 /** Cool lamp light (never amber). */
 export const LIGHT = '#F6F8FC';
 export const LIT = '#EEF2F8';
+/** Night wash laid over a lit room (blue, not grey). */
+export const NIGHT = '#2E3A78';
 
 type Ink = { fill?: string; stroke?: string; sw?: number; seed?: number; wob?: number; o?: number };
 
@@ -64,8 +66,8 @@ export const NightSky: React.FC<{ x: number; y: number; w: number; h: number; mo
     <rect x={x} y={y} width={w} height={h} fill={PAL.skyNight} />
     <rect x={x} y={y + h * 0.55} width={w} height={h * 0.45} fill={PAL.wallNight} opacity={0.6} />
     <Glow x={moon[0]} y={moon[1]} r={90} color="#DCE3F2" o={0.45} />
-    <circle cx={moon[0]} cy={moon[1]} r={30} fill="#E8EDF2" />
-    <circle cx={moon[0] + 14} cy={moon[1] - 8} r={27} fill={PAL.skyNight} />
+    <mask id={`pl-moon-${seed}`}><circle cx={moon[0]} cy={moon[1]} r={30} fill="#FFFFFF" /><circle cx={moon[0] + 14} cy={moon[1] - 8} r={27} fill="#000000" /></mask>
+    <circle cx={moon[0]} cy={moon[1]} r={30} fill="#E8EDF2" mask={`url(#pl-moon-${seed})`} />
     {Array.from({ length: 7 }, (_, i) => <circle key={i} cx={x + hash(seed * 5 + i) * w} cy={y + hash(seed * 9 + i) * h * 0.5} r={1.6 + hash(i + seed) * 1.6} fill="#E8EDF2" opacity={0.8} />)}
   </g>
 );

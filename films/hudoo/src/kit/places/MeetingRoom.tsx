@@ -7,8 +7,8 @@ const SEAT_X = [430, 642, 854, 1066, 1278, 1490];
 export const MEETING = {
   /** Character x and facing for the six seats behind the table (left three face right, right three face left). */
   seats: SEAT_X.map((x, i) => ({ x, facing: (i < 3 ? 1 : -1) as 1 | -1 })),
-  /** Seated at scale 1.3: hips at y 760, so pass y = feetY to <Character>. */
-  hipY: 760, feetY: 760 + 112 * 1.3, scale: 1.3,
+  /** Seated at scale 1.3: hips at y 705 (shoulders and hands clear the table), so pass y = feetY to <Character>. */
+  hipY: 705, feetY: 705 + 112 * 1.3, scale: 1.3,
   /** The presenter's spot beside the whiteboard (standing, scale 1.45). */
   standAt: { x: 1700, y: 860 },
   tableTop: 650,
@@ -44,7 +44,7 @@ const Whiteboard: React.FC = () => {
 
 /** A chair back seen from the front, peeking above the table. */
 const ChairBack: React.FC<{ x: number; seed: number }> = ({ x, seed }) => (
-  <g>
+  <g transform="translate(0 -55)">
     <Poly pts={[[x - 60, 660], [x - 64, 580], [x - 52, 532], [x + 52, 532], [x + 64, 580], [x + 60, 660]]} fill={PAL.chair} seed={seed} />
     <Poly pts={[[x - 44, 640], [x - 46, 580], [x - 36, 550], [x + 36, 550], [x + 46, 580], [x + 44, 640]]} fill={PAL.chairDark} sw={0} seed={seed + 1} o={0.5} />
   </g>
