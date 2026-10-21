@@ -1,0 +1,673 @@
+{
+"unit": "U1",
+"take": "yITcEdHUUYnpinCUoyV9",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "نفس",
+"type": "word",
+"start": 0.0,
+"end": 0.267
+},
+{
+"text": "الحسبة…",
+"type": "word",
+"start": 0.32,
+"end": 0.88
+},
+{
+"text": "ونفس",
+"type": "word",
+"start": 1.32,
+"end": 1.6
+},
+{
+"text": "الجهاز…",
+"type": "word",
+"start": 1.68,
+"end": 2.56
+},
+{
+"text": "وطلع",
+"type": "word",
+"start": 2.64,
+"end": 3.04
+},
+{
+"text": "طقس",
+"type": "word",
+"start": 3.16,
+"end": 3.44
+},
+{
+"text": "ثاني",
+"type": "word",
+"start": 3.52,
+"end": 3.84
+},
+{
+"text": "تمامًا.",
+"type": "word",
+"start": 3.92,
+"end": 4.8
+},
+{
+"text": "إدوارد",
+"type": "word",
+"start": 4.84,
+"end": 5.2
+},
+{
+"text": "لورنز،",
+"type": "word",
+"start": 5.28,
+"end": 5.84
+},
+{
+"text": "عالم",
+"type": "word",
+"start": 5.92,
+"end": 6.24
+},
+{
+"text": "أرصاد،",
+"type": "word",
+"start": 6.28,
+"end": 6.88
+},
+{
+"text": "كان",
+"type": "word",
+"start": 7.0,
+"end": 7.12
+},
+{
+"text": "يحاكي",
+"type": "word",
+"start": 7.16,
+"end": 7.52
+},
+{
+"text": "الطقس",
+"type": "word",
+"start": 7.56,
+"end": 7.84
+},
+{
+"text": "على",
+"type": "word",
+"start": 7.92,
+"end": 8.08
+},
+{
+"text": "كمبيوتر.",
+"type": "word",
+"start": 8.16,
+"end": 8.96
+},
+{
+"text": "أراد",
+"type": "word",
+"start": 9.0,
+"end": 9.28
+},
+{
+"text": "يعيد",
+"type": "word",
+"start": 9.36,
+"end": 9.6
+},
+{
+"text": "جزءًا",
+"type": "word",
+"start": 9.72,
+"end": 10.0
+},
+{
+"text": "من",
+"type": "word",
+"start": 10.08,
+"end": 10.16
+},
+{
+"text": "الحسبة،",
+"type": "word",
+"start": 10.24,
+"end": 10.88
+},
+{
+"text": "فنقل",
+"type": "word",
+"start": 10.96,
+"end": 11.28
+},
+{
+"text": "الأرقام",
+"type": "word",
+"start": 11.36,
+"end": 11.84
+},
+{
+"text": "من",
+"type": "word",
+"start": 11.92,
+"end": 12.0
+},
+{
+"text": "الورقة…",
+"type": "word",
+"start": 12.04,
+"end": 12.8
+},
+{
+"text": "والورقة",
+"type": "word",
+"start": 12.88,
+"end": 13.36
+},
+{
+"text": "تقرّب",
+"type": "word",
+"start": 13.52,
+"end": 14.0
+},
+{
+"text": "لثلاث",
+"type": "word",
+"start": 14.08,
+"end": 14.48
+},
+{
+"text": "خانات",
+"type": "word",
+"start": 14.52,
+"end": 14.88
+},
+{
+"text": "بس.",
+"type": "word",
+"start": 14.96,
+"end": 15.6
+},
+{
+"text": "ضغط",
+"type": "word",
+"start": 15.76,
+"end": 15.92
+},
+{
+"text": "تشغيل…",
+"type": "word",
+"start": 16.2,
+"end": 16.72
+},
+{
+"text": "وراح",
+"type": "word",
+"start": 16.8,
+"end": 16.96
+},
+{
+"text": "يشرب",
+"type": "word",
+"start": 17.04,
+"end": 17.36
+},
+{
+"text": "قهوة.",
+"type": "word",
+"start": 17.44,
+"end": 18.08
+},
+{
+"text": "رجع",
+"type": "word",
+"start": 18.24,
+"end": 18.4
+},
+{
+"text": "بعد",
+"type": "word",
+"start": 18.48,
+"end": 18.72
+},
+{
+"text": "ساعة.",
+"type": "word",
+"start": 18.76,
+"end": 19.36
+},
+{
+"text": "الخطّان",
+"type": "word",
+"start": 19.44,
+"end": 19.92
+},
+{
+"text": "مشوا",
+"type": "word",
+"start": 20.04,
+"end": 20.24
+},
+{
+"text": "سوا…",
+"type": "word",
+"start": 20.32,
+"end": 20.8
+},
+{
+"text": "وبعدين",
+"type": "word",
+"start": 20.92,
+"end": 21.36
+},
+{
+"text": "تفرّقوا،",
+"type": "word",
+"start": 21.44,
+"end": 22.24
+},
+{
+"text": "لين",
+"type": "word",
+"start": 22.36,
+"end": 22.48
+},
+{
+"text": "ما",
+"type": "word",
+"start": 22.56,
+"end": 22.64
+},
+{
+"text": "بقي",
+"type": "word",
+"start": 22.72,
+"end": 22.96
+},
+{
+"text": "بينهم",
+"type": "word",
+"start": 23.08,
+"end": 23.36
+},
+{
+"text": "شبه.",
+"type": "word",
+"start": 23.44,
+"end": 24.08
+},
+{
+"text": "في",
+"type": "word",
+"start": 24.16,
+"end": 24.24
+},
+{
+"text": "نظام",
+"type": "word",
+"start": 24.32,
+"end": 24.56
+},
+{
+"text": "مثل",
+"type": "word",
+"start": 24.64,
+"end": 24.88
+},
+{
+"text": "الطقس،",
+"type": "word",
+"start": 24.92,
+"end": 25.52
+},
+{
+"text": "الفرق",
+"type": "word",
+"start": 25.6,
+"end": 25.92
+},
+{
+"text": "الصغير",
+"type": "word",
+"start": 26.0,
+"end": 26.4
+},
+{
+"text": "يكبر",
+"type": "word",
+"start": 26.48,
+"end": 26.88
+},
+{
+"text": "مع",
+"type": "word",
+"start": 26.96,
+"end": 27.04
+},
+{
+"text": "الوقت.",
+"type": "word",
+"start": 27.12,
+"end": 27.68
+},
+{
+"text": "وعشان",
+"type": "word",
+"start": 27.76,
+"end": 28.08
+},
+{
+"text": "كذا",
+"type": "word",
+"start": 28.16,
+"end": 28.4
+},
+{
+"text": "ما",
+"type": "word",
+"start": 28.56,
+"end": 28.64
+},
+{
+"text": "نقدر",
+"type": "word",
+"start": 28.68,
+"end": 28.96
+},
+{
+"text": "نتوقعه",
+"type": "word",
+"start": 29.08,
+"end": 29.52
+},
+{
+"text": "بدقة",
+"type": "word",
+"start": 29.64,
+"end": 30.08
+},
+{
+"text": "لأبعد",
+"type": "word",
+"start": 30.16,
+"end": 30.56
+},
+{
+"text": "من",
+"type": "word",
+"start": 30.64,
+"end": 30.72
+},
+{
+"text": "أسبوعين",
+"type": "word",
+"start": 30.76,
+"end": 31.2
+},
+{
+"text": "تقريبًا.",
+"type": "word",
+"start": 31.28,
+"end": 32.08
+},
+{
+"text": "ومنها",
+"type": "word",
+"start": 32.12,
+"end": 32.48
+},
+{
+"text": "جا",
+"type": "word",
+"start": 32.56,
+"end": 32.72
+},
+{
+"text": "اسم",
+"type": "word",
+"start": 32.88,
+"end": 33.04
+},
+{
+"text": "«تأثير",
+"type": "word",
+"start": 33.2,
+"end": 33.68
+},
+{
+"text": "الفراشة»:",
+"type": "word",
+"start": 33.8,
+"end": 34.56
+},
+{
+"text": "هل",
+"type": "word",
+"start": 34.64,
+"end": 34.72
+},
+{
+"text": "رفرفة",
+"type": "word",
+"start": 34.8,
+"end": 35.2
+},
+{
+"text": "في",
+"type": "word",
+"start": 35.24,
+"end": 35.28
+},
+{
+"text": "البرازيل",
+"type": "word",
+"start": 35.32,
+"end": 35.92
+},
+{
+"text": "تطلق",
+"type": "word",
+"start": 36.0,
+"end": 36.4
+},
+{
+"text": "إعصارًا",
+"type": "word",
+"start": 36.44,
+"end": 36.88
+},
+{
+"text": "في",
+"type": "word",
+"start": 36.96,
+"end": 37.04
+},
+{
+"text": "تكساس؟",
+"type": "word",
+"start": 37.12,
+"end": 37.84
+},
+{
+"text": "وجواب",
+"type": "word",
+"start": 37.96,
+"end": 38.24
+},
+{
+"text": "لورنز:",
+"type": "word",
+"start": 38.32,
+"end": 38.96
+},
+{
+"text": "الرفرفة",
+"type": "word",
+"start": 39.04,
+"end": 39.52
+},
+{
+"text": "اللي",
+"type": "word",
+"start": 39.573,
+"end": 39.68
+},
+{
+"text": "تقدر",
+"type": "word",
+"start": 39.72,
+"end": 40.0
+},
+{
+"text": "تساعد",
+"type": "word",
+"start": 40.12,
+"end": 40.48
+},
+{
+"text": "في",
+"type": "word",
+"start": 40.56,
+"end": 40.64
+},
+{
+"text": "إعصار،",
+"type": "word",
+"start": 40.68,
+"end": 41.36
+},
+{
+"text": "تقدر",
+"type": "word",
+"start": 41.4,
+"end": 41.68
+},
+{
+"text": "تساعد",
+"type": "word",
+"start": 41.76,
+"end": 42.16
+},
+{
+"text": "في",
+"type": "word",
+"start": 42.24,
+"end": 42.32
+},
+{
+"text": "منعه.",
+"type": "word",
+"start": 42.48,
+"end": 42.96
+},
+{
+"text": "يعني:",
+"type": "word",
+"start": 43.08,
+"end": 43.6
+},
+{
+"text": "ما",
+"type": "word",
+"start": 43.68,
+"end": 43.76
+},
+{
+"text": "نقدر",
+"type": "word",
+"start": 43.8,
+"end": 44.08
+},
+{
+"text": "نعرف.",
+"type": "word",
+"start": 44.16,
+"end": 44.96
+},
+{
+"text": "ثلاث",
+"type": "word",
+"start": 45.12,
+"end": 45.28
+},
+{
+"text": "خانات",
+"type": "word",
+"start": 45.32,
+"end": 45.76
+},
+{
+"text": "ما",
+"type": "word",
+"start": 45.84,
+"end": 46.0
+},
+{
+"text": "ظهرت",
+"type": "word",
+"start": 46.16,
+"end": 46.4
+},
+{
+"text": "على",
+"type": "word",
+"start": 46.52,
+"end": 46.64
+},
+{
+"text": "ورقة…",
+"type": "word",
+"start": 46.76,
+"end": 47.36
+},
+{
+"text": "غيّرت",
+"type": "word",
+"start": 47.48,
+"end": 47.84
+},
+{
+"text": "فهمنا",
+"type": "word",
+"start": 47.92,
+"end": 48.32
+},
+{
+"text": "للتوقّع.",
+"type": "word",
+"start": 48.36,
+"end": 49.28
+},
+{
+"text": "إيش",
+"type": "word",
+"start": 49.32,
+"end": 49.52
+},
+{
+"text": "أصغر",
+"type": "word",
+"start": 49.56,
+"end": 49.92
+},
+{
+"text": "تفصيلة",
+"type": "word",
+"start": 50.04,
+"end": 50.48
+},
+{
+"text": "غيّرت",
+"type": "word",
+"start": 50.64,
+"end": 51.04
+},
+{
+"text": "يومك؟",
+"type": "word",
+"start": 51.12,
+"end": 51.84
+}
+]
+}

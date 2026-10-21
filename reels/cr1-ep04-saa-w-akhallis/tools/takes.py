@@ -101,7 +101,11 @@ for unit, takes in rows.items():
 
 # Whisper (tools/asr.py, review/asr-*.json) overrules the acoustic score where it heard a word
 # missing or wrong in the acoustic favourite; endings were checked by transcribing the last line alone
-HEARD = {}
+HEARD = {
+    'U1': ('uegWMwLlw4YuEi3Lmzv5', 'fewest misheard words in both models (large-v3 WER 0.029); the acoustic favourite drops «عنده» and «و» in «وأخلّصها». Both takes give «ثلاثة» as «ثلاه»: a listen'),
+    'U2': ('2lDzZOxkTQXyJD03J81b', 'acoustic favourite, and the lower WER in both models'),
+    'U3': ('oAzsPB3nQ2rZTMDtWbrx', 'lower WER in both models (0.032); the other take drops «و» in «وأخلّصها». Both give «الظهر» as «الهر»: a listen'),
+}
 reasons = {u: 'acoustic score, Whisper agrees' for u in picked}
 for u, (gid, why) in HEARD.items():
     picked[u], reasons[u] = gid, why

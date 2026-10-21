@@ -1,0 +1,693 @@
+{
+ "short": {
+  "totalSeconds": 59.19,
+  "frames": 3551,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.4,
+  "maxCps": 15.8,
+  "units": [
+   {
+    "unit": "U1",
+    "take": "yITcEdHUUYnpinCUoyV9",
+    "file": "U1-yITcEdHUUYnpinCUoyV9.mp3",
+    "sha256": "265090e8b96ebbd3f8755af715684b96c742e28f6f37aa5a6d5cb53e8a02af0a",
+    "cut": [
+     0.0,
+     51.801
+    ],
+    "at": 0.35,
+    "breaks": [
+     [
+      4.667,
+      0.25
+     ],
+     [
+      16.639,
+      0.5
+     ],
+     [
+      17.92,
+      1.7
+     ],
+     [
+      19.245,
+      0.45
+     ],
+     [
+      23.932,
+      0.6
+     ],
+     [
+      31.958,
+      0.3
+     ],
+     [
+      34.455,
+      0.45
+     ],
+     [
+      44.749,
+      0.6
+     ],
+     [
+      49.158,
+      0.45
+     ]
+    ]
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "R1",
+    "i": 0,
+    "sfx": "scribble",
+    "offset": 0.0,
+    "gain": -26,
+    "why": "the first run plots itself",
+    "time": 0.386,
+    "word": "نفس"
+   },
+   {
+    "seg": "R1",
+    "i": 2,
+    "sfx": "scribble",
+    "offset": 0.0,
+    "gain": -26,
+    "why": "the rerun traces it",
+    "time": 1.581,
+    "word": "ونفس"
+   },
+   {
+    "seg": "R1",
+    "i": 4,
+    "sfx": "whoosh",
+    "offset": 0.3,
+    "gain": -26,
+    "why": "the camera pulls back as they part",
+    "time": 3.233,
+    "word": "وطلع"
+   },
+   {
+    "seg": "R1",
+    "i": 7,
+    "sfx": "note_b",
+    "offset": 0.15,
+    "gain": -21,
+    "why": "the two weathers are apart",
+    "time": 4.42,
+    "word": "تمامًا."
+   },
+   {
+    "seg": "R1",
+    "i": 7,
+    "sfx": "flutter",
+    "offset": 0.45,
+    "gain": -28,
+    "why": "a butterfly shadow crosses the sheet",
+    "time": 4.72,
+    "word": "تمامًا."
+   },
+   {
+    "seg": "R2",
+    "i": 0,
+    "sfx": "typing",
+    "offset": -0.1,
+    "gain": -23,
+    "why": "he types at the teleprinter",
+    "time": 5.354,
+    "word": "إدوارد"
+   },
+   {
+    "seg": "R2",
+    "i": 5,
+    "sfx": "chime",
+    "offset": 0.0,
+    "gain": -28,
+    "why": "the lamps blink as it computes",
+    "time": 7.76,
+    "word": "يحاكي"
+   },
+   {
+    "seg": "R2",
+    "i": 5,
+    "sfx": "typing",
+    "offset": 0.3,
+    "gain": -24,
+    "why": "",
+    "time": 8.06,
+    "word": "يحاكي"
+   },
+   {
+    "seg": "R3",
+    "i": 0,
+    "sfx": "pageflip",
+    "offset": 0.25,
+    "gain": -18,
+    "why": "he takes the printout",
+    "time": 9.836,
+    "word": "أراد"
+   },
+   {
+    "seg": "R3",
+    "i": 5,
+    "sfx": "typing",
+    "offset": 0.2,
+    "gain": -23,
+    "why": "he types the numbers back in",
+    "time": 11.719,
+    "word": "فنقل"
+   },
+   {
+    "seg": "R3",
+    "i": 11,
+    "sfx": "whoosh",
+    "offset": -0.3,
+    "gain": -22,
+    "why": "the three digits lift off",
+    "time": 14.38,
+    "word": "لثلاث"
+   },
+   {
+    "seg": "R4",
+    "i": 0,
+    "sfx": "clunk",
+    "offset": 0.1,
+    "gain": -14,
+    "why": "start",
+    "time": 16.301,
+    "word": "ضغط"
+   },
+   {
+    "seg": "R4",
+    "i": 1,
+    "sfx": "hum",
+    "offset": -0.2,
+    "gain": -25,
+    "why": "the machine runs",
+    "time": 16.6,
+    "word": "تشغيل…"
+   },
+   {
+    "seg": "R4",
+    "i": 1,
+    "sfx": "typing",
+    "offset": 0.3,
+    "gain": -27,
+    "why": "the teleprinter starts printing",
+    "time": 17.1,
+    "word": "تشغيل…"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": -0.62,
+    "gain": -24,
+    "why": "walking to the door",
+    "time": 17.218,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": -0.36,
+    "gain": -22,
+    "why": "",
+    "time": 17.478,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": -0.1,
+    "gain": -24,
+    "why": "",
+    "time": 17.738,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": 0.16,
+    "gain": -22,
+    "why": "",
+    "time": 17.998,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": 0.42,
+    "gain": -24,
+    "why": "",
+    "time": 18.258,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": 0.68,
+    "gain": -22,
+    "why": "",
+    "time": 18.518,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": 0.94,
+    "gain": -24,
+    "why": "",
+    "time": 18.778,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 2,
+    "sfx": "step",
+    "offset": 1.2,
+    "gain": -22,
+    "why": "",
+    "time": 19.038,
+    "word": "وراح"
+   },
+   {
+    "seg": "R4",
+    "i": 4,
+    "sfx": "door",
+    "offset": 0.12,
+    "gain": -18,
+    "why": "the door opens",
+    "time": 18.66,
+    "word": "قهوة."
+   },
+   {
+    "seg": "R4",
+    "i": 4,
+    "sfx": "thud",
+    "offset": 0.95,
+    "gain": -22,
+    "why": "and closes behind him",
+    "time": 19.49,
+    "word": "قهوة."
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "whoosh",
+    "offset": -1.55,
+    "gain": -25,
+    "why": "an hour passes",
+    "time": 19.339,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "tick",
+    "offset": -1.35,
+    "gain": -21,
+    "why": "the clock races",
+    "time": 19.539,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "tick",
+    "offset": -1.1,
+    "gain": -21,
+    "why": "the clock races",
+    "time": 19.789,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "tick",
+    "offset": -0.85,
+    "gain": -21,
+    "why": "the clock races",
+    "time": 20.039,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "tick",
+    "offset": -0.6,
+    "gain": -21,
+    "why": "the clock races",
+    "time": 20.289,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "tick",
+    "offset": -0.35,
+    "gain": -21,
+    "why": "the clock races",
+    "time": 20.539,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "door",
+    "offset": -0.08,
+    "gain": -18,
+    "why": "he is back",
+    "time": 20.809,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "step",
+    "offset": 0.42,
+    "gain": -23,
+    "why": "walking in",
+    "time": 21.309,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "step",
+    "offset": 0.69,
+    "gain": -23,
+    "why": "",
+    "time": 21.579,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "step",
+    "offset": 0.96,
+    "gain": -23,
+    "why": "",
+    "time": 21.849,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "step",
+    "offset": 1.23,
+    "gain": -23,
+    "why": "",
+    "time": 22.119,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 0,
+    "sfx": "step",
+    "offset": 1.5,
+    "gain": -23,
+    "why": "",
+    "time": 22.389,
+    "word": "رجع"
+   },
+   {
+    "seg": "R5",
+    "i": 1,
+    "sfx": "sip",
+    "offset": 0.32,
+    "gain": -15,
+    "why": "a sip of coffee",
+    "time": 21.6,
+    "word": "بعد"
+   },
+   {
+    "seg": "R5",
+    "i": 3,
+    "sfx": "pageflip",
+    "offset": -0.25,
+    "gain": -18,
+    "why": "the new sheet over the old",
+    "time": 22.385,
+    "word": "الخطّان"
+   },
+   {
+    "seg": "R5",
+    "i": 6,
+    "sfx": "note_a",
+    "offset": 0.1,
+    "gain": -21,
+    "why": "they part",
+    "time": 24.191,
+    "word": "وبعدين"
+   },
+   {
+    "seg": "R5",
+    "i": 12,
+    "sfx": "note_c",
+    "offset": 0.0,
+    "gain": -19,
+    "why": "nothing alike",
+    "time": 26.69,
+    "word": "شبه."
+   },
+   {
+    "seg": "R6",
+    "i": 0,
+    "sfx": "chalk",
+    "offset": 0.05,
+    "gain": -21,
+    "why": "he draws the weather",
+    "time": 28.0,
+    "word": "في"
+   },
+   {
+    "seg": "R6",
+    "i": 4,
+    "sfx": "chalk",
+    "offset": 0.0,
+    "gain": -23,
+    "why": "two lines from one point",
+    "time": 29.392,
+    "word": "الفرق"
+   },
+   {
+    "seg": "R6",
+    "i": 6,
+    "sfx": "pop",
+    "offset": 0.0,
+    "gain": -25,
+    "why": "the gap doubles",
+    "time": 30.33,
+    "word": "يكبر"
+   },
+   {
+    "seg": "R6",
+    "i": 6,
+    "sfx": "pop",
+    "offset": 0.35,
+    "gain": -25,
+    "why": "",
+    "time": 30.68,
+    "word": "يكبر"
+   },
+   {
+    "seg": "R6",
+    "i": 6,
+    "sfx": "pop",
+    "offset": 0.7,
+    "gain": -25,
+    "why": "",
+    "time": 31.03,
+    "word": "يكبر"
+   },
+   {
+    "seg": "R6",
+    "i": 9,
+    "sfx": "chalk",
+    "offset": 0.0,
+    "gain": -25,
+    "why": "the forecast row",
+    "time": 31.563,
+    "word": "وعشان"
+   },
+   {
+    "seg": "R6",
+    "i": 17,
+    "sfx": "tick",
+    "offset": -0.1,
+    "gain": -18,
+    "why": "the two-week line",
+    "time": 34.51,
+    "word": "أسبوعين"
+   },
+   {
+    "seg": "R7",
+    "i": 0,
+    "sfx": "chalk",
+    "offset": 0.05,
+    "gain": -20,
+    "why": "he draws a butterfly",
+    "time": 36.29,
+    "word": "ومنها"
+   },
+   {
+    "seg": "R7",
+    "i": 3,
+    "sfx": "whoosh",
+    "offset": -0.1,
+    "gain": -23,
+    "why": "the name",
+    "time": 37.25,
+    "word": "«تأثير"
+   },
+   {
+    "seg": "R7",
+    "i": 5,
+    "sfx": "flutter",
+    "offset": -0.35,
+    "gain": -16,
+    "why": "it comes alive",
+    "time": 38.831,
+    "word": "هل"
+   },
+   {
+    "seg": "R7",
+    "i": 8,
+    "sfx": "flutter",
+    "offset": 0.0,
+    "gain": -19,
+    "why": "over Brazil",
+    "time": 39.92,
+    "word": "البرازيل"
+   },
+   {
+    "seg": "R7",
+    "i": 9,
+    "sfx": "chalk",
+    "offset": 0.0,
+    "gain": -23,
+    "why": "the path to Texas",
+    "time": 40.6,
+    "word": "تطلق"
+   },
+   {
+    "seg": "R7",
+    "i": 10,
+    "sfx": "wind",
+    "offset": 0.0,
+    "gain": -20,
+    "why": "a storm",
+    "time": 41.04,
+    "word": "إعصارًا"
+   },
+   {
+    "seg": "R8",
+    "i": 0,
+    "sfx": "whoosh",
+    "offset": -0.2,
+    "gain": -25,
+    "why": "he turns to us",
+    "time": 42.255,
+    "word": "وجواب"
+   },
+   {
+    "seg": "R8",
+    "i": 2,
+    "sfx": "wind",
+    "offset": 0.1,
+    "gain": -27,
+    "why": "the storm",
+    "time": 43.697,
+    "word": "الرفرفة"
+   },
+   {
+    "seg": "R8",
+    "i": 8,
+    "sfx": "chime",
+    "offset": 0.0,
+    "gain": -23,
+    "why": "or a clear sky",
+    "time": 45.965,
+    "word": "تقدر"
+   },
+   {
+    "seg": "R8",
+    "i": 13,
+    "sfx": "note_b",
+    "offset": 0.0,
+    "gain": -20,
+    "why": "we cannot know",
+    "time": 48.159,
+    "word": "ما"
+   },
+   {
+    "seg": "R9",
+    "i": 0,
+    "sfx": "note_a",
+    "offset": 0.0,
+    "gain": -20,
+    "why": "the digits that never showed",
+    "time": 50.133,
+    "word": "ثلاث"
+   },
+   {
+    "seg": "R9",
+    "i": 6,
+    "sfx": "whoosh",
+    "offset": -0.15,
+    "gain": -25,
+    "why": "to the window",
+    "time": 52.372,
+    "word": "غيّرت"
+   },
+   {
+    "seg": "R10",
+    "i": 0,
+    "sfx": "flutter",
+    "offset": -0.3,
+    "gain": -24,
+    "why": "the butterfly outside",
+    "time": 54.635,
+    "word": "إيش"
+   },
+   {
+    "seg": "R10",
+    "i": 4,
+    "sfx": "note_c",
+    "offset": 0.3,
+    "gain": -18,
+    "why": "the end",
+    "time": 57.07,
+    "word": "يومك؟"
+   },
+   {
+    "seg": "R9",
+    "i": 0,
+    "sfx": "pageflip",
+    "offset": -0.62,
+    "gain": -21,
+    "why": "back to the paper",
+    "time": 49.513,
+    "word": "ثلاث"
+   },
+   {
+    "seg": "R9",
+    "i": 0,
+    "sfx": "chime",
+    "offset": -0.9,
+    "gain": -27,
+    "why": "a soft beat in the pause before the last line",
+    "time": 49.233,
+    "word": "ثلاث"
+   }
+  ]
+ }
+}

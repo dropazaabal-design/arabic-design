@@ -28,6 +28,9 @@ export type SvgPersonProps = {
   farInFront?: boolean; feet?: 'slipper' | 'runner'; blink?: number; breath?: number; id?: string;
   /** Extra wrist bend, degrees, + toward the facing side. */
   wristF?: number; wristN?: number;
+  /** Wardrobe that changes who the character is, drawn in the part's own frame: glasses (frame colour),
+   * a tie on the shirt (tie colour), and the moustache (on by default). */
+  glasses?: string; tie?: string; moustache?: boolean;
 };
 
 const rad = (d: number) => (d * Math.PI) / 180;
@@ -162,7 +165,7 @@ const Brow: React.FC<{ part: 'browNear' | 'browFar'; face: Face; turn: number }>
 
 export const SvgPerson: React.FC<SvgPersonProps> = ({
   look, pose = REST, face = CALM, x = 0, y = 0, scale = 1, facing = 1, handF = 'fist', handN = 'fist', holdF, holdN, holdUpright = false,
-  farInFront = false, feet = 'slipper', blink = 0, breath = 0, id = 'sp', wristF = 0, wristN = 0,
+  farInFront = false, feet = 'slipper', blink = 0, breath = 0, id = 'sp', wristF = 0, wristN = 0, glasses, tie, moustache = true,
 }) => {
   const j = svgJoints(pose);
   const vars = {
@@ -180,15 +183,25 @@ export const SvgPerson: React.FC<SvgPersonProps> = ({
       {!farInFront && farArm}
       <g transform={`translate(${j.hip[0].toFixed(2)} ${(j.hip[1] - breath * 0.4).toFixed(2)}) rotate(${j.lean.toFixed(2)}) translate(${-P.torso[0]} ${-P.torso[1]})`}>
         {React.createElement(PARTS.torso)}
+        {tie && <g>
+          <path d="M-14 -288 L-2 -272 L-6 -262 Z M16 -288 L4 -272 L8 -262 Z" fill="#F4F7FB" stroke={INK} strokeWidth={2.6} strokeLinejoin="round" />
+          <path d="M-5 -278 L7 -278 L5 -266 L-3 -266 Z" fill={tie} stroke={INK} strokeWidth={2.6} strokeLinejoin="round" />
+          <path d="M-3 -266 L5 -266 L9 -206 L1 -196 L-7 -206 Z" fill={tie} stroke={INK} strokeWidth={2.8} strokeLinejoin="round" />
+        </g>}
       </g>
       <g transform={`translate(${j.neck[0].toFixed(2)} ${(j.neck[1] - breath).toFixed(2)}) rotate(${(j.lean + pose.headTilt).toFixed(2)}) translate(${-hx} ${-hy})`}>
         {React.createElement(PARTS.head)}
         <g transform={`translate(${((pose.headTurn - 0.5) * 6).toFixed(2)} 0)`}>{React.createElement(PARTS.hair)}</g>
-        <g transform={`translate(${((pose.headTurn - 0.5) * 16).toFixed(2)} 0)`}>{React.createElement(PARTS.nose)}{React.createElement(PARTS.moustache)}</g>
+        <g transform={`translate(${((pose.headTurn - 0.5) * 16).toFixed(2)} 0)`}>{React.createElement(PARTS.nose)}{moustache && React.createElement(PARTS.moustache)}</g>
         {/* eyes and mouth after the moustache, so an expression is never covered */}
         <Features face={face} blink={blink} turn={pose.headTurn} uid={id} skin={look.skin} />
         <Brow part="browNear" face={face} turn={pose.headTurn} />
         <Brow part="browFar" face={face} turn={pose.headTurn} />
+        {glasses && <g transform={`translate(${((pose.headTurn - 0.5) * 14).toFixed(2)} 0)`} fill="rgba(220,236,240,0.16)" stroke={glasses} strokeWidth={3.6} strokeLinejoin="round">
+          <rect x={-29} y={-373} width={33} height={33} rx={10} />
+          <rect x={14} y={-372} width={28} height={32} rx={9} />
+          <path d="M4 -359 Q9 -363 14 -359 M-29 -360 L-52 -356" fill="none" strokeLinecap="round" />
+        </g>}
       </g>
       {farInFront && farArm}
       <ArmView a={j.armN} hand={handN} hold={holdN} wrist={wristN} upright={up('N')} />

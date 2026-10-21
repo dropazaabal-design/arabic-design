@@ -1,0 +1,61 @@
+{
+ "episode": "cr1-ep04",
+ "version": "1.0.0",
+ "written": "2026-10-16T17:41:29+00:00",
+ "deliverables": [
+  {
+   "file": "export/cr1-ep04_saa-w-akhallis_9x16_v1.0.0.ar.srt",
+   "bytes": 1864,
+   "sha256": "3552f68ae9f9198d0e6a6db951e25b2b984a5b7e9313c1b25bf275c1a8302f26",
+   "version": "1.0.0",
+   "inputsFingerprint": "e2d3e34442e6ba075b6c8c0e0bd5bef318b5ddf1ea48039d1418a5d4ceda36ad",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep04_saa-w-akhallis_9x16_v1.0.0.mp4",
+   "bytes": 37833012,
+   "sha256": "2830fcc4879dcf41197a2c65d3825a76a5f75dfaac7d5b0a86debf1cc17f6288",
+   "version": "1.0.0",
+   "inputsFingerprint": "e2d3e34442e6ba075b6c8c0e0bd5bef318b5ddf1ea48039d1418a5d4ceda36ad",
+   "report": "review/cr1-ep04_saa-w-akhallis_9x16_v1.0.0.json"
+  }
+ ],
+ "state": {
+  "approvedInputs": [
+   {
+    "file": "script-short.md",
+    "sha256": "3b0151c722e5708214e7663c1f4e5fc4df0dbc33428c6e37058108632c727cc1"
+   },
+   {
+    "file": "audio/takes/U1-0OxIpMvxRBUYmd3lUOww.mp3",
+    "sha256": "65e142c4eeb6165b412a2647ad0fc3b1033665d34521e728e860c2438d0e5c4d"
+   },
+   {
+    "file": "audio/takes/U1-uegWMwLlw4YuEi3Lmzv5.mp3",
+    "sha256": "b6e07dc8dd9fcf90a91535a28a694d9476a70a9af8e9577b5b2f833e0849e494"
+   },
+   {
+    "file": "audio/takes/U2-2lDzZOxkTQXyJD03J81b.mp3",
+    "sha256": "42af14ad475e7c61811ae4d245992259e889586f04582b7a985d18d1c6f066f5"
+   },
+   {
+    "file": "audio/takes/U2-lLnjlOPXTvlwKnlIYwqH.mp3",
+    "sha256": "69cbd97c15a59579ad232b3632ef7d7702887c103853b45dfb1f21dcb433a53d"
+   },
+   {
+    "file": "audio/takes/U3-L15LVSJBm4zViRaURaVs.mp3",
+    "sha256": "931a5aa5403b9c21f771d74326832b6d93d9a9501f969a266c92b0218e957f53"
+   },
+   {
+    "file": "audio/takes/U3-oAzsPB3nQ2rZTMDtWbrx.mp3",
+    "sha256": "b2b8d3f82cf0fe335e7b6e7fa3e715422e328a3f47da1ad111eab35deb64ef04"
+   },
+   {
+    "file": "public/audio/short-mix.wav",
+    "sha256": "82573d08971797a17b74ff3b698a77bb3e09c77300851bed824c69ad220b4b21"
+   }
+  ],
+  "lastStop": "delivered v1.0.0; all checks pass",
+  "next": "a person listens to the 4 words in review/pronunciation.json; phone viewing"
+ }
+}

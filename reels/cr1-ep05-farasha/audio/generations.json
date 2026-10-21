@@ -1,0 +1,15 @@
+{
+ "flow_id": "k7T3JR47QxZPsnFYvCNb",
+ "model": "eleven_v4",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "voice_name_reported": "Fernando Martínez - Rapid, Persuasive",
+ "settings": "the connector exposes no stability/style/speed settings for eleven_v4; text only, no audio tags",
+ "takes_per_unit": 1,
+ "units": {
+  "U1": {"segments": ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"], "node": "7irn0uBTpYzYtAoyMBXK", "generation": "yITcEdHUUYnpinCUoyV9",
+         "session": "r8weNma51zKMzaPhm0Zp", "characters": 611, "estimate": 620.9379, "credits": 620.9379, "price_cents": 11.29, "seconds": 51.76}
+ },
+ "alignment": {"node": "4HPiqyFb8bhs7UXYnINW", "generation": "tLlS9GxhPoHrjRoDj6Yk", "model": "eleven_scribe_v1", "credits": 0},
+ "totalCredits": 620.94,
+ "capNote": "Series cap 20,000 credits (approved by delegation). Spent before this reel: 19,334.07 (EP02–EP04); remaining 665.93. One take of 620.94 fits; no sample and no second take were possible under the cap. Series total now 19,955.01; remaining 44.99. The workspace balance itself is not readable from this connector; the run was priced with estimate_only first."
+}

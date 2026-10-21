@@ -6,14 +6,14 @@
   "lufs": -17.25
  },
  "picked": {
-  "U1": "0OxIpMvxRBUYmd3lUOww",
+  "U1": "uegWMwLlw4YuEi3Lmzv5",
   "U2": "2lDzZOxkTQXyJD03J81b",
-  "U3": "L15LVSJBm4zViRaURaVs"
+  "U3": "oAzsPB3nQ2rZTMDtWbrx"
  },
  "reasons": {
-  "U1": "acoustic score, Whisper agrees",
-  "U2": "acoustic score, Whisper agrees",
-  "U3": "acoustic score, Whisper agrees"
+  "U1": "fewest misheard words in both models (large-v3 WER 0.029); the acoustic favourite drops «عنده» and «و» in «وأخلّصها». Both takes give «ثلاثة» as «ثلاه»: a listen",
+  "U2": "acoustic favourite, and the lower WER in both models",
+  "U3": "lower WER in both models (0.032); the other take drops «و» in «وأخلّصها». Both give «الظهر» as «الهر»: a listen"
  },
  "takes": {
   "U1": {

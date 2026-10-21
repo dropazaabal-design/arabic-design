@@ -23,26 +23,27 @@ def ratio(a, b):
     return round((x + 0.05) / (y + 0.05), 2)
 
 
-WALL, INK, SHIRT, PANTS, SKIN, BOX, SHOE, DAWN, NIGHT = '#E8EFF6', '#0E1626', '#5E6BC4', '#6E7F99', '#C98F7E', '#9FB2C8', '#12A39A', '#2B3C57', '#1B2840'
-INNER, EDGE = 0.22, 0.78  # src/props.tsx POOL: the light pool around the actor, and the frame's dark edge
+# EP04: Naser in the living room; evening is a dusk pool (src/props.tsx Room: 0.12 at the work area, 0.7 at the edge, × dusk)
+WALL, INK, SHIRT, PANTS, SKIN, BOX, SHOE, DAWN, NIGHT = '#E9E8F2', '#0E1626', '#8E3B52', '#4B5A78', '#D29A86', '#F7F8FB', '#2E7BC5', '#2E3554', '#2E3554'
+INNER, EDGE = 0.12, 0.70
 states = {
     'day': (WALL, 0.0),
-    'dawn, behind him (pool centre)': (over(WALL, DAWN, INNER), 0.0),
-    'dawn, frame edge': (over(WALL, DAWN, EDGE), 0.0),
-    'night, behind him (pool centre)': (over(WALL, NIGHT, INNER), 0.0),
-    'night, frame edge': (over(WALL, NIGHT, EDGE), 0.0),
+    'evening (dusk 0.85), behind him': (over(WALL, DAWN, INNER * 0.85), 0.0),
+    'evening (dusk 0.85), frame edge': (over(WALL, DAWN, EDGE * 0.85), 0.0),
+    'night (dusk 1), behind him': (over(WALL, NIGHT, INNER), 0.0),
+    'night (dusk 1), frame edge': (over(WALL, NIGHT, EDGE), 0.0),
 }
 out = {}
 for name, (bg, wash) in states.items():
     lit = lambda c: over(c, DAWN, wash) if wash else c
     out[name] = {'background': bg, **{k: ratio(lit(c), bg) for k, c in
-                 (('outline', INK), ('shirt', SHIRT), ('trousers', PANTS), ('skin', SKIN), ('shoe box', BOX))}}
+                 (('outline', INK), ('shirt', SHIRT), ('trousers', PANTS), ('skin', SKIN), ('white panel', BOX))}}
 out['text'] = {
-    'title ink on page #F4F7FB': ratio(INK, '#F4F7FB'),
-    'shoe-teal title #0B7D76 on page': ratio('#0B7D76', '#F4F7FB'),
-    'caption white on its pill (#0E1626 at 0.78 over day wall)': ratio('#FFFFFF', over(WALL, INK, 0.78)),
-    'caption white on its pill over the dark edge': ratio('#FFFFFF', over(states['dawn, frame edge'][0], INK, 0.78)),
-    'shoe #12A39A on the room wall': ratio(SHOE, WALL),
+    'title ink on page #F3F4F8': ratio(INK, '#F3F4F8'),
+    'clock-blue title #1E5C99 on its card': ratio('#1E5C99', '#F7F8FB'),
+    'caption white on its pill (#0E1626 at 0.78 over the day wall)': ratio('#FFFFFF', over(WALL, INK, 0.78)),
+    'caption white on its pill over the dark edge': ratio('#FFFFFF', over(states['night (dusk 1), frame edge'][0], INK, 0.78)),
+    'clock rim #2E7BC5 on the wall': ratio(SHOE, WALL),
 }
 out['note'] = 'WCAG 2 contrast ratios from source colours; the outline is what separates a shape, a fill ratio near 1 is not by itself a failure (see the colour report)'
 (root / 'review/contrast.json').write_text(json.dumps(out, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

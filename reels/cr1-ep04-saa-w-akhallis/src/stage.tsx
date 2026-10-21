@@ -114,3 +114,26 @@ export const plantedWalk = (f: number, from: number, to: number, start: number, 
   if (steps > 0 && (cycle < 22 || cycle > 60)) throw new Error(`walk ${from}→${to} in ${frames} frames needs a ${cycle.toFixed(0)}-frame cycle`);
   return walk(f, from, to, start, frames, cycle);
 };
+
+// ——— text boxes on screen this frame (titles, captions, scene overlays), checked against the faces ———
+const texts = { frame: -1, boxes: [] as { id: string; box: Box }[] };
+export const reportText = (f: number, id: string, box: Box) => {
+  if (texts.frame !== f) { texts.frame = f; texts.boxes = []; }
+  texts.boxes.push({ id, box });
+};
+export const textsAt = (f: number) => (texts.frame === f ? texts.boxes : []);
+
+/**
+ * The keep-out gate, rendered after everything else: any text box over a visible face is a violation.
+ * In the check render (`check`) a violation fails the frame; otherwise it is drawn as a red outline in
+ * review renders (`show`) and is silent in the final.
+ */
+export const Gate: React.FC<{ f: number; check?: boolean; show?: boolean }> = ({ f, check = false, show = false }) => {
+  const hits = facesAt(f).filter((x) => x.o > 0.5).flatMap((face) => textsAt(f).filter((t) => overlaps(face.box, t.box, 8)).map((t) => ({ face, t })));
+  if (hits.length && check) throw new Error(`frame ${f}: text ${hits.map((h) => `${h.t.id}×${h.face.id}`).join(', ')} covers a face`);
+  if (!show) return null;
+  return <svg width={W} height={H} style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+    {facesAt(f).map((x) => <rect key={x.id} x={x.box[0]} y={x.box[1]} width={x.box[2] - x.box[0]} height={x.box[3] - x.box[1]} fill="none" stroke={hits.some((h) => h.face.id === x.id) ? '#E63946' : '#10B981'} strokeWidth={4} />)}
+    {textsAt(f).map((t, k) => <rect key={k} x={t.box[0]} y={t.box[1]} width={t.box[2] - t.box[0]} height={t.box[3] - t.box[1]} fill="none" stroke="#2E7BC5" strokeWidth={3} strokeDasharray="10 8" />)}
+  </svg>;
+};

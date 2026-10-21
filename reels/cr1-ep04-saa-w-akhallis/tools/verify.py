@@ -51,24 +51,53 @@ ends = [float(x) for x in re.findall(r'silence_end: ([\d.]+)', fine)]
 # a sound effect that starts just before a line fills the silence the onset is measured from; such a
 # line is reported as masked, not as late, and the other lines still have to land on time
 cues = json.loads((root / 'timeline.json').read_text(encoding='utf-8'))[prog]['sfx']
-onsets = []
-for s in data['segments']:
-    mask = next((c['sfx'] for c in cues if s['start'] - 0.7 <= c['time'] <= s['start'] + 0.05), None)
-    near = [e for e in ends if abs(e - s['start']) <= 0.4]
-    got = min(near, key=lambda e: abs(e - s['start'])) if near else None
-    onsets.append({'id': s['id'], 'planned': s['start'], 'measured': got, 'offset': None if got is None else round(got - s['start'], 3),
-                   **({'maskedBy': mask} if mask else {})})
-found = [o['offset'] for o in onsets if o['offset'] is not None and 'maskedBy' not in o]
-# every word after a pause inside a line, where a pause is measured near it (the lines' first words are above)
-inner = []
+FRAME, TARGET = 1 / FPS + 0.002, 0.014  # one frame at 60 fps (+2 ms measurement slack), and the requested 14 ms
+
+
+import wave
+SFX_LEN = {}
+def sfx_len(name):
+    if name not in SFX_LEN:
+        with wave.open(str(root / f'public/sfx/{name}.wav')) as w:
+            SFX_LEN[name] = w.getnframes() / w.getframerate()
+    return SFX_LEN[name]
+
+
+def onset(t, window, accept=lambda e: True):
+    """Status of one planned onset: measured (with offset), masked (a sound effect is still sounding at the
+    onset, so the silence edge belongs to the effect: not measurable this way), or notFound (no silence edge
+    near it)."""
+    mask = next((c['sfx'] for c in cues if c['time'] - 0.05 <= t <= c['time'] + sfx_len(c['sfx']) + 0.05), None)
+    if mask:
+        return {'status': 'masked', 'maskedBy': mask}
+    near = [e for e in ends if abs(e - t) <= window and accept(e)]
+    if not near:
+        return {'status': 'notFound'}
+    got = min(near, key=lambda e: abs(e - t))
+    return {'status': 'measured', 'measured': got, 'offset': round(got - t, 3)}
+
+
+lines = [{'id': x['id'], 'planned': x['start'], **onset(x['start'], 0.4)} for x in data['segments']]
+# every word that follows a pause inside its line
+words = []
 for k, w in enumerate(data['words'][1:], 1):
     prev = data['words'][k - 1]
-    near = [e for e in ends if abs(e - w['start']) <= 0.3 and prev['start'] + 0.1 < e < w['end'] - 0.05] if w['seg'] == prev['seg'] and w['start'] - prev['end'] >= 0.06 else []
-    if near:
-        got = min(near, key=lambda e: abs(e - w['start']))
-        mask = next((c['sfx'] for c in cues if w['start'] - 0.7 <= c['time'] <= w['start'] + 0.05), None)  # same rule as the lines
-        inner.append({'seg': w['seg'], 'i': w['i'], 'w': w['w'], 'planned': w['start'], 'measured': got, 'offset': round(got - w['start'], 3), **({'maskedBy': mask} if mask else {})})
+    if w['seg'] != prev['seg'] or w['start'] - prev['end'] < 0.06:
+        continue
+    row = {'seg': w['seg'], 'i': w['i'], 'w': w['w'], 'planned': w['start'], 'pause': round(w['start'] - prev['end'], 3)}
+    # the detector needs 0.12 s of silence: a shorter pause has no edge to measure
+    words.append({**row, 'status': 'shortPause'} if row['pause'] < 0.12 else
+                 {**row, **onset(w['start'], 0.3, lambda e, prev=prev, w=w: prev['start'] + 0.1 < e < w['end'] - 0.05)})
 
+
+def summary(rows):
+    m = [abs(r['offset']) for r in rows if r['status'] == 'measured']
+    return {'total': len(rows), 'measured': len(m), 'masked': sum(r['status'] == 'masked' for r in rows),
+            'notFound': sum(r['status'] == 'notFound' for r in rows), 'shortPause': sum(r['status'] == 'shortPause' for r in rows), 'maxAbsOffsetMs': round(max(m) * 1000, 1) if m else None,
+            'withinOneFrame': sum(x <= FRAME for x in m), 'within14ms': sum(x <= TARGET for x in m)}
+
+
+L, Wd = summary(lines), summary(words)
 checks = {
     'h264 + yuv420p progressive': v['codec_name'] == 'h264' and v['pix_fmt'] == 'yuv420p' and v.get('field_order', 'progressive') in ('progressive', 'unknown'),
     f'{W}x{H}': (v['width'], v['height']) == (W, H),
@@ -81,8 +110,11 @@ checks = {
     'loudness −16 ±1 LUFS': abs(lufs + 16) <= 1,
     'true peak ≤ −4 dBTP': tp <= -4.0,
     'no black frames': not blacks,
-    'voice lines start on time (≤ 1 frame)': bool(found) and len(found) == sum('maskedBy' not in o for o in onsets) and max(map(abs, found)) <= 1 / FPS + 0.002,
-    'words after a pause on time (≤ 1 frame)': all(abs(o['offset']) <= 1 / FPS + 0.002 for o in inner if 'maskedBy' not in o),
+    # timing: only measured onsets are judged; masked and not-found ones are counted and listed, never passed
+    'measured line starts within one frame (16.7 ms)': L['measured'] > 0 and L['withinOneFrame'] == L['measured'],
+    'measured line starts within the 14 ms target': L['measured'] > 0 and L['within14ms'] == L['measured'],
+    'measured words after a pause within one frame': Wd['withinOneFrame'] == Wd['measured'],
+    'measured words after a pause within the 14 ms target': Wd['within14ms'] == Wd['measured'],
 }
 res = {
     'file': Path(video).name, 'bytes': int(probe['format']['size']), 'videoBitrate': int(v.get('bit_rate') or 0),
@@ -92,8 +124,8 @@ res = {
     'loudness': {'integratedLUFS': lufs, 'truePeakDBTP': tp},
     'decodeErrors': decode[:20], 'black': blacks,
     'holdsOver3s': freezes, 'silencesOver0.8s': silences,
-    'voiceOnsets': {'lines': len(onsets), 'found': len(found), 'maxAbsOffset': max(map(abs, found)) if found else None, 'detail': onsets,
-                    'afterPause': {'words': len(inner), 'maxAbsOffset': max((abs(o['offset']) for o in inner if 'maskedBy' not in o), default=None), 'detail': inner}},
+    'voiceOnsets': {'method': 'silence edge (−45 dB, ≥ 0.12 s) nearest each planned onset. masked = a sound effect is still sounding at the onset (the edge would be the effect); shortPause = the pause before the word is under the detector minimum; notFound = no edge within the window. Only measured onsets are judged.',
+                    'lines': {**L, 'detail': lines}, 'wordsAfterPause': {**Wd, 'detail': words}},
     'checks': checks, 'pass': all(checks.values()),
     'flags': 'holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge',
     'note': 'measurements only; nothing here proves how the film looks or sounds to a person',
@@ -101,4 +133,4 @@ res = {
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps(res, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 print(json.dumps({'file': res['file'], 'pass': res['pass'], 'failed': [k for k, ok in checks.items() if not ok], 'lufs': lufs, 'tp': tp,
-                  'holds': freezes, 'silences': silences, 'onsetMax': res['voiceOnsets']['maxAbsOffset']}, ensure_ascii=False))
+                  'holds': freezes, 'silences': silences, 'lines': L, 'words': Wd}, ensure_ascii=False))

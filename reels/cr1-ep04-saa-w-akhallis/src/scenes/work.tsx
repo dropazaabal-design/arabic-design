@@ -1,7 +1,7 @@
 import React from 'react';
 import { pose, type Pose } from '../../../../motion-core/src/cartoon';
 import { anchorAt, reach, type SvgHand } from '../../../../motion-core/src/characters/SvgPerson';
-import { Carton, Instructions, Panel, Room, Screw, Screwdriver, WORK_X } from '../props';
+import { Carton, Instructions, Panel, Ring, Room, Screw, Screwdriver, Shelf, WORK_X } from '../props';
 import { Actor, F, Frame, camMix, follow, toChar, type Cam } from '../stage';
 import { C, NASER } from '../theme';
 import { ease, mix, prog, sec } from '../time';
@@ -9,7 +9,9 @@ import { ease, mix, prog, sec } from '../time';
 // R2, the hardest shot: kneeling at the carton he uses as a bench, he drives the first screw (it goes in
 // crooked), turns the picture-only instructions round, then lifts panel 3 by its edges and finds it upside
 // down. Hands: pinch for the screw, grip for the screwdriver, edge for the sheet and the board.
-export type WorkBeats = { start: number; screw: number; crooked: number; sheet: number; turn: number; panel: number; flip: number; end: number };
+export type WorkBeats = { start: number; screw: number; crooked: number; sheet: number; turn: number; panel: number; flip: number; end: number;
+  /** R2's tail (optional): the clock races to seven, the doorbell rings, the half-built shelf is seen */
+  spin?: number; ring?: number; half?: number };
 
 export const S = 1.7;
 export const X = -150, Y = 72 * S; // kneeling: the feet sink one shin below the floor so the knees rest on it
@@ -34,10 +36,11 @@ export const Work: React.FC<{ f: number; k: WorkBeats; legacy?: boolean; cam?: C
   const flip = prog(f, k.flip, sec(0.6), ease.inOut);
   const holdPanel = kneel({ lean: 4, headTilt: 4, headTurn: 0.75 });
   // the board stands on its end in front of him, right of his face: his far hand on its near edge, the other lower down
-  const PANEL: [number, number] = [X + 300, -300];
-  const panelGrip = reach(holdPanel, 'F', tc([PANEL[0] - 80, PANEL[1] - 40]), H('edge'));
+  // held low (its foot near the floor), so both arms run below his chin and the face stays clear
+  const PANEL: [number, number] = [X + 310, -230];
+  const panelGrip = reach(holdPanel, 'F', tc([PANEL[0] - 80, PANEL[1]]), H('edge'));
   const pf = anchorAt(panelGrip, 'F', H('edge'));
-  const panelBoth = reach(panelGrip, 'N', [pf[0], pf[1] + 120 / S], H('edge'));
+  const panelBoth = reach(panelGrip, 'N', [pf[0], pf[1] + 110 / S], H('edge'));
   // the sheet is held at chest height, forward and to the right, so his face stays clear while he reads it
   const sheetPose = (tilt: number) => reach(reach(kneel({ lean: 10, headTilt: tilt, headTurn: 0.9 }), 'N', tc([X + 200, -300]), H('edge')), 'F', tc([X + 330, -300]), H('edge'));
   const p = follow(f, [
@@ -49,15 +52,24 @@ export const Work: React.FC<{ f: number; k: WorkBeats; legacy?: boolean; cam?: C
     { at: k.panel - sec(0.45), to: reach(reach(kneel({ lean: 34, headTilt: 12 }), 'F', tc([X + 300, -60]), H('edge')), 'N', tc([X + 250, -60]), H('edge')), dur: sec(0.4) }, // down to the board on the floor
     { at: k.panel + sec(0.1), to: panelBoth, dur: sec(0.55) },
     { at: k.flip + sec(0.7), to: { ...panelBoth, headTilt: -4 }, dur: sec(0.3) },
+    ...(k.ring !== undefined ? [{ at: k.ring + sec(0.05), to: { ...panelBoth, headTilt: -10, headTurn: 0.95, lean: -4 }, dur: sec(0.2) }] : []), // freezes, turns to the door
   ], [
     { from: k.screw, to: k.crooked, at: (g) => reach(reach(bend, 'N', tc([HOLE[0] - 6, HOLE[1] - 40 + 18 * prog(g, k.screw, sec(0.6))]), H('pinch')), 'F', tc(drv(g)), 'grip', -1) },
   ]);
   const holding = f >= k.panel - sec(0.05);
   const sheetHeld = f >= k.sheet - sec(0.1) && f < k.panel - sec(0.5);
-  const c: Cam = cam ?? camMix({ x: -10, y: -330, z: 1.75 }, { x: 20, y: -360, z: 1.68 }, prog(f, k.start, k.end - k.start, ease.inOut));
+  const close = camMix({ x: -10, y: -330, z: 1.75 }, { x: 20, y: -360, z: 1.68 }, prog(f, k.start, (k.spin ?? k.end) - k.start, ease.inOut));
+  // the tail: pull back to the whole room as the clock races; the doorbell; the half-built shelf on the floor
+  const late = k.spin === undefined ? 0 : prog(f, k.spin, sec(1.1), ease.inOut);
+  const race = k.spin === undefined ? 0 : prog(f, k.spin + sec(0.2), (k.ring ?? k.spin) - k.spin - sec(0.2), ease.inOut);
+  const c: Cam = cam ?? camMix(close, { x: 250, y: -560, z: 1.05 }, late);
+  const min = 16 * 60 + 25 + (Math.min(f, k.spin ?? f) - k.start) / 60 + race * (19 * 60 - (16 * 60 + 40));
+  const ringO = k.ring === undefined ? 0 : prog(f, k.ring, sec(0.15)) * (1 - prog(f, k.ring + sec(1.4), sec(0.3)));
   return (
     <Frame c={c} bg={C.bg} world={<>
-      <Room id="work" clockMin={16 * 60 + 25 + (f - k.start) / 60} note="الضيوف 7:00" />
+      <Room id="work" clockMin={min} note="الضيوف 7:00" dusk={0.85 * race} spin={race > 0 && race < 1 ? 1 : 0} />
+      <Ring o={ringO} f={f} />
+      <g transform={`translate(${WORK_X + 420} 0)`}><Shelf built={0.32 + 0.12 * race} /></g>
       <g transform={`translate(${BENCH.x} 0)`}><Carton w={360} h={120} open={1} /></g>
       {/* the side panel lying on the carton: its top face, with the holes */}
       <path d={`M${BENCH.x - 170} ${BENCH.top} L${BENCH.x + 170} ${BENCH.top} L${BENCH.x + 150} ${BENCH.top - 34} L${BENCH.x - 150} ${BENCH.top - 34} Z`} fill={C.panel} stroke={C.ink} strokeWidth={4} strokeLinejoin="round" />
@@ -82,13 +94,15 @@ export const Work: React.FC<{ f: number; k: WorkBeats; legacy?: boolean; cam?: C
           F(k.panel + sec(0.6), 'calm', { gx: 1, gy: 0.1 }, sec(0.2)),
           F(k.flip - sec(0.25), 'surprised', { gx: 1, gy: 0 }, sec(0.12)),
           F(k.flip + sec(0.7), 'embarrassed', { gx: 0.2, gy: 0, sweat: 0.8 }, sec(0.3)),
+          ...(k.ring !== undefined ? [F(k.ring + sec(0.1), 'surprised', { gx: 1, gy: -0.2, sweat: 1, pupil: 0.6 }, sec(0.12)),
+            F(k.ring + sec(1.0), 'wince', { gx: 1, gy: -0.1, sweat: 1 }, sec(0.3))] : []),
         ],
         handN: f < k.screw + sec(0.7) ? H('pinch') : f >= k.sheet - sec(0.1) && sheetHeld ? H('edge') : holding ? H('edge') : 'open',
         handF: f < k.crooked + sec(0.3) ? 'grip' : f >= k.sheet - sec(0.1) && sheetHeld ? H('edge') : holding ? H('edge') : 'open',
         holdN: f < k.screw - sec(0.05) ? <Screw s={1.4 / S} /> : undefined,
         holdF: f < k.crooked + sec(0.3) ? <g transform={`scale(${1 / 1})`}><Screwdriver /></g>
           : sheetHeld ? <g transform={`translate(${-75 / S} 0) rotate(${sheetRot}) scale(${0.62 / S})`}><Instructions /></g>
-            : holding ? <g transform={`translate(${80 / S} ${(40 - 60) / S}) rotate(${mix(180, 360, flip)}) scale(${1 / S})`}><Panel w={170} h={420} num="3" /></g> : undefined,
+            : holding ? <g transform={`translate(${80 / S} ${-20 / S}) rotate(${mix(180, 360, flip)}) scale(${1 / S})`}><Panel w={170} h={420} num="3" /></g> : undefined,
         holdUpright: true,
         farInFront: holding || sheetHeld,
       }} />

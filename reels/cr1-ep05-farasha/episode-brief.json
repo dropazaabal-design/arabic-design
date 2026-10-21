@@ -1,0 +1,11 @@
+{
+  "series": "CR1 · فكرة من كتاب · كتاب وبس",
+  "episode": 5,
+  "slug": "farasha",
+  "title": "تأثير الفراشة",
+  "version": "1.0.0",
+  "format": {"w": 1080, "h": 1920, "fps": 60, "codec": "h264", "pix_fmt": "yuv420p", "audio": "aac 48k stereo", "loudness": "-16 LUFS, true peak <= -4 dBTP"},
+  "book": {"ar": "نظرية الفوضى: علم اللامتوقع", "author_ar": "جيمس غليك", "note": "The story is Lorenz's own account (The Essence of Chaos, 1993), retold in Gleick's first chapter."},
+  "voice": {"provider": "ElevenLabs", "model": "eleven_v4", "voice_id": "dlGxemPxFMTY7iXagmOj", "takes": 1},
+  "budget": "Series cap 20,000 credits; 665.93 left before this reel; one take spent 620.94; 44.99 left."
+}

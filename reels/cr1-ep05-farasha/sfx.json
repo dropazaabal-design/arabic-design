@@ -1,0 +1,508 @@
+{
+ "short": [
+  {
+   "seg": "R1",
+   "i": 0,
+   "sfx": "scribble",
+   "offset": 0.0,
+   "gain": -26,
+   "why": "the first run plots itself"
+  },
+  {
+   "seg": "R1",
+   "i": 2,
+   "sfx": "scribble",
+   "offset": 0.0,
+   "gain": -26,
+   "why": "the rerun traces it"
+  },
+  {
+   "seg": "R1",
+   "i": 4,
+   "sfx": "whoosh",
+   "offset": 0.3,
+   "gain": -26,
+   "why": "the camera pulls back as they part"
+  },
+  {
+   "seg": "R1",
+   "i": 7,
+   "sfx": "note_b",
+   "offset": 0.15,
+   "gain": -21,
+   "why": "the two weathers are apart"
+  },
+  {
+   "seg": "R1",
+   "i": 7,
+   "sfx": "flutter",
+   "offset": 0.45,
+   "gain": -28,
+   "why": "a butterfly shadow crosses the sheet"
+  },
+  {
+   "seg": "R2",
+   "i": 0,
+   "sfx": "typing",
+   "offset": -0.1,
+   "gain": -23,
+   "why": "he types at the teleprinter"
+  },
+  {
+   "seg": "R2",
+   "i": 5,
+   "sfx": "chime",
+   "offset": 0.0,
+   "gain": -28,
+   "why": "the lamps blink as it computes"
+  },
+  {
+   "seg": "R2",
+   "i": 5,
+   "sfx": "typing",
+   "offset": 0.3,
+   "gain": -24,
+   "why": ""
+  },
+  {
+   "seg": "R3",
+   "i": 0,
+   "sfx": "pageflip",
+   "offset": 0.25,
+   "gain": -18,
+   "why": "he takes the printout"
+  },
+  {
+   "seg": "R3",
+   "i": 5,
+   "sfx": "typing",
+   "offset": 0.2,
+   "gain": -23,
+   "why": "he types the numbers back in"
+  },
+  {
+   "seg": "R3",
+   "i": 11,
+   "sfx": "whoosh",
+   "offset": -0.3,
+   "gain": -22,
+   "why": "the three digits lift off"
+  },
+  {
+   "seg": "R4",
+   "i": 0,
+   "sfx": "clunk",
+   "offset": 0.1,
+   "gain": -14,
+   "why": "start"
+  },
+  {
+   "seg": "R4",
+   "i": 1,
+   "sfx": "hum",
+   "offset": -0.2,
+   "gain": -25,
+   "why": "the machine runs"
+  },
+  {
+   "seg": "R4",
+   "i": 1,
+   "sfx": "typing",
+   "offset": 0.3,
+   "gain": -27,
+   "why": "the teleprinter starts printing"
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": -0.62,
+   "gain": -24,
+   "why": "walking to the door"
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": -0.36,
+   "gain": -22,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": -0.1,
+   "gain": -24,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": 0.16,
+   "gain": -22,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": 0.42,
+   "gain": -24,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": 0.68,
+   "gain": -22,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": 0.94,
+   "gain": -24,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 2,
+   "sfx": "step",
+   "offset": 1.2,
+   "gain": -22,
+   "why": ""
+  },
+  {
+   "seg": "R4",
+   "i": 4,
+   "sfx": "door",
+   "offset": 0.12,
+   "gain": -18,
+   "why": "the door opens"
+  },
+  {
+   "seg": "R4",
+   "i": 4,
+   "sfx": "thud",
+   "offset": 0.95,
+   "gain": -22,
+   "why": "and closes behind him"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "whoosh",
+   "offset": -1.55,
+   "gain": -25,
+   "why": "an hour passes"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "tick",
+   "offset": -1.35,
+   "gain": -21,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "tick",
+   "offset": -1.1,
+   "gain": -21,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "tick",
+   "offset": -0.85,
+   "gain": -21,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "tick",
+   "offset": -0.6,
+   "gain": -21,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "tick",
+   "offset": -0.35,
+   "gain": -21,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "door",
+   "offset": -0.08,
+   "gain": -18,
+   "why": "he is back"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "step",
+   "offset": 0.42,
+   "gain": -23,
+   "why": "walking in"
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "step",
+   "offset": 0.69,
+   "gain": -23,
+   "why": ""
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "step",
+   "offset": 0.96,
+   "gain": -23,
+   "why": ""
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "step",
+   "offset": 1.23,
+   "gain": -23,
+   "why": ""
+  },
+  {
+   "seg": "R5",
+   "i": 0,
+   "sfx": "step",
+   "offset": 1.5,
+   "gain": -23,
+   "why": ""
+  },
+  {
+   "seg": "R5",
+   "i": 1,
+   "sfx": "sip",
+   "offset": 0.32,
+   "gain": -15,
+   "why": "a sip of coffee"
+  },
+  {
+   "seg": "R5",
+   "i": 3,
+   "sfx": "pageflip",
+   "offset": -0.25,
+   "gain": -18,
+   "why": "the new sheet over the old"
+  },
+  {
+   "seg": "R5",
+   "i": 6,
+   "sfx": "note_a",
+   "offset": 0.1,
+   "gain": -21,
+   "why": "they part"
+  },
+  {
+   "seg": "R5",
+   "i": 12,
+   "sfx": "note_c",
+   "offset": 0.0,
+   "gain": -19,
+   "why": "nothing alike"
+  },
+  {
+   "seg": "R6",
+   "i": 0,
+   "sfx": "chalk",
+   "offset": 0.05,
+   "gain": -21,
+   "why": "he draws the weather"
+  },
+  {
+   "seg": "R6",
+   "i": 4,
+   "sfx": "chalk",
+   "offset": 0.0,
+   "gain": -23,
+   "why": "two lines from one point"
+  },
+  {
+   "seg": "R6",
+   "i": 6,
+   "sfx": "pop",
+   "offset": 0.0,
+   "gain": -25,
+   "why": "the gap doubles"
+  },
+  {
+   "seg": "R6",
+   "i": 6,
+   "sfx": "pop",
+   "offset": 0.35,
+   "gain": -25,
+   "why": ""
+  },
+  {
+   "seg": "R6",
+   "i": 6,
+   "sfx": "pop",
+   "offset": 0.7,
+   "gain": -25,
+   "why": ""
+  },
+  {
+   "seg": "R6",
+   "i": 9,
+   "sfx": "chalk",
+   "offset": 0.0,
+   "gain": -25,
+   "why": "the forecast row"
+  },
+  {
+   "seg": "R6",
+   "i": 17,
+   "sfx": "tick",
+   "offset": -0.1,
+   "gain": -18,
+   "why": "the two-week line"
+  },
+  {
+   "seg": "R7",
+   "i": 0,
+   "sfx": "chalk",
+   "offset": 0.05,
+   "gain": -20,
+   "why": "he draws a butterfly"
+  },
+  {
+   "seg": "R7",
+   "i": 3,
+   "sfx": "whoosh",
+   "offset": -0.1,
+   "gain": -23,
+   "why": "the name"
+  },
+  {
+   "seg": "R7",
+   "i": 5,
+   "sfx": "flutter",
+   "offset": -0.35,
+   "gain": -16,
+   "why": "it comes alive"
+  },
+  {
+   "seg": "R7",
+   "i": 8,
+   "sfx": "flutter",
+   "offset": 0.0,
+   "gain": -19,
+   "why": "over Brazil"
+  },
+  {
+   "seg": "R7",
+   "i": 9,
+   "sfx": "chalk",
+   "offset": 0.0,
+   "gain": -23,
+   "why": "the path to Texas"
+  },
+  {
+   "seg": "R7",
+   "i": 10,
+   "sfx": "wind",
+   "offset": 0.0,
+   "gain": -20,
+   "why": "a storm"
+  },
+  {
+   "seg": "R8",
+   "i": 0,
+   "sfx": "whoosh",
+   "offset": -0.2,
+   "gain": -25,
+   "why": "he turns to us"
+  },
+  {
+   "seg": "R8",
+   "i": 2,
+   "sfx": "wind",
+   "offset": 0.1,
+   "gain": -27,
+   "why": "the storm"
+  },
+  {
+   "seg": "R8",
+   "i": 8,
+   "sfx": "chime",
+   "offset": 0.0,
+   "gain": -23,
+   "why": "or a clear sky"
+  },
+  {
+   "seg": "R8",
+   "i": 13,
+   "sfx": "note_b",
+   "offset": 0.0,
+   "gain": -20,
+   "why": "we cannot know"
+  },
+  {
+   "seg": "R9",
+   "i": 0,
+   "sfx": "note_a",
+   "offset": 0.0,
+   "gain": -20,
+   "why": "the digits that never showed"
+  },
+  {
+   "seg": "R9",
+   "i": 6,
+   "sfx": "whoosh",
+   "offset": -0.15,
+   "gain": -25,
+   "why": "to the window"
+  },
+  {
+   "seg": "R10",
+   "i": 0,
+   "sfx": "flutter",
+   "offset": -0.3,
+   "gain": -24,
+   "why": "the butterfly outside"
+  },
+  {
+   "seg": "R10",
+   "i": 4,
+   "sfx": "note_c",
+   "offset": 0.3,
+   "gain": -18,
+   "why": "the end"
+  },
+  {
+   "seg": "R9",
+   "i": 0,
+   "sfx": "pageflip",
+   "offset": -0.62,
+   "gain": -21,
+   "why": "back to the paper"
+  },
+  {
+   "seg": "R9",
+   "i": 0,
+   "sfx": "chime",
+   "offset": -0.9,
+   "gain": -27,
+   "why": "a soft beat in the pause before the last line"
+  }
+ ]
+}
