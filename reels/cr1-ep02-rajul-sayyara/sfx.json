@@ -1,0 +1,782 @@
+{
+ "note": "Few, quiet, and only on an action (CR1 §9). Anchored to a spoken word: seg, word index, offset in seconds. Gains are relative to the file, before the mix is normalised.",
+ "long": [
+  {
+   "seg": "L1",
+   "i": 0,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the new car glides in",
+   "offset": -0.3
+  },
+  {
+   "seg": "L1",
+   "i": 10,
+   "sfx": "click",
+   "gain": -20,
+   "why": "he parks: the door",
+   "offset": 0.25
+  },
+  {
+   "seg": "L1",
+   "i": 14,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "heads turn"
+  },
+  {
+   "seg": "L1",
+   "i": 21,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "first bubble"
+  },
+  {
+   "seg": "L1",
+   "i": 21,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "second bubble",
+   "offset": 0.18
+  },
+  {
+   "seg": "L1",
+   "i": 21,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "third bubble",
+   "offset": 0.36
+  },
+  {
+   "seg": "L1",
+   "i": 27,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "each sees himself at the wheel"
+  },
+  {
+   "seg": "L2",
+   "i": 20,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the opening rewinds"
+  },
+  {
+   "seg": "L2",
+   "i": 21,
+   "sfx": "pageflip",
+   "gain": -20,
+   "why": "the calendar flips back",
+   "offset": 0.6
+  },
+  {
+   "seg": "L3",
+   "i": 0,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the old car arrives",
+   "offset": -0.2
+  },
+  {
+   "seg": "L3",
+   "i": 29,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the bonus notification"
+  },
+  {
+   "seg": "L3",
+   "i": 30,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the new car in a bubble"
+  },
+  {
+   "seg": "L3",
+   "i": 33,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "savings leave the jar",
+   "offset": 0.3
+  },
+  {
+   "seg": "L3",
+   "i": 40,
+   "sfx": "click",
+   "gain": -20,
+   "why": "a third of the salary turns red"
+  },
+  {
+   "seg": "L3",
+   "i": 42,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "five years of months"
+  },
+  {
+   "seg": "L3",
+   "i": 54,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "his own applause bubble"
+  },
+  {
+   "seg": "L4",
+   "i": 5,
+   "sfx": "pageflip",
+   "gain": -20,
+   "why": "the book card"
+  },
+  {
+   "seg": "L4",
+   "i": 18,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "a guest car arrives"
+  },
+  {
+   "seg": "L4",
+   "i": 20,
+   "sfx": "click",
+   "gain": -20,
+   "why": "the keys change hands",
+   "offset": 1.4
+  },
+  {
+   "seg": "L4",
+   "i": 24,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "he dreams"
+  },
+  {
+   "seg": "L4",
+   "i": 33,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "he notices"
+  },
+  {
+   "seg": "L4",
+   "i": 36,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the second bubble"
+  },
+  {
+   "seg": "L4",
+   "i": 42,
+   "sfx": "click",
+   "gain": -20,
+   "why": "struck through",
+   "offset": 0.45
+  },
+  {
+   "seg": "L4",
+   "i": 45,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the owner becomes himself"
+  },
+  {
+   "seg": "L4",
+   "i": 53,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the title"
+  },
+  {
+   "seg": "L4",
+   "i": 66,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the magnifier on the window"
+  },
+  {
+   "seg": "L5",
+   "i": 6,
+   "sfx": "click",
+   "gain": -20,
+   "why": "the sign is struck",
+   "offset": 0.4
+  },
+  {
+   "seg": "L5",
+   "i": 14,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the cover slides off",
+   "offset": 0.3
+  },
+  {
+   "seg": "L5",
+   "i": 17,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "respect underneath"
+  },
+  {
+   "seg": "L5",
+   "i": 21,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "humility lands"
+  },
+  {
+   "seg": "L5",
+   "i": 22,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "kindness lands"
+  },
+  {
+   "seg": "L5",
+   "i": 23,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "empathy lands"
+  },
+  {
+   "seg": "L5",
+   "i": 28,
+   "sfx": "click",
+   "gain": -20,
+   "why": "the engine lands"
+  },
+  {
+   "seg": "L6",
+   "i": 8,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "eyes on the car"
+  },
+  {
+   "seg": "L6",
+   "i": 10,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the camera moves to Saad"
+  },
+  {
+   "seg": "L6",
+   "i": 25,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "the scratch"
+  },
+  {
+   "seg": "L6",
+   "i": 30,
+   "sfx": "pageflip",
+   "gain": -20,
+   "why": "six months pass"
+  },
+  {
+   "seg": "L6",
+   "i": 34,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the door opens"
+  },
+  {
+   "seg": "L6",
+   "i": 47,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "the salary shrinks"
+  },
+  {
+   "seg": "L6",
+   "i": 55,
+   "sfx": "click",
+   "gain": -20,
+   "why": "the chain pulls"
+  },
+  {
+   "seg": "L6",
+   "i": 60,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "Saad says yes"
+  },
+  {
+   "seg": "L7",
+   "i": 3,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "two things pulled apart"
+  },
+  {
+   "seg": "L7",
+   "i": 6,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "rich"
+  },
+  {
+   "seg": "L7",
+   "i": 9,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "wealth"
+  },
+  {
+   "seg": "L7",
+   "i": 20,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "notes into the jar"
+  },
+  {
+   "seg": "L7",
+   "i": 27,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the car not bought"
+  },
+  {
+   "seg": "L7",
+   "i": 30,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "it falls into the jar"
+  },
+  {
+   "seg": "L7",
+   "i": 31,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the watch not worn"
+  },
+  {
+   "seg": "L7",
+   "i": 34,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "into the jar"
+  },
+  {
+   "seg": "L8",
+   "i": 5,
+   "sfx": "click",
+   "gain": -20,
+   "why": "things struck",
+   "offset": 0.6
+  },
+  {
+   "seg": "L8",
+   "i": 8,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "notes become a clock"
+  },
+  {
+   "seg": "L8",
+   "i": 20,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "he turns the hand"
+  },
+  {
+   "seg": "L8",
+   "i": 20,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "the hand turns",
+   "offset": 0.5
+  },
+  {
+   "seg": "L8",
+   "i": 23,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "morning"
+  },
+  {
+   "seg": "L8",
+   "i": 32,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "savings become months"
+  },
+  {
+   "seg": "L9",
+   "i": 1,
+   "sfx": "click",
+   "gain": -20,
+   "why": "pause"
+  },
+  {
+   "seg": "L9",
+   "i": 10,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "rent"
+  },
+  {
+   "seg": "L9",
+   "i": 11,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "food"
+  },
+  {
+   "seg": "L9",
+   "i": 16,
+   "sfx": "click",
+   "gain": -20,
+   "why": "not the car"
+  },
+  {
+   "seg": "L9",
+   "i": 22,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "first card"
+  },
+  {
+   "seg": "L9",
+   "i": 28,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "second card"
+  },
+  {
+   "seg": "L9",
+   "i": 44,
+   "sfx": "click",
+   "gain": -20,
+   "why": "not stingy"
+  },
+  {
+   "seg": "L9",
+   "i": 48,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "who do you spend for"
+  },
+  {
+   "seg": "L10",
+   "i": 7,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the question"
+  },
+  {
+   "seg": "L10",
+   "i": 7,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the first onlooker goes",
+   "offset": 0.1
+  },
+  {
+   "seg": "L10",
+   "i": 9,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the second goes",
+   "offset": 0.1
+  },
+  {
+   "seg": "L10",
+   "i": 15,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "enjoy it"
+  },
+  {
+   "seg": "L10",
+   "i": 23,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the audience returns"
+  },
+  {
+   "seg": "L10",
+   "i": 23,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "each pictures himself",
+   "offset": 0.2
+  },
+  {
+   "seg": "L10",
+   "i": 29,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "months counted"
+  },
+  {
+   "seg": "L10",
+   "i": 38,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "a small number"
+  },
+  {
+   "seg": "L10",
+   "i": 44,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "and you?"
+  },
+  {
+   "seg": "L11",
+   "i": 8,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "a monthly transfer"
+  },
+  {
+   "seg": "L11",
+   "i": 13,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "into «حرية»"
+  },
+  {
+   "seg": "L11",
+   "i": 14,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "a new car arrives"
+  },
+  {
+   "seg": "L11",
+   "i": 16,
+   "sfx": "click",
+   "gain": -20,
+   "why": "it parks",
+   "offset": 0.6
+  },
+  {
+   "seg": "L11",
+   "i": 21,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "heads turn"
+  },
+  {
+   "seg": "L11",
+   "i": 27,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "his bubble"
+  },
+  {
+   "seg": "L11",
+   "i": 28,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the bubble bursts as he smiles",
+   "offset": 0.2
+  },
+  {
+   "seg": "L11",
+   "i": 32,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the closing line"
+  }
+ ],
+ "short": [
+  {
+   "seg": "R1",
+   "i": 0,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the new car glides in",
+   "offset": -0.3
+  },
+  {
+   "seg": "R1",
+   "i": 10,
+   "sfx": "click",
+   "gain": -20,
+   "why": "he parks",
+   "offset": 0.25
+  },
+  {
+   "seg": "R1",
+   "i": 11,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "heads turn"
+  },
+  {
+   "seg": "R1",
+   "i": 17,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "first bubble"
+  },
+  {
+   "seg": "R1",
+   "i": 17,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "second bubble",
+   "offset": 0.18
+  },
+  {
+   "seg": "R1",
+   "i": 17,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "third bubble",
+   "offset": 0.36
+  },
+  {
+   "seg": "R1",
+   "i": 23,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "each sees himself"
+  },
+  {
+   "seg": "R2",
+   "i": 0,
+   "sfx": "pageflip",
+   "gain": -20,
+   "why": "the book card"
+  },
+  {
+   "seg": "R2",
+   "i": 7,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the title"
+  },
+  {
+   "seg": "R2",
+   "i": 19,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the magnifier on the window"
+  },
+  {
+   "seg": "R3",
+   "i": 2,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the camera moves to Saad"
+  },
+  {
+   "seg": "R3",
+   "i": 12,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the door opens"
+  },
+  {
+   "seg": "R3",
+   "i": 15,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "the salary shrinks"
+  },
+  {
+   "seg": "R3",
+   "i": 21,
+   "sfx": "click",
+   "gain": -20,
+   "why": "the chain pulls"
+  },
+  {
+   "seg": "R3",
+   "i": 26,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "Saad says yes"
+  },
+  {
+   "seg": "R4",
+   "i": 9,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the car not bought"
+  },
+  {
+   "seg": "R4",
+   "i": 12,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "it falls into the jar"
+  },
+  {
+   "seg": "R4",
+   "i": 19,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "he turns the hand"
+  },
+  {
+   "seg": "R4",
+   "i": 19,
+   "sfx": "tick",
+   "gain": -24,
+   "why": "the hand turns",
+   "offset": 0.5
+  },
+  {
+   "seg": "R5",
+   "i": 2,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "first card"
+  },
+  {
+   "seg": "R5",
+   "i": 4,
+   "sfx": "click",
+   "gain": -20,
+   "why": "not debt",
+   "offset": 0.5
+  },
+  {
+   "seg": "R5",
+   "i": 7,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "second card"
+  },
+  {
+   "seg": "R5",
+   "i": 9,
+   "sfx": "click",
+   "gain": -20,
+   "why": "not wealth",
+   "offset": 0.5
+  },
+  {
+   "seg": "R5",
+   "i": 11,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "who do you spend for"
+  },
+  {
+   "seg": "R6",
+   "i": 6,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "the question"
+  },
+  {
+   "seg": "R6",
+   "i": 6,
+   "sfx": "whoosh",
+   "gain": -21,
+   "why": "the onlookers go",
+   "offset": 0.1
+  },
+  {
+   "seg": "R6",
+   "i": 12,
+   "sfx": "pop",
+   "gain": -22,
+   "why": "and you?"
+  }
+ ]
+}

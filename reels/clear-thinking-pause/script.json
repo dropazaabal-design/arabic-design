@@ -1,0 +1,110 @@
+{
+  "title": "لا ترسلها وأنت غاضب",
+  "brand": "كتاب وبس",
+  "handle": "@kitabwbs",
+  "book": {
+    "title": "التفكير الواضح",
+    "author": "شين باريش",
+    "original": "Clear Thinking: Turning Ordinary Moments into Extraordinary Results (Shane Parrish, 2023)",
+    "publisher_source": "https://www.penguinrandomhouseretail.com/book/?isbn=9780593086117"
+  },
+  "inspiration": {
+    "episode": "ابدأ بتحسين أفكارك لتحسن حياتك — كتاب التفكير الواضح — الجزء الأول",
+    "url": "https://www.youtube.com/watch?v=zbjjngEcU_M",
+    "note": "inspiration only; no transcript was available, nothing here is quoted from the episode"
+  },
+  "idea": "الوقفة بين الحدث ورد الفعل تتيح فرصة للتفكير قبل التصرف.",
+  "angle": "رسالة تكتبها وأنت غاضب، ثم تراجعها بعد أن تهدأ.",
+  "locked": "2026-10-09",
+  "rule": "Locked voice-over text. Captions show this text exactly. The voice prompt may only add helping diacritics (voicePrompt), never change words.",
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "sc1",
+      "text": "لا ترسلها وأنت غاضب.",
+      "captions": [
+        "لا ترسلها وأنت غاضب."
+      ]
+    },
+    {
+      "id": "s02",
+      "sceneId": "sc2",
+      "text": "وصلتك رسالة ضايقتك. فتحت المحادثة، وكتبت ردًّا قاسيًا… وبقيت ضغطة واحدة.",
+      "captions": [
+        "وصلتك رسالة ضايقتك.",
+        "فتحت المحادثة، وكتبت ردًّا قاسيًا…",
+        "وبقيت ضغطة واحدة."
+      ]
+    },
+    {
+      "id": "s03",
+      "sceneId": "sc3",
+      "text": "هنا اسأل نفسك: هذا الردّ يخدمك، أم يفرّغ غضبك فقط؟",
+      "captions": [
+        "هنا اسأل نفسك:",
+        "هذا الردّ يخدمك، أم يفرّغ غضبك فقط؟"
+      ]
+    },
+    {
+      "id": "s04",
+      "sceneId": "sc4",
+      "text": "في كتاب «التفكير الواضح»، يشرح شين باريش كيف قد نقع في ردود فعل تلقائية، قبل أن ننتبه أن أمامنا قرارًا.",
+      "captions": [
+        "في كتاب «التفكير الواضح»،",
+        "يشرح شين باريش كيف قد نقع في ردود فعل تلقائية،",
+        "قبل أن ننتبه أن أمامنا قرارًا."
+      ]
+    },
+    {
+      "id": "s05",
+      "sceneId": "sc5",
+      "text": "جرّب تصنع وقفة: اترك الردّ في المسودات، وابتعد قليلًا. ارجع له عندما تهدأ.",
+      "captions": [
+        "جرّب تصنع وقفة:",
+        "اترك الردّ في المسودات، وابتعد قليلًا.",
+        "ارجع له عندما تهدأ."
+      ]
+    },
+    {
+      "id": "s06",
+      "sceneId": "sc6",
+      "text": "هل ما زلت تريد إرساله؟ هل يمكنك قول الشيء نفسه دون إهانة؟",
+      "captions": [
+        "هل ما زلت تريد إرساله؟",
+        "هل يمكنك قول الشيء نفسه دون إهانة؟"
+      ]
+    },
+    {
+      "id": "s07",
+      "sceneId": "sc6",
+      "text": "الوقفة لا تلغي حقك في الردّ. تعطيك فرصة تختار كيف تردّ.",
+      "captions": [
+        "الوقفة لا تلغي حقك في الردّ.",
+        "تعطيك فرصة تختار كيف تردّ."
+      ]
+    },
+    {
+      "id": "s08",
+      "sceneId": "sc7",
+      "text": "اكتب لنفسك قاعدة: «سأردّ عندما أهدأ».",
+      "captions": [
+        "اكتب لنفسك قاعدة: «سأردّ عندما أهدأ»."
+      ]
+    },
+    {
+      "id": "s09",
+      "sceneId": "sc7",
+      "text": "احفظها للرسالة القادمة.",
+      "captions": [
+        "احفظها للرسالة القادمة."
+      ]
+    }
+  ],
+  "voicePrompt": {
+    "diacriticsAdded": {
+      "s05": "المسودات → المسوَّدات"
+    },
+    "joiner": "\n"
+  },
+  "captionRule": "Burned-in captions are these chunks with the final . ، : dropped (؟ and … kept). s01 is not burned in: the hook on screen is the same sentence. The SRT carries every chunk."
+}

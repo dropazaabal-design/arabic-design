@@ -1,0 +1,424 @@
+{
+ "file": "cr1-ep02_rajul-sayyara_16x9_v1.0.0.mp4",
+ "bytes": 66140468,
+ "videoBitrate": 1837403,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1920,
+  "height": 1080,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "15566",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189374"
+ },
+ "duration": {
+  "container": 259.435,
+  "timeline": 259.44,
+  "frames": 15566,
+  "framesExpected": 15566,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.5
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [
+  [
+   0.0,
+   0.97
+  ],
+  [
+   24.89,
+   26.04
+  ],
+  [
+   55.48,
+   56.88
+  ],
+  [
+   91.41,
+   92.66
+  ],
+  [
+   108.82,
+   110.1
+  ],
+  [
+   137.0,
+   138.45
+  ],
+  [
+   160.51,
+   161.76
+  ],
+  [
+   182.71,
+   184.1
+  ],
+  [
+   206.73,
+   208.01
+  ],
+  [
+   232.7,
+   234.02
+  ],
+  [
+   255.21,
+   259.44
+  ]
+ ],
+ "voiceOnsets": {
+  "lines": 11,
+  "found": 9,
+  "maxAbsOffset": 0.005,
+  "detail": [
+   {
+    "id": "L1",
+    "planned": 1.229,
+    "measured": 0.973521,
+    "offset": -0.255,
+    "maskedBy": "whoosh"
+   },
+   {
+    "id": "L2",
+    "planned": 15.078,
+    "measured": 15.0779,
+    "offset": -0.0
+   },
+   {
+    "id": "L3",
+    "planned": 26.194,
+    "measured": 26.0385,
+    "offset": -0.155,
+    "maskedBy": "whoosh"
+   },
+   {
+    "id": "L4",
+    "planned": 56.88,
+    "measured": 56.8806,
+    "offset": 0.001
+   },
+   {
+    "id": "L5",
+    "planned": 92.657,
+    "measured": 92.6576,
+    "offset": 0.001
+   },
+   {
+    "id": "L6",
+    "planned": 110.101,
+    "measured": 110.1,
+    "offset": -0.001
+   },
+   {
+    "id": "L7",
+    "planned": 138.458,
+    "measured": 138.453,
+    "offset": -0.005
+   },
+   {
+    "id": "L8",
+    "planned": 161.757,
+    "measured": 161.758,
+    "offset": 0.001
+   },
+   {
+    "id": "L9",
+    "planned": 184.103,
+    "measured": 184.103,
+    "offset": 0.0
+   },
+   {
+    "id": "L10",
+    "planned": 208.011,
+    "measured": 208.01,
+    "offset": -0.001
+   },
+   {
+    "id": "L11",
+    "planned": 234.023,
+    "measured": 234.023,
+    "offset": 0.0
+   }
+  ],
+  "afterPause": {
+   "words": 30,
+   "maxAbsOffset": 0.007,
+   "detail": [
+    {
+     "seg": "L1",
+     "i": 16,
+     "w": "بس",
+     "planned": 8.625,
+     "measured": 8.62531,
+     "offset": 0.0
+    },
+    {
+     "seg": "L2",
+     "i": 1,
+     "w": "إذا",
+     "planned": 15.832,
+     "measured": 15.8326,
+     "offset": 0.001
+    },
+    {
+     "seg": "L3",
+     "i": 3,
+     "w": "وراتبه",
+     "planned": 28.452,
+     "measured": 28.4525,
+     "offset": 0.0
+    },
+    {
+     "seg": "L3",
+     "i": 13,
+     "w": "ويحس",
+     "planned": 33.36,
+     "measured": 33.3575,
+     "offset": -0.002
+    },
+    {
+     "seg": "L3",
+     "i": 24,
+     "w": "نريد",
+     "planned": 38.328,
+     "measured": 38.3264,
+     "offset": -0.002
+    },
+    {
+     "seg": "L3",
+     "i": 28,
+     "w": "وصلته",
+     "planned": 40.423,
+     "measured": 40.4237,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 5,
+     "w": "كتابه",
+     "planned": 59.058,
+     "measured": 59.058,
+     "offset": 0.0
+    },
+    {
+     "seg": "L5",
+     "i": 3,
+     "w": "لا",
+     "planned": 94.167,
+     "measured": 94.1661,
+     "offset": -0.001
+    },
+    {
+     "seg": "L5",
+     "i": 7,
+     "w": "يقول",
+     "planned": 96.222,
+     "measured": 96.2224,
+     "offset": 0.0
+    },
+    {
+     "seg": "L5",
+     "i": 10,
+     "w": "تظن",
+     "planned": 97.893,
+     "measured": 97.8931,
+     "offset": 0.0
+    },
+    {
+     "seg": "L5",
+     "i": 15,
+     "w": "إنك",
+     "planned": 100.853,
+     "measured": 100.854,
+     "offset": 0.001
+    },
+    {
+     "seg": "L6",
+     "i": 1,
+     "w": "وين",
+     "planned": 110.782,
+     "measured": 110.78,
+     "offset": -0.002
+    },
+    {
+     "seg": "L6",
+     "i": 10,
+     "w": "وفي",
+     "planned": 114.67,
+     "measured": 114.671,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 18,
+     "w": "أما",
+     "planned": 147.731,
+     "measured": 147.73,
+     "offset": -0.001
+    },
+    {
+     "seg": "L7",
+     "i": 23,
+     "w": "وبمعنى",
+     "planned": 150.283,
+     "measured": 150.281,
+     "offset": -0.002
+    },
+    {
+     "seg": "L8",
+     "i": 5,
+     "w": "ما",
+     "planned": 164.103,
+     "measured": 164.104,
+     "offset": 0.001
+    },
+    {
+     "seg": "L8",
+     "i": 8,
+     "w": "اشترت",
+     "planned": 165.637,
+     "measured": 165.636,
+     "offset": -0.001
+    },
+    {
+     "seg": "L8",
+     "i": 10,
+     "w": "هاوسل",
+     "planned": 167.263,
+     "measured": 167.256,
+     "offset": -0.007
+    },
+    {
+     "seg": "L8",
+     "i": 23,
+     "w": "إنك",
+     "planned": 173.156,
+     "measured": 173.157,
+     "offset": 0.001
+    },
+    {
+     "seg": "L8",
+     "i": 32,
+     "w": "مدخرات",
+     "planned": 177.209,
+     "measured": 177.207,
+     "offset": -0.002
+    },
+    {
+     "seg": "L9",
+     "i": 2,
+     "w": "الصورة",
+     "planned": 185.43,
+     "measured": 185.43,
+     "offset": 0.0
+    },
+    {
+     "seg": "L9",
+     "i": 17,
+     "w": "المشكلة",
+     "planned": 192.299,
+     "measured": 192.299,
+     "offset": 0.0
+    },
+    {
+     "seg": "L9",
+     "i": 27,
+     "w": "وناس",
+     "planned": 197.177,
+     "measured": 197.178,
+     "offset": 0.001
+    },
+    {
+     "seg": "L10",
+     "i": 5,
+     "w": "اسأل",
+     "planned": 209.889,
+     "measured": 209.889,
+     "offset": 0.0
+    },
+    {
+     "seg": "L10",
+     "i": 13,
+     "w": "إذا",
+     "planned": 213.698,
+     "measured": 213.699,
+     "offset": 0.001
+    },
+    {
+     "seg": "L10",
+     "i": 19,
+     "w": "وإذا",
+     "planned": 216.472,
+     "measured": 216.472,
+     "offset": 0.0
+    },
+    {
+     "seg": "L10",
+     "i": 27,
+     "w": "وسؤال",
+     "planned": 220.851,
+     "measured": 220.85,
+     "offset": -0.001
+    },
+    {
+     "seg": "L10",
+     "i": 29,
+     "w": "كم",
+     "planned": 221.969,
+     "measured": 221.969,
+     "offset": 0.0
+    },
+    {
+     "seg": "L10",
+     "i": 44,
+     "w": "وأنت،",
+     "planned": 228.475,
+     "measured": 228.475,
+     "offset": 0.0
+    },
+    {
+     "seg": "L11",
+     "i": 25,
+     "w": "لقى",
+     "planned": 246.134,
+     "measured": 246.134,
+     "offset": 0.0
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1920x1080": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "voice lines start on time (≤ 1 frame)": true,
+  "words after a pause on time (≤ 1 frame)": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

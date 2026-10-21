@@ -1,0 +1,145 @@
+{
+"unit": "L2",
+"take": "RnuG0BhlefUMkfEdGwWC",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "طيب،",
+"type": "word",
+"start": 0,
+"end": 0.72
+},
+{
+"text": "إذا",
+"type": "word",
+"start": 0.8,
+"end": 0.96
+},
+{
+"text": "الناس",
+"type": "word",
+"start": 1,
+"end": 1.28
+},
+{
+"text": "ما",
+"type": "word",
+"start": 1.36,
+"end": 1.44
+},
+{
+"text": "يشوفونا",
+"type": "word",
+"start": 1.52,
+"end": 1.92
+},
+{
+"text": "في",
+"type": "word",
+"start": 2,
+"end": 2.08
+},
+{
+"text": "أغراضنا،",
+"type": "word",
+"start": 2.12,
+"end": 2.96
+},
+{
+"text": "ليش",
+"type": "word",
+"start": 3.04,
+"end": 3.28
+},
+{
+"text": "نصرف",
+"type": "word",
+"start": 3.36,
+"end": 3.68
+},
+{
+"text": "عشان",
+"type": "word",
+"start": 3.76,
+"end": 3.92
+},
+{
+"text": "يشوفونا؟",
+"type": "word",
+"start": 4,
+"end": 4.88
+},
+{
+"text": "وإيش",
+"type": "word",
+"start": 4.96,
+"end": 5.2
+},
+{
+"text": "اللي",
+"type": "word",
+"start": 5.24,
+"end": 5.36
+},
+{
+"text": "كان",
+"type": "word",
+"start": 5.44,
+"end": 5.6
+},
+{
+"text": "المال",
+"type": "word",
+"start": 5.68,
+"end": 6
+},
+{
+"text": "يقدر",
+"type": "word",
+"start": 6.04,
+"end": 6.32
+},
+{
+"text": "يشتريه",
+"type": "word",
+"start": 6.4,
+"end": 6.773
+},
+{
+"text": "لماجد",
+"type": "word",
+"start": 6.827,
+"end": 7.28
+},
+{
+"text": "فعلًا؟",
+"type": "word",
+"start": 7.4,
+"end": 8.08
+},
+{
+"text": "خلّينا",
+"type": "word",
+"start": 8.16,
+"end": 8.48
+},
+{
+"text": "نرجع",
+"type": "word",
+"start": 8.52,
+"end": 8.88
+},
+{
+"text": "شهرين",
+"type": "word",
+"start": 8.96,
+"end": 9.36
+},
+{
+"text": "لورا.",
+"type": "word",
+"start": 9.44,
+"end": 10.08
+}
+]
+}

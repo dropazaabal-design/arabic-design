@@ -1,0 +1,88 @@
+{
+ "duration": 18.0,
+ "shots": [
+  [
+   "dig",
+   0.0
+  ],
+  [
+   "plant",
+   2.6
+  ],
+  [
+   "years",
+   4.4
+  ],
+  [
+   "shade",
+   9.8
+  ],
+  [
+   "again",
+   12.6
+  ],
+  [
+   "ask",
+   15.0
+  ]
+ ],
+ "dig": {
+  "strokes": [
+   0.25,
+   0.8,
+   1.35
+  ],
+  "boyIn": 0.3,
+  "boyAt": 0.68,
+  "laugh": 0.72,
+  "ask": 0.95,
+  "askEnd": 2.45,
+  "smile": 1.9
+ },
+ "plant": {
+  "kneel": 2.6,
+  "set": 2.9,
+  "pat": 3.35,
+  "jug": 3.58,
+  "water": 3.7,
+  "waterEnd": 3.95,
+  "boyStep": 3.72,
+  "stand": 3.9,
+  "pet": 4.05
+ },
+ "years": {
+  "from": 4.4,
+  "to": 9.6,
+  "days": 6,
+  "fade": 8.2
+ },
+ "shade": {
+  "date1": 10.3,
+  "date2": 10.9,
+  "text": 10.4,
+  "look": 11.4
+ },
+ "again": {
+  "stand": 12.6,
+  "cane": 12.85,
+  "shoot": 13.0,
+  "walk": 13.2,
+  "walkEnd": 13.85,
+  "kneel": 13.9,
+  "scoop": [
+   14.0,
+   14.25
+  ],
+  "set": 14.5
+ },
+ "ask": {
+  "girl": 15.05,
+  "girlAt": 15.55,
+  "askText": 15.2,
+  "askEnd": 16.1,
+  "stand": 15.72,
+  "pat": 16.0,
+  "text": 16.2,
+  "sign": 16.9
+ }
+}

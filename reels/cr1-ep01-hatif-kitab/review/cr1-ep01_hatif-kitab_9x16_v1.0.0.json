@@ -1,0 +1,172 @@
+{
+ "file": "cr1-ep01_hatif-kitab_9x16_v1.0.0.mp4",
+ "bytes": 6551865,
+ "videoBitrate": 534689,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "4267",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189375"
+ },
+ "duration": {
+  "container": 71.125,
+  "timeline": 71.118,
+  "frames": 4267,
+  "framesExpected": 4267,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.5
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [
+  [
+   28.27,
+   29.16
+  ],
+  [
+   68.21,
+   71.13
+  ]
+ ],
+ "voiceOnsets": {
+  "lines": 6,
+  "found": 6,
+  "maxAbsOffset": 0.001,
+  "detail": [
+   {
+    "id": "R1",
+    "planned": 0.388,
+    "measured": 0.388708,
+    "offset": 0.001
+   },
+   {
+    "id": "R2",
+    "planned": 3.524,
+    "measured": 3.52519,
+    "offset": 0.001
+   },
+   {
+    "id": "R3",
+    "planned": 16.707,
+    "measured": 16.7078,
+    "offset": 0.001
+   },
+   {
+    "id": "R4",
+    "planned": 29.158,
+    "measured": 29.159,
+    "offset": 0.001
+   },
+   {
+    "id": "R5",
+    "planned": 46.405,
+    "measured": 46.4042,
+    "offset": -0.001
+   },
+   {
+    "id": "R6",
+    "planned": 60.437,
+    "measured": 60.4364,
+    "offset": -0.001
+   }
+  ],
+  "afterPause": {
+   "words": 7,
+   "maxAbsOffset": 0.002,
+   "detail": [
+    {
+     "seg": "R1",
+     "i": 3,
+     "w": "اليوم",
+     "planned": 2.115,
+     "measured": 2.11417,
+     "offset": -0.001
+    },
+    {
+     "seg": "R2",
+     "i": 6,
+     "w": "يضيء",
+     "planned": 6.985,
+     "measured": 6.9831,
+     "offset": -0.002
+    },
+    {
+     "seg": "R2",
+     "i": 8,
+     "w": "ومرة",
+     "planned": 8.274,
+     "measured": 8.27294,
+     "offset": -0.001
+    },
+    {
+     "seg": "R2",
+     "i": 15,
+     "w": "قبل",
+     "planned": 12.599,
+     "measured": 12.5999,
+     "offset": 0.001
+    },
+    {
+     "seg": "R4",
+     "i": 12,
+     "w": "والهاتف",
+     "planned": 35.188,
+     "measured": 35.1891,
+     "offset": 0.001
+    },
+    {
+     "seg": "R4",
+     "i": 17,
+     "w": "الآن",
+     "planned": 38.266,
+     "measured": 38.2656,
+     "offset": -0.0
+    },
+    {
+     "seg": "R4",
+     "i": 28,
+     "w": "هذا",
+     "planned": 43.292,
+     "measured": 43.2929,
+     "offset": 0.001
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1080x1920": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "voice lines start on time (≤ 1 frame)": true,
+  "words after a pause on time (≤ 1 frame)": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

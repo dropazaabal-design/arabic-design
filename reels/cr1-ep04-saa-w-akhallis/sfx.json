@@ -1,0 +1,277 @@
+{
+ "note": "Few and quiet, each on an action on screen. Anchored to a spoken word: seg, word index, offset in seconds. Gains are relative to the file, before the mix is normalised. Synthesised effects come from tools/make_sfx.py.",
+ "short": [
+  {
+   "seg": "R1",
+   "i": 4,
+   "sfx": "tick",
+   "gain": -24,
+   "offset": 0.0,
+   "why": "the guests note pulses: seven"
+  },
+  {
+   "seg": "R1",
+   "i": 7,
+   "sfx": "crumple",
+   "gain": -16,
+   "offset": 0.1,
+   "why": "he rips the carton open"
+  },
+  {
+   "seg": "R1",
+   "i": 12,
+   "sfx": "pop",
+   "gain": -22,
+   "offset": -0.1,
+   "why": "one finger up: an hour"
+  },
+  {
+   "seg": "R2",
+   "i": 0,
+   "sfx": "scribble",
+   "gain": -24,
+   "offset": 0.3,
+   "why": "the screwdriver turns"
+  },
+  {
+   "seg": "R2",
+   "i": 3,
+   "sfx": "click",
+   "gain": -18,
+   "offset": 0.25,
+   "why": "the screw goes in crooked"
+  },
+  {
+   "seg": "R2",
+   "i": 4,
+   "sfx": "pageflip",
+   "gain": -18,
+   "offset": -0.25,
+   "why": "picks up the instructions"
+  },
+  {
+   "seg": "R2",
+   "i": 6,
+   "sfx": "pageflip",
+   "gain": -22,
+   "offset": 0.1,
+   "why": "turns the sheet round"
+  },
+  {
+   "seg": "R2",
+   "i": 7,
+   "sfx": "thud",
+   "gain": -20,
+   "offset": -0.2,
+   "why": "lifts panel 3"
+  },
+  {
+   "seg": "R2",
+   "i": 11,
+   "sfx": "whoosh",
+   "gain": -24,
+   "offset": 0.5,
+   "why": "flips it the right way up"
+  },
+  {
+   "seg": "R2",
+   "i": 12,
+   "sfx": "tick",
+   "gain": -22,
+   "offset": -0.6,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R2",
+   "i": 12,
+   "sfx": "tick",
+   "gain": -24,
+   "offset": -0.35,
+   "why": "the clock races"
+  },
+  {
+   "seg": "R2",
+   "i": 14,
+   "sfx": "doorbell",
+   "gain": -14,
+   "offset": 0.0,
+   "why": "the doorbell: seven"
+  },
+  {
+   "seg": "R3",
+   "i": 0,
+   "sfx": "pageflip",
+   "gain": -22,
+   "offset": -0.2,
+   "why": "the book card"
+  },
+  {
+   "seg": "R3",
+   "i": 11,
+   "sfx": "pop",
+   "gain": -24,
+   "offset": 0.1,
+   "why": "the dream bubble"
+  },
+  {
+   "seg": "R3",
+   "i": 16,
+   "sfx": "boing",
+   "gain": -14,
+   "offset": -0.35,
+   "why": "a screw springs out"
+  },
+  {
+   "seg": "R4",
+   "i": 9,
+   "sfx": "tick",
+   "gain": -22,
+   "offset": 0.0,
+   "why": "their estimate: two years"
+  },
+  {
+   "seg": "R4",
+   "i": 10,
+   "sfx": "pop",
+   "gain": -24,
+   "offset": 0.3,
+   "why": "the expert: none under seven"
+  },
+  {
+   "seg": "R4",
+   "i": 24,
+   "sfx": "whoosh",
+   "gain": -22,
+   "offset": -0.1,
+   "why": "the bar runs on to eight"
+  },
+  {
+   "seg": "R5",
+   "i": 5,
+   "sfx": "pop",
+   "gain": -24,
+   "offset": 0.0,
+   "why": "the better question"
+  },
+  {
+   "seg": "R5",
+   "i": 10,
+   "sfx": "shutter",
+   "gain": -16,
+   "offset": 0.4,
+   "why": "he photographs the finished shelf"
+  },
+  {
+   "seg": "R6",
+   "i": 8,
+   "sfx": "click",
+   "gain": -22,
+   "offset": 0.0,
+   "why": "unlocks the phone"
+  },
+  {
+   "seg": "R6",
+   "i": 12,
+   "sfx": "pop",
+   "gain": -22,
+   "offset": 0.1,
+   "why": "five hours"
+  },
+  {
+   "seg": "R6",
+   "i": 14,
+   "sfx": "tick",
+   "gain": -22,
+   "offset": -0.25,
+   "why": "twelve o'clock"
+  },
+  {
+   "seg": "R6",
+   "i": 14,
+   "sfx": "crumple",
+   "gain": -16,
+   "offset": 0.5,
+   "why": "opens the table carton at once"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "doorbell",
+   "gain": -14,
+   "offset": 0.0,
+   "why": "the doorbell: seven, ready"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "step",
+   "gain": -24,
+   "offset": 0.6,
+   "why": "to the door"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "step",
+   "gain": -24,
+   "offset": 1.05,
+   "why": "to the door"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "step",
+   "gain": -24,
+   "offset": 1.5,
+   "why": "to the door"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "click",
+   "gain": -18,
+   "offset": 1.95,
+   "why": "the handle"
+  },
+  {
+   "seg": "R6",
+   "i": 19,
+   "sfx": "whoosh",
+   "gain": -26,
+   "offset": 2.15,
+   "why": "the door opens"
+  },
+  {
+   "seg": "R7",
+   "i": 0,
+   "sfx": "pop",
+   "gain": -26,
+   "offset": 0.5,
+   "why": "one finger, like at the start"
+  },
+  {
+   "seg": "R7",
+   "i": 7,
+   "sfx": "chime",
+   "gain": -22,
+   "offset": 1.0,
+   "why": "the question lands"
+  },
+  {
+   "seg": "R6",
+   "i": 17,
+   "sfx": "tick",
+   "gain": -22,
+   "offset": -0.55,
+   "why": "the hours run on to seven"
+  },
+  {
+   "seg": "R6",
+   "i": 17,
+   "sfx": "tick",
+   "gain": -24,
+   "offset": -0.3,
+   "why": "the hours run on to seven"
+  }
+ ]
+}

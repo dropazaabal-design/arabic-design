@@ -1,0 +1,142 @@
+{
+ "file": "cr1-ep02_rajul-sayyara_4x5_v1.0.0.mp4",
+ "bytes": 17169419,
+ "videoBitrate": 1886192,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1350,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "3946",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189374"
+ },
+ "duration": {
+  "container": 65.771,
+  "timeline": 65.766,
+  "frames": 3946,
+  "framesExpected": 3946,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.7
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [
+  [
+   36.85,
+   37.76
+  ],
+  [
+   62.84,
+   65.77
+  ]
+ ],
+ "voiceOnsets": {
+  "lines": 6,
+  "found": 4,
+  "maxAbsOffset": 0.001,
+  "detail": [
+   {
+    "id": "R1",
+    "planned": 0.383,
+    "measured": 0.127521,
+    "offset": -0.255,
+    "maskedBy": "whoosh"
+   },
+   {
+    "id": "R2",
+    "planned": 13.063,
+    "measured": 13.0633,
+    "offset": 0.0,
+    "maskedBy": "pageflip"
+   },
+   {
+    "id": "R3",
+    "planned": 24.511,
+    "measured": 24.5115,
+    "offset": 0.001
+   },
+   {
+    "id": "R4",
+    "planned": 37.763,
+    "measured": 37.7632,
+    "offset": 0.0
+   },
+   {
+    "id": "R5",
+    "planned": 47.452,
+    "measured": 47.4534,
+    "offset": 0.001
+   },
+   {
+    "id": "R6",
+    "planned": 53.586,
+    "measured": 53.5868,
+    "offset": 0.001
+   }
+  ],
+  "afterPause": {
+   "words": 3,
+   "maxAbsOffset": 0.001,
+   "detail": [
+    {
+     "seg": "R1",
+     "i": 11,
+     "w": "التفتوا",
+     "planned": 5.555,
+     "measured": 5.55554,
+     "offset": 0.001
+    },
+    {
+     "seg": "R1",
+     "i": 13,
+     "w": "بس",
+     "planned": 7.226,
+     "measured": 7.22654,
+     "offset": 0.001
+    },
+    {
+     "seg": "R3",
+     "i": 10,
+     "w": "ولما",
+     "planned": 29.08,
+     "measured": 29.0803,
+     "offset": 0.0
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1080x1350": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "voice lines start on time (≤ 1 frame)": true,
+  "words after a pause on time (≤ 1 frame)": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

@@ -1,0 +1,325 @@
+{
+"unit": "L10",
+"take": "zxPp4zMPnSWUm0NKrSeB",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "فقبل",
+"type": "word",
+"start": 0,
+"end": 0.4
+},
+{
+"text": "ما",
+"type": "word",
+"start": 0.44,
+"end": 0.48
+},
+{
+"text": "تشتري",
+"type": "word",
+"start": 0.56,
+"end": 0.96
+},
+{
+"text": "شيء",
+"type": "word",
+"start": 1.04,
+"end": 1.16
+},
+{
+"text": "كبير،",
+"type": "word",
+"start": 1.2,
+"end": 1.84
+},
+{
+"text": "اسأل",
+"type": "word",
+"start": 1.96,
+"end": 2.16
+},
+{
+"text": "نفسك:",
+"type": "word",
+"start": 2.24,
+"end": 3.04
+},
+{
+"text": "لو",
+"type": "word",
+"start": 3.12,
+"end": 3.2
+},
+{
+"text": "ما",
+"type": "word",
+"start": 3.28,
+"end": 3.36
+},
+{
+"text": "أحد",
+"type": "word",
+"start": 3.4,
+"end": 3.6
+},
+{
+"text": "بيشوفه…",
+"type": "word",
+"start": 3.68,
+"end": 4.48
+},
+{
+"text": "كنت",
+"type": "word",
+"start": 4.52,
+"end": 4.72
+},
+{
+"text": "بتشتريه؟",
+"type": "word",
+"start": 4.76,
+"end": 5.28
+},
+{
+"text": "إذا",
+"type": "word",
+"start": 5.68,
+"end": 5.92
+},
+{
+"text": "نعم،",
+"type": "word",
+"start": 6.08,
+"end": 6.48
+},
+{
+"text": "استمتع",
+"type": "word",
+"start": 6.64,
+"end": 7.12
+},
+{
+"text": "فيه،",
+"type": "word",
+"start": 7.2,
+"end": 7.6
+},
+{
+"text": "هو",
+"type": "word",
+"start": 7.72,
+"end": 7.84
+},
+{
+"text": "لك.",
+"type": "word",
+"start": 8,
+"end": 8.32
+},
+{
+"text": "وإذا",
+"type": "word",
+"start": 8.48,
+"end": 8.8
+},
+{
+"text": "لا،",
+"type": "word",
+"start": 8.92,
+"end": 9.36
+},
+{
+"text": "فأنت",
+"type": "word",
+"start": 9.4,
+"end": 9.68
+},
+{
+"text": "تدفع",
+"type": "word",
+"start": 9.8,
+"end": 10.08
+},
+{
+"text": "لجمهور",
+"type": "word",
+"start": 10.16,
+"end": 10.56
+},
+{
+"text": "مشغول",
+"type": "word",
+"start": 10.64,
+"end": 11.2
+},
+{
+"text": "يتخيّل",
+"type": "word",
+"start": 11.28,
+"end": 11.84
+},
+{
+"text": "نفسه.",
+"type": "word",
+"start": 11.92,
+"end": 12.32
+},
+{
+"text": "وسؤال",
+"type": "word",
+"start": 12.88,
+"end": 13.2
+},
+{
+"text": "ثاني:",
+"type": "word",
+"start": 13.28,
+"end": 13.68
+},
+{
+"text": "كم",
+"type": "word",
+"start": 14,
+"end": 14.16
+},
+{
+"text": "شهر",
+"type": "word",
+"start": 14.28,
+"end": 14.4
+},
+{
+"text": "تقدر",
+"type": "word",
+"start": 14.48,
+"end": 14.8
+},
+{
+"text": "تعيش",
+"type": "word",
+"start": 14.92,
+"end": 15.28
+},
+{
+"text": "لو",
+"type": "word",
+"start": 15.36,
+"end": 15.52
+},
+{
+"text": "وقف",
+"type": "word",
+"start": 15.68,
+"end": 15.84
+},
+{
+"text": "دخلك؟",
+"type": "word",
+"start": 15.92,
+"end": 16.64
+},
+{
+"text": "هذا",
+"type": "word",
+"start": 16.72,
+"end": 16.88
+},
+{
+"text": "الرقم،",
+"type": "word",
+"start": 16.96,
+"end": 17.52
+},
+{
+"text": "ولو",
+"type": "word",
+"start": 17.6,
+"end": 17.76
+},
+{
+"text": "كان",
+"type": "word",
+"start": 17.84,
+"end": 18
+},
+{
+"text": "صغير،",
+"type": "word",
+"start": 18.08,
+"end": 18.64
+},
+{
+"text": "هو",
+"type": "word",
+"start": 18.76,
+"end": 18.88
+},
+{
+"text": "بداية",
+"type": "word",
+"start": 19.04,
+"end": 19.36
+},
+{
+"text": "حريتك.",
+"type": "word",
+"start": 19.44,
+"end": 20.08
+},
+{
+"text": "وأنت،",
+"type": "word",
+"start": 20.48,
+"end": 21.28
+},
+{
+"text": "إيش",
+"type": "word",
+"start": 21.32,
+"end": 21.52
+},
+{
+"text": "آخر",
+"type": "word",
+"start": 21.68,
+"end": 21.84
+},
+{
+"text": "شيء",
+"type": "word",
+"start": 21.92,
+"end": 22.04
+},
+{
+"text": "اشتريته",
+"type": "word",
+"start": 22.08,
+"end": 22.64
+},
+{
+"text": "وأنت",
+"type": "word",
+"start": 22.8,
+"end": 23.12
+},
+{
+"text": "تفكر",
+"type": "word",
+"start": 23.24,
+"end": 23.68
+},
+{
+"text": "مين",
+"type": "word",
+"start": 23.84,
+"end": 24.08
+},
+{
+"text": "بيشوفه؟",
+"type": "word",
+"start": 24.16,
+"end": 24.96
+}
+]
+}

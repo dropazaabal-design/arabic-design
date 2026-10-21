@@ -1,0 +1,307 @@
+{
+"unit": "L9",
+"take": "tgEGmHQ25kdlNYvrhCpk",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "بس",
+"type": "word",
+"start": 0,
+"end": 0.24
+},
+{
+"text": "لحظة،",
+"type": "word",
+"start": 0.32,
+"end": 0.96
+},
+{
+"text": "الصورة",
+"type": "word",
+"start": 1.28,
+"end": 1.76
+},
+{
+"text": "مو",
+"type": "word",
+"start": 1.84,
+"end": 2
+},
+{
+"text": "بهالبساطة.",
+"type": "word",
+"start": 2.08,
+"end": 3.12
+},
+{
+"text": "فيه",
+"type": "word",
+"start": 3.2,
+"end": 3.32
+},
+{
+"text": "ناس",
+"type": "word",
+"start": 3.36,
+"end": 3.52
+},
+{
+"text": "دخلهم",
+"type": "word",
+"start": 3.6,
+"end": 4
+},
+{
+"text": "بالكاد",
+"type": "word",
+"start": 4.08,
+"end": 4.56
+},
+{
+"text": "يكفي",
+"type": "word",
+"start": 4.64,
+"end": 4.88
+},
+{
+"text": "الإيجار",
+"type": "word",
+"start": 4.92,
+"end": 5.28
+},
+{
+"text": "والأكل،",
+"type": "word",
+"start": 5.32,
+"end": 6.08
+},
+{
+"text": "وهنا",
+"type": "word",
+"start": 6.2,
+"end": 6.48
+},
+{
+"text": "المشكلة",
+"type": "word",
+"start": 6.64,
+"end": 7.16
+},
+{
+"text": "مو",
+"type": "word",
+"start": 7.2,
+"end": 7.28
+},
+{
+"text": "في",
+"type": "word",
+"start": 7.32,
+"end": 7.36
+},
+{
+"text": "السيارة،",
+"type": "word",
+"start": 7.44,
+"end": 8.16
+},
+{
+"text": "المشكلة",
+"type": "word",
+"start": 8.32,
+"end": 8.8
+},
+{
+"text": "في",
+"type": "word",
+"start": 8.84,
+"end": 8.88
+},
+{
+"text": "الدخل.",
+"type": "word",
+"start": 8.96,
+"end": 9.68
+},
+{
+"text": "وفيه",
+"type": "word",
+"start": 9.76,
+"end": 9.92
+},
+{
+"text": "ناس",
+"type": "word",
+"start": 10,
+"end": 10.16
+},
+{
+"text": "بسيارة",
+"type": "word",
+"start": 10.24,
+"end": 10.72
+},
+{
+"text": "فخمة",
+"type": "word",
+"start": 10.8,
+"end": 11.12
+},
+{
+"text": "وعندهم",
+"type": "word",
+"start": 11.28,
+"end": 11.76
+},
+{
+"text": "ثروة",
+"type": "word",
+"start": 11.84,
+"end": 12.16
+},
+{
+"text": "حقيقية،",
+"type": "word",
+"start": 12.24,
+"end": 13.04
+},
+{
+"text": "وناس",
+"type": "word",
+"start": 13.12,
+"end": 13.36
+},
+{
+"text": "بسيارة",
+"type": "word",
+"start": 13.52,
+"end": 13.84
+},
+{
+"text": "قديمة",
+"type": "word",
+"start": 13.92,
+"end": 14.32
+},
+{
+"text": "وما",
+"type": "word",
+"start": 14.48,
+"end": 14.68
+},
+{
+"text": "عندهم",
+"type": "word",
+"start": 14.72,
+"end": 15.04
+},
+{
+"text": "شيء",
+"type": "word",
+"start": 15.12,
+"end": 15.24
+},
+{
+"text": "مدّخر.",
+"type": "word",
+"start": 15.28,
+"end": 16
+},
+{
+"text": "السيارة",
+"type": "word",
+"start": 16.08,
+"end": 16.56
+},
+{
+"text": "نفسها",
+"type": "word",
+"start": 16.68,
+"end": 16.96
+},
+{
+"text": "ما",
+"type": "word",
+"start": 17.04,
+"end": 17.12
+},
+{
+"text": "تقول",
+"type": "word",
+"start": 17.16,
+"end": 17.36
+},
+{
+"text": "لك",
+"type": "word",
+"start": 17.44,
+"end": 17.52
+},
+{
+"text": "شيء.",
+"type": "word",
+"start": 17.6,
+"end": 18.08
+},
+{
+"text": "والفكرة",
+"type": "word",
+"start": 18.12,
+"end": 18.64
+},
+{
+"text": "مو",
+"type": "word",
+"start": 18.72,
+"end": 18.88
+},
+{
+"text": "إنك",
+"type": "word",
+"start": 18.96,
+"end": 19.12
+},
+{
+"text": "تعيش",
+"type": "word",
+"start": 19.2,
+"end": 19.44
+},
+{
+"text": "بخيل.",
+"type": "word",
+"start": 19.56,
+"end": 20.16
+},
+{
+"text": "الفكرة",
+"type": "word",
+"start": 20.28,
+"end": 20.64
+},
+{
+"text": "إنك",
+"type": "word",
+"start": 20.72,
+"end": 21.04
+},
+{
+"text": "تعرف:",
+"type": "word",
+"start": 21.24,
+"end": 21.68
+},
+{
+"text": "لمين",
+"type": "word",
+"start": 21.8,
+"end": 22.08
+},
+{
+"text": "تصرف؟",
+"type": "word",
+"start": 22.16,
+"end": 22.96
+}
+]
+}

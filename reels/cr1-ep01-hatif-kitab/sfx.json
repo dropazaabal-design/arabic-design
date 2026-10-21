@@ -1,0 +1,32 @@
+{
+  "note": "Few, quiet, and only on an action (CR1 §9). Anchored to a spoken word: seg, word index, offset in seconds. Gains are relative to the file, before the mix is normalised.",
+  "long": [
+    {"seg": "L1", "i": 0, "offset": -0.4, "sfx": "pop", "gain": -22, "why": "the phone lights up before the first word"},
+    {"seg": "L1", "i": 9, "sfx": "pop", "gain": -22, "why": "والهاتف قدامك: it lights again"},
+    {"seg": "L2", "i": 21, "sfx": "pop", "gain": -21, "why": "يضيء مرة"},
+    {"seg": "L2", "i": 25, "sfx": "pop", "gain": -21, "why": "يضيء مرة ثانية"},
+    {"seg": "L2", "i": 36, "sfx": "click", "gain": -20, "why": "turned face down"},
+    {"seg": "L2", "i": 41, "sfx": "tick", "gain": -18, "why": "it buzzes"},
+    {"seg": "L2", "i": 41, "offset": 0.22, "sfx": "tick", "gain": -18, "why": "it buzzes"},
+    {"seg": "L2", "i": 43, "sfx": "click", "gain": -20, "why": "turned back"},
+    {"seg": "L5", "i": 14, "sfx": "click", "gain": -19, "why": "the drawer opens"},
+    {"seg": "L5", "i": 15, "sfx": "whoosh", "gain": -24, "why": "the book rises"},
+    {"seg": "L5", "i": 19, "sfx": "pageflip", "gain": -20, "why": "it opens on the page"},
+    {"seg": "L5", "i": 28, "sfx": "whoosh", "gain": -24, "why": "the phone goes to the charger"},
+    {"seg": "L7", "i": 58, "sfx": "click", "gain": -20, "why": "a tick on the card"},
+    {"seg": "L8", "i": 23, "sfx": "pop", "gain": -22, "why": "the note gets its tick"}
+  ],
+  "short": [
+    {"seg": "R1", "i": 0, "offset": 0.2, "sfx": "pop", "gain": -22, "why": "the phone lights up"},
+    {"seg": "R2", "i": 6, "sfx": "pop", "gain": -21, "why": "يضيء مرة"},
+    {"seg": "R2", "i": 8, "sfx": "click", "gain": -20, "why": "turned face down"},
+    {"seg": "R2", "i": 8, "offset": 0.75, "sfx": "tick", "gain": -18, "why": "it buzzes"},
+    {"seg": "R2", "i": 8, "offset": 1.5, "sfx": "click", "gain": -20, "why": "turned back"},
+    {"seg": "R4", "i": 4, "sfx": "click", "gain": -19, "why": "the drawer opens"},
+    {"seg": "R4", "i": 5, "sfx": "whoosh", "gain": -24, "why": "the book rises"},
+    {"seg": "R4", "i": 9, "sfx": "pageflip", "gain": -20, "why": "it opens on the page"},
+    {"seg": "R4", "i": 13, "sfx": "whoosh", "gain": -24, "why": "the phone goes to the charger"},
+    {"seg": "R5", "i": 14, "sfx": "click", "gain": -20, "why": "a tick on the card"},
+    {"seg": "R6", "i": 4, "sfx": "pop", "gain": -22, "why": "the note gets its tick"}
+  ]
+}

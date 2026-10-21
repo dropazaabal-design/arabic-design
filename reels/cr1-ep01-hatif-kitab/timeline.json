@@ -1,0 +1,366 @@
+{
+ "long": {
+  "totalSeconds": 232.829,
+  "frames": 13970,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.5,
+  "maxCps": 15.2,
+  "units": [
+   {
+    "unit": "L1",
+    "take": "t71NFqyRowmZ0UgpOt7v",
+    "file": "L1-t71NFqyRowmZ0UgpOt7v.mp3",
+    "sha256": "8604dd3d135b2765a2a9e51b2522249eb1c8e8850fae2322694a4b2b2d7738ba",
+    "cut": [
+     0.0,
+     10.449
+    ],
+    "at": 1.2
+   },
+   {
+    "unit": "L2",
+    "take": "OAZWlUVJcqSOSDumr599",
+    "file": "L2-OAZWlUVJcqSOSDumr599.mp3",
+    "sha256": "fe374662a5744c5e297b746b3e0e4453ccf143fb49d1644c663b9ed1d15081ad",
+    "cut": [
+     0.0,
+     26.122
+    ],
+    "at": 12.749
+   },
+   {
+    "unit": "L3",
+    "take": "DUxCoFHHbTtsbgntqIys",
+    "file": "L3-DUxCoFHHbTtsbgntqIys.mp3",
+    "sha256": "2c73239fc7ac7e020e9ae4ea6900ed6c8dabb7a0f9ff195b296eabfb55e803ac",
+    "cut": [
+     0.0,
+     21.159
+    ],
+    "at": 40.071
+   },
+   {
+    "unit": "L4",
+    "take": "ELTjoLSCqTiM9k3Ds0IH",
+    "file": "L4-ELTjoLSCqTiM9k3Ds0IH.mp3",
+    "sha256": "3ac1143d8cd66625f04e4f782c1a594b983fd026f98117c5851062a9bc195335",
+    "cut": [
+     0.0,
+     35.631
+    ],
+    "at": 62.231
+   },
+   {
+    "unit": "L5",
+    "take": "UUN3kX1quos8KYJ4zdTW",
+    "file": "L5-UUN3kX1quos8KYJ4zdTW.mp3",
+    "sha256": "2b81a8d5b51e2dd4bd1214898fee702447018ae4ec109d6019df9ca1cf05d71e",
+    "cut": [
+     0.0,
+     37.068
+    ],
+    "at": 99.162
+   },
+   {
+    "unit": "L6",
+    "take": "vqseachROlWGAyGc7w7W",
+    "file": "L6-vqseachROlWGAyGc7w7W.mp3",
+    "sha256": "91eb3960fbbf96f6347e600121c52aeaa7e25439d74994beb69e0e97877dfec2",
+    "cut": [
+     0.0,
+     27.794
+    ],
+    "at": 137.529
+   },
+   {
+    "unit": "L7",
+    "take": "DqPUaLHpxzQcO0XznpdB",
+    "file": "L7-DqPUaLHpxzQcO0XznpdB.mp3",
+    "sha256": "39797eeea13e4d8a3f621331c19bc0200077f91135ddff8a26d3fd48dd704f77",
+    "cut": [
+     0.0,
+     41.326
+    ],
+    "at": 166.524
+   },
+   {
+    "unit": "L8",
+    "take": "YTIyPnvKB11RVvSW9NIo",
+    "file": "L8-YTIyPnvKB11RVvSW9NIo.mp3",
+    "sha256": "f14028495013b6877bd00308b46d0182f5131296824867860d57cef083a20980",
+    "cut": [
+     0.0,
+     19.644
+    ],
+    "at": 209.149
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "L1",
+    "i": 0,
+    "offset": -0.4,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the phone lights up before the first word",
+    "time": 0.839,
+    "word": "كل"
+   },
+   {
+    "seg": "L1",
+    "i": 9,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "والهاتف قدامك: it lights again",
+    "time": 6.189,
+    "word": "والهاتف"
+   },
+   {
+    "seg": "L2",
+    "i": 21,
+    "sfx": "pop",
+    "gain": -21,
+    "why": "يضيء مرة",
+    "time": 23.598,
+    "word": "يضيء"
+   },
+   {
+    "seg": "L2",
+    "i": 25,
+    "sfx": "pop",
+    "gain": -21,
+    "why": "يضيء مرة ثانية",
+    "time": 25.876,
+    "word": "يضيء"
+   },
+   {
+    "seg": "L2",
+    "i": 36,
+    "sfx": "click",
+    "gain": -20,
+    "why": "turned face down",
+    "time": 31.989,
+    "word": "تقلب"
+   },
+   {
+    "seg": "L2",
+    "i": 41,
+    "sfx": "tick",
+    "gain": -18,
+    "why": "it buzzes",
+    "time": 34.549,
+    "word": "يهتز،"
+   },
+   {
+    "seg": "L2",
+    "i": 41,
+    "offset": 0.22,
+    "sfx": "tick",
+    "gain": -18,
+    "why": "it buzzes",
+    "time": 34.769,
+    "word": "يهتز،"
+   },
+   {
+    "seg": "L2",
+    "i": 43,
+    "sfx": "click",
+    "gain": -20,
+    "why": "turned back",
+    "time": 35.709,
+    "word": "تقلبه."
+   },
+   {
+    "seg": "L5",
+    "i": 14,
+    "sfx": "click",
+    "gain": -19,
+    "why": "the drawer opens",
+    "time": 106.481,
+    "word": "الكتاب"
+   },
+   {
+    "seg": "L5",
+    "i": 15,
+    "sfx": "whoosh",
+    "gain": -24,
+    "why": "the book rises",
+    "time": 107.002,
+    "word": "يطلع"
+   },
+   {
+    "seg": "L5",
+    "i": 19,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "it opens on the page",
+    "time": 108.642,
+    "word": "مفتوحًا"
+   },
+   {
+    "seg": "L5",
+    "i": 28,
+    "sfx": "whoosh",
+    "gain": -24,
+    "why": "the phone goes to the charger",
+    "time": 112.602,
+    "word": "يروح"
+   },
+   {
+    "seg": "L7",
+    "i": 58,
+    "sfx": "click",
+    "gain": -20,
+    "why": "a tick on the card",
+    "time": 197.804,
+    "word": "تكفي."
+   },
+   {
+    "seg": "L8",
+    "i": 23,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the note gets its tick",
+    "time": 220.749,
+    "word": "رتّبت"
+   }
+  ]
+ },
+ "short": {
+  "totalSeconds": 71.118,
+  "frames": 4267,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.3,
+  "maxCps": 13.1,
+  "units": [
+   {
+    "unit": "S1",
+    "take": "Fo7mw6P1oaZClxAhd9PA",
+    "file": "S1-Fo7mw6P1oaZClxAhd9PA.mp3",
+    "sha256": "d5bd693d966c982e4e9cdf6af02a802fb566130fee3ef0c7e2f3e1a3e5761e70",
+    "cut": [
+     0.0,
+     28.108
+    ],
+    "at": 0.35
+   },
+   {
+    "unit": "S2",
+    "take": "Rit4VOhaFVOvEa3LYStS",
+    "file": "S2-Rit4VOhaFVOvEa3LYStS.mp3",
+    "sha256": "02e5a67dc80fcb931374c249ff5c0bb27f29e15997e3d0f6e46cfaec1d3aa6df",
+    "cut": [
+     0.0,
+     39.314
+    ],
+    "at": 29.158
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "R1",
+    "i": 0,
+    "offset": 0.2,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the phone lights up",
+    "time": 0.588,
+    "word": "كل"
+   },
+   {
+    "seg": "R2",
+    "i": 6,
+    "sfx": "pop",
+    "gain": -21,
+    "why": "يضيء مرة",
+    "time": 6.985,
+    "word": "يضيء"
+   },
+   {
+    "seg": "R2",
+    "i": 8,
+    "sfx": "click",
+    "gain": -20,
+    "why": "turned face down",
+    "time": 8.274,
+    "word": "ومرة"
+   },
+   {
+    "seg": "R2",
+    "i": 8,
+    "offset": 0.75,
+    "sfx": "tick",
+    "gain": -18,
+    "why": "it buzzes",
+    "time": 9.024,
+    "word": "ومرة"
+   },
+   {
+    "seg": "R2",
+    "i": 8,
+    "offset": 1.5,
+    "sfx": "click",
+    "gain": -20,
+    "why": "turned back",
+    "time": 9.774,
+    "word": "ومرة"
+   },
+   {
+    "seg": "R4",
+    "i": 4,
+    "sfx": "click",
+    "gain": -19,
+    "why": "the drawer opens",
+    "time": 31.198,
+    "word": "الكتاب"
+   },
+   {
+    "seg": "R4",
+    "i": 5,
+    "sfx": "whoosh",
+    "gain": -24,
+    "why": "the book rises",
+    "time": 31.718,
+    "word": "يطلع"
+   },
+   {
+    "seg": "R4",
+    "i": 9,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "it opens on the page",
+    "time": 33.598,
+    "word": "مفتوحًا"
+   },
+   {
+    "seg": "R4",
+    "i": 13,
+    "sfx": "whoosh",
+    "gain": -24,
+    "why": "the phone goes to the charger",
+    "time": 35.958,
+    "word": "يروح"
+   },
+   {
+    "seg": "R5",
+    "i": 14,
+    "sfx": "click",
+    "gain": -20,
+    "why": "a tick on the card",
+    "time": 53.478,
+    "word": "فتحت"
+   },
+   {
+    "seg": "R6",
+    "i": 4,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the note gets its tick",
+    "time": 62.65,
+    "word": "تغيّر"
+   }
+  ]
+ }
+}

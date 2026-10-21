@@ -1,0 +1,199 @@
+{
+ "flow_id": "iLVXINRaOFmXsxxfMTgz",
+ "model": "eleven_v4",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "takes_per_unit": 4,
+ "units": {
+  "L1": {
+   "segments": [
+    "L1",
+    "L2"
+   ],
+   "node": "6suckjuAEQH5M4YvO6Kr",
+   "credits": 1195.88,
+   "sessions": [
+    "kSDBRADLLhv4Gx4TpyAs",
+    "0CkBeEVc9PPVhRvrwrg8",
+    "XYXsTctH97LYRft6rYZc",
+    "QUPPBivuqmhHKZ7riEzg"
+   ],
+   "note": "كل نسخ L1+L2 الأربع انقطعت في السطر الأخير («خلّينا نرجع شهرين لورا»): يُستعمل منها المقطع L1 وحده"
+  },
+  "L3": {
+   "segments": [
+    "L3"
+   ],
+   "node": "2ndSdDg4j7iYIcPehJKd",
+   "credits": 1311.87,
+   "sessions": [
+    "3Ua9poiU4N7StFdSK0i3",
+    "ReEjtAjHd8k0ZvUc68yp",
+    "xsMsFeSsbkxxFhWk3X3k",
+    "FySC1U5x1jOlyjFtTVK3"
+   ]
+  },
+  "L4": {
+   "segments": [
+    "L4"
+   ],
+   "node": "olOT4N7vwxM1cdEOQk64",
+   "credits": 1671.83,
+   "sessions": [
+    "zxe3oy9Qyq91VAuuleCA",
+    "BabALlAGg0wJCrl6PJ4c",
+    "RThmPeeL1qG0uKnBABHe",
+    "6e7VEh3nwiDUgzJ9zml6"
+   ]
+  },
+  "L5": {
+   "segments": [
+    "L5"
+   ],
+   "node": "UgXQw0EGnkD0LdAwVjrM",
+   "credits": 699.93,
+   "sessions": [
+    "rLU5D4zjp7khTwDcoDDo",
+    "1ry816ILZa6J7FUTsCc4",
+    "6W6y2EqWcnVY5FxIAdKf",
+    "HT5R1W2VZVRxeIQgNd4F"
+   ]
+  },
+  "L6": {
+   "segments": [
+    "L6"
+   ],
+   "node": "TNrPElnB5YZgKKYK8mTn",
+   "credits": 1259.87,
+   "sessions": [
+    "shAHmNhY9ueeCVyqifbg",
+    "UM65oQNcRoq0m0Javrjd",
+    "6NrrJUseQ5IgYFz2uNPK",
+    "pG6lVp57jC9KUeoxPCyz"
+   ]
+  },
+  "L7": {
+   "segments": [
+    "L7"
+   ],
+   "node": "5JHvjB83M1d087g7zwLA",
+   "credits": 1095.89,
+   "sessions": [
+    "phK6jukx2kAursjB9QGy",
+    "ADR5SzbT4fNNlFbI8VTz",
+    "tsuUvbwWFoA1BZONZgjt",
+    "GUa5MjYst6WTZtJp16l5"
+   ]
+  },
+  "L8": {
+   "segments": [
+    "L8"
+   ],
+   "node": "M2TCFfPXWEmC1ifpQ8st",
+   "credits": 959.9,
+   "sessions": [
+    "kbUmGjhkMNyV4Yn24MTI",
+    "bRFy5JbMSwFQ3V7yOKqz",
+    "8ZP1nxi6zjq68acbCPjW",
+    "KsWRzAl8i5Wyi8wwiETy"
+   ]
+  },
+  "L9": {
+   "segments": [
+    "L9"
+   ],
+   "node": "AoykBFPAci9LAoa1EE08",
+   "credits": 1123.89,
+   "sessions": [
+    "uqdbYtOomBAdb3yMbIgI",
+    "lOe8VSwYWEHORPOyMsGT",
+    "YBK4hZUjmsqavBuoVA1q",
+    "6uXU0tfNOWDHycTEq7dM"
+   ]
+  },
+  "L10": {
+   "segments": [
+    "L10"
+   ],
+   "node": "Xu2umpb8Di7nSLjEaNoE",
+   "credits": 1075.89,
+   "sessions": [
+    "lAD8xjlMTCrZxnQHuEvZ",
+    "gsK7M5Rf3KKuHuRBotUL",
+    "k2S7gyz4gdgEEojqOz0I",
+    "08JgvxsExkHo8X6aaSx9"
+   ]
+  },
+  "L11": {
+   "segments": [
+    "L11"
+   ],
+   "node": "8tudYd1pN8fvuiMcm2Nt",
+   "credits": 939.91,
+   "sessions": [
+    "sP6MFg2srQAiZoGx0QFA",
+    "6ylee61yaLdsa7SCgyeg",
+    "Zmoni1cHgD2xLYjmUPAQ",
+    "aSP4tmtigHeAE9f3DoNw"
+   ]
+  },
+  "S1": {
+   "segments": [
+    "R1",
+    "R2",
+    "R3"
+   ],
+   "node": "GY0wfMgsBrcXdB22XO5q",
+   "credits": 1739.83,
+   "sessions": [
+    "YxFn4yixyjJG2UKIObnu",
+    "ij8XsvVKshvamThpNpXZ",
+    "zn3IXKmNqCiziB84u360",
+    "0PIYml2NfeHlYLPvLtc6"
+   ]
+  },
+  "S2": {
+   "segments": [
+    "R4",
+    "R5",
+    "R6"
+   ],
+   "node": "gLA8cR3vcC4gSrH6Ak3L",
+   "credits": 1187.88,
+   "sessions": [
+    "1SbLP6ZrQ1cbJzzIXXsD",
+    "TP6yTbCm0UFWiQ9PRxUQ",
+    "9dksq0JWWtefy6fHKqBA",
+    "agsbnENLWtUY0gInFfhn"
+   ]
+  },
+  "L2": {
+   "segments": [
+    "L2"
+   ],
+   "node": "dVjrZHOLxjXctAcbs9RZ",
+   "credits": 515.95,
+   "why": "إعادة توليد: انقطاع آخر سطر في كل نسخ L1+L2",
+   "sessions": [
+    "19eZqev5xIV0N0nCCLIu",
+    "LNBkiXlrzaU42Jk70AsR",
+    "RDCiUlYRBKYNfg81f8HM",
+    "MdhX66nezzGYrfJnF1MS"
+   ]
+  },
+  "probe-L7": {
+   "segments": [
+    "L7 lines 2, 4 (diacritised)"
+   ],
+   "node": "2fUKFDX6lt1GTxbCbeoL",
+   "credits": 299.97,
+   "purpose": "pronunciation probe for «الغِنى» and «الثَّروة»; not used in the cut",
+   "sessions": [
+    "NnMgInxTlwzASeGJuLs7",
+    "iaPfeiWnCnhsxGGjBLWc",
+    "YkaRb28XzSfnH8pOGISd",
+    "MzmmvCYbXAWZbK5VHck3"
+   ]
+  }
+ },
+ "totalCredits": 15078.49
+}

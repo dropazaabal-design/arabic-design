@@ -1,0 +1,43 @@
+{
+ "book": {
+  "original": "Morgan Housel, The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness. Harriman House, 2020.",
+  "arabic": "مورجان هاوسل، سيكولوجية المال: دروس خالدة في الثروة والجشع والسعادة. دار كلمات، 2021.",
+  "chapters": {"7": "Freedom", "8": "Man in the Car Paradox", "9": "Wealth Is What You Don't See", "10": "Save Money"},
+  "chapterCheck": "الترتيب من فهارس مكتبات عامة؛ أرقام الصفحات تختلف بين الطبعات فلا تُذكر"
+ },
+ "access": "لم يُفتح نص الكتاب ولا موقع المؤلف من بيئة الإنتاج (الوصول إلى مواقع الويب محجوب، والبحث وحده متاح). كل عبارة منسوبة إلى هاوسل تُقال «بمعنى كلامه» وتُترجم بالمعنى، ولا تُعرض على الشاشة بين علامتي اقتباس على أنها نصه.",
+ "claims": [
+  {"id": "C1", "claim": "هاوسل عمل في شبابه صافّ سيارات في فندق فخم، ورأى سيارات فارهة كل يوم وتمنّى أن يملك واحدة", "where": "الفصل 8", "status": "مؤكد من عدة مصادر ثانوية ومقابلة للمؤلف", "inScript": "L4", "wording": "لا نذكر المدينة ولا اسم الفندق"},
+  {"id": "C2", "claim": "مفارقة الرجل في السيارة: نادرًا ما نفكر أن السائق رائع، بل نفكر: لو كانت لي السيارة لظن الناس أنني رائع؛ فيستعمل الناس ثروتك مقياسًا لرغبتهم هم في الإعجاب", "where": "الفصل 8", "status": "الفكرة مؤكدة من عدة ملخصات متفقة؛ الصيغة الحرفية غير مقابلة بالكتاب", "inScript": "L1، L4، R1، R2", "wording": "«نادرًا» لا «أبدًا»، كما في الأصل"},
+  {"id": "C3", "claim": "تظن أنك تريد السيارة الغالية، والحقيقة أنك تريد الاحترام والإعجاب؛ والتواضع واللطف والتعاطف تجلب احترامًا أكثر من قوة المحرك", "where": "الفصل 8", "status": "مؤكد من عدة مصادر تنقل المقطع؛ الصياغة تختلف قليلًا بينها", "inScript": "L5"},
+  {"id": "C4", "claim": "الثروة هي ما لا تراه: السيارات التي لم تُشترَ، والساعات التي لم تُلبس", "where": "الفصل 9؛ وفي دفتر المؤلف على مدونة Collaborative Fund", "status": "مؤكد من عدة مصادر", "inScript": "L7، R4"},
+  {"id": "C5", "claim": "التفريق بين الغنى (دخل ومصروف ظاهر) والثروة (دخل لم يُصرف، وخيار لم يُستعمل بعد)", "where": "الفصل 9", "status": "مؤكد في ملخصات؛ عبارة «الغنى دخل حالي» نفسها لم نجدها، فصغناها بمعنى عام", "inScript": "L7"},
+  {"id": "C6", "claim": "أعلى عائد يعطيه المال: أن تتحكم في وقتك؛ وأعلى أشكال الثروة أن تصحو وتقول: أستطيع أن أفعل ما أريد اليوم", "where": "الفصل 7", "status": "مؤكد من عدة مصادر متفقة الصياغة", "inScript": "L8، R4"},
+  {"id": "C7", "claim": "قصة ماجد وسعد، والمكافأة، والأقساط بثلث الراتب لخمس سنين، والفرصة براتب أقل", "where": "من إعداد السلسلة", "status": "مثال توضيحي؛ يُعلن على الشاشة «قصة توضيحية»", "inScript": "L1–L3، L6، L11، R1، R3"},
+  {"id": "C8", "claim": "سؤال «كم شهر تقدر تعيش لو وقف دخلك؟» وسؤال «لو ما أحد بيشوفه، كنت بتشتريه؟»", "where": "أداتان من السلسلة مستوحاتان من الفصلين 7 و8، لا من نص الكتاب", "status": "تطبيق من إعدادنا", "inScript": "L10، R6"},
+  {"id": "C9", "claim": "ليست كل سيارة فخمة دينًا ولا كل سيارة قديمة ثروة؛ ضيق الدخل مشكلة دخل لا مشكلة تفكير", "where": "حدود تضعها السلسلة", "status": "رأي تحريري معلن", "inScript": "L9، R5"}
+ ],
+ "notUsed": [
+  {"text": "Spending money to show people how much money you have is the fastest way to have less money.", "why": "المصادر تنسبها مرة إلى «سيكولوجية المال» ومرة إلى «فن إنفاق المال»"},
+  {"text": "Past a certain level of income, what you need is just what sits below your ego.", "why": "لم نجد مصدرًا يؤكدها"},
+  {"text": "قصص الأثرياء الذين أفلسوا أو المقتصدين الذين تركوا ثروات", "why": "تغذي التعميم: كأن كل مقتصد ثري"}
+ ],
+ "references": [
+  {"id": "1", "kind": "فهرس مكتبة", "url": "https://search.schlowlibrary.org/Record/450862/TOC", "for": "ترتيب الفصول"},
+  {"id": "2", "kind": "ناشر عربي", "url": "https://www.jarir.com/qa-ar/arabic-books-564045.html", "for": "دار كلمات، 2021"},
+  {"id": "3", "kind": "ملخص فصل", "url": "https://thewealthline.com/the-psychology-of-money-chapter-8-summary/", "for": "C2"},
+  {"id": "4", "kind": "مقالة تنقل المقطع", "url": "https://christabet.com/2021/09/10/man-in-the-car-paradox-the-psychology-of-money-by-morgan-housel/", "for": "C2"},
+  {"id": "5", "kind": "مقالة تنقل المقطع", "url": "https://jakeelm.substack.com/p/the-thing-about-ferraris", "for": "C1، C3"},
+  {"id": "6", "kind": "مقابلة مع المؤلف", "url": "https://pod.wave.co/podcast/masters-in-business/the-art-of-spending-money-with-bestselling-author-morgan-housel", "for": "C1"},
+  {"id": "7", "kind": "دفتر المؤلف", "url": "https://collabfund.substack.com/p/morgans-notebook-wealth-is-what-you", "for": "C4"},
+  {"id": "8", "kind": "مقالة", "url": "https://www.news24.com/citypress/personal-finance/the-difference-between-being-rich-and-wealthy-20210727", "for": "C4، C5"},
+  {"id": "9", "kind": "اقتباسات", "url": "https://www.goodreads.com/quotes/10670694-the-highest-form-of-wealth-is-the-ability-to-wake", "for": "C6"},
+  {"id": "10", "kind": "مقالة", "url": "https://adamknorr.substack.com/p/horsepower-and-humility", "for": "C3"}
+ ],
+ "assets": {
+  "fonts": "Tajawal وCairo — رخصة SIL Open Font License",
+  "sfx": "مؤثرات المستودع نفسها (public/sfx)",
+  "art": "كل الرسوم والشخصيات مرسومة بالكود في motion-core/src/cartoon وsrc/؛ لا صور مولّدة ولا مستعارة",
+  "music": "لا موسيقى"
+ }
+}

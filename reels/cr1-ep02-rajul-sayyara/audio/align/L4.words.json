@@ -1,0 +1,433 @@
+{
+"unit": "L4",
+"take": "L0wbIiBf8alZDr0NX8pX",
+"source": "ElevenLabs alignment of the generated take (transcribe_audio on its node, 0 credits)",
+"words": [
+{
+"text": "هنا",
+"type": "word",
+"start": 0,
+"end": 0.08
+},
+{
+"text": "يساعدنا",
+"type": "word",
+"start": 0.08,
+"end": 0.32
+},
+{
+"text": "مورجان",
+"type": "word",
+"start": 0.4,
+"end": 1.32
+},
+{
+"text": "هاوسل،",
+"type": "word",
+"start": 1.36,
+"end": 1.68
+},
+{
+"text": "في",
+"type": "word",
+"start": 1.76,
+"end": 2
+},
+{
+"text": "كتابه",
+"type": "word",
+"start": 2.16,
+"end": 2.48
+},
+{
+"text": "«سيكولوجية",
+"type": "word",
+"start": 2.56,
+"end": 3.6
+},
+{
+"text": "المال».",
+"type": "word",
+"start": 3.64,
+"end": 4.16
+},
+{
+"text": "هاوسل",
+"type": "word",
+"start": 4.24,
+"end": 5
+},
+{
+"text": "اشتغل",
+"type": "word",
+"start": 5.04,
+"end": 5.44
+},
+{
+"text": "في",
+"type": "word",
+"start": 5.52,
+"end": 5.68
+},
+{
+"text": "شبابه",
+"type": "word",
+"start": 5.76,
+"end": 6.17
+},
+{
+"text": "يصفّ",
+"type": "word",
+"start": 6.22,
+"end": 6.48
+},
+{
+"text": "سيارات",
+"type": "word",
+"start": 6.56,
+"end": 7.12
+},
+{
+"text": "الضيوف",
+"type": "word",
+"start": 7.18,
+"end": 7.52
+},
+{
+"text": "عند",
+"type": "word",
+"start": 7.6,
+"end": 8.16
+},
+{
+"text": "فندق",
+"type": "word",
+"start": 8.24,
+"end": 8.56
+},
+{
+"text": "فخم.",
+"type": "word",
+"start": 8.64,
+"end": 9.28
+},
+{
+"text": "كل",
+"type": "word",
+"start": 9.4,
+"end": 9.52
+},
+{
+"text": "يوم",
+"type": "word",
+"start": 9.64,
+"end": 9.76
+},
+{
+"text": "توصله",
+"type": "word",
+"start": 9.88,
+"end": 10.2
+},
+{
+"text": "سيارات",
+"type": "word",
+"start": 10.24,
+"end": 10.72
+},
+{
+"text": "فارهة،",
+"type": "word",
+"start": 10.84,
+"end": 11.44
+},
+{
+"text": "وكان",
+"type": "word",
+"start": 11.52,
+"end": 11.76
+},
+{
+"text": "يحلم",
+"type": "word",
+"start": 11.88,
+"end": 12.16
+},
+{
+"text": "يملك",
+"type": "word",
+"start": 12.24,
+"end": 12.56
+},
+{
+"text": "وحدة",
+"type": "word",
+"start": 12.64,
+"end": 12.96
+},
+{
+"text": "منها،",
+"type": "word",
+"start": 13.04,
+"end": 13.44
+},
+{
+"text": "عشان",
+"type": "word",
+"start": 13.52,
+"end": 13.68
+},
+{
+"text": "الناس",
+"type": "word",
+"start": 13.76,
+"end": 14.08
+},
+{
+"text": "تشوفه",
+"type": "word",
+"start": 14.16,
+"end": 14.56
+},
+{
+"text": "ناجح.",
+"type": "word",
+"start": 14.64,
+"end": 15.36
+},
+{
+"text": "بعدين",
+"type": "word",
+"start": 15.44,
+"end": 15.84
+},
+{
+"text": "انتبه",
+"type": "word",
+"start": 15.92,
+"end": 16.32
+},
+{
+"text": "لشيء",
+"type": "word",
+"start": 16.4,
+"end": 16.68
+},
+{
+"text": "غريب:",
+"type": "word",
+"start": 16.72,
+"end": 17.44
+},
+{
+"text": "نادرًا",
+"type": "word",
+"start": 17.52,
+"end": 17.92
+},
+{
+"text": "ما",
+"type": "word",
+"start": 18,
+"end": 18.08
+},
+{
+"text": "كان",
+"type": "word",
+"start": 18.16,
+"end": 18.32
+},
+{
+"text": "يفكر:",
+"type": "word",
+"start": 18.44,
+"end": 19.04
+},
+{
+"text": "صاحب",
+"type": "word",
+"start": 19.2,
+"end": 19.36
+},
+{
+"text": "هالسيارة",
+"type": "word",
+"start": 19.4,
+"end": 20
+},
+{
+"text": "رائع.",
+"type": "word",
+"start": 20.04,
+"end": 20.72
+},
+{
+"text": "كان",
+"type": "word",
+"start": 20.8,
+"end": 20.88
+},
+{
+"text": "يفكر:",
+"type": "word",
+"start": 21,
+"end": 21.68
+},
+{
+"text": "لو",
+"type": "word",
+"start": 21.8,
+"end": 21.92
+},
+{
+"text": "عندي",
+"type": "word",
+"start": 22.04,
+"end": 22.24
+},
+{
+"text": "هالسيارة،",
+"type": "word",
+"start": 22.28,
+"end": 23.12
+},
+{
+"text": "الناس",
+"type": "word",
+"start": 23.24,
+"end": 23.6
+},
+{
+"text": "بتشوفني",
+"type": "word",
+"start": 23.68,
+"end": 24.32
+},
+{
+"text": "أنا",
+"type": "word",
+"start": 24.4,
+"end": 24.56
+},
+{
+"text": "رائع.",
+"type": "word",
+"start": 24.64,
+"end": 25.36
+},
+{
+"text": "ويسمّيها",
+"type": "word",
+"start": 25.44,
+"end": 26
+},
+{
+"text": "«مفارقة",
+"type": "word",
+"start": 26.16,
+"end": 26.8
+},
+{
+"text": "الرجل",
+"type": "word",
+"start": 26.84,
+"end": 27.2
+},
+{
+"text": "في",
+"type": "word",
+"start": 27.28,
+"end": 27.36
+},
+{
+"text": "السيارة».",
+"type": "word",
+"start": 27.4,
+"end": 28.32
+},
+{
+"text": "نريد",
+"type": "word",
+"start": 28.36,
+"end": 28.64
+},
+{
+"text": "الشيء",
+"type": "word",
+"start": 28.68,
+"end": 28.96
+},
+{
+"text": "الفاخر",
+"type": "word",
+"start": 29.04,
+"end": 29.52
+},
+{
+"text": "عشان",
+"type": "word",
+"start": 29.6,
+"end": 29.84
+},
+{
+"text": "الناس",
+"type": "word",
+"start": 29.88,
+"end": 30.16
+},
+{
+"text": "تعجب",
+"type": "word",
+"start": 30.24,
+"end": 30.56
+},
+{
+"text": "فينا،",
+"type": "word",
+"start": 30.64,
+"end": 31.12
+},
+{
+"text": "والناس",
+"type": "word",
+"start": 31.24,
+"end": 31.6
+},
+{
+"text": "تستعمله",
+"type": "word",
+"start": 31.68,
+"end": 32.24
+},
+{
+"text": "مقياس",
+"type": "word",
+"start": 32.32,
+"end": 32.8
+},
+{
+"text": "لرغبتهم",
+"type": "word",
+"start": 32.88,
+"end": 33.6
+},
+{
+"text": "هم",
+"type": "word",
+"start": 33.72,
+"end": 33.84
+},
+{
+"text": "في",
+"type": "word",
+"start": 33.92,
+"end": 34
+},
+{
+"text": "الإعجاب.",
+"type": "word",
+"start": 34.04,
+"end": 34.8
+}
+]
+}

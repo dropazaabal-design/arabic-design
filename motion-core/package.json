@@ -1,0 +1,39 @@
+{
+  "name": "@baseera/motion-core",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:core": "tsc -p tsconfig.core.json",
+    "test": "npm run build:core && node --test tests/*.test.mjs planner/tests/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "smoke:render": "remotion render demo/entry.ts BaseeraMotionSmoke demo/output/smoke.mp4 --codec=h264 --pixel-format=yuv420p --scale=0.5 --concurrency=2",
+    "smoke:render:full": "remotion render demo/entry.ts BaseeraMotionSmoke demo/output/fullhd.mp4 --codec=h264 --pixel-format=yuv420p --crf=18 --audio-codec=aac --audio-bitrate=192k --concurrency=2",
+    "story:render:full": "remotion render demo/entry.ts BaseeraCharacterStory demo/output/character-story.mp4 --codec=h264 --pixel-format=yuv420p --crf=18 --audio-codec=aac --audio-bitrate=192k --concurrency=2",
+    "planner:generate": "node planner/generate.mjs"
+  },
+  "peerDependencies": {
+    "@remotion/captions": "4.0.534",
+    "@remotion/gsap": "4.0.534",
+    "@remotion/paths": "4.0.534",
+    "gsap": "^3.13.0",
+    "react": "^19.0.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "4.0.534",
+    "@remotion/captions": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/gsap": "4.0.534",
+    "@remotion/paths": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@types/react": "19.2.2",
+    "gsap": "^3.13.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.534",
+    "typescript": "5.9.3"
+  }
+}

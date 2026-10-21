@@ -1,0 +1,107 @@
+{
+ "note": "Pronunciation check of the chosen takes. Alignment proves timing, not pronunciation; this file lists what an independent recogniser heard and what still needs a human ear.",
+ "methods": [
+  "Whisper large-v3-turbo (int8, sherpa-onnx, local) on every take, 15 s windows cut at quiet points plus 1 s of silence; WER after normalising hamza, taa marbuta and alef maqsura (review/asr-turbo.json).",
+  "Whisper large-v3 on the suspect units L7 and L11 (review/asr-large-v3.json); stopped after confirming the same pattern, to keep the CPU for rendering.",
+  "Endings: the last line of every chosen take transcribed alone (catches truncation that full-take decoding hides).",
+  "Isolated crops around «الغنى», «الثروة», «غريب», «أغراض» from the ElevenLabs word timing.",
+  "Voiceless-frication measure (10 ms frames, unvoiced and above 3 kHz) on every «ثروة» against «ثلث» and «سعد».",
+  "A paid probe (299.97 credits): L7 lines 2 and 4 regenerated with «الغِنى» and «الثَّروة» diacritised. All four probe takes were heard exactly like the originals («النة», «الروة»), so diacritics would not change the result and no unit was regenerated for these words."
+ ],
+ "verdict": "No defect proven. Two Whisper models of one family miss غ in «الغنى» and often ث in «الثروة» after the article; the same models hear these letters elsewhere in the same voice. This is a lead for a human listen, not a measured fault. Everything else that differs from the script is spelling (فيه/في، شيء/شي، ورا/وراء) or word joins.",
+ "fixed": [
+  "L1+L2: every take stopped mid-word in its last line → L2 regenerated alone; the four new takes end whole (last line transcribed alone).",
+  "L7: take 1O5Z chosen because its last line ends «يلتفت له أحد»; others say «لأحد» or «لها أحد».",
+  "L4, L6, L8, S2: the take with the fewest misheard words chosen over the acoustic favourite (see review/takes.json reasons)."
+ ],
+ "listen": {
+  "long": [
+   {
+    "at": "00:57.24",
+    "seg": "L4",
+    "word": "مورجان",
+    "why": "heard «مورغان/مورغين»: the voice may say g"
+   },
+   {
+    "at": "01:04.02",
+    "seg": "L4",
+    "word": "الضيوف",
+    "why": "heard as «اليوف» (ض after the article)"
+   },
+   {
+    "at": "01:32.66",
+    "seg": "L5",
+    "word": "وهاوسل",
+    "why": "heard «وهوصل»; the name, worth a listen"
+   },
+   {
+    "at": "02:14.14",
+    "seg": "L6",
+    "word": "القسط",
+    "why": "heard as «القصد» in every take (س/ص and ط/د): common Whisper confusion of emphatics, worth a listen"
+   },
+   {
+    "at": "02:21.73",
+    "seg": "L7",
+    "word": "الغنى",
+    "why": "غ not heard by Whisper (turbo, large-v3) in any take, nor in isolated crops, nor in a diacritised probe («الغِنى»); غ in «غريب» and «أغراض» is heard"
+   },
+   {
+    "at": "02:23.04",
+    "seg": "L7",
+    "word": "والثروة",
+    "why": "control: Whisper hears it correctly"
+   },
+   {
+    "at": "02:25.01",
+    "seg": "L7",
+    "word": "الغنى",
+    "why": "غ not heard by Whisper (turbo, large-v3) in any take, nor in isolated crops, nor in a diacritised probe («الغِنى»); غ in «غريب» and «أغراض» is heard"
+   },
+   {
+    "at": "02:27.99",
+    "seg": "L7",
+    "word": "الثروة،",
+    "why": "ث after the article heard as «الروة» in most crops; heard correctly inside «والثروة» and in «ثروة»; frication measured weaker than in «ثلث»"
+   },
+   {
+    "at": "02:31.49",
+    "seg": "L7",
+    "word": "الثروة",
+    "why": "ث after the article heard as «الروة» in most crops; heard correctly inside «والثروة» and in «ثروة»; frication measured weaker than in «ثلث»"
+   },
+   {
+    "at": "02:42.59",
+    "seg": "L8",
+    "word": "هالثروة",
+    "why": "heard once as «لهالثروه», once as «لها الروه»"
+   },
+   {
+    "at": "04:09.94",
+    "seg": "L11",
+    "word": "الثروة",
+    "why": "ث after the article heard as «الروة» in most crops; heard correctly inside «والثروة» and in «ثروة»; frication measured weaker than in «ثلث»"
+   }
+  ],
+  "short": [
+   {
+    "at": "00:13.06",
+    "seg": "R2",
+    "word": "مورجان",
+    "why": "heard «مورغان/مورغين»: the voice may say g"
+   },
+   {
+    "at": "00:33.75",
+    "seg": "R3",
+    "word": "القسط",
+    "why": "heard as «القصد» in every take (س/ص and ط/د): common Whisper confusion of emphatics, worth a listen"
+   },
+   {
+    "at": "00:38.05",
+    "seg": "R4",
+    "word": "الثروة،",
+    "why": "ث after the article heard as «الروة» in most crops; heard correctly inside «والثروة» and in «ثروة»; frication measured weaker than in «ثلث»"
+   }
+  ]
+ }
+}

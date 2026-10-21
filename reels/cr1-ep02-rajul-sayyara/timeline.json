@@ -1,0 +1,1158 @@
+{
+ "long": {
+  "totalSeconds": 259.44,
+  "frames": 15566,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.5,
+  "gainDb": 1.3,
+  "maxCps": 14.8,
+  "units": [
+   {
+    "unit": "L1",
+    "take": "wOOaYRAR3HQg7yeT34Lu",
+    "file": "L1-wOOaYRAR3HQg7yeT34Lu.mp3",
+    "sha256": "37d35fdb6969551b31b0f336964a64f123b4fb5f77bbc47c9683031cc7b09a0f",
+    "cut": [
+     0.0,
+     13.342
+    ],
+    "at": 1.2
+   },
+   {
+    "unit": "L2",
+    "take": "RnuG0BhlefUMkfEdGwWC",
+    "file": "L2-RnuG0BhlefUMkfEdGwWC.mp3",
+    "sha256": "44e4aa3975ed5f5beca3618d195696933069146db34cbe1e8be11a8212cc6aee",
+    "cut": [
+     0.0,
+     10.031
+    ],
+    "at": 15.042
+   },
+   {
+    "unit": "L3",
+    "take": "UNgYTB65OwRKc9IXtK2k",
+    "file": "L3-UNgYTB65OwRKc9IXtK2k.mp3",
+    "sha256": "d86dfe347fcfeabb402ecb2a7214c7a7dc1f0515a2ddf2d20893ca6059e92a98",
+    "cut": [
+     0.0,
+     29.466
+    ],
+    "at": 26.173
+   },
+   {
+    "unit": "L4",
+    "take": "L0wbIiBf8alZDr0NX8pX",
+    "file": "L4-L0wbIiBf8alZDr0NX8pX.mp3",
+    "sha256": "b26d71cd07bc2fba2b70ab8e8fa98138193827a7fbe84d5b08fcb4d01d0d5244",
+    "cut": [
+     0.0,
+     34.769
+    ],
+    "at": 56.839
+   },
+   {
+    "unit": "L5",
+    "take": "FCvBHfJTFpJc3K9GogUl",
+    "file": "L5-FCvBHfJTFpJc3K9GogUl.mp3",
+    "sha256": "ff8979860b4089dfc480fb27d20e8676d6287b4bd471cfee8260d1d6b17dce4e",
+    "cut": [
+     0.0,
+     16.353
+    ],
+    "at": 92.608
+   },
+   {
+    "unit": "L6",
+    "take": "MyEUgbv98h0jFD7mfF8H",
+    "file": "L6-MyEUgbv98h0jFD7mfF8H.mp3",
+    "sha256": "fc230270c29580f96d57cdd15489bb8b4c3c7b2a1277991ee7feacc26e6dc826",
+    "cut": [
+     0.0,
+     27.167
+    ],
+    "at": 110.061
+   },
+   {
+    "unit": "L7",
+    "take": "1O5ZB5HEDg3V9ICvMYTT",
+    "file": "L7-1O5ZB5HEDg3V9ICvMYTT.mp3",
+    "sha256": "197a1d2834e2d41faf99b5f735c619578accca742ba15a5194e24c6789317b47",
+    "cut": [
+     0.0,
+     22.282
+    ],
+    "at": 138.428
+   },
+   {
+    "unit": "L8",
+    "take": "kelNlkDUEL4Rk9TNp0yj",
+    "file": "L8-kelNlkDUEL4Rk9TNp0yj.mp3",
+    "sha256": "7855502e332ead6a9f0e18a35013f1f3a8a7e27f0e59f1247830f052b1a556d4",
+    "cut": [
+     0.0,
+     21.159
+    ],
+    "at": 161.711
+   },
+   {
+    "unit": "L9",
+    "take": "tgEGmHQ25kdlNYvrhCpk",
+    "file": "L9-tgEGmHQ25kdlNYvrhCpk.mp3",
+    "sha256": "6f009d3851e17483988c62ba92174f49d35fb6967ca1e61f4908c35af256441d",
+    "cut": [
+     0.0,
+     22.909
+    ],
+    "at": 184.07
+   },
+   {
+    "unit": "L10",
+    "take": "zxPp4zMPnSWUm0NKrSeB",
+    "file": "L10-zxPp4zMPnSWUm0NKrSeB.mp3",
+    "sha256": "01f6116830e3ea5dfda5d0067f41b47c0d511c0910232d352e573ddad3ec6c23",
+    "cut": [
+     0.0,
+     24.921
+    ],
+    "at": 207.979
+   },
+   {
+    "unit": "L11",
+    "take": "pOPnmftNYZBCsvXDB2xo",
+    "file": "L11-pOPnmftNYZBCsvXDB2xo.mp3",
+    "sha256": "52c17c43f97602c053b2d77a52ea59f5ea57dc1dec6ab51bbd8fc91f1b3ae565",
+    "cut": [
+     0.0,
+     21.394
+    ],
+    "at": 234.0
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "L1",
+    "i": 0,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the new car glides in",
+    "offset": -0.3,
+    "time": 0.929,
+    "word": "ماجد"
+   },
+   {
+    "seg": "L1",
+    "i": 10,
+    "sfx": "click",
+    "gain": -20,
+    "why": "he parks: the door",
+    "offset": 0.25,
+    "time": 5.73,
+    "word": "وقّفها"
+   },
+   {
+    "seg": "L1",
+    "i": 14,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "heads turn",
+    "time": 7.333,
+    "word": "انتبهوا"
+   },
+   {
+    "seg": "L1",
+    "i": 21,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "first bubble",
+    "time": 10.08,
+    "word": "يفكر"
+   },
+   {
+    "seg": "L1",
+    "i": 21,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "second bubble",
+    "offset": 0.18,
+    "time": 10.26,
+    "word": "يفكر"
+   },
+   {
+    "seg": "L1",
+    "i": 21,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "third bubble",
+    "offset": 0.36,
+    "time": 10.44,
+    "word": "يفكر"
+   },
+   {
+    "seg": "L1",
+    "i": 27,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "each sees himself at the wheel",
+    "time": 12.32,
+    "word": "يتخيّل"
+   },
+   {
+    "seg": "L2",
+    "i": 20,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the opening rewinds",
+    "time": 23.562,
+    "word": "نرجع"
+   },
+   {
+    "seg": "L2",
+    "i": 21,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "the calendar flips back",
+    "offset": 0.6,
+    "time": 24.602,
+    "word": "شهرين"
+   },
+   {
+    "seg": "L3",
+    "i": 0,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the old car arrives",
+    "offset": -0.2,
+    "time": 25.994,
+    "word": "ماجد"
+   },
+   {
+    "seg": "L3",
+    "i": 29,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the bonus notification",
+    "time": 41.133,
+    "word": "مكافأة،"
+   },
+   {
+    "seg": "L3",
+    "i": 30,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the new car in a bubble",
+    "time": 41.805,
+    "word": "فقرر:"
+   },
+   {
+    "seg": "L3",
+    "i": 33,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "savings leave the jar",
+    "offset": 0.3,
+    "time": 44.144,
+    "word": "دفع"
+   },
+   {
+    "seg": "L3",
+    "i": 40,
+    "sfx": "click",
+    "gain": -20,
+    "why": "a third of the salary turns red",
+    "time": 48.053,
+    "word": "ثلث"
+   },
+   {
+    "seg": "L3",
+    "i": 42,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "five years of months",
+    "time": 48.733,
+    "word": "لخمس"
+   },
+   {
+    "seg": "L3",
+    "i": 54,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "his own applause bubble",
+    "time": 54.413,
+    "word": "إعجاب"
+   },
+   {
+    "seg": "L4",
+    "i": 5,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "the book card",
+    "time": 59.058,
+    "word": "كتابه"
+   },
+   {
+    "seg": "L4",
+    "i": 18,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "a guest car arrives",
+    "time": 66.172,
+    "word": "كل"
+   },
+   {
+    "seg": "L4",
+    "i": 20,
+    "sfx": "click",
+    "gain": -20,
+    "why": "the keys change hands",
+    "offset": 1.4,
+    "time": 68.119,
+    "word": "توصله"
+   },
+   {
+    "seg": "L4",
+    "i": 24,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "he dreams",
+    "time": 68.719,
+    "word": "يحلم"
+   },
+   {
+    "seg": "L4",
+    "i": 33,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "he notices",
+    "time": 72.759,
+    "word": "انتبه"
+   },
+   {
+    "seg": "L4",
+    "i": 36,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the second bubble",
+    "time": 74.289,
+    "word": "نادرًا"
+   },
+   {
+    "seg": "L4",
+    "i": 42,
+    "sfx": "click",
+    "gain": -20,
+    "why": "struck through",
+    "offset": 0.45,
+    "time": 77.329,
+    "word": "رائع."
+   },
+   {
+    "seg": "L4",
+    "i": 45,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the owner becomes himself",
+    "time": 78.514,
+    "word": "لو"
+   },
+   {
+    "seg": "L4",
+    "i": 53,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the title",
+    "time": 82.999,
+    "word": "«مفارقة"
+   },
+   {
+    "seg": "L4",
+    "i": 66,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the magnifier on the window",
+    "time": 89.159,
+    "word": "مقياس"
+   },
+   {
+    "seg": "L5",
+    "i": 6,
+    "sfx": "click",
+    "gain": -20,
+    "why": "the sign is struck",
+    "offset": 0.4,
+    "time": 95.808,
+    "word": "حلوة."
+   },
+   {
+    "seg": "L5",
+    "i": 14,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the cover slides off",
+    "offset": 0.3,
+    "time": 100.228,
+    "word": "والحقيقة"
+   },
+   {
+    "seg": "L5",
+    "i": 17,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "respect underneath",
+    "time": 101.568,
+    "word": "الاحترام."
+   },
+   {
+    "seg": "L5",
+    "i": 21,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "humility lands",
+    "time": 103.848,
+    "word": "التواضع"
+   },
+   {
+    "seg": "L5",
+    "i": 22,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "kindness lands",
+    "time": 104.528,
+    "word": "واللطف"
+   },
+   {
+    "seg": "L5",
+    "i": 23,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "empathy lands",
+    "time": 105.168,
+    "word": "والتعاطف،"
+   },
+   {
+    "seg": "L5",
+    "i": 28,
+    "sfx": "click",
+    "gain": -20,
+    "why": "the engine lands",
+    "time": 107.808,
+    "word": "قوة"
+   },
+   {
+    "seg": "L6",
+    "i": 8,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "eyes on the car",
+    "time": 113.301,
+    "word": "الكل"
+   },
+   {
+    "seg": "L6",
+    "i": 10,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the camera moves to Saad",
+    "time": 114.67,
+    "word": "وفي"
+   },
+   {
+    "seg": "L6",
+    "i": 25,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "the scratch",
+    "time": 121.381,
+    "word": "خدش"
+   },
+   {
+    "seg": "L6",
+    "i": 30,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "six months pass",
+    "time": 123.262,
+    "word": "بعد"
+   },
+   {
+    "seg": "L6",
+    "i": 34,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the door opens",
+    "time": 124.941,
+    "word": "فرصة:"
+   },
+   {
+    "seg": "L6",
+    "i": 47,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "the salary shrinks",
+    "time": 130.701,
+    "word": "أقل."
+   },
+   {
+    "seg": "L6",
+    "i": 55,
+    "sfx": "click",
+    "gain": -20,
+    "why": "the chain pulls",
+    "time": 134.141,
+    "word": "القسط"
+   },
+   {
+    "seg": "L6",
+    "i": 60,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "Saad says yes",
+    "time": 136.584,
+    "word": "نعم."
+   },
+   {
+    "seg": "L7",
+    "i": 3,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "two things pulled apart",
+    "time": 139.708,
+    "word": "شيئين"
+   },
+   {
+    "seg": "L7",
+    "i": 6,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "rich",
+    "time": 141.729,
+    "word": "الغنى"
+   },
+   {
+    "seg": "L7",
+    "i": 9,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "wealth",
+    "time": 143.041,
+    "word": "والثروة"
+   },
+   {
+    "seg": "L7",
+    "i": 20,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "notes into the jar",
+    "time": 148.638,
+    "word": "ففلوس"
+   },
+   {
+    "seg": "L7",
+    "i": 27,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the car not bought",
+    "time": 152.268,
+    "word": "السيارة"
+   },
+   {
+    "seg": "L7",
+    "i": 30,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "it falls into the jar",
+    "time": 153.188,
+    "word": "اشتريتها،"
+   },
+   {
+    "seg": "L7",
+    "i": 31,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the watch not worn",
+    "time": 153.98,
+    "word": "والساعة"
+   },
+   {
+    "seg": "L7",
+    "i": 34,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "into the jar",
+    "time": 155.108,
+    "word": "لبستها."
+   },
+   {
+    "seg": "L8",
+    "i": 5,
+    "sfx": "click",
+    "gain": -20,
+    "why": "things struck",
+    "offset": 0.6,
+    "time": 164.703,
+    "word": "ما"
+   },
+   {
+    "seg": "L8",
+    "i": 8,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "notes become a clock",
+    "time": 165.637,
+    "word": "اشترت"
+   },
+   {
+    "seg": "L8",
+    "i": 20,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "he turns the hand",
+    "time": 171.591,
+    "word": "تتحكم"
+   },
+   {
+    "seg": "L8",
+    "i": 20,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "the hand turns",
+    "offset": 0.5,
+    "time": 172.091,
+    "word": "تتحكم"
+   },
+   {
+    "seg": "L8",
+    "i": 23,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "morning",
+    "time": 173.156,
+    "word": "إنك"
+   },
+   {
+    "seg": "L8",
+    "i": 32,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "savings become months",
+    "time": 177.209,
+    "word": "مدخرات"
+   },
+   {
+    "seg": "L9",
+    "i": 1,
+    "sfx": "click",
+    "gain": -20,
+    "why": "pause",
+    "time": 184.39,
+    "word": "لحظة،"
+   },
+   {
+    "seg": "L9",
+    "i": 10,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "rent",
+    "time": 188.99,
+    "word": "الإيجار"
+   },
+   {
+    "seg": "L9",
+    "i": 11,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "food",
+    "time": 189.39,
+    "word": "والأكل،"
+   },
+   {
+    "seg": "L9",
+    "i": 16,
+    "sfx": "click",
+    "gain": -20,
+    "why": "not the car",
+    "time": 191.51,
+    "word": "السيارة،"
+   },
+   {
+    "seg": "L9",
+    "i": 22,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "first card",
+    "time": 194.31,
+    "word": "بسيارة"
+   },
+   {
+    "seg": "L9",
+    "i": 28,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "second card",
+    "time": 197.59,
+    "word": "بسيارة"
+   },
+   {
+    "seg": "L9",
+    "i": 44,
+    "sfx": "click",
+    "gain": -20,
+    "why": "not stingy",
+    "time": 203.63,
+    "word": "بخيل."
+   },
+   {
+    "seg": "L9",
+    "i": 48,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "who do you spend for",
+    "time": 205.708,
+    "word": "لمين"
+   },
+   {
+    "seg": "L10",
+    "i": 7,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the question",
+    "time": 211.06,
+    "word": "لو"
+   },
+   {
+    "seg": "L10",
+    "i": 7,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the first onlooker goes",
+    "offset": 0.1,
+    "time": 211.16,
+    "word": "لو"
+   },
+   {
+    "seg": "L10",
+    "i": 9,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the second goes",
+    "offset": 0.1,
+    "time": 211.479,
+    "word": "أحد"
+   },
+   {
+    "seg": "L10",
+    "i": 15,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "enjoy it",
+    "time": 214.513,
+    "word": "استمتع"
+   },
+   {
+    "seg": "L10",
+    "i": 23,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the audience returns",
+    "time": 218.139,
+    "word": "لجمهور"
+   },
+   {
+    "seg": "L10",
+    "i": 23,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "each pictures himself",
+    "offset": 0.2,
+    "time": 218.339,
+    "word": "لجمهور"
+   },
+   {
+    "seg": "L10",
+    "i": 29,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "months counted",
+    "time": 221.969,
+    "word": "كم"
+   },
+   {
+    "seg": "L10",
+    "i": 38,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "a small number",
+    "time": 225.579,
+    "word": "ولو"
+   },
+   {
+    "seg": "L10",
+    "i": 44,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "and you?",
+    "time": 228.475,
+    "word": "وأنت،"
+   },
+   {
+    "seg": "L11",
+    "i": 8,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "a monthly transfer",
+    "time": 236.8,
+    "word": "يحوّل"
+   },
+   {
+    "seg": "L11",
+    "i": 13,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "into «حرية»",
+    "time": 238.88,
+    "word": "«حرية»."
+   },
+   {
+    "seg": "L11",
+    "i": 14,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "a new car arrives",
+    "time": 240.205,
+    "word": "وبعد"
+   },
+   {
+    "seg": "L11",
+    "i": 16,
+    "sfx": "click",
+    "gain": -20,
+    "why": "it parks",
+    "offset": 0.6,
+    "time": 241.694,
+    "word": "وقّف"
+   },
+   {
+    "seg": "L11",
+    "i": 21,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "heads turn",
+    "time": 243.47,
+    "word": "والتفتوا"
+   },
+   {
+    "seg": "L11",
+    "i": 27,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "his bubble",
+    "time": 246.8,
+    "word": "يتخيّل…"
+   },
+   {
+    "seg": "L11",
+    "i": 28,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the bubble bursts as he smiles",
+    "offset": 0.2,
+    "time": 247.834,
+    "word": "وابتسم."
+   },
+   {
+    "seg": "L11",
+    "i": 32,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the closing line",
+    "time": 249.942,
+    "word": "الثروة"
+   }
+  ]
+ },
+ "short": {
+  "totalSeconds": 65.766,
+  "frames": 3946,
+  "mixLUFS": -16.0,
+  "mixTruePeak": -4.7,
+  "gainDb": 1.3,
+  "maxCps": 14.3,
+  "units": [
+   {
+    "unit": "S1",
+    "take": "VtMS9wd3Xva2Q5hKCU60",
+    "file": "S1-VtMS9wd3Xva2Q5hKCU60.mp3",
+    "sha256": "1fda2471e7466845ade159b94acf3ec1a965b687f028d6138d8e89289c9d9c2b",
+    "cut": [
+     0.0,
+     36.676
+    ],
+    "at": 0.35
+   },
+   {
+    "unit": "S2",
+    "take": "fRvya7HFLJYrloJilp78",
+    "file": "S2-fRvya7HFLJYrloJilp78.mp3",
+    "sha256": "5c499860134ef10c49175b8e288f7aaacdf682acf011c606ee7783ce0af343c4",
+    "cut": [
+     0.0,
+     25.391
+    ],
+    "at": 37.726
+   }
+  ],
+  "sfx": [
+   {
+    "seg": "R1",
+    "i": 0,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the new car glides in",
+    "offset": -0.3,
+    "time": 0.083,
+    "word": "ماجد"
+   },
+   {
+    "seg": "R1",
+    "i": 10,
+    "sfx": "click",
+    "gain": -20,
+    "why": "he parks",
+    "offset": 0.25,
+    "time": 4.96,
+    "word": "وقّفها…"
+   },
+   {
+    "seg": "R1",
+    "i": 11,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "heads turn",
+    "time": 5.555,
+    "word": "التفتوا"
+   },
+   {
+    "seg": "R1",
+    "i": 17,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "first bubble",
+    "time": 8.35,
+    "word": "يفكر"
+   },
+   {
+    "seg": "R1",
+    "i": 17,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "second bubble",
+    "offset": 0.18,
+    "time": 8.53,
+    "word": "يفكر"
+   },
+   {
+    "seg": "R1",
+    "i": 17,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "third bubble",
+    "offset": 0.36,
+    "time": 8.71,
+    "word": "يفكر"
+   },
+   {
+    "seg": "R1",
+    "i": 23,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "each sees himself",
+    "time": 10.39,
+    "word": "يتخيّل"
+   },
+   {
+    "seg": "R2",
+    "i": 0,
+    "sfx": "pageflip",
+    "gain": -20,
+    "why": "the book card",
+    "time": 13.063,
+    "word": "مورجان"
+   },
+   {
+    "seg": "R2",
+    "i": 7,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the title",
+    "time": 16.59,
+    "word": "«مفارقة"
+   },
+   {
+    "seg": "R2",
+    "i": 19,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the magnifier on the window",
+    "time": 22.43,
+    "word": "تشوف"
+   },
+   {
+    "seg": "R3",
+    "i": 2,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the camera moves to Saad",
+    "time": 25.506,
+    "word": "سيارة"
+   },
+   {
+    "seg": "R3",
+    "i": 12,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the door opens",
+    "time": 29.71,
+    "word": "فرصة"
+   },
+   {
+    "seg": "R3",
+    "i": 15,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "the salary shrinks",
+    "time": 31.31,
+    "word": "أقل"
+   },
+   {
+    "seg": "R3",
+    "i": 21,
+    "sfx": "click",
+    "gain": -20,
+    "why": "the chain pulls",
+    "time": 33.746,
+    "word": "القسط"
+   },
+   {
+    "seg": "R3",
+    "i": 26,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "Saad says yes",
+    "time": 36.397,
+    "word": "نعم."
+   },
+   {
+    "seg": "R4",
+    "i": 9,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the car not bought",
+    "time": 41.445,
+    "word": "السيارة"
+   },
+   {
+    "seg": "R4",
+    "i": 12,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "it falls into the jar",
+    "time": 42.486,
+    "word": "اشتريتها."
+   },
+   {
+    "seg": "R4",
+    "i": 19,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "he turns the hand",
+    "time": 45.926,
+    "word": "تتحكم"
+   },
+   {
+    "seg": "R4",
+    "i": 19,
+    "sfx": "tick",
+    "gain": -24,
+    "why": "the hand turns",
+    "offset": 0.5,
+    "time": 46.426,
+    "word": "تتحكم"
+   },
+   {
+    "seg": "R5",
+    "i": 2,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "first card",
+    "time": 47.886,
+    "word": "سيارة"
+   },
+   {
+    "seg": "R5",
+    "i": 4,
+    "sfx": "click",
+    "gain": -20,
+    "why": "not debt",
+    "offset": 0.5,
+    "time": 49.306,
+    "word": "دين،"
+   },
+   {
+    "seg": "R5",
+    "i": 7,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "second card",
+    "time": 49.806,
+    "word": "سيارة"
+   },
+   {
+    "seg": "R5",
+    "i": 9,
+    "sfx": "click",
+    "gain": -20,
+    "why": "not wealth",
+    "offset": 0.5,
+    "time": 51.346,
+    "word": "ثروة."
+   },
+   {
+    "seg": "R5",
+    "i": 11,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "who do you spend for",
+    "time": 52.457,
+    "word": "لمين"
+   },
+   {
+    "seg": "R6",
+    "i": 6,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "the question",
+    "time": 56.051,
+    "word": "لو"
+   },
+   {
+    "seg": "R6",
+    "i": 6,
+    "sfx": "whoosh",
+    "gain": -21,
+    "why": "the onlookers go",
+    "offset": 0.1,
+    "time": 56.151,
+    "word": "لو"
+   },
+   {
+    "seg": "R6",
+    "i": 12,
+    "sfx": "pop",
+    "gain": -22,
+    "why": "and you?",
+    "time": 58.806,
+    "word": "وأنت،"
+   }
+  ]
+ }
+}

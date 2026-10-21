@@ -1,0 +1,56 @@
+name: Baseera Character Motion and Semantic Director
+on:
+  pull_request:
+    paths:
+      - 'motion-core/**'
+      - '.github/workflows/baseera-character-story.yml'
+  workflow_dispatch:
+
+jobs:
+  character-story:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: motion-core
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install FFmpeg and ffprobe
+        run: |
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+      - name: Old and new semantic pose tests
+        run: npm test
+      - name: Full TSX typecheck
+        run: npm run typecheck
+      - name: Render 1080x1920 story with two animated characters and existing narration
+        id: render
+        run: npm run story:render:full
+      - name: Check video/audio streams and decode every frame
+        run: |
+          ffprobe -v error -show_streams -show_format -of json demo/output/character-story.mp4 > demo/output/character-metadata.json
+          node demo/check-media.mjs demo/output/character-metadata.json
+          ffmpeg -v error -xerror -i demo/output/character-story.mp4 -f null -
+      - name: Make contact sheet for human quality assessment
+        run: |
+          ffmpeg -hide_banner -loglevel error -i demo/output/character-story.mp4 \
+            -vf "fps=1/2,scale=360:640:flags=lanczos,tile=3x2" \
+            -frames:v 1 -update 1 demo/output/character-contact-sheet.png
+          test -s demo/output/character-contact-sheet.png
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && steps.render.outcome == 'success' }}
+        with:
+          name: baseera-character-motion-fullhd
+          path: |
+            motion-core/demo/output/character-story.mp4
+            motion-core/demo/output/character-contact-sheet.png
+            motion-core/demo/output/character-metadata.json
+          retention-days: 7
+          if-no-files-found: error

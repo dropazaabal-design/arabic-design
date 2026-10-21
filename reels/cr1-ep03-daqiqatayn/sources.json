@@ -1,0 +1,26 @@
+{
+ "book": {
+  "title": "Atomic Habits", "author": "James Clear", "publisher": "Avery (Penguin Random House), 2018",
+  "arabic": "«العادات الذرية»، الترجمة العربية، مكتبة جرير",
+  "chapter": "13 — How to Stop Procrastinating by Using the Two-Minute Rule (law 3: make it easy)",
+  "access": "لم نفتح نص الكتاب من بيئة الإنتاج؛ التحقق من موقع المؤلف وملخصات تذكر الفصل، كما في الجدول. ينتظر مطابقة الصياغة مع النسخة العربية."
+ },
+ "claims": [
+  {"id": "C1", "claim": "قاعدة الدقيقتين: حين تبدأ عادة جديدة، يجب أن تأخذ أقل من دقيقتين", "where": "الفصل 13؛ ومقالة المؤلف «How to Stop Procrastinating»", "status": "مؤكد من موقع المؤلف وعدة مصادر", "inScript": "R4", "refs": ["1", "2", "3"]},
+  {"id": "C2", "claim": "أمثلة المؤلف: «اقرأ قبل النوم كل ليلة» تصير «اقرأ صفحة واحدة»؛ «اركض ثلاثة أميال» تصير «اربط حذاء الركض»", "where": "الفصل 13؛ موقع المؤلف", "status": "مؤكد؛ في النص «تلبس الحذاء» صياغة قريبة من «اربط حذاءك»", "inScript": "R4", "refs": ["1", "2"]},
+  {"id": "C3", "claim": "العادة يجب أن توجد قبل أن تتحسن (standardize before you optimize)", "where": "الفصل 13؛ موقع المؤلف", "status": "مؤكد؛ منقول «بمعنى كلامه»", "inScript": "R5", "refs": ["1", "4"]},
+  {"id": "C4", "claim": "الدقيقتان مدخل لا هدف (gateway habit)", "where": "الفصل 13", "status": "صياغتنا لفكرة المؤلف؛ «هي الباب» تشبيه من السلسلة", "inScript": "R7", "refs": ["1", "3"]},
+  {"id": "C5", "claim": "قصة سلطان: الحذاء في الكرتون، خطة الساعة، الفشل عند الفجر، تصغير الخطة، النتيجة بعد أسابيع", "where": "من إعداد السلسلة", "status": "قصة توضيحية؛ تُعلن على الشاشة «قصة توضيحية»؛ ليست وعدًا بنتيجة", "inScript": "R1–R3، R6"},
+  {"id": "C6", "claim": "سؤال «إيش نسخة الدقيقتين من عادتك؟» و«صغّرها لين ما تقدر تقول لا»", "where": "تطبيق من السلسلة مبني على الفكرة", "status": "تطبيق من إعدادنا", "inScript": "R7"}
+ ],
+ "notUsed": [
+  {"what": "قصة «ميتش» الذي منع نفسه من البقاء في النادي أكثر من خمس دقائق", "why": "موجودة في محاضرات المؤلف وعروض للكتاب، لكن الصياغة تختلف بين المصادر (دقيقتان/خمس)؛ لم نحتج إليها"},
+  {"what": "مثال تحسن 1% يوميًا", "why": "خارج هذه الفكرة؛ ولو استُعمل فهو مثال حسابي لا وعد بأداء الإنسان"}
+ ],
+ "references": [
+  {"id": "1", "kind": "مقالة المؤلف", "url": "https://jamesclear.com/how-to-stop-procrastinating"},
+  {"id": "2", "kind": "درس المؤلف", "url": "https://jamesclear.com/30-days/lessons/lesson-2"},
+  {"id": "3", "kind": "ملخص فصل", "url": "https://www.litcharts.com/lit/atomic-habits/chapter-13"},
+  {"id": "4", "kind": "مقابلة مع المؤلف", "url": "https://metacast.app/podcast/real-health-with-karl-henry/ViIxJePP/atomic-habits-with-james-clear/7IlxptL4"}
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "day": {
+  "background": "#E8EFF6",
+  "outline": 15.59,
+  "shirt": 4.14,
+  "trousers": 3.51,
+  "skin": 2.35,
+  "shoe box": 1.87
+ },
+ "dawn, behind him (pool centre)": {
+  "background": "#BEC8D3",
+  "outline": 10.67,
+  "shirt": 2.83,
+  "trousers": 2.4,
+  "skin": 1.61,
+  "shoe box": 1.28
+ },
+ "dawn, frame edge": {
+  "background": "#55637A",
+  "outline": 2.97,
+  "shirt": 1.27,
+  "trousers": 1.49,
+  "skin": 2.23,
+  "shoe box": 2.8
+ },
+ "night, behind him (pool centre)": {
+  "background": "#BBC3CE",
+  "outline": 10.17,
+  "shirt": 2.7,
+  "trousers": 2.29,
+  "skin": 1.53,
+  "shoe box": 1.22
+ },
+ "night, frame edge": {
+  "background": "#485468",
+  "outline": 2.36,
+  "shirt": 1.6,
+  "trousers": 1.88,
+  "skin": 2.81,
+  "shoe box": 3.53
+ },
+ "text": {
+  "title ink on page #F4F7FB": 16.83,
+  "shoe-teal title #0B7D76 on page": 4.64,
+  "caption white on its pill (#0E1626 at 0.78 over day wall)": 9.51,
+  "caption white on its pill over the dark edge": 14.97,
+  "shoe #12A39A on the room wall": 2.69
+ },
+ "note": "WCAG 2 contrast ratios from source colours; the outline is what separates a shape, a fill ratio near 1 is not by itself a failure (see the colour report)"
+}

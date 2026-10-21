@@ -1,0 +1,20 @@
+{
+  "format": { "width": 1080, "height": 1920, "fps": 30, "codec": "h264", "pixFmt": "yuv420p", "audio": "aac" },
+  "palette": { "red": "#E63946 — the impulse", "blue": "#2E7BC5 — the pause", "green": "#10B981 — the calm choice", "ground": "#16181C charcoal with grey paper scraps" },
+  "persistent": {
+    "hook": "لا ترسلها وأنت غاضب",
+    "hookBehaviour": "big on two lines from frame 0; at the end of the spoken hook the halves shrink, part sideways, then rise onto one moderate line at y≈262; fades as scene 7 begins",
+    "handle": "@kitabwbs",
+    "handlePlace": "fixed, centred under the hook at y≈316, the whole reel",
+    "captions": "bottom-anchored at y=1590, max width 780 (clear of the right button rail), 1–2 balanced lines; s01 not burned in (the hook is the same sentence)"
+  },
+  "scenes": [
+    { "id": "sc1", "voice": "s01", "picture": "Big abstract phone, close and low; dark scrim over the chat, the input row lit: abstract draft bars and a red send button whose ring fills to 86% and stops.", "text": ["لا ترسلها وأنت غاضب"], "keyedTo": "ring 0.25–1.5 s; hook move at 2.15 s" },
+    { "id": "sc2", "voice": "s02", "picture": "Camera eases to the full phone. Incoming bubble on «رسالة», red outline on «ضايقتك»; the harsh draft typed one whole word at a time on «وكتبت…قاسيًا»; ring again on «وبقيت»; one light shake on «ضغطة». Nothing is sent.", "text": ["أسلوبك غير مناسب", "أنت آخر من يحق له الكلام", "بقيت ضغطة واحدة"] },
+    { "id": "sc3", "voice": "s03", "picture": "Same phone. On «اسأل» the draft lifts and a calm blue gap opens between it and the send button (dashed connector). Target icon on «يخدمك», «أم», red spark on «يفرّغ».", "text": ["يخدمك…", "أم", "يفرّغ غضبك؟"] },
+    { "id": "sc4", "voice": "s04", "picture": "The chat screen morphs into a torn paper book scrap (our own card, not the cover): «فكرة من» + title on «كتاب», author on «شين». Below: red dot on «نقع», a red line rushes on «ردود» and stops at a blue gap that appears on «تلقائية»; the gap breathes on «قبل»; a dotted blue path on «أمامنا» to a white decision circle on «قرارًا».", "text": ["فكرة من", "«التفكير الواضح»", "شين باريش"] },
+    { "id": "sc5", "voice": "s05", "picture": "The scrap morphs back into the phone. Blue pause mark over the send button on «وقفة» (button greys). On «اترك» a drafts note appears and the draft moves into it. On «وابتعد» the phone is carried off to the left and a quiet window with a glass of water slides in, cool blue light; the water settles from «ارجع» to «تهدأ», then the phone returns. No timer.", "text": ["اتركها في المسودات"] },
+    { "id": "sc6", "voice": "s06 s07", "picture": "Back on the phone. On «تريد» the draft returns to the field. On «قول» the harsh words are struck and fade one by one; the calm example is typed; on «إهانة» the field and send button turn blue; «مثال» tag. Label on «دون». Button pulses on «حقك», pressed on «تختار», sent on «كيف» as an outgoing bubble; green check on «تردّ».", "text": ["أختلف معك، لكن دعنا نتكلم بهدوء", "مثال", "قلها دون إهانة"] },
+    { "id": "sc7", "voice": "s08 s09", "picture": "Same space: the phone dims behind; a large paper note with a thin green frame rises on «اكتب». The rule appears one whole word at a time on «سأردّ», «عندما», «أهدأ». The save mark fills green on «احفظها». Holds ~1.9 s after the last word.", "text": ["سأردّ عندما أهدأ"] }
+  ]
+}

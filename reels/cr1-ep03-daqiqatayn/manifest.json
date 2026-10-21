@@ -1,0 +1,85 @@
+{
+ "episode": "cr1-ep03",
+ "version": "1.0.0",
+ "written": "2026-10-16T15:41:55+00:00",
+ "deliverables": [
+  {
+   "file": "export/cr1-ep03_daqiqatayn_9x16_v1.0.0.ar.srt",
+   "bytes": 1874,
+   "sha256": "6648b0ca0b126e434fd25a45eec13ab78d5b98d40c4eac34f2f12e03524ac75a",
+   "version": "1.0.0",
+   "inputsFingerprint": "589e3b49cb32915fed060c969f47e47ab71367c2c2abb4ab98d453dd61f90302",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep03_daqiqatayn_9x16_v1.0.0.mp4",
+   "bytes": 44795270,
+   "sha256": "80ca213be8ca8a668afa52010a51b7c1bbe683fc9530540a43f7981c04144077",
+   "version": "1.0.0",
+   "inputsFingerprint": "589e3b49cb32915fed060c969f47e47ab71367c2c2abb4ab98d453dd61f90302",
+   "report": "review/cr1-ep03_daqiqatayn_9x16_v1.0.0.json"
+  }
+ ],
+ "state": {
+  "approvedInputs": [
+   {
+    "file": "script-short.md",
+    "sha256": "3dd191185d80547adc895372c6b6a9c1a3487891d320907db7450b98877381b0"
+   },
+   {
+    "file": "audio/takes/U1-HwfcRf67Frnl9mRkgwXq.mp3",
+    "sha256": "eaa182253c703d2c4b28cbf6f26567b4acd033ad32979d9ed6b36e7a4878578c"
+   },
+   {
+    "file": "audio/takes/U1-Q2v4oqLmqUAMWztn83Wy.mp3",
+    "sha256": "ffa67aafdd4542930c81ddaff271907a45252202e656f919e3ca3b2990c056ef"
+   },
+   {
+    "file": "audio/takes/U1-eRPc7SfR8G697P4OvDUq.mp3",
+    "sha256": "df39972f923734af4b1b2762602580fe8dbef7b27e3b09bd899a2f436b2d0905"
+   },
+   {
+    "file": "audio/takes/U1-fnpK3UD63nNmSNITh7Kb.mp3",
+    "sha256": "bc93fdffcafa1ee12a0abfd1aba55c0ad5e89b658a23224073a6ffdfb6aae8ae"
+   },
+   {
+    "file": "audio/takes/U2-8OMSRpma3MrAQDeDOMLK.mp3",
+    "sha256": "1bb285accf8283024eef9c8be3e224411fcc9423cc786144071352ded3d82763"
+   },
+   {
+    "file": "audio/takes/U2-McFP80O1hvba8cCWGCno.mp3",
+    "sha256": "3dbab1c7f94e5a410f104c99ab3be5f6ffeff3a42ef5baa9eef30241293e4bab"
+   },
+   {
+    "file": "audio/takes/U2-ZrKNKUsdmFNd3ffnjgjw.mp3",
+    "sha256": "2b2e1658d9658c48c01a6303bc4f4d811210da98d231ec664eaf98746e74f702"
+   },
+   {
+    "file": "audio/takes/U2-vMhHIeSPfbEme6xwsBa9.mp3",
+    "sha256": "ae34bbf0988537d888364cf59d40004cb7dbcb75457b01a86aecbd8a04f4136c"
+   },
+   {
+    "file": "audio/takes/U3-AFPoj6oU11jwjaAjLbhp.mp3",
+    "sha256": "cfcf35684c2fb8288cd526d1d52328d0321c2e32d95b0696c62fd4bd127d2afc"
+   },
+   {
+    "file": "audio/takes/U3-R8IUtVXrD5waOsYFmrPs.mp3",
+    "sha256": "e85d1e66e29fd81b25014b53752b891e6bb0fbfe0c9f247c2e5fefcda7f9b79a"
+   },
+   {
+    "file": "audio/takes/U3-kdHZyUiGyaZdPjXLYYRM.mp3",
+    "sha256": "5012c0b9bfa71003166095fa7313b5dda018e2e438ea92e01d4496ee0c5cc99b"
+   },
+   {
+    "file": "audio/takes/U3-wHyDYsORg8CPVCEyK5eh.mp3",
+    "sha256": "39c7a8726e89cd6e90b1dbb6175d64049cddb6f93a24fc6319d223ef98af7a59"
+   },
+   {
+    "file": "public/audio/short-mix.wav",
+    "sha256": "f46501ab670e0395d249bf83293fe3a1bf389c98942df02cdfbcbb528e45329d"
+   }
+  ],
+  "lastStop": "delivered v1.0.0; checks pass",
+  "next": "human listen to the three words in review/pronunciation.json; phone review"
+ }
+}

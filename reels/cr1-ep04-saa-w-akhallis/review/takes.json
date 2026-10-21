@@ -1,0 +1,122 @@
+{
+ "note": "acoustic proxy for listening, overruled by the independent Whisper check where it heard a fault; a person must still listen to the chosen takes",
+ "median": {
+  "rate": 2.24,
+  "f0": 139.15,
+  "lufs": -17.25
+ },
+ "picked": {
+  "U1": "uegWMwLlw4YuEi3Lmzv5",
+  "U2": "2lDzZOxkTQXyJD03J81b",
+  "U3": "oAzsPB3nQ2rZTMDtWbrx"
+ },
+ "reasons": {
+  "U1": "fewest misheard words in both models (large-v3 WER 0.029); the acoustic favourite drops «عنده» and «و» in «وأخلّصها». Both takes give «ثلاثة» as «ثلاه»: a listen",
+  "U2": "acoustic favourite, and the lower WER in both models",
+  "U3": "lower WER in both models (0.032); the other take drops «و» in «وأخلّصها». Both give «الظهر» as «الهر»: a listen"
+ },
+ "takes": {
+  "U1": {
+   "0OxIpMvxRBUYmd3lUOww": {
+    "dur": 18.08,
+    "lead": 0.0,
+    "tail": 0.0,
+    "pauses": 8,
+    "longest": 0.38,
+    "expected": 9,
+    "rate": 2.16,
+    "lufs": -17.4,
+    "tp": -2.9,
+    "clip": 0,
+    "jumps": 2,
+    "f0": 133.3,
+    "f0sd": 5.02,
+    "score": 6.434
+   },
+   "uegWMwLlw4YuEi3Lmzv5": {
+    "dur": 17.84,
+    "lead": 0.0,
+    "tail": 0.0,
+    "pauses": 8,
+    "longest": 0.39,
+    "expected": 9,
+    "rate": 2.18,
+    "lufs": -17.4,
+    "tp": -3.4,
+    "clip": 0,
+    "jumps": 3,
+    "f0": 132.2,
+    "f0sd": 5.23,
+    "score": 6.321
+   }
+  },
+  "U2": {
+   "2lDzZOxkTQXyJD03J81b": {
+    "dur": 31.36,
+    "lead": 0.0,
+    "tail": 0.22,
+    "pauses": 14,
+    "longest": 0.34,
+    "expected": 15,
+    "rate": 2.31,
+    "lufs": -17.2,
+    "tp": -2.0,
+    "clip": 0,
+    "jumps": 3,
+    "f0": 140.4,
+    "f0sd": 5.38,
+    "score": 7.398
+   },
+   "lLnjlOPXTvlwKnlIYwqH": {
+    "dur": 31.76,
+    "lead": 0.0,
+    "tail": 0.3,
+    "pauses": 13,
+    "longest": 0.39,
+    "expected": 15,
+    "rate": 2.25,
+    "lufs": -17.1,
+    "tp": -2.9,
+    "clip": 0,
+    "jumps": 6,
+    "f0": 140.4,
+    "f0sd": 5.49,
+    "score": 6.168
+   }
+  },
+  "U3": {
+   "L15LVSJBm4zViRaURaVs": {
+    "dur": 16.16,
+    "lead": 0.0,
+    "tail": 0.24,
+    "pauses": 7,
+    "longest": 0.34,
+    "expected": 8,
+    "rate": 2.23,
+    "lufs": -17.2,
+    "tp": -1.5,
+    "clip": 0,
+    "jumps": 0,
+    "f0": 142.9,
+    "f0sd": 5.33,
+    "score": 7.302
+   },
+   "oAzsPB3nQ2rZTMDtWbrx": {
+    "dur": 15.84,
+    "lead": 0.0,
+    "tail": 0.3,
+    "pauses": 7,
+    "longest": 0.4,
+    "expected": 8,
+    "rate": 2.3,
+    "lufs": -17.3,
+    "tp": -1.9,
+    "clip": 0,
+    "jumps": 1,
+    "f0": 137.9,
+    "f0sd": 5.17,
+    "score": 6.713
+   }
+  }
+ }
+}

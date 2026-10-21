@@ -1,0 +1,509 @@
+{
+ "file": "cr1-ep01_hatif-kitab_16x9_v1.0.0.mp4",
+ "bytes": 20027202,
+ "videoBitrate": 485923,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1920,
+  "height": 1080,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "13970",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189375"
+ },
+ "duration": {
+  "container": 232.853,
+  "timeline": 232.829,
+  "frames": 13970,
+  "framesExpected": 13970,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "truePeakDBTP": -4.5
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [
+  [
+   8.23,
+   3.78
+  ],
+  [
+   40.88,
+   4.0
+  ],
+  [
+   49.6,
+   6.05
+  ],
+  [
+   63.83,
+   4.48
+  ],
+  [
+   68.52,
+   3.78
+  ],
+  [
+   72.45,
+   9.87
+  ],
+  [
+   88.52,
+   6.87
+  ],
+  [
+   116.57,
+   3.95
+  ],
+  [
+   128.28,
+   3.02
+  ],
+  [
+   133.33,
+   3.58
+  ],
+  [
+   137.87,
+   5.48
+  ],
+  [
+   146.72,
+   3.25
+  ],
+  [
+   170.83,
+   4.55
+  ],
+  [
+   184.38,
+   3.02
+  ],
+  [
+   195.22,
+   3.5
+  ],
+  [
+   201.28,
+   4.5
+  ],
+  [
+   209.08,
+   5.37
+  ],
+  [
+   216.88,
+   3.47
+  ]
+ ],
+ "silencesOver0.8s": [
+  [
+   0.0,
+   0.84
+  ],
+  [
+   11.47,
+   12.79
+  ],
+  [
+   38.66,
+   40.1
+  ],
+  [
+   61.04,
+   62.23
+  ],
+  [
+   97.67,
+   99.2
+  ],
+  [
+   136.04,
+   137.55
+  ],
+  [
+   165.13,
+   166.56
+  ],
+  [
+   207.64,
+   209.19
+  ],
+  [
+   228.47,
+   232.85
+  ]
+ ],
+ "voiceOnsets": {
+  "lines": 8,
+  "found": 8,
+  "maxAbsOffset": 0.001,
+  "detail": [
+   {
+    "id": "L1",
+    "planned": 1.239,
+    "measured": 1.23933,
+    "offset": 0.0
+   },
+   {
+    "id": "L2",
+    "planned": 12.786,
+    "measured": 12.7869,
+    "offset": 0.001
+   },
+   {
+    "id": "L3",
+    "planned": 40.1,
+    "measured": 40.1002,
+    "offset": 0.0
+   },
+   {
+    "id": "L4",
+    "planned": 62.231,
+    "measured": 62.232,
+    "offset": 0.001
+   },
+   {
+    "id": "L5",
+    "planned": 99.204,
+    "measured": 99.2026,
+    "offset": -0.001
+   },
+   {
+    "id": "L6",
+    "planned": 137.553,
+    "measured": 137.553,
+    "offset": 0.0
+   },
+   {
+    "id": "L7",
+    "planned": 166.561,
+    "measured": 166.561,
+    "offset": 0.0
+   },
+   {
+    "id": "L8",
+    "planned": 209.188,
+    "measured": 209.188,
+    "offset": 0.0
+   }
+  ],
+  "afterPause": {
+   "words": 35,
+   "maxAbsOffset": 0.004,
+   "detail": [
+    {
+     "seg": "L1",
+     "i": 3,
+     "w": "اليوم",
+     "planned": 2.858,
+     "measured": 2.85719,
+     "offset": -0.001
+    },
+    {
+     "seg": "L1",
+     "i": 5,
+     "w": "لكن",
+     "planned": 4.217,
+     "measured": 4.21742,
+     "offset": 0.0
+    },
+    {
+     "seg": "L1",
+     "i": 11,
+     "w": "قبل",
+     "planned": 7.798,
+     "measured": 7.79673,
+     "offset": -0.001
+    },
+    {
+     "seg": "L2",
+     "i": 3,
+     "w": "تجلس",
+     "planned": 14.674,
+     "measured": 14.674,
+     "offset": 0.0
+    },
+    {
+     "seg": "L2",
+     "i": 8,
+     "w": "الكتاب",
+     "planned": 17.631,
+     "measured": 17.6318,
+     "offset": 0.001
+    },
+    {
+     "seg": "L2",
+     "i": 29,
+     "w": "دقيقة",
+     "planned": 28.122,
+     "measured": 28.1231,
+     "offset": 0.001
+    },
+    {
+     "seg": "L2",
+     "i": 32,
+     "w": "فتقرر",
+     "planned": 29.531,
+     "measured": 29.5317,
+     "offset": 0.001
+    },
+    {
+     "seg": "L3",
+     "i": 18,
+     "w": "واللي",
+     "planned": 49.288,
+     "measured": 49.2838,
+     "offset": -0.004
+    },
+    {
+     "seg": "L4",
+     "i": 2,
+     "w": "أول",
+     "planned": 63.612,
+     "measured": 63.6126,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 7,
+     "w": "مثل",
+     "planned": 66.533,
+     "measured": 66.5347,
+     "offset": 0.002
+    },
+    {
+     "seg": "L4",
+     "i": 10,
+     "w": "بعدها",
+     "planned": 68.277,
+     "measured": 68.2785,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 11,
+     "w": "رغبة:",
+     "planned": 69.07,
+     "measured": 69.0693,
+     "offset": -0.001
+    },
+    {
+     "seg": "L4",
+     "i": 16,
+     "w": "وبعدها",
+     "planned": 72.249,
+     "measured": 72.2499,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 17,
+     "w": "فعل:",
+     "planned": 73.142,
+     "measured": 73.1437,
+     "offset": 0.002
+    },
+    {
+     "seg": "L4",
+     "i": 18,
+     "w": "تمد",
+     "planned": 73.901,
+     "measured": 73.902,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 22,
+     "w": "الإشارة",
+     "planned": 76.222,
+     "measured": 76.2226,
+     "offset": 0.001
+    },
+    {
+     "seg": "L4",
+     "i": 30,
+     "w": "والهاتف",
+     "planned": 80.293,
+     "measured": 80.2941,
+     "offset": 0.001
+    },
+    {
+     "seg": "L5",
+     "i": 6,
+     "w": "ما",
+     "planned": 102.243,
+     "measured": 102.244,
+     "offset": 0.001
+    },
+    {
+     "seg": "L5",
+     "i": 12,
+     "w": "نغيّر",
+     "planned": 104.992,
+     "measured": 104.993,
+     "offset": 0.001
+    },
+    {
+     "seg": "L5",
+     "i": 14,
+     "w": "الكتاب",
+     "planned": 106.481,
+     "measured": 106.481,
+     "offset": 0.0
+    },
+    {
+     "seg": "L5",
+     "i": 27,
+     "w": "والهاتف",
+     "planned": 111.89,
+     "measured": 111.892,
+     "offset": 0.002
+    },
+    {
+     "seg": "L5",
+     "i": 33,
+     "w": "الآن",
+     "planned": 114.816,
+     "measured": 114.816,
+     "offset": 0.0
+    },
+    {
+     "seg": "L6",
+     "i": 4,
+     "w": "ظهور",
+     "planned": 139.431,
+     "measured": 139.431,
+     "offset": 0.0
+    },
+    {
+     "seg": "L7",
+     "i": 4,
+     "w": "أولًا:",
+     "planned": 169.711,
+     "measured": 169.712,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 5,
+     "w": "اختر",
+     "planned": 170.513,
+     "measured": 170.514,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 11,
+     "w": "مثل",
+     "planned": 173.314,
+     "measured": 173.315,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 16,
+     "w": "ثانيًا:",
+     "planned": 175.643,
+     "measured": 175.642,
+     "offset": -0.001
+    },
+    {
+     "seg": "L7",
+     "i": 23,
+     "w": "ثالثًا:",
+     "planned": 179.955,
+     "measured": 179.956,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 31,
+     "w": "وكل",
+     "planned": 184.156,
+     "measured": 184.157,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 33,
+     "w": "اسأل",
+     "planned": 185.152,
+     "measured": 185.153,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 41,
+     "w": "ما",
+     "planned": 189.227,
+     "measured": 189.228,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 52,
+     "w": "علامة",
+     "planned": 194.993,
+     "measured": 194.994,
+     "offset": 0.001
+    },
+    {
+     "seg": "L7",
+     "i": 59,
+     "w": "وإذا",
+     "planned": 198.698,
+     "measured": 198.698,
+     "offset": 0.0
+    },
+    {
+     "seg": "L8",
+     "i": 7,
+     "w": "لكن",
+     "planned": 213.039,
+     "measured": 213.04,
+     "offset": 0.001
+    },
+    {
+     "seg": "L8",
+     "i": 14,
+     "w": "ما",
+     "planned": 217.033,
+     "measured": 217.033,
+     "offset": 0.0
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1920x1080": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "voice lines start on time (≤ 1 frame)": true,
+  "words after a pause on time (≤ 1 frame)": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

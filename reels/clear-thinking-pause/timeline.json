@@ -1,0 +1,150 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 49.523,
+  "durationInFrames": 1486,
+  "measured": true,
+  "source": "take-XJcITRwV6AaOxD9u2N2x.mp3",
+  "voice": "voice/voice.wav",
+  "voiceSeconds": 47.742,
+  "voiceLUFS": -14.2,
+  "voiceTruePeak": -2.0,
+  "lead": 0.25,
+  "hold": 1.9,
+  "gainDb": 3.6,
+  "beats": [
+    {
+      "before": "s05:ارجع",
+      "seconds": 0.6,
+      "pause": [
+        28.181,
+        28.454
+      ],
+      "cutAt": 28.317
+    },
+    {
+      "before": "s08:اكتب",
+      "seconds": 0.4,
+      "pause": [
+        40.433,
+        40.738
+      ],
+      "cutAt": 40.585
+    }
+  ],
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "sc1",
+      "start": 0.25,
+      "end": 2.172
+    },
+    {
+      "id": "s02",
+      "sceneId": "sc2",
+      "start": 2.549,
+      "end": 9.607
+    },
+    {
+      "id": "s03",
+      "sceneId": "sc3",
+      "start": 9.954,
+      "end": 14.889
+    },
+    {
+      "id": "s04",
+      "sceneId": "sc4",
+      "start": 15.309,
+      "end": 23.566
+    },
+    {
+      "id": "s05",
+      "sceneId": "sc5",
+      "start": 23.878,
+      "end": 30.911
+    },
+    {
+      "id": "s06",
+      "sceneId": "sc6",
+      "start": 31.224,
+      "end": 35.881
+    },
+    {
+      "id": "s07",
+      "sceneId": "sc6",
+      "start": 36.229,
+      "end": 41.249
+    },
+    {
+      "id": "s08",
+      "sceneId": "sc7",
+      "start": 41.955,
+      "end": 45.536
+    },
+    {
+      "id": "s09",
+      "sceneId": "sc7",
+      "start": 45.781,
+      "end": 47.623
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "sc1",
+      "start": 0.0,
+      "speechStart": 0.25,
+      "speechEnd": 2.172,
+      "end": 2.361,
+      "seconds": 2.361
+    },
+    {
+      "sceneId": "sc2",
+      "start": 2.361,
+      "speechStart": 2.549,
+      "speechEnd": 9.607,
+      "end": 9.78,
+      "seconds": 7.419
+    },
+    {
+      "sceneId": "sc3",
+      "start": 9.78,
+      "speechStart": 9.954,
+      "speechEnd": 14.889,
+      "end": 15.099,
+      "seconds": 5.319
+    },
+    {
+      "sceneId": "sc4",
+      "start": 15.099,
+      "speechStart": 15.309,
+      "speechEnd": 23.566,
+      "end": 23.722,
+      "seconds": 8.623
+    },
+    {
+      "sceneId": "sc5",
+      "start": 23.722,
+      "speechStart": 23.878,
+      "speechEnd": 30.911,
+      "end": 31.068,
+      "seconds": 7.346
+    },
+    {
+      "sceneId": "sc6",
+      "start": 31.068,
+      "speechStart": 31.224,
+      "speechEnd": 41.249,
+      "end": 41.602,
+      "seconds": 10.534
+    },
+    {
+      "sceneId": "sc7",
+      "start": 41.602,
+      "speechStart": 41.955,
+      "speechEnd": 47.623,
+      "end": 49.523,
+      "seconds": 7.921
+    }
+  ]
+}

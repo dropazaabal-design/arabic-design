@@ -1,0 +1,43 @@
+{
+  "provider": "ElevenLabs (claude.ai connector)",
+  "model_id": "eleven_v4",
+  "voice_id": "dlGxemPxFMTY7iXagmOj",
+  "voice_name_reported_by_service": "Fernando Martínez - Rapid, Persuasive",
+  "why_this_voice": "the voice the channel owner approved by ear for Kitab wa Bas (recorded in this repo's history: reels/fikra-01-influence, sample-notes and checkpoint)",
+  "flow_id": "Jqa2B7LQUxyjXJSvXqDF",
+  "node_id": "uptFQGHgXVNhs7ErcbOQ",
+  "generations_count": 4,
+  "credits": 2004,
+  "prompt_file": "audio/take.prompt.txt",
+  "prompt_sha256": "7dfccf920184b54825b9e0c644e462c41a2155fa6374852e6cbfd04e1b45267e",
+  "prompt_vs_locked": "identical once diacritics are removed; the only addition is the shadda in «المسوَّدات»",
+  "takes": [
+    {
+      "generation_id": "J2nMXfK4BnNLXLW5Nlxa",
+      "file": "audio/take-J2nMXfK4BnNLXLW5Nlxa.mp3",
+      "sha256": "607aabf0ca491bac0e34cda67c9d4a5e18de392b7b33b7ad2f7da8e97b69175a",
+      "whisper_medium": "hook clean; «شين بارش», «انتلقائية», «وبتعد», «ما زل»"
+    },
+    {
+      "generation_id": "3xAucPJRs5kaoxys3EDh",
+      "file": "audio/take-3xAucPJRs5kaoxys3EDh.mp3",
+      "sha256": "a6457c54894a7c97850a2c91aa10d3d062a2ae725fdabb4da887f00b139f32a0",
+      "whisper_medium": "hook heard «ترسيها»; «انطلقائية», «في مسودات», «وبتعد»"
+    },
+    {
+      "generation_id": "RlBQVJfmNltixi7n16An",
+      "file": "audio/take-RlBQVJfmNltixi7n16An.mp3",
+      "sha256": "adf361286b0feb80b1b8b82fb39bdcbb51c5d145fb87997d9a2ab4b1512412bb",
+      "whisper_medium": "«ضيقتك», «انتلقائية», «في مسودات», «وبتعد», «إفسالة»"
+    },
+    {
+      "generation_id": "XJcITRwV6AaOxD9u2N2x",
+      "file": "audio/take-XJcITRwV6AaOxD9u2N2x.mp3",
+      "sha256": "b03d6cc9a0cb4dd9d16362354bb1d9a11438de4c41808a87a074b6f07c408cfe",
+      "whisper_medium": "hook clean; only «ما زل» and «بارش» (spelling); large-v3: every word matches the locked script"
+    }
+  ],
+  "chosen": "XJcITRwV6AaOxD9u2N2x",
+  "post": "tools/align.py: two silences lengthened inside natural pauses (0.6 s before «ارجع», 0.4 s before «اكتب»), one gain to -14 LUFS, true-peak limiter at -2 dBTP. No speed or pitch change.",
+  "listened": "no — checks are Whisper (word intelligibility) and measurements only; nobody has listened to it yet"
+}
