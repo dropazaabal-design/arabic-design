@@ -1,0 +1,59 @@
+{
+ "method": "cross-correlation of the export against the timeline mix, per voice line",
+ "lines": [
+  {
+   "seg": "R1",
+   "start": 0.386,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R2",
+   "start": 5.454,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R3",
+   "start": 9.586,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R4",
+   "start": 16.201,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R5",
+   "start": 20.889,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R6",
+   "start": 27.95,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R7",
+   "start": 36.24,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R8",
+   "start": 42.455,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R9",
+   "start": 50.133,
+   "lagMs": 0.0
+  },
+  {
+   "seg": "R10",
+   "start": 54.935,
+   "lagMs": 0.0
+  }
+ ],
+ "maxAbsLagMs": 0.0,
+ "withinOneFrame": true,
+ "exportSeconds": 59.2,
+ "timelineSeconds": 59.19
+}

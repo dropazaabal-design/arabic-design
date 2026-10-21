@@ -1,0 +1,714 @@
+{
+ "file": "cr1-ep05_farasha_9x16_v1.0.0.mp4",
+ "bytes": 26898193,
+ "videoBitrate": 3433603,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "60/1",
+  "avg_frame_rate": "60/1",
+  "nb_frames": "3551",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "profile": "LC",
+  "sample_rate": "48000",
+  "channels": 2,
+  "bit_rate": "189375"
+ },
+ "duration": {
+  "container": 59.2,
+  "timeline": 59.19,
+  "frames": 3551,
+  "framesExpected": 3551,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.1,
+  "truePeakDBTP": -4.5
+ },
+ "decodeErrors": [],
+ "black": [],
+ "holdsOver3s": [],
+ "silencesOver0.8s": [
+  [
+   57.82,
+   59.2
+  ]
+ ],
+ "voiceOnsets": {
+  "method": "silence edge (−45 dB, ≥ 0.12 s) nearest each planned onset. masked = a sound effect is still sounding at the onset (the edge would be the effect); shortPause = the pause before the word is under the detector minimum; notFound = no edge within the window. Only measured onsets are judged.",
+  "lines": {
+   "total": 10,
+   "measured": 1,
+   "masked": 9,
+   "notFound": 0,
+   "shortPause": 0,
+   "maxAbsOffsetMs": 1.0,
+   "withinOneFrame": 1,
+   "within14ms": 1,
+   "detail": [
+    {
+     "id": "R1",
+     "planned": 0.386,
+     "status": "masked",
+     "maskedBy": "scribble"
+    },
+    {
+     "id": "R2",
+     "planned": 5.454,
+     "status": "masked",
+     "maskedBy": "note_b"
+    },
+    {
+     "id": "R3",
+     "planned": 9.586,
+     "status": "masked",
+     "maskedBy": "typing"
+    },
+    {
+     "id": "R4",
+     "planned": 16.201,
+     "status": "measured",
+     "measured": 16.2023,
+     "offset": 0.001
+    },
+    {
+     "id": "R5",
+     "planned": 20.889,
+     "status": "masked",
+     "maskedBy": "door"
+    },
+    {
+     "id": "R6",
+     "planned": 27.95,
+     "status": "masked",
+     "maskedBy": "note_c"
+    },
+    {
+     "id": "R7",
+     "planned": 36.24,
+     "status": "masked",
+     "maskedBy": "chalk"
+    },
+    {
+     "id": "R8",
+     "planned": 42.455,
+     "status": "masked",
+     "maskedBy": "wind"
+    },
+    {
+     "id": "R9",
+     "planned": 50.133,
+     "status": "masked",
+     "maskedBy": "note_b"
+    },
+    {
+     "id": "R10",
+     "planned": 54.935,
+     "status": "masked",
+     "maskedBy": "flutter"
+    }
+   ]
+  },
+  "wordsAfterPause": {
+   "total": 68,
+   "measured": 0,
+   "masked": 17,
+   "notFound": 7,
+   "shortPause": 44,
+   "maxAbsOffsetMs": null,
+   "withinOneFrame": 0,
+   "within14ms": 0,
+   "detail": [
+    {
+     "seg": "R1",
+     "i": 2,
+     "w": "ونفس",
+     "planned": 1.581,
+     "pause": 0.351,
+     "status": "masked",
+     "maskedBy": "scribble"
+    },
+    {
+     "seg": "R1",
+     "i": 3,
+     "w": "الجهاز…",
+     "planned": 2.03,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 5,
+     "w": "طقس",
+     "planned": 3.51,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "whoosh"
+    },
+    {
+     "seg": "R1",
+     "i": 6,
+     "w": "ثاني",
+     "planned": 3.87,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R1",
+     "i": 7,
+     "w": "تمامًا.",
+     "planned": 4.27,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 1,
+     "w": "لورنز،",
+     "planned": 5.88,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 4,
+     "w": "كان",
+     "planned": 7.6,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "typing"
+    },
+    {
+     "seg": "R2",
+     "i": 7,
+     "w": "على",
+     "planned": 8.52,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R2",
+     "i": 8,
+     "w": "كمبيوتر.",
+     "planned": 8.76,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 1,
+     "w": "يعيد",
+     "planned": 9.96,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 2,
+     "w": "جزءًا",
+     "planned": 10.32,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "typing"
+    },
+    {
+     "seg": "R3",
+     "i": 3,
+     "w": "من",
+     "planned": 10.68,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 4,
+     "w": "الحسبة،",
+     "planned": 10.84,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 6,
+     "w": "الأرقام",
+     "planned": 11.96,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 7,
+     "w": "من",
+     "planned": 12.52,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 10,
+     "w": "تقرّب",
+     "planned": 14.12,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "typing"
+    },
+    {
+     "seg": "R3",
+     "i": 11,
+     "w": "لثلاث",
+     "planned": 14.68,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R3",
+     "i": 13,
+     "w": "بس.",
+     "planned": 15.56,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 1,
+     "w": "تشغيل…",
+     "planned": 16.8,
+     "pause": 0.28,
+     "status": "masked",
+     "maskedBy": "hum"
+    },
+    {
+     "seg": "R4",
+     "i": 2,
+     "w": "وراح",
+     "planned": 17.838,
+     "pause": 0.518,
+     "status": "masked",
+     "maskedBy": "hum"
+    },
+    {
+     "seg": "R4",
+     "i": 3,
+     "w": "يشرب",
+     "planned": 18.14,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R4",
+     "i": 4,
+     "w": "قهوة.",
+     "planned": 18.54,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 1,
+     "w": "بعد",
+     "planned": 21.28,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 3,
+     "w": "الخطّان",
+     "planned": 22.635,
+     "pause": 0.475,
+     "status": "masked",
+     "maskedBy": "pageflip"
+    },
+    {
+     "seg": "R5",
+     "i": 4,
+     "w": "مشوا",
+     "planned": 23.29,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R5",
+     "i": 5,
+     "w": "سوا…",
+     "planned": 23.57,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 7,
+     "w": "تفرّقوا،",
+     "planned": 24.69,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 9,
+     "w": "ما",
+     "planned": 25.81,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 10,
+     "w": "بقي",
+     "planned": 25.97,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R5",
+     "i": 11,
+     "w": "بينهم",
+     "planned": 26.33,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "note_a"
+    },
+    {
+     "seg": "R5",
+     "i": 12,
+     "w": "شبه.",
+     "planned": 26.69,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 1,
+     "w": "نظام",
+     "planned": 28.17,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 2,
+     "w": "مثل",
+     "planned": 28.49,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 5,
+     "w": "الصغير",
+     "planned": 29.85,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 6,
+     "w": "يكبر",
+     "planned": 30.33,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 7,
+     "w": "مع",
+     "planned": 30.81,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 8,
+     "w": "الوقت.",
+     "planned": 30.97,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 10,
+     "w": "كذا",
+     "planned": 32.01,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 11,
+     "w": "ما",
+     "planned": 32.41,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "chalk"
+    },
+    {
+     "seg": "R6",
+     "i": 13,
+     "w": "نتوقعه",
+     "planned": 32.93,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 14,
+     "w": "بدقة",
+     "planned": 33.49,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R6",
+     "i": 15,
+     "w": "لأبعد",
+     "planned": 34.01,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 16,
+     "w": "من",
+     "planned": 34.49,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R6",
+     "i": 18,
+     "w": "تقريبًا.",
+     "planned": 35.13,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 1,
+     "w": "جا",
+     "planned": 36.71,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 2,
+     "w": "اسم",
+     "planned": 37.03,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "chalk"
+    },
+    {
+     "seg": "R7",
+     "i": 3,
+     "w": "«تأثير",
+     "planned": 37.35,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "whoosh"
+    },
+    {
+     "seg": "R7",
+     "i": 4,
+     "w": "الفراشة»:",
+     "planned": 37.95,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R7",
+     "i": 5,
+     "w": "هل",
+     "planned": 39.181,
+     "pause": 0.471,
+     "status": "masked",
+     "maskedBy": "flutter"
+    },
+    {
+     "seg": "R7",
+     "i": 6,
+     "w": "رفرفة",
+     "planned": 39.4,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 9,
+     "w": "تطلق",
+     "planned": 40.6,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 11,
+     "w": "في",
+     "planned": 41.56,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R7",
+     "i": 12,
+     "w": "تكساس؟",
+     "planned": 41.72,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R8",
+     "i": 1,
+     "w": "لورنز:",
+     "planned": 42.92,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R8",
+     "i": 5,
+     "w": "تساعد",
+     "planned": 44.72,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "wind"
+    },
+    {
+     "seg": "R8",
+     "i": 6,
+     "w": "في",
+     "planned": 45.16,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R8",
+     "i": 9,
+     "w": "تساعد",
+     "planned": 46.36,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R8",
+     "i": 10,
+     "w": "في",
+     "planned": 46.84,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R8",
+     "i": 11,
+     "w": "منعه.",
+     "planned": 47.08,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R8",
+     "i": 15,
+     "w": "نعرف.",
+     "planned": 48.76,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R9",
+     "i": 2,
+     "w": "ما",
+     "planned": 51.04,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R9",
+     "i": 3,
+     "w": "ظهرت",
+     "planned": 51.36,
+     "pause": 0.16,
+     "status": "masked",
+     "maskedBy": "note_a"
+    },
+    {
+     "seg": "R9",
+     "i": 4,
+     "w": "على",
+     "planned": 51.72,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "note_a"
+    },
+    {
+     "seg": "R9",
+     "i": 5,
+     "w": "ورقة…",
+     "planned": 51.96,
+     "pause": 0.12,
+     "status": "masked",
+     "maskedBy": "note_a"
+    },
+    {
+     "seg": "R9",
+     "i": 7,
+     "w": "فهمنا",
+     "planned": 53.12,
+     "pause": 0.08,
+     "status": "shortPause"
+    },
+    {
+     "seg": "R10",
+     "i": 2,
+     "w": "تفصيلة",
+     "planned": 55.69,
+     "pause": 0.12,
+     "status": "notFound"
+    },
+    {
+     "seg": "R10",
+     "i": 3,
+     "w": "غيّرت",
+     "planned": 56.29,
+     "pause": 0.16,
+     "status": "notFound"
+    },
+    {
+     "seg": "R10",
+     "i": 4,
+     "w": "يومك؟",
+     "planned": 56.77,
+     "pause": 0.08,
+     "status": "shortPause"
+    }
+   ]
+  }
+ },
+ "checks": {
+  "h264 + yuv420p progressive": true,
+  "1080x1920": true,
+  "60 fps constant": true,
+  "BT.709 tags": true,
+  "AAC-LC 48 kHz": true,
+  "fast start (moov first)": true,
+  "full decode, no errors": true,
+  "frames = timeline": true,
+  "loudness −16 ±1 LUFS": true,
+  "true peak ≤ −4 dBTP": true,
+  "no black frames": true,
+  "measured line starts within one frame (16.7 ms)": true,
+  "measured line starts within the 14 ms target": true,
+  "measured words after a pause within one frame": true,
+  "measured words after a pause within the 14 ms target": true
+ },
+ "pass": true,
+ "flags": "holds over 3 s and silences over 0.8 s open a review mark (CR1 §9); each is listed for a person to judge",
+ "note": "measurements only; nothing here proves how the film looks or sounds to a person"
+}

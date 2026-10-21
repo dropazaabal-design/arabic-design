@@ -1,0 +1,41 @@
+{
+ "episode": 5,
+ "version": "1.0.0",
+ "written": "2026-10-21T13:54:30+00:00",
+ "deliverables": [
+  {
+   "file": "export/cr1-ep05_farasha_9x16_v1.0.0.ar.srt",
+   "bytes": 2136,
+   "sha256": "6110725e470e9ce714b38b02dc723ad29314c5daa1c390d60a1c220a3820dc03",
+   "version": "1.0.0",
+   "inputsFingerprint": "b404107d5e0c6666677d187eb9afd442056522210cc4e3b8344a0b1f899cc323",
+   "report": null
+  },
+  {
+   "file": "export/cr1-ep05_farasha_9x16_v1.0.0.mp4",
+   "bytes": 26898193,
+   "sha256": "e9e331fbd7b147ac1a00b9c25bc456d58d3d0c7894df3d7621f9b1aa337f5108",
+   "version": "1.0.0",
+   "inputsFingerprint": "b404107d5e0c6666677d187eb9afd442056522210cc4e3b8344a0b1f899cc323",
+   "report": "review/cr1-ep05_farasha_9x16_v1.0.0.json"
+  }
+ ],
+ "state": {
+  "approvedInputs": [
+   {
+    "file": "script-short.md",
+    "sha256": "a987ad0e15a21be3171139ff5fbcdf031f438aa836fc9cb3e5bce4475a11db8f"
+   },
+   {
+    "file": "audio/takes/U1-yITcEdHUUYnpinCUoyV9.mp3",
+    "sha256": "265090e8b96ebbd3f8755af715684b96c742e28f6f37aa5a6d5cb53e8a02af0a"
+   },
+   {
+    "file": "public/audio/short-mix.wav",
+    "sha256": "a34dca6ac179b28f73f150ce809f3490f4c0e147e245f0f3804c803dbb4e7990"
+   }
+  ],
+  "lastStop": "final render v1.0.0 verified; three words flagged for a human listen",
+  "next": "human listen to ثلاث/ظهرت/تكساس; publish on explicit order"
+ }
+}
