@@ -17,7 +17,8 @@ const C = {
 const CLIFF = { x1: 420, top: 1260 }, PILLAR = { x0: 640, x1: 940, top: 1360 }, TOWER = { cx: 790, w: 256, row: 32 };
 const GOAL = { x: 760, y: 236 };
 const S = 1.15, HERO_X = 790;
-const CROWD = [40, 105, 170, 235, 300, 365];
+// spaced so the bricks they hold overhead (drawn at their scale) never cover a neighbour's word
+const CROWD = [0, 92, 172, 252, 332, 414];
 const at = (s: number) => Math.round(s * 60);
 type Cam = { x: number; y: number; z: number };
 const camMix = (a: Cam, b: Cam, t: number): Cam => ({ x: mix(a.x, b.x, t), y: mix(a.y, b.y, t), z: mix(a.z, b.z, t) });
@@ -41,12 +42,13 @@ const Sky: React.FC<{ c: Cam }> = ({ c }) => (
 
 const Brick: React.FC<{ word?: string; flip?: number }> = ({ word, flip = 0 }) => {
   const sy = Math.cos(flip * Math.PI);
+  const w = word ? Math.max(64, word.length * 7.6 + 16) : 64; // long words get a longer brick, never spill off it
   return (
     <g transform={`scale(1 ${Math.abs(sy) < 0.05 ? 0.05 : sy})`}>
-      <rect x={-32} y={-15} width={64} height={30} rx={4} fill={C.brick} stroke={C.brickLine} strokeWidth={2} />
-      <rect x={-30} y={-13} width={60} height={6} rx={3} fill={C.brickTop} />
-      {word && sy > 0 && <foreignObject x={-48} y={-14} width={96} height={30}>
-        <div dir="rtl" lang="ar" style={{ fontFamily: BODY, fontWeight: 700, fontSize: word.length > 6 ? 13 : 16, color: C.word, textAlign: 'center', lineHeight: '28px', whiteSpace: 'nowrap' }}>{word}</div>
+      <rect x={-w / 2} y={-15} width={w} height={30} rx={4} fill={C.brick} stroke={C.brickLine} strokeWidth={2} />
+      <rect x={-w / 2 + 2} y={-13} width={w - 4} height={6} rx={3} fill={C.brickTop} />
+      {word && sy > 0 && <foreignObject x={-w / 2} y={-14} width={w} height={30}>
+        <div dir="rtl" lang="ar" style={{ fontFamily: BODY, fontWeight: 700, fontSize: word && word.length > 6 ? 14 : 15, color: C.word, textAlign: 'center', lineHeight: '28px', whiteSpace: 'nowrap' }}>{word}</div>
       </foreignObject>}
     </g>
   );
@@ -118,11 +120,11 @@ const Laughs: React.FC<{ f: number; c: Cam }> = ({ f, c }) => <>{B.laughs.map((t
   if (o <= 0) return null;
   const wx = CROWD[(k * 2 + 1) % CROWD.length] + 30, wy = CLIFF.top - 470 - (k % 2) * 60;
   const sx = (wx - c.x) * c.z + W / 2, sy = (wy - c.y) * c.z + H / 2;
-  return <div key={k} dir="rtl" lang="ar" style={{ position: 'absolute', left: sx - 160, top: sy - 60, width: 320, textAlign: 'center', fontFamily: TITLE, fontWeight: 800,
+  return <div key={k} dir="rtl" lang="ar" style={{ position: 'absolute', left: Math.max(40, Math.min(W - 360, sx - 160)), top: sy - 60, width: 320, textAlign: 'center', fontFamily: TITLE, fontWeight: 800,
     fontSize: 70 + (k % 3) * 16, color: C.text, opacity: o, transform: `rotate(${(k % 2 ? -1 : 1) * 8}deg) scale(${mix(0.6, 1, o)})` }}>{k % 2 ? 'ههههه' : 'ههههههه'}</div>;
 })}</>;
 
-const WORDS = ['فاشل', 'مستحيل', 'ما بتقدر', 'انسَ', 'حلم', 'خلّك واقعي'];
+const WORDS = ['خلّك واقعي', 'فاشل', 'مستحيل', 'حلم', 'انسَ', 'ما بتقدر']; // the long ones at the ends of the line
 type Throw = { t: number; who: number };
 // every throw the crowd makes: the first volley, the brick he catches, then the ones he builds with (flight 0.5 s)
 const THROWS: Throw[] = [...B.volley.map((v) => ({ t: v.t0, who: v.who })), { t: B.catch.arrive - 0.55, who: 5 }, ...B.riseThrows.map((t, k) => ({ t: t - 0.5, who: (k * 5 + 1) % 6 }))];
@@ -184,22 +186,23 @@ export const ReelA: React.FC = () => {
   const wristN: [number, number] = [heroX - hj.armN.wrist[0] * S, heroY + hj.armN.wrist[1] * S];
 
   // ——— crowd (faces +x) ———
-  const crowdPose = (i: number): { p: Pose; eyes: 'laugh' | 'open' | 'shock'; brick?: string; side?: boolean } => {
+  const crowdPose = (i: number): { p: Pose; eyes: 'laugh' | 'open' | 'shock'; brick?: string } => {
     const word = WORDS[i % WORDS.length];
     const k = Math.sin(f / 4 + i * 1.3);
     const front = i % 2 ? pose({ shF: 84, elF: 4 }) : pose({ handF: [28, -136] }); // pointing, or holding his belly
-    if (f < at(1.7)) return { p: { ...front, lean: -8 + 6 * k, head: -12 + 8 * k, bob: 3 * Math.abs(k), handN: [-6, -302] }, eyes: 'laugh', brick: word };
+    if (f < at(1.7)) return { p: { ...front, lean: -8 + 6 * k, head: -12 + 8 * k, bob: 3 * Math.abs(k), handN: [-6, -300] }, eyes: 'laugh', brick: word };
     if (f < at(B.silent.stop)) {
       const mine = THROWS.filter((q) => q.who === i).map((q) => at(q.t));
       const t = mine.find((q) => q + 16 > f);
       const wind = t === undefined ? 0 : prog(f, t - 12, 9) * (1 - prog(f, t - 3, 3));
       const rel = t === undefined ? 0 : prog(f, t - 3, 4) * (1 - prog(f, t + 6, 10));
-      const hand: [number, number] = [mix(mix(-6, -40, wind), RELEASE[0], rel), mix(mix(-302, -286, wind), RELEASE[1], rel)];
+      const up = -300;
+      const hand: [number, number] = [mix(mix(-6, -40, wind), RELEASE[0], rel), mix(mix(up, up + 16, wind), RELEASE[1], rel)];
       const fading = f > at(R.to) - 40;
       return { p: { ...front, lean: -5 + 3 * k + 10 * rel, head: -12, handN: hand }, eyes: fading ? 'open' : 'laugh', brick: t !== undefined && f >= t - 1 && f < t + 18 ? undefined : word };
     }
     if (i === 5 && f >= at(St.climb)) return { p: pose(), eyes: 'open' };
-    return { p: pose({ head: -24 - (i % 2) * 6, shF: 6, elF: 8, shN: -4, elN: 6 }), eyes: 'shock', brick: i === 2 ? undefined : word, side: true };
+    return { p: pose({ head: -24 - (i % 2) * 6, shF: 6, elF: 8, shN: -4, elN: 6 }), eyes: 'shock' }; // empty-handed now; «فاشل» slips from one hand
   };
   // the first of them climbs: up the ladder a little way before the end
   const L1: [number, number] = [CLIFF.x1 - 30, CLIFF.top + 2];
@@ -268,8 +271,8 @@ export const ReelA: React.FC = () => {
   const fallen = B.volley.filter((v) => f / 60 > v.t0 + v.dur && v.to[1] === 1340 && v.to[0] > PILLAR.x0 + 30).map((v, k) => <g key={k} transform={`translate(${v.to[0]} ${PILLAR.top - 15}) rotate(${k % 2 ? 8 : -6})`}><Brick /></g>);
   // the brick that slips from a silenced hand
   const dropT = prog(f, at(B.silent.drop), 16, ease.in);
-  const dropped = f >= at(B.silent.drop) - 1 && f < at(St.walk) ? <g transform={`translate(${CROWD[2] + 30} ${mix(CLIFF.top - 110, CLIFF.top - 15, dropT)}) rotate(${dropT * 40})`}><Brick word="فاشل" /></g> : null;
-  const lying = f >= at(St.walk) ? <g transform={`translate(${CROWD[2] + 30} ${CLIFF.top - 15}) rotate(40)`}><Brick word="فاشل" /></g> : null;
+  const dropped = f >= at(B.silent.drop) - 1 && f < at(St.walk) ? <g transform={`translate(${CROWD[1] + 30} ${mix(CLIFF.top - 110, CLIFF.top - 15, dropT)}) rotate(${dropT * 40})`}><Brick word="فاشل" /></g> : null;
+  const lying = f >= at(St.walk) ? <g transform={`translate(${CROWD[1] + 30} ${CLIFF.top - 15}) rotate(40)`}><Brick word="فاشل" /></g> : null;
 
   const world = (
     <g transform={`translate(${W / 2 + shake} ${H / 2}) scale(${c.z}) translate(${-c.x} ${-c.y})`}>
@@ -281,9 +284,8 @@ export const ReelA: React.FC = () => {
       {lying}
       {CROWD.map((x, i) => {
         if (i === 5 && f >= at(St.climb)) return <g key={i} filter="url(#eyeglow)"><Figure p={climber.p} x={climber.at[0]} y={climber.at[1]} s={S} eyes="open" color={C.ink} eyeColor={C.eye} look={[0.5, -1]} /></g>;
-        const { p, eyes, brick, side } = crowdPose(i);
-        const pp = side ? { ...p, handN: [6, -96] as [number, number] } : p;
-        return <g key={i} filter="url(#eyeglow)"><Figure p={pp} x={x} y={CLIFF.top} s={S} facing={1} eyes={eyes} color={C.ink} eyeColor={C.eye} look={eyes === 'shock' ? [0.6, -0.8] : [0.6, 0]} held={{ N: brick ? <Brick word={brick} /> : undefined }} /></g>;
+        const { p, eyes, brick } = crowdPose(i);
+        return <g key={i} filter="url(#eyeglow)"><Figure p={p} x={x} y={CLIFF.top} s={S} facing={1} eyes={eyes} color={C.ink} eyeColor={C.eye} look={eyes === 'shock' ? [0.6, -0.8] : [0.6, 0]} held={{ N: brick ? <Brick word={brick} /> : undefined }} /></g>;
       })}
       <g filter="url(#eyeglow)"><Figure p={hp} x={heroX} y={heroY} s={S} facing={-1} eyes="open" color={C.ink} eyeColor={C.eye} look={f >= grab && f < at(St.kneel) ? [0.4, -0.6] : [0.8, 0.2]} held={{ F: heldBrick }} /></g>
       {flying}

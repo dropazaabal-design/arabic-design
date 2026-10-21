@@ -145,7 +145,9 @@ export const ReelB: React.FC = () => {
       const t = at(s);
       gp = mixPose(mixPose(mixPose(gp, push, prog(f, t - 10, 10, ease.in)), toss, prog(f, t + 4, 12)), raise, prog(f, t + 18, 10));
     }
-    gp = { ...gp, head: mix(gp.head, -2, prog(f, at(D.ask), 10)) };
+    // he hears the question, turns to the boy, and laughs softly (never quite still)
+    const heard = prog(f, at(D.ask), 10), chuckle = prog(f, at(D.smile), 8) * Math.sin((f - at(D.smile)) / 4) * 3;
+    gp = { ...gp, head: mix(gp.head, -2, heard) + chuckle, lean: gp.lean + heard * (2 * Math.sin(f / 13) + chuckle * 0.6), bob: chuckle * 0.5 };
   } else if (f < at(P.stand)) {
     const pat = f >= at(P.pat) && f < at(P.jug) ? Math.abs(Math.sin((f - at(P.pat)) / 3)) * 10 : 0;
     const k = mixPose(raise, kneel, prog(f, at(P.kneel), 12));
@@ -168,7 +170,7 @@ export const ReelB: React.FC = () => {
   let bp: Pose = pose({ bob: boyRun.bob + boyStep.bob, footF: f < at(D.boyAt) ? boyRun.footF : boyStep.footF, footN: f < at(D.boyAt) ? boyRun.footN : boyStep.footN, shF: 30 * Math.sin(f / 4), shN: -30 * Math.sin(f / 4) });
   let bEyes: 'open' | 'laugh' | 'closed' = 'open';
   if (f >= at(D.boyAt) && f < at(D.ask)) { const k = Math.sin((f - at(D.laugh)) / 3.5); bp = pose({ lean: -10 + 4 * k, head: -8 + 6 * k, handF: [30, -130], shN: 60, elN: 10 }); bEyes = 'laugh'; }
-  else if (f >= at(D.ask) && f < at(P.boyStep)) bp = pose({ head: -16, shF: 24, elF: 40, shN: -10, elN: 20 });
+  else if (f >= at(D.ask) && f < at(P.boyStep)) bp = pose({ head: -16 + 3 * Math.sin(f / 9), lean: 2 * Math.sin(f / 11), shF: 24 + 6 * Math.sin(f / 7), elF: 40, shN: -10, elN: 20 });
   else if (f >= at(P.boyStep) + 14 && f < at(Y.from)) { bp = pose({ head: -18, shF: 6, elF: 8 }); if (f >= at(P.pet)) bEyes = 'closed'; }
   let yHeld: { F?: React.ReactNode; N?: React.ReactNode } = {};
   let caneTop: [number, number] | null = null, caneTip: [number, number] | null = null;
@@ -232,7 +234,7 @@ export const ReelB: React.FC = () => {
 
   // ——— cameras ———
   const cams: Record<string, Cam> = {
-    dig: camMix(view(496, 1.95), view(500, 2.02), local('dig')),
+    dig: camMix(view(492, 1.95), view(506, 2.12), ease.inOut(local('dig'))),
     plant: camMix(view(530, 2.3), view(532, 2.38), local('plant')),
     years: camMix(view(520, 1.9), view(520, 0.95), ease.inOut(local('years'))),
     shade: camMix(view(560, 1.5), view(562, 1.56), local('shade')),
