@@ -462,7 +462,7 @@ export const SHOTS: Record<number, ShotRender> = {
     return <Stage over={<Cap text="يلاحظ أبكر" o={c.p(late - 4, 12)} top={940} size={58} />}>
       <Paper seed={126} />
       {days.map((d, i) => {
-        const s0 = 34 + i * 22, appear = c.p(c.at('الأيام') - 20 + i * 8, 14, ease.back);
+        const s0 = 34 + i * 22, appear = c.p(i * 6, 14, ease.back);
         const fill = Math.min(lv[i], Math.max(0, c.f - s0) * v);
         return <g key={d} opacity={Math.min(1, appear)}>
           <Gauge x={xs[i]} y={Y} h={H} fill={fill} />
@@ -720,7 +720,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const p = pose({ sit: 1, turn, body: 0, head: k(c.f, [[0, 0], [know - 10, 8], [but + 50, 8], [but + 70, 0]]) + nod(c.f, but + 60, 1, 6), footR: [40, 0], footL: [50, 0], R: { hand: [Lh[0] * 0 + Rh[0], Rh[1]], bend: 1 }, L: { hand: Lh, bend: -1 } });
     const fc = faceAt(c.f, [[0, 'calm'], [know, { ...EXPRESSIONS.thinking, look: [0.5, 0.5] }, 12], [yes, face('calm', { look: [0.5, 0.6] }), 10], [when, { ...EXPRESSIONS.thinking, look: [-0.5, 0.5] }, 12], [but, face('calm', { mouth: 0.5, look: [-0.5, 0.6] }), 10], [but + 60, face('calm', { mouth: 0.55, look: [0, 0] }), 16]]);
     const actor = (only: string[]) => <Actor f={c.f} seed={41} who="salim" x={X} y={Y} s={S} facing={1} pose={{ p, hands: { R: 'grip', L: 'grip' } }} face={fc} hold={{ R: <Stamp color={PAL.focus} />, L: <Stamp color={PAL.calm} /> }} upright={{ R: true, L: true }} only={only} />;
-    return <Stage cam={{ x: 960, y: 590, z: 1.5 }}>
+    return <Stage cam={{ x: 960, y: 505, z: 1.6 }}>
       <OfficeFront />
       {actor(['Torso', 'Head', 'RightLeg', 'LeftLeg'])}
       <DeskSlab />
@@ -845,8 +845,8 @@ export const SHOTS: Record<number, ShotRender> = {
   },
   // 140 — not every comment deserves a reply: comments flow up; only two take a reply arrow (the first on «يستحق»).
   140: (c) => {
-    const kinds = ['plain', 'hostile', 'hostile', 'plain', 'hostile', 'reply', 'hostile', 'reply', 'hostile', 'plain'] as const;
-    const v = 5, line0 = 560, y0 = kinds.map((_, i) => 245 + i * 160);
+    const kinds = ['plain', 'hostile', 'hostile', 'plain', 'hostile', 'reply', 'hostile', 'reply', 'hostile', 'plain', 'hostile', 'hostile', 'plain', 'hostile'] as const;
+    const v = 5, line0 = 480, y0 = kinds.map((_, i) => 245 + i * 140);
     return <Stage over={<Cap text="ليس كل تعليق يستحق ردًا" o={c.p(c.at('فليس') - 4, 12)} top={40} size={58} />}>
       <Paper seed={140} />
       {kinds.map((kd, i) => {
