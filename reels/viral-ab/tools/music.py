@@ -160,8 +160,8 @@ def reverb(x, d=1.8, wet=0.25):
 
 
 class Mix:
-    def __init__(self, d):
-        self.L = np.zeros(int(d * SR) + SR)
+    def __init__(self, d, tail=1.0):
+        self.L = np.zeros(int((d + tail) * SR))
         self.R = np.zeros_like(self.L)
         self.d = d
 
@@ -173,12 +173,18 @@ class Mix:
         self.L[s:s + len(sig)] += sig * np.cos((pan + 1) * np.pi / 4)
         self.R[s:s + len(sig)] += sig * np.sin((pan + 1) * np.pi / 4)
 
-    def out(self, name, rev=0.22):
+    def out(self, name, rev=0.22, loop=False):
         n = int(self.d * SR)
-        L, R = reverb(self.L, wet=rev)[:n], reverb(self.R, wet=rev)[:n]
-        fade = int(0.25 * SR)
-        L[-fade:] *= np.linspace(1, 0, fade)
-        R[-fade:] *= np.linspace(1, 0, fade)
+        L, R = reverb(self.L, wet=rev), reverb(self.R, wet=rev)
+        if loop:  # whatever rings past the end comes in at the start, so the last sample flows into the first
+            for x in (L, R):
+                x[:len(x) - n] += x[n:]
+            L, R = L[:n], R[:n]
+        else:
+            L, R = L[:n], R[:n]
+            fade = int(0.25 * SR)
+            L[-fade:] *= np.linspace(1, 0, fade)
+            R[-fade:] *= np.linspace(1, 0, fade)
         st = np.stack([L, R], 1)
         st /= np.abs(st).max() * 1.05
         raw = root / f'audio/{name}-raw.wav'
@@ -383,6 +389,88 @@ def score_b():
     m.out('b', 0.28)
 
 
+# ——— C ———
+def knock(k):
+    """Hammer on rock: a dull body and a short stone click, a little different every time."""
+    r = np.random.default_rng(k)
+    y = kick(150 + 60 * r.random(), 62, 0.22, 0.0) * 0.8
+    click = band(noise(0.05), 1200, 5000) * np.exp(-tt(0.05) * 90) * 0.9
+    y[:len(click)] += click
+    return y
+
+
+def score_c():
+    b = json.loads((root / 'src/c/beats.json').read_text(encoding='utf-8'))
+    m = Mix(b['duration'], tail=10.0)
+    hits, T, I, J = b['hits'], b['text'], b['impact'], b['journey']
+    kurd = ['D3', 'Eb3', 'F3', 'G3', 'A3', 'Bb3', 'C4', 'D4', 'Eb4', 'F4', 'G4', 'A4', 'Bb4', 'C5', 'D5', 'Eb5', 'F5', 'G5', 'A5', 'Bb5', 'C6', 'D6', 'Eb6', 'F6', 'G6']
+    oud = lambda t, n, d=1.4, g=0.5, pan=0.1: m.add(t, pluck(hz(n), d, 0.35, 0.995), g, pan)
+    # the drone (Kurd on D) starts at 15 s and runs on past the end: wrapped, it is what plays from frame 0 until the silence
+    m.add(15.0, pad([hz('D2'), hz('A2'), hz('D3')], b['duration'] - 15.0 + 8.7, 0.6, 0.25), 0.45)
+    # strikes: three slow ones, each answered by a low note that goes nowhere
+    for k, (t, n) in enumerate(zip(hits[:3], ['D3', 'D3', 'Eb3'])):
+        m.add(t, knock(k), 1.0, -0.15)
+        oud(t + 0.02, n, 1.6, 0.45)
+    # the montage: strikes quicken into a roll; every fourth climbs one step of Kurd; a drum every eighth
+    for k, t in enumerate(hits[3:100], start=3):
+        m.add(t, knock(k), 0.75 - 0.35 * (k / 100), -0.15 + 0.1 * np.sin(k))
+        if k % 4 == 0:
+            oud(t, kurd[min(len(kurd) - 1, k // 4)], 0.8, 0.32)
+        if k % 8 == 0:
+            m.add(t, dum(), 0.45)
+    d = 8.6 - 3.55
+    x = tt(d)
+    m.add(3.55, band(noise(d), 300, 6000) * (x / d) ** 3 * 0.45, 1.0)
+    m.add(3.55, pad([hz('D3'), hz('A3')], d, 1.5, 0.02), 0.3)
+    for k in range(5):  # a night falls five times
+        m.add(3.55 + d * (k + 0.5) / 5 - 0.3, whoosh(0.6, 150, 1800), 0.18, -0.5 + 0.25 * k)
+    oud(T['said'], 'A3', 0.9, 0.4, 0.5)
+    oud(T['said'] + 0.35, 'G3', 1.2, 0.4, 0.5)
+    # silence: wind, two breaths, a heartbeat, and the swell into the last strike
+    m.add(8.62, band(noise(1.3), 150, 900) * env(int(1.3 * SR), 0.2, 0.4), 0.06)
+    for t in (8.95, 9.45):
+        m.add(t, band(noise(0.45), 300, 1600) * np.sin(np.linspace(0, np.pi, int(0.45 * SR))) ** 2, 0.12)
+    for t in (9.15, 9.62):
+        m.add(t, kick(70, 40, 0.3, 0.0), 0.28)
+        m.add(t + 0.16, kick(65, 40, 0.25, 0.0), 0.2)
+    sw = tt(0.45)
+    m.add(9.9 - 0.45, band(noise(0.45), 400, 8000) * (sw / 0.45) ** 4 * 0.7, 1.0)
+    m.add(hits[100], impact(3.0), 1.0)
+    m.add(hits[100], knock(100), 1.0)
+    # the crack runs through every chip, then over the wall: dense stone ticks and a rising glassy shimmer
+    for t in np.sort(np.random.default_rng(3).uniform(I['crack1'], I['fall'], 140)):
+        m.add(t, tick(2500 + 3500 * np.random.default_rng(int(t * 1000)).random(), 0.02), 0.25, np.random.default_rng(int(t * 997)).uniform(-0.7, 0.7))
+    d = I['fall'] - I['crack1']
+    m.add(I['crack1'], sum(np.sin(2 * np.pi * np.cumsum(f0 * (1 + tt(d) / d)) / SR) for f0 in (880, 1320, 1760)) * (tt(d) / d) ** 2 * 0.12, 1.0)
+    # the fall and the colour: rumble, and the music turns from Kurd to Ajam (D major)
+    r = tt(2.2)
+    m.add(I['fall'], band(noise(2.2), 30, 220) * np.exp(-r * 1.6) * 1.2, 1.0)
+    m.add(I['fall'], impact(2.2), 0.6)
+    m.add(I['fall'], pad([hz('D3'), hz('F#3'), hz('A3'), hz('D4')], 15.2 - I['fall'], 0.05, 0.9), 0.65)
+    for k, n in enumerate(['D5', 'F#5', 'A5', 'D6']):
+        m.add(I['fall'] + 0.04 + k * 0.08, bell(hz(n), 1.6, 2.0), 0.3, -0.3 + 0.2 * k)
+    beat = 60 / 96 / 2
+    pat, t, k = ['D', '', 'T', '', 'D', 'D', 'T', ''], I['fall'] + 0.4, 0
+    while t < J['walk'] + 1.4:
+        if pat[k % 8] == 'D':
+            m.add(t, dum(), 0.42, -0.1)
+        elif pat[k % 8] == 'T':
+            m.add(t, tak(), 0.3, 0.2)
+        k += 1
+        t += beat
+    for k, n in enumerate(['A4', '', 'B4', 'C#5', 'D5', '', 'C#5', 'B4', 'A4', '', 'D5']):
+        if n:
+            oud(I['fall'] + 0.4 + k * beat, n, 1.2, 0.45)
+    m.add(T['last'], bell(hz('A5'), 1.4, 2.2), 0.28)
+    m.add(T['before'], bell(hz('D6'), 1.8, 1.8), 0.32)
+    # the road on, and the hammer raised again
+    for k in range(int((J['arrive'] - J['walk']) / 0.22)):
+        m.add(J['walk'] + k * 0.22, step(), 0.4, -0.3)
+    m.add(J['raise'], whoosh(0.35, 400, 3000), 0.3)
+    m.out('c', 0.26, loop=True)
+
+
 if __name__ == '__main__':
     score_a()
     score_b()
+    score_c()

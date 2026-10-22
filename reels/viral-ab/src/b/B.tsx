@@ -15,7 +15,7 @@ const C = {
   dunesFar: '#3A2C5A', dunes: '#271F42', ground: '#17122A', ink: '#0A0812', eye: '#F7EEF5', notch: '#1C1530',
   date: '#8A3460', water: '#B9C6F2', soil: '#0F0B1C', text: '#FBF3F8', textDim: '#D9C2D6', bubble: '#FBF3F8',
 };
-const GY = 1480, PALM = 500, HOLE2 = 894, S = 1.12, KID = 0.62;
+const GY = 1480, GROUND = GY, PALM = 500, HOLE2 = 894, S = 1.12, KID = 0.62;
 const at = (s: number) => Math.round(s * 60);
 type Cam = { x: number; y: number; z: number };
 const camMix = (a: Cam, b: Cam, t: number): Cam => ({ x: mix(a.x, b.x, t), y: mix(a.y, b.y, t), z: mix(a.z, b.z, t) });
@@ -48,7 +48,7 @@ const Sky: React.FC<{ c: Cam; night: number }> = ({ c, night }) => (
 );
 
 /** A date palm at growth g (0 = an offshoot of a few fronds, 1 = grown, with dates). */
-const Palm: React.FC<{ x: number; g: number; dates?: number }> = ({ x, g, dates = 0 }) => {
+export const Palm: React.FC<{ x: number; g: number; dates?: number; y?: number }> = ({ x, g, dates = 0, y: GY = GROUND }) => {
   const h = 560 * Math.max(0, g - 0.06) / 0.94;
   const wb = 8 + 18 * g, wt = 6 + 9 * g, lean = 26 * g;
   const top: [number, number] = [x + lean, GY - h];

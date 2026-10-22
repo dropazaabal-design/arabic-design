@@ -1,0 +1,7931 @@
+{
+ "film": "الهدوء الحقيقي ليس كبتًا للمشاعر",
+ "fps": 60,
+ "width": 1920,
+ "height": 1080,
+ "frames": 42650,
+ "seconds": 710.836,
+ "shots": [
+  {
+   "id": 1,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 1,
+   "text": "في اجتماع الصباح، وقف سليم يعرض فكرته على الفريق.",
+   "speech": [
+    0.0,
+    4.014
+   ],
+   "frames": {
+    "from": 0,
+    "to": 248,
+    "count": 248,
+    "key": 157
+   },
+   "time": [
+    0.0,
+    4.133
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر",
+     "هادي",
+     "زميل",
+     "زميلة",
+     "منى"
+    ],
+    "props": [
+     "سبورة",
+     "طاولة",
+     "أوراق"
+    ],
+    "frame": "عامة، مستوى العين",
+    "expr": "سليم: يشرح؛ الفريق: منصت",
+    "action": "سليم واقف عند السبورة يعرض، ينقر الرسم البياني عند «فكرته»؛ هادي يومئ",
+    "cut": "يبدأ الفيلم؛ قطع",
+    "goal": "المكان والناس وسليم في موقع العرض"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot001",
+   "characters": [
+    {
+     "who": "mona",
+     "svg": "characters/mona/full-stand.svg"
+    },
+    {
+     "who": "att1",
+     "svg": "characters/att1/full-stand.svg"
+    },
+    {
+     "who": "hadi",
+     "svg": "characters/hadi/full-stand.svg"
+    },
+    {
+     "who": "att2",
+     "svg": "characters/att2/full-stand.svg"
+    },
+    {
+     "who": "jaser",
+     "svg": "characters/jaser/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "فكرته",
+     "time": 2.552
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 1,
+     "at": "فكرته",
+     "sfx": "tap",
+     "gain": 0.5
+    }
+   ],
+   "preview": "previews/shots/001.png"
+  },
+  {
+   "id": 2,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 2,
+   "text": "وفي منتصف الجملة، قاطعه جاسر: لنكن واقعيين… هذه الفكرة لن تنجح.",
+   "speech": [
+    4.314,
+    10.032
+   ],
+   "frames": {
+    "from": 248,
+    "to": 609,
+    "count": 361,
+    "key": 482
+   },
+   "time": [
+    4.133,
+    10.15
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "جاسر",
+     "سليم"
+    ],
+    "props": [
+     "طاولة",
+     "قلم"
+    ],
+    "frame": "متوسطة لاثنين من جهة سليم",
+    "expr": "جاسر: متعالٍ ثم ازدراء؛ سليم: مندهش",
+    "action": "جاسر يميل للخلف ويرفع إصبعه عند «قاطعه»، فمه يتكلم على الاقتباس؛ يد سليم تتجمد في الهواء",
+    "cut": "قطع",
+    "goal": "لحظة المقاطعة ومن قاطع من"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot002",
+   "characters": [
+    {
+     "who": "jaser",
+     "svg": "characters/jaser/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    },
+    {
+     "component": "Say",
+     "source": "src/film/engine.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "قاطعه",
+     "time": 5.989
+    },
+    {
+     "word": "لنكن",
+     "time": 6.979
+    },
+    {
+     "word": "هذه",
+     "time": 7.794
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 2,
+     "at": "قاطعه",
+     "sfx": "swish",
+     "gain": 0.4
+    }
+   ],
+   "preview": "previews/shots/002.png"
+  },
+  {
+   "id": 3,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 3,
+   "text": "ضحك أحد الحضور، والتفت الباقون إلى سليم ينتظرون رده.",
+   "speech": [
+    10.332,
+    14.997
+   ],
+   "frames": {
+    "from": 609,
+    "to": 907,
+    "count": 298,
+    "key": 802
+   },
+   "time": [
+    10.15,
+    15.117
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "زميل",
+     "زميلة",
+     "هادي",
+     "سليم"
+    ],
+    "props": [
+     "طاولة"
+    ],
+    "frame": "عكسية واسعة من خلف الطاولة",
+    "expr": "زميل: يضحك؛ الباقون: فضول",
+    "action": "الزميل يضحك وكتفاه تهتزان عند «ضحك»؛ الرؤوس تلتفت نحو سليم عند «والتفت»",
+    "cut": "قطع",
+    "goal": "الضغط الاجتماعي: الكل ينتظر"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot003",
+   "characters": [
+    {
+     "who": "jaser",
+     "svg": "characters/jaser/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "ضحك",
+     "time": 10.332
+    },
+    {
+     "word": "والتفت",
+     "time": 11.767
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 3,
+     "at": "ضحك",
+     "sfx": "laugh",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/003.png"
+  },
+  {
+   "id": 4,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 4,
+   "text": "ابتسم سليم، وجلس بهدوء، ولم يقل شيئًا.",
+   "speech": [
+    15.297,
+    18.892
+   ],
+   "frames": {
+    "from": 907,
+    "to": 1141,
+    "count": 234,
+    "key": 1058
+   },
+   "time": [
+    15.117,
+    19.017
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "كرسي",
+     "طاولة"
+    ],
+    "frame": "متوسطة على سليم",
+    "expr": "سليم: ابتسامة متكلفة، شفتان مضمومتان",
+    "action": "تظهر ابتسامة عند «ابتسم»، يعود ويجلس عند «وجلس»، يضم شفتيه عند «ولم يقل»",
+    "cut": "قطع",
+    "goal": "الاختيار الظاهري: يبتسم ويسكت"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot004",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "ابتسم",
+     "time": 15.297
+    },
+    {
+     "word": "وجلس",
+     "time": 16.397
+    },
+    {
+     "word": "ولم",
+     "time": 17.632
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 4,
+     "at": "وجلس",
+     "sfx": "chair",
+     "gain": 0.5,
+     "offset": 0.4
+    }
+   ],
+   "preview": "previews/shots/004.png"
+  },
+  {
+   "id": 5,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 5,
+   "text": "من الخارج، بدا رجلًا هادئًا يتحكم في نفسه.",
+   "speech": [
+    19.192,
+    22.825
+   ],
+   "frames": {
+    "from": 1141,
+    "to": 1377,
+    "count": 236,
+    "key": 1294
+   },
+   "time": [
+    19.017,
+    22.95
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "زميلة",
+     "هادي"
+    ],
+    "props": [
+     "طاولة"
+    ],
+    "frame": "متوسطة أمامية",
+    "expr": "سليم: ابتسامة متكلفة؛ الزميلة: إعجاب",
+    "action": "الزميلة تنظر إليه وتومئ مُعجبة بهدوئه؛ هادي يعود إلى أوراقه؛ سليم ثابت",
+    "cut": "قطع",
+    "goal": "ما يراه الآخرون: رجل هادئ"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot005",
+   "characters": [
+    {
+     "who": "att1",
+     "svg": "characters/att1/full-stand.svg"
+    },
+    {
+     "who": "att2",
+     "svg": "characters/att2/full-stand.svg"
+    },
+    {
+     "who": "hadi",
+     "svg": "characters/hadi/full-stand.svg"
+    },
+    {
+     "who": "jaser",
+     "svg": "characters/jaser/full-stand.svg"
+    },
+    {
+     "who": "mona",
+     "svg": "characters/mona/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "هادئًا",
+     "time": 20.855
+    }
+   ],
+   "sfx": [],
+   "preview": "previews/shots/005.png"
+  },
+  {
+   "id": 6,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 6,
+   "text": "لكن تحت الطاولة، كانت يده تضغط على القلم بكل قوته.",
+   "speech": [
+    23.125,
+    27.479
+   ],
+   "frames": {
+    "from": 1377,
+    "to": 1656,
+    "count": 279,
+    "key": 1558
+   },
+   "time": [
+    22.95,
+    27.6
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "تحت الطاولة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "قلم"
+    ],
+    "frame": "لقطة إدخال قريبة على اليد",
+    "expr": "—",
+    "action": "اليد تشد القلم عند «تضغط»، القلم ينحني قليلًا ويرتجف عند «بكل قوته»",
+    "cut": "قطع مطابق",
+    "goal": "التناقض: هدوء فوق وضغط تحت"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot006",
+   "characters": [],
+   "assets": [
+    {
+     "component": "BentPen",
+     "source": "src/scenes/b1.tsx (local)"
+    },
+    {
+     "component": "Hand",
+     "source": "src/kit/characters/hands.tsx"
+    },
+    {
+     "component": "UnderTable",
+     "source": "src/kit/places/UnderTable.tsx",
+     "svg": "backgrounds/under-table.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "تضغط",
+     "time": 25.319
+    },
+    {
+     "word": "بكل",
+     "time": 26.57
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 6,
+     "at": "تضغط",
+     "sfx": "click",
+     "gain": 0.5
+    },
+    {
+     "shot": 6,
+     "at": "بكل",
+     "sfx": "heart",
+     "gain": 0.45
+    }
+   ],
+   "preview": "previews/shots/006.png"
+  },
+  {
+   "id": 7,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 7,
+   "text": "وفي صدره، كان شيء يفور بلا صوت.",
+   "speech": [
+    27.779,
+    30.656
+   ],
+   "frames": {
+    "from": 1656,
+    "to": 1847,
+    "count": 191,
+    "key": 1779
+   },
+   "time": [
+    27.6,
+    30.783
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "غرفة الاجتماع (مجرّد)",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "دائرة الصدر"
+    ],
+    "frame": "متوسطة قريبة",
+    "expr": "سليم: هادئ ظاهريًا",
+    "action": "دائرة شفافة على صدره يدور داخلها لون وردي يفور عند «يفور»",
+    "cut": "قطع",
+    "goal": "ما لا يُرى: شعور يغلي"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot007",
+   "characters": [
+    {
+     "who": "att1",
+     "svg": "characters/att1/full-stand.svg"
+    },
+    {
+     "who": "att2",
+     "svg": "characters/att2/full-stand.svg"
+    },
+    {
+     "who": "hadi",
+     "svg": "characters/hadi/full-stand.svg"
+    },
+    {
+     "who": "jaser",
+     "svg": "characters/jaser/full-stand.svg"
+    },
+    {
+     "who": "mona",
+     "svg": "characters/mona/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "ChestSwirl",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "Meeting",
+     "source": "src/scenes/common.tsx",
+     "svg": "backgrounds/meeting-room.svg"
+    },
+    {
+     "component": "Vignette",
+     "source": "src/scenes/b1.tsx (local)"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "يفور",
+     "time": 29.432
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 7,
+     "at": "يفور",
+     "sfx": "boil",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/007.png"
+  },
+  {
+   "id": 8,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 8,
+   "text": "هذا ما نسميه أحيانًا هدوءًا… لكنه هدوء على السطح فقط.",
+   "speech": [
+    30.956,
+    35.765
+   ],
+   "frames": {
+    "from": 1847,
+    "to": 2153,
+    "count": 306,
+    "key": 2045
+   },
+   "time": [
+    30.783,
+    35.883
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "خط الماء"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: ابتسامة متكلفة",
+    "action": "خط أفقي يمر على صدره: فوقه وجه هادئ، تحته دوامة؛ تظهر عبارة «هدوء على السطح» عند «السطح»",
+    "cut": "مزج إلى البحيرة",
+    "goal": "تعريف الهدوء الظاهري"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot008",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Cap",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "ChestSwirl",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "Paper",
+     "source": "src/kit/props/Desk.tsx",
+     "svg": "assets/props/paper.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "هدوءًا…",
+     "time": 33.149
+    },
+    {
+     "word": "لكنه",
+     "time": 33.776
+    },
+    {
+     "word": "السطح",
+     "time": 34.936
+    }
+   ],
+   "sfx": [],
+   "preview": "previews/shots/008.png"
+  },
+  {
+   "id": 9,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 9,
+   "text": "مثل بحيرة ساكنة من فوق، وتحتها تيار يدور.",
+   "speech": [
+    36.065,
+    40.292
+   ],
+   "frames": {
+    "from": 2153,
+    "to": 2425,
+    "count": 272,
+    "key": 2329
+   },
+   "time": [
+    35.883,
+    40.417
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "البحيرة",
+    "chars": [],
+    "props": [
+     "بحيرة",
+     "تيار"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "سطح ساكن، ثم ينكشف المقطع تحت الماء عند «وتحتها» وتيار يدور عند «يدور»",
+    "cut": "مزج",
+    "goal": "الاستعارة الأساسية للفيلم"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot009",
+   "characters": [],
+   "assets": [
+    {
+     "component": "Lake",
+     "source": "src/kit/metaphors/Lake.tsx",
+     "svg": "assets/metaphors/lake.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "وتحتها",
+     "time": 38.455
+    },
+    {
+     "word": "تيار",
+     "time": 39.232
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 9,
+     "at": 0.2,
+     "sfx": "water",
+     "gain": 0.5
+    },
+    {
+     "shot": 9,
+     "at": "تيار",
+     "sfx": "whoosh",
+     "gain": 0.3
+    }
+   ],
+   "preview": "previews/shots/009.png"
+  },
+  {
+   "id": 10,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 10,
+   "text": "الهدوء الحقيقي لا يعني ألا تشعر.",
+   "speech": [
+    40.592,
+    43.604
+   ],
+   "frames": {
+    "from": 2425,
+    "to": 2623,
+    "count": 198,
+    "key": 2553
+   },
+   "time": [
+    40.417,
+    43.717
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "ضفة البحيرة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بحيرة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "سليم يقف على الضفة ويضع يده على صدره؛ موجة صغيرة في الماء تبقى تتحرك؛ عبارة «الهدوء الحقيقي»",
+    "cut": "قطع",
+    "goal": "الهدوء لا يلغي الشعور"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot010",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Cap",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Lake",
+     "source": "src/kit/metaphors/Lake.tsx",
+     "svg": "assets/metaphors/lake.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "الهدوء",
+     "time": 40.592
+    },
+    {
+     "word": "الحقيقي",
+     "time": 41.219
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 10,
+     "at": 0,
+     "sfx": "water",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/010.png"
+  },
+  {
+   "id": 11,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 11,
+   "text": "يعني أن تشعر، وتفهم ما تشعر به، ثم تختار كيف تتصرف.",
+   "speech": [
+    43.904,
+    48.522
+   ],
+   "frames": {
+    "from": 2623,
+    "to": 2919,
+    "count": 296,
+    "key": 2814
+   },
+   "time": [
+    43.717,
+    48.65
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "موجة الصدر",
+     "بطاقة",
+     "سهمان"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يشعر ← يفكر ← عازم",
+    "action": "ثلاث خطوات على الكلمات: الموجة تضيء عند «تشعر»، ينظر إليها وتظهر بطاقة عند «وتفهم»، يختار سهمًا من اثنين عند «تختار»",
+    "cut": "قطع",
+    "goal": "التعريف العملي في ثلاث خطوات"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot011",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "ChestSwirl",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "Floor",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "Paper",
+     "source": "src/kit/props/Desk.tsx",
+     "svg": "assets/props/paper.svg"
+    },
+    {
+     "component": "WLabel",
+     "source": "src/scenes/common.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "تشعر،",
+     "time": 44.602
+    },
+    {
+     "word": "وتفهم",
+     "time": 45.109
+    },
+    {
+     "word": "تختار",
+     "time": 46.968
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 11,
+     "at": "تختار",
+     "sfx": "pop",
+     "gain": 0.4
+    }
+   ],
+   "preview": "previews/shots/011.png"
+  },
+  {
+   "id": 12,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 12,
+   "text": "تعال نرافق سليم في أسبوع واحد…",
+   "speech": [
+    48.822,
+    51.593
+   ],
+   "frames": {
+    "from": 2919,
+    "to": 3103,
+    "count": 184,
+    "key": 3038
+   },
+   "time": [
+    48.65,
+    51.717
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "شريط الأيام",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سبعة أيام"
+    ],
+    "frame": "عامة جانبية",
+    "expr": "سليم: هادئ",
+    "action": "سبعة مربعات أيام تظهر واحدًا واحدًا، وسليم يمشي تحتها",
+    "cut": "قطع",
+    "goal": "وعد الحكاية: أسبوع واحد"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot012",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Cap",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Floor",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "Paper",
+     "source": "src/kit/props/Desk.tsx",
+     "svg": "assets/props/paper.svg"
+    },
+    {
+     "component": "WLabel",
+     "source": "src/scenes/common.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "أسبوع",
+     "time": 50.497
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 12,
+     "at": 0.15,
+     "sfx": "steps",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/012.png"
+  },
+  {
+   "id": 13,
+   "chapter": 1,
+   "chapterTitle": "هدوء على السطح",
+   "line": 13,
+   "text": "لنرى الفرق بين أن تكتم مشاعرك، وأن تتحكم في استجابتك دون أن تتخلى عن صوتك.",
+   "speech": [
+    51.893,
+    58.427
+   ],
+   "frames": {
+    "from": 3103,
+    "to": 3540,
+    "count": 437,
+    "key": 3369
+   },
+   "time": [
+    51.717,
+    59.0
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "شاشة مقسومة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "غطاء",
+     "فقاعة"
+    ],
+    "frame": "متوسطة لكل نصف",
+    "expr": "يمين: مضغوط؛ يسار: هادئ يتكلم",
+    "action": "يمين: سليم يكتم بيديه على صدره عند «تكتم»؛ يسار: سليم يتكلم بيد مفتوحة عند «استجابتك»؛ يظهر عنوان الفيلم في الوقفة",
+    "cut": "تلاشٍ إلى الفصل 2",
+    "goal": "سؤال الفيلم"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot013",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Cap",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "ChestSwirl",
+     "source": "src/scenes/common.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "تكتم",
+     "time": 53.398
+    },
+    {
+     "word": "استجابتك",
+     "time": 55.707
+    },
+    {
+     "word": "دون",
+     "time": 56.553
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 13,
+     "at": "تكتم",
+     "sfx": "breath_in",
+     "gain": 0.5
+    },
+    {
+     "shot": 13,
+     "at": "دون",
+     "sfx": "chime",
+     "gain": 0.45
+    }
+   ],
+   "preview": "previews/shots/013.png"
+  },
+  {
+   "id": 14,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 14,
+   "text": "انتهى الاجتماع، وخرج سليم إلى الشارع.",
+   "speech": [
+    59.227,
+    62.418
+   ],
+   "frames": {
+    "from": 3540,
+    "to": 3752,
+    "count": 212,
+    "key": 3678
+   },
+   "time": [
+    59.0,
+    62.533
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "الشارع مساءً",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حقيبة",
+     "باب المبنى"
+    ],
+    "frame": "عامة، تتبّع جانبي",
+    "expr": "سليم: متعب",
+    "action": "يخرج من باب المبنى عند «وخرج» ويمشي؛ الشارع ينزلق",
+    "cut": "قطع",
+    "goal": "نهاية اليوم ظاهريًا"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot014",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Street",
+     "source": "src/kit/places/Street.tsx",
+     "svg": "backgrounds/street.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "وخرج",
+     "time": 60.062
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 14,
+     "at": "وخرج",
+     "sfx": "door",
+     "gain": 0.45
+    },
+    {
+     "shot": 14,
+     "at": "الشارع",
+     "sfx": "steps",
+     "gain": 0.4
+    }
+   ],
+   "preview": "previews/shots/014.png"
+  },
+  {
+   "id": 15,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 15,
+   "text": "لكن الاجتماع لم ينته في رأسه.",
+   "speech": [
+    62.718,
+    65.615
+   ],
+   "frames": {
+    "from": 3752,
+    "to": 3944,
+    "count": 192,
+    "key": 3876
+   },
+   "time": [
+    62.533,
+    65.733
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "الشارع مساءً",
+    "chars": [
+     "سليم",
+     "جاسر (في الفكرة)"
+    ],
+    "props": [
+     "سحابة فكرة"
+    ],
+    "frame": "متوسطة تتبّع",
+    "expr": "سليم: منزعج",
+    "action": "سحابة فكرة فوق رأسه فيها مشهد مصغر للطاولة وجاسر يشير",
+    "cut": "قطع",
+    "goal": "الاجتماع مستمر في رأسه"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot015",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Character",
+     "source": "src/kit/characters/Character.tsx"
+    },
+    {
+     "component": "Replay",
+     "source": "src/scenes/b1.tsx (local)"
+    },
+    {
+     "component": "Street",
+     "source": "src/kit/places/Street.tsx",
+     "svg": "backgrounds/street.svg"
+    },
+    {
+     "component": "ThoughtCloud",
+     "source": "src/kit/props/Bubbles.tsx",
+     "svg": "assets/props/bubble-think.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "الاجتماع",
+     "time": 63.178
+    },
+    {
+     "word": "ينته",
+     "time": 64.298
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 15,
+     "at": 0,
+     "sfx": "steps",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/015.png"
+  },
+  {
+   "id": 16,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 16,
+   "text": "أعاد المشهد مرةً، ومرتين، وعشر مرات.",
+   "speech": [
+    65.915,
+    69.292
+   ],
+   "frames": {
+    "from": 3944,
+    "to": 4165,
+    "count": 221,
+    "key": 4087
+   },
+   "time": [
+    65.733,
+    69.417
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "إشارة المشاة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سحابة",
+     "رمز إعادة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منزعج",
+    "action": "المشهد في السحابة يُعاد ثلاث مرات مع علامة إعادة تدور عند «مرة» و«مرتين» و«عشر»",
+    "cut": "قطع",
+    "goal": "الاجترار"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot016",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Car",
+     "source": "src/scenes/b1.tsx (local)"
+    },
+    {
+     "component": "Character",
+     "source": "src/kit/characters/Character.tsx"
+    },
+    {
+     "component": "Replay",
+     "source": "src/scenes/b1.tsx (local)"
+    },
+    {
+     "component": "Rewind",
+     "source": "src/scenes/b1.tsx (local)"
+    },
+    {
+     "component": "Street",
+     "source": "src/kit/places/Street.tsx",
+     "svg": "backgrounds/street.svg"
+    },
+    {
+     "component": "ThoughtCloud",
+     "source": "src/kit/props/Bubbles.tsx",
+     "svg": "assets/props/bubble-think.svg"
+    },
+    {
+     "component": "WLabel",
+     "source": "src/scenes/common.tsx"
+    },
+    {
+     "component": "WalkSignal",
+     "source": "src/scenes/b1.tsx (local)"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "مرةً،",
+     "time": 67.009
+    },
+    {
+     "word": "ومرتين،",
+     "time": 67.435
+    },
+    {
+     "word": "وعشر",
+     "time": 68.235
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 16,
+     "at": "مرة",
+     "sfx": "rewind",
+     "gain": 0.45
+    },
+    {
+     "shot": 16,
+     "at": "ومرتين",
+     "sfx": "rewind",
+     "gain": 0.45
+    },
+    {
+     "shot": 16,
+     "at": "عشر",
+     "sfx": "rewind",
+     "gain": 0.5
+    },
+    {
+     "shot": 16,
+     "at": 0.3,
+     "sfx": "whoosh",
+     "gain": 0.3
+    }
+   ],
+   "preview": "previews/shots/016.png"
+  },
+  {
+   "id": 17,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 17,
+   "text": "وفي كل مرة، كان يؤلف ردًا أذكى من الذي قبله.",
+   "speech": [
+    69.592,
+    73.192
+   ],
+   "frames": {
+    "from": 4165,
+    "to": 4399,
+    "count": 234,
+    "key": 4316
+   },
+   "time": [
+    69.417,
+    73.317
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "موقف الحافلة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "موقف حافلة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: متعالٍ ثم يخبو",
+    "action": "يحرك شفتيه ويده كأنه يرد، يرفع إصبعه منتصرًا عند «أذكى» ثم تهبط يده",
+    "cut": "قطع",
+    "goal": "ردود متخيلة بلا فعل"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot017",
+   "characters": [
+    {
+     "who": "att3",
+     "svg": "characters/att3/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Phone",
+     "source": "src/kit/props/Phone.tsx",
+     "svg": "assets/props/phone-off.svg"
+    },
+    {
+     "component": "Street",
+     "source": "src/kit/places/Street.tsx",
+     "svg": "backgrounds/street.svg"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "أذكى",
+     "time": 71.669
+    }
+   ],
+   "sfx": [],
+   "preview": "previews/shots/017.png"
+  },
+  {
+   "id": 18,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 18,
+   "text": "وصل إلى البيت، فسألته أخته ريم: ما بك؟",
+   "speech": [
+    73.492,
+    76.845
+   ],
+   "frames": {
+    "from": 4399,
+    "to": 4618,
+    "count": 219,
+    "key": 4541
+   },
+   "time": [
+    73.317,
+    76.967
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "البيت",
+    "chars": [
+     "سليم",
+     "ريم"
+    ],
+    "props": [
+     "باب",
+     "كنبة"
+    ],
+    "frame": "عامة",
+    "expr": "ريم: قلقة؛ سليم: متعب",
+    "action": "الباب ينفتح ويدخل سليم؛ ريم على الكنبة ترفع رأسها وتسأل «ما بك؟»",
+    "cut": "قطع",
+    "goal": "فرصة للكلام"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot018",
+   "characters": [
+    {
+     "who": "reem",
+     "svg": "characters/reem/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "HomeLiving",
+     "source": "src/kit/places/HomeLiving.tsx",
+     "svg": "backgrounds/living-room.svg"
+    },
+    {
+     "component": "Phone",
+     "source": "src/kit/props/Phone.tsx",
+     "svg": "assets/props/phone-off.svg"
+    },
+    {
+     "component": "Say",
+     "source": "src/film/engine.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "ما",
+     "time": 76.327
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 18,
+     "at": 0.1,
+     "sfx": "door",
+     "gain": 0.45
+    },
+    {
+     "shot": 18,
+     "at": 0.6,
+     "sfx": "steps",
+     "gain": 0.35
+    }
+   ],
+   "preview": "previews/shots/018.png"
+  },
+  {
+   "id": 19,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 19,
+   "text": "قال: لا شيء، ودخل غرفته وأغلق الباب.",
+   "speech": [
+    77.145,
+    80.313
+   ],
+   "frames": {
+    "from": 4618,
+    "to": 4826,
+    "count": 208,
+    "key": 4752
+   },
+   "time": [
+    76.967,
+    80.433
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "البيت",
+    "chars": [
+     "سليم",
+     "ريم"
+    ],
+    "props": [
+     "باب الغرفة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: ابتسامة متكلفة؛ ريم: قلقة",
+    "action": "يقول «لا شيء» دون أن يتوقف، يدخل غرفته ويغلق الباب عند «وأغلق»",
+    "cut": "قطع",
+    "goal": "الصمت كإغلاق"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot019",
+   "characters": [
+    {
+     "who": "reem",
+     "svg": "characters/reem/full-stand.svg"
+    },
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "HomeLiving",
+     "source": "src/kit/places/HomeLiving.tsx",
+     "svg": "backgrounds/living-room.svg"
+    },
+    {
+     "component": "Phone",
+     "source": "src/kit/props/Phone.tsx",
+     "svg": "assets/props/phone-off.svg"
+    },
+    {
+     "component": "Say",
+     "source": "src/film/engine.tsx"
+    }
+   ],
+   "wordCues": [
+    {
+     "word": "لا",
+     "time": 78.03
+    },
+    {
+     "word": "وأغلق",
+     "time": 79.172
+    }
+   ],
+   "sfx": [
+    {
+     "shot": 19,
+     "at": "وأغلق",
+     "sfx": "bang",
+     "gain": 0.45
+    }
+   ],
+   "preview": "previews/shots/019.png"
+  },
+  {
+   "id": 20,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 20,
+   "text": "الصمت ليس مشكلةً في ذاته.",
+   "speech": [
+    80.613,
+    82.802
+   ],
+   "frames": {
+    "from": 4826,
+    "to": 4975,
+    "count": 149,
+    "key": 4922
+   },
+   "time": [
+    80.433,
+    82.917
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سرير",
+     "نافذة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: حزين",
+    "action": "يجلس على طرف السرير، يزفر وينظر إلى النافذة",
+    "cut": "قطع",
+    "goal": "الصمت نفسه محايد"
+   },
+   "code": "src/scenes/b1.tsx",
+   "built": true,
+   "composition": "Shot020",
+   "characters": [
+    {
+     "who": "salim",
+     "svg": "characters/salim/full-stand.svg"
+    }
+   ],
+   "assets": [
+    {
+     "component": "Actor",
+     "source": "src/film/engine.tsx"
+    },
+    {
+     "component": "Bedroom",
+     "source": "src/kit/places/Bedroom.tsx",
+     "svg": "backgrounds/bedroom.svg"
+    }
+   ],
+   "wordCues": [],
+   "sfx": [
+    {
+     "shot": 20,
+     "at": 0.1,
+     "sfx": "breath_out",
+     "gain": 0.6
+    }
+   ],
+   "preview": "previews/shots/020.png"
+  },
+  {
+   "id": 21,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 21,
+   "text": "أحيانًا يكون الصمت اختيارًا حكيمًا: تنتظر حتى تهدأ، أو حتى يأتي وقت أنسب للكلام.",
+   "speech": [
+    83.102,
+    90.221
+   ],
+   "frames": {
+    "from": 4975,
+    "to": 5420,
+    "count": 445,
+    "key": 5264
+   },
+   "time": [
+    82.917,
+    90.333
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "غرفة المعيشة",
+    "chars": [
+     "سليم",
+     "ريم"
+    ],
+    "props": [
+     "ساعة",
+     "موجة الصدر"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ ثم منصت",
+    "action": "يرفع كفه «لحظة» عند «تنتظر»، الموجة في صدره تهدأ، عقارب الساعة تتقدم عند «وقت أنسب»، ثم يجلس قرب ريم ليتكلم",
+    "cut": "قطع",
+    "goal": "الصمت كاختيار"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot021",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 22,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 22,
+   "text": "وأحيانًا يكون الصمت هروبًا: تسكت لأنك تخاف من المواجهة، أو من أن ترفض.",
+   "speech": [
+    90.521,
+    96.328
+   ],
+   "frames": {
+    "from": 5420,
+    "to": 5787,
+    "count": 367,
+    "key": 5658
+   },
+   "time": [
+    90.333,
+    96.45
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "ممر العمل",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "ظل كبير"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: قلق",
+    "action": "سليم يتجنب النظر ويتراجع خطوة عند «هروبًا»، ظل جاسر يكبر على الجدار عند «تخاف»",
+    "cut": "قطع",
+    "goal": "الصمت كهروب"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot022",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 23,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 23,
+   "text": "والفرق بينهما سؤال صغير: هل سكت لأنك اخترت الوقت؟",
+   "speech": [
+    96.628,
+    101.026
+   ],
+   "frames": {
+    "from": 5787,
+    "to": 6069,
+    "count": 282,
+    "key": 5970
+   },
+   "time": [
+    96.45,
+    101.15
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ميزان",
+     "ساعة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يفكر",
+    "action": "ميزان بكفّتين؛ سليم يضع ساعة في الكفة الأولى عند «اخترت الوقت»",
+    "cut": "قطع",
+    "goal": "السؤال الفارق"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot023",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 24,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 24,
+   "text": "أم لأنك لم تجرؤ على الكلام أصلًا؟",
+   "speech": [
+    101.326,
+    103.984
+   ],
+   "frames": {
+    "from": 6069,
+    "to": 6246,
+    "count": 177,
+    "key": 6183
+   },
+   "time": [
+    101.15,
+    104.1
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ميزان",
+     "قفل"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: قلق",
+    "action": "قفل صغير يسقط في الكفة الثانية عند «تجرؤ» فيميل الميزان",
+    "cut": "قطع",
+    "goal": "الطرف الآخر من السؤال"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot024",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 25,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 25,
+   "text": "الصمت الذي تختاره، يترك لك بابًا مفتوحًا لتعود وتتكلم.",
+   "speech": [
+    104.284,
+    109.037
+   ],
+   "frames": {
+    "from": 6246,
+    "to": 6549,
+    "count": 303,
+    "key": 6442
+   },
+   "time": [
+    104.1,
+    109.15
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "ممر البيت",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "باب موارب"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "باب موارب يتسرب منه ضوء؛ سليم يمسك المقبض عند «لتعود»",
+    "cut": "قطع",
+    "goal": "الصمت المختار يبقي الطريق"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot025",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 26,
+   "chapter": 2,
+   "chapterTitle": "صمت أم خوف؟",
+   "line": 26,
+   "text": "أما الصمت الذي تفرضه على نفسك، فيتراكم مع الأيام.",
+   "speech": [
+    109.337,
+    113.7
+   ],
+   "frames": {
+    "from": 6549,
+    "to": 6857,
+    "count": 308,
+    "key": 6730
+   },
+   "time": [
+    109.15,
+    114.283
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حقيبة ظهر",
+     "حجارة",
+     "تقويم"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: متعب",
+    "action": "كل يوم يسقط حجر في حقيبة ظهره عند «يتراكم»، فينحني أكثر",
+    "cut": "تلاشٍ إلى الفصل 3",
+    "goal": "الصمت المفروض يتراكم"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot026",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 27,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 27,
+   "text": "في الليل، وسليم متعب، وصلته رسالة من جاسر.",
+   "speech": [
+    114.5,
+    118.219
+   ],
+   "frames": {
+    "from": 6857,
+    "to": 7100,
+    "count": 243,
+    "key": 7015
+   },
+   "time": [
+    114.283,
+    118.333
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "منضدة",
+     "مصباح"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: متعب",
+    "action": "سليم يتثاءب على السرير؛ الهاتف يهتز ويضيء عند «رسالة»",
+    "cut": "قطع",
+    "goal": "التوقيت: تعب وليل"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot027",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 28,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 28,
+   "text": "أتمنى أن تكون فكرتك القادمة أفضل من فكرة اليوم.",
+   "speech": [
+    118.519,
+    122.813
+   ],
+   "frames": {
+    "from": 7100,
+    "to": 7376,
+    "count": 276,
+    "key": 7279
+   },
+   "time": [
+    118.333,
+    122.933
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [
+     "جاسر (اسم)"
+    ],
+    "props": [
+     "محادثة"
+    ],
+    "frame": "إدخال كامل للشاشة",
+    "expr": "—",
+    "action": "فقاعة رسالة جاسر تظهر وتُكتب كلمة كلمة مع الكلام",
+    "cut": "قطع",
+    "goal": "نص الحدث كما هو"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot028",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 29,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 29,
+   "text": "شعر سليم بالحرارة تصعد إلى وجهه.",
+   "speech": [
+    123.113,
+    126.016
+   ],
+   "frames": {
+    "from": 7376,
+    "to": 7568,
+    "count": 192,
+    "key": 7500
+   },
+   "time": [
+    122.933,
+    126.133
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف"
+    ],
+    "frame": "قريبة على الوجه",
+    "expr": "سليم: منزعج ثم غاضب",
+    "action": "حمرة تصعد من العنق إلى الوجه عند «تصعد»، الحاجبان ينخفضان",
+    "cut": "قطع",
+    "goal": "الانفعال في الجسد"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot029",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 30,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 30,
+   "text": "كتب ردًا طويلًا وحادًا… ثم مسحه.",
+   "speech": [
+    126.316,
+    129.046
+   ],
+   "frames": {
+    "from": 7568,
+    "to": 7750,
+    "count": 182,
+    "key": 7686
+   },
+   "time": [
+    126.133,
+    129.167
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "محادثة",
+     "مسودة"
+    ],
+    "frame": "إدخال الشاشة",
+    "expr": "—",
+    "action": "مسودة طويلة حادة تُكتب بسرعة، ثم تُمسح من آخرها عند «مسحه»",
+    "cut": "قطع",
+    "goal": "كتم الفعل"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot030",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 31,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 31,
+   "text": "وقال لنفسه: لا يهم. أنا لست غاضبًا.",
+   "speech": [
+    129.346,
+    132.486
+   ],
+   "frames": {
+    "from": 7750,
+    "to": 7956,
+    "count": 206,
+    "key": 7883
+   },
+   "time": [
+    129.167,
+    132.6
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "فقاعة فكرة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: ابتسامة متكلفة، ذراعان متشابكتان",
+    "action": "يضع الهاتف ويستلقي ويشبك ذراعيه؛ فقاعة «لا يهم» عند «لا يهم»",
+    "cut": "قطع",
+    "goal": "الإنكار"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot031",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 32,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 32,
+   "text": "لكنه كان غاضبًا.",
+   "speech": [
+    132.786,
+    134.426
+   ],
+   "frames": {
+    "from": 7956,
+    "to": 8073,
+    "count": 117,
+    "key": 8031
+   },
+   "time": [
+    132.6,
+    134.55
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطانية"
+    ],
+    "frame": "قريبة",
+    "expr": "سليم: غاضب بصمت",
+    "action": "عيناه مفتوحتان في الظلام، فكّه مشدود وقبضته تنقبض",
+    "cut": "قطع",
+    "goal": "الشعور باقٍ"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot032",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 33,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 33,
+   "text": "هذا ما يسميه علماء النفس كبت التعبير: أن تخفي ما يظهر عليك، بينما يبقى الشعور في الداخل.",
+   "speech": [
+    134.726,
+    142.146
+   ],
+   "frames": {
+    "from": 8073,
+    "to": 8536,
+    "count": 463,
+    "key": 8373
+   },
+   "time": [
+    134.55,
+    142.267
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "قناع",
+     "موجة الصدر"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: قناع هادئ",
+    "action": "يرفع قناعًا مبتسمًا أمام وجهه عند «تخفي»، والموجة الوردية في صدره تبقى عند «يبقى الشعور»",
+    "cut": "قطع",
+    "goal": "تعريف كبت التعبير"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot033",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 34,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 34,
+   "text": "تخيل قدرًا يغلي، وأنت تضغط على غطائه بيديك.",
+   "speech": [
+    142.446,
+    146.537
+   ],
+   "frames": {
+    "from": 8536,
+    "to": 8799,
+    "count": 263,
+    "key": 8706
+   },
+   "time": [
+    142.267,
+    146.65
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "المطبخ (استعارة)",
+    "chars": [
+     "يدا سليم"
+    ],
+    "props": [
+     "قدر",
+     "غطاء",
+     "لهب"
+    ],
+    "frame": "متوسطة",
+    "expr": "—",
+    "action": "القدر يغلي، ويدان تضغطان الغطاء عند «تضغط»",
+    "cut": "قطع",
+    "goal": "صورة الكبت"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot034",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 35,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 35,
+   "text": "قد يبدو المطبخ هادئًا… لكن الضغط في الداخل لا يختفي.",
+   "speech": [
+    146.837,
+    151.212
+   ],
+   "frames": {
+    "from": 8799,
+    "to": 9080,
+    "count": 281,
+    "key": 8981
+   },
+   "time": [
+    146.65,
+    151.333
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "المطبخ (استعارة)",
+    "chars": [],
+    "props": [
+     "قدر",
+     "خطوط ضغط"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "المطبخ ساكن لكن الغطاء يرتج وخطوط الضغط تتكاثر عند «لا يختفي»",
+    "cut": "قطع",
+    "goal": "الضغط لا يختفي"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot035",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 36,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 36,
+   "text": "والكبت يحتاج جهدًا مستمرًا، وقد يجعل التواصل مع الآخرين أصعب.",
+   "speech": [
+    151.512,
+    157.0
+   ],
+   "frames": {
+    "from": 9080,
+    "to": 9427,
+    "count": 347,
+    "key": 9305
+   },
+   "time": [
+    151.333,
+    157.117
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "غرفة المعيشة",
+    "chars": [
+     "سليم",
+     "ريم"
+    ],
+    "props": [
+     "غطاء على الصدر"
+    ],
+    "frame": "متوسطة لاثنين",
+    "expr": "سليم: متوتر؛ ريم: حائرة",
+    "action": "سليم يحاول الحديث بينما يداه مشغولتان بالضغط على صدره، قطرة عرق عند «جهدًا»، ومسافة تتسع بينهما عند «أصعب»",
+    "cut": "قطع",
+    "goal": "كلفة الكبت"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot036",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 37,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 37,
+   "text": "أما تنظيم المشاعر فشيء آخر.",
+   "speech": [
+    157.3,
+    160.138
+   ],
+   "frames": {
+    "from": 9427,
+    "to": 9615,
+    "count": 188,
+    "key": 9548
+   },
+   "time": [
+    157.117,
+    160.25
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "المطبخ (استعارة)",
+    "chars": [],
+    "props": [
+     "قدر",
+     "مقبض"
+    ],
+    "frame": "متوسطة",
+    "expr": "—",
+    "action": "عنوان «تنظيم المشاعر»؛ يد تقترب من مقبض الموقد",
+    "cut": "قطع",
+    "goal": "الانتقال إلى البديل"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot037",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 38,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 38,
+   "text": "أن تخفض النار تحت القدر، بدل أن تضغط على الغطاء.",
+   "speech": [
+    160.438,
+    164.575
+   ],
+   "frames": {
+    "from": 9615,
+    "to": 9882,
+    "count": 267,
+    "key": 9787
+   },
+   "time": [
+    160.25,
+    164.7
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "المطبخ (استعارة)",
+    "chars": [
+     "يد سليم"
+    ],
+    "props": [
+     "قدر",
+     "لهب",
+     "بخار"
+    ],
+    "frame": "متوسطة",
+    "expr": "—",
+    "action": "المقبض يُدار عند «تخفض»، اللهب الأزرق يصغر، الغليان يهدأ، بخار هادئ يخرج",
+    "cut": "قطع",
+    "goal": "تنظيم: تغيير الحرارة لا الضغط على الغطاء"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot038",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 39,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 39,
+   "text": "أن تعترف لنفسك: نعم، أنا غاضب، وأنا متعب أيضًا.",
+   "speech": [
+    164.875,
+    169.177
+   ],
+   "frames": {
+    "from": 9882,
+    "to": 10158,
+    "count": 276,
+    "key": 10060
+   },
+   "time": [
+    164.7,
+    169.3
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطاقتا اسم"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ صادق",
+    "action": "يجلس ويضع يده على صدره؛ بطاقة «غاضب» تظهر عند «غاضب» وبطاقة «متعب» عند «متعب»",
+    "cut": "قطع",
+    "goal": "الاعتراف للنفس"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot039",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 40,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 40,
+   "text": "أن تسمي الشعور باسمه، فتراه بوضوح، بدل أن يحركك من الخلف.",
+   "speech": [
+    169.477,
+    174.545
+   ],
+   "frames": {
+    "from": 10158,
+    "to": 10480,
+    "count": 322,
+    "key": 10367
+   },
+   "time": [
+    169.3,
+    174.667
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "خيوط",
+     "مصباح",
+     "بطاقة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مندهش ثم مرتاح",
+    "action": "خيوط من الخلف تحرك ذراعيه؛ ضوء يكشف ظل الشعور ويُلصق عليه اسم عند «باسمه»، فتنقطع الخيوط عند «من الخلف»",
+    "cut": "قطع",
+    "goal": "تسمية الشعور"
+   },
+   "code": "src/scenes/b2.tsx",
+   "built": false,
+   "composition": "Shot040",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 41,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 41,
+   "text": "ثم أن تسأل: هل هناك طريقة أخرى لفهم ما حدث؟",
+   "speech": [
+    174.845,
+    178.845
+   ],
+   "frames": {
+    "from": 10480,
+    "to": 10738,
+    "count": 258,
+    "key": 10647
+   },
+   "time": [
+    174.667,
+    178.967
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "علامة سؤال"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يفكر",
+    "action": "يعيد قراءة الرسالة؛ علامة سؤال صغيرة وسحابتان باهتتان لتفسيرين آخرين",
+    "cut": "قطع",
+    "goal": "سؤال إعادة التقييم"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot041",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 42,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 42,
+   "text": "والقبول هنا لا يعني أن ما حدث مقبول.",
+   "speech": [
+    179.145,
+    182.385
+   ],
+   "frames": {
+    "from": 10738,
+    "to": 10950,
+    "count": 212,
+    "key": 10875
+   },
+   "time": [
+    178.967,
+    182.5
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "علامة رفض",
+     "سحابة شعور"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "يسار: الرسالة عليها علامة رفض عند «مقبول»؛ يمين: سليم يحمل شعوره بين كفيه برفق",
+    "cut": "قطع",
+    "goal": "القبول ليس موافقة"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot042",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 43,
+   "chapter": 3,
+   "chapterTitle": "تنظيم لا كبت",
+   "line": 43,
+   "text": "يعني ألا تحارب شعورك، بل تفسح له مكانًا، دون أن تسلمه القيادة.",
+   "speech": [
+    182.685,
+    188.262
+   ],
+   "frames": {
+    "from": 10950,
+    "to": 11331,
+    "count": 381,
+    "key": 11179
+   },
+   "time": [
+    182.5,
+    188.85
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "طريق (استعارة)",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سيارة",
+     "شعور صغير"
+    ],
+    "frame": "عامة جانبية",
+    "expr": "سليم: هادئ",
+    "action": "سليم يقود سيارة صغيرة والشعور (سحابة وردية صغيرة) يجلس بجانبه ثم يمد يده نحو المقود فيرده سليم بلطف عند «القيادة»",
+    "cut": "تلاشٍ إلى الفصل 4",
+    "goal": "تفسح للشعور مكانًا ولا تسلمه القيادة"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot043",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 44,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 44,
+   "text": "لنعد إلى الرسالة نفسها.",
+   "speech": [
+    189.062,
+    190.991
+   ],
+   "frames": {
+    "from": 11331,
+    "to": 11467,
+    "count": 136,
+    "key": 11419
+   },
+   "time": [
+    188.85,
+    191.117
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "محادثة",
+     "رمز إرجاع"
+    ],
+    "frame": "إدخال الشاشة",
+    "expr": "—",
+    "action": "رمز إرجاع يدور، والرسالة تعود إلى الشاشة",
+    "cut": "قطع",
+    "goal": "العودة إلى الحدث"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot044",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 45,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 45,
+   "text": "ما الذي حدث فعلًا؟ كلمات قليلة على شاشة، وصلت في آخر الليل.",
+   "speech": [
+    191.291,
+    196.41
+   ],
+   "frames": {
+    "from": 11467,
+    "to": 11792,
+    "count": 325,
+    "key": 11677
+   },
+   "time": [
+    191.117,
+    196.533
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "رسالة",
+     "ساعة 11:40"
+    ],
+    "frame": "قريبة",
+    "expr": "—",
+    "action": "الرسالة وحدها في الإطار؛ تُعدّ كلماتها؛ ساعة تشير إلى آخر الليل عند «آخر الليل»؛ عنوان «الحدث»",
+    "cut": "قطع",
+    "goal": "الحدث المجرد"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot045",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 46,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 46,
+   "text": "وما الذي أضافه عقل سليم؟ جاسر يريد أن يهينني… أمام الجميع… كالعادة.",
+   "speech": [
+    196.71,
+    202.398
+   ],
+   "frames": {
+    "from": 11792,
+    "to": 12151,
+    "count": 359,
+    "key": 12025
+   },
+   "time": [
+    196.533,
+    202.517
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "رسالة",
+     "ملصقات تفسير"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مجروح ثم غاضب",
+    "action": "ملصقات تتراكم فوق الرسالة: «يريد أن يهينني» ثم «أمام الجميع» ثم «كالعادة» على الكلمات",
+    "cut": "قطع",
+    "goal": "ما أضافه العقل"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot046",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 47,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 47,
+   "text": "الحدث شيء، وتفسيرنا لنية الآخر شيء آخر.",
+   "speech": [
+    202.698,
+    206.371
+   ],
+   "frames": {
+    "from": 12151,
+    "to": 12389,
+    "count": 238,
+    "key": 12305
+   },
+   "time": [
+    202.517,
+    206.483
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "صندوقان"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "صندوقان: «الحدث» فيه الرسالة، و«التفسير» فيه سحابة؛ خط يفصلهما",
+    "cut": "قطع",
+    "goal": "الفصل بين الحدث والتفسير"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot047",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 48,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 48,
+   "text": "وحين يكون الموقف غامضًا، يميل كثير منا إلى قراءته على أنه عداء.",
+   "speech": [
+    206.671,
+    212.743
+   ],
+   "frames": {
+    "from": 12389,
+    "to": 12772,
+    "count": 383,
+    "key": 12637
+   },
+   "time": [
+    206.483,
+    212.867
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "نظارة متعبة",
+     "شكل غامض"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: قلق",
+    "action": "شكل رمادي غامض؛ حين يلبس نظارة «متعبة» يتلون الشكل بوجه عدائي عند «عداء»",
+    "cut": "قطع",
+    "goal": "انحياز قراءة العداء"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot048",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 49,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 49,
+   "text": "جرب أن تقرأ الرسالة نفسها بثلاث نيات مختلفة.",
+   "speech": [
+    213.043,
+    217.251
+   ],
+   "frames": {
+    "from": 12772,
+    "to": 13042,
+    "count": 270,
+    "key": 12947
+   },
+   "time": [
+    212.867,
+    217.367
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ثلاث بطاقات"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: يفكر",
+    "action": "ثلاث نسخ من الرسالة تنفرد كبطاقات أمام سليم عند «بثلاث»",
+    "cut": "قطع",
+    "goal": "التمرين"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot049",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 50,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 50,
+   "text": "ربما هي سخرية مقصودة.",
+   "speech": [
+    217.551,
+    219.766
+   ],
+   "frames": {
+    "from": 13042,
+    "to": 13193,
+    "count": 151,
+    "key": 13139
+   },
+   "time": [
+    217.367,
+    219.883
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "بطاقة 1",
+    "chars": [
+     "جاسر"
+    ],
+    "props": [
+     "هاتف"
+    ],
+    "frame": "متوسطة داخل البطاقة",
+    "expr": "جاسر: متعالٍ",
+    "action": "جاسر يكتب بابتسامة ساخرة",
+    "cut": "قطع",
+    "goal": "التفسير الأول"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot050",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 51,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 51,
+   "text": "وربما هي مزحة ثقيلة من شخص لا يحسن المزاح.",
+   "speech": [
+    220.066,
+    224.085
+   ],
+   "frames": {
+    "from": 13193,
+    "to": 13452,
+    "count": 259,
+    "key": 13361
+   },
+   "time": [
+    219.883,
+    224.2
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "بطاقة 2",
+    "chars": [
+     "جاسر"
+    ],
+    "props": [
+     "هاتف"
+    ],
+    "frame": "متوسطة داخل البطاقة",
+    "expr": "جاسر: يضحك بارتباك",
+    "action": "جاسر يضحك على نكتته ثم يتجمد حين لا يضحك أحد",
+    "cut": "قطع",
+    "goal": "التفسير الثاني"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot051",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 52,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 52,
+   "text": "وربما كتبها جاسر وهو نفسه تحت ضغط موعد التسليم.",
+   "speech": [
+    224.385,
+    228.975
+   ],
+   "frames": {
+    "from": 13452,
+    "to": 13746,
+    "count": 294,
+    "key": 13642
+   },
+   "time": [
+    224.2,
+    229.1
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "بطاقة 3: مكتب جاسر ليلًا",
+    "chars": [
+     "جاسر"
+    ],
+    "props": [
+     "مكتب",
+     "تقويم",
+     "هاتف"
+    ],
+    "frame": "متوسطة",
+    "expr": "جاسر: قلق",
+    "action": "جاسر متوتر أمام تقويم عليه موعد التسليم، يكتب بسرعة عند «تحت ضغط»",
+    "cut": "قطع",
+    "goal": "التفسير الثالث"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot052",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 53,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 53,
+   "text": "لا تعرف أيها الصحيح بعد… وهذا بالضبط ما يفتح لك الباب.",
+   "speech": [
+    229.275,
+    233.9
+   ],
+   "frames": {
+    "from": 13746,
+    "to": 14041,
+    "count": 295,
+    "key": 13937
+   },
+   "time": [
+    229.1,
+    234.017
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الأبواب الثلاثة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ثلاثة أبواب"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: حائر ثم مطمئن",
+    "action": "سليم أمام ثلاثة أبواب مغلقة؛ ينفتح شق ضوء عند «يفتح لك الباب»",
+    "cut": "قطع",
+    "goal": "عدم المعرفة يفتح الاحتمالات"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot053",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 54,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 54,
+   "text": "لست مطالبًا بأن تصدق أسوأ تفسير، ولا بأن تقنع نفسك بأفضله.",
+   "speech": [
+    234.2,
+    239.659
+   ],
+   "frames": {
+    "from": 14041,
+    "to": 14387,
+    "count": 346,
+    "key": 14265
+   },
+   "time": [
+    234.017,
+    239.783
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سحابة سوداء",
+     "نظارة وردية"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: محايد",
+    "action": "يمسك سحابة سوداء بيد ونظارة وردية بالأخرى، ويضع الاثنين جانبًا",
+    "cut": "قطع",
+    "goal": "لا أسوأ تفسير ولا أفضله"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot054",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 55,
+   "chapter": 4,
+   "chapterTitle": "الحدث والتفسير",
+   "line": 55,
+   "text": "يكفي أن تتذكر أن هناك أكثر من باب، وأن تسأل قبل أن تحكم.",
+   "speech": [
+    239.959,
+    245.012
+   ],
+   "frames": {
+    "from": 14387,
+    "to": 14736,
+    "count": 349,
+    "key": 14595
+   },
+   "time": [
+    239.783,
+    245.6
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "مسودة سؤال"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "يكتب في المسودة سؤالًا قصيرًا «ماذا تقصد؟» ويحفظه للصباح عند «تسأل»",
+    "cut": "تلاشٍ إلى الفصل 5",
+    "goal": "السؤال قبل الحكم"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot055",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 56,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 56,
+   "text": "في تلك الليلة، تخيل سليم ردًا آخر.",
+   "speech": [
+    245.812,
+    248.724
+   ],
+   "frames": {
+    "from": 14736,
+    "to": 14931,
+    "count": 195,
+    "key": 14862
+   },
+   "time": [
+    245.6,
+    248.85
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سحابة خيال"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: عازم بغضب",
+    "action": "سحابة خيال تكبر فوق رأسه وهو مستلقٍ",
+    "cut": "انتقال إلى الخيال",
+    "goal": "بداية الخيال"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot056",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 57,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 57,
+   "text": "أن يدخل الاجتماع غدًا، ويرفع صوته، ويضرب الطاولة، ويثبت للجميع أنه ليس ضعيفًا.",
+   "speech": [
+    249.024,
+    256.187
+   ],
+   "frames": {
+    "from": 14931,
+    "to": 15378,
+    "count": 447,
+    "key": 15220
+   },
+   "time": [
+    248.85,
+    256.3
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "غرفة الاجتماع (خيال وردي)",
+    "chars": [
+     "سليم",
+     "جاسر",
+     "هادي",
+     "زميل"
+    ],
+    "props": [
+     "طاولة",
+     "أكواب"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: يصرخ؛ الآخرون: مذعورون",
+    "action": "يدخل بقوة، يرفع صوته، يضرب الطاولة عند «ويضرب» فتقفز الأكواب، ينفخ صدره",
+    "cut": "قطع",
+    "goal": "الرد المتخيل"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot057",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 58,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 58,
+   "text": "هذا استعراض للقوة.",
+   "speech": [
+    256.487,
+    258.07
+   ],
+   "frames": {
+    "from": 15378,
+    "to": 15491,
+    "count": 113,
+    "key": 15451
+   },
+   "time": [
+    256.3,
+    258.183
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "غرفة الاجتماع (خيال مجمد)",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ظل كبير"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: متعالٍ",
+    "action": "المشهد يتجمد، سليم بيدين على الخصر وظل ضخم خلفه؛ عبارة «استعراض للقوة»",
+    "cut": "قطع",
+    "goal": "تسمية الاستعراض"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot058",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 59,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 59,
+   "text": "يبدو قويًا لحظة، لكنه يجعل الآخرين يدافعون بدل أن يسمعوا.",
+   "speech": [
+    258.37,
+    263.487
+   ],
+   "frames": {
+    "from": 15491,
+    "to": 15816,
+    "count": 325,
+    "key": 15702
+   },
+   "time": [
+    258.183,
+    263.6
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع (خيال)",
+    "chars": [
+     "جاسر",
+     "هادي",
+     "زميلة"
+    ],
+    "props": [
+     "دروع ورقية"
+    ],
+    "frame": "متوسطة",
+    "expr": "الآخرون: دفاع",
+    "action": "الحاضرون يرفعون أوراقهم كدروع ويشبكون أذرعهم؛ جاسر يرد صارخًا",
+    "cut": "قطع",
+    "goal": "كلفة الاستعراض"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot059",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 60,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 60,
+   "text": "ويجعلك تابعًا للمستفز: هو يختار اللحظة، وأنت تنفجر فيها.",
+   "speech": [
+    263.787,
+    268.904
+   ],
+   "frames": {
+    "from": 15816,
+    "to": 16141,
+    "count": 325,
+    "key": 16027
+   },
+   "time": [
+    263.6,
+    269.017
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "جاسر",
+     "سليم"
+    ],
+    "props": [
+     "خيوط"
+    ],
+    "frame": "متوسطة",
+    "expr": "جاسر: متعالٍ؛ سليم: غاضب",
+    "action": "جاسر يمسك خيوطًا ويشد في اللحظة التي يختارها، فيقفز سليم منفجرًا عند «تنفجر»",
+    "cut": "مزج خروج من الخيال",
+    "goal": "الاستفزاز يحدد اللحظة"
+   },
+   "code": "src/scenes/b3.tsx",
+   "built": false,
+   "composition": "Shot060",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 61,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 61,
+   "text": "القوة الهادئة شيء مختلف.",
+   "speech": [
+    269.204,
+    271.508
+   ],
+   "frames": {
+    "from": 16141,
+    "to": 16298,
+    "count": 157,
+    "key": 16242
+   },
+   "time": [
+    269.017,
+    271.633
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سرير"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "الخيال يتلاشى، سليم يجلس معتدلًا ويتنفس؛ عبارة «القوة الهادئة»",
+    "cut": "قطع",
+    "goal": "البديل"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot061",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 62,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 62,
+   "text": "صوت ثابت، وكلمات واضحة، وجسد لا يتراجع ولا يهاجم.",
+   "speech": [
+    271.808,
+    276.854
+   ],
+   "frames": {
+    "from": 16298,
+    "to": 16618,
+    "count": 320,
+    "key": 16505
+   },
+   "time": [
+    271.633,
+    276.967
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "موجة صوت",
+     "آثار أقدام"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: عازم هادئ",
+    "action": "موجة صوت ثابتة عند «صوت ثابت»، فقاعة قصيرة عند «كلمات واضحة»، قدماه ثابتتان بين ظلّين باهتين للتراجع والهجوم",
+    "cut": "قطع",
+    "goal": "مكونات القوة الهادئة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot062",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 63,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 63,
+   "text": "مثل شجرة في الريح: تتحرك أغصانها، لكن جذورها في مكانها.",
+   "speech": [
+    277.154,
+    282.086
+   ],
+   "frames": {
+    "from": 16618,
+    "to": 16932,
+    "count": 314,
+    "key": 16821
+   },
+   "time": [
+    276.967,
+    282.2
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الشجرة",
+    "chars": [],
+    "props": [
+     "شجرة",
+     "ريح",
+     "جذور"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "الأغصان تتمايل عند «الريح»، والجذور تنكشف ثابتة عند «جذورها»",
+    "cut": "قطع",
+    "goal": "المرونة والثبات"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot063",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 64,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 64,
+   "text": "القوة الهادئة لا تحتاج أن تنتصر في كل جملة.",
+   "speech": [
+    282.386,
+    286.172
+   ],
+   "frames": {
+    "from": 16932,
+    "to": 17178,
+    "count": 246,
+    "key": 17091
+   },
+   "time": [
+    282.2,
+    286.3
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "طاولة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ مبتسم؛ جاسر: يتكلم",
+    "action": "جاسر يقول الكلمة الأخيرة وسليم يترك له ذلك ويعود لأوراقه",
+    "cut": "قطع",
+    "goal": "لا حاجة للانتصار في كل جملة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot064",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 65,
+   "chapter": 5,
+   "chapterTitle": "قوة هادئة",
+   "line": 65,
+   "text": "تحتاج فقط أن تقول ما يهمك، بطريقة تستطيع أن تفخر بها غدًا.",
+   "speech": [
+    286.472,
+    291.792
+   ],
+   "frames": {
+    "from": 17178,
+    "to": 17542,
+    "count": 364,
+    "key": 17396
+   },
+   "time": [
+    286.3,
+    292.367
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "الشارع صباحًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حقيبة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: مرتاح",
+    "action": "سليم يمشي صباحًا رافع الرأس، يومئ لنفسه",
+    "cut": "تلاشٍ إلى الفصل 6",
+    "goal": "الفخر بالطريقة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot065",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 66,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 66,
+   "text": "لكن لماذا يصعب الهدوء في تلك اللحظات؟",
+   "speech": [
+    292.592,
+    296.004
+   ],
+   "frames": {
+    "from": 17542,
+    "to": 17767,
+    "count": 225,
+    "key": 17689
+   },
+   "time": [
+    292.367,
+    296.117
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "علامة سؤال"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: قلق",
+    "action": "الهاتف يهتز على المكتب، سليم يتوتر؛ علامة سؤال كبيرة",
+    "cut": "قطع",
+    "goal": "سؤال الفصل"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot066",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 67,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 67,
+   "text": "لأن الانفعال ليس فكرةً فقط، ولا إحساسًا في الجسد فقط.",
+   "speech": [
+    296.304,
+    300.857
+   ],
+   "frames": {
+    "from": 17767,
+    "to": 18059,
+    "count": 292,
+    "key": 17955
+   },
+   "time": [
+    296.117,
+    300.983
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "أيقونة فكرة",
+     "أيقونة جسد"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "أيقونة فكرة وحدها، ثم جسد وحده، ثم يقتربان فيظهر الانفعال بينهما",
+    "cut": "قطع",
+    "goal": "الانفعال ليس جزءًا واحدًا"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot067",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 68,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 68,
+   "text": "الفكرة: إنه يستهين بي، تشعل الغضب.",
+   "speech": [
+    301.157,
+    304.161
+   ],
+   "frames": {
+    "from": 18059,
+    "to": 18257,
+    "count": 198,
+    "key": 18187
+   },
+   "time": [
+    300.983,
+    304.283
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "الحلقة",
+    "chars": [],
+    "props": [
+     "حلقة",
+     "سحابة"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "عقدة الفكرة تضيء وفيها «إنه يستهين بي»، فيشتعل اللهب الأزرق عند «تشعل»",
+    "cut": "قطع",
+    "goal": "من الفكرة إلى الانفعال"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot068",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 69,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 69,
+   "text": "والغضب يظهر في الجسد: قلب يتسارع، وفك مشدود، وكتفان مرتفعتان، وحرارة في الوجه.",
+   "speech": [
+    304.461,
+    311.605
+   ],
+   "frames": {
+    "from": 18257,
+    "to": 18704,
+    "count": 447,
+    "key": 18546
+   },
+   "time": [
+    304.283,
+    311.733
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "علامات الجسد"
+    ],
+    "frame": "متوسطة أمامية",
+    "expr": "سليم: غاضب",
+    "action": "على الكلمات: القلب ينبض بسرعة، خطوط الفك المشدود، الكتفان يرتفعان، حمرة الوجه",
+    "cut": "قطع",
+    "goal": "إشارات الجسد"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot069",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 70,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 70,
+   "text": "والجسد المتوتر يجعل الأفكار أكثر حدة.",
+   "speech": [
+    311.905,
+    315.323
+   ],
+   "frames": {
+    "from": 18704,
+    "to": 18927,
+    "count": 223,
+    "key": 18847
+   },
+   "time": [
+    311.733,
+    315.45
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سحابة شائكة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: غاضب",
+    "action": "كتفاه مشدودتان، والسحابة فوق رأسه تصبح شائكة عند «حدة»",
+    "cut": "قطع",
+    "goal": "الجسد يغذي الفكرة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot070",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 71,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 71,
+   "text": "فتدور الحلقة: فكرة، ثم انفعال، ثم جسد، ثم فكرة أشد.",
+   "speech": [
+    315.623,
+    319.936
+   ],
+   "frames": {
+    "from": 18927,
+    "to": 19203,
+    "count": 276,
+    "key": 19105
+   },
+   "time": [
+    315.45,
+    320.05
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "الحلقة",
+    "chars": [],
+    "props": [
+     "حلقة",
+     "نبضة"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "نبضة تدور: فكرة، انفعال، جسد، فكرة أشد، مع الكلمات",
+    "cut": "قطع",
+    "goal": "الحلقة كاملة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot071",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 72,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 72,
+   "text": "والخبر الجيد أن للحلقة أكثر من مدخل.",
+   "speech": [
+    320.236,
+    323.542
+   ],
+   "frames": {
+    "from": 19203,
+    "to": 19420,
+    "count": 217,
+    "key": 19343
+   },
+   "time": [
+    320.05,
+    323.667
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "الحلقة",
+    "chars": [],
+    "props": [
+     "حلقة",
+     "مداخل"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "ثلاثة مداخل صغيرة تظهر على الحلقة عند «مدخل»",
+    "cut": "قطع",
+    "goal": "أكثر من مدخل"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot072",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 73,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 73,
+   "text": "تستطيع أن تبدأ من الفكرة، فتبحث عن تفسير آخر.",
+   "speech": [
+    323.842,
+    327.987
+   ],
+   "frames": {
+    "from": 19420,
+    "to": 19686,
+    "count": 266,
+    "key": 19592
+   },
+   "time": [
+    323.667,
+    328.1
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "سحابتان"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يفكر",
+    "action": "يستبدل السحابة الشائكة بسحابة ناعمة عند «تفسير آخر»",
+    "cut": "قطع",
+    "goal": "مدخل الفكرة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot073",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 74,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 74,
+   "text": "وتستطيع أن تبدأ من الجسد، فترخي كتفيك، وتبطئ أنفاسك.",
+   "speech": [
+    328.287,
+    333.165
+   ],
+   "frames": {
+    "from": 19686,
+    "to": 19997,
+    "count": 311,
+    "key": 19887
+   },
+   "time": [
+    328.1,
+    333.283
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "كرسي"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يرتاح",
+    "action": "كتفاه تنخفضان عند «فترخي»، صدره يرتفع ببطء عند «أنفاسك»",
+    "cut": "قطع",
+    "goal": "مدخل الجسد"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot074",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 75,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 75,
+   "text": "وتستطيع أن تبدأ من الانتباه: أن تلاحظ الإشارات مبكرًا، قبل أن تصل إلى ذروتها.",
+   "speech": [
+    333.465,
+    340.256
+   ],
+   "frames": {
+    "from": 19997,
+    "to": 20423,
+    "count": 426,
+    "key": 20273
+   },
+   "time": [
+    333.283,
+    340.383
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "مقياس",
+     "مصابيح إنذار"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منصت",
+    "action": "مقياس يرتفع، ومصباح صغير يضيء مبكرًا في درجته الأولى فيلتفت إليه سليم قبل «ذروتها»",
+    "cut": "قطع",
+    "goal": "مدخل الانتباه"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot075",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 76,
+   "chapter": 6,
+   "chapterTitle": "الفكرة والجسد والانفعال",
+   "line": 76,
+   "text": "إشارات جسدك ليست عدوًا… إنها رسائل تقول: انتبه، هنا شيء يهمك.",
+   "speech": [
+    340.556,
+    346.032
+   ],
+   "frames": {
+    "from": 20423,
+    "to": 20797,
+    "count": 374,
+    "key": 20647
+   },
+   "time": [
+    340.383,
+    346.617
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "رسالة ورقية"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منصت",
+    "action": "من صدره تخرج رسالة مطوية يفتحها فيها «انتبه»",
+    "cut": "تلاشٍ إلى الفصل 7",
+    "goal": "الإشارات رسائل لا أعداء"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot076",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 77,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 77,
+   "text": "بين ما تشعر به وما تفعله، هناك مسافة.",
+   "speech": [
+    346.832,
+    350.404
+   ],
+   "frames": {
+    "from": 20797,
+    "to": 21031,
+    "count": 234,
+    "key": 20949
+   },
+   "time": [
+    346.617,
+    350.517
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الحجرين",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حجر الشعور",
+     "حجر الفعل"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "حجران: شعور وفعل، وبينهما مسافة يقف فيها سليم",
+    "cut": "قطع",
+    "goal": "المسافة موجودة"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot077",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 78,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 78,
+   "text": "قد تكون قصيرةً جدًا، أقصر من رمشة عين.",
+   "speech": [
+    350.704,
+    354.152
+   ],
+   "frames": {
+    "from": 21031,
+    "to": 21256,
+    "count": 225,
+    "key": 21177
+   },
+   "time": [
+    350.517,
+    354.267
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "عين"
+    ],
+    "frame": "قريبة جدًا",
+    "expr": "—",
+    "action": "رمشة عين بطيئة عند «رمشة»، والمسافة بين الحجرين ضيقة جدًا",
+    "cut": "قطع",
+    "goal": "قصيرة جدًا"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot078",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 79,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 79,
+   "text": "لكنها موجودة، ويمكن أن تتسع بالتدريب.",
+   "speech": [
+    354.452,
+    357.764
+   ],
+   "frames": {
+    "from": 21256,
+    "to": 21473,
+    "count": 217,
+    "key": 21396
+   },
+   "time": [
+    354.267,
+    357.883
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الحجرين",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حجران"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: عازم",
+    "action": "المسافة تتسع مع كل يوم تدريب عند «تتسع»",
+    "cut": "قطع",
+    "goal": "تتسع بالتدريب"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot079",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 80,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 80,
+   "text": "تخيل أن الشعور يطرق الباب.",
+   "speech": [
+    358.064,
+    360.393
+   ],
+   "frames": {
+    "from": 21473,
+    "to": 21631,
+    "count": 158,
+    "key": 21575
+   },
+   "time": [
+    357.883,
+    360.517
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الباب",
+    "chars": [],
+    "props": [
+     "باب",
+     "دوائر طرق"
+    ],
+    "frame": "عامة من الداخل",
+    "expr": "—",
+    "action": "طرقات على الباب ودوائر تتسع عند «يطرق»",
+    "cut": "قطع",
+    "goal": "الشعور يطرق"
+   },
+   "code": "src/scenes/b4.tsx",
+   "built": false,
+   "composition": "Shot080",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 81,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 81,
+   "text": "لست مضطرًا أن تطرده، ولست مضطرًا أن تفتح له وتعطيه مفاتيح البيت.",
+   "speech": [
+    360.693,
+    366.619
+   ],
+   "frames": {
+    "from": 21631,
+    "to": 22004,
+    "count": 373,
+    "key": 21873
+   },
+   "time": [
+    360.517,
+    366.733
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الباب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "باب",
+     "مفاتيح"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "سليم لا يدفع الباب ليغلقه عند «تطرده»، ولا يسلّم المفاتيح المعلقة عند «مفاتيح»",
+    "cut": "قطع",
+    "goal": "لا طرد ولا تسليم"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot081",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 82,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 82,
+   "text": "يمكنك أن تقول: أسمعك… وسأقرر بعد قليل.",
+   "speech": [
+    366.919,
+    370.386
+   ],
+   "frames": {
+    "from": 22004,
+    "to": 22230,
+    "count": 226,
+    "key": 22150
+   },
+   "time": [
+    366.733,
+    370.5
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الباب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "باب",
+     "فقاعة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ منصت",
+    "action": "يقول عبر الباب «أسمعك» ويجلس قريبًا منه",
+    "cut": "قطع",
+    "goal": "الاستماع للشعور"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot082",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 83,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 83,
+   "text": "في الليلة التالية، وصلت رسالة أخرى.",
+   "speech": [
+    370.686,
+    373.863
+   ],
+   "frames": {
+    "from": 22230,
+    "to": 22439,
+    "count": 209,
+    "key": 22365
+   },
+   "time": [
+    370.5,
+    373.983
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: متعب",
+    "action": "ليلة أخرى؛ الهاتف يضيء برسالة جديدة",
+    "cut": "قطع",
+    "goal": "الامتحان الثاني"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot083",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 84,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 84,
+   "text": "هذه المرة، قلب سليم الهاتف على وجهه، ووضعه على الطاولة.",
+   "speech": [
+    374.163,
+    378.768
+   ],
+   "frames": {
+    "from": 22439,
+    "to": 22733,
+    "count": 294,
+    "key": 22629
+   },
+   "time": [
+    373.983,
+    378.883
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "منضدة"
+    ],
+    "frame": "قريبة على اليد",
+    "expr": "سليم: عازم",
+    "action": "اليد تقلب الهاتف على وجهه عند «قلب» وتضعه على المنضدة",
+    "cut": "قطع",
+    "goal": "فعل التأجيل"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot084",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 85,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 85,
+   "text": "لم يكن هذا هروبًا… كان قرارًا مؤقتًا: سأرد غدًا، بعقل أصفى.",
+   "speech": [
+    379.068,
+    384.41
+   ],
+   "frames": {
+    "from": 22733,
+    "to": 23072,
+    "count": 339,
+    "key": 22953
+   },
+   "time": [
+    378.883,
+    384.533
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ورقة لاصقة",
+     "ساعة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "يكتب ورقة «صباحًا» ويلصقها على الهاتف عند «غدًا»؛ عبارة «قرار مؤقت»",
+    "cut": "قطع",
+    "goal": "تأجيل لا هروب"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot085",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 86,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 86,
+   "text": "ويساعد هنا أن تجهز خطتك مسبقًا:",
+   "speech": [
+    384.71,
+    387.845
+   ],
+   "frames": {
+    "from": 23072,
+    "to": 23271,
+    "count": 199,
+    "key": 23205
+   },
+   "time": [
+    384.533,
+    387.85
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب نهارًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطاقة خطة",
+     "قلم"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "في وقت هادئ يكتب بطاقة خطة",
+    "cut": "قطع",
+    "goal": "الخطة قبل الموقف"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot086",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 87,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 86,
+   "text": "إذا وصلتني رسالة مستفزة ليلًا، فسأؤجل الرد إلى الصباح.",
+   "speech": [
+    387.845,
+    392.783
+   ],
+   "frames": {
+    "from": 23271,
+    "to": 23574,
+    "count": 303,
+    "key": 23463
+   },
+   "time": [
+    387.85,
+    392.9
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "بطاقة خطة"
+    ],
+    "frame": "قريبة",
+    "expr": "—",
+    "action": "البطاقة تملأ الإطار: «إذا…» ثم «فسأ…» على الكلمات",
+    "cut": "قطع",
+    "goal": "صيغة إذا-فإن"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot087",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 88,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 87,
+   "text": "خطة صغيرة تكتب قبل العاصفة، أسهل من قرار كبير وسط العاصفة.",
+   "speech": [
+    393.083,
+    399.005
+   ],
+   "frames": {
+    "from": 23574,
+    "to": 23948,
+    "count": 374,
+    "key": 23816
+   },
+   "time": [
+    392.9,
+    399.133
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "العاصفة",
+    "chars": [],
+    "props": [
+     "غيمة",
+     "بيت",
+     "ورقة مثبتة"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "ورقة تُثبت بهدوء قبل العاصفة، ثم تأتي العاصفة والورقة في مكانها",
+    "cut": "قطع",
+    "goal": "الخطة الصغيرة أسهل"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot088",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 89,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 88,
+   "text": "ويمكنك أن تنظر إلى الموقف من بعيد، كأنك تنصح صديقًا مر بالشيء نفسه.",
+   "speech": [
+    399.305,
+    405.173
+   ],
+   "frames": {
+    "from": 23948,
+    "to": 24318,
+    "count": 370,
+    "key": 24187
+   },
+   "time": [
+    399.133,
+    405.3
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "غرفة النوم (من بعيد)",
+    "chars": [
+     "سليم",
+     "هادي"
+    ],
+    "props": [
+     "سرير"
+    ],
+    "frame": "عامة من الأعلى",
+    "expr": "سليم: يفكر",
+    "action": "الكاميرا تبتعد؛ سليم يتخيل صديقه هادي في مكانه ويضع يده على كتفه ناصحًا",
+    "cut": "قطع",
+    "goal": "المسافة الذاتية"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot089",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 90,
+   "chapter": 7,
+   "chapterTitle": "المسافة بين الشعور والفعل",
+   "line": 89,
+   "text": "ماذا كنت ستقول له؟",
+   "speech": [
+    405.473,
+    407.172
+   ],
+   "frames": {
+    "from": 24318,
+    "to": 24465,
+    "count": 147,
+    "key": 24394
+   },
+   "time": [
+    405.3,
+    407.75
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "علامة سؤال"
+    ],
+    "frame": "قريبة",
+    "expr": "سليم: يفكر",
+    "action": "سليم يرفع نظره متفكرًا، علامة سؤال هادئة",
+    "cut": "تلاشٍ إلى الفصل 8",
+    "goal": "سؤال للمشاهد"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot090",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 91,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 90,
+   "text": "حين يشتد الانفعال، تحتاج أدوات بسيطةً تعيدك إلى اللحظة.",
+   "speech": [
+    407.972,
+    413.103
+   ],
+   "frames": {
+    "from": 24465,
+    "to": 24793,
+    "count": 328,
+    "key": 24678
+   },
+   "time": [
+    407.75,
+    413.217
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "صندوق أدوات",
+     "أيقونات"
+    ],
+    "frame": "متوسطة",
+    "expr": "—",
+    "action": "صندوق صغير ينفتح عن ثلاث أدوات: نفس، قدمان، عين",
+    "cut": "قطع",
+    "goal": "أدوات بسيطة"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot091",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 92,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 91,
+   "text": "أولها التنفس البطيء.",
+   "speech": [
+    413.403,
+    415.22
+   ],
+   "frames": {
+    "from": 24793,
+    "to": 24920,
+    "count": 127,
+    "key": 24875
+   },
+   "time": [
+    413.217,
+    415.333
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "أيقونة نفس"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "الأداة الأولى تضيء؛ سليم يضع يده على بطنه",
+    "cut": "قطع",
+    "goal": "الأداة الأولى"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot092",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 93,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 92,
+   "text": "شهيق هادئ من الأنف… وزفير أطول قليلًا من الشهيق.",
+   "speech": [
+    415.52,
+    419.894
+   ],
+   "frames": {
+    "from": 24920,
+    "to": 25201,
+    "count": 281,
+    "key": 25102
+   },
+   "time": [
+    415.333,
+    420.017
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "خطوط هواء"
+    ],
+    "frame": "متوسطة قريبة",
+    "expr": "سليم: عينان مغمضتان",
+    "action": "شهيق: الصدر يرتفع وخطوط هواء تدخل عند «شهيق»؛ زفير أطول: خط موجي أطول عند «وزفير»",
+    "cut": "قطع",
+    "goal": "الزفير الأطول"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot093",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 94,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 93,
+   "text": "مرة… ومرةً أخرى.",
+   "speech": [
+    420.194,
+    421.554
+   ],
+   "frames": {
+    "from": 25201,
+    "to": 25300,
+    "count": 99,
+    "key": 25265
+   },
+   "time": [
+    420.017,
+    421.667
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "نقاط عدّ"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مرتاح",
+    "action": "دورة ثانية مع نقطتين تمتلئان",
+    "cut": "قطع",
+    "goal": "التكرار"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot094",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 95,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 94,
+   "text": "ليس سحرًا، ولن يمحو المشكلة.",
+   "speech": [
+    421.854,
+    424.336
+   ],
+   "frames": {
+    "from": 25300,
+    "to": 25467,
+    "count": 167,
+    "key": 25408
+   },
+   "time": [
+    421.667,
+    424.45
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "صندوق المشكلة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "صندوق «المشكلة» يبقى على الطاولة رغم الهدوء عند «يمحو»",
+    "cut": "قطع",
+    "goal": "ليس سحرًا"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot095",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 96,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 95,
+   "text": "لكنه قد يخفف حدة الانفعال قليلًا، ويمنحك مساحةً لتختار.",
+   "speech": [
+    424.636,
+    430.068
+   ],
+   "frames": {
+    "from": 25467,
+    "to": 25811,
+    "count": 344,
+    "key": 25690
+   },
+   "time": [
+    424.45,
+    430.183
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "مقياس",
+     "دائرة مساحة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مرتاح",
+    "action": "المقياس ينخفض قليلًا عند «يخفف»، ودائرة حوله تتسع عند «مساحة»",
+    "cut": "قطع",
+    "goal": "مساحة للاختيار"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot096",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 97,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 96,
+   "text": "ثانيها أن تعود إلى جسدك: قدماك على الأرض، وظهرك على الكرسي، ويداك على الطاولة.",
+   "speech": [
+    430.368,
+    436.632
+   ],
+   "frames": {
+    "from": 25811,
+    "to": 26205,
+    "count": 394,
+    "key": 26066
+   },
+   "time": [
+    430.183,
+    436.75
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "كرسي",
+     "طاولة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "تضيء القدمان على الأرض عند «قدماك»، الظهر على الكرسي عند «ظهرك»، اليدان على الطاولة عند «يداك»",
+    "cut": "قطع",
+    "goal": "العودة إلى الجسد"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot097",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 98,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 97,
+   "text": "ثالثها أن تعود إلى المكان: ماذا ترى الآن؟ ماذا تسمع؟",
+   "speech": [
+    436.932,
+    441.07
+   ],
+   "frames": {
+    "from": 26205,
+    "to": 26471,
+    "count": 266,
+    "key": 26377
+   },
+   "time": [
+    436.75,
+    441.183
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "أيقونة عين",
+     "أيقونة أذن"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: منصت",
+    "action": "ينظر حوله عند «ترى»، يميل برأسه مصغيًا عند «تسمع»",
+    "cut": "قطع",
+    "goal": "العودة إلى المكان"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot098",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 99,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 98,
+   "text": "صوت المكيف، وضوء النافذة، ودفء الكوب بين يديك.",
+   "speech": [
+    441.37,
+    445.4
+   ],
+   "frames": {
+    "from": 26471,
+    "to": 26731,
+    "count": 260,
+    "key": 26639
+   },
+   "time": [
+    441.183,
+    445.517
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "مكيف",
+     "نافذة",
+     "كوب"
+    ],
+    "frame": "قريبة",
+    "expr": "سليم: مرتاح",
+    "action": "خطوط صوت المكيف عند «المكيف»، أشعة النافذة عند «ضوء»، بخار الكوب بين يديه عند «دفء»",
+    "cut": "قطع",
+    "goal": "تفاصيل الحاضر"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot099",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 100,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 99,
+   "text": "هذه ليست هروبًا من المشكلة، بل عودة إلى الأرض التي ستقف عليها حين تواجهها.",
+   "speech": [
+    445.7,
+    452.525
+   ],
+   "frames": {
+    "from": 26731,
+    "to": 27159,
+    "count": 428,
+    "key": 27008
+   },
+   "time": [
+    445.517,
+    452.65
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "أرض",
+     "غيمة المشكلة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: عازم هادئ",
+    "action": "سليم يقف على أرض ثابتة مواجهًا غيمة المشكلة",
+    "cut": "قطع",
+    "goal": "العودة للأرض قبل المواجهة"
+   },
+   "code": "src/scenes/b5.tsx",
+   "built": false,
+   "composition": "Shot100",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 101,
+   "chapter": 8,
+   "chapterTitle": "التهدئة",
+   "line": 100,
+   "text": "والانفعال مثل الموجة: يرتفع، ويبلغ قمته، ثم ينخفض… إن لم نغذه باستمرار.",
+   "speech": [
+    452.825,
+    458.901
+   ],
+   "frames": {
+    "from": 27159,
+    "to": 27569,
+    "count": 410,
+    "key": 27407
+   },
+   "time": [
+    452.65,
+    459.483
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "الموجة",
+    "chars": [],
+    "props": [
+     "موجة"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "الموجة ترتفع عند «يرتفع»، تبلغ قمتها عند «قمته»، تنخفض عند «ينخفض»",
+    "cut": "تلاشٍ إلى الفصل 9",
+    "goal": "الانفعال موجة"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot101",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 102,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 101,
+   "text": "في الصباح، طلب سليم من جاسر دقيقتين على انفراد.",
+   "speech": [
+    459.701,
+    463.722
+   ],
+   "frames": {
+    "from": 27569,
+    "to": 27831,
+    "count": 262,
+    "key": 27739
+   },
+   "time": [
+    459.483,
+    463.85
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "آلة قهوة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: عازم؛ جاسر: متفاجئ",
+    "action": "سليم يقترب من جاسر ويرفع إصبعين «دقيقتين» عند «دقيقتين»",
+    "cut": "قطع",
+    "goal": "المبادرة"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot102",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 103,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 102,
+   "text": "لم يبدأ بالاتهام، بل بما حدث: في اجتماع أمس، قاطعتني وأنا أعرض فكرتي.",
+   "speech": [
+    464.022,
+    469.958
+   ],
+   "frames": {
+    "from": 27831,
+    "to": 28205,
+    "count": 374,
+    "key": 28072
+   },
+   "time": [
+    463.85,
+    470.083
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "كوب"
+    ],
+    "frame": "متوسطة لاثنين",
+    "expr": "سليم: هادئ؛ جاسر: ذراعان متشابكتان",
+    "action": "سليم يصف ما حدث بيد مفتوحة؛ جاسر يشبك ذراعيه",
+    "cut": "قطع",
+    "goal": "البدء بالوقائع"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot103",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 104,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 103,
+   "text": "ثم قال ما شعر به: شعرت بالإحراج أمام الفريق.",
+   "speech": [
+    470.258,
+    474.032
+   ],
+   "frames": {
+    "from": 28205,
+    "to": 28449,
+    "count": 244,
+    "key": 28363
+   },
+   "time": [
+    470.083,
+    474.15
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [],
+    "frame": "متوسطة",
+    "expr": "سليم: صادق؛ جاسر: يلين",
+    "action": "يد سليم على صدره عند «شعرت»؛ ذراعا جاسر ترتخيان",
+    "cut": "قطع",
+    "goal": "عبارة «أنا»"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot104",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 105,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 104,
+   "text": "ثم قال ما يحتاجه: أريد أن أكمل فكرتي، وبعدها أسمع ملاحظتك كاملة.",
+   "speech": [
+    474.332,
+    480.127
+   ],
+   "frames": {
+    "from": 28449,
+    "to": 28815,
+    "count": 366,
+    "key": 28686
+   },
+   "time": [
+    474.15,
+    480.25
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [],
+    "frame": "متوسطة",
+    "expr": "سليم: واضح؛ جاسر: منصت",
+    "action": "سليم يشرح حاجته بكفين مفتوحتين؛ جاسر يومئ قليلًا",
+    "cut": "قطع",
+    "goal": "الحاجة الواضحة"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot105",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 106,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 105,
+   "text": "سكت جاسر قليلًا، ثم قال: لم أقصد… كنت متوترًا من موعد التسليم.",
+   "speech": [
+    480.427,
+    485.679
+   ],
+   "frames": {
+    "from": 28815,
+    "to": 29148,
+    "count": 333,
+    "key": 29031
+   },
+   "time": [
+    480.25,
+    485.8
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "جاسر",
+     "سليم"
+    ],
+    "props": [
+     "تقويم (فكرة)"
+    ],
+    "frame": "متوسطة على جاسر",
+    "expr": "جاسر: محرج",
+    "action": "جاسر ينظر للأسفل ويحك رقبته ويتكلم؛ يظهر تقويم الموعد في فكرة صغيرة",
+    "cut": "قطع",
+    "goal": "جانب جاسر"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot106",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 107,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 106,
+   "text": "وهنا فعل سليم شيئًا صعبًا: استمع.",
+   "speech": [
+    485.979,
+    488.93
+   ],
+   "frames": {
+    "from": 29148,
+    "to": 29343,
+    "count": 195,
+    "key": 29274
+   },
+   "time": [
+    485.8,
+    489.05
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [],
+    "frame": "قريبة على سليم",
+    "expr": "سليم: منصت",
+    "action": "سليم ينصت بتركيز، رأسه مائل قليلًا",
+    "cut": "قطع",
+    "goal": "الاستماع"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot107",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 108,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 107,
+   "text": "لم يقاطع، ولم يجهز رده وهو يسمع.",
+   "speech": [
+    489.23,
+    492.41
+   ],
+   "frames": {
+    "from": 29343,
+    "to": 29552,
+    "count": 209,
+    "key": 29478
+   },
+   "time": [
+    489.05,
+    492.533
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "سحابة رد"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منصت",
+    "action": "سحابة رد تبدأ بالتشكل فوق سليم فيدعها تتلاشى عند «يجهز»، ويومئ",
+    "cut": "قطع",
+    "goal": "استماع حقيقي"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot108",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 109,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 108,
+   "text": "ثم قال: فهمت أنك كنت تحت ضغط، وأنا أيضًا أحتاج أن يحترم وقتي في العرض.",
+   "speech": [
+    492.71,
+    498.636
+   ],
+   "frames": {
+    "from": 29552,
+    "to": 29925,
+    "count": 373,
+    "key": 29794
+   },
+   "time": [
+    492.533,
+    498.75
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "ركن القهوة",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [],
+    "frame": "متوسطة لاثنين",
+    "expr": "سليم: هادئ واضح؛ جاسر: مرتاح",
+    "action": "سليم يومئ ثم يرفع كفه وهو يذكر حاجته؛ جاسر يومئ موافقًا",
+    "cut": "قطع",
+    "goal": "الفهم مع الثبات"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot109",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 110,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 109,
+   "text": "الاستماع لا يعني أن تتراجع عن موقفك.",
+   "speech": [
+    498.936,
+    502.235
+   ],
+   "frames": {
+    "from": 29925,
+    "to": 30141,
+    "count": 216,
+    "key": 30065
+   },
+   "time": [
+    498.75,
+    502.35
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "آثار أقدام"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: منصت",
+    "action": "سليم يميل منصتًا وقدماه ثابتتان على علامتيهما",
+    "cut": "قطع",
+    "goal": "الاستماع ليس تراجعًا"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot110",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 111,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 110,
+   "text": "والحدود ليست جدارًا تبنيه ضد الآخرين، بل وصف واضح لما تقبله وما لا تقبله.",
+   "speech": [
+    502.535,
+    509.317
+   ],
+   "frames": {
+    "from": 30141,
+    "to": 30566,
+    "count": 425,
+    "key": 30417
+   },
+   "time": [
+    502.35,
+    509.433
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "جدار",
+     "سياج ببوابة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "جدار يتلاشى عند «جدارًا» ويحل محله خط منخفض ببوابة عند «وصف واضح»",
+    "cut": "قطع",
+    "goal": "الحدود وصف لا جدار"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot111",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 112,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 111,
+   "text": "بعد الظهر، جاءت منى، مديرة الفريق، بمهمة إضافية عاجلة.",
+   "speech": [
+    509.617,
+    514.59
+   ],
+   "frames": {
+    "from": 30566,
+    "to": 30883,
+    "count": 317,
+    "key": 30771
+   },
+   "time": [
+    509.433,
+    514.717
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "المكتب",
+    "chars": [
+     "منى",
+     "سليم"
+    ],
+    "props": [
+     "ملف «عاجل»",
+     "مكتب"
+    ],
+    "frame": "متوسطة",
+    "expr": "منى: مستعجلة؛ سليم: منتبه",
+    "action": "منى تصل وتضع ملفًا مكتوبًا عليه «عاجل» على المكتب",
+    "cut": "قطع",
+    "goal": "طلب إضافي"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot112",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 113,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 112,
+   "text": "في الماضي، كان سليم سيقول: حاضر، ثم يسهر غاضبًا حتى الفجر.",
+   "speech": [
+    514.89,
+    519.771
+   ],
+   "frames": {
+    "from": 30883,
+    "to": 31193,
+    "count": 310,
+    "key": 31083
+   },
+   "time": [
+    514.717,
+    519.883
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "المكتب (ذكرى باهتة)",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ساعة",
+     "مصباح"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: ابتسامة متكلفة ثم غاضب",
+    "action": "بلون باهت: سليم يقول «حاضر»، ثم يسهر والساعة تدور حتى الفجر",
+    "cut": "قطع",
+    "goal": "النمط القديم"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot113",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 114,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 113,
+   "text": "هذه المرة قال: أستطيع أن آخذها، لكن سأؤجل التقرير إلى الخميس. أيهما أولى؟",
+   "speech": [
+    520.071,
+    527.0
+   ],
+   "frames": {
+    "from": 31193,
+    "to": 31627,
+    "count": 434,
+    "key": 31474
+   },
+   "time": [
+    519.883,
+    527.117
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "المكتب",
+    "chars": [
+     "سليم",
+     "منى"
+    ],
+    "props": [
+     "تقويم",
+     "ملفان"
+    ],
+    "frame": "متوسطة لاثنين",
+    "expr": "سليم: هادئ واضح؛ منى: تفكر",
+    "action": "سليم يشير إلى الخميس في التقويم عند «الخميس» ويمد كفيه كالميزان عند «أيهما أولى»",
+    "cut": "قطع",
+    "goal": "نعم بشروط"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot114",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 115,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 114,
+   "text": "لم يرفع صوته، ولم يرفض بعناد… لكنه لم يختف أيضًا.",
+   "speech": [
+    527.3,
+    531.666
+   ],
+   "frames": {
+    "from": 31627,
+    "to": 31907,
+    "count": 280,
+    "key": 31808
+   },
+   "time": [
+    527.117,
+    531.783
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "المكتب",
+    "chars": [
+     "منى",
+     "سليم"
+    ],
+    "props": [
+     "ملف"
+    ],
+    "frame": "متوسطة",
+    "expr": "منى: توافق؛ سليم: هادئ",
+    "action": "منى تفكر وتختار ملفًا وتومئ؛ سليم جالس معتدل لم ينكمش",
+    "cut": "قطع",
+    "goal": "الحضور دون عناد"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot115",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 116,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 115,
+   "text": "وفي الاجتماع التالي، حين حاول جاسر أن يقاطعه، رفع سليم يده بهدوء.",
+   "speech": [
+    531.966,
+    537.841
+   ],
+   "frames": {
+    "from": 31907,
+    "to": 32278,
+    "count": 371,
+    "key": 32147
+   },
+   "time": [
+    531.783,
+    537.967
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر",
+     "الفريق"
+    ],
+    "props": [
+     "سبورة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ؛ جاسر: يهم بالكلام",
+    "action": "جاسر يرفع إصبعه ليقاطع، وسليم يرفع كفه بهدوء عند «رفع سليم يده»",
+    "cut": "قطع",
+    "goal": "الحد في لحظته"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot116",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 117,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 116,
+   "text": "اسمح لي أكمل الفكرة، وبعدها الكلمة لك.",
+   "speech": [
+    538.141,
+    541.271
+   ],
+   "frames": {
+    "from": 32278,
+    "to": 32483,
+    "count": 205,
+    "key": 32410
+   },
+   "time": [
+    537.967,
+    541.383
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ مبتسم؛ جاسر: يتراجع",
+    "action": "سليم يقول جملته، وجاسر يخفض إصبعه ويجلس",
+    "cut": "قطع",
+    "goal": "الحد بلطف"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot117",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 118,
+   "chapter": 9,
+   "chapterTitle": "الاستماع والحدود",
+   "line": 117,
+   "text": "وأكمل.",
+   "speech": [
+    541.571,
+    542.177
+   ],
+   "frames": {
+    "from": 32483,
+    "to": 32565,
+    "count": 82,
+    "key": 32518
+   },
+   "time": [
+    541.383,
+    542.75
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "الفريق"
+    ],
+    "props": [
+     "سبورة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: واثق",
+    "action": "سليم يكمل ويشير إلى السبورة، الفريق يتابع",
+    "cut": "تلاشٍ إلى الفصل 10",
+    "goal": "النتيجة"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot118",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 119,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 118,
+   "text": "لم يتغير سليم في يوم واحد… ولا أحد يتغير في يوم واحد.",
+   "speech": [
+    542.977,
+    547.854
+   ],
+   "frames": {
+    "from": 32565,
+    "to": 32878,
+    "count": 313,
+    "key": 32769
+   },
+   "time": [
+    542.75,
+    547.967
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "تقويم",
+     "خط صعود ونزول"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: متعب ثم عازم",
+    "action": "أوراق التقويم تتقلب، وخط تقدمه يصعد وينزل ثم يصعد",
+    "cut": "قطع",
+    "goal": "التغيير تدريجي"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot119",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 120,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 119,
+   "text": "لكنه بدأ عادةً صغيرة: دفتر بجانب السرير.",
+   "speech": [
+    548.154,
+    552.1
+   ],
+   "frames": {
+    "from": 32878,
+    "to": 33133,
+    "count": 255,
+    "key": 33043
+   },
+   "time": [
+    547.967,
+    552.217
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "دفتر",
+     "منضدة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "يضع دفترًا جديدًا بجانب السرير عند «دفتر»",
+    "cut": "قطع",
+    "goal": "العادة الصغيرة"
+   },
+   "code": "src/scenes/b6.tsx",
+   "built": false,
+   "composition": "Shot120",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 121,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 120,
+   "text": "كل مساء، يكتب أربعة أسطر.",
+   "speech": [
+    552.4,
+    554.792
+   ],
+   "frames": {
+    "from": 33133,
+    "to": 33295,
+    "count": 162,
+    "key": 33238
+   },
+   "time": [
+    552.217,
+    554.917
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "دفتر",
+     "قلم",
+     "مصباح"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "المصباح يضيء ويكتب أربعة أسطر تظهر على الصفحة",
+    "cut": "قطع",
+    "goal": "كل مساء"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot121",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 122,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 121,
+   "text": "ماذا حدث؟",
+   "speech": [
+    555.092,
+    555.852
+   ],
+   "frames": {
+    "from": 33295,
+    "to": 33358,
+    "count": 63,
+    "key": 33335
+   },
+   "time": [
+    554.917,
+    555.967
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الدفتر",
+    "chars": [],
+    "props": [
+     "دفتر"
+    ],
+    "frame": "إدخال الصفحة",
+    "expr": "—",
+    "action": "السطر الأول «ماذا حدث؟» يُكتب",
+    "cut": "قطع",
+    "goal": "السؤال 1"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot122",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 123,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 122,
+   "text": "ماذا شعرت؟ بكلمة واحدة دقيقة: محرج، قلق، مستاء، مجروح.",
+   "speech": [
+    556.152,
+    561.167
+   ],
+   "frames": {
+    "from": 33358,
+    "to": 33677,
+    "count": 319,
+    "key": 33565
+   },
+   "time": [
+    555.967,
+    561.283
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الدفتر",
+    "chars": [],
+    "props": [
+     "دفتر",
+     "كلمات مشاعر"
+    ],
+    "frame": "إدخال الصفحة",
+    "expr": "—",
+    "action": "السطر الثاني، ثم تظهر أربع كلمات على الكلمات ويحوّط القلم «محرج»",
+    "cut": "قطع",
+    "goal": "السؤال 2: دقة التسمية"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot123",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 124,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 123,
+   "text": "أين شعرت به في جسدي؟",
+   "speech": [
+    561.467,
+    563.357
+   ],
+   "frames": {
+    "from": 33677,
+    "to": 33809,
+    "count": 132,
+    "key": 33761
+   },
+   "time": [
+    561.283,
+    563.483
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الدفتر",
+    "chars": [],
+    "props": [
+     "دفتر",
+     "رسم جسد"
+    ],
+    "frame": "إدخال الصفحة",
+    "expr": "—",
+    "action": "السطر الثالث ورسم جسد صغير عليه علامة على الصدر",
+    "cut": "قطع",
+    "goal": "السؤال 3"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot124",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 125,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 124,
+   "text": "وماذا فعلت… وماذا أريد أن أجرب في المرة القادمة؟",
+   "speech": [
+    563.657,
+    567.77
+   ],
+   "frames": {
+    "from": 33809,
+    "to": 34073,
+    "count": 264,
+    "key": 33980
+   },
+   "time": [
+    563.483,
+    567.883
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الدفتر",
+    "chars": [],
+    "props": [
+     "دفتر",
+     "سهم"
+    ],
+    "frame": "إدخال الصفحة",
+    "expr": "—",
+    "action": "السطر الرابع وسهم صغير إلى «المرة القادمة»",
+    "cut": "قطع",
+    "goal": "السؤال 4"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot125",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 126,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 125,
+   "text": "ومع الأيام، صار يلاحظ الإشارات أبكر.",
+   "speech": [
+    568.07,
+    571.422
+   ],
+   "frames": {
+    "from": 34073,
+    "to": 34293,
+    "count": 220,
+    "key": 34215
+   },
+   "time": [
+    567.883,
+    571.55
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "مقياس الأيام"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "مقياس لكل يوم، ونقطة الملاحظة تنزل أبكر يومًا بعد يوم",
+    "cut": "قطع",
+    "goal": "الملاحظة أبكر"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot126",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 127,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 126,
+   "text": "صار يعرف أن التعب يجعله أسرع غضبًا، وأن الجوع يجعل كل رسالة أثقل.",
+   "speech": [
+    571.722,
+    577.959
+   ],
+   "frames": {
+    "from": 34293,
+    "to": 34685,
+    "count": 392,
+    "key": 34547
+   },
+   "time": [
+    571.55,
+    578.083
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطارية",
+     "صحن",
+     "رسالة",
+     "ميزان"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يفكر",
+    "action": "بطارية فارغة تسرّع المقياس عند «التعب»، صحن فارغ يجعل الرسالة أثقل في الميزان عند «الجوع»",
+    "cut": "قطع",
+    "goal": "معرفة أنماطه"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot127",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 128,
+   "chapter": 10,
+   "chapterTitle": "تدريب يومي",
+   "line": 127,
+   "text": "ليس لأنه صار شخصًا آخر، بل لأنه صار يرى نفسه بوضوح أكبر.",
+   "speech": [
+    578.259,
+    583.824
+   ],
+   "frames": {
+    "from": 34685,
+    "to": 35064,
+    "count": 379,
+    "key": 34912
+   },
+   "time": [
+    578.083,
+    584.4
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "مرآة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مرتاح",
+    "action": "ضباب المرآة ينقشع فيرى انعكاسه بوضوح عند «بوضوح»",
+    "cut": "تلاشٍ إلى الفصل 11",
+    "goal": "رؤية النفس"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot128",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 129,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 128,
+   "text": "في البيت، على العشاء، انتقدت ريم قراره بتغيير عمله.",
+   "speech": [
+    584.624,
+    588.885
+   ],
+   "frames": {
+    "from": 35064,
+    "to": 35340,
+    "count": 276,
+    "key": 35243
+   },
+   "time": [
+    584.4,
+    589.0
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الطعام",
+    "chars": [
+     "سليم",
+     "ريم",
+     "الأم"
+    ],
+    "props": [
+     "طاولة",
+     "أطباق"
+    ],
+    "frame": "عامة",
+    "expr": "ريم: معترضة؛ سليم: يستمع؛ الأم: قلقة",
+    "action": "ريم تتكلم وتشير بيدها عند «انتقدت»",
+    "cut": "قطع",
+    "goal": "نقاش عائلي"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot129",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 130,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 129,
+   "text": "شعر بالانزعاج يرتفع… ولاحظه.",
+   "speech": [
+    589.185,
+    591.702
+   ],
+   "frames": {
+    "from": 35340,
+    "to": 35509,
+    "count": 169,
+    "key": 35449
+   },
+   "time": [
+    589.0,
+    591.817
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الطعام",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "مقياس صغير"
+    ],
+    "frame": "قريبة",
+    "expr": "سليم: منزعج ثم ينتبه",
+    "action": "مقياس الانزعاج يرتفع، ينظر إلى قبضته فيرخيها عند «ولاحظه»",
+    "cut": "قطع",
+    "goal": "الملاحظة في اللحظة"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot130",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 131,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 130,
+   "text": "بدل أن يدافع فورًا، سألها: ما الذي يقلقك بالضبط؟",
+   "speech": [
+    592.002,
+    595.819
+   ],
+   "frames": {
+    "from": 35509,
+    "to": 35756,
+    "count": 247,
+    "key": 35669
+   },
+   "time": [
+    591.817,
+    595.933
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الطعام",
+    "chars": [
+     "سليم",
+     "ريم"
+    ],
+    "props": [
+     "فقاعة"
+    ],
+    "frame": "متوسطة لاثنين",
+    "expr": "سليم: منصت",
+    "action": "سليم يسأل بهدوء: «ما الذي يقلقك بالضبط؟»",
+    "cut": "قطع",
+    "goal": "السؤال بدل الدفاع"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot131",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 132,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 131,
+   "text": "قالت: أخاف أن تتعب وتندم.",
+   "speech": [
+    596.119,
+    598.274
+   ],
+   "frames": {
+    "from": 35756,
+    "to": 35904,
+    "count": 148,
+    "key": 35851
+   },
+   "time": [
+    595.933,
+    598.4
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الطعام",
+    "chars": [
+     "ريم"
+    ],
+    "props": [
+     "فقاعة"
+    ],
+    "frame": "متوسطة على ريم",
+    "expr": "ريم: قلقة رقيقة",
+    "action": "ريم تجيب: «أخاف أن تتعب وتندم»",
+    "cut": "قطع",
+    "goal": "ما وراء النقد"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot132",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 133,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 132,
+   "text": "ففهم أن وراء النقد خوفًا عليه، لا استهانةً به.",
+   "speech": [
+    598.574,
+    602.503
+   ],
+   "frames": {
+    "from": 35904,
+    "to": 36157,
+    "count": 253,
+    "key": 36067
+   },
+   "time": [
+    598.4,
+    602.617
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [
+     "ريم"
+    ],
+    "props": [
+     "قشرة شائكة",
+     "قلب"
+    ],
+    "frame": "متوسطة",
+    "expr": "ريم: قلقة",
+    "action": "فقاعة نقد شائكة تنفتح فيظهر قلب بداخلها عند «خوفًا عليه»",
+    "cut": "قطع",
+    "goal": "النقد خوف"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot133",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 134,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 133,
+   "text": "وقال رأيه بوضوح: أفهم خوفك، وقد فكرت جيدًا، وأريد أن أجرب.",
+   "speech": [
+    602.803,
+    608.008
+   ],
+   "frames": {
+    "from": 36157,
+    "to": 36488,
+    "count": 331,
+    "key": 36371
+   },
+   "time": [
+    602.617,
+    608.133
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الطعام",
+    "chars": [
+     "سليم",
+     "ريم",
+     "الأم"
+    ],
+    "props": [
+     "طاولة"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: واضح؛ ريم: تومئ؛ الأم: تبتسم",
+    "action": "سليم يضع يده على صدره ثم يفتحها وهو يقول رأيه؛ ريم تومئ",
+    "cut": "قطع",
+    "goal": "الرأي بوضوح ولطف"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot134",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 135,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 134,
+   "text": "وفي العمل، صار يعرف متى يقول نعم، ومتى يقول: نعم، ولكن.",
+   "speech": [
+    608.308,
+    613.566
+   ],
+   "frames": {
+    "from": 36488,
+    "to": 36821,
+    "count": 333,
+    "key": 36703
+   },
+   "time": [
+    608.133,
+    613.683
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "المكتب",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ختمان",
+     "بطاقة مهمة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "ختم «نعم» على بطاقة، ثم ختم «نعم، ولكن» على أخرى عند «ولكن»",
+    "cut": "قطع",
+    "goal": "نعم بشروط"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot135",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 136,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 135,
+   "text": "أما على الإنترنت، فكان الامتحان الأصعب.",
+   "speech": [
+    613.866,
+    616.999
+   ],
+   "frames": {
+    "from": 36821,
+    "to": 37027,
+    "count": 206,
+    "key": 36954
+   },
+   "time": [
+    613.683,
+    617.117
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "شاشة"
+    ],
+    "frame": "إدخال",
+    "expr": "—",
+    "action": "الهاتف يملأ الإطار وتظهر صفحة المنشورات",
+    "cut": "قطع",
+    "goal": "المساحة الثالثة"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot136",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 137,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 136,
+   "text": "كتب منشورًا عن تجربته، فجاءه تعليق عدواني من حساب مجهول.",
+   "speech": [
+    617.299,
+    622.726
+   ],
+   "frames": {
+    "from": 37027,
+    "to": 37371,
+    "count": 344,
+    "key": 37250
+   },
+   "time": [
+    617.117,
+    622.85
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "منشور",
+     "تعليق عدائي"
+    ],
+    "frame": "إدخال",
+    "expr": "—",
+    "action": "منشور سليم، ثم يظهر تعليق عدائي من حساب بلا صورة عند «تعليق»",
+    "cut": "قطع",
+    "goal": "الهجوم"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot137",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 138,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 137,
+   "text": "بدأت أصابعه تكتب ردًا لاذعًا… ثم توقفت.",
+   "speech": [
+    623.026,
+    626.714
+   ],
+   "frames": {
+    "from": 37371,
+    "to": 37610,
+    "count": 239,
+    "key": 37526
+   },
+   "time": [
+    622.85,
+    626.833
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "يدان على الهاتف",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "مسودة"
+    ],
+    "frame": "قريبة",
+    "expr": "—",
+    "action": "إبهاماه يكتبان ردًا لاذعًا ثم يتوقفان عند «توقفت»",
+    "cut": "قطع",
+    "goal": "الوقفة"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot138",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 139,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 138,
+   "text": "سأل نفسه: هل يريد هذا الشخص حوارًا، أم معركة؟",
+   "speech": [
+    627.014,
+    630.72
+   ],
+   "frames": {
+    "from": 37610,
+    "to": 37850,
+    "count": 240,
+    "key": 37765
+   },
+   "time": [
+    626.833,
+    630.833
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة المعيشة ليلًا",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "هاتف",
+     "أيقونتا حوار ومعركة"
+    ],
+    "frame": "قريبة",
+    "expr": "سليم: يفكر",
+    "action": "وجهه في ضوء الهاتف؛ أيقونة حوار عند «حوارًا» وأيقونة معركة عند «معركة»",
+    "cut": "قطع",
+    "goal": "سؤال النية"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot139",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 140,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 139,
+   "text": "فليس كل تعليق يستحق ردًا.",
+   "speech": [
+    631.02,
+    633.635
+   ],
+   "frames": {
+    "from": 37850,
+    "to": 38025,
+    "count": 175,
+    "key": 37963
+   },
+   "time": [
+    630.833,
+    633.75
+   ],
+   "plan": {
+    "type": "رسم تفسيري",
+    "place": "خلفية ورقية",
+    "chars": [],
+    "props": [
+     "قائمة تعليقات",
+     "سهم رد"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "تعليقات تمر؛ بعضها فقط يأخذ سهم رد",
+    "cut": "قطع",
+    "goal": "ليس كل تعليق"
+   },
+   "code": "src/scenes/b7.tsx",
+   "built": false,
+   "composition": "Shot140",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 141,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 140,
+   "text": "رد مرةً واحدة، بجملة هادئة واضحة، ثم أغلق التطبيق.",
+   "speech": [
+    633.935,
+    638.651
+   ],
+   "frames": {
+    "from": 38025,
+    "to": 38326,
+    "count": 301,
+    "key": 38220
+   },
+   "time": [
+    633.75,
+    638.767
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "رد",
+     "شاشة القفل"
+    ],
+    "frame": "إدخال",
+    "expr": "—",
+    "action": "رد هادئ يُنشر، ثم يُغلق التطبيق إلى شاشة القفل عند «أغلق»",
+    "cut": "قطع",
+    "goal": "رد واحد"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot141",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 142,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 141,
+   "text": "وحين تكرر الهجوم، استخدم الحظر بلا شعور بالذنب.",
+   "speech": [
+    638.951,
+    643.049
+   ],
+   "frames": {
+    "from": 38326,
+    "to": 38590,
+    "count": 264,
+    "key": 38497
+   },
+   "time": [
+    638.767,
+    643.167
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "شاشة الهاتف",
+    "chars": [],
+    "props": [
+     "قائمة",
+     "حظر"
+    ],
+    "frame": "إدخال",
+    "expr": "—",
+    "action": "تعليقات عدائية جديدة، القائمة تنفتح ويُضغط «حظر» عند «الحظر» فيتلاشى التعليق",
+    "cut": "قطع",
+    "goal": "الحظر حد"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot142",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 143,
+   "chapter": 11,
+   "chapterTitle": "في البيت والعمل والإنترنت",
+   "line": 142,
+   "text": "حماية وقتك وطاقتك ليست ضعفًا… إنها حد آخر.",
+   "speech": [
+    643.349,
+    647.485
+   ],
+   "frames": {
+    "from": 38590,
+    "to": 38884,
+    "count": 294,
+    "key": 38762
+   },
+   "time": [
+    643.167,
+    648.067
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "حديقة",
+     "سياج",
+     "ساعة",
+     "بطارية"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: مرتاح",
+    "action": "سياج منخفض يحيط بحديقة صغيرة فيها ساعة وبطارية ممتلئة، وسليم يسقيها",
+    "cut": "تلاشٍ إلى الفصل 12",
+    "goal": "حماية الوقت والطاقة"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot143",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 144,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 143,
+   "text": "بعد أسبوع، كان الاجتماع كالعادة.",
+   "speech": [
+    648.285,
+    650.957
+   ],
+   "frames": {
+    "from": 38884,
+    "to": 39065,
+    "count": 181,
+    "key": 39001
+   },
+   "time": [
+    648.067,
+    651.083
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر",
+     "الفريق"
+    ],
+    "props": [
+     "طاولة",
+     "سبورة"
+    ],
+    "frame": "عامة (تكرار اللقطة الأولى)",
+    "expr": "الفريق: عادي",
+    "action": "التكوين نفسه للقطة الأولى؛ تقويم يقفز أسبوعًا",
+    "cut": "قطع",
+    "goal": "العودة إلى البداية"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot144",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 145,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 144,
+   "text": "نفس الطاولة، ونفس الوجوه، ونفس جاسر.",
+   "speech": [
+    651.257,
+    654.555
+   ],
+   "frames": {
+    "from": 39065,
+    "to": 39280,
+    "count": 215,
+    "key": 39204
+   },
+   "time": [
+    651.083,
+    654.667
+   ],
+   "plan": {
+    "type": "قصة",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "الفريق",
+     "جاسر"
+    ],
+    "props": [
+     "طاولة"
+    ],
+    "frame": "متوسطة تتنقل",
+    "expr": "جاسر: متعالٍ",
+    "action": "الطاولة، ثم الوجوه، ثم جاسر على الكلمات الثلاث",
+    "cut": "قطع",
+    "goal": "كل شيء كما هو"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot145",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 146,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 145,
+   "text": "لكن سليم لم يعد ذلك الشخص الذي يبتسم ويضغط القلم تحت الطاولة.",
+   "speech": [
+    654.855,
+    660.312
+   ],
+   "frames": {
+    "from": 39280,
+    "to": 39626,
+    "count": 346,
+    "key": 39504
+   },
+   "time": [
+    654.667,
+    660.433
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "شبح سليم القديم"
+    ],
+    "props": [
+     "قلم",
+     "طاولة"
+    ],
+    "frame": "متوسطة",
+    "expr": "القديم: ابتسامة متكلفة؛ الجديد: هادئ",
+    "action": "شبح سليم القديم يضغط القلم تحت الطاولة ثم يتلاشى، ويبقى سليم بيدين مسترخيتين",
+    "cut": "قطع",
+    "goal": "التغير الداخلي"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot146",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 147,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 146,
+   "text": "صار يشعر بغضبه، ويسميه، ويختار ما يفعل به.",
+   "speech": [
+    660.612,
+    664.718
+   ],
+   "frames": {
+    "from": 39626,
+    "to": 39890,
+    "count": 264,
+    "key": 39797
+   },
+   "time": [
+    660.433,
+    664.833
+   ],
+   "plan": {
+    "type": "موقف",
+    "place": "غرفة الاجتماع",
+    "chars": [
+     "سليم",
+     "جاسر"
+    ],
+    "props": [
+     "بطاقة اسم",
+     "موجة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منزعج ← هادئ ← عازم",
+    "action": "جاسر يقاطع؛ موجة صغيرة في صدر سليم عند «يشعر»، بطاقة «انزعاج» عند «ويسميه»، يرفع كفه بهدوء عند «ويختار»",
+    "cut": "قطع",
+    "goal": "الخطوات معًا"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot147",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 148,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 147,
+   "text": "الهدوء الحقيقي ليس بحيرةً بلا تيارات.",
+   "speech": [
+    665.018,
+    668.557
+   ],
+   "frames": {
+    "from": 39890,
+    "to": 40121,
+    "count": 231,
+    "key": 40039
+   },
+   "time": [
+    664.833,
+    668.683
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "البحيرة",
+    "chars": [],
+    "props": [
+     "بحيرة",
+     "تيار"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "البحيرة بمقطعها: سطح هادئ وتيارات تتحرك تحته",
+    "cut": "مزج",
+    "goal": "إعادة تعريف البحيرة"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot148",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 149,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 148,
+   "text": "إنه أن ترى التيار، وتعرف اتجاهه، وتقود قاربك بنفسك.",
+   "speech": [
+    668.857,
+    673.604
+   ],
+   "frames": {
+    "from": 40121,
+    "to": 40423,
+    "count": 302,
+    "key": 40316
+   },
+   "time": [
+    668.683,
+    673.717
+   ],
+   "plan": {
+    "type": "استعارة",
+    "place": "البحيرة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "قارب",
+     "تيار"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ عازم",
+    "action": "قارب صغير يقوده سليم عبر التيار عند «وتقود قاربك»",
+    "cut": "قطع",
+    "goal": "المعنى الكامل"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot149",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 150,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 149,
+   "text": "فإليك خطوةً واحدةً تجربها اليوم.",
+   "speech": [
+    673.904,
+    676.808
+   ],
+   "frames": {
+    "from": 40423,
+    "to": 40616,
+    "count": 193,
+    "key": 40547
+   },
+   "time": [
+    673.717,
+    676.933
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطاقة الخطوة"
+    ],
+    "frame": "متوسطة أمامية",
+    "expr": "سليم: ابتسامة",
+    "action": "سليم يلتفت إلى المشاهد؛ عنوان «خطوة اليوم»",
+    "cut": "قطع",
+    "goal": "الدعوة العملية"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot150",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 151,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 150,
+   "text": "في أول لحظة تنزعج فيها، توقف لحظة.",
+   "speech": [
+    677.108,
+    680.379
+   ],
+   "frames": {
+    "from": 40616,
+    "to": 40830,
+    "count": 214,
+    "key": 40754
+   },
+   "time": [
+    676.933,
+    680.5
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الشارع",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "أيقونة توقف"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: منزعج ثم يتوقف",
+    "action": "سليم يمشي، ينزعج، ويتوقف في مكانه عند «توقف»",
+    "cut": "قطع",
+    "goal": "الخطوة 1: توقف"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot151",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 152,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 151,
+   "text": "سم شعورك بكلمة واحدة، في سرك.",
+   "speech": [
+    680.679,
+    683.454
+   ],
+   "frames": {
+    "from": 40830,
+    "to": 41014,
+    "count": 184,
+    "key": 40949
+   },
+   "time": [
+    680.5,
+    683.567
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الشارع",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "بطاقة اسم"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: هادئ",
+    "action": "بطاقة كلمة واحدة تظهر عند صدره عند «سم»",
+    "cut": "قطع",
+    "goal": "الخطوة 2: سمّه"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot152",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 153,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 152,
+   "text": "خذ نفسًا بطيئًا، واجعل الزفير أطول.",
+   "speech": [
+    683.754,
+    686.757
+   ],
+   "frames": {
+    "from": 41014,
+    "to": 41213,
+    "count": 199,
+    "key": 41142
+   },
+   "time": [
+    683.567,
+    686.883
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "الشارع",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "خطوط نفس"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: عينان مغمضتان",
+    "action": "شهيق ثم زفير طويل مرئي عند «الزفير»",
+    "cut": "قطع",
+    "goal": "الخطوة 3: تنفس"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot153",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 154,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 153,
+   "text": "ثم اسأل نفسك: ما الذي أريد أن أحميه، أو أطلبه، هنا؟",
+   "speech": [
+    687.057,
+    691.21
+   ],
+   "frames": {
+    "from": 41213,
+    "to": 41480,
+    "count": 267,
+    "key": 41386
+   },
+   "time": [
+    686.883,
+    691.333
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "درع",
+     "كف"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: يفكر",
+    "action": "أيقونة درع عند «أحميه» وكف مفتوحة عند «أطلبه»",
+    "cut": "قطع",
+    "goal": "الخطوة 4: اسأل"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot154",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 155,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 154,
+   "text": "وبعدها… اختر ردك.",
+   "speech": [
+    691.51,
+    692.952
+   ],
+   "frames": {
+    "from": 41480,
+    "to": 41584,
+    "count": 104,
+    "key": 41547
+   },
+   "time": [
+    691.333,
+    693.067
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "مفترق",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "طريقان"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: عازم",
+    "action": "طريقان؛ يخطو سليم إلى أحدهما عند «اختر»",
+    "cut": "قطع",
+    "goal": "الخطوة 5: اختر"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot155",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 156,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 155,
+   "text": "قد يكون الرد كلمةً واضحة، وقد يكون صمتًا تختاره، وقد يكون حدًا تضعه بلطف.",
+   "speech": [
+    693.252,
+    699.864
+   ],
+   "frames": {
+    "from": 41584,
+    "to": 41999,
+    "count": 415,
+    "key": 41853
+   },
+   "time": [
+    693.067,
+    699.983
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "ثلاث بطاقات"
+    ],
+    "frame": "عامة",
+    "expr": "سليم: هادئ",
+    "action": "ثلاث بطاقات على الكلمات: فقاعة كلمة واضحة، يد على الشفاه لصمت مختار، كف «لحظة» لحد لطيف",
+    "cut": "قطع",
+    "goal": "الخيارات"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot156",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 157,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 156,
+   "text": "المهم أن يكون ردك أنت… لا رد الاستفزاز.",
+   "speech": [
+    700.164,
+    703.654
+   ],
+   "frames": {
+    "from": 41999,
+    "to": 42226,
+    "count": 227,
+    "key": 42146
+   },
+   "time": [
+    699.983,
+    703.767
+   ],
+   "plan": {
+    "type": "مقارنة",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "فقاعة",
+     "خيوط مقطوعة"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: عازم هادئ",
+    "action": "سليم يمسك فقاعته بنفسه، وخيوط الاستفزاز المقطوعة تسقط عند «لا رد الاستفزاز»",
+    "cut": "قطع",
+    "goal": "الرد ردك أنت"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot157",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 158,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 157,
+   "text": "جربها اليوم، مرةً واحدةً فقط.",
+   "speech": [
+    703.954,
+    706.317
+   ],
+   "frames": {
+    "from": 42226,
+    "to": 42386,
+    "count": 160,
+    "key": 42329
+   },
+   "time": [
+    703.767,
+    706.433
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "خلفية ورقية",
+    "chars": [
+     "سليم"
+    ],
+    "props": [],
+    "frame": "متوسطة أمامية",
+    "expr": "سليم: ابتسامة",
+    "action": "سليم يرفع إصبعًا واحدًا «مرة واحدة»",
+    "cut": "قطع",
+    "goal": "خطوة صغيرة ممكنة"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot158",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 159,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 158,
+   "text": "ثم اكتب في المساء ماذا حدث.",
+   "speech": [
+    706.617,
+    708.756
+   ],
+   "frames": {
+    "from": 42386,
+    "to": 42533,
+    "count": 147,
+    "key": 42480
+   },
+   "time": [
+    706.433,
+    708.883
+   ],
+   "plan": {
+    "type": "تطبيق",
+    "place": "غرفة النوم",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "دفتر",
+     "مصباح"
+    ],
+    "frame": "متوسطة",
+    "expr": "سليم: مرتاح",
+    "action": "مساءً يكتب في الدفتر",
+    "cut": "تلاشٍ",
+    "goal": "إغلاق الدائرة اليومية"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot159",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  },
+  {
+   "id": 160,
+   "chapter": 12,
+   "chapterTitle": "خطوة اليوم",
+   "line": 159,
+   "text": "كتاب وبس",
+   "speech": [
+    709.056,
+    710.036
+   ],
+   "frames": {
+    "from": 42533,
+    "to": 42650,
+    "count": 117,
+    "key": 42581
+   },
+   "time": [
+    708.883,
+    710.833
+   ],
+   "plan": {
+    "type": "تأمل",
+    "place": "البحيرة",
+    "chars": [
+     "سليم"
+    ],
+    "props": [
+     "قارب",
+     "شعار"
+    ],
+    "frame": "عامة",
+    "expr": "—",
+    "action": "البحيرة هادئة والقارب يبتعد؛ يظهر «كتاب وبس»",
+    "cut": "نهاية",
+    "goal": "الختام"
+   },
+   "code": "src/scenes/b8.tsx",
+   "built": false,
+   "composition": "Shot160",
+   "characters": [],
+   "assets": [],
+   "wordCues": [],
+   "sfx": [],
+   "preview": null
+  }
+ ]
+}

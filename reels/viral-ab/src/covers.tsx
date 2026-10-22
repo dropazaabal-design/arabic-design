@@ -2,6 +2,7 @@ import React from 'react';
 import { AbsoluteFill } from 'remotion';
 import { ReelA } from './a/A';
 import { ReelB } from './b/B';
+import { ReelC } from './c/C';
 import { BODY, TITLE } from './fonts';
 import { Figure, pose } from './rig';
 
@@ -41,5 +42,13 @@ export const CoverB: React.FC = () => (
   <AbsoluteFill>
     <ReelB bare still={Math.round(4.15 * 60)} cam={{ x: 540, y: 1480 - 560 / 2.05, z: 2.05 }} />
     <Title kicker="سأله حفيده:" big="يا جدّي… متى بتاكل منها؟" sub="جوابه أخذ 40 سنة" look={{ ink: '#FBF3F8', sub: '#F3C6D8', fade: '#262955', accent: '#8A3460' }} />
+  </AbsoluteFill>
+);
+
+// C: the 101st strike has landed and the crack runs through all hundred chips. Why this one broke it is the question.
+export const CoverC: React.FC = () => (
+  <AbsoluteFill>
+    <ReelC bare still={Math.round(10.3 * 60)} cam={{ x: 620, y: 1080, z: 1.25 }} />
+    <Title kicker="100 ضربة… وما صار شي" big="الضربة 101" sub="شوف إيش صار" look={{ ink: '#F4F7FB', sub: '#C9FBF4', fade: '#2E3136', accent: '#1F8F89' }} />
   </AbsoluteFill>
 );

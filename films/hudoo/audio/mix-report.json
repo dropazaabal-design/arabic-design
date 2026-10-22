@@ -1,0 +1,132 @@
+{
+ "lufs": -16.0,
+ "truePeak": -2.0,
+ "seconds": 710.836,
+ "cues": [
+  {
+   "shot": 1,
+   "sfx": "tap",
+   "t": 2.552
+  },
+  {
+   "shot": 2,
+   "sfx": "swish",
+   "t": 5.989
+  },
+  {
+   "shot": 3,
+   "sfx": "laugh",
+   "t": 10.332
+  },
+  {
+   "shot": 4,
+   "sfx": "chair",
+   "t": 16.797
+  },
+  {
+   "shot": 6,
+   "sfx": "click",
+   "t": 25.319
+  },
+  {
+   "shot": 6,
+   "sfx": "heart",
+   "t": 26.57
+  },
+  {
+   "shot": 7,
+   "sfx": "boil",
+   "t": 29.432
+  },
+  {
+   "shot": 9,
+   "sfx": "water",
+   "t": 36.083
+  },
+  {
+   "shot": 9,
+   "sfx": "whoosh",
+   "t": 39.232
+  },
+  {
+   "shot": 10,
+   "sfx": "water",
+   "t": 40.417
+  },
+  {
+   "shot": 11,
+   "sfx": "pop",
+   "t": 46.968
+  },
+  {
+   "shot": 12,
+   "sfx": "steps",
+   "t": 48.8
+  },
+  {
+   "shot": 13,
+   "sfx": "breath_in",
+   "t": 53.398
+  },
+  {
+   "shot": 13,
+   "sfx": "chime",
+   "t": 56.553
+  },
+  {
+   "shot": 14,
+   "sfx": "door",
+   "t": 60.062
+  },
+  {
+   "shot": 14,
+   "sfx": "steps",
+   "t": 61.632
+  },
+  {
+   "shot": 15,
+   "sfx": "steps",
+   "t": 62.533
+  },
+  {
+   "shot": 16,
+   "sfx": "rewind",
+   "t": 67.009
+  },
+  {
+   "shot": 16,
+   "sfx": "rewind",
+   "t": 67.435
+  },
+  {
+   "shot": 16,
+   "sfx": "rewind",
+   "t": 68.235
+  },
+  {
+   "shot": 16,
+   "sfx": "whoosh",
+   "t": 66.033
+  },
+  {
+   "shot": 18,
+   "sfx": "door",
+   "t": 73.417
+  },
+  {
+   "shot": 18,
+   "sfx": "steps",
+   "t": 73.917
+  },
+  {
+   "shot": 19,
+   "sfx": "bang",
+   "t": 79.172
+  },
+  {
+   "shot": 20,
+   "sfx": "breath_out",
+   "t": 80.533
+  }
+ ]
+}
