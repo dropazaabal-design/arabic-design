@@ -1,5 +1,5 @@
 import React from 'react';
-import { BODY, TITLE } from '../fonts';
+import { BODY } from '../fonts';
 import { CAST } from '../kit/characters/cast';
 import { EXPRESSIONS, type Expr, type Face } from '../kit/characters/face';
 import { Hand, type Gesture } from '../kit/characters/hands';
@@ -167,7 +167,7 @@ const ToolChips: React.FC<{ lit: number; p: number }> = ({ lit, p }) => (
   <div dir="rtl" style={{ position: 'absolute', top: 24, right: 28, display: 'flex', gap: 14 }}>
     {TOOLS.map((t, i) => {
       const on = i === lit ? cl(p) : 0;
-      return <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '2px 18px 6px 12px', borderRadius: 999, background: on ? '#FFFFFF' : 'rgba(243,241,236,0.85)', border: `4px solid ${on > 0.5 ? PAL.calm : 'rgba(42,47,58,0.25)'}`, opacity: 0.5 + 0.5 * on, transform: `scale(${1 + 0.08 * on})`, boxShadow: on ? '0 4px 0 rgba(42,47,58,0.18)' : 'none' }}>
+      return <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 4, padding: '2px 18px 6px 12px', borderRadius: 999, background: on ? '#FFFFFF' : '#F3F1EC', border: `4px solid ${on > 0.5 ? PAL.calm : 'rgba(42,47,58,0.25)'}`, opacity: 0.72 + 0.28 * on, color: on ? INK : PAL.textSoft, transform: `scale(${1 + 0.08 * on})`, boxShadow: on ? '0 4px 0 rgba(42,47,58,0.18)' : 'none' }}>
         <svg width={60} height={60} viewBox="-30 -30 60 60">{t.icon}</svg>
         <span lang="ar" style={{ fontFamily: BODY, fontWeight: 800, fontSize: 40, color: INK, lineHeight: 1.3 }}>{t.name}</span>
       </div>;
@@ -201,7 +201,7 @@ const DeskRoom: React.FC<{ c: Ctx; actor: React.ReactNode; screen?: React.ReactN
     {back}
     {actor}
     <DeskFront mug={false} />
-    <TroubleBox x={1420} wob={box} />
+    <TroubleBox x={1566} wob={box} />
     {mug && <g transform={`translate(${MUG_X} ${DESK.deskTop})`}><Mug steam={0.5} t={c.t} /></g>}
     {front}
   </g>
@@ -209,7 +209,7 @@ const DeskRoom: React.FC<{ c: Ctx; actor: React.ReactNode; screen?: React.ReactN
 const SAL = { who: 'salim' as const, seed: 41 };
 
 // shot 100's cloud
-const CLOUD: [number, number, number][] = [[1330, 360, 120], [1480, 300, 140], [1640, 350, 120], [1420, 430, 110], [1580, 440, 110], [1230, 430, 80], [1740, 430, 80]];
+const CLOUD: [number, number, number][] = [[1180, 420, 110], [1320, 360, 130], [1470, 410, 110], [1260, 490, 100], [1410, 500, 100], [1090, 490, 74], [1560, 490, 74]];
 
 export const SHOTS: Record<number, ShotRender> = {
   // 81 — the feeling knocks; Salim goes to shove the door shut on «تطرده» but stops short and lowers his hands;
@@ -339,12 +339,12 @@ export const SHOTS: Record<number, ShotRender> = {
     const cm = cam(650, 585, 1.9), X = 720;
     const wp = c.p(dec - 4, rep - dec, ease.lin);
     const writing = c.f > dec - 10 && c.f < rep + 4;
-    const Lw: P2 = writing ? [26 + 34 * wp + Math.sin(c.f * 0.9) * 2.5, -206 + Math.cos(c.f * 1.3) * 2.5] : [26, -200];
+    const Lw: P2 = writing ? [30 + 24 * wp + Math.sin(c.f * 0.9) * 2, -176 + Math.cos(c.f * 1.3) * 2] : [32, -172];
     const stuck = c.f >= tom - 2;
     const pz = poseAt(c.f, [
       [0, st({ ...KNEES, lean: 10, head: 18, turn: 0.9, R: { hand: [52, -124] }, L: { hand: [60, -122] } }, 'grip', 'pen')],
-      [esc - 34, st({ ...KNEES, lean: 4, head: 14, turn: 0.75, R: { hand: [58, -188] }, L: { hand: [26, -196] } }, 'grip', 'pen'), 22],
-      [dec - 10, st({ ...KNEES, lean: 6, head: 18, turn: 0.75, R: { hand: [58, -188] }, L: { hand: Lw } }, 'grip', 'pen'), 10],
+      [esc - 34, st({ ...KNEES, lean: 4, head: 14, turn: 0.75, R: { hand: [74, -160] }, L: { hand: [32, -172] } }, 'grip', 'pen'), 22],
+      [dec - 10, st({ ...KNEES, lean: 6, head: 18, turn: 0.75, R: { hand: [74, -160] }, L: { hand: Lw } }, 'grip', 'pen'), 10],
       [rep + 4, st({ ...KNEES, lean: 22, head: 20, turn: 0.95, R: { hand: [92, -142] }, L: { hand: [44, -150] } }, 'grip', 'pen'), 30],
       [tom - 2, st({ ...KNEES, lean: 22, head: 20, turn: 0.95, R: { hand: [93, -136] }, L: { hand: [44, -150] } }, 'open', 'pen'), 6],
       [clear - 8, st({ ...KNEES, lean: -2, head: -2, turn: 0.6, breath: 1, R: { hand: [50, -126] }, L: { hand: [60, -124] } }, 'relaxed', 'pen'), 30],
@@ -358,8 +358,8 @@ export const SHOTS: Record<number, ShotRender> = {
       <Bedroom night lamp={0.6} />
       <PhoneFlat x={585} y={670} back note={stuck ? 1 : 0} />
       <Actor f={c.f} {...SAL} x={X} y={860} s={S} facing={-1} pose={{ p, hands: pz.hands }}
-        hold={{ R: stuck ? undefined : <g transform="translate(0 -26)"><StickyNote p={wp} /></g>, L: <g transform="scale(0.6)"><Pen /></g> }} upright={{ R: true }}
-        face={faceAt(c.f, [[0, F('neutral', { look: [0.7, 0.6], brow: 0.15 })], [esc - 30, F('determined', { look: [0.4, 0.5] }), 16], [clear - 4, F('relieved'), 24], [clr + 10, F('calm', { look: [0.3, 0.2] }), 20]])} />
+        hold={{ R: stuck ? undefined : <g transform="translate(-4 -16)"><StickyNote p={wp} /></g>, L: <g transform="scale(0.6)"><Pen /></g> }} upright={{ R: true }}
+        face={faceAt(c.f, [[0, F('neutral', { look: [0.7, 0.6], brow: 0.15 })], [esc - 30, F('determined', { look: [0.6, 0.9] }), 16], [clear - 4, F('relieved'), 24], [clr + 10, F('calm', { look: [0.3, 0.2] }), 20]])} />
     </Stage>;
   },
 
@@ -404,7 +404,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const z = 1 + 0.035 * c.p(0, c.dur, ease.lin);
     const txt = (text: string, x: number, y: number, w: number, size: number, color: string, p: number) => (
       <foreignObject x={x - w / 2} y={y - size} width={w} height={size * 2}>
-        <div dir="rtl" lang="ar" style={{ width: w, height: size * 2, display: 'flex', alignItems: 'center', justifyContent: 'flex-start', fontFamily: TITLE, fontWeight: 800, fontSize: size, color, lineHeight: 1.2, clipPath: `inset(0 0 0 ${(1 - cl(p)) * 100}%)` }}>{text}</div>
+        <div dir="rtl" lang="ar" style={{ width: w, height: size * 2, display: 'flex', alignItems: 'center', justifyContent: 'flex-start', fontFamily: BODY, fontWeight: 700, fontSize: size, color, lineHeight: 1.2, whiteSpace: 'nowrap', clipPath: `inset(0 0 0 ${(1 - cl(p)) * 100}%)` }}>{text}</div>
       </foreignObject>
     );
     const sun = pop(morn), moon = pop(night);
@@ -426,7 +426,7 @@ export const SHOTS: Record<number, ShotRender> = {
           {[[-110, -40], [70, -80], [90, 40]].map(([x, y], i) => <path key={i} d={`M${x} ${y - 10} v20 M${x - 10} ${y} h20`} stroke={pen} strokeWidth={6} strokeLinecap="round" />)}
         </g>}
         <path d="M-640 30 H640" stroke={INK} strokeWidth={4} strokeDasharray="16 18" opacity={0.35} />
-        {txt('فسأؤجل الرد', 390, 220, 600, 110, PAL.calm, c.p(then, to - then - 6, ease.lin))}
+        {txt('فسأؤجل الرد', 330, 220, 720, 104, PAL.calm, c.p(then, to - then - 6, ease.lin))}
         <Arrow from={[40, 230]} to={[-300, 230]} p={c.p(to, 22)} color={pen} w={10} />
         {sun > 0 && <g transform={`translate(-450 230) scale(${sun}) rotate(${c.t * 12})`}>
           <circle r={56} fill="#F4F8FC" stroke={pen} strokeWidth={8} />
@@ -502,7 +502,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <Bedroom night lamp={0.6} />
       <Actor f={c.f} {...SAL} x={X} y={860} s={S} facing={1} pose={pz}
         face={faceAt(c.f, [[0, F('calm', { look: [0.5, 0.5] })], [q, F('thinking', { look: [0.6, -0.8] }), 16]])} />
-      {qm > 0 && <g transform={`translate(1050 ${330 + Math.sin(c.t * 2) * 6}) scale(${qm})`}><WLabel x={0} y={0} text="؟" size={150} color={PAL.focus} /></g>}
+      {qm > 0 && <g transform={`translate(1030 ${410 + Math.sin(c.t * 2) * 6}) scale(${qm})`}><WLabel x={0} y={0} text="؟" size={150} color={PAL.focus} /></g>}
     </Stage>;
   },
 
@@ -530,7 +530,7 @@ export const SHOTS: Record<number, ShotRender> = {
         <path d={sketchRect(610 + bs, 712, 300, 148, 11, 1.4)} fill={PAL.chair} stroke={INK} strokeWidth={5} />
         <path d={sketchRect(730 + bs, 770, 60, 22, 12, 0.8)} fill={PAL.metal} stroke={INK} strokeWidth={3.6} />
         {arr.map((a, i) => a > 0 && a < 1 && <path key={i} d={`M${760 + (i - 1) * 40} 700 L${mix(760, TX[i], a)} ${mix(700, 430, a) + 70}`} stroke={PAL.calmLight} strokeWidth={10} strokeLinecap="round" opacity={1 - a} />)}
-        <g transform={`translate(${610 + bs} 712) rotate(${-112 * lid})`}>
+        <g transform={`translate(${610 + bs} 712) rotate(${-172 * lid})`}>
           <path d={sketchRect(0, -26, 300, 26, 13, 1)} fill={PAL.chairDark} stroke={INK} strokeWidth={5} />
           <path d={sketchRect(110, -46, 80, 22, 14, 0.8)} fill="none" stroke={INK} strokeWidth={6} />
         </g>
@@ -614,7 +614,7 @@ export const SHOTS: Record<number, ShotRender> = {
   //      stays, unchanged; it is named «المشكلة» on «المشكلة», and he looks at it and nods.
   95: (c) => {
     const magic = c.at('سحر'), erase = c.at('يمحو'), prob = c.at('المشكلة');
-    const cm = cam(1080, 520, 1.42);
+    const cm = cam(1160, 540, 1.55);
     const pz = poseAt(c.f, [[0, st(desk({ lean: -2, head: 0, turn: 0.6, L: { hand: [24, -136], bend: -1 } }), 'relaxed', 'open')], [erase + 10, st(desk({ lean: 2, head: 8, turn: 0.95, L: { hand: [40, -144] } }), 'relaxed', 'relaxed'), 20]]);
     const p = { ...pz.p, head: pz.p.head + nod(c.f, prob + 24, 1, 8) };
     const sw = c.p(erase - 4, 40, ease.inOut);
@@ -631,10 +631,10 @@ export const SHOTS: Record<number, ShotRender> = {
             return <path key={i} d={`M${x} ${y - r} Q${x} ${y} ${x + r} ${y} Q${x} ${y} ${x} ${y + r} Q${x} ${y} ${x - r} ${y} Q${x} ${y} ${x} ${y - r} Z`} fill="#FFFFFF" stroke={PAL.focus} strokeWidth={3} opacity={1 - u * 0.6} />;
           })}
           {sw > 0 && sw < 1 && [0, 1, 2].map((i) => {
-            const x = mix(800, 1560, sw) - i * 40, y = 560 + i * 26;
+            const x = mix(800, 1640, sw) - i * 40, y = 560 + i * 26;
             return <path key={i} d={`M${x - 140} ${y} q35 -16 70 0 t70 0`} stroke={PAL.water} strokeWidth={7} fill="none" strokeLinecap="round" opacity={Math.sin(sw * Math.PI) * 0.9} />;
           })}
-          <WLabel x={1420} y={520} text="المشكلة" size={46} bg="#FFFFFF" o={c.p(prob - 2, 12, ease.back)} />
+          <WLabel x={1566} y={520} text="المشكلة" size={46} bg="#FFFFFF" o={c.p(prob - 2, 12, ease.back)} />
         </>} />
     </Stage>;
   },
@@ -691,7 +691,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const g = (a: number) => c.p(a, 16) * (0.8 + 0.2 * Math.sin((c.f - a) / 9));
     return <Stage cam={cm} over={<ToolChips lit={1} p={c.p(second - 4, 14)} />}>
       <DeskRoom c={c}
-        back={<path d="M650 540 L656 690" stroke={PAL.calm} strokeWidth={16} strokeLinecap="round" opacity={0.85 * g(back)} />}
+        back={<path d="M600 690 L597 560 L611 522 L640 522 L652 560 L648 690 Z" fill={PAL.calm} opacity={0.75 * g(back)} />}
         actor={<Actor f={c.f} {...SAL} x={DESK.seat.x} y={860} s={S} facing={1} pose={pz}
           face={faceAt(c.f, [[0, F('calm', { look: [0.6, 0.3] })], [feet - 6, F('calm', { look: [0.3, 1] }), 14], [back, F('relieved'), 18], [hands, F('calm', { look: [0.8, 0.6] }), 14]])} />}
         front={<>
@@ -787,20 +787,20 @@ export const SHOTS: Record<number, ShotRender> = {
     const gl = c.p(grd - 4, 30);
     const roots = c.p(grd, 60);
     const t = c.t;
-    return <Stage>
+    return <Stage cam={cam(1060, 650, 1.4)}>
       <Paper seed={100} />
       <path d={sketch([[-20, 880], [400, 870], [900, 884], [1400, 872], [1940, 880], [1940, 1100], [-20, 1100]], 7, 3, true)} fill={PAL.floorDark} stroke={INK} strokeWidth={5} />
       {[930, 985, 1040].map((y, i) => <path key={y} d={sketch([[-20, y], [1940, y + (i % 2 ? 6 : -6)]], 20 + i, 4)} stroke={INK} strokeWidth={2.4} opacity={0.18} fill="none" />)}
       {gl > 0 && <ellipse cx={740} cy={884} rx={230 * gl} ry={26} fill={PAL.calm} opacity={0.45 * gl} />}
       {roots > 0 && [-3, -2, -1, 0, 1, 2, 3].map((i) => <path key={i} d={`M${740 + i * 8} 890 Q${740 + i * 40} ${930 + Math.abs(i) * 6} ${740 + i * 80 * roots} ${900 + 140 * roots - Math.abs(i) * 12}`} stroke={PAL.plantDark} strokeWidth={6} fill="none" strokeLinecap="round" opacity={0.8} />)}
       {path > 0 && <g opacity={path}>
-        <path d="M640 900 Q400 930 60 910" stroke={PAL.textSoft} strokeWidth={8} strokeDasharray="22 18" fill="none" strokeLinecap="round" />
-        <path d="M100 886 L56 910 L100 934" stroke={PAL.textSoft} strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M640 900 Q520 925 440 912" stroke={PAL.textSoft} strokeWidth={8} strokeDasharray="22 18" fill="none" strokeLinecap="round" />
+        <path d="M478 890 L436 912 L478 936" stroke={PAL.textSoft} strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </g>}
       <g transform={`translate(${Math.sin(t * 0.5) * 12} ${Math.sin(t * 0.8) * 6})`}>
         <Puffs c={CLOUD} fill={PAL.storm} line={5} seed={13} />
-        <path d={`M1300 ${380 + Math.sin(t * 3) * 6} L1360 340 L1410 400 L1470 330 L1530 400 L1590 340 L1650 ${390 + Math.sin(t * 3 + 1) * 6}`} stroke={PAL.provokeLight} strokeWidth={10} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <WLabel x={1480} y={470} text="المشكلة" size={52} color="#FFFFFF" o={c.p(prob - 4, 14)} />
+        <path d={`M1160 ${440 + Math.sin(t * 3) * 6} L1215 400 L1265 460 L1320 390 L1375 460 L1430 400 L1485 ${450 + Math.sin(t * 3 + 1) * 6}`} stroke={PAL.provokeLight} strokeWidth={10} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <WLabel x={1320} y={530} text="المشكلة" size={52} color="#FFFFFF" o={c.p(prob - 4, 14)} />
       </g>
       <Actor f={c.f} {...SAL} x={x} y={884} s={1.6} facing={fac} pose={pz}
         face={faceAt(c.f, [[0, F('sad', { look: [0, 0.6] })], [esc, F('anxious', { look: [1, 0.4] }), 12], [prob, F('neutral', { look: [0, 0.6] }), 16], [ret, F('calm', { look: [0, 1] }), 16], [stand, F('calm', { look: [0.3, 0] }), 16], [turnF, F('determined', { look: [1, -0.1] }), 12]])} />

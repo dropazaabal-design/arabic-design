@@ -41,7 +41,7 @@ const ellipsePts = (cx: number, cy: number, rx: number, ry: number, turns = 1.12
 
 // ——— the notebook page (shared by 121 and the four inserts) ———
 const HANDINK = '#2C4A7C';
-const LINES = ['ماذا حدث؟', '', 'ماذا شعرت؟', '', '', 'أين شعرت به في جسدي؟', '', '', 'ماذا فعلت؟ وماذا أجرب؟'];
+const LINES = ['ماذا حدث؟', '', 'ماذا شعرت؟', '', '', 'أين شعرت به في جسدي؟', '', '', '', 'ماذا فعلت؟ وماذا أجرب؟'];
 const LEN = LINES.map((l) => Math.max(1, Array.from(l).length));
 const TOTAL = LEN.reduce((a, b) => a + b, 0);
 /** Notebook `written` with every line before row i done and row i at progress p. */
@@ -70,7 +70,7 @@ const penTip = (f: number, segs: Seg[]): { tip: V2; lift: number } => {
 };
 
 /** Salim's left hand writing, seen from above: green sleeve from the bottom-left, pen tip at `tip`. */
-const PenHand: React.FC<{ tip: V2; s?: number; ang?: number; lift?: number }> = ({ tip, s = 11, ang = -38, lift = 0 }) => {
+const PenHand: React.FC<{ tip: V2; s?: number; ang?: number; lift?: number }> = ({ tip, s = 8, ang = -46, lift = 0 }) => {
   const a = (ang * Math.PI) / 180, ca = Math.cos(a), sa = Math.sin(a), sc = s * (1 + lift * 0.04);
   const wx = tip[0] - ca * 27 * sc, wy = tip[1] - sa * 27 * sc;
   const arm = `M${wx - ca * 1500} ${wy - sa * 1500} L${wx} ${wy}`;
@@ -106,7 +106,7 @@ const PageStage: React.FC<{ cam: Cam; written: number; children?: React.ReactNod
     <Glow x={150} y={-150} r={1400} ry={1000} color="#EEF0F8" o={0.6} />
     <ellipse cx={NB.x + 30} cy={NB.y + NB.ph / 2 + 16} rx={NB.w * 0.53} ry={34} fill={INK} opacity={0.15} />
     <g transform={`translate(${NB.x} ${NB.y})`}><Notebook lines={LINES} written={written} w={NB.w} /></g>
-    {[0, 2, 5, 8].map((r, i) => <path key={r} d={Array.from({ length: 16 }, (_, j) => `${j ? 'L' : 'M'}${NB.x - NB.pw * 0.17 - j * (14 + i * 2)} ${rowY(r) - 20 + Math.sin(j * 1.7 + r) * 9}`).join(' ')} stroke={HANDINK} strokeWidth={5} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={0.3} />)}
+    {[0, 2, 5, 9].map((r, i) => <path key={r} d={Array.from({ length: 16 }, (_, j) => `${j ? 'L' : 'M'}${NB.x - NB.pw * 0.17 - j * (14 + i * 2)} ${rowY(r) - 20 + Math.sin(j * 1.7 + r) * 9}`).join(' ')} stroke={HANDINK} strokeWidth={5} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={0.3} />)}
     {children}
   </Stage>
 );
@@ -352,24 +352,24 @@ export const SHOTS: Record<number, ShotRender> = {
   // 121 — every evening: the lamp clicks on at «كل», he writes on «يكتب», four lines fill the page on «أربعة أسطر».
   121: (c) => {
     const on = c.at('كل'), wr = c.at('يكتب'), four = c.at('أربعة');
-    const X = 880, S = 1.45, NX = 744, NY = 642, g = geo(212);
+    const X = 760, S = 1.45, NX = 862, NY = 662, g = geo(150);
     const spans: [number, number][] = [[wr - 6, four - 8], [four - 4, four + 18], [four + 22, four + 46], [four + 50, c.dur - 6]];
-    const rows = [0, 2, 5, 8];
+    const rows = [0, 2, 5, 9];
     let row = -1, pr = 0;
     spans.forEach(([a, b], j) => { if (c.f >= a) { row = rows[j]; pr = clamp01((c.f - a) / (b - a)); } });
     const written = row < 0 ? 0 : upTo(row, pr);
     const ink = row >= 0 && pr < 1 ? 1 : 0;
-    // pen tip on the small page, then the wrist target that puts it there (the pen points down-left from the hand)
+    // pen tip on the small page, then the wrist that puts it there (the pen points forward and down from the hand)
     const r = Math.max(0, row), n = LEN[r];
-    const tip: V2 = row < 0 ? [NX + g.pw * 0.8, NY + g.y0 - 8] : [NX + g.pw * 0.85 - pr * n * 0.5 * Math.min(g.fs, (g.pw * 0.78) / (n * 0.5)) * 0.88, NY + g.y0 + r * g.ls - 3];
-    const wx = tip[0] + 44 + Math.sin(c.f * 1.3) * 1.5 * ink, wy = tip[1] - 30 + Math.sin(c.f * 0.9) * 2 * ink;
-    const bodyP = pose({ sit: 1, lean: 14, head: 18 + Math.sin(c.f * 0.12) * 1.5, turn: 0.55, footR: [52, 0], footL: [64, 0], R: { hand: [(X - (NX + g.pw)) / S, (NY + 30 - 860) / S] }, L: { hand: [(X - wx) / S, (wy - 860) / S] } });
-    const fc = faceAt(c.f, [[0, { ...EXPRESSIONS.calm, look: [0.4, 0.8] }], [four - 10, { ...EXPRESSIONS.thinking, look: [0.2, 0.5] }, 8], [four - 2, { ...EXPRESSIONS.calm, look: [0.4, 0.85] }, 8]]);
-    const actor = (only: string[]) => <Actor f={c.f} seed={41} who="salim" x={X} y={860} s={S} facing={-1} pose={{ p: bodyP, hands: { R: 'grip', L: 'pen' } }} hold={{ L: <Pen /> }} face={fc} only={only} />;
-    return <Stage cam={{ x: 770, y: 575, z: 1.65 }}>
+    const tip: V2 = row < 0 ? [NX + g.pw * 0.8, NY + g.y0 - 6] : [NX + g.pw * 0.85 - pr * n * 0.5 * Math.min(g.fs, (g.pw * 0.78) / (n * 0.5)) * 0.88, NY + g.y0 + r * g.ls - 2];
+    const wx = tip[0] - 46 + Math.sin(c.f * 1.3) * 1.5 * ink, wy = tip[1] - 24 + Math.sin(c.f * 0.9) * 2 * ink;
+    const bodyP = pose({ sit: 1, lean: 12, head: 18 + Math.sin(c.f * 0.12) * 1.5, turn: 0.5, footR: [52, 0], footL: [64, 0], R: { hand: [(NX - 60 - X) / S, (NY + 20 - 860) / S] }, L: { hand: [(wx - X) / S, (wy - 860) / S] } });
+    const fc = faceAt(c.f, [[0, { ...EXPRESSIONS.calm, look: [0.4, 0.8] }], [four - 10, { ...EXPRESSIONS.thinking, look: [0.2, 0.4] }, 8], [four - 2, { ...EXPRESSIONS.calm, look: [0.4, 0.85] }, 8]]);
+    const actor = (only: string[]) => <Actor f={c.f} seed={41} who="salim" x={X} y={860} s={S} facing={1} pose={{ p: bodyP, hands: { R: 'grip', L: 'pen' } }} hold={{ L: <Pen /> }} face={fc} only={only} />;
+    return <Stage cam={{ x: 790, y: 585, z: 1.8 }}>
       <Bedroom night lamp={mix(0.08, 1, c.p(on - 2, 8, ease.out))} />
       {actor(['RightArm', 'RightLeg', 'LeftLeg', 'Torso', 'Head'])}
-      <g transform={`translate(${NX} ${NY}) rotate(-4)`}><Notebook lines={LINES} written={written} w={212} /></g>
+      <g transform={`translate(${NX} ${NY}) rotate(3)`}><Notebook lines={LINES} written={written} w={150} /></g>
       {actor(['LeftArm'])}
     </Stage>;
   },
@@ -407,45 +407,48 @@ export const SHOTS: Record<number, ShotRender> = {
   },
   // 124 — insert: «أين شعرت به في جسدي؟», then a little body on «جسدي» with a mark on the chest.
   124: (c) => {
-    const a = c.at('أين') - 4, b = c.at('جسدي') - 6;
-    const ba = b + 2, bb = c.at('جسدي', true) - 4, mk = bb - 2;
-    const bx = 1080, by = 560;
-    const head = Array.from({ length: 17 }, (_, i): V2 => { const t = Math.PI / 2 + (i / 16) * Math.PI * 2; return [bx + Math.cos(t) * 17, by + 14 + Math.sin(t) * 17 - 17]; });
-    const body: V2[] = [...head, [bx, by + 14], [bx, by + 74], [bx - 20, by + 124], [bx, by + 74], [bx + 20, by + 124], [bx, by + 74], [bx, by + 30], [bx - 30, by + 66], [bx, by + 30], [bx + 30, by + 66]];
+    const a = c.at('أين') - 4, b = c.at('جسدي') - 8;
+    const ba = b + 2, bb = c.at('جسدي', true) - 6, mk = bb - 2;
+    const bx = 1040, by = 572, B = 1.5;
+    const pt = (x: number, y: number): V2 => [bx + x * B, by + y * B];
+    const head = Array.from({ length: 17 }, (_, i): V2 => { const t = Math.PI / 2 + (i / 16) * Math.PI * 2; return pt(Math.cos(t) * 17, Math.sin(t) * 17 - 3); });
+    const body: V2[] = [...head, pt(0, 14), pt(0, 74), pt(-20, 124), pt(0, 74), pt(20, 124), pt(0, 74), pt(0, 30), pt(-30, 66), pt(0, 30), pt(30, 66)];
     const bp = ramp(c.f, ba, bb);
+    const chest = pt(0, 44);
     const pen = penTip(c.f, [
       { a, b, from: tipOn(5, 0), to: tipOn(5, 1), ink: true },
       { a: ba, b: bb, from: body[0], to: body[0], path: body, ink: true },
-      { a: mk, b: mk + 8, from: [bx + 6, by + 44], to: [bx, by + 46], ink: true },
+      { a: mk, b: mk + 8, from: [chest[0] + 6, chest[1] - 2], to: chest, ink: true },
+      { a: mk + 12, b: mk + 26, from: [chest[0] - 120, chest[1] + 120], to: [chest[0] - 150, chest[1] + 150] },
     ]);
     const mark = c.p(mk, 10, ease.back);
-    return <PageStage cam={{ x: 900, y: mix(560, 575, c.p(0, 120)), z: 1.42 }} written={upTo(5, ramp(c.f, a, b))}>
+    return <PageStage cam={{ x: 900, y: mix(580, 595, c.p(0, 120)), z: 1.42 }} written={upTo(5, ramp(c.f, a, b))}>
       {bp > 0 && <path d={line(partial(body, bp))} stroke={HANDINK} strokeWidth={6} fill="none" strokeLinecap="round" strokeLinejoin="round" />}
-      {mark > 0 && <g transform={`translate(${bx} ${by + 46}) scale(${mark})`}>
-        <circle r={14} fill={PAL.warn} opacity={0.85} />
-        <path d="M-10 -4 Q0 -12 10 -2 Q4 8 -8 6" stroke={PAL.provoke} strokeWidth={3} fill="none" />
+      {mark > 0 && <g transform={`translate(${chest[0]} ${chest[1]}) scale(${mark})`}>
+        <circle r={18} fill={PAL.warn} opacity={0.85} />
+        <path d="M-12 -5 Q0 -15 12 -3 Q5 10 -10 7" stroke={PAL.provoke} strokeWidth={3.5} fill="none" />
       </g>}
       <PenHand tip={pen.tip} lift={pen.lift} />
     </PageStage>;
   },
   // 125 — insert: «ماذا فعلت؟» on «فعلت», «وماذا أجرب؟» on «أريد… أجرب», then an arrow to «المرة القادمة» on «المرة».
   125: (c) => {
-    const half = 11 / LEN[8];
+    const half = 11 / LEN[9];
     const a1 = c.at('فعلت') - 30, b1 = c.at('فعلت', true) - 2, a2 = c.at('أريد') - 4, b2 = c.at('أجرب', true) - 2;
     const ar0 = c.at('المرة') - 6, ar1 = ar0 + 24, t0 = ar1 + 4, t1 = c.at('القادمة', true) - 10;
-    const p8 = c.f < a2 ? half * ramp(c.f, a1, b1) : mix(half, 1, ramp(c.f, a2, b2));
-    const ay = rowY(9) - NB.ls * 0.26, ax0 = rowR(9) - 6, ax1 = rowR(9) - 230;
+    const p9 = c.f < a2 ? half * ramp(c.f, a1, b1) : mix(half, 1, ramp(c.f, a2, b2));
+    const ay = rowY(10) - NB.ls * 0.26, ax0 = rowR(10) - 6, ax1 = rowR(10) - 230;
     const textR = ax1 - 26, textW = 13 * 23 * 0.88;
     const pen = penTip(c.f, [
-      { a: a1, b: b1, from: tipOn(8, 0), to: tipOn(8, half), ink: true },
-      { a: a2, b: b2, from: tipOn(8, half), to: tipOn(8, 1), ink: true },
+      { a: a1, b: b1, from: tipOn(9, 0), to: tipOn(9, half), ink: true },
+      { a: a2, b: b2, from: tipOn(9, half), to: tipOn(9, 1), ink: true },
       { a: ar0, b: ar1, from: [ax0, ay], to: [ax1, ay], ink: true },
       { a: t0, b: t1, from: [textR, ay + 4], to: [textR - textW, ay + 4], ink: true },
       { a: t1 + 6, b: t1 + 20, from: [textR - textW - 40, ay + 70], to: [textR - textW - 60, ay + 90] },
     ]);
-    return <PageStage cam={{ x: 900, y: 680, z: mix(1.36, 1.46, c.p(0, c.dur)) }} written={upTo(8, p8)}>
+    return <PageStage cam={{ x: 900, y: 750, z: mix(1.36, 1.46, c.p(0, c.dur)) }} written={upTo(9, p9)}>
       <Arrow from={[ax0, ay]} to={[ax1, ay]} bend={0.06} p={ramp(c.f, ar0, ar1)} color={HANDINK} w={6} />
-      <Hw right={textR} rule={rowY(9)} text="المرة القادمة" size={46} p={ramp(c.f, t0, t1)} />
+      <Hw right={textR} rule={rowY(10)} text="المرة القادمة" size={46} p={ramp(c.f, t0, t1)} />
       <PenHand tip={pen.tip} lift={pen.lift} />
     </PageStage>;
   },
