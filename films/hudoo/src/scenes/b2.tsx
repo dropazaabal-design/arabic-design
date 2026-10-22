@@ -9,6 +9,7 @@ import { Corridor } from '../kit/places/Corridor';
 import { HomeLiving, HOME } from '../kit/places/HomeLiving';
 import { Door, Ghost, Glow, LIGHT, NIGHT, Plant as WallPlant, Room } from '../kit/places/parts';
 import { Pot } from '../kit/metaphors/Pot';
+import { smooth } from '../kit/metaphors/util';
 import { Calendar, ChatScreen, Clock, Folder, Phone, Plant } from '../kit/props';
 import { Ar } from '../kit/props/ui';
 import { INK, LINE, PAL, hash, sketch, sketchRect } from '../kit/style';
@@ -257,16 +258,16 @@ export const SHOTS: Record<number, ShotRender> = {
     const fall = c.p(drop, 12, ease.in);
     const clockR = 52;
     const inPan = <g transform={`translate(0 ${-clockR + 26})`}><Clock hours={10} minutes={10 + c.f * 0.02} r={clockR} /></g>;
-    return <Stage>
+    return <Stage cam={cam(1010, 560, 1.15)}>
       <Paper seed={23} />
       <Floor y={BAL.floor} />
-      <WLabel x={BAL.x} y={170} text="؟" size={120} color={PAL.focus} o={c.p(q - 4, 12, ease.back)} />
+      <WLabel x={BAL.x} y={235} text="؟" size={110} color={PAL.focus} o={c.p(q - 4, 12, ease.back)} />
       <Balance tilt={tilt} R={c.f >= drop + 12 ? inPan : null} />
       {!held && c.f < drop + 12 && <g transform={`translate(${mix(sj.wrL[0], pr[0], fall)} ${mix(sj.wrL[1], pr[1] - clockR + 26, fall)})`}><Clock hours={10} minutes={10} r={clockR} /></g>}
       <Actor f={c.f} seed={41} who="salim" x={sx} y={BAL.floor} s={1.7} facing={-1} pose={sp}
         hold={held ? { L: <Clock hours={10} minutes={10} r={clockR / (1.7 * 1.45)} /> } : undefined} upright={{ L: true }}
         face={faceAt(c.f, [[0, face('thinking', { look: [0.3, 0.7] })], [c.at('بينهما'), face('thinking', { look: [1, -0.2] }), 14], [chose - 10, face('calm', { look: [1, 0.4] }), 12], [drop + 20, 'calm']])} />
-      <WLabel x={pr[0]} y={pr[1] + 130} text="اخترت الوقت" size={50} color={PAL.calm} o={c.p(drop + 8, 14)} />
+      <WLabel x={pr[0] - 70} y={pr[1] + 140} text="اخترت الوقت" size={50} color={PAL.calm} o={c.p(drop + 8, 14)} />
     </Stage>;
   },
   // 24 — or didn't you dare: Salim opens his mouth to speak, a lock drops into the left pan on «تجرؤ»,
@@ -475,8 +476,8 @@ export const SHOTS: Record<number, ShotRender> = {
         <Actor f={c.f} seed={41} who="salim" x={X} y={860} s={S} facing={1} pose={{ p, hands: { R: 'relaxed', L: c.f > angry ? 'fist' : 'relaxed' } }}
           face={faceAt(c.f, [[0, face('irritated', { open: 1.1, tight: 1, mouth: -0.3, look: [1, 0] })], [angry, face('angry', { open: 1.12, open2: 0, tight: 1, mouth: -0.5, look: [1, 0.1] }), 14]])} />
       </g>
-      <path d={sketch([[905, 612], [1000, 604], [1120, 610], [1260, 606], [1400, 616], [1420, 712], [905, 712]], 32, 2, true)} fill="#8E9AB8" stroke={INK} strokeWidth={LINE.normal} strokeLinejoin="round" />
-      <path d="M960 640 Q1080 630 1200 646 M1000 676 Q1150 666 1300 680" fill="none" stroke={INK} strokeWidth={2} opacity={0.3} />
+      <path d={sketch([[1000, 616], [1080, 606], [1180, 610], [1300, 606], [1420, 616], [1440, 712], [990, 712]], 32, 2, true)} fill="#8E9AB8" stroke={INK} strokeWidth={LINE.normal} strokeLinejoin="round" />
+      <path d="M1040 640 Q1140 630 1240 646 M1060 676 Q1180 666 1320 680" fill="none" stroke={INK} strokeWidth={2} opacity={0.3} />
       <ChestSwirl x={950} y={650} r={30} t={c.t} amount={c.p(was - 6, 30) * 0.9} />
       <rect x={-200} y={-200} width={2400} height={1500} fill={NIGHT} opacity={0.26} />
       <Glow x={790} y={590} r={160} color="#DCE3F2" o={0.35} />
@@ -497,7 +498,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const low: V2 = [sj.wrL[0] + 70, sj.wrL[1] + 130];
     const m: V2 = [mix(low[0], sj.head[0], ease.inOut(raise)), mix(low[1], sj.head[1] + 4, ease.inOut(raise))];
     const sw = 0.85 + 0.35 * c.p(stays - 4, 40);
-    return <Stage over={<Cap text="كبت التعبير" o={c.p(term - 4, 14)} top={50} size={64} />}>
+    return <Stage cam={cam(1000, 590, 1.12)} over={<Cap text="كبت التعبير" o={c.p(term - 4, 14)} top={40} size={64} />}>
       <Paper seed={33} />
       <Floor y={Y} />
       <Actor f={c.f} seed={41} who="salim" x={X} y={Y} s={S} facing={1} pose={sp}
@@ -536,7 +537,6 @@ export const SHOTS: Record<number, ShotRender> = {
       <path d={sketchRect(110, 150, 300, 280, 31)} fill={PAL.skyNight} stroke={INK} strokeWidth={LINE.normal} />
       <circle cx={330} cy={220} r={22} fill="#E8EDF2" />
       <path d="M260 150 V430 M110 290 H410" stroke={PAL.paper} strokeWidth={10} />
-      <path d={sketchRect(96, 136, 328, 308, 32)} fill="none" stroke={INK} strokeWidth={LINE.normal} />
       {/* upper cabinets and the wall clock */}
       <path d={sketchRect(1340, 110, 520, 250, 33)} fill={PAL.wallGrey} stroke={INK} strokeWidth={LINE.normal} />
       <path d="M1600 110 V360" stroke={INK} strokeWidth={LINE.fine} />
@@ -693,7 +693,7 @@ export const SHOTS: Record<number, ShotRender> = {
       </g>
       <path d="M240 240 L200 520 M260 240 L300 520" stroke={INK} strokeWidth={6} strokeLinecap="round" />
       {/* the feeling behind him: a dark shape until the light shows it */}
-      <path d={sketch(blobPts, 40, 6, true)} fill={reveal > 0 ? PAL.plum : INK} opacity={mix(0.55, 0.3, reveal) * mix(1, 0.75, clr)} stroke={INK} strokeWidth={mix(0, 5, reveal)} />
+      <path d={smooth(blobPts, true)} fill={reveal > 0 ? PAL.plum : INK} opacity={mix(0.55, 0.3, reveal) * mix(1, 0.75, clr)} stroke={INK} strokeWidth={mix(0, 5, reveal)} />
       {reveal > 0 && <ChestSwirl x={blobC[0] - 140} y={blobC[1] + 20} r={110} t={c.t * mix(1.2, 0.6, clr)} amount={reveal * 0.9} color={PAL.warn} />}
       {[-1, 1].map((sd) => <path key={sd} d={`M${blobC[0] + sd * 150} ${blobC[1] - 120} Q${blobC[0] + sd * 190} ${bar[1] + 40} ${ends[sd === -1 ? 0 : 1][0]} ${ends[sd === -1 ? 0 : 1][1]}`} fill="none" stroke={INK} strokeWidth={22} strokeLinecap="round" opacity={mix(0.55, 0.35, reveal)} />)}
       <path d={`M${ends[0][0] - 20} ${ends[0][1]} L${ends[1][0] + 20} ${ends[1][1]}`} stroke={INK} strokeWidth={16} strokeLinecap="round" />
