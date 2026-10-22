@@ -385,7 +385,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <Floor y={990} seed={42} />
       <path d={sketch([[960, 120], [960, 960]], 42, 2)} stroke={INK} strokeWidth={4} strokeDasharray="14 16" opacity={0.35} fill="none" />
       <MsgCard x={490} y={470} w={720} h={330} size={46} rot={-2} sc={1 + shake(c.f, ok + 4, 16, 0.012, 2)} />
-      <Stamp x={500} y={560} text="غير مقبول" p={stamp} />
+      <Stamp x={560} y={640} text="غير مقبول" p={stamp} />
       <WLabel x={1420} y={150} text="القبول" size={70} color={PAL.calm} o={c.p(acc - 4, 14)} />
       <Actor f={c.f} seed={41} who="salim" x={X} y={Y} s={S} facing={F} pose={pz} face={fc} />
       <Feeling x={fp[0]} y={fp[1]} r={46} f={c.f} look={[-0.6, 0.5]} joy={0.6} sc={ease.out(c.p(0, 20))} />
@@ -578,7 +578,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const blobD = pts.map((q, i) => { const n = pts[(i + 1) % pts.length]; return `${i ? '' : `M${((q[0] + pts[pts.length - 1][0]) / 2).toFixed(1)} ${((q[1] + pts[pts.length - 1][1]) / 2).toFixed(1)} `}Q${q[0].toFixed(1)} ${q[1].toFixed(1)} ${((q[0] + n[0]) / 2).toFixed(1)} ${((q[1] + n[1]) / 2).toFixed(1)}`; }).join(' ') + ' Z';
     const spikeD = 'M' + pts.map((q) => `${q[0].toFixed(1)} ${q[1].toFixed(1)}`).join(' L') + ' Z';
     const qa = c.p(amb - 4, 16) * (1 - hostile);
-    return <Stage over={!worn && <Tag text="متعب" at={[gw[0] + 10, gw[1] - 110]} o={c.p(many - 4, 12) * (1 - c.p(read - 20, 10))} bg={PAL.storm} size={44} />}>
+    return <Stage over={!worn && <Tag text="متعب" at={[gw[0] + 150, gw[1] - 30]} o={c.p(many - 4, 12) * (1 - c.p(read - 20, 10))} bg={PAL.storm} size={44} />}>
       <Paper seed={48} />
       <Floor y={960} seed={48} />
       <path d={blobD} fill="#B7BCC8" stroke={INK} strokeWidth={4} strokeDasharray="18 12" opacity={1 - hostile} />

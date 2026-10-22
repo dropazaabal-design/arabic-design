@@ -605,8 +605,8 @@ export const SHOTS: Record<number, ShotRender> = {
     const sf = faceAt(c.f, [[0, face('calm', { mouth: 0.4, look: [0.9, 0.25] })], [you, face('smile', { look: [0.9, 0.25] }), 14]]);
     const head = headOf('salim', presStop.p, STAND.x, STAND.y, 1.45, -1);
     return <Stage cam={cm} over={<>
-      <Say text="اسمح لي أكمل الفكرة" to={sayTo(cm, head, -20)} above={10} o={c.p(4, 10) * (1 - c.p(after - 6, 8))} size={46} w={470} />
-      <Say text="وبعدها الكلمة لك" to={sayTo(cm, head, -20)} above={10} o={c.p(after - 2, 10)} size={46} w={420} />
+      <Say text="اسمح لي أكمل الفكرة" to={sayTo(cm, head, -20)} above={10} o={c.p(4, 10) * (1 - c.p(after - 6, 8))} size={46} w={600} />
+      <Say text="وبعدها الكلمة لك" to={sayTo(cm, head, -20)} above={10} o={c.p(after - 2, 10)} size={46} w={520} />
     </>}>
       <Meeting f={c.f} seats={seats} front={<Actor f={c.f} seed={41} who="salim" pose={sp} face={sf} x={STAND.x} y={STAND.y} s={1.45} facing={-1} say={[0, c.sp[1]]} />} />
     </Stage>;
