@@ -21,7 +21,8 @@ import * as PLACES from './export-places';
 
 const out = (p: string, el: React.ReactElement, vb: string, meta = '') => {
   fs.mkdirSync(path.dirname(p), { recursive: true });
-  const body = renderToStaticMarkup(el);
+  // HTML inside <foreignObject> needs the XHTML namespace to render in a standalone .svg file
+  const body = renderToStaticMarkup(el).replace(/(<foreignObject[^>]*>)<([a-z]+)/g, '$1<$2 xmlns="http://www.w3.org/1999/xhtml"');
   fs.writeFileSync(p, `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" viewBox="${vb}">${meta}${body}</svg>\n`);
 };
 const CH = '-150 -380 300 400';
@@ -40,5 +41,5 @@ for (const e of Object.keys(EXPRESSIONS) as Expr[]) { out(`${root}/characters/sa
 for (const [name, t] of [['front', 0], ['three-quarter', 0.5], ['profile', 1]] as const) { out(`${root}/characters/salim/views/${name}.svg`, <Head r={48} turn={t} face={EXPRESSIONS.neutral} look={CAST.salim} line={4.6} />, '-60 -66 120 126'); n++; }
 for (const g of GESTURES) { out(`${root}/characters/hands/${g}.svg`, <Hand g={g} skin={CAST.salim.skin} />, '-6 -18 36 32'); n++; }
 fs.writeFileSync(`${root}/characters/rig.json`, JSON.stringify({ bones: BONES, bindPose: REST, joints: joints(REST), parts: ['Head', 'Eyes', 'Eyebrows', 'Mouth', 'Torso', 'LeftArm', 'RightArm', 'LeftHand', 'RightHand', 'LeftLeg', 'RightLeg', 'Props'] }, null, 1));
-for (const [name, el, folder] of PLACES.items()) { out(`${root}/${folder}/${name}.svg`, el, '0 0 1920 1080'); n++; }
+for (const [name, el, folder, vb] of PLACES.items()) { out(`${root}/${folder}/${name}.svg`, el, vb); n++; }
 console.log(`${n} svg files`);

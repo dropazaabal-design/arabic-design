@@ -13,7 +13,7 @@ import { SHOTS as B7 } from '../scenes/b7';
 import { SHOTS as B8 } from '../scenes/b8';
 
 export type ShotRender = (c: Ctx) => React.ReactNode;
-const ALL: Record<number, ShotRender> = { ...B1, ...B2, ...B3, ...B4, ...B5, ...B6, ...B7, ...B8 };
+export const ALL: Record<number, ShotRender> = { ...B1, ...B2, ...B3, ...B4, ...B5, ...B6, ...B7, ...B8 };
 const XFADE = 14, DIP = 10;
 
 /** A shot that has not been built yet shows its number and line, so gaps are obvious in any preview. */
