@@ -7,7 +7,7 @@ import { joints, pose, walkPhase, type Pose } from '../kit/characters/skeleton';
 import { Bedroom, BEDROOM } from '../kit/places/Bedroom';
 import { Corridor } from '../kit/places/Corridor';
 import { HomeLiving, HOME } from '../kit/places/HomeLiving';
-import { Door, Ghost, Glow, LIGHT, NIGHT, Room } from '../kit/places/parts';
+import { Door, Ghost, Glow, LIGHT, NIGHT, Plant as WallPlant, Room } from '../kit/places/parts';
 import { Pot } from '../kit/metaphors/Pot';
 import { Calendar, ChatScreen, Clock, Folder, Phone, Plant } from '../kit/props';
 import { Ar } from '../kit/props/ui';
@@ -318,7 +318,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <Room wall={PAL.wallLav} floor={PAL.floor} seed={25} />
       <path d={sketchRect(380, 330, 220, 160, 4)} fill={PAL.paper} stroke={INK} strokeWidth={LINE.normal} />
       <path d="M396 470 Q450 400 500 450 Q540 410 584 450 L584 474 L396 474 Z" fill={PAL.plant} />
-      <Plant x={1560} y={834} s={0.9} seed={7} pot={PAL.paperShade} />
+      <WallPlant x={1560} y={834} s={0.9} seed={7} pot={PAL.paperShade} />
       <Door x={DX} w={DW} top={TOP} leaf={PAL.wood} beyond={LIGHT} open={op} seed={251}>
         <Glow x={DX + DW * 0.8} y={560} r={260} color="#FFFFFF" o={glow} />
         <rect x={DX} y={700} width={DW} height={120} fill={PAL.sofa} opacity={0.35} />
@@ -390,8 +390,6 @@ export const SHOTS: Record<number, ShotRender> = {
   // 28 — the message on the screen: Jaser is typing, then his words appear one by one with the voice.
   28: (c) => {
     const ws = JASER_MSG.split(' ');
-    const n = c.words.filter((w) => c.f >= Math.round(w.start * 60) - (c.at(c.words[0].word) - Math.round(c.words[0].start * 60) + 0) && false).length;
-    void n;
     const shown = ws.filter((_, i) => c.f >= c.w(i) - 2).length;
     const cm = { x: 960, y: mix(560, 760, c.p(0, 70)), z: mix(1.15, 1.8, c.p(0, 70)) };
     return <Stage cam={cam(cm.x, cm.y, cm.z)}>
