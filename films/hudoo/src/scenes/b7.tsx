@@ -161,7 +161,7 @@ const PHB = PH.w * 0.065, PHS = PH.w - 2 * PHB, PHK = PHS / 360;
 const PH_BOTTOM = PH.y + PHS + PHB;
 const scr = (u: number, v: number): V2 => [PH.x - PHS / 2 + u * PHK, PH.y - PHS + v * PHK];
 const POST = { author: 'سليم', text: 'تعلمت هذا الأسبوع أن الهدوء لا يعني الكبت', time: '22:40' };
-const FRIEND: PostComment = { name: 'منى', text: 'كلام جميل، شكرًا لك' };
+const FRIEND: PostComment = { name: 'هادي', text: 'أتفق معك تمامًا' };
 const ANON: PostComment = { name: 'مجهول', text: 'كلام فاضي… مين سألك أصلًا؟', hostile: true };
 /** Where PostScreen lays out the hostile comment (screen units, measured from a render): its avatar centre and card box. */
 const ANON_AV: V2 = [332, 437];
@@ -654,7 +654,7 @@ export const SHOTS: Record<number, ShotRender> = {
       return [Math.cos(a) * r, Math.sin(a) * r * 0.78];
     });
     const shell = (half: 1 | -1) => (
-      <g transform={`translate(${cx} ${cy + half * open * 120}) rotate(${half * open * 24})`} opacity={1 - c.p(fear + 40, 30)}>
+      <g transform={`translate(${cx} ${cy + half * open * 120}) rotate(${half * open * 24})`} opacity={1 - c.p(fear + 24, 24)}>
         <path d={sketch([...spikes(half), [-230, 0]], half === 1 ? 7 : 8, 2, true)} fill="#D6B7BF" stroke={PAL.provoke} strokeWidth={7} strokeLinejoin="round" />
         <path d={`M-200 0 ${Array.from({ length: 9 }, (_, i) => `L${-200 + i * 50} ${(i % 2 ? 1 : -1) * 14}`).join(' ')}`} stroke={PAL.provoke} strokeWidth={5} fill="none" opacity={open > 0.02 ? 1 : 0} />
       </g>
@@ -673,7 +673,7 @@ export const SHOTS: Record<number, ShotRender> = {
       </g>
       {shell(-1)}
       {shell(1)}
-      <WLabel x={cx} y={760} text="خوف عليه" size={60} o={c.p(on - 4, 12)} color={PAL.provoke} />
+      <WLabel x={cx} y={860} text="خوف عليه" size={60} o={c.p(on, 12)} color={PAL.provoke} />
     </Stage>;
   },
   // 134 — dinner, wide: hand on his chest on «أفهم», opened toward her on «وأريد»; Reem nods on «أجرب»; the mother smiles and sets her glass down.
@@ -707,7 +707,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const cards = [{ x: 1160, y: 630 }, { x: 760, y: 630 }];
     const loc = (wx: number, wy: number): V2 => [(wx - X) / S, (wy - Y) / S];
     const grip = (i: number, up: number): V2 => loc(cards[i].x + (i ? 30 : -30) * 0, cards[i].y + 30 - 50 - up);
-    const restL = loc(1060, 690), restR = loc(860, 690);
+    const restL = loc(1060, 655), restR = loc(860, 655);
     const hitL = (f: number) => f < yes - 22 ? 0 : f < yes - 4 ? ease.out((f - yes + 22) / 18) * 80 : f < yes ? mix(80, 0, ease.in((f - yes + 4) / 4)) : 0;
     const hitR = (f: number) => f < but - 22 ? 0 : f < but - 4 ? ease.out((f - but + 22) / 18) * 80 : f < but ? mix(80, 0, ease.in((f - but + 4) / 4)) : 0;
     const L: V2 = c.f < yes - 40 ? restL : c.f < yes + 26 ? grip(0, hitL(c.f)) : restL;
