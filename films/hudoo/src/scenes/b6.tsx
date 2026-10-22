@@ -53,7 +53,7 @@ const SX = COFFEE.left.x, JX = COFFEE.right.x, FY = COFFEE.y, CS = 1.45;
 const SAL = {
   stand: st({ turn: 0.5 }),
   rest: st({ turn: 0.55, R: { hand: [62, -160] }, L: { hand: [92, -162] } }), // hands resting on the high table
-  two: st({ turn: 0.55, head: -2, R: { sh: -4, el: 10 }, L: { hand: [58, -248] } }, 'relaxed', 'two'),
+  two: st({ turn: 0.55, head: -2, R: { sh: -4, el: 10 }, L: { hand: [80, -238] } }, 'relaxed', 'two'),
   open: st({ lean: 2, turn: 0.55, R: { hand: [62, -160] }, L: { hand: [84, -186] } }, 'relaxed', 'cup'),
   open2: st({ lean: 4, turn: 0.55, R: { hand: [62, -160] }, L: { hand: [98, -194] } }, 'relaxed', 'open'),
   chest: st({ head: 7, turn: 0.5, R: { hand: [62, -160] }, L: { hand: [22, -196], bend: -1 } }, 'relaxed', 'open'),
@@ -356,7 +356,7 @@ export const SHOTS: Record<number, ShotRender> = {
   // 107 — the hard part, close on سليم: his lips press and the swirl stirs on «صعبًا»; on «استمع» he breathes out, leans in and tilts his head.
   107: (c) => {
     const hard = c.at('صعبا'), listen = c.at('استمع');
-    const cm = cam(715, 470, 2.5);
+    const cm = cam(688, 470, 2.55);
     const sp = poseAt(c.f, [[0, SAL.rest], [hard - 10, SAL.tense, 16], [listen - 4, SAL.listen, 26]]);
     const sf = faceAt(c.f, [[0, face('listening', { look: [0.9, 0.05] })], [hard, face('listening', { tight: 0.8, mouth: 0, brow: 0.25, look: [0.9, 0] }), 10], [listen + 4, face('listening', { open: 0.95, mouth: 0.25, look: [0.95, 0.05] }), 20]]);
     const swirl = c.p(hard - 6, 20) * (1 - 0.8 * c.p(listen, 36));
@@ -429,9 +429,9 @@ export const SHOTS: Record<number, ShotRender> = {
       {[0, 1, 2].map((i) => { const q = talk(i); return <path key={i} d={`M${q.x} ${380 + i * 80} q-30 -40 0 -80`} stroke={INK} strokeWidth={5} fill="none" strokeLinecap="round" opacity={q.o * 0.35} />; })}
       {[-24, 24].map((dx, i) => <ellipse key={i} cx={X + dx * 1.3} cy={Y + 8} rx={46} ry={13} fill={lit > 0 ? PAL.calmLight : 'none'} fillOpacity={lit} stroke={PAL.calm} strokeWidth={4} strokeDasharray={lit > 0.5 ? undefined : '10 8'} />)}
       {ghost > 0 && <g opacity={ghost * 0.32}>
-        <Actor f={c.f} seed={41} who="salim" x={X - 120} y={Y} s={S} facing={1} pose={{ p: pose({ ...POSES.stepBack.p, turn: 0.5 }), hands: POSES.stepBack.hands }} face="anxious" />
+        <Actor f={c.f} seed={41} who="salim" x={X - 250} y={Y} s={S} facing={1} pose={{ p: pose({ ...POSES.stepBack.p, turn: 0.5 }), hands: POSES.stepBack.hands }} face="anxious" />
       </g>}
-      {ghost > 0 && <path d={`M${X - 150} ${Y - 70} l56 56 m0 -56 l-56 56`} stroke={PAL.warn} strokeWidth={8} strokeLinecap="round" opacity={c.p(back + 14, 10) * (1 - c.p(back + 40, 30))} />}
+      {ghost > 0 && <path d={`M${X - 280} ${Y - 70} l56 56 m0 -56 l-56 56`} stroke={PAL.warn} strokeWidth={8} strokeLinecap="round" opacity={c.p(back + 14, 10) * (1 - c.p(back + 40, 30))} />}
       <Actor f={c.f} seed={41} who="salim" x={X} y={Y} s={S} facing={1} pose={sp} face={faceAt(c.f, [[0, face('calm', { look: [0.9, -0.1] })], [lis, face('listening', { look: [0.95, -0.15] }), 16], [pos, face('calm', { mouth: 0.45, look: [0.95, -0.1] }), 16]])} />
     </Stage>;
   },
