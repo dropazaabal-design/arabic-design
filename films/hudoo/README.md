@@ -19,7 +19,7 @@ It is built entirely in code: React and TypeScript in Remotion 4, with SVG drawi
 | `src/film/` | `engine.tsx` holds the timeline (one shot per line), time against words, the pose and face tracks, the camera and the on-screen text. `Film.tsx` is the whole film with its transitions. `Shot.tsx` is a single shot. |
 | `src/scenes/` | The 160 shots in 8 batches (`b1.tsx` … `b8.tsx`), plus shared staging helpers in `common.tsx`. |
 | `animation/KIT.md` | How a shot is built: the tools, the anchor points of every place and metaphor, the rules, and the check loop. |
-| `audio/` | `sfx/bN.json` cues the effects on words. `mix-report.json` is the mix report. The narration and mix files are rebuilt by the tools and are not tracked in git. |
+| `audio/` | `sfx/bN.json` cues the effects on words. `mix-report.json` is the mix report. `narration.flac` is the recorded narration: `ffmpeg -i audio/narration.flac audio/narration.wav`, then `tools/mix.py` rebuilds the soundtrack without regenerating the voice. |
 | `manifest.json` | Each shot linked to its text, frames, plan, code, the components and SVG files it uses, its word-cued motion, its sounds and its preview. |
 | `previews/` | `shots/NNN.png` is one picture per shot. `atlas/` is the numbered storyboard atlas (8 pages and a PDF). |
 | `qa/` | `REPORT.md` is the quality report. `checks.json` holds the export checks. `clips/` holds the representative clips. `frames/` holds frames at the chapter boundaries. |
