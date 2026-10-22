@@ -511,7 +511,7 @@ export const SHOTS: Record<number, ShotRender> = {
   91: (c) => {
     const up = c.at('يشتد'), emo = c.at('الانفعال'), need = c.at('تحتاج'), tools = c.at('أدوات'), simple = c.at('بسيطة'), back = c.at('تعيدك');
     const N = 14;
-    const pts: P2[] = Array.from({ length: N }, (_, i) => { const u = i / (N - 1); return [1830 - u * 500, 840 - u * 400 + (i % 2 ? -1 : 1) * (12 + u * 48)]; });
+    const pts: P2[] = Array.from({ length: N }, (_, i) => { const u = i / (N - 1); return [1330 + u * 500, 860 - u * 420 + (i % 2 ? -1 : 1) * (12 + u * 48)]; });
     const draw = c.p(up - 12, 70, ease.lin);
     const n = Math.max(1, Math.round(draw * (N - 1)));
     const jitter = (i: number) => Math.sin(c.t * 5 + i) * 3 * draw;
@@ -524,7 +524,7 @@ export const SHOTS: Record<number, ShotRender> = {
     return <Stage over={<Cap text="أدوات بسيطة" o={c.p(tools, 14)} top={50} size={62} />}>
       <Paper seed={91} />
       <path d={sketch(pts.slice(0, n + 1).map((q, i) => [q[0], q[1] + jitter(i)] as P2), 3, 1)} stroke={PAL.warn} strokeWidth={11} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={draw > 0 ? 0.9 : 0} />
-      <WLabel x={1640} y={930} text="الانفعال" size={50} color={PAL.warn} o={c.p(emo, 14)} />
+      <WLabel x={1480} y={940} text="الانفعال" size={50} color={PAL.warn} o={c.p(emo, 14)} />
       <g opacity={c.p(10, 16)}>
         <ellipse cx={760 + bs} cy={862} rx={190} ry={16} fill={INK} opacity={0.12} />
         <path d={sketchRect(610 + bs, 712, 300, 148, 11, 1.4)} fill={PAL.chair} stroke={INK} strokeWidth={5} />
@@ -560,7 +560,7 @@ export const SHOTS: Record<number, ShotRender> = {
       [slow, st(desk({ lean: -3, head: -2, turn: 0.55, breath: 1, L: { hand: [24, -136], bend: -1 } }), 'relaxed', 'open'), 30],
     ]);
     const ch = chestOf(pz.p, DESK.seat.x);
-    return <Stage cam={cam(980, 560, 1.12)} over={<ToolChips lit={0} p={c.p(first - 4, 14)} />}>
+    return <Stage cam={cam(960, 545, 1.28)} over={<ToolChips lit={0} p={c.p(first - 4, 14)} />}>
       <DeskRoom c={c} screen={<ChatBlocks />}
         actor={<Actor f={c.f} {...SAL} x={DESK.seat.x} y={860} s={S} facing={1} pose={pz}
           face={faceAt(c.f, [[0, F('irritated', { look: [1, -0.1] })], [br, F('calm', { open: 0.6, brow: 0.1 }), 20], [slow, F('calm', { open: 0.3 }), 20]])} />}
@@ -787,7 +787,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const gl = c.p(grd - 4, 30);
     const roots = c.p(grd, 60);
     const t = c.t;
-    return <Stage cam={cam(1060, 650, 1.4)}>
+    return <Stage cam={cam(1060, 612, 1.4)}>
       <Paper seed={100} />
       <path d={sketch([[-20, 880], [400, 870], [900, 884], [1400, 872], [1940, 880], [1940, 1100], [-20, 1100]], 7, 3, true)} fill={PAL.floorDark} stroke={INK} strokeWidth={5} />
       {[930, 985, 1040].map((y, i) => <path key={y} d={sketch([[-20, y], [1940, y + (i % 2 ? 6 : -6)]], 20 + i, 4)} stroke={INK} strokeWidth={2.4} opacity={0.18} fill="none" />)}

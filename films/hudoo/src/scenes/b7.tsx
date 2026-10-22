@@ -290,13 +290,13 @@ const Stamp: React.FC<{ color: string }> = ({ color }) => <g>
 </g>;
 const TaskCard: React.FC<{ x: number; y: number; imprint?: string; color: string; pop: number; seed: number }> = ({ x, y, imprint, color, pop, seed }) => (
   <g>
-    <path d={sketch([[x - 120, y + 74], [x + 120, y + 74], [x + 112, y + 6], [x - 112, y + 6]], seed, 1)} fill={INK} opacity={0.1} />
-    <path d={sketch([[x - 112, y - 70], [x + 112, y - 70], [x + 122, y + 66], [x - 122, y + 66]], seed, 1.2, true)} fill="#FFFFFF" stroke={INK} strokeWidth={4} strokeLinejoin="round" />
-    <path d={`M${x - 111} ${y - 70} H${x + 111} V${y - 52} H${x - 112} Z`} fill={PAL.focusLight} />
-    {[0, 1].map((i) => <path key={i} d={`M${x + 90} ${y - 32 + i * 20} H${x - 40 - (hash(seed + i) * 50)}`} stroke={PAL.metal} strokeWidth={7} strokeLinecap="round" />)}
-    {imprint && pop > 0 && <g transform={`translate(${x} ${y + 30}) rotate(-6) scale(${mix(1.35, 1, ease.out(Math.min(1, pop)))})`} opacity={Math.min(1, pop * 2)}>
-      <rect x={-102} y={-30} width={204} height={60} rx={12} fill="none" stroke={color} strokeWidth={5} />
-      <WLabel x={0} y={4} text={imprint} size={40} color={color} w={210} />
+    <path d={sketch([[x - 152, y + 84], [x + 152, y + 84], [x + 144, y + 6], [x - 144, y + 6]], seed, 1)} fill={INK} opacity={0.1} />
+    <path d={sketch([[x - 142, y - 80], [x + 142, y - 80], [x + 152, y + 76], [x - 152, y + 76]], seed, 1.2, true)} fill="#FFFFFF" stroke={INK} strokeWidth={4} strokeLinejoin="round" />
+    <path d={`M${x - 141} ${y - 80} H${x + 141} V${y - 60} H${x - 142} Z`} fill={PAL.focusLight} />
+    {[0, 1].map((i) => <path key={i} d={`M${x + 120} ${y - 38 + i * 22} H${x - 40 - (hash(seed + i) * 70)}`} stroke={PAL.metal} strokeWidth={8} strokeLinecap="round" />)}
+    {imprint && pop > 0 && <g transform={`translate(${x} ${y + 32}) rotate(-5) scale(${mix(1.35, 1, ease.out(Math.min(1, pop)))})`} opacity={Math.min(1, pop * 2)}>
+      <rect x={-128} y={-34} width={256} height={68} rx={14} fill="none" stroke={color} strokeWidth={5} />
+      <WLabel x={0} y={4} text={imprint} size={46} color={color} w={256} />
     </g>}
   </g>
 );
@@ -495,8 +495,8 @@ export const SHOTS: Record<number, ShotRender> = {
     const bob = nod(c.f, know, 1, 7) + nod(c.f, heavy + 26, 1, 6);
     return <Stage>
       <Paper seed={127} />
-      <Floor y={980} />
-      <Actor f={c.f} seed={41} who="salim" x={360} y={980} s={1.7} facing={1} pose={{ p: { ...pz.p, head: pz.p.head + bob }, hands: pz.hands }} face={fc} />
+      <Floor y={1010} />
+      <Actor f={c.f} seed={41} who="salim" x={330} y={1010} s={2.05} facing={1} pose={{ p: { ...pz.p, head: pz.p.head + bob }, hands: pz.hands }} face={fc} />
       {/* row 1: tiredness → a faster gauge */}
       <Battery x={820} y={260} charge={charge} />
       <WLabel x={820} y={392} text="تعب" size={48} o={c.p(tired - 4, 12)} color={PAL.warn} />
@@ -518,13 +518,13 @@ export const SHOTS: Record<number, ShotRender> = {
   // 128 — the mirror: he wipes the fogged glass from «بل»; the fog lifts and on «بوضوح» his reflection is clear; he relaxes.
   128: (c) => {
     const but = c.at('بل'), clear = c.at('بوضوح');
-    const X = 1560, M = { x0: 1700, x1: 1862, y0: 300, y1: 826 }, plane = 1700;
+    const X = 1590, M = { x0: 1690, x1: 1880, y0: 300, y1: 826 }, plane = 1700;
     const wipe = ramp(c.f, but + 8, clear - 30);
     const ang = wipe * Math.PI * 4;
-    const wipeHand: V2 = [96 + Math.cos(ang) * 10, -262 + Math.sin(ang) * 22];
+    const wipeHand: V2 = [84 + Math.cos(ang) * 8, -262 + Math.sin(ang) * 22];
     const pz = poseAt(c.f, [
       [0, P({ turn: 0.6, head: 4, body: 0.5 })],
-      [but - 6, P({ turn: 0.65, head: -2, body: 0.5, L: { hand: [92, -258] } }, 'relaxed', 'open'), 16],
+      [but - 6, P({ turn: 0.65, head: -2, body: 0.5, L: { hand: [82, -258] } }, 'relaxed', 'open'), 16],
       [but + 10, P({ turn: 0.65, head: -2, body: 0.5, L: { hand: wipeHand } }, 'relaxed', 'open'), 2],
       [clear - 26, P({ turn: 0.6, head: 0, body: 0.5, L: { hand: wipeHand } }, 'relaxed', 'open'), 2],
       [clear - 22, P({ turn: 0.55, head: -4, body: 0.45, lean: -2, breath: 0.6 }), 18],
@@ -532,7 +532,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const fc = faceAt(c.f, [[0, { ...EXPRESSIONS.thinking, look: [0.6, 0] }], [but, { ...EXPRESSIONS.neutral, look: [0.7, 0] }, 12], [clear - 4, 'relieved', 14], [clear + 40, face('calm', { mouth: 0.6 }), 20]]);
     const fog = 1 - ease.inOut(ramp(c.f, but + 10, clear + 4));
     const gleam = ramp(c.f, clear + 4, clear + 44);
-    const cm = { x: 1450, y: 560, z: 1.72 };
+    const cm = cam(1450, 560, 1.72);
     const me = (x: number, facing: 1 | -1) => <Actor f={c.f} seed={41} who="salim" x={x} y={860} s={1.45} facing={facing} pose={pz} face={fc} />;
     return <Stage cam={cm}>
       <Bedroom />
@@ -576,8 +576,8 @@ export const SHOTS: Record<number, ShotRender> = {
       [0, P(TBW({ head: 8, turn: 0.4 }))],
       [crit + 6, P(TBW({ head: -2, turn: 0.5, lean: -2 })), 14],
     ]);
-    const cm = { x: 1000, y: 470, z: 1.34 };
-    const bubble = c.p(crit + 4, 10) * (1 - c.p(c.dur - 6, 6));
+    const cm = { x: 1000, y: 480, z: 1.55 };
+    const bubble = c.p(crit + 4, 10);
     return <Stage cam={cm} over={<Say text="تغيّر عملك؟!" to={toScreen(cm, [HEAD.reem[0] - 6, HEAD.reem[1] - 6])} above={14} o={bubble} size={48} />}>
       <Dinner f={c.f}
         salim={{ pose: salim, hold: { L: sp }, face: faceAt(c.f, [[0, face('smile', { mouth: 0.5, look: [0.3, 0.4] })], [crit + 2, face('surprised', { open2: 0.1, look: [0.6, -0.1] }), 8], [crit + 40, face('listening', { brow: 0.3, mouth: 0, look: [0.6, -0.1] }), 16]]) }}
@@ -661,15 +661,15 @@ export const SHOTS: Record<number, ShotRender> = {
     );
     return <Stage>
       <Paper seed={133} />
-      <Floor y={970} />
-      <Actor f={c.f} seed={23} who="reem" x={560} y={970} s={1.7} facing={1}
+      <Floor y={1010} />
+      <Actor f={c.f} seed={23} who="reem" x={540} y={1010} s={2.05} facing={1}
         pose={poseAt(c.f, [[0, P({ head: 6, turn: 0.45, R: { hand: [26, -170] }, L: { hand: [34, -174] } }, 'grip', 'grip')], [fear, P({ head: 0, turn: 0.5, R: { hand: [24, -176] }, L: { hand: [30, -186], bend: -1 } }, 'grip', 'open'), 18]])}
         face={faceAt(c.f, [[0, face('anxious', { look: [0.6, -0.3] })], [fear + 10, face('sad', { mouth: 0.1, brow: -0.6, look: [0.6, -0.3] }), 20]])} />
       {/* the tail from the shell to Reem */}
-      <path d={`M${cx - 200} ${cy + 120} Q${cx - 380} ${cy + 220} ${700} ${520}`} stroke={PAL.provoke} strokeWidth={6} fill="none" strokeLinecap="round" opacity={1 - open} />
+      <path d={`M${cx - 200} ${cy + 120} Q${cx - 380} ${cy + 220} ${720} ${430}`} stroke={PAL.provoke} strokeWidth={6} fill="none" strokeLinecap="round" opacity={1 - open} />
       <g transform={`translate(${cx} ${cy}) scale(${mix(0.4, 1.0, open) * beat})`} opacity={c.p(fear - 6, 10)}>
         <Glow x={0} y={0} r={200} color={PAL.provokeLight} o={0.8} />
-        <IconHeart s={220} />
+        <IconHeart s={300} />
       </g>
       {shell(-1)}
       {shell(1)}
@@ -687,7 +687,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const reem = poseAt(c.f, [[0, P(TBW({ turn: 0.55, head: 2 }))], [thought, P(TBW({ turn: 0.55, head: 6, lean: 2 })), 20]]);
     const glassDown = c.p(tr + 6, 16);
     const mother = poseAt(c.f, [[0, P(TBW({ head: 2, turn: 0.5, L: { hand: [54, -206] } }), 'relaxed', 'grip')], [tr + 6, P(TBW({ head: 0, turn: 0.5, L: { hand: [56, -184] } }), 'relaxed', 'grip'), 16]]);
-    const cm = { x: 1000, y: 470, z: 1.34 };
+    const cm = { x: 1000, y: 480, z: 1.55 };
     const b1 = c.p(und - 2, 10) * (1 - c.p(want - 18, 10)), b2 = c.p(want - 2, 10);
     return <Stage cam={cm} over={<>
       <Say text="أفهم خوفك" to={toScreen(cm, [HEAD.salim[0], HEAD.salim[1] - 4])} above={12} o={b1} size={48} />
@@ -704,7 +704,7 @@ export const SHOTS: Record<number, ShotRender> = {
   135: (c) => {
     const know = c.at('يعرف'), yes = c.at('نعم'), when = c.at('ومتى'), but = c.at('ولكن');
     const X = 960, Y = 940, S = 1.6;
-    const cards = [{ x: 1150, y: 640 }, { x: 770, y: 640 }];
+    const cards = [{ x: 1160, y: 630 }, { x: 760, y: 630 }];
     const loc = (wx: number, wy: number): V2 => [(wx - X) / S, (wy - Y) / S];
     const grip = (i: number, up: number): V2 => loc(cards[i].x + (i ? 30 : -30) * 0, cards[i].y + 30 - 50 - up);
     const restL = loc(1060, 690), restR = loc(860, 690);
@@ -720,7 +720,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const p = pose({ sit: 1, turn, body: 0, head: k(c.f, [[0, 0], [know - 10, 8], [but + 50, 8], [but + 70, 0]]) + nod(c.f, but + 60, 1, 6), footR: [40, 0], footL: [50, 0], R: { hand: [Lh[0] * 0 + Rh[0], Rh[1]], bend: 1 }, L: { hand: Lh, bend: -1 } });
     const fc = faceAt(c.f, [[0, 'calm'], [know, { ...EXPRESSIONS.thinking, look: [0.5, 0.5] }, 12], [yes, face('calm', { look: [0.5, 0.6] }), 10], [when, { ...EXPRESSIONS.thinking, look: [-0.5, 0.5] }, 12], [but, face('calm', { mouth: 0.5, look: [-0.5, 0.6] }), 10], [but + 60, face('calm', { mouth: 0.55, look: [0, 0] }), 16]]);
     const actor = (only: string[]) => <Actor f={c.f} seed={41} who="salim" x={X} y={Y} s={S} facing={1} pose={{ p, hands: { R: 'grip', L: 'grip' } }} face={fc} hold={{ R: <Stamp color={PAL.focus} />, L: <Stamp color={PAL.calm} /> }} upright={{ R: true, L: true }} only={only} />;
-    return <Stage cam={{ x: 960, y: 560, z: 1.12 }}>
+    return <Stage cam={{ x: 960, y: 590, z: 1.5 }}>
       <OfficeFront />
       {actor(['Torso', 'Head', 'RightLeg', 'LeftLeg'])}
       <DeskSlab />
@@ -796,7 +796,7 @@ export const SHOTS: Record<number, ShotRender> = {
       const u = typing && last === tap ? ease.out(Math.min(1, ph * 1.6)) : 1;
       const press = typing && last === tap && ph > 0.55 ? 8 : 0;
       const p: V2 = [mix(from[0], at[0], u), mix(from[1], at[1], u) + press];
-      return [p[0] + (side ? 60 : -60) * lift, p[1] - 70 * lift];
+      return [p[0] + (side ? 80 : -80) * lift, p[1] + 90 * lift];
     };
     const hotKey = typing && ph > 0.55 ? keyOf(tap) : null;
     const caret = Math.floor(c.f / 24) % 2 === 0 || typing;
@@ -825,7 +825,7 @@ export const SHOTS: Record<number, ShotRender> = {
     ]);
     const look = faceAt(c.f, [[0, { ...EXPRESSIONS.neutral, look: [0.3, 0.8] }], [ask + 10, { ...EXPRESSIONS.thinking, look: [0.2, -0.8] }, 12], [talk - 4, { ...EXPRESSIONS.thinking, look: [0.8, -0.7] }, 10], [war - 6, face('thinking', { brow: 0.4, look: [-0.6, -0.7] }), 8]]);
     const cm = { x: 900, y: 420, z: 1.55 };
-    const cl = c.p(who - 30, 16, ease.back);
+    const cl = c.p(who - 16, 14, ease.back);
     const cx = 900, cy = 220;
     return <Stage cam={cm}>
       <HomeLiving night />
@@ -834,7 +834,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <Glow x={X + 20} y={470} r={110} color="#DCE9F5" o={0.4} />
       {cl > 0 && <g transform={`translate(${cx} ${cy}) scale(${Math.min(1, cl)})`}>
         <ThoughtCloud w={760} h={330} tail={[-30, 230]} />
-        <g opacity={c.p(who - 2, 10)}><Faceless x={0} y={-14} r={44} /></g>
+        <g opacity={c.p(who - 8, 10)}><Faceless x={0} y={-14} r={44} /></g>
         <g transform={`translate(-30 50)`}><WLabel x={0} y={0} text="؟" size={44} o={c.p(who + 6, 10)} /></g>
         <g transform={`translate(225 -40) scale(${c.p(talk - 4, 12, ease.back)})`}><DialogueIcon /></g>
         <WLabel x={225} y={92} text="حوار" size={44} o={c.p(talk, 10)} color={PAL.calm} />
