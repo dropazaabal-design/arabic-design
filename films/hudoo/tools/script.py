@@ -8,6 +8,7 @@ usage:
 The display text (subtitles, docs) is the voiced text with its short vowels removed, so the two can never drift.
 """
 import json
+import os
 import re
 import sys
 import unicodedata
@@ -17,7 +18,9 @@ from pathlib import Path
 import numpy as np
 
 root = Path(__file__).resolve().parent.parent
-MODELS = Path('/tmp/claude-0/-home-user-arabic-design/75dcdd2b-cff6-54ab-b020-4469cf838c88/scratchpad/models')
+# Models (sherpa-onnx releases): tts-models/vits-piper-ar_JO-kareem-medium.tar.bz2 and asr-models/sherpa-onnx-whisper-small.tar.bz2
+# from https://github.com/k2-fsa/sherpa-onnx/releases, unpacked into $HUDOO_MODELS (default ~/.cache/hudoo-models).
+MODELS = Path(os.environ.get('HUDOO_MODELS', Path.home() / '.cache/hudoo-models'))
 HARAKAT = re.compile('[\u064C-\u0652\u0670]')  # every short vowel, sukun, shadda and dagger alef; only fathatan (ًا) stays, as print does
 
 
