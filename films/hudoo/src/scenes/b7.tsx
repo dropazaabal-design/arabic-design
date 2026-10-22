@@ -12,7 +12,7 @@ import { Glass, IconEye, IconHeart, LockScreen, Mug, Notebook, Pen, Phone, Plate
 import { INK, PAL, hash, sketch } from '../kit/style';
 import { Actor, Cap, Paper, Say, Stage, ease, faceAt, k, mix, poseAt, toScreen, type Cam } from '../film/engine';
 import type { ShotRender } from '../film/Film';
-import { Arrow, Floor, WLabel, atTable, nod, shake } from './common';
+import { Arrow, Floor, WLabel, atTable, cam, nod, shake } from './common';
 
 // Chapter 10 «تدريب يومي» (the notebook) and chapter 11 «في البيت والعمل والإنترنت»: shots 121–140.
 type V2 = [number, number];
@@ -340,11 +340,11 @@ const DeskSlab: React.FC = () => (
 /** A comment card for the flowing feed (140). kind: hostile (rose, spiky avatar) or plain; `q` marks the ones worth a reply. */
 const FeedCard: React.FC<{ y: number; kind: 'hostile' | 'plain' | 'reply'; seed: number; o: number }> = ({ y, kind, seed, o }) => (
   <g opacity={o}>
-    <path d={sketch([[760, y - 54], [1380, y - 54], [1380, y + 54], [760, y + 54]], seed, 1.4, true)} fill="#FFFFFF" stroke={kind === 'hostile' ? PAL.warn : INK} strokeWidth={kind === 'hostile' ? 5 : 4} strokeLinejoin="round" />
+    <path d={sketch([[620, y - 60], [1520, y - 60], [1520, y + 60], [620, y + 60]], seed, 1.4, true)} fill="#FFFFFF" stroke={kind === 'hostile' ? PAL.warn : INK} strokeWidth={kind === 'hostile' ? 6 : 4.5} strokeLinejoin="round" />
     {kind === 'hostile'
-      ? <path d={Array.from({ length: 16 }, (_, i) => { const a = (i / 16) * Math.PI * 2, r = i % 2 ? 22 : 34; return `${i ? 'L' : 'M'}${1330 + Math.cos(a) * r} ${y + Math.sin(a) * r}`; }).join(' ') + 'Z'} fill={PAL.warn} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
-      : <circle cx={1330} cy={y} r={30} fill={kind === 'reply' ? PAL.focus : PAL.storm} stroke={INK} strokeWidth={3.5} />}
-    {[0, 1].map((i) => <path key={i} d={`M${1280} ${y - 16 + i * 32} H${1280 - 200 - hash(seed + i) * 260}`} stroke={kind === 'hostile' ? PAL.provokeLight : PAL.metal} strokeWidth={12} strokeLinecap="round" />)}
+      ? <path d={Array.from({ length: 16 }, (_, i) => { const a = (i / 16) * Math.PI * 2, r = i % 2 ? 24 : 38; return `${i ? 'L' : 'M'}${1462 + Math.cos(a) * r} ${y + Math.sin(a) * r}`; }).join(' ') + 'Z'} fill={PAL.warn} stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+      : <circle cx={1462} cy={y} r={34} fill={kind === 'reply' ? PAL.focus : PAL.storm} stroke={INK} strokeWidth={3.5} />}
+    {[0, 1].map((i) => <path key={i} d={`M${1400} ${y - 18 + i * 36} H${1400 - 340 - hash(seed + i) * 380}`} stroke={kind === 'hostile' ? PAL.provokeLight : PAL.metal} strokeWidth={14} strokeLinecap="round" />)}
   </g>
 );
 
@@ -843,23 +843,24 @@ export const SHOTS: Record<number, ShotRender> = {
       </g>}
     </Stage>;
   },
-  // 140 — not every comment deserves a reply: comments flow up; only two (on «يستحق» and after) take a reply arrow.
+  // 140 — not every comment deserves a reply: comments flow up; only two take a reply arrow (the first on «يستحق»).
   140: (c) => {
-    const kinds = ['hostile', 'plain', 'hostile', 'plain', 'hostile', 'reply', 'hostile', 'reply'] as const;
-    const y0 = [345, 485, 625, 765, 905, 1045, 1185, 1325], v = 5, line0 = 560;
+    const kinds = ['plain', 'hostile', 'hostile', 'plain', 'hostile', 'reply', 'hostile', 'reply', 'hostile', 'plain'] as const;
+    const v = 5, line0 = 560, y0 = kinds.map((_, i) => 245 + i * 160);
     return <Stage over={<Cap text="ليس كل تعليق يستحق ردًا" o={c.p(c.at('فليس') - 4, 12)} top={40} size={58} />}>
       <Paper seed={140} />
       {kinds.map((kd, i) => {
-        const y = y0[i] - v * c.f, o = clamp01((y - 170) / 90) * clamp01((1160 - y) / 80);
-        const trig = (y0[i] - line0) / v, ar = c.p(trig, 18), rp = c.p(trig + 12, 12, ease.back);
+        const y = y0[i] - v * c.f, o = clamp01((y - 190) / 80) * clamp01((1150 - y) / 70);
+        if (o <= 0) return null;
+        const trig = (y0[i] - line0) / v, ar = c.p(trig, 16), rp = c.p(trig + 10, 12, ease.back);
         return <g key={i}>
-          <FeedCard y={y} kind={kd} seed={i * 5 + 1} o={o * (kd === 'reply' || c.f < trig ? 1 : 0.55 + 0.45 * (1 - c.p(trig, 20)))} />
+          <FeedCard y={y} kind={kd} seed={i * 5 + 1} o={o * (kd === 'reply' || c.f < trig ? 1 : 1 - 0.45 * c.p(trig, 20))} />
           {kd === 'reply' && ar > 0 && <g opacity={o}>
-            <Arrow from={[748, y - 10]} to={[600, y + 14]} bend={-0.25} p={ar} color={PAL.calm} w={7} />
-            {rp > 0 && <g transform={`translate(420 ${y + 14}) scale(${rp})`}>
-              <path d={sketch([[-160, -40], [160, -40], [160, 40], [-160, 40]], i, 1.2, true)} fill={PAL.calmLight} stroke={INK} strokeWidth={4} strokeLinejoin="round" />
-              <circle cx={122} cy={0} r={24} fill={PAL.calm} stroke={INK} strokeWidth={3} />
-              <path d="M80 0 H-120" stroke={PAL.calm} strokeWidth={11} strokeLinecap="round" />
+            <Arrow from={[606, y - 8]} to={[530, y + 10]} bend={-0.3} p={ar} color={PAL.calm} w={8} />
+            {rp > 0 && <g transform={`translate(330 ${y + 10}) scale(${rp})`}>
+              <path d={sketch([[-180, -48], [180, -48], [180, 48], [-180, 48]], i, 1.2, true)} fill={PAL.calmLight} stroke={INK} strokeWidth={4.5} strokeLinejoin="round" />
+              <circle cx={136} cy={0} r={28} fill={PAL.calm} stroke={INK} strokeWidth={3.5} />
+              <path d="M88 0 H-140" stroke={PAL.calm} strokeWidth={13} strokeLinecap="round" />
             </g>}
           </g>}
         </g>;
