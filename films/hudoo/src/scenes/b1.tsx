@@ -254,7 +254,7 @@ export const SHOTS: Record<number, ShotRender> = {
   12: (c) => {
     const days = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
     const w = walkTo(c.f, 6, c.dur - 4, 1840, 420, 1.65);
-    return <Stage over={<Cap text="أسبوع واحد" o={c.p(c.at('أسبوع') - 4, 12)} top={985} size={46} />}>
+    return <Stage over={<Cap text="أسبوع واحد" o={c.p(c.at('أسبوع') - 4, 12)} top={318} size={46} />}>
       <Paper seed={12} />
       <Floor y={970} />
       {days.map((d, i) => {
