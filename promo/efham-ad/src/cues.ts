@@ -32,6 +32,8 @@ export const CUES: Cue[] = [
   [act[2] + 18 - 44, 'page', 0.34, 0.3],
   ...act.map((t, k): Cue => [t - 4, 'click', 0.11, [0.4, 0, -0.4][k]]),
   [act[2] + 12, 'pop', 0.26, 0],
+  // the page pulls back to show itself whole before it goes into the phone (scenes.tsx docShots: S.s6 + 8, over 40 frames)
+  [S.s6 - 32, 'swish', 0.14, 0.2],
   // 6: the card goes into the phone; tap; the file opens; the terms
   [S.s6 - 6, 'whoosh', 0.18, 0],
   [w(8, 4) - 6, 'tap', 0.32, 0],

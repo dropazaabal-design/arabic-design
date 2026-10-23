@@ -1,0 +1,47 @@
+{
+ "format": {
+  "file": "/home/user/arabic-design/promo/efham-ad/export/efhamnafsak-ad-feed-1080x1350-60fps.mp4",
+  "bytes": 10287269,
+  "duration": 44.533333,
+  "video": {
+   "codec": "h264",
+   "profile": "High",
+   "width": 1080,
+   "height": 1350,
+   "fps": "60/1",
+   "pix_fmt": "yuv420p",
+   "color_primaries": "bt709",
+   "color_transfer": "bt709",
+   "frames": 2672,
+   "bit_rate": 1670605
+  },
+  "audio": {
+   "codec": "aac",
+   "sample_rate": 48000,
+   "channels": 2,
+   "bit_rate": 164430
+  }
+ },
+ "decode_errors": null,
+ "black": [],
+ "freezes_over_3s": [],
+ "silences_over_1_5s": [
+  {
+   "start": 42.0726,
+   "dur": 2.47135
+  }
+ ],
+ "loudness": {
+  "integrated_lufs": -16.0,
+  "lra_lu": 2.9,
+  "true_peak_dbtp": -4.5
+ },
+ "ends": {
+  "speech_end": 41.64,
+  "picture_end": 44.533333,
+  "tail_after_speech": 2.893
+ },
+ "stills": [
+  "qa/frames-feed/chVO-start.png"
+ ]
+}
