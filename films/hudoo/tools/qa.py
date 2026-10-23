@@ -2,17 +2,21 @@
 format (ffprobe), a full decode, black frames, silences, frozen stretches (> 3 s), loudness and true peak (EBU R128),
 the end of the picture against the end of the speech, and stills at every chapter boundary for the Arabic check.
 usage: python3 tools/qa.py export/hudoo.mp4
+Another project: PROJECT_ROOT=<dir> QA_NAME=<name> → <dir>/qa/<name>.json and <dir>/qa/frames-<name>/.
 """
 import json
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent
-src = Path(sys.argv[1])
+root = Path(os.environ.get('PROJECT_ROOT', Path(__file__).resolve().parent.parent)).resolve()
+src = Path(sys.argv[1]).resolve()
+name = os.environ.get('QA_NAME', 'checks')
 qa = root / 'qa'
-(qa / 'frames').mkdir(parents=True, exist_ok=True)
+frames = qa / ('frames' if name == 'checks' else f'frames-{name}')
+frames.mkdir(parents=True, exist_ok=True)
 LINES = json.loads((root / 'timing/lines.json').read_text(encoding='utf-8'))
 
 
@@ -60,7 +64,7 @@ for ch in sorted({l['chapter'] for l in LINES['lines']}):
     for tag, t in (('start', first['start'] + 0.6), ('before', first['start'] - 0.5)):
         if t < 0:
             continue
-        out = qa / 'frames' / f'ch{ch:02d}-{tag}.png'
+        out = frames / f'ch{ch:02d}-{tag}.png'
         run('ffmpeg', '-v', 'error', '-y', '-ss', f'{t:.3f}', '-i', str(src), '-frames:v', '1', str(out))
         stills.append(str(out.relative_to(root)))
 
@@ -71,6 +75,6 @@ res = {
     'silences_over_1_5s': [{'start': float(s), 'dur': float(d)} for s, d in silences],
     'loudness': loud, 'ends': ends, 'stills': stills,
 }
-(qa / 'checks.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding='utf-8')
+(qa / f'{name}.json').write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding='utf-8')
 print(json.dumps({k: res[k] for k in ('format', 'decode_errors', 'loudness', 'ends')}, indent=1))
 print('black', len(res['black']), 'freezes>3s', len(res['freezes_over_3s']), 'silences>1.5s', len(res['silences_over_1_5s']))

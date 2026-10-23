@@ -9,6 +9,7 @@ proportion to their voiced (diacritised) length. Where pauses and punctuation do
 that way. These are estimates within ±0.15 s, good for cueing actions, not for lip-sync.
 """
 import json
+import os
 import re
 import subprocess
 import wave
@@ -16,7 +17,8 @@ from pathlib import Path
 
 import numpy as np
 
-root = Path(__file__).resolve().parent.parent
+# PROJECT_ROOT lets another project (an ad, a reel) reuse this tool on its own narrative/ and audio/
+root = Path(os.environ.get('PROJECT_ROOT', Path(__file__).resolve().parent.parent)).resolve()
 FPS = 60
 L = json.loads((root / 'narrative/lines.json').read_text(encoding='utf-8'))
 SR = L['sampleRate']
@@ -128,5 +130,5 @@ for l in lines_out:
     else:
         cues.append((l['start'], l['end'], text))
 (root / 'export').mkdir(exist_ok=True)
-(root / 'export/hudoo.ar.srt').write_text(''.join(f'{i + 1}\n{ts(a)} --> {ts(b)}\n{c}\n\n' for i, (a, b, c) in enumerate(cues)), encoding='utf-8')
+(root / f"export/{os.environ.get('SRT_NAME', 'hudoo.ar.srt')}").write_text(''.join(f'{i + 1}\n{ts(a)} --> {ts(b)}\n{c}\n\n' for i, (a, b, c) in enumerate(cues)), encoding='utf-8')
 print(f'{len(lines_out)} lines, {len(words)} words, {len(cues)} subtitle cues, total {total:.2f} s ({int(total // 60)}:{total % 60:05.2f})')

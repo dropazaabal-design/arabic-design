@@ -17,7 +17,8 @@ from pathlib import Path
 
 import numpy as np
 
-root = Path(__file__).resolve().parent.parent
+# PROJECT_ROOT lets another project (an ad, a reel) reuse this tool on its own narrative/ and audio/
+root = Path(os.environ.get('PROJECT_ROOT', Path(__file__).resolve().parent.parent)).resolve()
 # Models (sherpa-onnx releases): tts-models/vits-piper-ar_JO-kareem-medium.tar.bz2 and asr-models/sherpa-onnx-whisper-small.tar.bz2
 # from https://github.com/k2-fsa/sherpa-onnx/releases, unpacked into $HUDOO_MODELS (default ~/.cache/hudoo-models).
 MODELS = Path(os.environ.get('HUDOO_MODELS', Path.home() / '.cache/hudoo-models'))
