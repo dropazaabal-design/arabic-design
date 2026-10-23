@@ -19,7 +19,7 @@ export function options(argv) {
     throw new Error('Usage: node tools/effectcraft-bridge.mjs doctor | render --project FILE.ecproj --comp NAME --id SLUG --frames N [--fps 60] [--public ./public] [--bin PATH]');
   }
   const result = {command};
-  const allowed = new Set(['--project', '--comp', '--id', '--frames', '--fps', '--public', '--bin']);
+  const allowed = new Set(['--project', '--comp', '--id', '--frames', '--fps', '--public', '--bin', '--width', '--height']);
   for (let i = 1; i < argv.length; i += 2) {
     if (!allowed.has(argv[i]) || !argv[i + 1] || result[argv[i].slice(2)] !== undefined) {
       throw new Error('Invalid or duplicated option: ' + argv[i]);
@@ -79,6 +79,12 @@ export function run(argv = process.argv.slice(2)) {
   if (![30,60].includes(fps) || !Number.isSafeInteger(frames) || frames < 1 || frames > 21600) {
     throw new Error('fps must be 30 or 60; frames must be an integer between 1 and 21600');
   }
+  const width = o.width ? Number(o.width) : null;
+  const height = o.height ? Number(o.height) : null;
+  if ((width !== null && (!Number.isSafeInteger(width) || width < 1)) ||
+      (height !== null && (!Number.isSafeInteger(height) || height < 1))) {
+    throw new Error('width and height must be positive integers');
+  }
   const project = resolve(o.project);
   if (!existsSync(project) || !project.endsWith('.ecproj')) throw new Error('Missing EffectCraft .ecproj: ' + project);
   const publicDir = resolve(o.public || 'public');
@@ -102,6 +108,9 @@ export function run(argv = process.argv.slice(2)) {
     files.forEach((file, i) => {
       const src = join(work, file), info = pngInfo(src);
       if (size && (info.width !== size.width || info.height !== size.height)) throw new Error('Inconsistent PNG dimensions');
+      if ((width !== null && info.width !== width) || (height !== null && info.height !== height)) {
+        throw new Error('Overlay PNG dimensions do not match --width/--height');
+      }
       size = info;
       copyFileSync(src, join(dest, String(i).padStart(6, '0') + '.png'));
     });
