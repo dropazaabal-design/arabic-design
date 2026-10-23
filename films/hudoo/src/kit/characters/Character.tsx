@@ -14,6 +14,8 @@ export type CharacterProps = {
   o?: number;
   /** Draw only these parts (for the SVG export): Head, Torso, LeftArm, RightArm, LeftLeg, RightLeg. */
   only?: string[];
+  /** Extra clothing: `torso` is drawn over the shirt and under the near arm (a tie); `head` in the head's own frame (a headset). */
+  wear?: { torso?: (j: ReturnType<typeof joints>) => React.ReactNode; head?: React.ReactNode };
 };
 
 const LINE = 4.6;
@@ -27,7 +29,7 @@ const tube = (pts: V[], color: string, w: number, key: string) => {
  * front to profile, the round head with its face (face.tsx) and ten hands (hands.tsx). Parts are grouped and named
  * (Head, Eyes…, Torso, LeftArm, RightArm, LeftHand, RightHand, LeftLeg, RightLeg, Props) for the SVG export.
  */
-export const Character: React.FC<CharacterProps> = ({ who, p, x = 0, y = 0, s = 1, facing = 1, face = 'neutral', blink = 0, talk = 0, hands, hold, upright, o = 1, only }) => {
+export const Character: React.FC<CharacterProps> = ({ who, p, x = 0, y = 0, s = 1, facing = 1, face = 'neutral', blink = 0, talk = 0, hands, hold, upright, o = 1, only, wear }) => {
   const show = (part: string) => !only || only.includes(part);
   const look: Look = typeof who === 'string' ? CAST[who] : who;
   const j = joints(p);
@@ -103,9 +105,11 @@ export const Character: React.FC<CharacterProps> = ({ who, p, x = 0, y = 0, s = 
         <path d={torso} fill={look.shirt} stroke={INK} strokeWidth={LINE} strokeLinejoin="round" />
         {p.body > 0.2 && <path d={shade} fill={look.shirtShade} opacity={0.55} />}
         {collar}
+        {wear?.torso?.(j)}
       </g>}
       {show('Head') && <g id="Head" transform={`translate(${j.headC[0]} ${j.headC[1]}) rotate(${p.lean * 0.6 + p.head})`}>
         <Head r={BONES.headR} turn={p.turn} face={fc} look={look} blink={blink} talk={talk} line={LINE} />
+        {wear?.head}
       </g>}
       {show('LeftArm') && arm(j.armL, 'Left', 'L')}
     </g>

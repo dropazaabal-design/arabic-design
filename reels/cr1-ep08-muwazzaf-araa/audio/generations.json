@@ -1,0 +1,19 @@
+{
+ "flow_id": "EQwqgqLd85m5CEfwB1oK",
+ "model": "eleven_v4 (the workspace default; read from creative_get_flow_node_types, which also lists eleven_v3, multilingual_v2, turbo_v2_5, flash_v2_5)",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "voice_name_reported": "Fernando Martínez - Rapid, Persuasive",
+ "settings": "the connector exposes no stability/style/speed for eleven_v4; performance tags in the text: [formal] [confused] [tired] [softly] [calm] [warmly]",
+ "authorisation": "The recorded series cap (20,000; 44.99 left) did not cover this. Asked the owner with the free estimates; answer «أفوضك» (2026-10-23). Chose two takes per unit for EP08 plus one take for the ad.",
+ "units": {
+  "A": {"takes": {"wC49ZudyFfjL9xhj7gBM": 277.9722, "jZqC8bspNXxXJFdYvWwO": 277.9722}, "chosen": "wC49ZudyFfjL9xhj7gBM", "seconds": 24.69},
+  "B": {"takes": {"kVR9MBahVY4y5zzlV5sc": 180.9819, "5Q7wlttQOiADzail0c49": 180.9819}, "chosen": "kVR9MBahVY4y5zzlV5sc", "seconds": 14.92},
+  "C": {"takes": {"32TnIA2uPB02qPvtraMM": 114.9885, "mXfqEivuTH6YGy7EOPms": 114.9885}, "chosen": "32TnIA2uPB02qPvtraMM", "seconds": 8.75},
+  "D": {"takes": {"2wc8tho9Eym0RlsOREma": 153.9846, "hXII5LhBSdMuSEdTKknS": 153.9846}, "chosen": "2wc8tho9Eym0RlsOREma", "seconds": 14.60}
+ },
+ "choice": "by the independent transcription (local Whisper small, timing/takes-asr.json): the take with the higher word match in each unit; no take had a spoken tag",
+ "alignment": {"model": "eleven_scribe_v1", "credits": 0, "note": "aligns the prompt text; timings only, not a check of pronunciation"},
+ "credits": {"ep08": 1455.85, "ad_maktaba": 432.96, "total_this_session": 1888.81},
+ "price_cents": {"ep08": 26.47, "ad_maktaba": 7.87},
+ "seriesTotal": "19,955.01 before + 1,888.81 = 21,843.82 credits (the 20,000 cap exceeded by 1,843.82 on the owner's authorisation)"
+}

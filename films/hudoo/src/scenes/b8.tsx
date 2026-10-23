@@ -151,8 +151,8 @@ const scr = (sx: number, sy: number): [number, number] => [PH.x - PSW / 2 + sx *
 const PhoneShot: React.FC<{ cm: Cam; screen: React.ReactNode; buzz?: number; t: number; over?: React.ReactNode }> = ({ cm, screen, buzz = 0, t, over }) => (
   <Stage cam={cm} bg={PAL.wallNight} over={over}>
     <rect x={-400} y={-400} width={2720} height={1880} fill={PAL.wallNight} />
-    <ellipse cx={PH.x} cy={PH.y} rx={520} ry={600} fill={PAL.screenGlow} opacity={0.08} />
-    <g transform={`translate(${PH.x} ${PH.y})`}><Phone w={PH.w} glow={0.5} screen={screen} buzz={buzz} t={t} /></g>
+    <ellipse cx={PH.x} cy={PH.y} rx={460} ry={620} fill={PAL.screenGlow} opacity={0.07} />
+    <g transform={`translate(${PH.x} ${PH.y})`}><Phone w={PH.w} glow={0} screen={screen} buzz={buzz} t={t} /></g>
   </Stage>
 );
 /** Animate a screen node: scale about a point (an app opening from or closing into it). */
@@ -275,7 +275,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <g transform={`translate(12 ${mix(250, 360, c.p(atk - 2, 10))})`}><NotificationBanner name={ANON} text="ما زلت مصرًا؟ كلامك فارغ" time="الآن" o={c.p(rep - 2, 10, ease.out)} /></g>
       {c.f > use - 8 && c.f < use + 10 && <circle cx={180} cy={300} r={10 + 50 * c.p(use - 8, 16, ease.lin)} fill="none" stroke={INK} strokeWidth={3} opacity={1 - c.p(use - 8, 16, ease.lin)} />}
     </g>;
-    const thread = <Thread scroll={150} time="23:05" menuOn={4} menu={menu} press={c.p(blk - 4, 10, ease.lin)} comments={[
+    const thread = <Thread scroll={mix(235, 70, c.p(calm - 20, 24))} time="23:05" menuOn={4} menu={menu} press={c.p(blk - 4, 10, ease.lin)} comments={[
       { name: 'هادي', text: 'أتفق معك تمامًا', kind: 'friend' },
       { name: ANON, text: HOSTILE, kind: 'hostile', gone, collapse: c.p(calm - 20, 16) },
       { name: 'سليم', text: REPLY, kind: 'mine' },
@@ -304,7 +304,7 @@ export const SHOTS: Record<number, ShotRender> = {
       const x = mix(2060, G.cx + G.rx + 40, ease.in(u)) + back * 160, yy = y + back * back * 240;
       return { x, y: yy, o: (c.f > a ? 1 : 0) * (1 - back), rot: back * 80 * (i % 2 ? 1 : -1), i };
     });
-    return <Stage over={<>
+    return <Stage cam={cam(1160, 640, 1.42)} over={<>
       <Cap text="حد آخر" o={c.p(edge - 2, 14)} top={60} size={66} />
     </>}>
       <Paper seed={143} />
@@ -358,7 +358,7 @@ export const SHOTS: Record<number, ShotRender> = {
   // 145 — the same table (mugs, papers), the same faces (each looks up), the same Jaser: he leans back and lifts a finger on «جاسر».
   145: (c) => {
     const tb = c.at('الطاولة'), fc = c.at('الوجوه'), js = c.at('جاسر');
-    const cm = camK(c.f, [[0, 820, 730, 2.3], [fc - 10, 1010, 720, 2.3], [fc + 22, 760, 520, 1.9], [js - 12, 860, 520, 1.9], [js + 14, 1210, 530, 2.35]]);
+    const cm = camK(c.f, [[0, 820, 730, 2.3], [fc - 10, 1010, 720, 2.3], [fc + 22, 760, 520, 1.9], [js - 12, 860, 520, 1.9], [js + 14, 1150, 530, 2.35]]);
     const look = (i: number) => k(c.f, [[fc + i * 8, 0], [fc + 16 + i * 8, 1]]);
     const seats: (SeatSpec | null)[] = (['mona', 'att1', 'hadi', 'att2'] as const).map((w, i): SeatSpec => ({
       who: w, p: atTable({ head: mix(16, -2, look(i)) + nod(c.f, fc + 40 + i * 10, 1, 5), turn: mix(0.25, 0.5, look(i)) }),
@@ -380,25 +380,26 @@ export const SHOTS: Record<number, ShotRender> = {
   146: (c) => {
     const who = c.at('ذلك'), smile = c.at('يبتسم'), press = c.at('ويضغط'), under = c.at('تحت');
     const cm = camK(c.f, [[0, 1440, 590, 2.0], [c.dur, 1440, 600, 2.1]]);
-    const ghostO = c.p(who - 8, 30) * (1 - c.p(under + 10, 50)) * 0.62;
+    const ghostO = c.p(who - 8, 30) * (1 - c.p(under + 10, 50)) * 0.8;
     const win = c.p(press - 6, 18, ease.back) * (1 - c.p(under + 10, 40));
     const bend = c.p(press + 4, 40, ease.out);
     const tr = c.f > press ? Math.sin(c.f * 2.1) * 1.6 * bend : 0;
     const seats = team({ faces: ['listening', 'listening', 'listening', 'listening', 'smug'] });
-    seats[4] = { who: 'jaser', p: jaserFinger, hands: { R: 'relaxed', L: 'point' }, face: faceAt(c.f, [[0, face('smug', { brow: 0.5, open: 0.8 })], [smile, face('smug', { look: [1, 0] })]]) };
+    seats[4] = { who: 'jaser', p: jaserSeat({ lean: -9, head: -6 }), hands: { R: 'relaxed', L: 'relaxed' }, face: faceAt(c.f, [[0, face('smug', { brow: 0.5, open: 0.8, look: [1, -0.2] })], [smile, face('smug', { look: [1, 0] })]]) };
     const ghost = ghostO > 0 && <Actor f={c.f} seed={77} who="salim" x={SEAT[5]} y={MEET_FEET} s={MEET_S} facing={-1} o={ghostO}
       pose={{ p: atTable({ turn: 0.4, head: 4 + nod(c.f, smile, 1, 6), lean: 3, R: { hand: [56, -128] }, L: { hand: [70, -124] } }) }} hands={{ R: 'fist', L: 'fist' }}
       face={faceAt(c.f, [[0, face('forcedSmile', { tight: 0.8, mouth: 0.3 })], [smile, face('forcedSmile', { tight: 1, mouth: 0.6, width: 1.2, brow: 0.8 }), 12]])} />;
     return <Stage cam={cm}>
-      <Meeting f={c.f} seats={seats} extra={ghost}
+      <Meeting f={c.f} seats={seats} extra={<>{ghostO > 0 && <ellipse cx={SEAT[5] - 10} cy={560} rx={120} ry={150} fill="#FFFFFF" opacity={ghostO * 0.55} />}{ghost}</>}
         front={<>
           {win > 0 && <g opacity={Math.min(1, win)}>
             <circle cx={1404} cy={760} r={82 * Math.min(1, win)} fill="#FFFFFF" opacity={0.75} stroke={INK} strokeWidth={4} strokeDasharray="12 9" />
-            <g transform={`translate(${1404 + tr} ${762 + tr * 0.5}) rotate(196) scale(${3.4 * Math.min(1, win)} ${-3.4 * Math.min(1, win)})`} opacity={0.85}>
+            <clipPath id="b8-xray"><circle cx={1404} cy={760} r={80 * Math.min(1, win)} /></clipPath>
+            <g clipPath="url(#b8-xray)"><g transform={`translate(${1404 + tr} ${762 + tr * 0.5}) rotate(196) scale(${2.6 * Math.min(1, win)} ${-2.6 * Math.min(1, win)})`} opacity={0.85}>
               <Hand g="grip" skin={SKIN} layer="back" />
               <g transform={`translate(12 0) rotate(${84 + bend * 4})`}><BentPen bend={bend} /></g>
               <Hand g="grip" skin={SKIN} layer="front" />
-            </g>
+            </g></g>
           </g>}
           <Actor f={c.f} seed={41} who="salim" x={STAND.x} y={STAND.y} s={1.45} facing={-1}
             pose={poseAt(c.f, [[0, { p: pose({ head: 2, turn: 0.45, breath: 0.4 + 0.4 * Math.sin(c.f / 45), R: { sh: -8, el: 10 }, L: { sh: 8, el: 12 } }) }], [who, { p: pose({ head: 6, turn: 0.75, R: { sh: -8, el: 10 }, L: { sh: 8, el: 12 } }) }, 24], [under + 20, { p: pose({ head: -2, turn: 0.45, R: { sh: -10, el: 14 }, L: { hand: [40, -150] } }), hands: { R: 'relaxed', L: 'open' } }, 20]])}
@@ -552,10 +553,10 @@ export const SHOTS: Record<number, ShotRender> = {
     return <Stage over={<Say text="ماذا أريد هنا؟" to={headTop} above={30} o={c.p(ask + 6, 12)} size={50} think />}>
       <Paper seed={154} />
       <Floor y={990} />
-      {sh > 0 && <g transform={`translate(1490 560) scale(${Math.min(1.1, sh) * pulse(here)})`}><IconShield s={230} /></g>}
-      {pm > 0 && <g transform={`translate(420 ${640 - 10 * Math.sin(c.f / 20)}) rotate(-90) scale(${7.5 * Math.min(1.1, pm) * pulse(here)})`}><Hand g="open" skin={SKIN} /></g>}
-      <WLabel x={1490} y={760} text="أحمي" size={56} o={c.p(prot + 4, 12)} color={PAL.calm} />
-      <WLabel x={430} y={760} text="أطلب" size={56} o={c.p(req + 4, 12)} color={PAL.focus} />
+      {sh > 0 && <g transform={`translate(1500 540) scale(${Math.min(1.1, sh) * pulse(here)})`}><IconShield s={300} /></g>}
+      {pm > 0 && <g transform={`translate(420 ${640 - 10 * Math.sin(c.f / 20)}) rotate(-90) scale(${10 * Math.min(1.1, pm) * pulse(here)})`}><Hand g="open" skin={SKIN} /></g>}
+      <WLabel x={1500} y={790} text="أحمي" size={56} o={c.p(prot + 4, 12)} color={PAL.calm} />
+      <WLabel x={420} y={790} text="أطلب" size={56} o={c.p(req + 4, 12)} color={PAL.focus} />
       <Actor f={c.f} seed={41} who="salim" x={960} y={990} s={1.8} facing={1} pose={pz}
         face={faceAt(c.f, [[0, 'calm'], [ask, { ...EXPRESSIONS.thinking, look: [0.3, -0.8] }, 14], [prot, face('determined', { look: [0.9, 0] }), 12], [req, face('calm', { look: [-0.9, 0.1] }), 12], [here + 6, face('calm', { look: [0, 0] }), 12]])} />
     </Stage>;
@@ -564,16 +565,16 @@ export const SHOTS: Record<number, ShotRender> = {
   155: (c) => {
     const pick = c.at('اختر');
     const w = walkTo(c.f, pick + 2, c.dur, 1010, 840, 1.6);
-    const zig: [number, number][] = Array.from({ length: 9 }, (_, i) => [1060 + i * 95, 930 - i * 34 + (i % 2 ? -34 : 34)]);
+    const zig: [number, number][] = Array.from({ length: 9 }, (_, i) => [1050 + i * 78, 930 - i * 30 + (i % 2 ? -30 : 30)]);
     const straight = c.p(pick - 4, 22);
     const pz = c.f < pick + 2 ? poseAt(c.f, [[0, { p: pose({ turn: 0.8, body: 0.45, head: 6 }) }], [30, { p: pose({ turn: -0.2, body: 0.3, head: 2 }) }, 18]]) : { p: w.p };
-    return <Stage>
+    return <Stage cam={cam(1000, 690, 1.35)}>
       <Paper seed={155} />
       <Floor y={930} />
       <path d={sketch(zig, 4, 1)} stroke={PAL.warn} strokeWidth={16} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={mix(0.85, 0.35, straight)} />
-      <path d={`M1000 940 L160 940`} stroke={PAL.calmLight} strokeWidth={26} strokeLinecap="round" />
-      <path d={`M1000 940 L${1000 - 840 * mix(0.25, 1, straight)} 940`} stroke={PAL.calm} strokeWidth={16} strokeLinecap="round" />
-      {straight > 0.95 && <path d="M190 916 L158 940 L190 964" stroke={PAL.calm} strokeWidth={16} fill="none" strokeLinecap="round" strokeLinejoin="round" />}
+      <path d={`M1000 940 L330 940`} stroke={PAL.calmLight} strokeWidth={26} strokeLinecap="round" />
+      <path d={`M1000 940 L${1000 - 670 * mix(0.25, 1, straight)} 940`} stroke={PAL.calm} strokeWidth={16} strokeLinecap="round" />
+      {straight > 0.95 && <path d="M360 916 L328 940 L360 964" stroke={PAL.calm} strokeWidth={16} fill="none" strokeLinecap="round" strokeLinejoin="round" />}
       <circle cx={1010} cy={936} r={22} fill="#FFFFFF" stroke={INK} strokeWidth={4} />
       <Actor f={c.f} seed={41} who="salim" x={c.f < pick + 2 ? 1010 : w.x} y={930} s={1.6} facing={c.f < pick + 2 ? 1 : -1} pose={pz}
         face={faceAt(c.f, [[0, { ...EXPRESSIONS.thinking, look: [0.8, 0] }], [30, face('neutral', { look: [-0.8, 0.2] }), 12], [pick - 6, 'determined', 10]])} />
@@ -588,8 +589,8 @@ export const SHOTS: Record<number, ShotRender> = {
     const pz = poseAt(c.f, [[0, { p: pose({ turn: 0, body: 0.2, R: { sh: -6, el: 8 }, L: { sh: 6, el: 8 } }) }],
       [word - 8, { p: pose({ ...POSES.explain.p, turn: 0.45, body: 0.3, R: { hand: [44, -176] }, L: { hand: [76, -170] } }), hands: POSES.explain.hands }, 16],
       [word + 50, { p: pose({ ...POSES.explain.p, turn: 0.4, body: 0.3, R: { hand: [50, -160] }, L: { hand: [84, -186] } }), hands: POSES.explain.hands }, 30],
-      [quiet - 8, { p: pose({ turn: 0, body: 0.2, head: 6, R: { hand: [-6, -150], bend: -1 }, L: { hand: [12, -154], bend: -1 } }), hands: { R: 'relaxed', L: 'relaxed' } }, 18],
-      [limit - 8, { p: pose({ turn: -0.35, body: 0.2, head: -2, R: { sh: -6, el: 10 }, L: { hand: [-60, -206] } }), hands: { R: 'relaxed', L: 'stop' } }, 18]]);
+      [quiet - 8, { p: pose({ turn: 0, body: 0.2, head: 6, R: { sh: -6, el: 8 }, L: { hand: [22, -196], bend: -1 } }), hands: { R: 'relaxed', L: 'open' } }, 18],
+      [limit - 8, { p: pose({ turn: 0.3, body: 0.3, head: -2, R: { sh: -6, el: 10 }, L: { hand: [78, -204] } }), hands: { R: 'relaxed', L: 'stop' } }, 18]]);
     const art = (i: number, s: number) => {
       if (i === 0) return <g transform={`scale(${s})`}><SpeechBubble w={190} h={110} tail={[-70, 80]}><g>{[-24, 0, 24].map((y, j) => <path key={j} d={`M${-60 + j * 10} ${y} H60`} stroke={INK} strokeWidth={7} strokeLinecap="round" />)}</g></SpeechBubble></g>;
       if (i === 1) return <g transform={`scale(${s})`}>
@@ -598,41 +599,41 @@ export const SHOTS: Record<number, ShotRender> = {
         <path d="M-30 -18 q10 -8 20 0 M10 -18 q10 -8 20 0" fill="none" stroke={INK} strokeWidth={6} strokeLinecap="round" />
         <rect x={-11} y={-6} width={22} height={70} rx={11} fill={SKIN} stroke={INK} strokeWidth={5} />
       </g>;
-      return <g transform={`rotate(-90) scale(${5.4 * s})`}><Hand g="stop" skin={SKIN} /></g>;
+      return <g transform={`translate(0 70) rotate(-90) scale(${4.6 * s})`}><Hand g="stop" skin={SKIN} /></g>;
     };
     return <Stage>
       <Paper seed={156} />
-      <Floor y={1010} />
+      <Floor y={1062} />
       {xs.map((x, i) => {
         const sl = c.p(slots - 4 + i * 6, 12), o = on[i], hot = act === i;
         return <g key={i} opacity={Math.min(1, sl)}>
-          <rect x={x - 220} y={70} width={440} height={370} rx={26} fill={o > 0 ? '#FFFFFF' : 'none'} stroke={hot ? PAL.calm : INK} strokeWidth={hot ? 8 : 4} strokeDasharray={o > 0 ? undefined : '16 12'} opacity={o > 0 ? 1 : 0.5} />
-          {o > 0 && <g transform={`translate(${x} ${220 - (hot ? 4 * Math.sin(c.f / 14) : 0)})`} opacity={hot || act > i ? 1 : 0.6}>{art(i, Math.min(1.08, o))}</g>}
-          <WLabel x={x} y={392} text={labels[i]} size={48} o={o} color={hot ? PAL.calm : INK} />
+          <rect x={x - 220} y={40} width={440} height={360} rx={26} fill={o > 0 ? '#FFFFFF' : 'none'} stroke={hot ? PAL.calm : INK} strokeWidth={hot ? 8 : 4} strokeDasharray={o > 0 ? undefined : '16 12'} opacity={o > 0 ? 1 : 0.5} />
+          {o > 0 && <g transform={`translate(${x} ${190 - (hot ? 4 * Math.sin(c.f / 14) : 0)})`} opacity={hot || act > i ? 1 : 0.6}>{art(i, 1.25 * Math.min(1.08, o))}</g>}
+          <WLabel x={x} y={354} text={labels[i]} size={48} o={o} color={hot ? PAL.calm : INK} />
         </g>;
       })}
-      <Actor f={c.f} seed={41} who="salim" x={960} y={1010} s={1.45} facing={1} pose={pz} say={[word, quiet - 40]}
-        face={faceAt(c.f, [[0, 'calm'], [word, face('calm', { look: [0.6, -0.2] }), 12], [quiet, face('calm', { tight: 0.7, mouth: 0.4, look: [0, -0.2] }), 12], [limit, face('smile', { mouth: 0.5, look: [-0.6, -0.1] }), 12]])} />
+      <Actor f={c.f} seed={41} who="salim" x={960} y={1062} s={1.72} facing={1} pose={pz} say={[word, quiet - 40]}
+        face={faceAt(c.f, [[0, 'calm'], [word, face('calm', { look: [0.6, -0.2] }), 12], [quiet, face('calm', { tight: 0.7, mouth: 0.4, look: [0, -0.2] }), 12], [limit, face('smile', { mouth: 0.5, look: [0.4, -0.1] }), 12]])} />
     </Stage>;
   },
   // 157 — his own bubble in his own hand: wine-red strings tug it from above; he grips it on «ردك»; the strings snap on «لا» and fall.
   157: (c) => {
     const grip = c.at('ردك'), snap = c.at('لا'), fall = c.at('الاستفزاز');
-    const x = 1000, y = 1010, s = 1.7;
+    const x = 900, y = 1060, s = 1.9, HS = 1.45 * s;
     const tug = c.f < grip ? Math.sin(c.f / 7) * 6 * (1 - c.p(grip - 20, 20)) : 0;
     const pz = poseAt(c.f, [[0, { p: pose({ turn: 0.5, body: 0.4, head: -4, L: { hand: [70 + tug * 0.3, -214 - tug] }, R: { hand: [-20, -170 - tug * 0.6] } }), hands: { R: 'open', L: 'grip' } }],
-      [grip - 6, { p: pose({ turn: 0.45, body: 0.35, head: 2, L: { hand: [78, -196] }, R: { sh: -6, el: 10 } }), hands: { R: 'relaxed', L: 'grip' } }, 18]]);
+      [grip - 6, { p: pose({ turn: 0.45, body: 0.35, head: 2, L: { hand: [96, -186] }, R: { sh: -6, el: 10 } }), hands: { R: 'relaxed', L: 'grip' } }, 18]]);
     const hand = wristAt(pz.p, x, y, s, 1, 'L');
-    const bubTop: [number, number] = [hand[0] + 4, hand[1] - 2.46 * (70 + 76) - 6];
+    const bubTop: [number, number] = [hand[0] + 56 * HS, hand[1] - 128 * HS];
     const rHand = wristAt(pz.p, x, y, s, 1, 'R');
     const headTop: [number, number] = [x + 12, y - 380 * s];
-    const cut = c.p(snap, 10, ease.out), drop = c.p(snap + 6, Math.max(20, fall + 40 - snap), ease.in);
-    const src = (i: number): [number, number] => [880 + i * 160, -20 - cut * 60];
     const ends: [number, number][] = [bubTop, headTop, rHand];
+    const cut = c.p(snap, 10, ease.out), drop = c.p(snap + 6, Math.max(20, fall + 40 - snap), ease.in);
+    const src = (i: number): [number, number] => [ends[i][0] + (i - 1) * 50, -20 - cut * 60];
     return <Stage>
       <Paper seed={157} />
-      <Floor y={1010} />
-      <g transform={`translate(1040 ${-30 - cut * 120})`} opacity={1 - cut * 0.6}><SpeechBubble w={520} h={150} tail={[0, 120]} kind="shout" fill={PAL.provokeLight} /></g>
+      <Floor y={1060} />
+      <g transform={`translate(1060 ${-30 - cut * 120})`} opacity={1 - cut * 0.6}><SpeechBubble w={760} h={150} tail={[0, 120]} kind="shout" fill={PAL.provokeLight} /></g>
       {ends.map((e, i) => {
         const s0 = src(i), mid: [number, number] = [mix(s0[0], e[0], 0.55), mix(s0[1], e[1], 0.55)];
         const upper = <path d={`M${s0[0]} ${s0[1]} L${mix(s0[0], mid[0], 1 - cut * 0.4)} ${mix(s0[1], mid[1], 1 - cut * 0.4)}`} stroke={PAL.provoke} strokeWidth={4} fill="none" strokeLinecap="round" />;
@@ -643,9 +644,9 @@ export const SHOTS: Record<number, ShotRender> = {
       })}
       <Actor f={c.f} seed={41} who="salim" x={x} y={y} s={s} facing={1} pose={pz}
         hold={{ L: <g>
-          <path d="M0 18 V-70" stroke={INK} strokeWidth={6} strokeLinecap="round" />
-          <path d="M0 18 V-70" stroke={PAL.wood} strokeWidth={3} strokeLinecap="round" />
-          <g transform="translate(4 -112)"><SpeechBubble w={150} h={78} tail={[-6, 46]} size={26}>ردي أنا</SpeechBubble></g>
+          <path d="M0 18 L10 -62" stroke={INK} strokeWidth={6} strokeLinecap="round" />
+          <path d="M0 18 L10 -62" stroke={PAL.wood} strokeWidth={3} strokeLinecap="round" />
+          <g transform="translate(56 -96)"><SpeechBubble w={124} h={64} tail={[-46, 36]} size={22}>ردي أنا</SpeechBubble></g>
         </g> }} upright={{ L: true }}
         face={faceAt(c.f, [[0, face('irritated', { brow: 0.4, look: [0.3, -0.7] })], [grip, face('determined', { look: [0.5, -0.3] }), 12], [snap + 10, face('calm', { mouth: 0.55 }), 14]])} />
     </Stage>;
@@ -662,7 +663,7 @@ export const SHOTS: Record<number, ShotRender> = {
       <Floor y={1070} />
       <Actor f={c.f} seed={41} who="salim" x={940} y={1070} s={1.95} facing={1} pose={pz}
         face={faceAt(c.f, [[0, 'calm'], [c.at('جربها'), 'smile', 14], [once, face('smile', { mouth: 1, squint: 0.45 }), 10]])} />
-      <WLabel x={1440} y={430} text="مرة واحدة" size={64} o={c.p(once + 2, 12)} color={PAL.calm} />
+      <WLabel x={1340} y={360} text="مرة واحدة" size={64} o={c.p(once + 2, 12)} color={PAL.calm} />
     </Stage>;
   },
   // 159 — evening in his room: the lamp on, he opens the notebook on «اكتب» and writes; on «حدث» he looks up, at ease.
@@ -670,16 +671,18 @@ export const SHOTS: Record<number, ShotRender> = {
     const write = c.at('اكتب'), what = c.at('حدث');
     const open = c.p(write - 10, 16);
     const u = clamp((c.f - write) / (what - write + 10));
-    const penX = 46 + ((u * 3) % 1) * 48, line = Math.floor(u * 3);
-    const pz = poseAt(c.f, [[0, { p: pose({ sit: 1, lean: 12, head: 14, turn: 0.55, footR: [52, 0], footL: [64, 0], R: { hand: [70, -126] }, L: { hand: [84, -122] } }), hands: { R: 'relaxed', L: 'relaxed' } }],
-      [write - 4, { p: pose({ sit: 1, lean: 14, head: 18, turn: 0.55, footR: [52, 0], footL: [64, 0], R: { hand: [104, -120] }, L: { hand: [penX, -116 - line * 5] } }), hands: { R: 'open', L: 'pen' } }, 14],
-      [what + 4, { p: pose({ sit: 1, lean: 4, head: -6, turn: 0.8, footR: [52, 0], footL: [64, 0], R: { hand: [104, -120] }, L: { hand: [70, -118] } }), hands: { R: 'open', L: 'pen' } }, 22]]);
-    const cm = cam(820, 600, 1.5);
-    return <Stage cam={cm}>
+    const penX = 30 + ((u * 4) % 1) * 52, line = Math.floor(u * 4);
+    const legs = { sit: 1, footR: [52, 0] as [number, number], footL: [64, 0] as [number, number] };
+    const pz = poseAt(c.f, [[0, { p: pose({ ...legs, lean: 12, head: 14, turn: 0.55, R: { hand: [96, -112] }, L: { hand: [60, -116] } }), hands: { R: 'relaxed', L: 'relaxed' } }],
+      [write - 4, { p: pose({ ...legs, lean: 14, head: 18, turn: 0.55, R: { hand: [100, -110] }, L: { hand: [penX, -118 + line * 5] } }), hands: { R: 'open', L: 'pen' } }, 14],
+      [what + 4, { p: pose({ ...legs, lean: 4, head: -6, turn: 0.8, R: { hand: [100, -110] }, L: { hand: [56, -112] } }), hands: { R: 'open', L: 'pen' } }, 22]]);
+    const fc = faceAt(c.f, [[0, face('calm', { look: [0, 0.8] })], [write, face('calm', { look: [0.2, 0.9], mouth: 0.3 }), 12], [what + 4, face('relieved', { look: [0.2, -0.6], mouth: 0.7 }), 18]]);
+    const salim = (only?: string[]) => <Actor f={c.f} seed={41} who="salim" x={BEDROOM.bedSeat.x} y={860} s={1.45} facing={-1} pose={pz} face={fc} only={only} />;
+    return <Stage cam={cam(820, 600, 1.5)}>
       <Bedroom night lamp={1} />
-      <Actor f={c.f} seed={41} who="salim" x={BEDROOM.bedSeat.x} y={860} s={1.45} facing={-1} pose={pz}
-        face={faceAt(c.f, [[0, face('calm', { look: [0, 0.8] })], [write, face('calm', { look: [0.2, 0.9], mouth: 0.3 }), 12], [what + 4, face('relieved', { look: [0.2, -0.6], mouth: 0.7 }), 18]])} />
-      <g transform={`translate(${BEDROOM.bedSeat.x - 128} 692)`}><Notebook w={250} open={open} written={u} lines={['ماذا حدث اليوم؟', 'شعرت بالانزعاج وسميته', 'توقفت وتنفست', 'ثم اخترت ردي']} /></g>
+      {salim()}
+      <g transform="translate(812 706)"><Notebook w={200} open={open} written={u} lines={['ماذا حدث اليوم؟', 'شعرت بالانزعاج وسميته', 'توقفت وتنفست', 'ثم اخترت ردي']} /></g>
+      {salim(['LeftArm'])}
     </Stage>;
   },
   // 160 — the end: the lake still under the moon, the boat drifting away; «كتاب وبس» on «كتاب».

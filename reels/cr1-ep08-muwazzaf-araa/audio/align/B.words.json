@@ -1,0 +1,187 @@
+{
+ "unit": "B",
+ "take": "kVR9MBahVY4y5zzlV5sc",
+ "source": "eleven_scribe_v1 (the provider's alignment of the prompt; not an independent check)",
+ "words": [
+  {
+   "text": "[confused]",
+   "start": 0,
+   "end": 0.067,
+   "type": "word"
+  },
+  {
+   "text": "الشكوى",
+   "start": 0.08,
+   "end": 0.48,
+   "type": "word"
+  },
+  {
+   "text": "الثانية…",
+   "start": 0.56,
+   "end": 1.32,
+   "type": "word"
+  },
+  {
+   "text": "عكس",
+   "start": 1.52,
+   "end": 1.76,
+   "type": "word"
+  },
+  {
+   "text": "الأولى",
+   "start": 1.88,
+   "end": 2.16,
+   "type": "word"
+  },
+  {
+   "text": "بالضبط.",
+   "start": 2.28,
+   "end": 2.88,
+   "type": "word"
+  },
+  {
+   "text": "فطلع",
+   "start": 3.04,
+   "end": 3.44,
+   "type": "word"
+  },
+  {
+   "text": "بحل",
+   "start": 3.56,
+   "end": 3.76,
+   "type": "word"
+  },
+  {
+   "text": "إداري…",
+   "start": 3.96,
+   "end": 4.48,
+   "type": "word"
+  },
+  {
+   "text": "واعتمده",
+   "start": 4.52,
+   "end": 5.04,
+   "type": "word"
+  },
+  {
+   "text": "رسمي.",
+   "start": 5.12,
+   "end": 5.76,
+   "type": "word"
+  },
+  {
+   "text": "لا",
+   "start": 5.84,
+   "end": 5.92,
+   "type": "word"
+  },
+  {
+   "text": "قبل…",
+   "start": 6,
+   "end": 6.56,
+   "type": "word"
+  },
+  {
+   "text": "ولا",
+   "start": 6.68,
+   "end": 6.8,
+   "type": "word"
+  },
+  {
+   "text": "بعد.",
+   "start": 6.88,
+   "end": 7.2,
+   "type": "word"
+  },
+  {
+   "text": "[tired]",
+   "start": 7.68,
+   "end": 7.824,
+   "type": "word"
+  },
+  {
+   "text": "وبعدها…",
+   "start": 7.872,
+   "end": 8.88,
+   "type": "word"
+  },
+  {
+   "text": "فتحوا",
+   "start": 9.04,
+   "end": 9.28,
+   "type": "word"
+  },
+  {
+   "text": "عليه",
+   "start": 9.36,
+   "end": 9.6,
+   "type": "word"
+  },
+  {
+   "text": "قسم",
+   "start": 9.68,
+   "end": 9.84,
+   "type": "word"
+  },
+  {
+   "text": "المقارنات.",
+   "start": 9.92,
+   "end": 11.04,
+   "type": "word"
+  },
+  {
+   "text": "وترقّى",
+   "start": 11.2,
+   "end": 11.52,
+   "type": "word"
+  },
+  {
+   "text": "أخيرًا…",
+   "start": 11.6,
+   "end": 12.4,
+   "type": "word"
+  },
+  {
+   "text": "صار",
+   "start": 12.52,
+   "end": 12.64,
+   "type": "word"
+  },
+  {
+   "text": "مسؤول",
+   "start": 12.88,
+   "end": 13.12,
+   "type": "word"
+  },
+  {
+   "text": "عن",
+   "start": 13.2,
+   "end": 13.28,
+   "type": "word"
+  },
+  {
+   "text": "زعل",
+   "start": 13.32,
+   "end": 13.6,
+   "type": "word"
+  },
+  {
+   "text": "ناس",
+   "start": 13.76,
+   "end": 13.92,
+   "type": "word"
+  },
+  {
+   "text": "ما",
+   "start": 14,
+   "end": 14.08,
+   "type": "word"
+  },
+  {
+   "text": "يعرفهم.",
+   "start": 14.16,
+   "end": 14.96,
+   "type": "word"
+  }
+ ]
+}

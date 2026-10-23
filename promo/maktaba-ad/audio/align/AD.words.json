@@ -1,0 +1,439 @@
+{
+ "unit": "AD",
+ "take": "5nIZ7pcOs5yAUiS0Zwoj",
+ "source": "eleven_scribe_v1 (provider alignment of the prompt)",
+ "words": [
+  {
+   "text": "حفظتَ",
+   "start": 0,
+   "end": 0.48,
+   "type": "word"
+  },
+  {
+   "text": "نصائح",
+   "start": 0.6,
+   "end": 1.04,
+   "type": "word"
+  },
+  {
+   "text": "كثيرة…",
+   "start": 1.12,
+   "end": 2,
+   "type": "word"
+  },
+  {
+   "text": "فأين",
+   "start": 2.08,
+   "end": 2.4,
+   "type": "word"
+  },
+  {
+   "text": "هي",
+   "start": 2.48,
+   "end": 2.64,
+   "type": "word"
+  },
+  {
+   "text": "حين",
+   "start": 2.76,
+   "end": 2.88,
+   "type": "word"
+  },
+  {
+   "text": "تحتاجها؟",
+   "start": 2.96,
+   "end": 4.08,
+   "type": "word"
+  },
+  {
+   "text": "مكتبة",
+   "start": 4.16,
+   "end": 4.64,
+   "type": "word"
+  },
+  {
+   "text": "الوعي",
+   "start": 4.72,
+   "end": 5.04,
+   "type": "word"
+  },
+  {
+   "text": "البصري:",
+   "start": 5.12,
+   "end": 5.92,
+   "type": "word"
+  },
+  {
+   "text": "خمسون",
+   "start": 6,
+   "end": 6.4,
+   "type": "word"
+  },
+  {
+   "text": "قاعدة،",
+   "start": 6.56,
+   "end": 7.2,
+   "type": "word"
+  },
+  {
+   "text": "في",
+   "start": 7.28,
+   "end": 7.36,
+   "type": "word"
+  },
+  {
+   "text": "خمسين",
+   "start": 7.44,
+   "end": 7.84,
+   "type": "word"
+  },
+  {
+   "text": "خريطة.",
+   "start": 8,
+   "end": 8.48,
+   "type": "word"
+  },
+  {
+   "text": "عندك",
+   "start": 8.88,
+   "end": 9.2,
+   "type": "word"
+  },
+  {
+   "text": "مهام",
+   "start": 9.28,
+   "end": 9.6,
+   "type": "word"
+  },
+  {
+   "text": "كثيرة؟",
+   "start": 9.68,
+   "end": 10.4,
+   "type": "word"
+  },
+  {
+   "text": "افتح",
+   "start": 10.48,
+   "end": 10.8,
+   "type": "word"
+  },
+  {
+   "text": "خريطة",
+   "start": 10.84,
+   "end": 11.28,
+   "type": "word"
+  },
+  {
+   "text": "مصفوفة",
+   "start": 11.36,
+   "end": 11.92,
+   "type": "word"
+  },
+  {
+   "text": "أيزنهاور،",
+   "start": 11.96,
+   "end": 12.8,
+   "type": "word"
+  },
+  {
+   "text": "لتفرّق",
+   "start": 12.92,
+   "end": 13.52,
+   "type": "word"
+  },
+  {
+   "text": "بين",
+   "start": 13.64,
+   "end": 13.76,
+   "type": "word"
+  },
+  {
+   "text": "العاجل",
+   "start": 13.84,
+   "end": 14.32,
+   "type": "word"
+  },
+  {
+   "text": "والمهم.",
+   "start": 14.36,
+   "end": 15.12,
+   "type": "word"
+  },
+  {
+   "text": "ثم",
+   "start": 15.24,
+   "end": 15.36,
+   "type": "word"
+  },
+  {
+   "text": "وزّع",
+   "start": 15.44,
+   "end": 15.76,
+   "type": "word"
+  },
+  {
+   "text": "مهامك",
+   "start": 15.88,
+   "end": 16.32,
+   "type": "word"
+  },
+  {
+   "text": "على",
+   "start": 16.4,
+   "end": 16.64,
+   "type": "word"
+  },
+  {
+   "text": "قالب",
+   "start": 16.72,
+   "end": 17.04,
+   "type": "word"
+  },
+  {
+   "text": "الأولويات…",
+   "start": 17.12,
+   "end": 18,
+   "type": "word"
+  },
+  {
+   "text": "فتعرف",
+   "start": 18.12,
+   "end": 18.56,
+   "type": "word"
+  },
+  {
+   "text": "خطوتك",
+   "start": 18.64,
+   "end": 19.12,
+   "type": "word"
+  },
+  {
+   "text": "التالية.",
+   "start": 19.24,
+   "end": 20,
+   "type": "word"
+  },
+  {
+   "text": "وفيها",
+   "start": 20.12,
+   "end": 20.48,
+   "type": "word"
+  },
+  {
+   "text": "خرائط",
+   "start": 20.56,
+   "end": 20.96,
+   "type": "word"
+  },
+  {
+   "text": "للمال",
+   "start": 21.04,
+   "end": 21.6,
+   "type": "word"
+  },
+  {
+   "text": "والعادات",
+   "start": 21.72,
+   "end": 22.4,
+   "type": "word"
+  },
+  {
+   "text": "وعلم",
+   "start": 22.48,
+   "end": 22.8,
+   "type": "word"
+  },
+  {
+   "text": "النفس",
+   "start": 22.84,
+   "end": 23.28,
+   "type": "word"
+  },
+  {
+   "text": "والعلاقات.",
+   "start": 23.36,
+   "end": 24.24,
+   "type": "word"
+  },
+  {
+   "text": "ليست",
+   "start": 24.36,
+   "end": 24.64,
+   "type": "word"
+  },
+  {
+   "text": "بديلًا",
+   "start": 24.72,
+   "end": 25.12,
+   "type": "word"
+  },
+  {
+   "text": "عن",
+   "start": 25.2,
+   "end": 25.28,
+   "type": "word"
+  },
+  {
+   "text": "القراءة…",
+   "start": 25.36,
+   "end": 26.08,
+   "type": "word"
+  },
+  {
+   "text": "بل",
+   "start": 26.16,
+   "end": 26.24,
+   "type": "word"
+  },
+  {
+   "text": "تُحضِر",
+   "start": 26.32,
+   "end": 26.64,
+   "type": "word"
+  },
+  {
+   "text": "لك",
+   "start": 26.72,
+   "end": 26.88,
+   "type": "word"
+  },
+  {
+   "text": "الفكرة",
+   "start": 26.96,
+   "end": 27.44,
+   "type": "word"
+  },
+  {
+   "text": "حين",
+   "start": 27.52,
+   "end": 27.76,
+   "type": "word"
+  },
+  {
+   "text": "تحتاجها.",
+   "start": 27.84,
+   "end": 28.64,
+   "type": "word"
+  },
+  {
+   "text": "تقرؤها",
+   "start": 28.68,
+   "end": 29.2,
+   "type": "word"
+  },
+  {
+   "text": "على",
+   "start": 29.32,
+   "end": 29.44,
+   "type": "word"
+  },
+  {
+   "text": "جوالك",
+   "start": 29.56,
+   "end": 30.08,
+   "type": "word"
+  },
+  {
+   "text": "أو",
+   "start": 30.16,
+   "end": 30.24,
+   "type": "word"
+  },
+  {
+   "text": "تطبعها،",
+   "start": 30.32,
+   "end": 31.12,
+   "type": "word"
+  },
+  {
+   "text": "وتصلك",
+   "start": 31.2,
+   "end": 31.76,
+   "type": "word"
+  },
+  {
+   "text": "فورًا،",
+   "start": 31.88,
+   "end": 32.32,
+   "type": "word"
+  },
+  {
+   "text": "بأربعة",
+   "start": 32.4,
+   "end": 33.04,
+   "type": "word"
+  },
+  {
+   "text": "وأربعين",
+   "start": 33.08,
+   "end": 33.52,
+   "type": "word"
+  },
+  {
+   "text": "ريالًا.",
+   "start": 33.68,
+   "end": 34.32,
+   "type": "word"
+  },
+  {
+   "text": "احصل",
+   "start": 34.44,
+   "end": 34.72,
+   "type": "word"
+  },
+  {
+   "text": "على",
+   "start": 34.84,
+   "end": 34.96,
+   "type": "word"
+  },
+  {
+   "text": "مكتبة",
+   "start": 35,
+   "end": 35.44,
+   "type": "word"
+  },
+  {
+   "text": "الوعي",
+   "start": 35.52,
+   "end": 35.84,
+   "type": "word"
+  },
+  {
+   "text": "البصري",
+   "start": 35.88,
+   "end": 36.4,
+   "type": "word"
+  },
+  {
+   "text": "من",
+   "start": 36.56,
+   "end": 36.72,
+   "type": "word"
+  },
+  {
+   "text": "كتاب",
+   "start": 36.8,
+   "end": 37.12,
+   "type": "word"
+  },
+  {
+   "text": "وبس",
+   "start": 37.24,
+   "end": 37.52,
+   "type": "word"
+  },
+  {
+   "text": "دوت",
+   "start": 37.6,
+   "end": 37.72,
+   "type": "word"
+  },
+  {
+   "text": "كوم.",
+   "start": 37.76,
+   "end": 38.32,
+   "type": "word"
+  }
+ ]
+}

@@ -199,7 +199,7 @@ export const SHOTS: Record<number, ShotRender> = {
   // while pale shadows of retreat («يتراجع») and attack («يهاجم») slip out of him and are struck off.
   62: (c) => {
     const voice = c.at('صوت'), steady = c.at('ثابت'), words = c.at('وكلمات'), clear = c.at('واضحة'), body = c.at('وجسد'), back = c.at('يتراجع'), att = c.at('يهاجم');
-    const X = 1240, FY = 960, s = 1.9;
+    const X = 1230, FY = 980, s = 2.2;
     const hy = FY - 283 * s;
     const draw = c.p(voice - 4, 60, ease.out);
     const wy = hy + 54, wx0 = X - 118;
@@ -219,19 +219,19 @@ export const SHOTS: Record<number, ShotRender> = {
     ]);
     const strike = (a: number) => c.p(a + 34, 12);
     const shadeLabel = (x: number, text: string, a: number, o: number) => o > 0.01 && <g>
-      <WLabel x={x} y={FY + 62} text={text} size={44} color={PAL.textSoft} o={o} />
-      <path d={`M${x - 70} ${FY + 58} L${x - 70 + 140 * strike(a)} ${FY + 58}`} stroke={PAL.provoke} strokeWidth={6} strokeLinecap="round" opacity={strike(a) > 0 ? o : 0} />
+      <WLabel x={x} y={FY + 48} text={text} size={44} color={PAL.textSoft} o={o} />
+      <path d={`M${x - 70} ${FY + 44} L${x - 70 + 140 * strike(a)} ${FY + 44}`} stroke={PAL.provoke} strokeWidth={6} strokeLinecap="round" opacity={strike(a) > 0 ? o : 0} />
     </g>;
     return <Stage over={<Say text="أريد أن أكمل فكرتي" to={toScreen(CAM0, [X - 6, FY - 334 * s + 6])} above={10} size={44} o={c.p(words - 4, 10) * (1 - 0.4 * c.p(body + 10, 20))} />}>
       <Paper seed={62} />
       <Floor y={FY} seed={62} />
       <path d={wave} stroke={PAL.calm} strokeWidth={8} fill="none" strokeLinecap="round" opacity={draw > 0 ? 1 : 0} />
-      <WLabel x={wx0 - 380} y={wy + 92} text="صوت ثابت" size={48} color={PAL.calm} o={c.p(steady - 2, 12)} />
+      <WLabel x={wx0 - 520} y={wy - 86} text="صوت ثابت" size={48} color={PAL.calm} o={c.p(steady - 2, 12)} />
       {/* the two shadows: retreat slides back (+x), attack lunges forward (−x) */}
-      {gb > 0.01 && <Character who={SHADE} x={X + 170 * gb} y={FY} s={s} facing={-1} o={0.55 * gb} face="anxious" p={pose({ lean: -12, head: -8, turn: 0.4, footR: [-30, 0], footL: [10, 0], L: { hand: [40, -200] }, R: { sh: -14, el: 20 } })} hands={{ L: 'stop', R: 'relaxed' }} />}
-      {ga > 0.01 && <Character who={SHADE} x={X - 190 * ga} y={FY} s={s} facing={-1} o={0.55 * ga} face="angry" p={pose({ lean: 10, head: 2, turn: 0.7, footR: [-20, 0], footL: [34, 0], L: { sh: 84, el: 4 }, R: { sh: -20, el: 30 } })} hands={{ L: 'point', R: 'fist' }} />}
-      {shadeLabel(X + 200, 'تراجع', back, c.p(back - 10, 12) * mix(1, 0.6, strike(back)))}
-      {shadeLabel(X - 230, 'هجوم', att, c.p(att - 10, 12) * mix(1, 0.6, strike(att)))}
+      {gb > 0.01 && <Character who={SHADE} x={X + 280 * gb} y={FY} s={s} facing={-1} o={0.55 * gb} face="anxious" p={pose({ lean: -12, head: -8, turn: 0.4, footR: [-30, 0], footL: [10, 0], L: { hand: [40, -200] }, R: { sh: -14, el: 20 } })} hands={{ L: 'stop', R: 'relaxed' }} />}
+      {ga > 0.01 && <Character who={SHADE} x={X - 300 * ga} y={FY} s={s} facing={-1} o={0.55 * ga} face="angry" p={pose({ lean: 10, head: 2, turn: 0.7, footR: [-20, 0], footL: [34, 0], L: { sh: 84, el: 4 }, R: { sh: -20, el: 30 } })} hands={{ L: 'point', R: 'fist' }} />}
+      {shadeLabel(X + 300, 'تراجع', back, c.p(back - 10, 12) * mix(1, 0.6, strike(back)))}
+      {shadeLabel(X - 320, 'هجوم', att, c.p(att - 10, 12) * mix(1, 0.6, strike(att)))}
       {/* planted feet */}
       {plant > 0.01 && <g opacity={plant}>
         {[-1, 1].map((d) => <g key={d}>
@@ -316,8 +316,8 @@ export const SHOTS: Record<number, ShotRender> = {
         face={faceAt(c.f, [[0, face('calm', { look: [1, 0] })], [why + 2, face('neutral', { look: [0.8, 0.8] }), 10], [hard, face('anxious', { look: [0.7, 0.6] }), 14], [moments, face('anxious', { look: [0.6, 0.8], tight: 0.6 }), 14]])} />
       <DeskFront />
       <DeskPhone x={1150} y={644} lit={c.f > why - 6 ? 1 : 0} buzz={bz} hop={bz * Math.abs(Math.sin(c.f * 1.6)) * 4} />
-      <Tension at={[[650, shY], [728, shY]]} s={1.3} o={lift} t={c.t} />
-      {q > 0.01 && <g transform={`translate(1010 ${250 + Math.sin(c.t * 2) * 6}) rotate(${Math.sin(c.t * 1.3) * 4}) scale(${q})`}>
+      <Tension at={[[628, shY + 30], [752, shY + 30]]} s={1.3} o={lift} t={c.t} />
+      {q > 0.01 && <g transform={`translate(1010 ${330 + Math.sin(c.t * 2) * 6}) rotate(${Math.sin(c.t * 1.3) * 4}) scale(${q})`}>
         <WLabel x={0} y={0} text="؟" size={250} color={PAL.focus} w={300} />
       </g>}
     </Stage>;
@@ -331,7 +331,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const tr = k(c.f, [[not - 4, 170], [feel + 4, 140]]);
     const bx = mix(590, 660, come), Y = 500;
     const dimT = 1 - 0.65 * c.p(not, 14) * (1 - come);
-    return <Stage over={<Cap text="الانفعال" o={c.p(emo - 4, 12) * (1 - c.p(th - 8, 12))} top={70} size={70} />}>
+    return <Stage over={<Cap text="الانفعال" o={c.p(2, 12) * (1 - c.p(th - 8, 12))} top={70} size={70} />}>
       <Paper seed={67} />
       {eIn > 0.01 && [[tx - tr, 960 + 115], [bx + 140, 960 - 115]].map(([a, b], i) => (
         <path key={i} d={`M${a} ${Y} L${a + (b - a) * Math.min(1, eIn)} ${Y}`} stroke={INK} strokeWidth={8} strokeLinecap="round" />
@@ -348,7 +348,7 @@ export const SHOTS: Record<number, ShotRender> = {
   68: (c) => {
     const thought = c.at('الفكرة'), said = c.at('انه'), ignite = c.at('تشعل'), anger = c.at('الغضب');
     const active = k(c.f, [[ignite - 4, 0], [ignite + 24, 1]]);
-    const cm = camMix(cam(1000, 430, 1.32), cam(1130, 560, 1.32), c.p(ignite - 10, 40));
+    const cm = camMix(cam(980, 540, 1.12), cam(1040, 540, 1.12), c.p(ignite - 10, 40));
     const em = LOOP_NODES[1], tn = LOOP_NODES[0];
     const burst = (a: number, x: number, y: number, col: string) => { const u = clamp((c.f - a) / 30); return u > 0 && u < 1 && <circle cx={x} cy={y} r={110 + u * 90} fill="none" stroke={col} strokeWidth={10 * (1 - u)} opacity={1 - u} />; };
     const cl = c.p(said - 6, 16, ease.back);
@@ -416,16 +416,16 @@ export const SHOTS: Record<number, ShotRender> = {
   // the cloud swells on «أكثر» and turns spiky on «حدة».
   70: (c) => {
     const tense = c.at('المتوتر'), makes = c.at('يجعل'), th = c.at('الافكار'), more = c.at('اكثر'), sharp = c.at('حدة');
-    const X = 600, FY = 1000, s = 2.0;
+    const X = 560, FY = 1010, s = 2.3;
     const lift = k(c.f, [[0, 0.5], [tense - 4, 0.5], [tense + 16, 1]]);
     const pz = poseAt(c.f, [
       [0, S(pose({ turn: 0.55, head: 4, R: { hand: [10, -150], bend: -1 }, L: { hand: [30, -146] } }), 'fist', 'fist')],
       [th - 10, S(pose({ turn: 0.7, head: -10, R: { hand: [10, -150], bend: -1 }, L: { hand: [30, -146] } }), 'fist', 'fist'), 20],
     ]);
-    const shY = FY - 218 * s - lift * 24;
-    const cin = c.p(th - 6, 18, ease.back), sp = c.p(sharp - 4, 8);
+    const shY = FY - 218 * s - lift * 12 * s;
+    const cin = mix(0.8, 1, c.p(th - 6, 18, ease.back)), sp = c.p(sharp - 4, 8);
     const grow = mix(1, 1.08, c.p(more, 26)), jolt = shake(c.f, sharp, 34, 5);
-    const arrows: [[number, number], [number, number]][] = [[[668, shY - 10], [1010, 440]], [[700, shY + 80], [1070, 500]]];
+    const arrows: [[number, number], [number, number]][] = [[[690, shY + 10], [1010, 450]], [[720, shY + 110], [1060, 510]]];
     const ap = c.p(makes, 26);
     const dots = (from: [number, number], to: [number, number], i: number) => c.f > makes + 26 && [0, 1, 2].map((j) => {
       const u = (c.t * 0.9 + j / 3 + i * 0.17) % 1, bend = 0.18;
@@ -438,10 +438,10 @@ export const SHOTS: Record<number, ShotRender> = {
       <Floor y={FY} seed={70} />
       <Lifted lift={lift} f={c.f} seed={41} who="salim" x={X} y={FY} s={s} facing={1} pose={pz}
         face={faceAt(c.f, [[0, face('irritated', { look: [0.6, 0] })], [th, face('angry', { open2: 0, tight: 0.7, look: [0.8, -0.8] }), 16], [sharp, face('angry', { open2: 0.1, brow: 1, look: [0.8, -0.8] }), 10]])} />
-      <Tension at={[[X - 52, shY + 4], [X + 40, shY + 4]]} s={1.3} o={0.6 + 0.4 * lift} t={c.t} />
+      <Tension at={[[X - 64, shY + 24], [X + 52, shY + 24]]} s={1.3} o={0.6 + 0.4 * lift} t={c.t} />
       {arrows.map(([a, b], i) => <Arrow key={i} from={a} to={b} bend={0.18} p={c.p(makes + i * 8, 26)} color={PAL.warn} w={7} />)}
       {ap > 0 && arrows.map(([a, b], i) => dots(a, b, i))}
-      {cin > 0.01 && <g transform={`translate(${1260 + jolt} 330) scale(${cin * grow})`}>
+      {<g transform={`translate(${1260 + jolt} 330) scale(${cin * grow})`} opacity={c.p(2, 14)}>
         <g opacity={1 - sp}><SpeechBubble kind="think" w={560} h={300} tail={[-470, 100]}><WLabel x={0} y={0} text="يستهين بي" size={52} w={480} /></SpeechBubble></g>
         {sp > 0 && <g opacity={sp}><SpeechBubble kind="shout" w={520} h={320} tail={[-470, 100]} fill={PAL.provokeLight}><WLabel x={0} y={0} text="يستهين بي!" size={60} color={PAL.provoke} w={480} /></SpeechBubble></g>}
       </g>}
@@ -502,7 +502,7 @@ export const SHOTS: Record<number, ShotRender> = {
         face={faceAt(c.f, [[0, face('irritated', { look: [0.2, -0.9] })], [search, face('thinking', { look: [0.3, -0.9] }), 16], [another, face('calm', { mouth: 0.55, look: [0.4, -0.6] }), 18]])} />
       <DeskFront />
       <DeskPhone x={1150} y={644} lit={0} buzz={0} hop={0} />
-      {out < 0.99 && <g transform={`translate(${760 + 260 * ease.in(out)} ${220 - 40 * out}) scale(${pulse * mix(1, 0.6, out)})`} opacity={1 - out}>
+      {out < 0.99 && <g transform={`translate(${760 + 260 * ease.in(out)} ${250 - 40 * out}) scale(${pulse * mix(1, 0.6, out)})`} opacity={1 - out}>
         <SpeechBubble kind="shout" w={400} h={230} tail={[-60, 190]} fill={PAL.provokeLight}><WLabel x={0} y={0} text="يستهين بي" size={44} color={PAL.provoke} w={360} /></SpeechBubble>
       </g>}
       {soft > 0.01 && <g transform={`translate(740 220) scale(${soft})`}>
@@ -532,8 +532,8 @@ export const SHOTS: Record<number, ShotRender> = {
         face={faceAt(c.f, [[0, face('irritated', { tight: 0.6, look: [0.8, 0.2] })], [relax, face('neutral', { open: 0.8, look: [0.3, 0.3] }), 20], [breaths, face('relieved', { open: 0.4 }), 24]])} />
       <DeskFront />
       <DeskPhone x={1150} y={644} lit={0} buzz={0} hop={0} />
-      <Tension at={[[652, shY], [726, shY]]} s={1.2} o={lift * (0.7 + 0.3 * c.p(body, 12))} t={c.t} />
-      {[650, 728].map((x, i) => <Chevron key={i} x={x} y={shY - 50 + 16 * drop} dir={-1} o={drop} color={PAL.calm} />)}
+      <Tension at={[[636, shY + 28], [752, shY + 28]]} s={1.2} o={lift * (0.7 + 0.3 * c.p(body, 12))} t={c.t} />
+      {[624, 764].map((x, i) => <Chevron key={i} x={x} y={shY + 4 + 16 * drop} dir={-1} o={drop} color={PAL.calm} />)}
     </Stage>;
   },
   // 75 — the way in through attention: a gauge climbs; its first small lamp lights on «الإشارات»; Salim looks up from his phone on «قبل»
@@ -594,7 +594,7 @@ export const SHOTS: Record<number, ShotRender> = {
     const lx = X, ly = mix(chest[1], 712, rise);
     const hold = c.p(say - 16, 16);
     const base = poseAt(c.f, [
-      [0, S(pose({ ...POSES.standFront.p, lean: -3, head: 10, R: { hand: [-46, -206] }, L: { hand: [46, -206] } }), 'stop', 'stop')],
+      [0, S(pose({ ...POSES.standFront.p, lean: -3, head: 10, R: { hand: [-18, -178], bend: -1 }, L: { hand: [22, -178], bend: 1 } }), 'stop', 'stop')],
       [enemy - 4, S(pose({ ...POSES.standFront.p, head: 10 })), 20],
     ]);
     const handY = (ly + 8 - FY) / s;

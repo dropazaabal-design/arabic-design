@@ -1,0 +1,11 @@
+{
+ "_": "Gaps between the ad lines (the line WAVs carry their own breath); a longer one before the call to action.",
+ "gap": 0.12,
+ "after": {
+  "8": [
+   0.5,
+   "before the call to action"
+  ]
+ },
+ "lead": 0.1
+}
