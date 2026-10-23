@@ -1,8 +1,8 @@
 {
  "format": {
   "file": "/home/user/arabic-design/reels/cr1-ep08-muwazzaf-araa/export/ep08_muwazzaf-araa_9x16.mp4",
-  "bytes": 14862086,
-  "duration": 78.976,
+  "bytes": 14928254,
+  "duration": 77.141,
   "video": {
    "codec": "h264",
    "profile": "High",
@@ -12,8 +12,8 @@
    "pix_fmt": "yuv420p",
    "color_primaries": "bt709",
    "color_transfer": "bt709",
-   "frames": 4738,
-   "bit_rate": 1303374
+   "frames": 4628,
+   "bit_rate": 1346018
   },
   "audio": {
    "codec": "aac",
@@ -24,27 +24,22 @@
  },
  "decode_errors": null,
  "black": [],
- "freezes_over_3s": [
-  {
-   "start": 12.3,
-   "dur": 3.21667
-  }
- ],
+ "freezes_over_3s": [],
  "silences_over_1_5s": [
   {
-   "start": 76.0229,
-   "dur": 2.95308
+   "start": 74.1889,
+   "dur": 2.95242
   }
  ],
  "loudness": {
-  "integrated_lufs": -16.1,
-  "lra_lu": 4.3,
+  "integrated_lufs": -16.0,
+  "lra_lu": 4.1,
   "true_peak_dbtp": -4.5
  },
  "ends": {
-  "speech_end": 76.174,
-  "picture_end": 78.976,
-  "tail_after_speech": 2.802
+  "speech_end": 74.34,
+  "picture_end": 77.141,
+  "tail_after_speech": 2.801
  },
  "stills": [
   "qa/frames-ep08/chA-start.png",

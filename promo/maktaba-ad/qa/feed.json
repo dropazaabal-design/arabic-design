@@ -1,8 +1,8 @@
 {
  "format": {
   "file": "/home/user/arabic-design/promo/maktaba-ad/export/maktaba-feed.mp4",
-  "bytes": 12741089,
-  "duration": 41.813,
+  "bytes": 12636967,
+  "duration": 41.152,
   "video": {
    "codec": "h264",
    "profile": "High",
@@ -12,14 +12,14 @@
    "pix_fmt": "yuv420p",
    "color_primaries": "bt709",
    "color_transfer": "bt709",
-   "frames": 2508,
-   "bit_rate": 2236062
+   "frames": 2468,
+   "bit_rate": 2255297
   },
   "audio": {
    "codec": "aac",
    "sample_rate": 48000,
    "channels": 2,
-   "bit_rate": 189376
+   "bit_rate": 189375
   }
  },
  "decode_errors": null,
@@ -28,13 +28,13 @@
  "silences_over_1_5s": [],
  "loudness": {
   "integrated_lufs": -16.0,
-  "lra_lu": 1.7,
+  "lra_lu": 1.6,
   "true_peak_dbtp": -4.5
  },
  "ends": {
-  "speech_end": 39.8,
-  "picture_end": 41.813,
-  "tail_after_speech": 2.013
+  "speech_end": 39.125,
+  "picture_end": 41.152,
+  "tail_after_speech": 2.027
  },
  "stills": [
   "qa/frames-feed/chAD-start.png"
