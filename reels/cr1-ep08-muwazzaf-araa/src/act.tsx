@@ -7,23 +7,23 @@ import { fistOff, grab } from './stage';
 
 // Acting helpers: arms driven by world targets over time, things held in the fist, the stamp's whole move.
 
-/** [frame, fist target in the world (null = the body pose's own arm), blend frames]. */
-export type ArmKey = [number, V | null, number?];
+/** [frame, fist target in the world (null = the body pose's own arm), blend frames, elbow side (IK bend)]. */
+export type ArmKey = [number, V | null, number?, (1 | -1)?];
 
 const valueAt = (keys: ArmKey[], f: number) => {
   let i = -1;
   for (let j = 0; j < keys.length; j++) if (keys[j][0] <= f) i = j;
-  if (i <= 0) return { a: keys[0][1], b: keys[0][1], t: 1 };
-  return { a: keys[i - 1][1], b: keys[i][1], t: ease.inOut(clamp01((f - keys[i][0]) / (keys[i][2] ?? 14))) };
+  if (i <= 0) return { a: keys[0][1], b: keys[0][1], ba: keys[0][3], bb: keys[0][3], t: 1 };
+  return { a: keys[i - 1][1], b: keys[i][1], ba: keys[i - 1][3], bb: keys[i][3], t: ease.inOut(clamp01((f - keys[i][0]) / (keys[i][2] ?? 14))) };
 };
 /** The body pose with each arm reaching its keyed targets (blended through the wrist, never popping). */
 export const arms = (P: Place, f: number, body: Pose, R?: ArmKey[], L?: ArmKey[]): Pose => {
   let out = body;
   for (const [side, keys] of [['R', R], ['L', L]] as const) {
     if (!keys?.length) continue;
-    const { a, b, t } = valueAt(keys, f);
-    const at = (v: V | null) => (v ? grab(P, body, side, v).p : body);
-    const m = mixPose(at(a), at(b), t);
+    const { a, b, ba, bb, t } = valueAt(keys, f);
+    const at = (v: V | null, bend?: 1 | -1) => (v ? grab(P, body, side, v, bend).p : body);
+    const m = mixPose(at(a, ba), at(b, bb), t);
     out = { ...out, [side]: m[side] };
   }
   return out;

@@ -8,12 +8,13 @@ Writes timing/lines.json and timing/words.json. The picture keys every action to
 replacing the provisional clock with the real one re-times the whole episode.
 """
 import json
+import os
 import re
 import sys
 import wave
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent
+root = Path(os.environ.get('PROJECT_ROOT', Path(__file__).resolve().parent.parent)).resolve()  # another project can reuse the tool
 units = json.loads((root / 'narrative/units.json').read_text(encoding='utf-8'))
 beats = json.loads((root / 'narrative/beats.json').read_text(encoding='utf-8'))
 LINES = [dict(l, unit=u) for u, d in units.items() for l in d['lines']]

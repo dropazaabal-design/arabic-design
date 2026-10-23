@@ -1,4 +1,4 @@
-"""The ad's soundtrack: the voice, a quiet piano that steps aside under it, and light effects on visible actions.
+"""The ad's soundtrack: the voice (ElevenLabs, line by line), a quiet piano that steps aside under it, and light effects on visible actions.
 
 usage: python3 tools/mix.py → public/audio/mix.wav (48 kHz stereo, −16 LUFS, true peak ≤ −4.5 dBTP), audio/mix-report.json
 Effects are cued on spoken words (line, word) like the picture (src/timing.ts), so sound and action land together.
@@ -51,9 +51,17 @@ CUES = [
     (at(9, 6), 'chime', 0.30, 0.0),                   # the address
 ]
 
-voice = read_mono(root / 'audio/narration.wav')
 n = int(TOTAL * SR)
-voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
+if json.loads((root / 'timing/lines.json').read_text(encoding='utf-8')).get('source') == 'recording':
+    # the ElevenLabs voice: one WAV per line (cut by reels/cr1-ep08-muwazzaf-araa/tools/voice.py), each at its time
+    voice = np.zeros(n)
+    for L in LINES:
+        x = read_mono(root / f"audio/lines/{L['id']:03d}.wav")
+        a = int(L['start'] * SR)
+        voice[a:a + len(x)] += x[: max(0, n - a)]
+else:
+    voice = read_mono(root / 'audio/narration.wav')
+    voice = np.pad(voice, (0, max(0, n - len(voice))))[:n]
 
 # piano: four soft chords that loop (Dmaj9 – Bm7 – Gmaj7 – A6), 80 bpm, a held bass and a light upper motif
 music = Bus(TOTAL)
@@ -69,7 +77,10 @@ while t < TOTAL - 1.5:
         music.add(t + b * bar / 4, piano(hz(up[(k + int(b)) % 3]) * 2, 1.2, 0.3), 0.14, 0.4)
     t += bar
     k += 1
-fade = np.minimum(1, np.minimum(np.arange(len(music.L)) / (0.6 * SR), np.maximum(0, (TOTAL * SR - np.arange(len(music.L))) / (1.6 * SR))))
+# a closing D chord under the held call to action, so the end resolves instead of going quiet
+for j, note in enumerate(('D3', 'A3', 'F#4', 'D5')):
+    music.add(TOTAL - 2.6 + j * 0.05, piano(hz(note), 2.8, 0.5), (1.0, 0.7, 0.6, 0.4)[j], (-0.3, 0.0, 0.3, 0.0)[j])
+fade = np.minimum(1, np.minimum(np.arange(len(music.L)) / (0.6 * SR), np.maximum(0, (TOTAL * SR - np.arange(len(music.L))) / (0.7 * SR))))
 music.L *= fade
 music.R *= fade
 

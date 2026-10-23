@@ -59,12 +59,13 @@ ends = {'speech_end': speech_end, 'picture_end': fmt['duration'], 'tail_after_sp
 
 # a still in the middle of the first line of every chapter, for the Arabic and boundary check
 stills = []
-for ch in sorted({l['chapter'] for l in LINES['lines']}):
-    first = next(l for l in LINES['lines'] if l['chapter'] == ch)
+part = lambda l: l.get('chapter', l.get('unit', 1))  # the film has chapters; the reels have voice units
+for ch in sorted({part(l) for l in LINES['lines']}, key=str):
+    first = next(l for l in LINES['lines'] if part(l) == ch)
     for tag, t in (('start', first['start'] + 0.6), ('before', first['start'] - 0.5)):
         if t < 0:
             continue
-        out = frames / f'ch{ch:02d}-{tag}.png'
+        out = frames / (f'ch{ch:02d}-{tag}.png' if isinstance(ch, int) else f'ch{ch}-{tag}.png')
         run('ffmpeg', '-v', 'error', '-y', '-ss', f'{t:.3f}', '-i', str(src), '-frames:v', '1', str(out))
         stills.append(str(out.relative_to(root)))
 

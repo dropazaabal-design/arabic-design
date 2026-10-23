@@ -50,10 +50,13 @@ pdftoppm -png -scale-to-x 240 -scale-to-y -1 -f 4 -l 56 source/maktaba-alwaei-al
 الأدوات مشتركة مع الفيلم في `films/hudoo/tools`، ويُحدَّد لها المشروع بالمتغير `PROJECT_ROOT`.
 
 ```sh
-# 1. الصوت (Piper محلي؛ النماذج في HUDOO_MODELS)
-PROJECT_ROOT=$PWD HUDOO_MODELS=<models> python3 ../../films/hudoo/tools/script.py
-# 2. التوقيت والترجمة
-PROJECT_ROOT=$PWD SRT_NAME=maktaba.ar.srt python3 ../../films/hudoo/tools/timing.py
+# 1. الصوت: ElevenLabs (dlGxemPxFMTY7iXagmOj) في audio/takes/AD.mp3، ومحاذاة Scribe في audio/align/AD.words.json
+T=../../reels/cr1-ep08-muwazzaf-araa/tools
+PROJECT_ROOT=$PWD python3 $T/voice.py cut                         # → audio/lines/NNN.wav
+PROJECT_ROOT=$PWD HUDOO_MODELS=<models> python3 $T/voice.py check # تفريغ مستقل → timing/asr.json
+# 2. التوقيت والترجمة (الوقفات من narrative/beats.json)
+PROJECT_ROOT=$PWD python3 $T/timeline.py $PWD/audio/lines
+PROJECT_ROOT=$PWD SRT_NAME=maktaba.ar.srt python3 $T/srt.py
 # 3. المزج: −16 LUFS، والذروة الحقيقية −4.5 dBTP
 python3 tools/mix.py
 # 4. التصيير

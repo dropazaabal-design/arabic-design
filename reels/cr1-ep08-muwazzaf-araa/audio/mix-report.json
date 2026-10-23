@@ -1,7 +1,7 @@
 {
- "voice": "none (effects only)",
- "lufs": -20.1,
+ "voice": "recording",
+ "lufs": -16.0,
  "truePeak": -4.5,
- "seconds": 83.067,
+ "seconds": 77.133,
  "effects": 80
 }

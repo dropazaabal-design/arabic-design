@@ -26,12 +26,12 @@ export const T = {
 /** Action frames shared by the picture and the sound (src/cues.ts): one source for both. */
 export const K = (() => {
   const policyWriteEnd = w(9, 2) + 6, policyStamp0 = w(9, 3) - 10;
-  const buzz0 = L1(18) + 8, mugUp = buzz0 + 26, step = mugUp + 14, put = step + 30, back = put + 22;
+  const buzz0 = L1(18) + 8, mugUp = buzz0 + 18, step = mugUp + 10, put = step + 24, back = put + 18;
   const cA = w(15, 1), cB = w(15, 1) + 14;
   return {
     card1Stamp0: w(5, 2) - 4, policyWriteEnd, policyToss: policyWriteEnd + 2, policyStamp0, wag0: L0(10) - 6,
     cA, cB, catchA: cA + 18, catchB: cB + 18, slap: w(16, 3) - 16, aStamp0: w(16, 3) + 8,
-    buzz0, mugUp, step, put, back, fixClick: T.fix + 66, binDrop: w(18, 5),
+    buzz0, mugUp, step, put, back, fixClick: T.fix + 56, binDrop: w(18, 5),
   };
 })();
 
@@ -102,7 +102,7 @@ const sh01: Shot = {
 // ——— SH02/03: inside his head — the office, proud; then the monitor «الواقع»: the logo is due at five ———
 const sh02: Shot = {
   id: 'office', from: T.into, render: (f) => {
-    const knot = (p: Pose): V => { const j = joints(p); return toWorld(PO, [j.neck[0] + 2, j.neck[1] + 14]); };
+    const knot = (p: Pose): V => { const j = joints(p); return toWorld(PO, [j.neck[0] + 4, j.neck[1] + 46]); };
     const proud = k(f, [[T.into, 0.3], [w(2, 0), 1], [L1(3), 1]]);
     let body = mixPose(O_REST, O_PROUD, proud);
     body = { ...body, head: body.head + nodAt(f, w(3, 1), 6) + nodAt(f, w(3, 3), 6) };
@@ -124,8 +124,9 @@ const sh02: Shot = {
 const sh03: Shot = {
   id: 'reality', from: T.monitor, render: (f) => {
     const glow = k(f, [[w(4, 6) - 2, 0], [w(4, 6) + 6, 1], [w(4, 6) + 50, 0]]);
+    const z = k(f, [[T.monitor, 1], [T.card1, 1.12]], ease.inOut); // a slow push toward the note, so the four seconds never sit still
     return {
-      node: <MonitorInsert>{monitorRoom(f, roomEve(f))}{glow > 0 && <rect x={250} y={6} width={88} height={70} rx={10} fill="none" stroke={B.red} strokeWidth={4} opacity={glow} />}</MonitorInsert>,
+      node: <MonitorInsert><g transform={`translate(237 144) scale(${z}) translate(-237 -144)`}>{monitorRoom(f, roomEve(f))}{glow > 0 && <rect x={204} y={118} width={66} height={52} rx={8} fill="none" stroke={B.red} strokeWidth={3} opacity={glow} />}</g></MonitorInsert>,
       guards: [MONITOR_BOX],
     };
   },
@@ -272,7 +273,7 @@ const sh08: Shot = {
     if (f < writeEnd) p = arms(PO, f, body, undefined, [[t0, penAt]]);
     // the rule: right index finger up, wagging on «لا قبل… ولا بعد»
     const wag = f > wag0 ? Math.sin((f - wag0) / 7) * 18 : 0;
-    p = arms(PO, f, p, [[wag0 - 10, null], [wag0 + 4, toWorld(PO, [-74 + wag * 0.5, -306]), 12], [L1(10) + 20, toWorld(PO, [-74, -306])], [L1(10) + 40, null, 16]]);
+    p = arms(PO, f, p, [[wag0 - 10, null], [wag0 + 4, toWorld(PO, [-90 + wag * 0.35, -262]), 12, 1], [L1(10) + 20, toWorld(PO, [-90, -262]), 14, 1], [L1(10) + 40, null, 16]]);
     const buzz1 = L1(10) + 10, buzz2 = L1(10) + 32;
     const angry = Math.max(k(f, [[buzz1, 0], [buzz1 + 3, 1], [buzz1 + 14, 0]], ease.lin), k(f, [[buzz2, 0], [buzz2 + 3, 1], [buzz2 + 30, 1], [buzz2 + 50, 0.2]], ease.lin));
     const face = faceAt(f, [[t0, look('determined', [0.8, 0.5])], [toss, look('smug', [0.3, 0]), 6], [wag0, look('smug', [0, 0]), 8], [buzz1 + 2, look('forcedSmile', [-0.9, 0.4]), 4], [buzz2 + 4, look('forcedSmile', [-0.95, 0.45]), 4]]);
@@ -339,7 +340,7 @@ const sh10: Shot = {
     const flip = k(f, [[w(12, 0), 0], [w(12, 0) + 20, 1]]);
     const proud = k(f, [[w(12, 0) + 6, 0], [w(12, 1), 1], [w(12, 5), 1], [w(12, 7), 0.3]]);
     const body = mixPose(pose({ ...O_REST, head: 14, turn: 0.1, body: 0.15 }), O_PROUD, proud);
-    const knot = (): V => { const j = joints(body); return toWorld(PO, [j.neck[0] + 2, j.neck[1] + 14]); };
+    const knot = (): V => { const j = joints(body); return toWorld(PO, [j.neck[0] + 4, j.neck[1] + 46]); };
     const p = arms(PO, f, body, undefined, [[T.promo, null], [w(12, 1), knot(), 12], [w(12, 3), null, 14]]);
     const face = faceAt(f, [[T.promo, look('anxious', [0.3, 0])], [w(12, 0) + 2, look('surprised', [0, 0.9]), 5], [w(12, 1), look('smile', [0.1, 0.2]), 10], [w(12, 5), look('anxious', [0, -0.8]), 10]]);
     const top = pileTop(f);
@@ -452,7 +453,7 @@ const sh13: Shot = {
     let p = arms(PO, f, body, [[T.morning, null], [catchB - 10, [leftC[0], leftC[1] + weigh * 0.4], 10], [L1(15), [leftC[0], leftC[1] + weigh], 4], [w(16, 3), [400, 1150], 16]],
       [[T.morning, null], [catchA - 10, rightC, 10], [L1(15), [rightC[0], rightC[1] - weigh], 4], [slap, [CARD[0] - 80, CARD[1] + 30], 14], [slap + 18, null, 12]]);
     if (stamp.active) p = { ...p, L: stamp.p.L, lean: stamp.p.lean, turn: stamp.p.turn, body: stamp.p.body, head: stamp.p.head };
-    const aFly = f < catchA ? catchPath(f, cA, rightC, -30, 1020) : null, bFly = f < catchB ? catchPath(f, cB, leftC, -40, 1060) : null;
+    const aFly = f < catchA ? catchPath(f, cA, rightC, -30, 1020) : null, bFly = f < catchB ? catchPath(f, cB, leftC, -70, 1110) : null;
     const aHeld = f >= catchA && f < slap + 14, aOnStand = f >= slap + 14, bHeld = f >= catchB;
     const face = faceAt(f, [[T.morning, look('calm', [0.1, 0])], [cA + 4, look('surprised', [0.8, -0.4]), 4], [catchB + 4, look('calm', [0, 0]), 10], [L1(15), look('thinking', [0.9, 0.4]), 6], [L1(15) + 22, look('thinking', [-0.9, 0.4]), 5], [w(16, 0), look('calm', [0.9, 0.4]), 6], [w(16, 3), look('determined', [0.8, 0.5]), 8]]);
     const cam: Cam = { x: 545, y: 1000, z: 1.3 };
@@ -462,8 +463,8 @@ const sh13: Shot = {
           hold: { R: bHeld ? holdCard(PO, p, 'R', CARD_B) : undefined, L: stamp.stamp ?? (aHeld ? holdCard(PO, p, 'L', CARD_A()) : undefined) }, upright: { R: true, L: true } }}
         cards={<g>
           {aOnStand && <g transform={`translate(${CARD[0]} ${CARD[1]})`}>{CARD_A(stamp.imprint)}</g>}
-          {aFly && <g transform={`translate(${aFly[0]} ${aFly[1]}) rotate(${(f - cA) * 6})`}>{CARD_A()}</g>}
-          {bFly && <g transform={`translate(${bFly[0]} ${bFly[1]}) rotate(${-(f - cB) * 5})`}>{CARD_B}</g>}
+          {aFly && <g transform={`translate(${aFly[0]} ${aFly[1]}) rotate(${(f - cA) * 1.5})`}>{CARD_A()}</g>}
+          {bFly && <g transform={`translate(${bFly[0]} ${bFly[1]}) rotate(${-(f - cB) * 1.5})`}>{CARD_B}</g>}
         </g>} />,
       guards: [faceBox(cam, PO, p), box(cam, aOnStand ? CARD : [rightC[0] + 100, rightC[1] - 70], 250, 176, 'cardA')],
     };

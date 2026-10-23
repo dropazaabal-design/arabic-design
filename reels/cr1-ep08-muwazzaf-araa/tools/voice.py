@@ -21,7 +21,7 @@ from pathlib import Path
 
 import numpy as np
 
-root = Path(__file__).resolve().parent.parent
+root = Path(os.environ.get('PROJECT_ROOT', Path(__file__).resolve().parent.parent)).resolve()  # another project can reuse the tool
 SR = 48000
 units = json.loads((root / 'narrative/units.json').read_text(encoding='utf-8'))
 HARAKAT = re.compile('[ً-ْٰ]')
@@ -49,11 +49,30 @@ def write(path, x):
         w.writeframes((np.clip(x, -1, 1) * 32767).astype('<i2').tobytes())
 
 
+def silent(x, floor=-50):
+    """10 ms frames quieter than `floor` dBFS."""
+    hop = SR // 100
+    n = len(x) // hop
+    return 20 * np.log10(np.sqrt((x[:n * hop].reshape(n, hop) ** 2).mean(1)) + 1e-9) < floor
+
+
+def pause(quiet, t0, t1):
+    """The longest quiet run between t0 and t1 seconds, as (start, end); the quietest instant if there is none."""
+    best, run = None, None
+    for f in range(max(0, int(t0 * 100)), min(len(quiet), int(t1 * 100))):
+        run = (run if run is not None else f) if quiet[f] else None
+        if run is not None and (best is None or f + 1 - run > best[1] - best[0]):
+            best = (run, f + 1)
+    if best is None:
+        return ((t0 + t1) / 2,) * 2
+    return best[0] / 100, best[1] / 100
+
+
 def cut():
     out_words = []
     for u, d in units.items():
         audio = decode(root / f'audio/takes/{u}.mp3')
-        heard = [x for x in json.loads((root / f'audio/align/{u}.words.json').read_text(encoding='utf-8'))['words'] if x.get('type', 'word') == 'word']
+        heard = [x for x in json.loads((root / f'audio/align/{u}.words.json').read_text(encoding='utf-8'))['words'] if x.get('type', 'word') == 'word' and not x['text'].startswith('[')]  # performance tags are aligned too; they are not words
         script = [(L['id'], i, t) for L in d['lines'] for i, t in enumerate(tokens(L['text']))]
         a, b = [norm(t) for *_, t in script], [norm(x['text']) for x in heard]
         times = [None] * len(script)
@@ -73,12 +92,22 @@ def cut():
                 nxt = next((times[j][0] for j in range(k + 1, len(times)) if times[j]), len(audio) / SR)
                 times[k] = (prev, max(prev + 0.05, (prev + nxt) / 2))
         ids = [L['id'] for L in d['lines']]
-        spans = {i: (min(times[k][0] for k, s in enumerate(script) if s[0] == i), max(times[k][1] for k, s in enumerate(script) if s[0] == i)) for i in ids}
+        first = {i: min(times[k][0] for k, s in enumerate(script) if s[0] == i) for i in ids}
+        last = {i: max(times[k][0] for k, s in enumerate(script) if s[0] == i) for i in ids}  # the last word's start
+        # Scribe's word ends run on into the pause and its starts come late, so a cut at the midpoint of its gap lands
+        # inside the next word. The cut goes in the pause actually measured in the audio instead.
+        dur, quiet = len(audio) / SR, silent(audio)
+        cuts = [(0.0, max(0.0, pause(quiet, 0.0, first[ids[0]] + 0.15)[1] - 0.06))]  # (end of the line before, start of the next)
+        for p, q in zip(ids, ids[1:]):
+            r0, r1 = pause(quiet, last[p] + 0.1, first[q] + 0.15)
+            mid = (r0 + r1) / 2
+            cuts.append((min(r0 + 0.2, mid), max(r1 - 0.06, mid)))
+        cuts.append((min(dur, pause(quiet, last[ids[-1]] + 0.1, dur)[0] + 0.2), dur))
         for n, i in enumerate(ids):
-            a0 = 0.0 if n == 0 else (spans[ids[n - 1]][1] + spans[i][0]) / 2
-            a1 = len(audio) / SR if n == len(ids) - 1 else (spans[i][1] + spans[ids[n + 1]][0]) / 2
-            a0, a1 = max(0.0, max(a0, spans[i][0] - 0.25)), min(len(audio) / SR, min(a1, spans[i][1] + 0.35))
+            a0, a1 = cuts[n][1], cuts[n + 1][0]
             x = audio[int(a0 * SR):int(a1 * SR)].copy()
+            edge = SR * 3 // 100  # a line must open and close on the pause, not on a piece of a word (the take's own ends excepted)
+            assert (a0 == 0 or silent(x[:edge]).all()) and (a1 == dur or silent(x[-edge:]).all()), f'line {i}: the cut runs through speech'
             fade = int(0.012 * SR)
             x[:fade] *= np.linspace(0, 1, fade)
             x[-fade:] *= np.linspace(1, 0, fade)
@@ -100,8 +129,9 @@ def check():
         for L in dd['lines']:
             with wave.open(str(root / f"audio/lines/{L['id']:03d}.wav")) as w:
                 x = np.frombuffer(w.readframes(w.getnframes()), '<i2').astype(np.float32) / 32768
+            pad = np.zeros(SR // 2, np.float32)  # in the episode every line sits between pauses; a clip that ends on its last word makes Whisper drop it
             s = rec.create_stream()
-            s.accept_waveform(SR, x)
+            s.accept_waveform(SR, np.concatenate([pad, x, pad]))
             rec.decode_stream(s)
             heard = s.result.text.strip()
             ratio = difflib.SequenceMatcher(None, norm(' '.join(tokens(L['text']))).split(), norm(heard).split()).ratio()
