@@ -1,0 +1,47 @@
+{
+ "format": {
+  "file": "/home/user/arabic-design/reels/cr1-ep09-tasarraf/export/ep09_tasarraf-kaannak_9x16.mp4",
+  "bytes": 3499555,
+  "duration": 42.731,
+  "video": {
+   "codec": "h264",
+   "profile": "High",
+   "width": 1080,
+   "height": 1920,
+   "fps": "60/1",
+   "pix_fmt": "yuv420p",
+   "color_primaries": "bt709",
+   "color_transfer": "bt709",
+   "frames": 2563,
+   "bit_rate": 452858
+  },
+  "audio": {
+   "codec": "aac",
+   "sample_rate": 48000,
+   "channels": 2,
+   "bit_rate": 189373
+  }
+ },
+ "decode_errors": null,
+ "black": [],
+ "freezes_over_3s": [],
+ "silences_over_1_5s": [
+  {
+   "start": 40.1108,
+   "dur": 2.61985
+  }
+ ],
+ "loudness": {
+  "integrated_lufs": -16.0,
+  "lra_lu": 2.2,
+  "true_peak_dbtp": -4.5
+ },
+ "ends": {
+  "speech_end": 40.315,
+  "picture_end": 42.731,
+  "tail_after_speech": 2.416
+ },
+ "stills": [
+  "qa/frames-ep09/chVO-start.png"
+ ]
+}
