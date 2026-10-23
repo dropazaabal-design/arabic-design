@@ -34,7 +34,7 @@ Use `effectcraft-cli mcp --autosave` to retain headless edits; MCP connection is
 
 ```powershell
 cd motion-core
-npm run effectcraft:render -- --project assets/fx/intro.ecproj --comp IntroFX --id intro-fx --frames 120 --fps 60 --public ./public
+npm run effectcraft:render -- --project assets/fx/intro.ecproj --comp IntroFX --id intro-fx --frames 120 --fps 60 --width 1080 --height 1920 --public ./public
 ```
 
 The bridge calls the **actual EffectCraft CLI** to render PNG RGBA, validates exact frame count and dimensions, normalizes names to `000000.png`, and atomically publishes:
