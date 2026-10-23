@@ -1,0 +1,53 @@
+{
+ "format": {
+  "file": "/home/user/arabic-design/reels/cr1-ep08-muwazzaf-araa/export/ep08_muwazzaf-araa_9x16.mp4",
+  "bytes": 14928254,
+  "duration": 77.141,
+  "video": {
+   "codec": "h264",
+   "profile": "High",
+   "width": 1080,
+   "height": 1920,
+   "fps": "60/1",
+   "pix_fmt": "yuv420p",
+   "color_primaries": "bt709",
+   "color_transfer": "bt709",
+   "frames": 4628,
+   "bit_rate": 1346018
+  },
+  "audio": {
+   "codec": "aac",
+   "sample_rate": 48000,
+   "channels": 2,
+   "bit_rate": 189375
+  }
+ },
+ "decode_errors": null,
+ "black": [],
+ "freezes_over_3s": [],
+ "silences_over_1_5s": [
+  {
+   "start": 74.1889,
+   "dur": 2.95242
+  }
+ ],
+ "loudness": {
+  "integrated_lufs": -16.0,
+  "lra_lu": 4.1,
+  "true_peak_dbtp": -4.5
+ },
+ "ends": {
+  "speech_end": 74.34,
+  "picture_end": 77.141,
+  "tail_after_speech": 2.801
+ },
+ "stills": [
+  "qa/frames-ep08/chA-start.png",
+  "qa/frames-ep08/chB-start.png",
+  "qa/frames-ep08/chB-before.png",
+  "qa/frames-ep08/chC-start.png",
+  "qa/frames-ep08/chC-before.png",
+  "qa/frames-ep08/chD-start.png",
+  "qa/frames-ep08/chD-before.png"
+ ]
+}

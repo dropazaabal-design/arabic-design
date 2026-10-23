@@ -1,0 +1,14 @@
+node_modules
+out/
+audio/narration-22k.wav
+# the repository is public: the paid product (PDF and its page renders) and anything showing its pages stay local
+source/
+public/pages/
+public/thumbs/
+review/
+qa/frames-*/
+qa/*.jpg
+export/*.mp4
+export/*.zip
+public/audio/mix.wav
+publish/*.jpg

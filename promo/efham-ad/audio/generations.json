@@ -1,0 +1,16 @@
+{
+ "flow_id": "IxxYU58aWEBeXkBDvD4f",
+ "model": "eleven_v4",
+ "voice_id": "dlGxemPxFMTY7iXagmOj",
+ "voice_name_reported": "Fernando Martínez - Rapid, Persuasive",
+ "authorisation": "Free estimate first (835.92 credits for two takes, 417.96 for one); the owner chose two takes (2026-10-23).",
+ "takes": {
+  "YAiLynPn1yGvjAmKLIjq": {"credits": 417.9582, "seconds": 37.49, "whisper_mean": 0.70},
+  "ombUxSl2piI5uOYbUF1z": {"credits": 417.9582, "seconds": 36.60, "whisper_mean": 0.78, "chosen": true}
+ },
+ "choice": "the take with the higher word match in the independent transcription (local Whisper small; timing/asr-take1.json, timing/asr-take2.json); its opening question is also the clearer one",
+ "alignment": {"model": "eleven_scribe_v1", "credits": 0, "note": "aligns the prompt text; timings only, not a check of pronunciation"},
+ "credits_total": 835.9164,
+ "price_cents": 15.2,
+ "seriesTotal": "21,843.82 before + 835.92 = 22,679.74 credits"
+}

@@ -1,0 +1,13 @@
+node_modules
+out/
+review/
+# the repository is public: the paid product's covers and page renders stay local (README shows how to rebuild them)
+public/covers/
+public/pages/
+qa/frames-*/
+qa/*.jpg
+export/*.mp4
+export/*.zip
+public/audio/mix.wav
+audio/mix-raw.wav
+publish/*.jpg

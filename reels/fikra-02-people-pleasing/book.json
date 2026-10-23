@@ -1,0 +1,34 @@
+{
+  "series": "فكرة من كتاب",
+  "episode": 2,
+  "arabic_edition": {
+    "title_ar": "توقف عن إرضاء الآخرين",
+    "subtitle_on_cover": "لا تنشغل برؤيتهم عنك، أنت الأهم",
+    "author_ar": "باتريك كينغ",
+    "translator_ar": "أسماء عرفة",
+    "publisher_ar": "دار دوّن للنشر والتوزيع",
+    "year": 2021,
+    "isbn13": "9789778062670",
+    "pages": "174 (Abjjad) / 178 (Jarir eBook listing) — sources disagree; not used in the episode",
+    "sources": [
+      "https://www.abjjad.com/book/2772369415/%D8%AA%D9%88%D9%82%D9%81-%D8%B9%D9%86-%D8%A7%D8%B1%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%AE%D8%B1%D9%8A%D9%86/2773417991 (title, author, translator, publisher, year, pages, ISBN)",
+      "https://www.jarir.com/sa-en/arabic-books-jrb5000001524.html (title, publisher دون, eBook, 178 pages)"
+    ],
+    "cover_seen": "https://cdn.abjjad.com/pub/5c7544b6-9458-46da-a160-1bdb83d33012.png — used only to confirm the edition and sample two colors; never shown in the video"
+  },
+  "original": {
+    "title": "Stop People Pleasing: Be Assertive, Stop Caring What Others Think, Beat Your Guilt, & Stop Being a Pushover",
+    "author": "Patrick King",
+    "publisher": "PublishDrive",
+    "released": "2019-08-13",
+    "pages": 234,
+    "language": "English",
+    "sources": [
+      "https://books.apple.com/au/book/stop-people-pleasing/id1476543360 (publisher details and description)",
+      "library catalogs with the same blurb: https://catalog.marshalllyonlibrary.org/Hoopla/13589199 , https://www.ahml.info/catalog/record/3573302",
+      "https://play.google.com/store/books/details/Patrick_King_Stop_People_Pleasing?id=hqWtDwAAQBAJ — named in the brief; HTTP 403 from this environment, not read"
+    ]
+  },
+  "author_description": "كاتب ومدرب مهارات اجتماعية (publisher bio: 'bestselling author and social skills coach'); no clinical or therapeutic role is claimed",
+  "text_access": "The book's text was not read (neither edition). What the episode attributes to the book rests on the publisher description and the Arabic edition's listing. No quotation, page or chapter number is used."
+}

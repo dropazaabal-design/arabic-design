@@ -1,0 +1,8 @@
+node_modules
+out/
+review/
+qa/frames-*/
+export/*.mp4
+export/*.zip
+public/audio/mix.wav
+audio/mix-raw.wav

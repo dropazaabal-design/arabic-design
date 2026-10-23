@@ -1,0 +1,187 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 49.83,
+  "durationInFrames": 1495,
+  "measured": true,
+  "source": "take-A.wav",
+  "gainDb": 2.3,
+  "speechSeconds": 45.76,
+  "addedBeats": {
+    "s03": 0.35,
+    "s04": 0.25,
+    "s07": 0.55,
+    "s08": 0.3,
+    "s09": 0.45,
+    "s10": 0.3,
+    "s11": 0.45
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "zoo",
+      "start": 0.12,
+      "duration": 5.025,
+      "fileStart": 0.02,
+      "file": "audio/voice/s01.wav",
+      "measured": true
+    },
+    {
+      "id": "s02",
+      "sceneId": "zoo",
+      "start": 5.383,
+      "duration": 4.52,
+      "fileStart": 5.279,
+      "file": "audio/voice/s02.wav",
+      "measured": true
+    },
+    {
+      "id": "s03",
+      "sceneId": "turn",
+      "start": 10.602,
+      "duration": 1.253,
+      "fileStart": 10.442,
+      "file": "audio/voice/s03.wav",
+      "measured": true
+    },
+    {
+      "id": "s04",
+      "sceneId": "park",
+      "start": 12.441,
+      "duration": 4.046,
+      "fileStart": 12.288,
+      "file": "audio/voice/s04.wav",
+      "measured": true
+    },
+    {
+      "id": "s05",
+      "sceneId": "park",
+      "start": 16.75,
+      "duration": 4.642,
+      "fileStart": 16.633,
+      "file": "audio/voice/s05.wav",
+      "measured": true
+    },
+    {
+      "id": "s06",
+      "sceneId": "park",
+      "start": 21.663,
+      "duration": 2.229,
+      "fileStart": 21.543,
+      "file": "audio/voice/s06.wav",
+      "measured": true
+    },
+    {
+      "id": "s07",
+      "sceneId": "cleaner",
+      "start": 24.749,
+      "duration": 5.611,
+      "fileStart": 24.61,
+      "file": "audio/voice/s07.wav",
+      "measured": true
+    },
+    {
+      "id": "s08",
+      "sceneId": "spit",
+      "start": 30.954,
+      "duration": 4.402,
+      "fileStart": 30.822,
+      "file": "audio/voice/s08.wav",
+      "measured": true
+    },
+    {
+      "id": "s09",
+      "sceneId": "reverse",
+      "start": 36.135,
+      "duration": 3.531,
+      "fileStart": 35.986,
+      "file": "audio/voice/s09.wav",
+      "measured": true
+    },
+    {
+      "id": "s10",
+      "sceneId": "pocket",
+      "start": 40.261,
+      "duration": 2.899,
+      "fileStart": 40.129,
+      "file": "audio/voice/s10.wav",
+      "measured": true
+    },
+    {
+      "id": "s11",
+      "sceneId": "close",
+      "start": 43.961,
+      "duration": 4.569,
+      "fileStart": 43.8,
+      "file": "audio/voice/s11.wav",
+      "measured": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "zoo",
+      "start": 0.0,
+      "speechStart": 0.12,
+      "speechEnd": 9.903,
+      "end": 10.252,
+      "seconds": 10.252
+    },
+    {
+      "sceneId": "turn",
+      "start": 10.252,
+      "speechStart": 10.602,
+      "speechEnd": 11.855,
+      "end": 12.148,
+      "seconds": 1.896
+    },
+    {
+      "sceneId": "park",
+      "start": 12.148,
+      "speechStart": 12.441,
+      "speechEnd": 23.892,
+      "end": 24.32,
+      "seconds": 12.172
+    },
+    {
+      "sceneId": "cleaner",
+      "start": 24.32,
+      "speechStart": 24.749,
+      "speechEnd": 30.36,
+      "end": 30.657,
+      "seconds": 6.337
+    },
+    {
+      "sceneId": "spit",
+      "start": 30.657,
+      "speechStart": 30.954,
+      "speechEnd": 35.356,
+      "end": 35.745,
+      "seconds": 5.088
+    },
+    {
+      "sceneId": "reverse",
+      "start": 35.745,
+      "speechStart": 36.135,
+      "speechEnd": 39.666,
+      "end": 39.963,
+      "seconds": 4.218
+    },
+    {
+      "sceneId": "pocket",
+      "start": 39.963,
+      "speechStart": 40.261,
+      "speechEnd": 43.16,
+      "end": 43.561,
+      "seconds": 3.598
+    },
+    {
+      "sceneId": "close",
+      "start": 43.561,
+      "speechStart": 43.961,
+      "speechEnd": 48.53,
+      "end": 49.83,
+      "seconds": 6.269
+    }
+  ]
+}

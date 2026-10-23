@@ -1,0 +1,30 @@
+{
+  "identity": {
+    "blue": "#2E7BC5",
+    "red": "#E63946",
+    "green": "#10B981",
+    "navy": "#101827",
+    "light": "#F4F5F2"
+  },
+  "fromVerifiedCover": {
+    "aqua": "#ACD2D7",
+    "cardboard": "#C3A88C",
+    "cardboardDark": "#9A7D5D",
+    "basis": "k-means on the Arabic edition's cover image from Abjjad (sha256 below); aqua is the cover background (53%), cardboard the boxes (22%)",
+    "coverSha256": "see research/notes.md"
+  },
+  "neutrals": {
+    "ink": "#20252E",
+    "inkSoft": "#5B6372",
+    "paper": "#FBFBF8",
+    "line": "#C9CDD3"
+  },
+  "use": {
+    "aqua": "soft background tint and calm states (the pause)",
+    "cardboard": "collage paper: notes, tape, the reserved-time card",
+    "red": "the automatic 'حاضر' and its cost",
+    "green": "the chosen answer, the protected time",
+    "blue": "phone UI, neutral information"
+  },
+  "rules": "no fixed yellow or orange; text contrast ≥ 4.5:1 on its background"
+}

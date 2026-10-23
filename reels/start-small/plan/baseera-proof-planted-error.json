@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "errors": 1,
+  "warnings": 0,
+  "issues": [
+    {
+      "code": "source.changed.changed-letters",
+      "severity": "error",
+      "message": "الصفحة ٨: «صفحتين» صارت «صفحتان» (حروف تغيّرت).",
+      "pageId": "pg_ku88s7tshd",
+      "elementId": "title"
+    }
+  ]
+}

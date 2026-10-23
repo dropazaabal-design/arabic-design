@@ -1,0 +1,10 @@
+node_modules
+out/
+audio/lines/
+audio/*.wav
+public/audio/*.wav
+tools/.export-svg.cjs
+previews/dev/
+previews/review/
+export/hudoo-project.zip
+export/hudoo.mp4
