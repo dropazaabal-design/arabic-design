@@ -1,0 +1,151 @@
+{
+ "unit": "D",
+ "take": "2wc8tho9Eym0RlsOREma",
+ "source": "eleven_scribe_v1 (the provider's alignment of the prompt; not an independent check)",
+ "words": [
+  {
+   "text": "[calm]",
+   "start": 0,
+   "end": 0.067,
+   "type": "word"
+  },
+  {
+   "text": "الصبح…",
+   "start": 0.08,
+   "end": 1.04,
+   "type": "word"
+  },
+  {
+   "text": "وصلته",
+   "start": 1.12,
+   "end": 1.6,
+   "type": "word"
+  },
+  {
+   "text": "ورقتين.",
+   "start": 1.72,
+   "end": 2.44,
+   "type": "word"
+  },
+  {
+   "text": "ملاحظة",
+   "start": 2.64,
+   "end": 3.12,
+   "type": "word"
+  },
+  {
+   "text": "تفيد",
+   "start": 3.24,
+   "end": 3.44,
+   "type": "word"
+  },
+  {
+   "text": "شغله…",
+   "start": 3.52,
+   "end": 4.16,
+   "type": "word"
+  },
+  {
+   "text": "هذي",
+   "start": 4.4,
+   "end": 4.72,
+   "type": "word"
+  },
+  {
+   "text": "تستاهل.",
+   "start": 4.8,
+   "end": 5.44,
+   "type": "word"
+  },
+  {
+   "text": "وهالمرة،",
+   "start": 5.84,
+   "end": 6.56,
+   "type": "word"
+  },
+  {
+   "text": "«أبشر»…",
+   "start": 6.72,
+   "end": 7.52,
+   "type": "word"
+  },
+  {
+   "text": "أخذت",
+   "start": 7.68,
+   "end": 7.88,
+   "type": "word"
+  },
+  {
+   "text": "ثانيتين.",
+   "start": 7.92,
+   "end": 8.68,
+   "type": "word"
+  },
+  {
+   "text": "ومقارنة",
+   "start": 8.88,
+   "end": 9.52,
+   "type": "word"
+  },
+  {
+   "text": "ما",
+   "start": 9.76,
+   "end": 9.92,
+   "type": "word"
+  },
+  {
+   "text": "تفيد",
+   "start": 10,
+   "end": 10.24,
+   "type": "word"
+  },
+  {
+   "text": "أحد…",
+   "start": 10.28,
+   "end": 10.8,
+   "type": "word"
+  },
+  {
+   "text": "تنقرأ،",
+   "start": 10.96,
+   "end": 11.6,
+   "type": "word"
+  },
+  {
+   "text": "وتنحفظ.",
+   "start": 11.68,
+   "end": 12.32,
+   "type": "word"
+  },
+  {
+   "text": "[warmly]",
+   "start": 12.64,
+   "end": 12.768,
+   "type": "word"
+  },
+  {
+   "text": "وأنت…",
+   "start": 12.784,
+   "end": 13.28,
+   "type": "word"
+  },
+  {
+   "text": "شغّال",
+   "start": 13.44,
+   "end": 13.84,
+   "type": "word"
+  },
+  {
+   "text": "عند",
+   "start": 13.88,
+   "end": 14,
+   "type": "word"
+  },
+  {
+   "text": "مين؟",
+   "start": 14.08,
+   "end": 14.64,
+   "type": "word"
+  }
+ ]
+}

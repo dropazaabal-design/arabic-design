@@ -1,0 +1,120 @@
+{
+ "file": "output/final_reel.mp4",
+ "bytes": 16934448,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "30/1",
+  "avg_frame_rate": "30/1",
+  "nb_frames": "1495"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189373"
+  }
+ ],
+ "duration": {
+  "container": 49.835,
+  "video": 49.833333,
+  "timeline": 49.83,
+  "framesExpected": 1495
+ },
+ "cadence": {
+  "frames": 1495,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.0,
+  "LRA": 2.9,
+  "truePeakDBFS": -4.0
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [],
+ "narrationOnsets": {
+  "lines": 11,
+  "found": 8,
+  "maxAbsOffset": 0.504,
+  "notFound": [
+   "s01",
+   "s05",
+   "s06"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.12,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s02",
+    "planned": 5.383,
+    "measured": 5.40569,
+    "offset": 0.023
+   },
+   {
+    "id": "s03",
+    "planned": 10.602,
+    "measured": 10.628,
+    "offset": 0.026
+   },
+   {
+    "id": "s04",
+    "planned": 12.441,
+    "measured": 12.4879,
+    "offset": 0.047
+   },
+   {
+    "id": "s05",
+    "planned": 16.75,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s06",
+    "planned": 21.663,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s07",
+    "planned": 24.749,
+    "measured": 24.2453,
+    "offset": -0.504
+   },
+   {
+    "id": "s08",
+    "planned": 30.954,
+    "measured": 31.0119,
+    "offset": 0.058
+   },
+   {
+    "id": "s09",
+    "planned": 36.135,
+    "measured": 36.1849,
+    "offset": 0.05
+   },
+   {
+    "id": "s10",
+    "planned": 40.261,
+    "measured": 40.3017,
+    "offset": 0.041
+   },
+   {
+    "id": "s11",
+    "planned": 43.961,
+    "measured": 43.9955,
+    "offset": 0.035
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}

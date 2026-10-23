@@ -3,3 +3,6 @@ node_modules/
 preview-*.png
 __pycache__/
 *.pyc
+
+# third-party reference videos: analysed locally, never redistributed
+references/*.mp4

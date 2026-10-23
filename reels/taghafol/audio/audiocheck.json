@@ -1,0 +1,111 @@
+{
+ "file": "public/audio/voice.wav",
+ "durationS": 82.23,
+ "expectedS": 82.23,
+ "loudness": {
+  "I_LUFS": -14.2,
+  "LRA_LU": 7.0,
+  "truePeak_dBTP": -1.4,
+  "samplePeak_dBFS": -1.4,
+  "PLR_dB": 12.8
+ },
+ "limiter": {
+  "limit_dBFS": -1.41,
+  "delayMs": 0.0,
+  "samplesOverLimitBefore": 3624,
+  "maxGainReduction_dB": 2.59,
+  "msWithGR": {
+   ">0.5dB": 2545,
+   ">1dB": 690,
+   ">2dB": 15,
+   ">3dB": 0
+  },
+  "speechMs": 77595
+ },
+ "chain": {
+  "chain": "highpass=f=75,afftdn=nr=6:nf=-42,deesser=i=0.1:m=0.4:f=0.5:s=o",
+  "speech_dB_change_by_band": {
+   "20-75Hz": -6.7,
+   "75-300Hz": -0.3,
+   "300-3000Hz": -0.1,
+   "3000-6000Hz": -0.3,
+   "6000-12000Hz": -0.3
+  },
+  "roomTone_dB_change_by_band": {
+   "20-75Hz": -9.8,
+   "75-300Hz": 0.7,
+   "300-3000Hz": 0.1,
+   "3000-6000Hz": -2.5,
+   "6000-12000Hz": -0.6
+  },
+  "roomTone_median_dBFS_20ms": {
+   "before": -31.9,
+   "after": -31.9
+  }
+ },
+ "joins": [
+  {
+   "atS": 5.65,
+   "hfPeakNearJoin_vs_median": 1.4,
+   "hfPeakNearJoin_vs_windowMax": 0.16,
+   "rms_dBFS_120msBefore": -27.2,
+   "rms_dBFS_120msAfter": -19.3
+  },
+  {
+   "atS": 21.41,
+   "hfPeakNearJoin_vs_median": 1.33,
+   "hfPeakNearJoin_vs_windowMax": 0.28,
+   "rms_dBFS_120msBefore": -28.9,
+   "rms_dBFS_120msAfter": -27.7
+  },
+  {
+   "atS": 24.94,
+   "hfPeakNearJoin_vs_median": 2.05,
+   "hfPeakNearJoin_vs_windowMax": 0.56,
+   "rms_dBFS_120msBefore": -26.4,
+   "rms_dBFS_120msAfter": -29.7
+  }
+ ],
+ "pieceOffsets": [
+  {
+   "src": 23.68,
+   "out": 1.43,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 26.52,
+   "out": 4.27,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 4.6,
+   "out": 9.57,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 12.53,
+   "out": 17.5,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 19.01,
+   "out": 22.26,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 20.84,
+   "out": 24.09,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 42.01,
+   "out": 38.59,
+   "offsetMs": 0.0
+  },
+  {
+   "src": 69.44,
+   "out": 66.02,
+   "offsetMs": 0.0
+  }
+ ]
+}

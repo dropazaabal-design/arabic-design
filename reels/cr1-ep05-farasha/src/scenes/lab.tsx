@@ -136,13 +136,13 @@ export const Door: React.FC<{ f: number; k: DoorBeats }> = ({ f, k }) => {
 
 export type ReactBeats = { start: number; stop: number; shock: number; end: number };
 /** R5's last line: close on him at the desk, the new printout in one hand, the mug stopped halfway. */
-export const React_: React.FC<{ f: number; k: ReactBeats }> = ({ f, k }) => {
+export const React_: React.FC<{ f: number; k: ReactBeats; cam?: Cam; extra?: React.ReactNode }> = ({ f, k, cam, extra }) => {
   const up = prog(f, k.start, k.stop - k.start, ease.out);
   const sink = prog(f, k.shock + sec(0.5), sec(0.9), ease.inOut);
   const base = pose('stand', { lean: 2, headTurn: 0.95, headTilt: mix(-4, 6, prog(f, k.shock, sec(0.3))) });
   const p = reach(reach(base, 'F', tc([392, -585]), 'edge'), 'N', [mix(60, 52, up), mix(-190, -228, up) + 30 * sink], 'grip', -1);
   return (
-    <Frame c={camMix({ x: 250, y: -560, z: 2.0 }, { x: 236, y: -572, z: 2.12 }, prog(f, k.start, k.end - k.start, ease.inOut))} bg={C.bg} world={<>
+    <Frame c={cam ?? camMix({ x: 250, y: -560, z: 2.0 }, { x: 236, y: -572, z: 2.12 }, prog(f, k.start, k.end - k.start, ease.inOut))} bg={C.bg} world={<>
       <Lab f={f} clockMin={clockAt(60)} light={1} lamps={1.6} rows={16} cloudShift={900 + f * 0.15} />
       <Actor f={f} d={who({
         pose: [{ at: 0, to: p }],
@@ -152,6 +152,7 @@ export const React_: React.FC<{ f: number; k: ReactBeats }> = ({ f, k }) => {
         holdF: <g transform={`scale(${1.3 / S})`}><Sheet plot /></g>,
         holdN: <g transform={`scale(${0.85 / S}) translate(-4 46)`}><Mug steam={0.6} f={f} /></g>,
       })} />
+      {extra}
     </>} />
   );
 };

@@ -5,6 +5,13 @@
 **[FrequencyWords](https://github.com/hermitdave/FrequencyWords)** — Hermit Dave، MIT.
 مصدر معجم `lib/lexicon/ar.txt.gz`. التفاصيل في `lib/lexicon/README.md`.
 
+**[awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos)** — yihui-dev، MIT.
+مكتبة مراجع للفيديو، مضافة وحدةً فرعية (submodule) في `library/awesome-opus5-5-videos`،
+ومثبّتة على `92aee2f`. فيها 703 فيديو صُنعت بـ Claude Opus 5.5، ومع كل واحد البرومبت أو
+المنشور الأصلي، في `data/videos.json` و`prompts/`. أقسامها: 369 موشن، و117 ثلاثي الأبعاد،
+و116 شرح، و101 تفاعلي. للاطلاع والإلهام فقط: **لا ينتقل منها نصّ ولا كود إلى الريلز**،
+وحقوق كل فيديو وبرومبت لصاحبه، ورابطه في مدخله. للجلب: `git submodule update --init library/awesome-opus5-5-videos`.
+
 **[instagram-skills](https://github.com/sergebulaev/instagram-skills)** — Serge Bulaev، MIT.
 فكرتان منه في `lib/copy.js` و`skills/arabic-content`: اختيار الخطّاف حسب هدف
 المنشور، وهيكل الإطارات (وعد في الأول، الأقوى مبكّرًا، طلب واحد في الأخير).

@@ -1,0 +1,55 @@
+{
+  "book": {
+    "ar": "فن اللامبالاة: لعيش حياة تخالف المألوف",
+    "en": "The Subtle Art of Not Giving a F*ck (2016)",
+    "author": "Mark Manson (مارك مانسون)",
+    "translator": "الحارث النبهان (according to reader pages on Abjjad)",
+    "publisher_ar": "دار التنوير (a 2018 news item announced the translation; not confirmed against a copy of the edition)",
+    "onScreenCredit": "مستوحى من كتاب فن اللامبالاة — مارك مانسون",
+    "note": "The English title contains a profanity. The episode shows only the Arabic title."
+  },
+  "access": "markmanson.net cannot be fetched from this environment (DNS blocked). The author's pages were confirmed through search results limited to his domain (titles and summaries of his pages). The book's text itself was not read. So there is no direct quote and no page number.",
+  "claims": [
+    {
+      "id": "C1",
+      "episode": "Not caring about everything is not indifference. Indifference is not the goal.",
+      "level": "from the author's own site (summary through search)",
+      "sources": ["https://markmanson.net/not-giving-a-fuck", "https://markmanson.net/books/subtle-art"],
+      "how_used": "Naif does not shut the window on everyone: he takes the useful note and acts on it."
+    },
+    {
+      "id": "C2",
+      "episode": "Your attention and care are limited, so choose what deserves them.",
+      "level": "from the author's own site (summary through search: you have a limited amount to give, so spend it with care)",
+      "sources": ["https://markmanson.net/not-giving-a-fuck", "https://markmanson.net/podcast/episode-42-6-ways-to-stop-giving-a-fck"],
+      "how_used": "The whole day goes to opinions, and the client's deadline is lost."
+    },
+    {
+      "id": "C3",
+      "episode": "You are always choosing, and you are responsible for that choice (even not choosing is a choice).",
+      "level": "from the author's own site (newsletter «You're Always Choosing»)",
+      "sources": ["https://markmanson.net/breakthrough/232-choice"],
+      "how_used": "The turning point: «خدم الكل… إلا الشي الوحيد اللي اختاره بنفسه». The commitment was his own choice."
+    },
+    {
+      "id": "C4",
+      "episode": "Values that depend on things you don't control (such as other people's approval) are worse than controllable values.",
+      "level": "from the author's own site (article on personal values: good values are evidence-based, constructive and controllable)",
+      "sources": ["https://markmanson.net/personal-values"],
+      "how_used": "The satisfaction meter: whatever he does, it lights angry. Other people's satisfaction is not in his hands."
+    },
+    {
+      "id": "C5",
+      "episode": "Not caring does not mean neglecting duties, other people's feelings, or useful criticism.",
+      "level": "Our reading, consistent with C1 (not indifference) and C3 (responsibility). Not attributed to the author as a quote.",
+      "sources": [],
+      "how_used": "He answers the client's note and does the work. He reads the comparison and files it without being rude."
+    }
+  ],
+  "ours": [
+    "The story, Naif, the opinions customer service desk and all the jokes are our own. They are not attributed to Mark Manson.",
+    "The café client «مقهى غيمة» is a fictional example.",
+    "No quotes from the book appear in the episode."
+  ],
+  "different_from": "reels/fikra-02-people-pleasing dealt with saying «نعم» to people's requests (Patrick King). This episode deals with opinions, comparisons and judgments that nobody asked for, and with choosing what deserves attention (Manson)."
+}

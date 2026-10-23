@@ -1,0 +1,1 @@
+highpass=f=70,equalizer=f=3500:t=q:w=1.0:g=-1.5,highshelf=f=8000:g=-2,deesser=i=0.15:m=0.4:f=0.5:s=o
