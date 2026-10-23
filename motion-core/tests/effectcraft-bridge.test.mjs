@@ -42,7 +42,7 @@ for (const n of [2,1]) {
 `);
     chmodSync(script, 0o755);
     const r = spawnSync(process.execPath, ['tools/effectcraft-bridge.mjs','render','--project',ecproj,'--comp','Main','--id','testfx',
-      '--frames','2','--fps','60','--bin',script,'--public',publicDir], {cwd:process.cwd(),encoding:'utf8'});
+      '--frames','2','--fps','60','--width','1080','--height','1920','--bin',script,'--public',publicDir], {cwd:process.cwd(),encoding:'utf8'});
     assert.equal(r.status, 0, r.stderr);
     const target = join(publicDir,'effectcraft','testfx');
     const m = JSON.parse(readFileSync(join(target,'manifest.json'),'utf8'));
