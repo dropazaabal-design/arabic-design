@@ -52,7 +52,7 @@ for L in LINES:
             acc += k - (0.35 * CPS if '…' in w else 0)
             words.append({'line': L['id'], 'i': i, 'word': w, 'start': round(a, 3), 'end': round(t + dur * acc / tot, 3)})
             acc += 0.35 * CPS if '…' in w else 0
-    lines.append({'id': L['id'], 'unit': L['unit'], 'text': text, 'start': round(t, 3), 'end': round(t + dur, 3)})
+    lines.append({'id': L['id'], 'unit': L['unit'], 'text': text, **({'shown': L['shown']} if 'shown' in L else {}), 'start': round(t, 3), 'end': round(t + dur, 3)})  # shown: the on-screen form (digits)
     t += dur + beats['gap'] + beats['after'].get(str(L['id']), [0])[0]
 total = round(t - beats['gap'], 3)
 out = {'source': 'recording' if real else 'provisional (11.8 chars/s, EP05 rate of this voice)', 'total': total, 'frames': round(total * FPS), 'lines': lines}

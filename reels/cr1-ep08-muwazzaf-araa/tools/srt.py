@@ -18,7 +18,7 @@ out, prev = [], 0.0
 for n, L in enumerate(d['lines'], 1):
     a, b = (round(L['start'] * FPS) - 3) / FPS, (round(L['end'] * FPS) + 10) / FPS
     a, prev = max(a, prev + 1 / FPS), b  # the picture keeps a line until its own end, then shows the next: no two cues at once
-    out.append(f"{n}\n{ts(a)} --> {ts(b)}\n{L['text']}\n")
+    out.append(f"{n}\n{ts(a)} --> {ts(b)}\n{L.get('shown', L['text'])}\n")
 path = root / 'export' / os.environ.get('SRT_NAME', 'ep08.ar.srt')
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text('\n'.join(out), encoding='utf-8')
