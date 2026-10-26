@@ -1,0 +1,4 @@
+# the repository is public: the product's covers and page renders stay local (tools/assets.sh rebuilds them)
+assets/
+review/
+export/
