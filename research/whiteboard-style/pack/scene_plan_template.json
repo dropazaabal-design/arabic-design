@@ -1,0 +1,28 @@
+{
+  "template_only": true,
+  "topic": "يُستبدل بالموضوع الجديد",
+  "central_idea": "الفكرة التي سيفهمها المشاهد",
+  "format": {"aspect_ratio": "16:9", "width": 1920, "height": 1080, "fps": 60},
+  "style_reference": "visual_style_reference_ar.md",
+  "character_assets": [],
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start_frame": null,
+      "end_frame_exclusive": null,
+      "voice_text": "الجملة التي يشرحها المشهد",
+      "visual_idea": "كيف يتحول المعنى إلى صورة مفهومة",
+      "composition": "شخصية وغرض / حوار / راو ودليل / سبب ونتيجة",
+      "characters": [],
+      "props": [],
+      "reused_asset_ids": [],
+      "reference_image": "اسم المرجع الأنسب من مجلد frames",
+      "new_asset_prompts": [],
+      "text_overlays": [],
+      "animations": [
+        {"asset_id": "يُحدد لاحقًا", "action": "دخول أو إشارة أو رسم سهم", "start_frame": null, "duration_frames": null, "voice_trigger": "الكلمة التي يبدأ معها الفعل"}
+      ],
+      "checks": ["ثبات الشخصية", "وضوح المعنى", "سلامة العربية", "التزام التوقيت"]
+    }
+  ]
+}
