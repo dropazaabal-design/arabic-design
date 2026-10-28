@@ -7,7 +7,8 @@ usage: python3 reels/tools/voice_timeline.py reels/<slug>
       "equiv": {"مية": "150"},                                        script word → how the ASR wrote it (numbers…)
       "lines": [ {"id": "s01", "text": "…", "beat": 0.0, "asrWords": 4}, … ] }
         beat      extra seconds of picture before this line (an acting beat); the voice is never stretched
-        caption   the subtitle text when it differs from what is said (e.g. «150» for «مية وخمسين»)
+        caption   the subtitle text when it differs from what is said (e.g. «150» for «مية وخمسين»); a lone «|» in it
+                  ends a cue there and is never shown (for text that must not gain punctuation, e.g. a Quran verse)
         asrWords  only when the ASR split the line into a different number of words than the script
   writes assets/audio/voice/<id>.wav · timeline.json · src/video/words.json · audio/alignment.json ·
          output/captions.ar.srt
@@ -100,12 +101,17 @@ def main(reel: Path):
     cues = []
     for s, g, ln in zip(segs, groups, lines):
         toks = ln.get('caption', ln['text']).replace('"', '').split()
-        # phrases end at punctuation; phrases are merged while the cue stays ≤ MAX_CUE characters
+        # phrases end at punctuation or at a «|» mark; phrases are merged while the cue stays ≤ MAX_CUE characters
         phrases, cur = [], []
         for t in toks:
+            if t == '|':
+                phrases.append(cur); cur = []
+                continue
             cur.append(t)
             if re.search(r'[…؟.:،]$', t):
                 phrases.append(cur); cur = []
+        toks = [t for t in toks if t != '|']
+        phrases = [ph for ph in phrases if ph]
         if cur:
             phrases.append(cur)
         chunks = []

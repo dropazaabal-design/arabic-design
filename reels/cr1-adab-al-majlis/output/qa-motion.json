@@ -1,0 +1,67 @@
+{
+ "file": "output/final_reel.mp4",
+ "fps": 60,
+ "frames": 5316,
+ "stepFrames": 24,
+ "threshold": 1.2,
+ "shots": [
+  {
+   "shot": "r01",
+   "from_s": 0.0,
+   "to_s": 13.283,
+   "movingShare": 0.87,
+   "longestStillSeconds": 0.88,
+   "meanDelta": 4.89
+  },
+  {
+   "shot": "r02",
+   "from_s": 13.283,
+   "to_s": 28.967,
+   "movingShare": 0.78,
+   "longestStillSeconds": 1.05,
+   "meanDelta": 5.39
+  },
+  {
+   "shot": "r03",
+   "from_s": 28.967,
+   "to_s": 49.0,
+   "movingShare": 0.89,
+   "longestStillSeconds": 0.42,
+   "meanDelta": 3.85
+  },
+  {
+   "shot": "r04",
+   "from_s": 49.0,
+   "to_s": 56.167,
+   "movingShare": 0.8,
+   "longestStillSeconds": 1.1,
+   "meanDelta": 3.13
+  },
+  {
+   "shot": "r04v",
+   "from_s": 56.167,
+   "to_s": 67.617,
+   "movingShare": 0.16,
+   "longestStillSeconds": 5.43,
+   "meanDelta": 2.5
+  },
+  {
+   "shot": "r05",
+   "from_s": 67.617,
+   "to_s": 76.7,
+   "movingShare": 0.86,
+   "longestStillSeconds": 0.32,
+   "meanDelta": 4.94
+  },
+  {
+   "shot": "r06",
+   "from_s": 76.7,
+   "to_s": 88.6,
+   "movingShare": 0.51,
+   "longestStillSeconds": 1.57,
+   "meanDelta": 2.7
+  }
+ ],
+ "longestStillAnywhere": 5.43,
+ "note": "measurement only"
+}

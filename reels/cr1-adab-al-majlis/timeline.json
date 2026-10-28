@@ -1,0 +1,141 @@
+{
+ "fps": 60,
+ "width": 1080,
+ "height": 1920,
+ "totalSeconds": 88.6,
+ "durationInFrames": 5316,
+ "measured": true,
+ "sources": {
+  "take": "take-3-3zzG3GblqAgyGVJ5TDC7.mp3"
+ },
+ "loudnorm": {
+  "I": -16,
+  "TP": -5,
+  "inputI": -17.22,
+  "inputTP": -2.22
+ },
+ "beats": {
+  "s02": 0.6,
+  "s03": 1.2,
+  "s04": 0.8,
+  "s05": 1.2,
+  "s06": 0.4,
+  "s07": 0.3,
+  "s08": 1.2,
+  "s09": 1.0,
+  "s10": 1.0,
+  "s11": 0.8
+ },
+ "segments": [
+  {
+   "id": "s01",
+   "text": "إذا جلست، فلا تفرّق بين اثنين إلا بإذنهما.",
+   "start": 0.5,
+   "end": 4.439,
+   "duration": 3.939,
+   "fileStart": 0.38,
+   "file": "audio/voice/s01.wav",
+   "measured": true
+  },
+  {
+   "id": "s02",
+   "text": "قال رسول الله صلى الله عليه وسلم: «لا يحل لرجل أن يفرّق بين اثنين إلا بإذنهما».",
+   "start": 5.58,
+   "end": 12.72,
+   "duration": 7.14,
+   "fileStart": 5.506,
+   "file": "audio/voice/s02.wav",
+   "measured": true
+  },
+  {
+   "id": "s03",
+   "text": "وإذا قام أحد من مكانه لحاجة، وهو يريد الرجوع، فلا تستولِ على مكانه.",
+   "start": 14.54,
+   "end": 20.34,
+   "duration": 5.8,
+   "fileStart": 14.45,
+   "file": "audio/voice/s03.wav",
+   "measured": true
+  },
+  {
+   "id": "s04",
+   "text": "قال عليه الصلاة والسلام: «إذا قام أحدكم من مجلسه ثم رجع إليه فهو أحق به».",
+   "start": 21.58,
+   "end": 28.22,
+   "duration": 6.64,
+   "fileStart": 21.547,
+   "file": "audio/voice/s04.wav",
+   "measured": true
+  },
+  {
+   "id": "s05",
+   "text": "وإذا جلست، فاترك مساحة لمن بجانبك؛ فلا تزاحمه ما دام المكان يتّسع.",
+   "start": 30.06,
+   "end": 36.18,
+   "duration": 6.12,
+   "fileStart": 29.973,
+   "file": "audio/voice/s05.wav",
+   "measured": true
+  },
+  {
+   "id": "s06",
+   "text": "وفي كتب الأدب، نُقلت عن الزهري وعطاء أقوال في مراعاة المسافة بين الجالسين.",
+   "start": 37.12,
+   "end": 43.24,
+   "duration": 6.12,
+   "fileStart": 37.034,
+   "file": "audio/voice/s06.wav",
+   "measured": true
+  },
+  {
+   "id": "s07",
+   "text": "والمقصود هنا راحة الجليس، لا إلزام الناس بمسافة محدّدة.",
+   "start": 43.94,
+   "end": 48.4,
+   "duration": 4.46,
+   "fileStart": 43.886,
+   "file": "audio/voice/s07.wav",
+   "measured": true
+  },
+  {
+   "id": "s08",
+   "text": "فإذا ازدحم المجلس، فافسح للداخل بقدر الاستطاعة، من غير أذى للجالسين.",
+   "start": 50.12,
+   "end": 55.56,
+   "duration": 5.44,
+   "fileStart": 50.006,
+   "file": "audio/voice/s08.wav",
+   "measured": true
+  },
+  {
+   "id": "s09",
+   "text": "قال الله تعالى: يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قِيلَ لَكُمْ تَفَسَّحُوا فِي الْمَجَالِسِ فَافْسَحُوا يَفْسَحِ اللَّهُ لَكُمْ",
+   "start": 57.12,
+   "end": 66.92,
+   "duration": 9.8,
+   "fileStart": 57.046,
+   "file": "audio/voice/s09.wav",
+   "measured": true
+  },
+  {
+   "id": "s10",
+   "text": "ويبيّن السعدي في تفسيره أن من أدب المجلس أن يفسح الجالس لمن يحتاج إلى مكان، من غير ضرر يلحقه.",
+   "start": 68.52,
+   "end": 76.18,
+   "duration": 7.66,
+   "fileStart": 68.463,
+   "file": "audio/voice/s10.wav",
+   "measured": true
+  },
+  {
+   "id": "s11",
+   "text": "والجزاء من جنس العمل: «فإن من فسح فسح الله له، ومن وسّع لأخيه وسّع الله عليه».",
+   "start": 77.5,
+   "end": 85.4,
+   "duration": 7.9,
+   "fileStart": 77.406,
+   "file": "audio/voice/s11.wav",
+   "measured": true
+  }
+ ]
+}

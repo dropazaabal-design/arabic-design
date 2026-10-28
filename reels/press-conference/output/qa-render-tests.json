@@ -1,0 +1,50 @@
+{
+ "tool": "reels/tools/render_check.mjs",
+ "passed": 6,
+ "failed": 0,
+ "results": [
+  {
+   "name": "order: Reel frame 1910 before and after frames 4646 and 1032",
+   "ok": true,
+   "detail": {
+    "sha": "e9d9b14ab45fcd92"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=17.2 s",
+   "ok": true,
+   "detail": {
+    "sha": "ec4adcb83415ef09"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=31.8333 s",
+   "ok": true,
+   "detail": {
+    "sha": "e9d9b14ab45fcd92"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=53.3333 s",
+   "ok": true,
+   "detail": {
+    "sha": "9393d51afb6c8b82"
+   }
+  },
+  {
+   "name": "fps: Reel @60 and Reel30 @30 identical at t=77.4333 s",
+   "ok": true,
+   "detail": {
+    "sha": "993a578ab2d836fe"
+   }
+  },
+  {
+   "name": "mp4: output/final_reel.mp4 decodes with no errors",
+   "ok": true,
+   "detail": {
+    "decoded": true,
+    "bytes": 25160487
+   }
+  }
+ ]
+}

@@ -302,6 +302,13 @@ let cache = null; export const B = () => (cache ??= beats());
 
 ---
 
+### 8.7 وضعا الإنتاج: `creative-motion` و`creative-3d`
+
+- **`creative-motion` (الافتراضي):** كل ما سبق في هذا الملف.
+- **`creative-3d` (اختياري):** شخصية ومكان ثلاثيا الأبعاد يُؤلَّفان ويُحرَّكان في Blender عبر MCP، ثم يُصيَّران مقطعًا يدخل Remotion (`<OffthreadVideo>`) أو FFmpeg. الصوت والترجمة والفحوص لا تتغير.
+- **الاختيار:** `python3 reels/creative-3d/backend.py check`. الخروج 1 يعني لا Blender، فيُستعمل `creative-motion` بلا أي تعديل.
+- **التفاصيل:** التشغيل على الجهاز وفي السحابة، والأمان، وطريقة العمل، والمختبر المُثبِت في `reels/creative-3d/README.md`.
+
 ## 9. المرحلة 6 — المعاينة (قبل أي تصدير كامل)
 
 ```sh
