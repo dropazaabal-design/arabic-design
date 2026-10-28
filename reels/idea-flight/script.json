@@ -1,0 +1,51 @@
+{
+ "title": "فكرة طايرة",
+ "series": "بصيرة — عرض محرك الحركة (Rive + GSAP + مسارات Remotion)",
+ "topic": "مشهد قصير أصلي: الفكرة لا تأتي من التحديق في ورقة فارغة، بل حين تتحرك. ليس فيه رقم ولا ادعاء علمي.",
+ "takes": {
+  "B": {
+   "file": "audio/take-B-HnvrIicfXJf8nNgBzxM4.mp3",
+   "words": "audio/take-B.words.json",
+   "source": "take-B-HnvrIicfXJf8nNgBzxM4.mp3",
+   "voice_id": "dlGxemPxFMTY7iXagmOj",
+   "model_id": "eleven_v4",
+   "flow": "S4U7r4aqojj9ek54TxhT",
+   "who": "الراوي (صوت بصيرة)"
+  }
+ },
+ "segments": [
+  {
+   "id": "s01",
+   "text": "ورقة فاضية… والفكرة ما تجي."
+  },
+  {
+   "id": "s02",
+   "text": "الفكرة ما تجي وأنت تحدّق… تجي وأنت تتحرّك."
+  }
+ ],
+ "onScreen": [
+  {
+   "id": "t1",
+   "text": "ورقة فاضية…"
+  },
+  {
+   "id": "t2a",
+   "text": "الفكرة تجي"
+  },
+  {
+   "id": "t2b",
+   "text": "وأنت تتحرّك"
+  }
+ ],
+ "qa": {
+  "duration": [
+   13,
+   14.5
+  ],
+  "maxStillSeconds": 2.0,
+  "stillAllow": [],
+  "maxSilenceSeconds": 0.8,
+  "renderTests": true,
+  "maxSyncMs": 14
+ }
+}

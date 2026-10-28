@@ -1,0 +1,80 @@
+[
+ {
+  "seg": "s01",
+  "script": "ورقة",
+  "heard": "ورقة",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "فاضية…",
+  "heard": "فاضية",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "والفكرة",
+  "heard": "والفكرة",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s01",
+  "script": "تجي.",
+  "heard": "تجي",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "الفكرة",
+  "heard": "الفكرة",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "ما",
+  "heard": "ما",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "تجي",
+  "heard": "تجي",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "وأنت",
+  "heard": "وأنت",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "تحدّق…",
+  "heard": "تحدق",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "تجي",
+  "heard": "تجي",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "وأنت",
+  "heard": "وأنت",
+  "match": true
+ },
+ {
+  "seg": "s02",
+  "script": "تتحرّك.",
+  "heard": "تتحرك",
+  "match": true
+ }
+]

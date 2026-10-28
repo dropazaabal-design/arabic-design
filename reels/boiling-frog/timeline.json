@@ -1,0 +1,188 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalSeconds": 43.43,
+  "durationInFrames": 1303,
+  "measured": true,
+  "source": "take-A.wav",
+  "gainDb": 2.1,
+  "speechSeconds": 37.28,
+  "addedBeats": {
+    "s03": 0.7,
+    "s05": 0.35,
+    "s06": 0.45,
+    "s07": 0.35,
+    "s08": 0.9,
+    "s09": 0.3,
+    "s10": 0.7,
+    "s11": 0.45
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "sceneId": "pond",
+      "start": 0.15,
+      "duration": 4.085,
+      "fileStart": 0.07,
+      "file": "audio/voice/s01.wav",
+      "measured": true
+    },
+    {
+      "id": "s02",
+      "sceneId": "pond",
+      "start": 4.485,
+      "duration": 2.751,
+      "fileStart": 4.375,
+      "file": "audio/voice/s02.wav",
+      "measured": true
+    },
+    {
+      "id": "s03",
+      "sceneId": "myth",
+      "start": 8.227,
+      "duration": 2.822,
+      "fileStart": 8.097,
+      "file": "audio/voice/s03.wav",
+      "measured": true
+    },
+    {
+      "id": "s04",
+      "sceneId": "myth",
+      "start": 11.301,
+      "duration": 2.16,
+      "fileStart": 11.19,
+      "file": "audio/voice/s04.wav",
+      "measured": true
+    },
+    {
+      "id": "s05",
+      "sceneId": "phone",
+      "start": 14.039,
+      "duration": 4.137,
+      "fileStart": 13.94,
+      "file": "audio/voice/s05.wav",
+      "measured": true
+    },
+    {
+      "id": "s06",
+      "sceneId": "tasks",
+      "start": 18.906,
+      "duration": 3.368,
+      "fileStart": 18.781,
+      "file": "audio/voice/s06.wav",
+      "measured": true
+    },
+    {
+      "id": "s07",
+      "sceneId": "slow",
+      "start": 22.993,
+      "duration": 3.712,
+      "fileStart": 22.823,
+      "file": "audio/voice/s07.wav",
+      "measured": true
+    },
+    {
+      "id": "s08",
+      "sceneId": "notice",
+      "start": 27.979,
+      "duration": 4.139,
+      "fileStart": 27.807,
+      "file": "audio/voice/s08.wav",
+      "measured": true
+    },
+    {
+      "id": "s09",
+      "sceneId": "act",
+      "start": 32.729,
+      "duration": 2.806,
+      "fileStart": 32.588,
+      "file": "audio/voice/s09.wav",
+      "measured": true
+    },
+    {
+      "id": "s10",
+      "sceneId": "close",
+      "start": 36.519,
+      "duration": 1.708,
+      "fileStart": 36.392,
+      "file": "audio/voice/s10.wav",
+      "measured": true
+    },
+    {
+      "id": "s11",
+      "sceneId": "close",
+      "start": 39.06,
+      "duration": 2.57,
+      "fileStart": 38.884,
+      "file": "audio/voice/s11.wav",
+      "measured": true
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "pond",
+      "start": 0.0,
+      "speechStart": 0.15,
+      "speechEnd": 7.236,
+      "end": 7.732,
+      "seconds": 7.732
+    },
+    {
+      "sceneId": "myth",
+      "start": 7.732,
+      "speechStart": 8.227,
+      "speechEnd": 13.461,
+      "end": 13.75,
+      "seconds": 6.018
+    },
+    {
+      "sceneId": "phone",
+      "start": 13.75,
+      "speechStart": 14.039,
+      "speechEnd": 18.176,
+      "end": 18.541,
+      "seconds": 4.791
+    },
+    {
+      "sceneId": "tasks",
+      "start": 18.541,
+      "speechStart": 18.906,
+      "speechEnd": 22.274,
+      "end": 22.633,
+      "seconds": 4.092
+    },
+    {
+      "sceneId": "slow",
+      "start": 22.633,
+      "speechStart": 22.993,
+      "speechEnd": 26.705,
+      "end": 27.342,
+      "seconds": 4.709
+    },
+    {
+      "sceneId": "notice",
+      "start": 27.342,
+      "speechStart": 27.979,
+      "speechEnd": 32.118,
+      "end": 32.424,
+      "seconds": 5.082
+    },
+    {
+      "sceneId": "act",
+      "start": 32.424,
+      "speechStart": 32.729,
+      "speechEnd": 35.535,
+      "end": 36.027,
+      "seconds": 3.603
+    },
+    {
+      "sceneId": "close",
+      "start": 36.027,
+      "speechStart": 36.519,
+      "speechEnd": 41.63,
+      "end": 43.43,
+      "seconds": 7.403
+    }
+  ]
+}

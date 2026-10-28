@@ -1,0 +1,47 @@
+{
+ "reel": "reels/idea-flight",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no real faces.",
+ "items": [
+  {
+   "path": "assets/audio/voice/{s01,s02}.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the Baseera narrator), generation HnvrIicfXJf8nNgBzxM4 (take B of 4, flow S4U7r4aqojj9ek54TxhT), loudness-normalised and cut by tools/build_audio.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-B-HnvrIicfXJf8nNgBzxM4.mp3",
+   "sha256": "750d9258f4c3413eceafee4b3861088beca63e9a7c533f4aedd9efeb19b543a8"
+  },
+  {
+   "path": "assets/rive/birb.riv",
+   "source": "rive-app/rive-wasm (GitHub), wasm/examples/parcel_example/birb.riv, commit ff04f05c1a0e742cb1e1705dd9313f854594ef15 — Rive's own runtime example file",
+   "rights": "MIT License, Copyright (c) 2020-2021 Rive (the repository's LICENSE); attribution kept here and in reels/motion/README.md. Not an original Baseera character: it validates the Rive layer until Baseera has its own .riv rigs",
+   "sha256": "384a6e3ecc20ae6bff7a77e58e04c97c40fb2a72df22cc8724e96a94d795838b"
+  },
+  {
+   "path": "assets/sfx/chirp.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "1e93c40b1c349b6ffd06c0ea39aa00dcbf8db0a340c21a02c77323bd70dd723e"
+  },
+  {
+   "path": "assets/sfx/flight.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "fbc0ebdd8a6f5c09a9c8f10d32c00cebf8cb4568f60e7b000b06106024e4bdf1"
+  },
+  {
+   "path": "assets/sfx/room.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "6330611eb11c7422af5aca6117062f3383aff6196c3d34d7c3b613fc4e510ff1"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{crinkle,pageflip,pop,scribble,whoosh,chime,boing}.wav, ../mukarram/assets/fonts (Cairo)",
+   "source": "imported from reels/mukarram (no copies)",
+   "rights": "as recorded in reels/mukarram/assets/asset_manifest.json"
+  },
+  {
+   "path": "character (src/scene/Scene.tsx)",
+   "source": "reels/mukarram rig (Person, faces, poses) with this reel's build, curls and palette; arm IK from reels/doublethink via reels/power-of-no-b",
+   "rights": "original, this repository"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "reel": "reels/sunk-cost-a",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. No photographs, no real faces, no third-party footage or music.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s19.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj (the Baseera narrator), generation IPbkeeNsnCHalnTWYaHJ (flow UKHWisKoFpGm8l6LFjqW), loudness-normalised and cut by reels/tools/voice_timeline.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-A1-IPbkeeNsnCHalnTWYaHJ.mp3",
+   "sha256": "07b24e5b839b6836f315287fd078d5b12903e21bab9d2ffdd9083d5676eb910f"
+  },
+  {
+   "path": "assets/sfx/hall.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "1bdc3c9f5883ec91a7a3f5a04d54ecf8528fa3773972d930d9eef08e5e6f345b"
+  },
+  {
+   "path": "assets/sfx/printer.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "aeae72ba26b44ccdea648d1855f604eee4b3be29463be4c700730d5c8d9d5f78"
+  },
+  {
+   "path": "assets/sfx/splash.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "ebc5f6acd0305a65ac38c2169e480e950cf7bb8f857a0444e9d8bbe0a4a83177"
+  },
+  {
+   "path": "assets/sfx/bubbles.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "855c7d1fe3b4a85de7a83aa2296431ca9d9b2e75d6d5836157bd92f0d0b34202"
+  },
+  {
+   "path": "assets/sfx/ticks.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "a1249a79cef8d0ae37fed2fb49126cddbee5c41845b7bf421b7a7a54396a4fa6"
+  },
+  {
+   "path": "assets/sfx/song.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "a8bff613bd71dfd87e894fad26728cff0c27ca17594b183f39487006c303de6c"
+  },
+  {
+   "path": "assets/sfx/night.wav",
+   "source": "synthesised by tools/sfx.py (numpy, seeded)",
+   "rights": "original",
+   "sha256": "528ba7b84f4c4db1d6d3ed092833e9150f1361601b3f9c18edcca70d58e7677e"
+  },
+  {
+   "path": "characters, props and scenes (src/scene/*.tsx)",
+   "source": "this repository: reels/mukarram rig (Person, faces, poses, Glasses/Cap), arm IK from reels/doublethink via reels/power-of-no-b, motion layer reels/motion",
+   "rights": "original, this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts (Cairo 800/900)",
+   "source": "imported from reels/mukarram (no copies)",
+   "rights": "SIL Open Font License (as recorded in reels/mukarram)"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{crinkle,pop,whoosh,thud,creak,chime,scribble,boing}.wav, ../doublethink/assets/sfx/{stamp,slide}.wav",
+   "source": "imported from reels/mukarram and reels/doublethink (no copies)",
+   "rights": "as recorded in those reels' manifests"
+  }
+ ]
+}

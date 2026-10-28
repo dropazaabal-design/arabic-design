@@ -1,0 +1,464 @@
+[
+  {
+    "text": "كان",
+    "type": "word",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "text": "خارجًا",
+    "type": "word",
+    "start": 0.32,
+    "end": 0.8
+  },
+  {
+    "text": "في",
+    "type": "word",
+    "start": 0.88,
+    "end": 0.96
+  },
+  {
+    "text": "موعده...",
+    "type": "word",
+    "start": 1,
+    "end": 2
+  },
+  {
+    "text": "كوب؟",
+    "type": "word",
+    "start": 2.04,
+    "end": 2.64
+  },
+  {
+    "text": "أكيد.",
+    "type": "word",
+    "start": 2.72,
+    "end": 3.52
+  },
+  {
+    "text": "حقيبة؟",
+    "type": "word",
+    "start": 3.6,
+    "end": 4.32
+  },
+  {
+    "text": "أكيد.",
+    "type": "word",
+    "start": 4.4,
+    "end": 5.28
+  },
+  {
+    "text": "نبتة؟",
+    "type": "word",
+    "start": 5.4,
+    "end": 6
+  },
+  {
+    "text": "أكيد!",
+    "type": "word",
+    "start": 6.08,
+    "end": 7.12
+  },
+  {
+    "text": "ثم",
+    "type": "word",
+    "start": 7.2,
+    "end": 7.44
+  },
+  {
+    "text": "جاء",
+    "type": "word",
+    "start": 7.48,
+    "end": 7.68
+  },
+  {
+    "text": "الطلب",
+    "type": "word",
+    "start": 7.76,
+    "end": 8.08
+  },
+  {
+    "text": "الرابع:",
+    "type": "word",
+    "start": 8.12,
+    "end": 8.96
+  },
+  {
+    "text": "تقدر",
+    "type": "word",
+    "start": 9,
+    "end": 9.28
+  },
+  {
+    "text": "تنقل",
+    "type": "word",
+    "start": 9.36,
+    "end": 9.6
+  },
+  {
+    "text": "مكتب",
+    "type": "word",
+    "start": 9.64,
+    "end": 9.92
+  },
+  {
+    "text": "التصوير؟",
+    "type": "word",
+    "start": 9.96,
+    "end": 10.88
+  },
+  {
+    "text": "في",
+    "type": "word",
+    "start": 10.96,
+    "end": 11.04
+  },
+  {
+    "text": "خياله،",
+    "type": "word",
+    "start": 11.12,
+    "end": 11.76
+  },
+  {
+    "text": "كلمة",
+    "type": "word",
+    "start": 11.88,
+    "end": 12.24
+  },
+  {
+    "text": "«لا»",
+    "type": "word",
+    "start": 12.28,
+    "end": 12.64
+  },
+  {
+    "text": "ستقلب",
+    "type": "word",
+    "start": 12.72,
+    "end": 13.28
+  },
+  {
+    "text": "وجوههم،",
+    "type": "word",
+    "start": 13.36,
+    "end": 14.24
+  },
+  {
+    "text": "وتطفئ",
+    "type": "word",
+    "start": 14.4,
+    "end": 14.96
+  },
+  {
+    "text": "كل",
+    "type": "word",
+    "start": 15.04,
+    "end": 15.28
+  },
+  {
+    "text": "الأنوار.",
+    "type": "word",
+    "start": 15.36,
+    "end": 16.32
+  },
+  {
+    "text": "أخذ",
+    "type": "word",
+    "start": 16.48,
+    "end": 16.64
+  },
+  {
+    "text": "نفسًا",
+    "type": "word",
+    "start": 16.72,
+    "end": 17.12
+  },
+  {
+    "text": "وقال:",
+    "type": "word",
+    "start": 17.28,
+    "end": 18.08
+  },
+  {
+    "text": "لا،",
+    "type": "word",
+    "start": 18.2,
+    "end": 18.72
+  },
+  {
+    "text": "اليوم",
+    "type": "word",
+    "start": 18.84,
+    "end": 19.12
+  },
+  {
+    "text": "ما",
+    "type": "word",
+    "start": 19.2,
+    "end": 19.28
+  },
+  {
+    "text": "أقدر.",
+    "type": "word",
+    "start": 19.32,
+    "end": 20
+  },
+  {
+    "text": "عندي",
+    "type": "word",
+    "start": 20.08,
+    "end": 20.24
+  },
+  {
+    "text": "موعد.",
+    "type": "word",
+    "start": 20.32,
+    "end": 21.12
+  },
+  {
+    "text": "...",
+    "type": "word",
+    "start": 21.16,
+    "end": 21.2
+  },
+  {
+    "text": "تمام.",
+    "type": "word",
+    "start": 21.24,
+    "end": 21.92
+  },
+  {
+    "text": "أخذوا",
+    "type": "word",
+    "start": 22,
+    "end": 22.32
+  },
+  {
+    "text": "أغراضهم،",
+    "type": "word",
+    "start": 22.4,
+    "end": 23.12
+  },
+  {
+    "text": "ودفع",
+    "type": "word",
+    "start": 23.24,
+    "end": 23.6
+  },
+  {
+    "text": "الزميل",
+    "type": "word",
+    "start": 23.64,
+    "end": 24
+  },
+  {
+    "text": "المكتب",
+    "type": "word",
+    "start": 24.12,
+    "end": 24.48
+  },
+  {
+    "text": "بنفسه.",
+    "type": "word",
+    "start": 24.56,
+    "end": 25.44
+  },
+  {
+    "text": "حين",
+    "type": "word",
+    "start": 25.56,
+    "end": 25.68
+  },
+  {
+    "text": "نعلّق",
+    "type": "word",
+    "start": 25.76,
+    "end": 26.24
+  },
+  {
+    "text": "قيمتنا",
+    "type": "word",
+    "start": 26.32,
+    "end": 26.8
+  },
+  {
+    "text": "برضا",
+    "type": "word",
+    "start": 26.88,
+    "end": 27.2
+  },
+  {
+    "text": "الناس،",
+    "type": "word",
+    "start": 27.24,
+    "end": 27.84
+  },
+  {
+    "text": "نخاف",
+    "type": "word",
+    "start": 27.92,
+    "end": 28.32
+  },
+  {
+    "text": "خيبتهم",
+    "type": "word",
+    "start": 28.36,
+    "end": 28.96
+  },
+  {
+    "text": "حتى",
+    "type": "word",
+    "start": 29.04,
+    "end": 29.36
+  },
+  {
+    "text": "من",
+    "type": "word",
+    "start": 29.44,
+    "end": 29.52
+  },
+  {
+    "text": "طلب",
+    "type": "word",
+    "start": 29.6,
+    "end": 29.92
+  },
+  {
+    "text": "صغير.",
+    "type": "word",
+    "start": 30,
+    "end": 30.72
+  },
+  {
+    "text": "هذا",
+    "type": "word",
+    "start": 30.8,
+    "end": 31.04
+  },
+  {
+    "text": "يلامس",
+    "type": "word",
+    "start": 31.16,
+    "end": 31.6
+  },
+  {
+    "text": "مفهوم",
+    "type": "word",
+    "start": 31.8,
+    "end": 32
+  },
+  {
+    "text": "السوسيوتروبية.",
+    "type": "word",
+    "start": 32.04,
+    "end": 33.28
+  },
+  {
+    "text": "المساعدة",
+    "type": "word",
+    "start": 33.4,
+    "end": 34.08
+  },
+  {
+    "text": "أجمل",
+    "type": "word",
+    "start": 34.24,
+    "end": 34.64
+  },
+  {
+    "text": "حين",
+    "type": "word",
+    "start": 34.72,
+    "end": 34.96
+  },
+  {
+    "text": "نختارها.",
+    "type": "word",
+    "start": 35,
+    "end": 35.88
+  },
+  {
+    "text": "ممكن...؟",
+    "type": "word",
+    "start": 36.16,
+    "end": 37.227
+  },
+  {
+    "text": "إذا",
+    "type": "word",
+    "start": 37.253,
+    "end": 37.44
+  },
+  {
+    "text": "بكرة،",
+    "type": "word",
+    "start": 37.52,
+    "end": 38
+  },
+  {
+    "text": "عشر",
+    "type": "word",
+    "start": 38.04,
+    "end": 38.24
+  },
+  {
+    "text": "دقايق.",
+    "type": "word",
+    "start": 38.32,
+    "end": 39.04
+  },
+  {
+    "text": "كنت",
+    "type": "word",
+    "start": 39.08,
+    "end": 39.28
+  },
+  {
+    "text": "بسأل",
+    "type": "word",
+    "start": 39.4,
+    "end": 39.6
+  },
+  {
+    "text": "عن",
+    "type": "word",
+    "start": 39.68,
+    "end": 39.76
+  },
+  {
+    "text": "غطا",
+    "type": "word",
+    "start": 39.84,
+    "end": 40
+  },
+  {
+    "text": "الكوب!",
+    "type": "word",
+    "start": 40.08,
+    "end": 40.8
+  },
+  {
+    "text": "...",
+    "type": "word",
+    "start": 40.88,
+    "end": 40.96
+  },
+  {
+    "text": "عالق",
+    "type": "word",
+    "start": 41.04,
+    "end": 41.2
+  },
+  {
+    "text": "في",
+    "type": "word",
+    "start": 41.24,
+    "end": 41.28
+  },
+  {
+    "text": "جيبي.",
+    "type": "word",
+    "start": 41.36,
+    "end": 42
+  }
+]

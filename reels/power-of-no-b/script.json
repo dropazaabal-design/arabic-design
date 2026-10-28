@@ -1,0 +1,359 @@
+{
+  "title": "بس طلب صغير!",
+  "series": "بصيرة 06 — قوة كلمة لا",
+  "topic": "Sociotropy (Beck وزملاؤه؛ مقياس Sociotropy-Autonomy): نمط يرتبط فيه تقدير الذات بقبول الآخرين والعلاقات، مع حساسية للرفض. المشهد تشبيه كوميدي عن الخوف من خيبة الآخرين، لا تشخيص ولا يساوي الطيبة أو الانطواء أو المرض.",
+  "factCheck": [
+    "Clark DA, Steer RA, Beck AT, Ross L. Psychometric characteristics of revised Sociotropy and Autonomy Scales in college students. Behav Res Ther 1995;33(3):325–34. PMID 7726810. doi:10.1016/0005-7967(94)00074-t",
+    "Sato T, Gonzalez MA. Interpersonal patterns in close relationships: the role of sociotropy-autonomy. Br J Psychol 2009;100(Pt 2):327–45. PMID 18652736. doi:10.1348/000712608X331009",
+    "Otani K, Suzuki A, Matsumoto Y, Shirata T. Marked differences in core beliefs about self and others, between sociotropy and autonomy. Neuropsychiatr Dis Treat 2018. PMC5877496, PMID 29628763. doi:10.2147/NDT.S161541"
+  ],
+  "takes": {
+    "N": {
+      "file": "audio/take-N.wav",
+      "words": "audio/take-N.words.json",
+      "source": "take-N1-yZoD5vUcUqMEv8yAWTiO.mp3",
+      "voice_id": "dlGxemPxFMTY7iXagmOj",
+      "model_id": "eleven_v4",
+      "who": "الراوي والعامل (الصوت نفسه في ريلات بصيرة السابقة)"
+    },
+    "C": {
+      "file": "audio/take-C.wav",
+      "words": "audio/take-C.words.json",
+      "source": "take-C2-HiESb63L1QkQcCiYZmRr.mp3",
+      "voice_id": "rpGHcNQJvO8dFNNFNj1v",
+      "model_id": "eleven_v4",
+      "who": "الزميل الأول (صاحب الكوب)"
+    }
+  },
+  "roles": {
+    "N": "راوٍ خارج الكادر",
+    "W": "العامل (يتكلم في الكادر بصوت الراوي)",
+    "C": "الزميل الأول"
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "take": "N",
+      "role": "N",
+      "sceneId": "hook",
+      "tag": "[playfully]",
+      "text": "باقي دقيقة ويطلع من الاستوديو… لولا «طلب صغير»."
+    },
+    {
+      "id": "s02",
+      "take": "C",
+      "role": "C",
+      "sceneId": "hook",
+      "tag": "[friendly]",
+      "text": "ممكن تمسك الكوب دقيقة؟"
+    },
+    {
+      "id": "s03",
+      "take": "N",
+      "role": "W",
+      "sceneId": "hook",
+      "tag": "[cheerfully]",
+      "text": "أكيد!"
+    },
+    {
+      "id": "s04",
+      "take": "N",
+      "role": "N",
+      "sceneId": "pile",
+      "tag": "",
+      "text": "ثم حقيبة المعدات…"
+    },
+    {
+      "id": "s05",
+      "take": "N",
+      "role": "W",
+      "sceneId": "pile",
+      "tag": "[cheerfully]",
+      "text": "أكيد."
+    },
+    {
+      "id": "s06",
+      "take": "N",
+      "role": "N",
+      "sceneId": "pile",
+      "tag": "",
+      "text": "ونبتة الديكور…"
+    },
+    {
+      "id": "s07",
+      "take": "N",
+      "role": "W",
+      "sceneId": "pile",
+      "tag": "[strained]",
+      "text": "أكيد!"
+    },
+    {
+      "id": "s08",
+      "take": "N",
+      "role": "N",
+      "sceneId": "pile",
+      "tag": "",
+      "text": "كل واحد رجع لشغله… وهو بقي مكانه، شايل نص الاستوديو."
+    },
+    {
+      "id": "s09",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "اهتز جواله: «وصلتُ»."
+    },
+    {
+      "id": "s10",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "حرّك إصبعه ليرد… فانزلق الكوب."
+    },
+    {
+      "id": "s11",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "مسكه بذقنه… فمالت النبتة."
+    },
+    {
+      "id": "s12",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "استقام ينقذها… فعلق معطفه بالباب!"
+    },
+    {
+      "id": "s13",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "طالع الساعة."
+    },
+    {
+      "id": "s14",
+      "take": "N",
+      "role": "N",
+      "sceneId": "chain",
+      "tag": "",
+      "text": "كان يقدر يقول: «كل واحد ياخذ غرضه»… لكنه تخيّل وجوههم، وبلع الجملة."
+    },
+    {
+      "id": "s15",
+      "take": "C",
+      "role": "C",
+      "sceneId": "desk",
+      "tag": "[casually]",
+      "text": "وتقدر تنقل المكتب؟"
+    },
+    {
+      "id": "s16",
+      "take": "N",
+      "role": "N",
+      "sceneId": "desk",
+      "tag": "[ominous]",
+      "text": "في خياله… زعلوا كلهم، وانطفى الاستوديو."
+    },
+    {
+      "id": "s17",
+      "take": "N",
+      "role": "W",
+      "sceneId": "no",
+      "tag": "[calmly]",
+      "text": "لا، اليوم ما أقدر. عندي موعد."
+    },
+    {
+      "id": "s18",
+      "take": "C",
+      "role": "C",
+      "sceneId": "no",
+      "tag": "[casually]",
+      "text": "تمام."
+    },
+    {
+      "id": "s19",
+      "take": "N",
+      "role": "N",
+      "sceneId": "no",
+      "tag": "",
+      "text": "سحب المكتب بنفسه،"
+    },
+    {
+      "id": "s20",
+      "take": "N",
+      "role": "N",
+      "sceneId": "no",
+      "tag": "",
+      "text": "والثاني أخذ حقيبته،"
+    },
+    {
+      "id": "s21",
+      "take": "N",
+      "role": "N",
+      "sceneId": "no",
+      "tag": "",
+      "text": "والثالث نبتته…"
+    },
+    {
+      "id": "s22",
+      "take": "N",
+      "role": "N",
+      "sceneId": "no",
+      "tag": "[amused]",
+      "text": "كل هذا؟ كان ينتظر كلمة وحدة!"
+    },
+    {
+      "id": "s23",
+      "take": "N",
+      "role": "N",
+      "sceneId": "meaning",
+      "tag": "[warmly]",
+      "text": "لما تربط قيمتك برضا كل الناس، يصير الرفض أثقل من أغراضهم."
+    },
+    {
+      "id": "s24",
+      "take": "N",
+      "role": "N",
+      "sceneId": "meaning",
+      "tag": "",
+      "text": "وهذا يلامس ما يسمّيه الباحثون: السوسيوتروبيّة."
+    },
+    {
+      "id": "s25",
+      "take": "N",
+      "role": "N",
+      "sceneId": "meaning",
+      "tag": "",
+      "text": "قال «لا» للطلب، مو للناس… والعلاقة بقيت مثل ما هي."
+    },
+    {
+      "id": "s26",
+      "take": "C",
+      "role": "C",
+      "sceneId": "lid",
+      "tag": "[hesitant]",
+      "text": "ممكن…؟"
+    },
+    {
+      "id": "s27",
+      "take": "N",
+      "role": "W",
+      "sceneId": "lid",
+      "tag": "[friendly]",
+      "text": "إذا بكرة… عشر دقايق."
+    },
+    {
+      "id": "s28",
+      "take": "C",
+      "role": "C",
+      "sceneId": "lid",
+      "tag": "[laughing]",
+      "text": "كنت بسأل وين غطا الكوب!"
+    },
+    {
+      "id": "s29",
+      "take": "N",
+      "role": "W",
+      "sceneId": "cta",
+      "tag": "[smiling]",
+      "text": "إذا عجبك الريل، حط لايك وتابعنا. وإذا قلت لا… نقول لك: تمام!"
+    },
+    {
+      "id": "s30",
+      "take": "C",
+      "role": "C",
+      "sceneId": "cta",
+      "tag": "[cheerful]",
+      "text": "تمام!"
+    }
+  ],
+  "onScreen": [
+    {
+      "id": "exit",
+      "text": "خروج"
+    },
+    {
+      "id": "list",
+      "text": "التسليم"
+    },
+    {
+      "id": "msg",
+      "text": "وصلت"
+    },
+    {
+      "id": "name",
+      "text": "السوسيوتروبيّة"
+    },
+    {
+      "id": "like",
+      "text": "إعجاب"
+    },
+    {
+      "id": "follow",
+      "text": "متابعة"
+    },
+    {
+      "id": "cover1",
+      "text": "قال نعم…"
+    },
+    {
+      "id": "cover2",
+      "text": "حتى اختفى"
+    },
+    {
+      "id": "cover3",
+      "text": "تحت الطلبات!"
+    },
+    {
+      "id": "t1",
+      "text": "4:59"
+    },
+    {
+      "id": "t2",
+      "text": "5:00"
+    },
+    {
+      "id": "t3",
+      "text": "5:01"
+    },
+    {
+      "id": "t4",
+      "text": "5:03"
+    },
+    {
+      "id": "t5",
+      "text": "5:04"
+    },
+    {
+      "id": "t6",
+      "text": "5:05"
+    },
+    {
+      "id": "t7",
+      "text": "5:06"
+    }
+  ],
+  "qa": {
+    "duration": [
+      88,
+      92
+    ],
+    "cta": {
+      "seg": "s29",
+      "srt": "تابعنا"
+    },
+    "maxStillSeconds": 2.0,
+    "stillAllow": [],
+    "waive": {
+      "arabic": [
+        "text.clipped-word"
+      ]
+    },
+    "waiveReason": "the checker lays each string into a carousel stand-in; «السوسيوتروبيّة» at 136 px overflows its 888 px slot there, while in the reel it is 86 px inside a pill and fully visible (output/qa_report.md)"
+  }
+}

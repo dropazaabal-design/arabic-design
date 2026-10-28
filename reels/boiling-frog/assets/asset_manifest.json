@@ -1,0 +1,47 @@
+{
+ "reel": "reels/boiling-frog",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. Rigs, fonts and most effects are imported from reels/mukarram, not copied.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s11.wav",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj, generation 7gBjXGsZONmcl19RQcWb (take A), cut by tools/align.py",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-A-7gBjXGsZONmcl19RQcWb.mp3",
+   "sha256": "48fe82dbf8d8a72489636c7674c32bd941371fa07e931ab4376fd1747bdd22a3"
+  },
+  {
+   "path": "audio/take-B-zKF8xdu5QFYPc1hTZicM.mp3",
+   "source": "ElevenLabs alternative take (not used)",
+   "rights": "same as above",
+   "sha256": "0f846883fa730f684b301f255b3828165549bc54444f97b1f19ba4ac45ca4f83"
+  },
+  {
+   "path": "assets/sfx/{ribbit,thwip,gulp,tap}.wav",
+   "source": "original numpy syntheses, tools/sfx.py (seeded)",
+   "rights": "original to this project"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{whoosh,thud,pop,click,tick,scrape,scribble,pageflip,boing,crinkle}.wav",
+   "source": "imported (webpack) from reels/mukarram; original syntheses of this repository",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts/cairo-*.woff2",
+   "source": "imported (webpack) from reels/mukarram; Cairo (Google Fonts)",
+   "rights": "SIL Open Font License"
+  },
+  {
+   "path": "src/characters/{frog,human,props}.tsx, assets/svg/*.svg",
+   "source": "original SVG/React drawings for this reel, on the reels/mukarram rig and ink system",
+   "rights": "original to this project"
+  },
+  {
+   "path": "../mukarram/src/characters/{ink,face,rig,cast,props}.tsx",
+   "source": "imported: narrator, body rig, faces, desk, mic, effects",
+   "rights": "original to this repository"
+  }
+ ],
+ "music": "none (voice and short effects only)",
+ "realPhotos": "none",
+ "animalsHarmed": "none shown; the frog escapes safely"
+}

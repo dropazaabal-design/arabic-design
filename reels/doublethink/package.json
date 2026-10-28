@@ -1,0 +1,22 @@
+{
+  "name": "doublethink",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/video/index.ts",
+    "render": "remotion render src/video/index.ts Reel output/final_reel.mp4 --audio-codec=aac --audio-bitrate=192k",
+    "preview": "remotion render src/video/index.ts Reel output/preview.mp4 --scale=0.5 --crf=28 --audio-codec=aac --audio-bitrate=128k",
+    "stills": "node tools/stills.mjs",
+    "assets": "npx esbuild tools/export-svg.tsx --bundle --platform=node --jsx=automatic --alias:@mukarram=../mukarram/src --alias:react=./node_modules/react --alias:react-dom=./node_modules/react-dom --outfile=tools/.export-svg.cjs --log-level=warning && node tools/.export-svg.cjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "4.0.534",
+    "typescript": "^7.0.2"
+  }
+}

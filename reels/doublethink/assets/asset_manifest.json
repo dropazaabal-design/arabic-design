@@ -1,0 +1,70 @@
+{
+ "reel": "reels/doublethink",
+ "note": "Every asset in the reel, where it comes from and whether it may be used. The rig, fonts and most effects are imported from reels/mukarram (as reels/boiling-frog does), not copied. Nothing here imitates the novel's covers, slogans or illustrations.",
+ "items": [
+  {
+   "path": "assets/audio/voice/s01–s15.wav (s10 cut)",
+   "source": "ElevenLabs eleven_v4, voice dlGxemPxFMTY7iXagmOj, generation t9Ygy32amvjiNq4KYRfS (take A, flow GSyF0lcXRw8dDort0f17), cut at its own pauses by tools/align.py; never sped up or pitched",
+   "rights": "generated on the account owner's ElevenLabs workspace; commercial use follows that plan",
+   "master": "audio/take-A-t9Ygy32amvjiNq4KYRfS.mp3",
+   "sha256": "915e52643996eb5b9285d942ecc954ff0d64023bc14b11087ac93eeafb6de5ef"
+  },
+  {
+   "path": "audio/take-B-XP6tHAUu9BDkuYV9P12n.mp3",
+   "source": "ElevenLabs alternative take of the same request (not used)",
+   "rights": "same as above",
+   "sha256": "37c6a71a96e47d402ce398405e926faf4641d61406bc543f8d64ee370923dbaa"
+  },
+  {
+   "path": "audio/take-C-zXe2v2Y8J5l7F4IPHot8.mp3",
+   "source": "ElevenLabs alternative take of the same request (not used)",
+   "rights": "same as above",
+   "sha256": "3d0ad74fa951ac69ffa05723371abd88bb396fd82a5598875efdaf7eff443bda"
+  },
+  {
+   "path": "audio/take-A.words.json · audio/scribe-t9Yg.words.raw.json · audio/asr-check.json",
+   "source": "ElevenLabs Scribe (eleven_scribe_v1) on take A uploaded as a plain file: word times and the independent pronunciation check",
+   "rights": "derived data"
+  },
+  {
+   "path": "assets/sfx/{clack,stamp,rattle,pneu,rip,rub,casters,marker,slide,flap}.wav",
+   "source": "original numpy syntheses, tools/sfx.py (seeded)",
+   "rights": "original to this project"
+  },
+  {
+   "path": "../mukarram/assets/sfx/{thud,pop,whoosh,crinkle,pageflip,scribble,tick,boing,breeze}.wav",
+   "source": "imported (webpack) from reels/mukarram; original syntheses of this repository",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "../mukarram/assets/fonts/cairo-*.woff2",
+   "source": "imported (webpack) from reels/mukarram; Cairo (Google Fonts)",
+   "rights": "SIL Open Font License"
+  },
+  {
+   "path": "../mukarram/src/characters/{ink,face,rig}.ts(x), ../mukarram/src/scenes/{common,helpers}, ../mukarram/src/video/stage.tsx",
+   "source": "imported (webpack) from reels/mukarram: ink shapes, faces, jointed body, pose/look tracks, stage with line boil and paper grain",
+   "rights": "original to this repository"
+  },
+  {
+   "path": "src/characters/employee.tsx",
+   "source": "the clerk (on the mukarram rig) and a two-bone arm IK so hands land on handles, pads, pins, hooks and the chair; drawn in code for this reel",
+   "rights": "original to this project"
+  },
+  {
+   "path": "src/characters/office.tsx · src/scenes/",
+   "source": "the manager's door (fixed lock, bolt, cobweb, stamped pad, hatch), side view, the manager's hand and stamp, memos, capsules and tubes, pinboard, desk, chair, notebook, meeting door, clock, whiteboard; the office world and 16 shots",
+   "rights": "original to this project"
+  },
+  {
+   "path": "assets/svg/*.svg (23)",
+   "source": "standalone exports of the clerk and the props (npm run assets)",
+   "rights": "original to this project"
+  },
+  {
+   "path": "publish/cover-1080x1920.jpg",
+   "source": "the climax freeze rendered from this project's Cover composition (npx remotion still src/video/index.ts Cover)",
+   "rights": "original to this project"
+  }
+ ]
+}

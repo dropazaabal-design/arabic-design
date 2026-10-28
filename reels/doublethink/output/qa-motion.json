@@ -1,0 +1,138 @@
+{
+ "file": "output/final_reel.mp4",
+ "frames": 1658,
+ "stepFrames": 12,
+ "threshold": 1.2,
+ "shots": [
+  {
+   "shot": "sh01",
+   "from_s": 0.0,
+   "to_s": 2.13,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 7.88
+  },
+  {
+   "shot": "sh02",
+   "from_s": 2.13,
+   "to_s": 4.13,
+   "movingShare": 0.71,
+   "longestStillSeconds": 0.23,
+   "meanDelta": 1.98
+  },
+  {
+   "shot": "sh03",
+   "from_s": 4.13,
+   "to_s": 6.53,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 4.41
+  },
+  {
+   "shot": "sh04",
+   "from_s": 6.53,
+   "to_s": 9.73,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 7.9
+  },
+  {
+   "shot": "sh05",
+   "from_s": 9.73,
+   "to_s": 12.63,
+   "movingShare": 0.96,
+   "longestStillSeconds": 0.07,
+   "meanDelta": 5.99
+  },
+  {
+   "shot": "sh06",
+   "from_s": 12.63,
+   "to_s": 17.07,
+   "movingShare": 0.8,
+   "longestStillSeconds": 0.2,
+   "meanDelta": 5.82
+  },
+  {
+   "shot": "sh07",
+   "from_s": 17.07,
+   "to_s": 21.03,
+   "movingShare": 0.67,
+   "longestStillSeconds": 0.8,
+   "meanDelta": 6.51
+  },
+  {
+   "shot": "sh08",
+   "from_s": 21.03,
+   "to_s": 24.17,
+   "movingShare": 0.84,
+   "longestStillSeconds": 0.2,
+   "meanDelta": 6.79
+  },
+  {
+   "shot": "sh09",
+   "from_s": 24.17,
+   "to_s": 26.57,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 10.2
+  },
+  {
+   "shot": "sh10",
+   "from_s": 26.57,
+   "to_s": 27.83,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 25.71
+  },
+  {
+   "shot": "sh11",
+   "from_s": 27.83,
+   "to_s": 30.87,
+   "movingShare": 0.77,
+   "longestStillSeconds": 0.33,
+   "meanDelta": 5.18
+  },
+  {
+   "shot": "sh12",
+   "from_s": 30.87,
+   "to_s": 36.33,
+   "movingShare": 0.67,
+   "longestStillSeconds": 0.77,
+   "meanDelta": 1.79
+  },
+  {
+   "shot": "sh13",
+   "from_s": 36.33,
+   "to_s": 41.4,
+   "movingShare": 0.84,
+   "longestStillSeconds": 0.33,
+   "meanDelta": 5.37
+  },
+  {
+   "shot": "sh14",
+   "from_s": 41.4,
+   "to_s": 45.53,
+   "movingShare": 0.71,
+   "longestStillSeconds": 0.33,
+   "meanDelta": 8.23
+  },
+  {
+   "shot": "sh15",
+   "from_s": 45.53,
+   "to_s": 49.8,
+   "movingShare": 0.8,
+   "longestStillSeconds": 0.2,
+   "meanDelta": 6.58
+  },
+  {
+   "shot": "sh16",
+   "from_s": 49.8,
+   "to_s": 55.27,
+   "movingShare": 0.94,
+   "longestStillSeconds": 0.2,
+   "meanDelta": 8.16
+  }
+ ],
+ "longestStillAnywhere": 0.8,
+ "note": "measurement only: a long still run is a place to look at, not a verdict (the closing face hold is meant to be still)"
+}

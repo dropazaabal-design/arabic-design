@@ -1,0 +1,62 @@
+# Quality gates for the reels (reels/PIPELINE.md §12): on every PR that touches reels/, re-measure each reel whose
+# script.json has a "qa" block and fail the check if a gate fails (specs, duration, loudness, black/freeze, sync,
+# motion, Arabic on-screen text, SRT, the like/follow line, voice/ASR, asset hashes, cover size).
+name: reel-qa
+on:
+  pull_request:
+    paths:
+      - 'reels/**'
+      - '.github/workflows/reel-qa.yml'
+  workflow_dispatch:
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ffmpeg and numpy
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install --quiet numpy
+      - name: Gate logic self-test
+        run: python reels/tools/qa_gates.py --self-test
+      - name: Quality gates (re-measured from each final_reel.mp4)
+        run: python reels/tools/qa_gates.py --all --measure
+  motion:
+    # The motion layer (reels/motion): unit tests, then real headless renders of reels/idea-flight that require the
+    # same picture in any frame order and at 30 and 60 fps, Rive drawn / fallback / failure, and the MP4 decoding.
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Install (motion layer, the demo reel, the sunk-cost reels)
+        run: |
+          npm ci --prefix reels/motion --no-audit --no-fund
+          npm ci --prefix reels/idea-flight --no-audit --no-fund
+          npm ci --prefix reels/sunk-cost-a --no-audit --no-fund
+          npm ci --prefix reels/sunk-cost-b --no-audit --no-fund
+      - name: Unit tests (eases, GSAP seek order, paths, Rive step plan)
+        run: npm test --prefix reels/motion
+      - name: Typecheck (motion layer + demo reel)
+        run: npx --prefix reels/idea-flight tsc -p reels/idea-flight/tsconfig.json
+      - name: Render tests (headless Chrome)
+        working-directory: reels/idea-flight
+        run: node tools/render-tests.mjs
+      - name: Render checks of the sunk-cost reels (frame order, 30 = 60 fps, MP4 decode)
+        run: |
+          (cd reels/sunk-cost-a && npx tsc -p tsconfig.json && node ../tools/render_check.mjs)
+          (cd reels/sunk-cost-b && npx tsc -p tsconfig.json && node ../tools/render_check.mjs)

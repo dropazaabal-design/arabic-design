@@ -1,0 +1,131 @@
+{
+ "file": "output/final_reel.mp4",
+ "fps": 60,
+ "frames": 4665,
+ "stepFrames": 24,
+ "threshold": 1.2,
+ "shots": [
+  {
+   "shot": "a01",
+   "from_s": 0.0,
+   "to_s": 4.2,
+   "movingShare": 0.73,
+   "longestStillSeconds": 0.97,
+   "meanDelta": 14.51
+  },
+  {
+   "shot": "a02",
+   "from_s": 4.2,
+   "to_s": 5.967,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 44.43
+  },
+  {
+   "shot": "a03",
+   "from_s": 5.967,
+   "to_s": 8.267,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 22.15
+  },
+  {
+   "shot": "a04",
+   "from_s": 8.267,
+   "to_s": 9.967,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 25.72
+  },
+  {
+   "shot": "a05",
+   "from_s": 9.967,
+   "to_s": 16.317,
+   "movingShare": 0.83,
+   "longestStillSeconds": 0.28,
+   "meanDelta": 11.81
+  },
+  {
+   "shot": "a06",
+   "from_s": 16.317,
+   "to_s": 21.583,
+   "movingShare": 0.98,
+   "longestStillSeconds": 0.12,
+   "meanDelta": 11.01
+  },
+  {
+   "shot": "a07",
+   "from_s": 21.583,
+   "to_s": 24.467,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 19.81
+  },
+  {
+   "shot": "a08",
+   "from_s": 24.467,
+   "to_s": 29.683,
+   "movingShare": 0.87,
+   "longestStillSeconds": 0.22,
+   "meanDelta": 6.77
+  },
+  {
+   "shot": "a09",
+   "from_s": 29.683,
+   "to_s": 37.0,
+   "movingShare": 0.67,
+   "longestStillSeconds": 1.85,
+   "meanDelta": 4.1
+  },
+  {
+   "shot": "a10",
+   "from_s": 37.0,
+   "to_s": 43.1,
+   "movingShare": 0.86,
+   "longestStillSeconds": 0.6,
+   "meanDelta": 4.46
+  },
+  {
+   "shot": "a11",
+   "from_s": 43.1,
+   "to_s": 51.317,
+   "movingShare": 0.69,
+   "longestStillSeconds": 1.28,
+   "meanDelta": 2.87
+  },
+  {
+   "shot": "a12",
+   "from_s": 51.317,
+   "to_s": 57.117,
+   "movingShare": 0.68,
+   "longestStillSeconds": 1.38,
+   "meanDelta": 8.83
+  },
+  {
+   "shot": "a13",
+   "from_s": 57.117,
+   "to_s": 65.433,
+   "movingShare": 0.9,
+   "longestStillSeconds": 0.18,
+   "meanDelta": 9.67
+  },
+  {
+   "shot": "a14",
+   "from_s": 65.433,
+   "to_s": 68.983,
+   "movingShare": 1.0,
+   "longestStillSeconds": 0.0,
+   "meanDelta": 10.81
+  },
+  {
+   "shot": "a15",
+   "from_s": 68.983,
+   "to_s": 77.75,
+   "movingShare": 0.82,
+   "longestStillSeconds": 1.22,
+   "meanDelta": 2.89
+  }
+ ],
+ "longestStillAnywhere": 1.85,
+ "note": "measurement only"
+}

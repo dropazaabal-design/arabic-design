@@ -1,0 +1,270 @@
+{
+ "file": "output/final_reel.mp4",
+ "bytes": 33198343,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "pix_fmt": "yuv420p",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "30/1",
+  "avg_frame_rate": "30/1",
+  "nb_frames": "2707"
+ },
+ "audio": [
+  {
+   "codec_name": "aac",
+   "profile": "LC",
+   "sample_rate": "48000",
+   "channels": 2,
+   "bit_rate": "189375"
+  }
+ ],
+ "duration": {
+  "container": 90.24,
+  "video": 90.233333,
+  "timeline": 90.218,
+  "framesExpected": 2707
+ },
+ "cadence": {
+  "frames": 2707,
+  "irregularDeltas": 0
+ },
+ "loudness": {
+  "integratedLUFS": -16.1,
+  "LRA": 4.6,
+  "truePeakDBFS": -4.0
+ },
+ "black": [],
+ "frozenOver3s": [],
+ "silencesOver0.8s": [
+  [
+   13.5894,
+   14.5347
+  ],
+  [
+   18.9689,
+   20.0041
+  ],
+  [
+   22.0831,
+   22.9908
+  ],
+  [
+   25.4744,
+   26.4934
+  ],
+  [
+   28.751,
+   29.7341
+  ],
+  [
+   32.7598,
+   33.709
+  ],
+  [
+   61.2412,
+   62.0485
+  ],
+  [
+   76.6818,
+   77.5005
+  ],
+  [
+   88.7783,
+   90.24
+  ]
+ ],
+ "narrationOnsets": {
+  "lines": 30,
+  "found": 28,
+  "maxAbsOffset": 0.223,
+  "notFound": [
+   "s01",
+   "s25"
+  ],
+  "detail": [
+   {
+    "id": "s01",
+    "planned": 0.25,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s02",
+    "planned": 4.561,
+    "measured": 4.50887,
+    "offset": -0.052
+   },
+   {
+    "id": "s03",
+    "planned": 6.328,
+    "measured": 6.36048,
+    "offset": 0.032
+   },
+   {
+    "id": "s04",
+    "planned": 7.756,
+    "measured": 7.79758,
+    "offset": 0.042
+   },
+   {
+    "id": "s05",
+    "planned": 9.636,
+    "measured": 9.58308,
+    "offset": -0.053
+   },
+   {
+    "id": "s06",
+    "planned": 10.999,
+    "measured": 11.0309,
+    "offset": 0.032
+   },
+   {
+    "id": "s07",
+    "planned": 12.546,
+    "measured": 12.5369,
+    "offset": -0.009
+   },
+   {
+    "id": "s08",
+    "planned": 14.51,
+    "measured": 14.5356,
+    "offset": 0.026
+   },
+   {
+    "id": "s09",
+    "planned": 20.227,
+    "measured": 20.0044,
+    "offset": -0.223
+   },
+   {
+    "id": "s10",
+    "planned": 22.971,
+    "measured": 22.9914,
+    "offset": 0.02
+   },
+   {
+    "id": "s11",
+    "planned": 26.454,
+    "measured": 26.4981,
+    "offset": 0.044
+   },
+   {
+    "id": "s12",
+    "planned": 29.707,
+    "measured": 29.7357,
+    "offset": 0.029
+   },
+   {
+    "id": "s13",
+    "planned": 33.688,
+    "measured": 33.7091,
+    "offset": 0.021
+   },
+   {
+    "id": "s14",
+    "planned": 35.059,
+    "measured": 35.0946,
+    "offset": 0.036
+   },
+   {
+    "id": "s15",
+    "planned": 41.225,
+    "measured": 41.2635,
+    "offset": 0.038
+   },
+   {
+    "id": "s16",
+    "planned": 43.266,
+    "measured": 43.2067,
+    "offset": -0.059
+   },
+   {
+    "id": "s17",
+    "planned": 47.725,
+    "measured": 47.7584,
+    "offset": 0.033
+   },
+   {
+    "id": "s18",
+    "planned": 51.722,
+    "measured": 51.753,
+    "offset": 0.031
+   },
+   {
+    "id": "s19",
+    "planned": 52.917,
+    "measured": 52.9567,
+    "offset": 0.04
+   },
+   {
+    "id": "s20",
+    "planned": 54.856,
+    "measured": 54.8991,
+    "offset": 0.043
+   },
+   {
+    "id": "s21",
+    "planned": 56.945,
+    "measured": 56.9953,
+    "offset": 0.05
+   },
+   {
+    "id": "s22",
+    "planned": 58.787,
+    "measured": 58.8224,
+    "offset": 0.035
+   },
+   {
+    "id": "s23",
+    "planned": 62.013,
+    "measured": 62.0492,
+    "offset": 0.036
+   },
+   {
+    "id": "s24",
+    "planned": 66.577,
+    "measured": 66.614,
+    "offset": 0.037
+   },
+   {
+    "id": "s25",
+    "planned": 70.469,
+    "measured": null,
+    "offset": null
+   },
+   {
+    "id": "s26",
+    "planned": 75.671,
+    "measured": 75.7001,
+    "offset": 0.029
+   },
+   {
+    "id": "s27",
+    "planned": 77.45,
+    "measured": 77.5013,
+    "offset": 0.051
+   },
+   {
+    "id": "s28",
+    "planned": 79.714,
+    "measured": 79.7418,
+    "offset": 0.028
+   },
+   {
+    "id": "s29",
+    "planned": 82.96,
+    "measured": 82.9865,
+    "offset": 0.027
+   },
+   {
+    "id": "s30",
+    "planned": 87.984,
+    "measured": 88.0001,
+    "offset": 0.016
+   }
+  ]
+ },
+ "note": "measurements only; nothing here proves how the episode looks or sounds to a person"
+}

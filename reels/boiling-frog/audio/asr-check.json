@@ -1,0 +1,20 @@
+{
+ "tool": "ElevenLabs Scribe on take A attached as a plain audio file (independent of the TTS alignment)",
+ "generation": "25y3ENEECzAyCbdxwyZ1",
+ "language_probability": 0.984,
+ "words_script": 80,
+ "words_heard": 80,
+ "matched": 78,
+ "differences": [
+  [
+   "معه",
+   "معاه"
+  ],
+  [
+   "وحده",
+   "واحده"
+  ]
+ ],
+ "heard": "يقولون الضفدع ما ينتبه للخطر إذا جاه بالتدريج. لكن تدري الضفدع نفسه يحاول يهرب. يعني القصة مو صحيحة، هي مجرد تشبيه. بس التشبيه يصدق علينا أحيانا. خمس دقايق على الجوال تصير عشر. وفجأة راحت ساعة. بأجلها لبكرة. وبكرة يجيب معاه كومة ثانية. ما تغير شي في يوم واحد. تغير شوي ثم شوي. اسأل نفسك وش الشي اللي صار عادي عندي وهو قبل كان يزعجني. انتبه له اليوم وغير خطوة واحدة صغيرة. الضفدع هرب. وأنت؟ لا تنتظر المشكلة تكبر عشان تنتبه.",
+ "note": "differences are dialect pronunciations of the same word (معه/معاه, وحدة/واحدة), not mispronunciations"
+}

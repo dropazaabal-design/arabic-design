@@ -1,0 +1,23 @@
+{
+  "name": "@baseera/motion",
+  "private": true,
+  "type": "module",
+  "description": "Shared motion layer for Baseera reels: GSAP choreography (@remotion/gsap), SVG paths (@remotion/paths), deterministic Rive (@rive-app/canvas-advanced). Imported by reels as @motion/… (see README.md).",
+  "scripts": {
+    "test": "node --experimental-strip-types --no-warnings --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@remotion/gsap": "4.0.534",
+    "@remotion/paths": "4.0.534",
+    "@rive-app/canvas-advanced": "2.31.5",
+    "gsap": "3.15.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "4.0.534",
+    "typescript": "^7.0.2"
+  }
+}

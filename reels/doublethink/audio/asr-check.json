@@ -1,0 +1,28 @@
+{
+ "tool": "ElevenLabs Scribe (eleven_scribe_v1) on take A uploaded as a plain audio file — independent of the TTS",
+ "generation": "zs4ldM160kz2PBFuZb9u",
+ "take": "take-A-t9Ygy32amvjiNq4KYRfS.mp3",
+ "language_probability": 0.977,
+ "words_script": 101,
+ "words_heard": 101,
+ "matched": 100,
+ "differences": [
+  [
+   "ومحا",
+   "ومحى"
+  ]
+ ],
+ "checkedWords": {
+  "أورويل": true,
+  "المزدوج": true,
+  "ملغي": true,
+  "1984": true,
+  "قائم": true,
+  "صحيح": true
+ },
+ "otherTakesHeard": {
+  "take-B-XP6tHAUu9BDkuYV9P12n": "101/101 (Scribe nh5JgWiQBzk30OlYIjVL)",
+  "take-C-zXe2v2Y8J5l7F4IPHot8": "101/101 (Scribe CwSwuSYsMGqMEm8as6ID)"
+ },
+ "heard": "شد الباب بكل قوته طق ما انفتح. المدير قال الباب مفتوح. ابتسم. حاول يعبر وارتطم. وبعد لحظة الباب مقفول من البداية. هز رأسه طبعًا ومحى ما كان مصدقه قبل قليل. ثم وصلته ورقتان للاجتماع نفسه في الساعة نفسها. الاجتماع قائم والاجتماع ملغي. ختم على الاثنتين. صحيح. جاب كرسي ليحضر وعلق الإلغاء بيده الثانية. هنا الغرابة هو مصدق القرارين معًا. جورج أورويل سمى هذا التفكير المزدوج في رواية 1984 تصدق فكرتين متناقضتين في وقت واحد وتتغاضى عن التناقض. أما لو تغير الدليل وغيرت رأيك فهذا طبيعي. لكن المدير ما لمس القفل اللي تغير كلامه فقط. وإيش اللي تغير فعلاً؟ الواقع ولا الكلام؟"
+}
