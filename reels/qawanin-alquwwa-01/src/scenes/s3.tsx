@@ -73,7 +73,7 @@ export const K11: React.FC = () => {
     [start(id), <g>
       <Header chip={chip} title="أين يبدأ الخداع؟" />
       <Row at={cue(id, 'اختلاق')} y={460} icon={<g transform="translate(0 150) scale(0.9)"><P.Book title="قصة" /></g>} text="اختلاق قصة" mark="cross" />
-      <Row at={cue(id, 'إعطاء وعود')} y={660} icon={<g transform="scale(0.8)"><P.Handshake /></g>} text="وعود لن تفي بها" mark="cross" />
+      <Row at={cue(id, 'إعطاء وعود')} y={660} icon={<g transform="scale(0.6)"><P.Handshake /></g>} text="وعود لن تفي بها" mark="cross" />
       <Row at={cue(id, 'إخفاء معلومة')} y={860} icon={<g transform="translate(0 70)"><P.Briefcase label="سري" /></g>} text="إخفاء ما يمس حق شريك أو عميل" mark="cross" />
       <Label x={540} y={1120} text="هذا خداع" size={90} tone="red" at={cue(id, 'خداع')} />
     </g>],
@@ -112,7 +112,7 @@ export const K12: React.FC = () => {
       <Label x={540} y={330} text="الجزء الثاني" size={110} at={cue(id, 'وفي الجزء الثاني')} />
       {([['قلة الكلام', 820, 'قلة الكلام', <g transform="scale(0.8)"><Bubble w={150} h={90}><T size={50}>…</T></Bubble></g>], ['والسمعة', 540, 'السمعة', <Q.Stars />], ['وجذب', 260, 'جذب الانتباه', <g transform="translate(0 90) scale(0.4)"><Q.Spotlight h={300} w={150} /></g>]] as const).map(([w, x, l, n]) => <g key={w}>
         <Pop at={cue(id, w)} x={x} y={640}><circle r={120} fill={C.paper} stroke={INK} strokeWidth={W} />{n}</Pop>
-        <Label x={x} y={810} text={l} size={44} at={cue(id, w, 1, 0.1)} />
+        <Label x={x} y={810} text={l} size={38} at={cue(id, w, 1, 0.1)} />
       </g>)}
       <Pop at={cue(id, 'قوتك')} x={540} y={1240} s={0.7}><P.Book title="القوة" c={C.navy} /></Pop>
       <Narrator x={880} y={FLOOR + 40} s={0.53} pose="wave" expr="happy" face={-1} />

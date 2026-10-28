@@ -1,6 +1,6 @@
 import React from 'react';
 import { Easing, interpolate, useCurrentFrame } from 'remotion';
-import { FUN, TITLE } from '../fonts';
+import { TITLE } from '../fonts';
 
 // The look: white page, black ink outlines, flat colour with one shade, a soft grey ground shadow.
 export const INK = '#1C1C1E';
@@ -58,9 +58,12 @@ export const Label: React.FC<{ x: number; y: number; text: string; size?: number
   ({ x, y, text, size = 64, tone = 'yellow', at, r = 0 }) => {
     const fill = tone === 'yellow' ? C.accent : tone === 'red' ? C.red : tone === 'white' ? '#fff' : INK;
     const stroke = tone === 'ink' ? 'none' : INK;
+    // Big phrases are drawn at 78% of the asked size in Alexandria Black with a thin outline. Reem Kufi Fun is a colour
+    // font whose dots are red hearts, and at full size with a thick outline the phrases crowded the frame.
+    const big = size >= 70, fs = big ? Math.round(size * 0.78) : size;
     const el = (
-      <text x={0} y={0} textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={size >= 70 ? FUN : TITLE} fontWeight={size >= 70 ? 700 : 800}
-        fontSize={size} fill={fill} stroke={stroke} strokeWidth={tone === 'ink' ? 0 : size * (size >= 70 ? 0.14 : 0.18)} strokeLinejoin="round"
+      <text x={0} y={0} textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={big ? 900 : 800}
+        fontSize={fs} fill={fill} stroke={stroke} strokeWidth={tone === 'ink' ? 0 : fs * (big ? 0.08 : 0.12)} strokeLinejoin="round"
         paintOrder="stroke" transform={`rotate(${r})`}>{text}</text>
     );
     return at === undefined ? <g transform={`translate(${x} ${y})`}>{el}</g> : <Pop at={at} x={x} y={y}>{el}</Pop>;

@@ -36,7 +36,7 @@ export const LawCard: React.FC<{ num: number; lines: string[]; at: number }> = (
     </Pop>
     <Pop at={at + 6} x={540} y={930} from="up"><text textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={800} fontSize={60} fill={C.greyDark}>{`القانون ${ORD[num]}`}</text></Pop>
     {lines.map((l, i) => <Pop key={i} at={at + 12 + i * 8} x={540} y={1060 + i * 100} from="up">
-      <text textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={900} fontSize={l.length > 18 ? 62 : 76} fill={INK}>{l}</text>
+      <text textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={900} fontSize={Math.min(72, Math.floor(1500 / l.length))} fill={INK}>{l}</text>
     </Pop>)}
   </g>
 );
@@ -50,7 +50,7 @@ export const Row: React.FC<{ at: number; y: number; icon: React.ReactNode; text:
   return <g transform={`translate(${(1 - k) * 160} ${y})`} opacity={k}>
     <rect x={70} y={-82} width={940} height={164} rx={30} fill={tone ?? C.paper} stroke={INK} strokeWidth={W} />
     <g transform="translate(900 0)"><circle r={64} fill="#fff" stroke={INK} strokeWidth={W} /><g transform="scale(0.55)">{icon}</g></g>
-    <text x={800} y={4} textAnchor="start" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={800} fontSize={text.length > 24 ? 40 : text.length > 18 ? 46 : 54} fill={INK}>{text}</text>
+    <text x={800} y={4} textAnchor="start" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={800} fontSize={Math.min(54, Math.floor(900 / text.length))} fill={INK}>{text}</text>
     {mark && f >= m && <g transform="translate(150 0)" opacity={ease(f - m, 0, 6)}>
       <circle r={44} fill={mark === 'tick' ? C.green : C.red} stroke={INK} strokeWidth={W} />
       {mark === 'tick' ? <path d="M-20 0 L-6 16 L22 -16" stroke="#fff" strokeWidth={10} fill="none" strokeLinecap="round" strokeLinejoin="round" />

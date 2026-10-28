@@ -56,7 +56,7 @@ export const Contract: React.FC<{ sign?: number; title?: string }> = ({ sign, ti
   const k = sign === undefined ? 0 : ease(f - sign, 0, 20);
   return <g>
     <rect x={-130} y={-170} width={260} height={340} rx={10} fill="#fff" {...s} />
-    <T y={-125} size={40}>{title}</T>
+    <T y={-125} size={title.length > 8 ? 24 : 40}>{title}</T>
     {[-70, -35, 0, 35].map((y) => <path key={y} d={`M-95 ${y} L95 ${y}`} stroke={C.grey} strokeWidth={6} strokeLinecap="round" />)}
     <path d="M-90 110 q20 -30 40 0 t40 0 t40 -10" fill="none" stroke={C.blue} strokeWidth={6} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - k} />
     {k > 0.9 && <g transform="translate(80 120)"><circle r={30} fill={C.red} {...s} /><path d="M-12 0 L-2 10 L14 -10" stroke="#fff" strokeWidth={6} fill="none" /></g>}

@@ -68,7 +68,7 @@ export const K06: React.FC = () => {
       <Friends id={id} />
       {([['المال', 760, 'المال', <P.Coins n={4} />], ['المسؤوليات', 540, 'المسؤوليات', <g transform="scale(0.45)"><P.Checklist items={['', '', '']} /></g>], ['الوقت', 320, 'الوقت', <P.Clock r={70} spin={10} />]] as const).map(([w, x, l, n]) => <g key={w}>
         <Pop at={cue(id, w)} x={x} y={470}>{n}</Pop>
-        <Label x={x} y={600} text={l} size={44} at={cue(id, w, 1, 0.1)} />
+        <Label x={x} y={600} text={l} size={36} at={cue(id, w, 1, 0.1)} />
       </g>)}
       <Pop at={cue(id, 'الفوضى')} x={540} y={1290} s={0.62}><P.Shop c={C.teal} closed /></Pop>
       <Pop at={cue(id, 'والصداقة')} x={540} y={820} s={0.9}><P.Heart broken /></Pop>
@@ -99,8 +99,8 @@ export const K07: React.FC = () => {
       <Person x={880} y={FLOOR} s={0.72} head="curly" top={C.red} face={-1} pose={[[0, 'cross'], [cue(id, 'المصالحة'), 'present']]} expr={[[0, 'neutral'], [cue(id, 'المصالحة'), 'happy']]} seed={3} />
       <Pop at={cue(id, 'بإنصاف')} x={540} y={560} s={0.8}><P.Scale tip={0} left={<g transform="translate(0 -40) scale(0.35)"><P.Heart /></g>} right={<g transform="translate(0 -40) scale(0.35)"><P.Heart c={C.blue} /></g>} /></Pop>
       <Pop at={cue(id, 'المصالحة')} x={540} y={880} s={0.6}><P.Handshake /></Pop>
-      <Show from={cue(id, 'حدود')}><path d={`M540 960 L540 ${FLOOR}`} stroke={C.red} strokeWidth={10} strokeDasharray="22 18" strokeLinecap="round" /></Show>
-      <Label x={540} y={1060} text="حدود واضحة" size={50} at={cue(id, 'حدود')} />
+      <Show from={cue(id, 'حدود')}><path d={`M540 1070 L540 ${FLOOR}`} stroke={C.red} strokeWidth={10} strokeDasharray="22 18" strokeLinecap="round" /></Show>
+      <Label x={540} y={1010} text="حدود واضحة" size={50} at={cue(id, 'حدود')} />
     </g>],
   ]} />;
 };

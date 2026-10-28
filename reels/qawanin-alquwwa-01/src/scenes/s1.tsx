@@ -24,12 +24,12 @@ export const K00: React.FC = () => {
   const id = 'k00';
   return <Seq end={until(id)} beats={[
     [start(id), <g>
-      <Pop at={start(id)} x={540} y={400}><text textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={900} fontSize={130} fill={C.red} stroke={INK} strokeWidth={10} paintOrder="stroke">قد تخسر…</text></Pop>
-      {([['إظهار', 820, 'إظهار قوتك', <g><g transform="translate(0 80) scale(0.32)"><Q.Spotlight h={300} w={160} /></g><g transform="translate(0 -10) scale(0.5)"><P.Crown /></g></g>],
+      <Pop at={start(id)} x={540} y={400}><text textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={900} fontSize={104} fill={C.red} stroke={INK} strokeWidth={7} paintOrder="stroke">قد تخسر…</text></Pop>
+      {([['إظهار', 850, 'إظهار قوتك', <g><g transform="translate(0 80) scale(0.32)"><Q.Spotlight h={300} w={160} /></g><g transform="translate(0 -10) scale(0.5)"><P.Crown /></g></g>],
         ['ثقتك', 540, 'ثقة غير مدروسة', <g transform="scale(0.42)"><P.Handshake /><path d="M-10 -80 L10 -30 L-8 0 L12 40" stroke={C.red} strokeWidth={14} fill="none" /></g>],
-        ['كلامك', 260, 'خطط قبل أوانها', <g transform="scale(0.55)"><Q.Megaphone /></g>]] as const).map(([w, x, l, icon]) => <g key={w}>
+        ['كلامك', 230, 'خطط قبل أوانها', <g transform="scale(0.55)"><Q.Megaphone /></g>]] as const).map(([w, x, l, icon]) => <g key={w}>
         <Pop at={cue(id, w)} x={x} y={720}><circle r={120} fill={C.paper} stroke={INK} strokeWidth={W} />{icon}</Pop>
-        <Label x={x} y={890} text={l} size={44} at={cue(id, w, 1, 0.15)} />
+        <Label x={x} y={890} text={l} size={36} at={cue(id, w, 1, 0.15)} />
       </g>)}
       <Narrator x={540} y={FLOOR + 40} s={0.69} pose={[[0, 'shrug'], [cue(id, 'كلامك'), 'facepalm']]} expr="worried" />
     </g>],
@@ -74,8 +74,8 @@ export const K02: React.FC = () => {
       <Pop at={cue(id, 'فخمًا')} x={540} y={560}><Q.Fireworks /></Pop>
       <Label x={540} y={400} text="1661" size={90} at={cue(id, 'عام')} />
       <Person x={830} y={FLOOR} s={0.75} head="hairLong" hairColor={C.brown} outfit="suit" top={C.purple} pose={[[0, 'idle'], [cue(id, 'أقام'), 'present']]} expr="happy" seed={5} />
-      <Label x={830} y={760} text="فوكيه" size={48} at={cue(id, 'نيكولا')} />
-      <T x={830} y={820} size={32} color={C.greyDark}>مسؤول مالية فرنسا</T>
+      <Label x={870} y={630} text="فوكيه" size={48} at={cue(id, 'نيكولا')} />
+      <T x={870} y={690} size={30} color={C.greyDark}>مسؤول مالية فرنسا</T>
       <Show from={cue(id, 'للملك')}><Person x={250} y={FLOOR} s={0.75} head="king" hairColor={C.brown} outfit="robe" top={C.blueDark} pose="hips" expr="neutral" seed={6} /></Show>
       <Label x={250} y={760} text="لويس 14" size={48} at={cue(id, 'لويس')} />
     </g>],
