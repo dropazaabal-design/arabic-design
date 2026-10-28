@@ -1,11 +1,11 @@
 import React from 'react';
 import { AbsoluteFill, Audio, staticFile } from 'remotion';
 import { Captions, Progress } from '../scenes/common';
-import { C00, C01, C02, C03 } from '../scenes/s1';
-import { C04, C05, C06, C07 } from '../scenes/s2';
+import { C00, C01, C02, C03, C04 } from '../scenes/s1';
+import { C05, C06, C07, C08 } from '../scenes/s2';
 
 // The reel: narration, every chunk's scene on one white page, captions and the progress line on top.
-const SCENES = [C00, C01, C02, C03, C04, C05, C06, C07];
+const SCENES = [C00, C01, C02, C03, C04, C05, C06, C07, C08];
 
 export const Film: React.FC = () => (
   <AbsoluteFill style={{ background: '#fff' }}>
