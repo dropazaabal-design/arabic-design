@@ -1,5 +1,5 @@
 #!/bin/sh
-# Render the reel with sound: laid out at 1080×1920, rendered ×2 → 2160×3840 (4K vertical), 60 fps, H.264 + AAC, BT.709.
+# Render the reel with sound: laid out at 1080×1920 (SCALE=2 → 2160×3840), 60 fps, H.264 + AAC, BT.709, tool tags stripped.
 #   tools/render.sh out/reel-4k.mp4            the whole reel
 #   tools/render.sh out/clip.mp4 0-600         a frame range (inclusive)
 #   SCALE=1 tools/render.sh out/preview.mp4    a 1080×1920 preview
@@ -11,3 +11,5 @@ mkdir -p "$(dirname "$out")"
 npx remotion render src/index.ts Film "$out" --scale="${SCALE:-2}" --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 \
   --audio-codec=aac --audio-bitrate=192k --concurrency="${CONCURRENCY:-4}" ${chrome:+--browser-executable="$chrome"} \
   ${range:+--frames=$range} --log=warn
+# Clean export: drop the tool tags (encoder, "Made with Remotion" comment) the renderer writes; streams are copied untouched.
+ffmpeg -v error -y -i "$out" -map 0 -c copy -map_metadata -1 -map_chapters -1 -fflags +bitexact -movflags +faststart "$out.clean.mp4" && mv "$out.clean.mp4" "$out"
