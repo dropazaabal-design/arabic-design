@@ -6,7 +6,7 @@ import * as P from '../kit/props';
 import * as Q from '../kit/props2';
 import { cue, start, until } from '../film/cue';
 import { TITLE } from '../fonts';
-import { FLOOR, Header, LawCard, Row } from './common';
+import { Disclaimer, FLOOR, Header, LawCard, Row } from './common';
 
 // The hook, the series, the note, and law 1 (chunks k00–k04).
 
@@ -48,11 +48,7 @@ export const K01: React.FC = () => {
   return <g>
     <Show from={start(id)} to={until(id)}><Header title="تنبيه قبل البداية" /></Show>
     <Pop at={cue(id, 'وتنبيه')} out={until(id) - 10} x={540} y={470} s={0.9}><Q.Warning /></Pop>
-    <Show from={start(id)} to={until(id)}>
-      <Row at={cue(id, 'تتعارض')} y={760} tone={C.cream} icon={<g transform="translate(0 150) scale(0.9)"><P.Book title="" /></g>} text="بعضها يتعارض مع الإسلام والأخلاق" />
-      <Row at={cue(id, 'للتعلّم')} y={960} icon={<P.Magnifier />} text="نعرضها للتعلّم والفهم" mark="tick" markAt={cue(id, 'وفهم')} />
-      <Row at={cue(id, 'وعرضها')} y={1160} icon={<g transform="scale(1.1)"><P.Eye /></g>} text="العرض لا يعني الموافقة" mark="tick" markAt={cue(id, 'الموافقة')} />
-    </Show>
+    <Show from={start(id)} to={until(id)}><Disclaimer at={cue(id, 'تتعارض')} /></Show>
   </g>;
 };
 

@@ -96,3 +96,12 @@ export const Captions: React.FC = () => {
     </text>
   </g>;
 };
+
+/** The series note on screen, word for word (reels/qawanin-alquwwa/SERIES.md): «للتعلّم والفهم — بعض القوانين تخالف الإسلام والأخلاق». */
+export const Disclaimer: React.FC<{ at: number; y?: number }> = ({ at, y = 880 }) => (
+  <Pop at={at} x={540} y={y} from="up">
+    <rect x={-470} y={-170} width={940} height={340} rx={40} fill="#fff" stroke={C.accent} strokeWidth={10} />
+    <text x={0} y={-62} textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={900} fontSize={76} fill={C.accent}>للتعلّم والفهم —</text>
+    <text x={0} y={62} textAnchor="middle" dominantBaseline="middle" direction="rtl" fontFamily={TITLE} fontWeight={800} fontSize={44} fill={INK}>بعض القوانين تخالف الإسلام والأخلاق</text>
+  </Pop>
+);
