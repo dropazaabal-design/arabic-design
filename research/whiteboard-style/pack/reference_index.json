@@ -1,0 +1,111 @@
+{
+  "source": "أكثر الجرائم رعباً التي لا يمكن تفسيرها_720p60.mp4",
+  "reference_frames": [
+    {
+      "image": "frames/ref_01.png",
+      "timecode": "00:10",
+      "timestamp_seconds": 10,
+      "frame_index_zero_based": 600,
+      "visual_role_ar": "مبنى وغرض رئيسي"
+    },
+    {
+      "image": "frames/ref_02.png",
+      "timecode": "00:20",
+      "timestamp_seconds": 20,
+      "frame_index_zero_based": 1200,
+      "visual_role_ar": "شخصية مع صورة أرشيفية"
+    },
+    {
+      "image": "frames/ref_03.png",
+      "timecode": "00:30",
+      "timestamp_seconds": 30,
+      "frame_index_zero_based": 1800,
+      "visual_role_ar": "شرطي وورقة"
+    },
+    {
+      "image": "frames/ref_04.png",
+      "timecode": "00:35",
+      "timestamp_seconds": 35,
+      "frame_index_zero_based": 2100,
+      "visual_role_ar": "شخصية مع عبارة زمنية"
+    },
+    {
+      "image": "frames/ref_05.png",
+      "timecode": "02:00",
+      "timestamp_seconds": 120,
+      "frame_index_zero_based": 7200,
+      "visual_role_ar": "شخصية مع غرض تفسيري"
+    },
+    {
+      "image": "frames/ref_06.png",
+      "timecode": "03:00",
+      "timestamp_seconds": 180,
+      "frame_index_zero_based": 10800,
+      "visual_role_ar": "راو مع أغراض"
+    },
+    {
+      "image": "frames/ref_07.png",
+      "timecode": "04:00",
+      "timestamp_seconds": 240,
+      "frame_index_zero_based": 14400,
+      "visual_role_ar": "صورة أرشيفية ورمز تعبيري"
+    },
+    {
+      "image": "frames/ref_08.png",
+      "timecode": "05:00",
+      "timestamp_seconds": 300,
+      "frame_index_zero_based": 18000,
+      "visual_role_ar": "راو وصورة شخصية"
+    },
+    {
+      "image": "frames/ref_09.png",
+      "timecode": "07:00",
+      "timestamp_seconds": 420,
+      "frame_index_zero_based": 25200,
+      "visual_role_ar": "خريطة وظاهرة"
+    },
+    {
+      "image": "frames/ref_10.png",
+      "timecode": "09:00",
+      "timestamp_seconds": 540,
+      "frame_index_zero_based": 32400,
+      "visual_role_ar": "خريطة وعلم"
+    },
+    {
+      "image": "frames/ref_11.png",
+      "timecode": "10:00",
+      "timestamp_seconds": 600,
+      "frame_index_zero_based": 36000,
+      "visual_role_ar": "فقاعة تفكير"
+    },
+    {
+      "image": "frames/ref_12.png",
+      "timecode": "12:00",
+      "timestamp_seconds": 720,
+      "frame_index_zero_based": 43200,
+      "visual_role_ar": "شخصية وساعة"
+    },
+    {
+      "image": "frames/ref_13.png",
+      "timecode": "14:00",
+      "timestamp_seconds": 840,
+      "frame_index_zero_based": 50400,
+      "visual_role_ar": "وثائق وأدوات"
+    },
+    {
+      "image": "frames/ref_14.png",
+      "timecode": "17:00",
+      "timestamp_seconds": 1020,
+      "frame_index_zero_based": 61200,
+      "visual_role_ar": "حوار وفقاعة شرح"
+    }
+  ],
+  "motion_sequence": {
+    "image": "motion_samples.jpg",
+    "start_seconds": 10,
+    "end_seconds": 13,
+    "sampling_interval_seconds": 0.25,
+    "frames_in_sheet": 13
+  },
+  "scope_note_ar": "عينات مرئية مرجعية، وليست تحليلًا كاملًا لكل فريمات الفيديو."
+}
